@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2008 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -21,7 +21,6 @@ import sys
 import os
 import signal
 import cgi
-import sha
 from types import ListType
 
 from Mailman import mm_cfg
@@ -31,6 +30,7 @@ from Mailman import Errors
 from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
+from Mailman.Utils import sha_new
 
 # Set up i18n
 _ = i18n._
@@ -180,7 +180,7 @@ def process_request(doc, cgidata):
         # Install the emergency shutdown signal handler
         signal.signal(signal.SIGTERM, sigterm_handler)
 
-        pw = sha.new(password).hexdigest()
+        pw = sha_new(password).hexdigest()
         # Guarantee that all newly created files have the proper permission.
         # proper group ownership should be assured by the autoconf script
         # enforcing that all directories have the group sticky bit set
@@ -190,15 +190,24 @@ def process_request(doc, cgidata):
                 mlist.Create(listname, owner, pw, langs, emailhost)
             finally:
                 os.umask(oldmask)
-        except Errors.EmailAddressError, s:
+        except Errors.EmailAddressError, e:
+            if e.args:
+                s = Utils.websafe(e.args[0])
+            else:
+                s = Utils.websafe(owner)
             request_creation(doc, cgidata,
                              _('Bad owner email address: %(s)s'))
             return
         except Errors.MMListAlreadyExistsError:
+            # MAS: List already exists so we don't need to websafe it.
             request_creation(doc, cgidata,
                              _('List already exists: %(listname)s'))
             return
-        except Errors.BadListNameError, s:
+        except Errors.BadListNameError, e:
+            if e.args:
+                s = Utils.websafe(e.args[0])
+            else:
+                s = Utils.websafe(listname)
             request_creation(doc, cgidata,
                              _('Illegal list name: %(s)s'))
             return
@@ -321,15 +330,17 @@ def request_creation(doc, cgidata=dummy, errmsg=None):
     ftable.AddRow([Center(Italic(_('List Identity')))])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, colspan=2)
 
-    safelistname = Utils.websafe(cgidata.getvalue('listname', ''))
+    listname = cgidata.getvalue('listname', '')
+    # MAS: Don't websafe twice.  TextBox does it.
     ftable.AddRow([Label(_('Name of list:')),
-                   TextBox('listname', safelistname)])
+                   TextBox('listname', listname)])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
-    safeowner = Utils.websafe(cgidata.getvalue('owner', ''))
+    owner = cgidata.getvalue('owner', '')
+    # MAS: Don't websafe twice.  TextBox does it.
     ftable.AddRow([Label(_('Initial list owner address:')),
-                   TextBox('owner', safeowner)])
+                   TextBox('owner', owner)])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
@@ -381,7 +392,7 @@ def request_creation(doc, cgidata=dummy, errmsg=None):
     # Create the table of initially supported languages, sorted on the long
     # name of the language.
     revmap = {}
-    for key, (name, charset) in mm_cfg.LC_DESCRIPTIONS.items():
+    for key, (name, charset, direction) in mm_cfg.LC_DESCRIPTIONS.items():
         revmap[_(name)] = key
     langnames = revmap.keys()
     langnames.sort()

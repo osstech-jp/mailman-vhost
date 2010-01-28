@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2008 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -199,13 +199,14 @@ def process(mlist, msg, msgdata):
     requestaddr = mlist.GetRequestEmail()
     subfieldfmt = '<%s>, <mailto:%s?subject=%ssubscribe>'
     listinfo = mlist.GetScriptURL('listinfo', absolute=1)
+    useropts = mlist.GetScriptURL('options', absolute=1)
     headers = {}
     if msgdata.get('reduced_list_headers'):
         headers['X-List-Administrivia'] = 'yes'
     else:
         headers.update({
             'List-Help'       : '<mailto:%s?subject=help>' % requestaddr,
-            'List-Unsubscribe': subfieldfmt % (listinfo, requestaddr, 'un'),
+            'List-Unsubscribe': subfieldfmt % (useropts, requestaddr, 'un'),
             'List-Subscribe'  : subfieldfmt % (listinfo, requestaddr, ''),
             })
         # List-Post: is controlled by a separate attribute
@@ -297,7 +298,10 @@ def prefix_subject(mlist, msg, msgdata):
             if old_style:
                 h = u' '.join([recolon, prefix, subject])
             else:
-                h = u' '.join([prefix, recolon, subject])
+                if recolon:
+                    h = u' '.join([prefix, recolon, subject])
+                else:
+                    h = u' '.join([prefix, subject])
             h = h.encode('us-ascii')
             h = uheader(mlist, h, 'Subject', continuation_ws=ws)
             del msg['subject']
@@ -327,20 +331,16 @@ def prefix_subject(mlist, msg, msgdata):
 
 
 
-def ch_oneline(s):
+def ch_oneline(headerstr):
     # Decode header string in one line and convert into single charset
     # copied and modified from ToDigest.py and Utils.py
     # return (string, cset) tuple as check for failure
     try:
-        d = decode_header(s)
+        d = decode_header(headerstr)
         # at this point, we should rstrip() every string because some
         # MUA deliberately add trailing spaces when composing return
         # message.
-        i = 0
-        for (s,c) in d:
-            s = s.rstrip()
-            d[i] = (s,c)
-            i += 1
+        d = [(s.rstrip(), c) for (s,c) in d]
         cset = 'us-ascii'
         for x in d:
             # search for no-None charset
@@ -353,4 +353,4 @@ def ch_oneline(s):
         return oneline.encode(cset, 'replace'), cset
     except (LookupError, UnicodeError, ValueError, HeaderParseError):
         # possibly charset problem. return with undecoded string in one line.
-        return ''.join(s.splitlines()), 'us-ascii'
+        return ''.join(headerstr.splitlines()), 'us-ascii'

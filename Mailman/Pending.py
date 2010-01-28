@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2004 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -12,18 +12,20 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
 
 """Track pending actions which require confirmation."""
 
 import os
-import sha
 import time
 import errno
 import random
 import cPickle
 
 from Mailman import mm_cfg
+from Mailman import UserDesc
+from Mailman.Utils import sha_new
 
 # Types of pending records
 SUBSCRIPTION = 'S'
@@ -72,7 +74,7 @@ class Pending:
         while True:
             now = time.time()
             x = random.random() + now % 1.0 + time.clock() % 1.0
-            cookie = sha.new(repr(x)).hexdigest()
+            cookie = sha_new(repr(x)).hexdigest()
             # We'll never get a duplicate, but we'll be anal about checking
             # anyway.
             if not db.has_key(cookie):
@@ -174,9 +176,15 @@ def _update(olddb):
         # know that the only things that were kept in the old format were
         # subscription requests.  Also, the old request format didn't have the
         # subscription language.  Best we can do here is use the server
-        # default.
-        db[cookie] = (SUBSCRIPTION,) + data[:-1] + \
-                     (mm_cfg.DEFAULT_SERVER_LANGUAGE,)
+        # default.  We also need a fullname because confirmation processing
+        # references all those UserDesc attributes.
+        ud = UserDesc.UserDesc(address=data[0],
+                               fullname='',
+                               password=data[1],
+                               digest=data[2],
+                               lang=mm_cfg.DEFAULT_SERVER_LANGUAGE,
+                               )
+        db[cookie] = (SUBSCRIPTION, ud)
         # The old database format kept the timestamp as the time the request
         # was made.  The new format keeps it as the time the request should be
         # evicted.

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -34,6 +34,7 @@ from Mailman import Errors
 from Mailman import Message
 from Mailman import i18n
 from Mailman.Handlers.Moderate import ModeratedMemberPost
+from Mailman.ListAdmin import HELDMSG
 from Mailman.ListAdmin import readMessage
 from Mailman.Cgi import Auth
 from Mailman.htmlformat import *
@@ -154,9 +155,9 @@ def main():
         signal.signal(signal.SIGTERM, sigterm_handler)
 
         realname = mlist.real_name
-        if not cgidata.keys():
+        if not cgidata.keys() or cgidata.has_key('admlogin'):
             # If this is not a form submission (i.e. there are no keys in the
-            # form), then we don't need to do much special.
+            # form) or it's a login, then we don't need to do much special.
             doc.SetTitle(_('%(realname)s Administrative Database'))
         elif not details:
             # This is a form submission
@@ -190,7 +191,8 @@ def main():
                 + ' <em>%s</em>' % mlist.real_name))
         if details <> 'instructions':
             form.AddItem(Center(SubmitButton('submit', _('Submit All Data'))))
-        if not (sender or msgid):
+        nomessages = not mlist.GetHeldMessageIds()
+        if not (details or sender or msgid or nomessages):
             form.AddItem(Center(
                 CheckBox('discardalldefersp', 0).Format() +
                 '&nbsp;' +
@@ -238,7 +240,7 @@ def main():
         if addform:
             doc.AddItem(form)
             form.AddItem('<hr>')
-            if not (sender or msgid):
+            if not (details or sender or msgid or nomessages):
                 form.AddItem(Center(
                     CheckBox('discardalldefersp', 0).Format() +
                     '&nbsp;' +
@@ -313,7 +315,7 @@ def show_pending_subs(mlist, form):
                      '&nbsp;' + _('Permanently ban from this list')
         # While the address may be a unicode, it must be ascii
         paddr = addr.encode('us-ascii', 'replace')
-        table.AddRow(['%s<br><em>%s</em>' % (paddr, fullname),
+        table.AddRow(['%s<br><em>%s</em>' % (paddr, Utils.websafe(fullname)),
                       radio,
                       TextBox('comment-%d' % id, size=40)
                       ])
@@ -338,7 +340,7 @@ def show_pending_unsubs(mlist, form):
     # Alphabetical order by email address
     byaddrs = {}
     for id in pendingunsubs:
-        addr = mlist.GetRecord(id)[1]
+        addr = mlist.GetRecord(id)
         byaddrs.setdefault(addr, []).append(id)
     addrs = byaddrs.keys()
     addrs.sort()
@@ -357,7 +359,7 @@ def show_pending_unsubs(mlist, form):
             mlist.HandleRequest(id, mm_cfg.DISCARD)
             continue
         num += 1
-        table.AddRow(['%s<br><em>%s</em>' % (addr, fullname),
+        table.AddRow(['%s<br><em>%s</em>' % (addr, Utils.websafe(fullname)),
                       RadioButtonArray(id, (_('Defer'),
                                             _('Approve'),
                                             _('Reject'),
@@ -382,6 +384,8 @@ def show_helds_overview(mlist, form):
     bysender = helds_by_sender(mlist)
     if not bysender:
         return 0
+    form.AddItem('<hr>')
+    form.AddItem(Center(Header(2, _('Held Messages'))))
     # Add the by-sender overview tables
     admindburl = mlist.GetScriptURL('admindb', absolute=1)
     table = Table(border=0)
@@ -551,12 +555,8 @@ def show_detailed_requests(mlist, form):
 
 
 def show_post_requests(mlist, id, info, total, count, form):
-    # For backwards compatibility with pre 2.0beta3
-    if len(info) == 5:
-        ptime, sender, subject, reason, filename = info
-        msgdata = {}
-    else:
-        ptime, sender, subject, reason, filename, msgdata = info
+    # Mailman.ListAdmin.__handlepost no longer tests for pre 2.0beta3
+    ptime, sender, subject, reason, filename, msgdata = info
     form.AddItem('<hr>')
     # Header shown on each held posting (including count of total)
     msg = _('Posting Held for Approval')
@@ -706,10 +706,12 @@ def process_form(mlist, doc, cgidata):
             preserve = actions.get('senderpreserve', 0)
             forward = actions.get('senderforward', 0)
             forwardaddr = actions.get('senderforwardto', '')
-            comment = _('No reason given')
             bysender = helds_by_sender(mlist)
             for id in bysender.get(sender, []):
                 try:
+                    msgdata = mlist.GetRecord(id)[5]
+                    comment = msgdata.get('rejection_notice',
+                                      _('[No explanation given]'))
                     mlist.HandleRequest(id, action, comment, preserve,
                                         forward, forwardaddr)
                 except (KeyError, Errors.LostHeldMessage):
@@ -768,7 +770,12 @@ def process_form(mlist, doc, cgidata):
         forwardaddrkey = 'forward-addr-%d' % request_id
         bankey = 'ban-%d' % request_id
         # Defaults
-        comment = _('[No reason given]')
+        if mlist.GetRecordType(request_id) == HELDMSG:
+            msgdata = mlist.GetRecord(request_id)[5]
+            comment = msgdata.get('rejection_notice',
+                                  _('[No explanation given]'))
+        else:
+            comment = _('[No explanation given]')
         preserve = 0
         forward = 0
         forwardaddr = ''

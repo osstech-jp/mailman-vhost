@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2008 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -12,7 +12,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
 
 """Determine whether this message should be held for approval.
 
@@ -188,7 +189,7 @@ def process(mlist, msg, msgdata):
     #
     # Are we gatewaying to a moderated newsgroup and is this list the
     # moderator's address for the group?
-    if mlist.news_moderation == 2:
+    if mlist.gateway_to_news and mlist.news_moderation == 2:
         hold_for_approval(mlist, msg, msgdata, ModeratedNewsgroup)
 
 
@@ -197,7 +198,12 @@ def hold_for_approval(mlist, msg, msgdata, exc):
     # BAW: This should really be tied into the email confirmation system so
     # that the message can be approved or denied via email as well as the
     # web.
-    if type(exc) is ClassType:
+    #
+    # XXX We use the weird type(type) construct below because in Python 2.1,
+    # type is a function not a type and so can't be used as the second
+    # argument in isinstance().  However, in Python 2.5, exceptions are
+    # new-style classes and so are not of ClassType.
+    if isinstance(exc, ClassType) or isinstance(exc, type(type)):
         # Go ahead and instantiate it now.
         exc = exc()
     listname = mlist.real_name
@@ -278,6 +284,8 @@ also appear in the first line of the body of the reply.""")),
             dmsg['Subject'] = 'confirm ' + cookie
             dmsg['Sender'] = requestaddr
             dmsg['From'] = requestaddr
+            dmsg['Date'] = email.Utils.formatdate(localtime=True)
+            dmsg['Message-ID'] = Utils.unique_message_id(mlist)
             nmsg.attach(text)
             nmsg.attach(MIMEMessage(msg))
             nmsg.attach(MIMEMessage(dmsg))

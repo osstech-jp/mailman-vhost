@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2003 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -12,7 +12,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
 
 import re
 
@@ -47,7 +48,7 @@ class Topics(GUIBase):
 
              _("""The topic filter categorizes each incoming email message
              according to <a
-            href="http://www.python.org/doc/current/lib/module-re.html">regular
+            href="http://docs.python.org/library/re.html">regular
              expression filters</a> you specify below.  If the message's
              <code>Subject:</code> or <code>Keywords:</code> header contains a
              match against a topic filter, the message is logically placed
@@ -125,7 +126,8 @@ class Topics(GUIBase):
             # Make sure the pattern was a legal regular expression
             name = Utils.websafe(name)
             try:
-                re.compile(pattern)
+                # Tagger compiles in verbose mode so we do too.
+                re.compile(pattern, re.VERBOSE)
             except (re.error, TypeError):
                 safepattern = Utils.websafe(pattern)
                 doc.addError(_("""The topic pattern '%(safepattern)s' is not a

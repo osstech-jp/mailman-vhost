@@ -2,7 +2,7 @@
 ###############################################################################
 # mmdsr -- Mailman Daily Status Report (cron job, run at 23:59)
 ###############################################################################
-# Copyright (c) 2005, Brad Knowles
+# Copyright (c) 2005-2008 Brad Knowles
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -112,6 +112,70 @@
 #		Adrian discovered that there was a log file format
 #		change between Mailman 2.1.5 and 2.1.6, which broke
 #		hourly statistics.
+#
+# 0.0.13	Update by Brad Knowles <brad@stop.mail-abuse.org>
+#		Updated on: Mon Dec 26 05:54:27 CET 2005
+#		Bugs found by Tom G. Christensen (tgc99):
+#		> ps output on solaris is full of whitespace but a further
+#		> echo get's rid of it.
+#		> The lines in the smtp log are sometimes broken up by a
+#		> newline (right before the msgid) which throws of the
+#		> summary. Piping it through sed first will rejoin the broken
+#		> lines.
+#		> Use $AWK instead of awk.
+#		Enhancements from Mark Sapiro:
+#		> The vette log summary lists posts held for moderation
+#		> individually under "Other Errors:". The following patch
+#		> (watch out for wrapped lines) summarizes them by list instead.
+#
+# 0.0.14	Update by Brad Knowles <brad@stop.mail-abuse.org>
+#		Updated on: Thu Dec 29 08:17:38 CET 2005
+#		Added code to check /usr/local/mailman/data for
+#		moderation hold queue
+#
+# 0.0.15	Update by Brad Knowles <brad@stop.mail-abuse.org>
+#		Updated on: Thu Jan 26 02:39:38 CET 2006
+#		Tweaked display of summary data in the "smtp-failure" log,
+#		and "other" category in the "vette" log, so as to reduce
+#		the spewage when things go wonky, mostly by removing
+#		unique-ifying data like message-id or sender address.
+#		Also tweaked moderation queue information, to tell us
+#		how many Python pickle files are in the data directory,
+#		as opposed to just doing a directory listing and skipping
+#		the files in the middle if there are too many -- now we
+#		know how many are being skipped.
+#
+# 0.0.16	Update by Brad Knowles <brad@stop.mail-abuse.org>
+#		Updated on: Sun Jan 29 11:45:58 CET 2006
+#		Mark found a couple of typos that I somehow let slip
+#		through.  Thanks!
+#
+# 0.0.17	Update by Mark Sapiro <mark@msapiro.net>
+#		Updated on: Thu Jan  3 18:25:06 PST 2008
+#		Enabled processing the prior generation of a rotated log.
+#		Added SORT_FIELD to the user modifiable parameters.
+#
+# 0.0.18	Update by Mark Sapiro <mark@msapiro.net>
+#		Updated on: Tue May 13 08:58:26 PDT 2008
+#		Changes for Mailman 2.1.10 --
+#		Added 'bad' to the list of queues.
+#		Made listing of a queue directory conditional on existence.
+#		Sumarized unparseable messages and preserved queue entries
+#		in the Other Errors section.
+#
+# 0.0.19	Update by Mark Sapiro <mark@msapiro.net>
+#		Updated on: Sun Nov 30 10:26:15 PST 2008
+#		Changed processing of fromusenet posts.  Previously, mmdsr
+#		reported as gated only the first and last of a gated range.
+#		Now mmdsr reports every post from the 'posted to' entries.
+#
+# 0.0.20	Update by Mark Sapiro <mark@msapiro.net>
+#		Updated on: Sun Jul 26 08:56:41 PDT 2009
+#		Added report of files in the preserved messages directory.
+#
+# 0.0.21	Update by Mark Sapiro <mark@msapiro.net>
+#		Updated on: Sun Sep 27 12:45:44 PDT 2009
+#		Refactored to use mktemp to create temp files
 
 ###############################################################################
 # Set up locations of standard commands, directories, etc....
@@ -127,6 +191,7 @@ FMT="/usr/bin/fmt"
 GREP="/bin/grep"
 HEAD="/usr/bin/head"
 LS="/bin/ls"
+MKTEMP="/bin/mktemp"
 PS="/bin/ps"
 RM="/bin/rm"
 SED="/bin/sed"
@@ -134,16 +199,16 @@ SENDMAIL="/usr/sbin/sendmail"
 SLEEP="/bin/sleep"
 SORT="/usr/bin/sort"
 TAIL="/usr/bin/tail"
-TOUCH="/bin/touch"
 TR="/usr/bin/tr"
 UNIQ="/usr/bin/uniq"
 XARGS="/usr/bin/xargs"
 WC="/usr/bin/wc"
 
 ###############################################################################
-# Directory for temporary files
+# Arguments for your mktemp command to specify directory and/or create file.
+# For example, HPUX mktemp requires "-c -d <dir>"; FreeBSD requires "-t <dir>".
 ###############################################################################
-TMPDIR="/tmp"
+TMPDIR="-p /tmp"
 
 ###############################################################################
 # Mailman queue directory
@@ -156,9 +221,24 @@ QUEUEDIR="/usr/local/mailman/qfiles"
 LOGDIR="/usr/local/mailman/logs"
 
 ###############################################################################
+# Mailman data directory
+###############################################################################
+DATADIR="/usr/local/mailman/data"
+
+###############################################################################
+# Mailman preserved messages directory
+###############################################################################
+SPAMDIR="/usr/local/mailman/spam"
+
+###############################################################################
 # Maximum number of subdirectory entries to display in report
 ###############################################################################
-MAX_LINES=20
+MAX_QUEUE_LINES=20
+
+###############################################################################
+# Maximum number of moderation queue pickle files to display in report
+###############################################################################
+MAX_DATA_LINES=100
 
 ###############################################################################
 # Mailman Log files to check for errors.
@@ -175,15 +255,21 @@ SUM_LOGS="fromusenet post smtp"
 ###############################################################################
 # Mailman queue subdirectories to check.  No need to specify path, only name.
 ###############################################################################
-SUBDIRS="archive bounces commands in news out retry shunt virgin"
+SUBDIRS="archive bad bounces commands in news out retry shunt virgin"
+
+###############################################################################
+# Specify the field specifier used by your sort command to select the second
+# field.  This will normally be "+1" or "-k 2".
+###############################################################################
+SORT_FIELD="+1"
 
 ###############################################################################
 # Specify recipients for report.  If none, then simply print to "STDOUT".
 # Specify sender address for report.  Not used if recipient list is empty.
 ###############################################################################
 
-SENDER="put@your.address.here"
-RCPTS="put@the.address.of,your@recipients.here"
+SENDER="INSERT.YOUR.SENDER.ADDRESS@HERE"
+RCPTS="INSERT.YOUR.RECIPIENTS.ADDRESSES@HERE"
 
 ###############################################################################
 # If you run this program in cron at 23:59:00, you need to sleep sixty
@@ -203,7 +289,8 @@ SLEEPTIME=60
 #	there is an easier cross-platform way to do it, please let me know.
 ###############################################################################
 
-MYUID=`$PS -o user -p $$ | $TAIL -1`
+GRABUID=`$PS -o user -p $$ | $TAIL -1`
+MYUID=`echo $GRABUID`
 RUNAS="mailman"
 
 ###############################################################################
@@ -226,10 +313,8 @@ if [ "${SLEEPTIME}" != "" -a "${RCPTS}x" != "${SENDER}x" ] ; then
     fi
 fi
 
-TMP="$TMPDIR/.$PROG.$$"
-TMPLOG="$TMP.log"
-$RM -f $TMP
-$TOUCH $TMP
+TMP=`$MKTEMP $TMPDIR`
+TMPLOG=`$MKTEMP $TMPDIR`
 
 if [ "${RCPTS}x" != "x" ] ; then
     echo "From: ${SENDER}" >> $TMP
@@ -250,13 +335,15 @@ echo "" >> $TMP
 for LOG in $SUM_LOGS
 do
 
-    $RM -f $TMPLOG
-    $TOUCH $TMPLOG
     echo "Log file: $LOG" >> $TMP
     echo "==============================" >> $TMP
-    $GREP -si "^$DAY [0-9][0-9:]* $YEAR" $LOGDIR/$LOG >> $TMPLOG
 
     if [ -f "$LOGDIR/${LOG}" ] ; then
+      if [ -f "$LOGDIR/${LOG}.1" ] ; then
+        $SED -e :a -e '$!N;s/\n //;ta' -e 'P;D' ${LOGDIR}/${LOG}.1 $LOGDIR/$LOG | $GREP -si "^$DAY [0-9][0-9:]* $YEAR" > $TMPLOG
+      else
+        $SED -e :a -e '$!N;s/\n //;ta' -e 'P;D' $LOGDIR/$LOG | $GREP -si "^$DAY [0-9][0-9:]* $YEAR" > $TMPLOG
+      fi
 
 	if [ "${LOG}" = "post" ] ; then
 
@@ -264,7 +351,7 @@ do
 	    echo "Hourly Summary of Posts" >> $TMP
 	    echo "-----------------------" >> $TMP
 
-	    $SED -e 's/^[A-Z][a-z][a-z] *[0-9]* //' -e 's/:.*$//' $TMPLOG | $UNIQ -c | $SORT -n +1 | awk '{ printf( "%8d  %02d:00-%02d:59\n", $1, $2, $2 ) }' >> $TMP
+	    $SED -e 's/^[A-Z][a-z][a-z] *[0-9]* //' -e 's/:.*$//' $TMPLOG | $UNIQ -c | $SORT -n $SORT_FIELD | $AWK '{ printf( "%8d  %02d:00-%02d:59\n", $1, $2, $2 ) }' >> $TMP
 
 	    echo "" >> $TMP
 	    echo "Post Count by List" >> $TMP
@@ -280,14 +367,14 @@ do
 
 	elif [ "${LOG}" = "fromusenet" ] ; then
 
-	    GRPS=`$EGREP -vi '(watermark:|nothing new| posted to |: \[[0-9\.]*\])' $TMPLOG | $GREP -i ' gating ' | $AWK '{ print $7 }' | $SORT -u | $FMT -w 75`
+	    GRPS=`$EGREP -vi '(watermark:|nothing new| gating |: \[[0-9\.]*\])' $TMPLOG | $GREP -i ' posted to ' | $AWK '{ print $9 }' | $SED -e 's/:$//' | $SORT -u | $FMT -w 75`
 
 	    for GRP in $GRPS
 	    do
 		echo "" >> $TMP
 		echo "$GRP Article #'s Gated:" >> $TMP
 		echo "------------------------------" >> $TMP
-		$EGREP -vi '(watermark:|nothing new| posted to |: \[[0-9\.]*\])' $TMPLOG | $GREP -i " gating " | $GREP -i " $GRP " | $SED -e 's/^.*\[//' -e 's/\]$//' -e 's/\.\./ /' | $TR ' ' '\n' |  $SORT -u | $FMT -w 75 >> $TMP
+		$EGREP -vi '(watermark:|nothing new| gating |: \[[0-9\.]*\])' $TMPLOG | $GREP -i " posted to " | $GREP -i " $GRP: " | $AWK '{print $10}' |  $SORT -u | $FMT -w 75 >> $TMP
 	    done
 
 	elif [ "${LOG}" = "smtp" ] ; then
@@ -295,7 +382,7 @@ do
 	    echo "" >> $TMP
 	    echo "Hourly Summary of Messages Sent" >> $TMP
 	    echo "-------------------------------" >> $TMP
-	    $SED -e 's/^[A-Z][a-z][a-z] *[0-9]* //' -e 's/:.* for / /' -e 's/ recips,.*$//' $TMPLOG | awk '{ val=int($1); sum[val]+=$2 } END { for (i=0; i<24; i++) { printf "%8d %02d:00-%02d:59\n", sum[i], i, i } }' >> $TMP
+	    $SED -e 's/^[A-Z][a-z][a-z] *[0-9]* //' -e 's/:.* for / /' -e 's/ recips,.*$//' $TMPLOG | $AWK '{ val=int($1); sum[val]+=$2 } END { for (i=0; i<24; i++) { printf "%8d %02d:00-%02d:59\n", sum[i], i, i } }' >> $TMP
 
 	else
 
@@ -320,13 +407,15 @@ echo "" >> $TMP
 
 for LOG in $ERR_LOGS
 do
-    $RM -f $TMPLOG
-    $TOUCH $TMPLOG
     echo "Log file: $LOG" >> $TMP
     echo "==============================" >> $TMP
-    $GREP -si "^$DAY [0-9][0-9:]* $YEAR" $LOGDIR/$LOG >> $TMPLOG
 
     if [ -f "$LOGDIR/${LOG}" ] ; then
+      if [ -f "$LOGDIR/${LOG}.1" ] ; then
+        $GREP -si "^$DAY [0-9][0-9:]* $YEAR" ${LOGDIR}/${LOG}.1 ${LOGDIR}/${LOG} | $SED "s/^[^:]*://" > $TMPLOG
+      else
+        $GREP -si "^$DAY [0-9][0-9:]* $YEAR" ${LOGDIR}/${LOG} > $TMPLOG
+      fi
 
 	if [ "${LOG}" = "error" ] ; then
 
@@ -351,7 +440,7 @@ do
 	    echo "" >> $TMP
 	    echo "Other Errors:" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $EGREP -vi '(Uncaught runner exception|No such list|Ignoring unparseable message|Traceback|shunting)' $TMPLOG | $SED 's/^.* ([0-9]*) //' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+	    $EGREP -vi '(Uncaught runner exception|No such list|Traceback|shunting)' $TMPLOG | $SED -e 's/^.* ([0-9]*) //' -e 's/unparseable message.*/unparseable message/' -e 's/preserving file.*/preserving file/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	elif [ "${LOG}" = "fromusenet" ] ; then
 
@@ -416,9 +505,18 @@ do
 	    $GREP -i 'Posting to a moderated newsgroup' $TMPLOG | $AWK '{ print $6 }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	    echo "" >> $TMP
+	    echo "Post to moderated list (by list):" >> $TMP
+	    echo "------------------------------" >> $TMP
+	    $GREP -i 'Post to moderated list' $TMPLOG | $AWK '{ print $6 }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+
+	    echo "" >> $TMP
 	    echo "Other Errors:" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $EGREP -vi '(Post by non-member|suspicious header|message approved|Discarded posting|bulk message discarded|junk message discarded|Message has implicit destination|Posting to a moderated newsgroup|Message discarded, msgid)' $TMPLOG | $SED 's/^.* ([0-9]*) //' | $SORT | $UNIQ -c | $SORT -nr >> $TMP 
+	    $EGREP -vi '(Post by non-member|suspicious header|message approved|Discarded posting|bulk message discarded|junk message discarded|Message has implicit destination|Posting to a moderated newsgroup|Post to moderated list|Message discarded, msgid)' $TMPLOG | $SED -e 's/^.* ([0-9]*) //' -e 's/, message-id=<[^> ]*>:/:/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP 
+
+	elif [ "${LOG}" = "smtp-failure" ] ; then
+
+	    $SED 's/^.* ([0-9]*) //' $TMPLOG | $SED 's/delivery to [^@ ]*@[^@ ]* failed with code/delivery failed with code/g' | $SORT | $UNIQ -c | $SORT -nr >> $TMP 
 
 	else
 
@@ -443,10 +541,9 @@ cd $QUEUEDIR
 for DIR in $SUBDIRS
 do
 
-    $RM -f $TMPLOG
-    $TOUCH $TMPLOG
-    $LS -la $DIR >> $TMPLOG
-    LINES=`wc -l < $TMPLOG`
+  if [ -d $DIR ] ; then
+    $LS -la $DIR > $TMPLOG
+    LINES=`$WC -l < $TMPLOG`
     LINES=`expr $LINES - 3`
 
     echo "Subdirectory: $DIR" >> $TMP
@@ -454,18 +551,81 @@ do
     echo "Entries: $LINES" >> $TMP
     echo "------------------------------" >> $TMP
 
-    if [ $LINES -le $MAX_LINES ] ; then
+    if [ $LINES -le $MAX_QUEUE_LINES ] ; then
     	$CAT $TMPLOG >> $TMP
     else
     	$HEAD $TMPLOG >> $TMP
 	echo "" >> $TMP
-	echo "	More than $MAX_LINES total entries, skipping ..." >> $TMP
+	echo "	More than $MAX_QUEUE_LINES total entries, skipping ..." >> $TMP
 	echo "" >> $TMP
     	$TAIL $TMPLOG >> $TMP
     fi
     echo "" >> $TMP
+  fi
 
 done
+
+echo "******************************" >> $TMP
+echo "Data Directory Contents" >> $TMP
+echo "	(Python pickle files only)" >> $TMP
+echo "******************************" >> $TMP
+
+cd $DATADIR
+
+$LS -la | $GREP -i '\.pck$' > $TMPLOG
+LINES=`$WC -l < $TMPLOG`
+
+echo "Python pickle files: $LINES" >> $TMP
+echo "==============================" >> $TMP
+echo "" >> $TMP
+
+if [ $LINES -le $MAX_DATA_LINES ] ; then
+    $CAT $TMPLOG >> $TMP
+else
+    $HEAD $TMPLOG >> $TMP
+    echo "" >> $TMP
+    echo "	More than $MAX_DATA_LINES total entries, skipping ..." >> $TMP
+    echo "" >> $TMP
+    $TAIL $TMPLOG >> $TMP
+fi
+echo "" >> $TMP
+
+echo "******************************" >> $TMP
+echo "Moderation Queue Summary" >> $TMP
+echo "******************************" >> $TMP
+echo "" >> $TMP
+
+$AWK '{ print $NF }' $TMPLOG | $GREP -i '^heldmsg-' | $SED -e 's/^heldmsg-//' -e 's/-[0-9]*\.pck$//' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+echo "" >> $TMP
+
+if [ -d $SPAMDIR ] ; then
+    cd $SPAMDIR
+    $LS -la | $GREP -i '\.msg$' > $TMPLOG
+    LINES=`$WC -l < $TMPLOG`
+    
+    echo "******************************" >> $TMP
+    echo "Preserved Messages Directory Contents" >> $TMP
+    echo "        (.msg files only)" >> $TMP
+    echo "******************************" >> $TMP
+    echo "Files: $LINES" >> $TMP
+    echo "==============================" >> $TMP
+    echo "" >> $TMP
+    
+    if [ $LINES -le $MAX_DATA_LINES ] ; then
+        $CAT $TMPLOG >> $TMP
+    else
+        $HEAD $TMPLOG >> $TMP
+        echo "" >> $TMP
+        echo "  More than $MAX_DATA_LINES total entries, skipping ..." >> $TMP
+        echo "" >> $TMP
+        $TAIL $TMPLOG >> $TMP
+    fi
+    echo "" >> $TMP
+fi
+
+###############################################################################
+# Okay, we're done with all the code stuff, now handle the output
+###############################################################################
 
 if [ "${RCPTS}x" != "x" ] ; then
     $SENDMAIL -t -f$SENDER < $TMP

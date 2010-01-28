@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2004 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -202,7 +202,7 @@ class ListAdmin:
                     cPickle.dump(msg, fp, 1)
                 else:
                     g = Generator(fp)
-                    g(msg, 1)
+                    g.flatten(msg, 1)
                 fp.flush()
                 os.fsync(fp.fileno())
             finally:
@@ -251,7 +251,7 @@ class ListAdmin:
             outfp = open(outpath, 'w')
             try:
                 g = Generator(outfp)
-                g(msg, 1)
+                g.flatten(msg, 1)
             finally:
                 outfp.close()
         # Now handle updates to the database
@@ -292,9 +292,11 @@ class ListAdmin:
         elif value == mm_cfg.REJECT:
             # Rejected
             rejection = 'Refused'
+            lang = self.getMemberLanguage(sender)
+            subject = Utils.oneline(subject, Utils.GetCharSet(lang))
             self.__refuse(_('Posting of your message titled "%(subject)s"'),
                           sender, comment or _('[No reason given]'),
-                          lang=self.getMemberLanguage(sender))
+                          lang=lang)
         else:
             assert value == mm_cfg.DISCARD
             # Discarded
@@ -408,11 +410,14 @@ class ListAdmin:
         if value == mm_cfg.DEFER:
             return DEFER
         elif value == mm_cfg.DISCARD:
-            pass
+            syslog('vette', '%s: discarded subscription request from %s',
+                   self.internal_name(), addr)
         elif value == mm_cfg.REJECT:
             self.__refuse(_('Subscription request'), addr,
                           comment or _('[No reason given]'),
                           lang=lang)
+            syslog('vette', """%s: rejected subscription request from %s
+\tReason: %s""", self.internal_name(), addr, comment or '[No reason given]')
         else:
             # subscribe
             assert value == mm_cfg.SUBSCRIBE
@@ -460,9 +465,12 @@ class ListAdmin:
         if value == mm_cfg.DEFER:
             return DEFER
         elif value == mm_cfg.DISCARD:
-            pass
+            syslog('vette', '%s: discarded unsubscription request from %s',
+                   self.internal_name(), addr)
         elif value == mm_cfg.REJECT:
             self.__refuse(_('Unsubscription request'), addr, comment)
+            syslog('vette', """%s: rejected unsubscription request from %s
+\tReason: %s""", self.internal_name(), addr, comment or '[No reason given]')
         else:
             assert value == mm_cfg.UNSUBSCRIBE
             try:
@@ -499,7 +507,7 @@ class ListAdmin:
             subject = _('Request to mailing list %(realname)s rejected')
         finally:
             i18n.set_translation(otrans)
-        msg = Message.UserNotification(recip, self.GetBouncesEmail(),
+        msg = Message.UserNotification(recip, self.GetOwnerEmail(),
                                        subject, text, lang)
         msg.send(self)
 
@@ -538,7 +546,21 @@ class ListAdmin:
             except IOError, e:
                 if e.errno <> errno.ENOENT: raise
                 self.__db = {}
-        for id, (op, info) in self.__db.items():
+        for id, x in self.__db.items():
+            # A bug in versions 2.1.1 through 2.1.11 could have resulted in
+            # just info being stored instead of (op, info)
+            if len(x) == 2:
+                op, info = x
+            elif len(x) == 6:
+                # This is the buggy info. Check for digest flag.
+                if x[4] in (0, 1):
+                    op = SUBSCRIPTION
+                else:
+                    op = HELDMSG
+                self.__db[id] = op, x
+                continue
+            else:
+                assert False, 'Unknown record format in %s' % self.__filename
             if op == SUBSCRIPTION:
                 if len(info) == 4:
                     # pre-2.1a2 compatibility
@@ -553,7 +575,8 @@ class ListAdmin:
                     assert len(info) == 6, 'Unknown subscription record layout'
                     continue
                 # Here's the new layout
-                self.__db[id] = when, addr, fullname, passwd, digest, lang
+                self.__db[id] = op, (when, addr, fullname, passwd,
+                                     digest, lang)
             elif op == HELDMSG:
                 if len(info) == 5:
                     when, sender, subject, reason, text = info
@@ -562,7 +585,8 @@ class ListAdmin:
                     assert len(info) == 6, 'Unknown held msg record layout'
                     continue
                 # Here's the new layout
-                self.__db[id] = when, sender, subject, reason, text, msgdata
+                self.__db[id] = op, (when, sender, subject, reason,
+                                     text, msgdata)
         # All done
         self.__closedb()
 

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2004 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -93,7 +93,7 @@ class Results:
         if part is None:
             # E.g the outer Content-Type: was text/html
             return
-        body = part.get_payload()
+        body = part.get_payload(decode=True)
         # text/plain parts better have string payloads
         assert isinstance(body, StringType) or isinstance(body, UnicodeType)
         lines = body.splitlines()
@@ -190,7 +190,7 @@ To obtain instructions, send a message containing just the word "help".
             return
         msg = Message.UserNotification(
             recip,
-            self.mlist.GetBouncesEmail(),
+            self.mlist.GetOwnerEmail(),
             _('The results of your email commands'),
             lang=self.msgdata['lang'])
         msg.set_type('multipart/mixed')

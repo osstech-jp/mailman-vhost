@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -46,6 +46,7 @@ from email.Charset import Charset
 
 from Mailman import mm_cfg
 from Mailman import Utils
+from Mailman import Errors
 from Mailman import LockFile
 from Mailman import MailList
 from Mailman import i18n
@@ -156,7 +157,12 @@ REpat = re.compile( r"\s*RE\s*(\[\d+\]\s*)?:\s*", re.IGNORECASE)
 emailpat = re.compile(r'([-+,.\w]+@[-+.\w]+)')
 
 #  Argh!  This pattern is buggy, and will choke on URLs with GET parameters.
-urlpat = re.compile(r'(\w+://[^>)\s]+)') # URLs in text
+# MAS: Given that people are not constrained in how they write URIs in plain
+# text, it is not possible to have a single regexp to reliably match them.
+# The regexp below is intended to match straightforward cases.  Even humans
+# can't reliably tell whether various punctuation at the end of a URI is part
+# of the URI or not.
+urlpat = re.compile(r'([a-z]+://.*?)(?:_\s|_$|$|[]})>\'"\s])', re.IGNORECASE)
 
 # Blank lines
 blankpat = re.compile(r'^\s*$')
@@ -297,6 +303,9 @@ class Article(pipermail.Article):
         self.decoded = {}
         cset = Utils.GetCharSet(mlist.preferred_language)
         cset_out = Charset(cset).output_charset or cset
+        if isinstance(cset_out, unicode):
+            # email 3.0.1 (python 2.4) doesn't like unicode
+            cset_out = cset_out.encode('us-ascii')
         charset = message.get_content_charset(cset_out)
         if charset:
             charset = charset.lower().strip()
@@ -305,12 +314,7 @@ class Article(pipermail.Article):
             if charset[0]=="'" and charset[-1]=="'":
                 charset = charset[1:-1]
             try:
-                # Check Scrubber-munged payload
-                if message.get('x-mailman-scrubbed'):
-                    decode = False
-                else:
-                    decode = True
-                body = message.get_payload(decode=decode)
+                body = message.get_payload(decode=True)
             except binascii.Error:
                 body = None
             if body and charset != Utils.GetCharSet(self._lang):
@@ -465,8 +469,10 @@ class Article(pipermail.Article):
             d["email_html"] = self.quote(self.email)
             d["title"] = self.quote(self.subject)
             d["subject_html"] = self.quote(self.subject)
-            d["subject_url"] = url_quote(self.subject)
-            d["in_reply_to_url"] = url_quote(self.in_reply_to)
+            # TK: These two _url variables are used to compose a response
+            # from the archive web page.  So, ...
+            d["subject_url"] = url_quote('Re: ' + self.subject)
+            d["in_reply_to_url"] = url_quote(self._message_id)
             if mm_cfg.ARCHIVER_OBSCURES_EMAILADDRS:
                 # Point the mailto url back to the list
                 author = re.sub('@', _(' at '), self.author)
@@ -579,6 +585,7 @@ class Article(pipermail.Article):
             try:
                 atmark = unicode(_(' at '), cset)
                 i18n.set_language(self._lang)
+                atmark = unicode(_(' at '), cset)
                 body = re.sub(r'([-+,.\w]+)@([-+.\w]+)',
                               '\g<1>' + atmark + '\g<2>', body)
             finally:
@@ -691,6 +698,7 @@ class HyperArchive(pipermail.T):
                  "archivedate": quotetime(self.archivedate),
                  "listinfo": mlist.GetScriptURL('listinfo', absolute=1),
                  "version": self.version,
+                 "listname": html_quote(mlist.real_name, self.lang),
                  }
             i = {"thread": _("thread"),
                  "subject": _("subject"),

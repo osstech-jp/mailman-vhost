@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 1998-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -14,7 +14,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
 
 """Perform all necessary upgrades.
 
@@ -34,7 +35,6 @@ some previous version.  It knows about versions back to 1.0b4 (?).
 """
 
 import os
-import md5
 import sys
 import time
 import errno
@@ -127,11 +127,11 @@ def move_language_templates(mlist):
         try:
             fp = open(os.path.join(mm_cfg.TEMPLATE_DIR, gtemplate))
         except IOError, e:
-            if e.errno <> errno.ENOENT: raise
-            # No global template
+            if e.errno not in (errno.ENOENT, errno.EISDIR): raise
+            # No global template or maybe a VCS directory
             continue
 
-        gcksum = md5.new(fp.read()).digest()
+        gcksum = Utils.md5_new(fp.read()).digest()
         fp.close()
         # Match against the lists/<list>/* template
         try:
@@ -139,7 +139,7 @@ def move_language_templates(mlist):
         except IOError, e:
             if e.errno <> errno.ENOENT: raise
         else:
-            tcksum = md5.new(fp.read()).digest()
+            tcksum = Utils.md5_new(fp.read()).digest()
             fp.close()
             if gcksum == tcksum:
                 os.unlink(os.path.join(mlist.fullpath(), gtemplate))
@@ -149,7 +149,7 @@ def move_language_templates(mlist):
         except IOError, e:
             if e.errno <> errno.ENOENT: raise
         else:
-            tcksum = md5.new(fp.read()).digest()
+            tcksum = Utils.md5_new(fp.read()).digest()
             fp.close()
             if gcksum == tcksum:
                 os.unlink(os.path.join(mlist.fullpath(), gtemplate + '.prev'))
@@ -159,7 +159,7 @@ def move_language_templates(mlist):
         except IOError, e:
             if e.errno <> errno.ENOENT: raise
         else:
-            tcksum = md5.new(fp.read()).digest()
+            tcksum = Utils.md5_new(fp.read()).digest()
             fp.close()
             if gcksum == tcksum:
                 os.unlink(os.path.join(mlist.fullpath(), 'en', gtemplate))
@@ -169,7 +169,7 @@ def move_language_templates(mlist):
         except IOError, e:
             if e.errno <> errno.ENOENT: raise
         else:
-            tcksum = md5.new(fp.read()).digest()
+            tcksum = Utils.md5_new(fp.read()).digest()
             fp.close()
             if gcksum == tcksum:
                 os.unlink(os.path.join(mm_cfg.TEMPLATE_DIR, gtemplate))
@@ -179,7 +179,7 @@ def move_language_templates(mlist):
         except IOError, e:
             if e.errno <> errno.ENOENT: raise
         else:
-            tcksum = md5.new(fp.read()).digest()
+            tcksum = Utils.md5_new(fp.read()).digest()
             fp.close()
             if gcksum == tcksum:
                 os.unlink(os.path.join(mm_cfg.TEMPLATE_DIR,
@@ -299,9 +299,7 @@ script.
         %(newname)s""")
         else:
             # directory
-            print _("""\
-    looks like you have a really recent CVS installation...
-    you're either one brave soul, or you already ran me""")
+            print _('Nothing to do.')
 
 
     #
@@ -322,9 +320,7 @@ script.
     to
         %(newname)s""")
         else: # directory
-            print _("""\
-    looks like you have a really recent CVS installation...
-    you're either one brave soul, or you already ran me""")
+            print _('Nothing to do.')
 
     #
     # move the html archives there
@@ -342,25 +338,32 @@ script.
     # and move them to the new place if there's not already
     # a new one there
     #
-    tmpl_dir = os.path.join(mm_cfg.PREFIX, "templates")
-    list_dir = os.path.join(mm_cfg.PREFIX, "lists")
-    b4_tmpl_dir = os.path.join(tmpl_dir, mlist._internal_name)
-    new_tmpl_dir = os.path.join(list_dir, mlist._internal_name)
-    if os.path.exists(b4_tmpl_dir):
-        print _("""\
+    # There is a problem with the following if the list name is equal
+    # to a language code. All the templates get moved from templates/xx
+    # to lists/xx. To avoid this, test the list name, and if it is 'en'
+    # or matches a name in the messages directory, just skip this step.
+    if (mlist._internal_name <> 'en' and
+        mlist._internal_name not in os.listdir(mm_cfg.MESSAGES_DIR)):
+        # It's okay to move the templates.
+        tmpl_dir = os.path.join(mm_cfg.PREFIX, "templates")
+        list_dir = mm_cfg.LIST_DATA_DIR
+        b4_tmpl_dir = os.path.join(tmpl_dir, mlist._internal_name)
+        new_tmpl_dir = os.path.join(list_dir, mlist._internal_name)
+        if os.path.exists(b4_tmpl_dir):
+            print _("""\
 - This list looks like it might have <= b4 list templates around""")
-        for f in os.listdir(b4_tmpl_dir):
-            o_tmpl = os.path.join(b4_tmpl_dir, f)
-            n_tmpl = os.path.join(new_tmpl_dir, f)
-            if os.path.exists(o_tmpl):
-                if not os.path.exists(n_tmpl):
-                    os.rename(o_tmpl, n_tmpl)
-                    print _('- moved %(o_tmpl)s to %(n_tmpl)s')
+            for f in os.listdir(b4_tmpl_dir):
+                o_tmpl = os.path.join(b4_tmpl_dir, f)
+                n_tmpl = os.path.join(new_tmpl_dir, f)
+                if os.path.exists(o_tmpl):
+                    if not os.path.exists(n_tmpl):
+                        os.rename(o_tmpl, n_tmpl)
+                        print _('- moved %(o_tmpl)s to %(n_tmpl)s')
+                    else:
+                        print _("""\
+- both %(o_tmpl)s and %(n_tmpl)s exist, leaving untouched""")
                 else:
                     print _("""\
-- both %(o_tmpl)s and %(n_tmpl)s exist, leaving untouched""")
-            else:
-                print _("""\
 - %(o_tmpl)s doesn't exist, leaving untouched""")
     #
     # Move all the templates to the en language subdirectory as required for
@@ -435,6 +438,10 @@ def update_qfiles():
             for filename in os.listdir(dirpath):
                 filepath = os.path.join(dirpath, filename)
                 filebase, ext = os.path.splitext(filepath)
+                # A bug in Mailman 2.1.9 left .bak files behind in some
+                # circumstances. It should be safe to remove them.
+                if ext == '.bak':
+                    os.remove(filepath)
                 # Handle the .db metadata files as part of the handling of the
                 # .pck or .msg message files.
                 if ext not in ('.pck', '.msg'):
@@ -500,6 +507,12 @@ def dequeue(filebase):
         try:
             msgfp = open(pckfile)
             msg = cPickle.load(msgfp)
+            if not data:
+                # There was no .db file. Is this a post 2.1.5 .pck?
+                try:
+                    data = cPickle.load(msgfp)
+                except EOFError:
+                    pass
             os.unlink(pckfile)
         except EnvironmentError, e:
             if e.errno <> errno.ENOENT: raise

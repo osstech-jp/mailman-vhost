@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -24,11 +24,9 @@ import sys
 import os
 import re
 import cgi
-import sha
 import urllib
 import signal
 from types import *
-from string import lowercase, digits
 
 from email.Utils import unquote, parseaddr, formataddr
 
@@ -42,6 +40,7 @@ from Mailman.UserDesc import UserDesc
 from Mailman.htmlformat import *
 from Mailman.Cgi import Auth
 from Mailman.Logging.Syslog import syslog
+from Mailman.Utils import sha_new
 
 # Set up i18n
 _ = i18n._
@@ -234,7 +233,7 @@ def admin_overview(msg=''):
         mlist = MailList.MailList(name, lock=0)
         if mlist.advertised:
             if mm_cfg.VIRTUAL_HOST_OVERVIEW and \
-                   mlist.web_page_url.find(hostname) == -1:
+                   mlist.web_page_url.find('/%s/' % hostname) == -1:
                 # List is for different identity of this host - skip it.
                 continue
             else:
@@ -320,10 +319,11 @@ def option_help(mlist, varhelp):
         elif len(reflist) == 3:
             category, subcat, varname = reflist
         options = mlist.GetConfigInfo(category, subcat)
-        for i in options:
-            if i and i[0] == varname:
-                item = i
-                break
+        if options:
+            for i in options:
+                if i and i[0] == varname:
+                    item = i
+                    break
     # Print an error message if we couldn't find a valid one
     if not item:
         bad = _('No valid variable name found.')
@@ -853,7 +853,8 @@ def membership_options(mlist, subcat, cgidata, doc, form):
     container.AddItem(header)
     # Add a "search for member" button
     table = Table(width='100%')
-    link = Link('http://www.python.org/doc/current/lib/re-syntax.html',
+    link = Link('http://docs.python.org/library/re.html'
+                '#regular-expression-syntax',
                 _('(help)')).Format()
     table.AddRow([Label(_('Find member %(link)s:')),
                   TextBox('findmember',
@@ -901,12 +902,10 @@ def membership_options(mlist, subcat, cgidata, doc, form):
         qsenviron = os.environ.get('QUERY_STRING')
         if qsenviron:
             qs = cgi.parse_qs(qsenviron)
-            bucket = qs.get('letter', 'a')[0].lower()
-            if bucket not in digits + lowercase:
-                bucket = None
+            bucket = qs.get('letter', '0')[0].lower()
+        keys = buckets.keys()
+        keys.sort()
         if not bucket or not buckets.has_key(bucket):
-            keys = buckets.keys()
-            keys.sort()
             bucket = keys[0]
         members = buckets[bucket]
         action = adminurl + '/members?letter=%s' % bucket
@@ -942,10 +941,11 @@ def membership_options(mlist, subcat, cgidata, doc, form):
     # Add the alphabetical links
     if bucket:
         cells = []
-        for letter in digits + lowercase:
-            if not buckets.get(letter):
-                continue
-            url = adminurl + '/members?letter=%s' % letter
+        for letter in keys:
+            findfrag = ''
+            if regexp:
+                findfrag = '&findmember=' + urllib.quote(regexp)
+            url = adminurl + '/members?letter=' + letter + findfrag
             if letter == bucket:
                 show = Bold('[%s]' % letter.upper()).Format()
             else:
@@ -982,15 +982,16 @@ def membership_options(mlist, subcat, cgidata, doc, form):
                   }
     # Now populate the rows
     for addr in members:
+        qaddr = urllib.quote(addr)
         link = Link(mlist.GetOptionsURL(addr, obscure=1),
                     mlist.getMemberCPAddress(addr))
         fullname = Utils.uncanonstr(mlist.getMemberName(addr),
                                     mlist.preferred_language)
-        name = TextBox(addr + '_realname', fullname, size=longest).Format()
-        cells = [Center(CheckBox(addr + '_unsub', 'off', 0).Format()),
+        name = TextBox(qaddr + '_realname', fullname, size=longest).Format()
+        cells = [Center(CheckBox(qaddr + '_unsub', 'off', 0).Format()),
                  link.Format() + '<br>' +
                  name +
-                 Hidden('user', urllib.quote(addr)).Format(),
+                 Hidden('user', qaddr).Format(),
                  ]
         # Do the `mod' option
         if mlist.getMemberOption(addr, mm_cfg.Moderate):
@@ -999,7 +1000,7 @@ def membership_options(mlist, subcat, cgidata, doc, form):
         else:
             value = 'off'
             checked = 0
-        box = CheckBox('%s_mod' % addr, value, checked)
+        box = CheckBox('%s_mod' % qaddr, value, checked)
         cells.append(Center(box).Format())
         for opt in ('hide', 'nomail', 'ack', 'notmetoo', 'nodupes'):
             extra = ''
@@ -1018,23 +1019,23 @@ def membership_options(mlist, subcat, cgidata, doc, form):
             else:
                 value = 'off'
                 checked = 0
-            box = CheckBox('%s_%s' % (addr, opt), value, checked)
+            box = CheckBox('%s_%s' % (qaddr, opt), value, checked)
             cells.append(Center(box.Format() + extra))
         # This code is less efficient than the original which did a has_key on
         # the underlying dictionary attribute.  This version is slower and
         # less memory efficient.  It points to a new MemberAdaptor interface
         # method.
         if addr in mlist.getRegularMemberKeys():
-            cells.append(Center(CheckBox(addr + '_digest', 'off', 0).Format()))
+            cells.append(Center(CheckBox(qaddr + '_digest', 'off', 0).Format()))
         else:
-            cells.append(Center(CheckBox(addr + '_digest', 'on', 1).Format()))
+            cells.append(Center(CheckBox(qaddr + '_digest', 'on', 1).Format()))
         if mlist.getMemberOption(addr, mm_cfg.OPTINFO['plain']):
             value = 'on'
             checked = 1
         else:
             value = 'off'
             checked = 0
-        cells.append(Center(CheckBox('%s_plain' % addr, value, checked)))
+        cells.append(Center(CheckBox('%s_plain' % qaddr, value, checked)))
         # User's preferred language
         langpref = mlist.getMemberLanguage(addr)
         langs = mlist.GetAvailableLanguages()
@@ -1043,7 +1044,7 @@ def membership_options(mlist, subcat, cgidata, doc, form):
             selected = langs.index(langpref)
         except ValueError:
             selected = 0
-        cells.append(Center(SelectOptions(addr + '_language', langs,
+        cells.append(Center(SelectOptions(qaddr + '_language', langs,
                                           langdescs, selected)).Format())
         usertable.AddRow(cells)
     # Add the usertable and a legend
@@ -1273,7 +1274,7 @@ def change_options(mlist, category, subcat, cgidata, doc):
     confirm = cgidata.getvalue('confirmmodpw', '').strip()
     if new or confirm:
         if new == confirm:
-            mlist.mod_password = sha.new(new).hexdigest()
+            mlist.mod_password = sha_new(new).hexdigest()
             # No re-authentication necessary because the moderator's
             # password doesn't get you into these pages.
         else:
@@ -1283,7 +1284,7 @@ def change_options(mlist, category, subcat, cgidata, doc):
     confirm = cgidata.getvalue('confirmpw', '').strip()
     if new or confirm:
         if new == confirm:
-            mlist.password = sha.new(new).hexdigest()
+            mlist.password = sha_new(new).hexdigest()
             # Set new cookie
             print mlist.MakeCookie(mm_cfg.AuthListAdmin)
         else:
@@ -1319,6 +1320,7 @@ def change_options(mlist, category, subcat, cgidata, doc):
         # we display.  Try uploading a file with 10k names -- it takes a while
         # to render the status page.
         for entry in entries:
+            safeentry = Utils.websafe(entry)
             fullname, address = parseaddr(entry)
             # Canonicalize the full name
             fullname = Utils.canonstr(fullname, mlist.preferred_language)
@@ -1336,20 +1338,20 @@ def change_options(mlist, category, subcat, cgidata, doc):
                                             send_admin_notif, invitation,
                                             whence='admin mass sub')
             except Errors.MMAlreadyAMember:
-                subscribe_errors.append((entry, _('Already a member')))
+                subscribe_errors.append((safeentry, _('Already a member')))
             except Errors.MMBadEmailError:
                 if userdesc.address == '':
                     subscribe_errors.append((_('&lt;blank line&gt;'),
                                              _('Bad/Invalid email address')))
                 else:
-                    subscribe_errors.append((entry,
+                    subscribe_errors.append((safeentry,
                                              _('Bad/Invalid email address')))
             except Errors.MMHostileAddress:
                 subscribe_errors.append(
-                    (entry, _('Hostile address (illegal characters)')))
+                    (safeentry, _('Hostile address (illegal characters)')))
             except Errors.MembershipIsBanned, pattern:
                 subscribe_errors.append(
-                    (entry, _('Banned address (matched %(pattern)s)')))
+                    (safeentry, _('Banned address (matched %(pattern)s)')))
             else:
                 member = Utils.uncanonstr(formataddr((fullname, address)))
                 subscribe_success.append(Utils.websafe(member))
@@ -1389,9 +1391,9 @@ def change_options(mlist, category, subcat, cgidata, doc):
                     addr, whence='admin mass unsub',
                     admin_notif=send_unsub_notifications,
                     userack=userack)
-                unsubscribe_success.append(addr)
+                unsubscribe_success.append(Utils.websafe(addr))
             except Errors.NotAMemberError:
-                unsubscribe_errors.append(addr)
+                unsubscribe_errors.append(Utils.websafe(addr))
         if unsubscribe_success:
             doc.AddItem(Header(5, _('Successfully Unsubscribed:')))
             doc.AddItem(UnorderedList(*unsubscribe_success))
@@ -1426,7 +1428,8 @@ def change_options(mlist, category, subcat, cgidata, doc):
         errors = []
         removes = []
         for user in users:
-            if cgidata.has_key('%s_unsub' % user):
+            quser = urllib.quote(user)
+            if cgidata.has_key('%s_unsub' % quser):
                 try:
                     mlist.ApprovedDeleteMember(user, whence='member mgt page')
                     removes.append(user)
@@ -1437,7 +1440,7 @@ def change_options(mlist, category, subcat, cgidata, doc):
                 doc.addError(_('Ignoring changes to deleted member: %(user)s'),
                              tag=_('Warning: '))
                 continue
-            value = cgidata.has_key('%s_digest' % user)
+            value = cgidata.has_key('%s_digest' % quser)
             try:
                 mlist.setMemberOption(user, mm_cfg.Digests, value)
             except (Errors.AlreadyReceivingDigests,
@@ -1447,28 +1450,28 @@ def change_options(mlist, category, subcat, cgidata, doc):
                 # BAW: Hmm...
                 pass
 
-            newname = cgidata.getvalue(user+'_realname', '')
+            newname = cgidata.getvalue(quser+'_realname', '')
             newname = Utils.canonstr(newname, mlist.preferred_language)
             mlist.setMemberName(user, newname)
 
-            newlang = cgidata.getvalue(user+'_language')
+            newlang = cgidata.getvalue(quser+'_language')
             oldlang = mlist.getMemberLanguage(user)
             if Utils.IsLanguage(newlang) and newlang <> oldlang:
                 mlist.setMemberLanguage(user, newlang)
 
-            moderate = not not cgidata.getvalue(user+'_mod')
+            moderate = not not cgidata.getvalue(quser+'_mod')
             mlist.setMemberOption(user, mm_cfg.Moderate, moderate)
 
             # Set the `nomail' flag, but only if the user isn't already
             # disabled (otherwise we might change BYUSER into BYADMIN).
-            if cgidata.has_key('%s_nomail' % user):
+            if cgidata.has_key('%s_nomail' % quser):
                 if mlist.getDeliveryStatus(user) == MemberAdaptor.ENABLED:
                     mlist.setDeliveryStatus(user, MemberAdaptor.BYADMIN)
             else:
                 mlist.setDeliveryStatus(user, MemberAdaptor.ENABLED)
             for opt in ('hide', 'ack', 'notmetoo', 'nodupes', 'plain'):
                 opt_code = mm_cfg.OPTINFO[opt]
-                if cgidata.has_key('%s_%s' % (user, opt)):
+                if cgidata.has_key('%s_%s' % (quser, opt)):
                     mlist.setMemberOption(user, opt_code, 1)
                 else:
                     mlist.setMemberOption(user, opt_code, 0)

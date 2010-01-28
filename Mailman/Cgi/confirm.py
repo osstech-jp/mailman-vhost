@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2009 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -529,6 +529,12 @@ def addrchange_confirm(mlist, doc, cookie):
             doc.addError(_("""%(newaddr)s is banned from subscribing to the
             %(realname)s list.  If you think this restriction is erroneous,
             please contact the list owners at %(owneraddr)s."""))
+        except Errors.MMAlreadyAMember:
+            realname = mlist.real_name
+            bad_confirmation(doc, _("""%(newaddr)s is already a member of
+            the %(realname)s list.  It is possible that you are attempting
+            to confirm a request for an address that has already been
+            subscribed."""))
         else:
             # The response
             listname = mlist.real_name
@@ -628,8 +634,9 @@ def heldmsg_confirm(mlist, doc, cookie):
             # the user who posted the message.
             op, id = mlist.pend_confirm(cookie)
             ign, sender, msgsubject, ign, ign, ign = mlist.GetRecord(id)
-            subject = Utils.websafe(msgsubject)
             lang = mlist.getMemberLanguage(sender)
+            subject = Utils.websafe(Utils.oneline(msgsubject,
+                                                  Utils.GetCharSet(lang)))
             i18n.set_language(lang)
             doc.set_language(lang)
             # Discard the message
@@ -694,7 +701,7 @@ def heldmsg_prompt(mlist, doc, cookie, id):
     i18n.set_language(lang)
     doc.set_language(lang)
 
-    subject = Utils.websafe(msgsubject)
+    subject = Utils.websafe(Utils.oneline(msgsubject, Utils.GetCharSet(lang)))
     reason = Utils.websafe(_(givenreason))
     listname = mlist.real_name
     table.AddRow([_('''Your confirmation is required in order to cancel the

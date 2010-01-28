@@ -1,4 +1,4 @@
-# Copyright (C) 2001,2002 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2008 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -17,6 +17,7 @@
 """Utilities for list creation/deletion hooks."""
 
 import os
+import re
 import pwd
 
 from Mailman import mm_cfg
@@ -51,12 +52,16 @@ def _makealiases_mailprog(listname, internal_listname=None):
     #    backwards compatibility and may eventually go away (we really have no
     #    need for the -admin address anymore).
     #
+    # We escape a few special characters in the list name in the pipe command
+    # to avoid characters that might split the pipe into two commands.
+    safename = re.sub('([;|&`$])', r'\\\1', internal_listname)
+    #
     # Seed this with the special cases.
-    aliases = [(listname,          '"|%s post %s"' % (wrapper, internal_listname)),
+    aliases = [(listname,          '"|%s post %s"' % (wrapper, safename)),
                ]
     for ext in _extensions:
         aliases.append(('%s-%s' % (listname, ext),
-                        '"|%s %s %s"' % (wrapper, ext, internal_listname)))
+                        '"|%s %s %s"' % (wrapper, ext, safename)))
     return aliases
 
 

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2006 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2007 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -128,13 +128,26 @@ def process(mlist, msg, msgdata):
         for pattern in patterns.splitlines():
             if pattern.startswith('#'):
                 continue
+            # ignore 'empty' patterns
+            if not pattern.strip():
+                continue
             if re.search(pattern, headers, re.IGNORECASE|re.MULTILINE):
                 if action == mm_cfg.DISCARD:
                     raise Errors.DiscardMessage
                 if action == mm_cfg.REJECT:
+                    if msgdata.get('toowner'):
+                        # Don't send rejection notice if addressed to '-owner'
+                        # because it may trigger a loop of notices if the
+                        # sender address is forged.  We just discard it here.
+                        raise Errors.DiscardMessage
                     raise Errors.RejectMessage(
                         _('Message rejected by filter rule match'))
                 if action == mm_cfg.HOLD:
+                    if msgdata.get('toowner'):
+                        # Don't hold '-owner' addressed message.  We just
+                        # pass it here but list-owner can set this to be
+                        # discarded on the GUI if he wants.
+                        return
                     hold_for_approval(mlist, msg, msgdata, HeaderMatchHold)
                 if action == mm_cfg.ACCEPT:
                     return

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2004 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2008 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -12,7 +12,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
 
 """Generic queue runner class.
 """
@@ -28,8 +29,8 @@ from Mailman import Errors
 from Mailman import MailList
 from Mailman import i18n
 
-from Mailman.Queue.Switchboard import Switchboard
 from Mailman.Logging.Syslog import syslog
+from Mailman.Queue.Switchboard import Switchboard
 
 import email.Errors
 
@@ -49,7 +50,7 @@ class Runner:
         self._kids = {}
         # Create our own switchboard.  Don't use the switchboard cache because
         # we want to provide slice and numslice arguments.
-        self._switchboard = Switchboard(self.QDIR, slice, numslices)
+        self._switchboard = Switchboard(self.QDIR, slice, numslices, True)
         # Create the shunt switchboard
         self._shunt = Switchboard(mm_cfg.SHUNTQUEUE_DIR)
         self._stop = False
@@ -97,18 +98,27 @@ class Runner:
                 # Ask the switchboard for the message and metadata objects
                 # associated with this filebase.
                 msg, msgdata = self._switchboard.dequeue(filebase)
-            except email.Errors.MessageParseError, e:
-                # It's possible to get here if the message was stored in the
-                # pickle in plain text, and the metadata had a _parsemsg key
-                # that was true, /and/ if the message had some bogosity in
-                # it.  It's almost always going to be spam or bounced spam.
-                # There's not much we can do (and we didn't even get the
-                # metadata, so just log the exception and continue.
+            except Exception, e:
+                # This used to just catch email.Errors.MessageParseError,
+                # but other problems can occur in message parsing, e.g.
+                # ValueError, and exceptions can occur in unpickling too.
+                # We don't want the runner to die, so we just log and skip
+                # this entry, but maybe preserve it for analysis.
                 self._log(e)
-                syslog('error', 'Ignoring unparseable message: %s', filebase)
+                if mm_cfg.QRUNNER_SAVE_BAD_MESSAGES:
+                    syslog('error',
+                           'Skipping and preserving unparseable message: %s',
+                           filebase)
+                    preserve = True
+                else:
+                    syslog('error',
+                           'Ignoring unparseable message: %s', filebase)
+                    preserve = False
+                self._switchboard.finish(filebase, preserve=preserve)
                 continue
             try:
                 self._onefile(msg, msgdata)
+                self._switchboard.finish(filebase)
             except Exception, e:
                 # All runners that implement _dispose() must guarantee that
                 # exceptions are caught and dealt with properly.  Still, there
@@ -119,8 +129,22 @@ class Runner:
                 self._log(e)
                 # Put a marker in the metadata for unshunting
                 msgdata['whichq'] = self._switchboard.whichq()
-                filebase = self._shunt.enqueue(msg, msgdata)
-                syslog('error', 'SHUNTING: %s', filebase)
+                # It is possible that shunting can throw an exception, e.g. a
+                # permissions problem or a MemoryError due to a really large
+                # message.  Try to be graceful.
+                try:
+                    new_filebase = self._shunt.enqueue(msg, msgdata)
+                    syslog('error', 'SHUNTING: %s', new_filebase)
+                    self._switchboard.finish(filebase)
+                except Exception, e:
+                    # The message wasn't successfully shunted.  Log the
+                    # exception and try to preserve the original queue entry
+                    # for possible analysis.
+                    self._log(e)
+                    syslog('error',
+                           'SHUNTING FAILED, preserving original entry: %s',
+                           filebase)
+                    self._switchboard.finish(filebase, preserve=True)
             # Other work we want to do each time through the loop
             Utils.reap(self._kids, once=True)
             self._doperiodic()

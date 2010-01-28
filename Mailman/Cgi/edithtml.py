@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2006 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2007 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -143,7 +143,8 @@ def FormatHTML(mlist, doc, template_name, template_info):
     doc.AddItem('<p>')
     doc.AddItem('<hr>')
     form = Form(mlist.GetScriptURL('edithtml') + '/' + template_name)
-    text = Utils.websafe(Utils.maketext(template_name, raw=1, mlist=mlist))
+    text = Utils.maketext(template_name, raw=1, mlist=mlist)
+    # MAS: Don't websafe twice.  TextArea does it.
     form.AddItem(TextArea('html_code', text, rows=40, cols=75))
     form.AddItem('<p>' + _('When you are done making changes...'))
     form.AddItem(SubmitButton('submit', _('Submit Changes')))
@@ -158,7 +159,20 @@ def ChangeHTML(mlist, cgi_info, template_name, doc):
         doc.AddItem('<hr>')
         return
     code = cgi_info['html_code'].value
-    code = re.sub(r'<([/]?script.*?)>', r'&lt;\1&gt;', code)
+    if Utils.suspiciousHTML(code):
+        doc.AddItem(Header(3,
+           _("""The page you saved contains suspicious HTML that could
+potentially expose your users to cross-site scripting attacks.  This change
+has therefore been rejected.  If you still want to make these changes, you
+must have shell access to your Mailman server.
+             """)))
+        doc.AddItem(_('See '))
+        doc.AddItem(Link(
+'http://wiki.list.org/x/jYA9',
+                _('FAQ 4.48.')))
+        doc.AddItem(Header(3,_("Page Unchanged.")))
+        doc.AddItem('<hr>')
+        return
     langdir = os.path.join(mlist.fullpath(), mlist.preferred_language)
     # Make sure the directory exists
     omask = os.umask(0)

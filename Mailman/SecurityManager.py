@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2004 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2008 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -12,7 +12,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
 
 
 """Handle passwords and sanitize approved messages."""
@@ -48,7 +49,6 @@
 
 import os
 import re
-import sha
 import time
 import Cookie
 import marshal
@@ -61,12 +61,12 @@ try:
     import crypt
 except ImportError:
     crypt = None
-import md5
 
 from Mailman import mm_cfg
 from Mailman import Utils
 from Mailman import Errors
 from Mailman.Logging.Syslog import syslog
+from Mailman.Utils import md5_new, sha_new
 
 try:
     True, False
@@ -141,6 +141,9 @@ class SecurityManager:
         #
         # Return the authcontext from the argument sequence that matches the
         # response, or UnAuthorized.
+        if not response:
+            # Don't authenticate null passwords
+            return mm_cfg.UnAuthorized
         for ac in authcontexts:
             if ac == mm_cfg.AuthCreator:
                 ok = Utils.check_global_password(response, siteadmin=0)
@@ -174,11 +177,11 @@ class SecurityManager:
                 key, secret = self.AuthContextInfo(ac)
                 if secret is None:
                     continue
-                sharesponse = sha.new(response).hexdigest()
+                sharesponse = sha_new(response).hexdigest()
                 upgrade = ok = False
                 if sharesponse == secret:
                     ok = True
-                elif md5.new(response).digest() == secret:
+                elif md5_new(response).digest() == secret:
                     ok = upgrade = True
                 elif cryptmatchp(response, secret):
                     ok = upgrade = True
@@ -199,7 +202,7 @@ class SecurityManager:
             elif ac == mm_cfg.AuthListModerator:
                 # The list moderator password must be sha'd
                 key, secret = self.AuthContextInfo(ac)
-                if secret and sha.new(response).hexdigest() == secret:
+                if secret and sha_new(response).hexdigest() == secret:
                     return ac
             elif ac == mm_cfg.AuthUser:
                 if user is not None:
@@ -240,7 +243,7 @@ class SecurityManager:
         # Timestamp
         issued = int(time.time())
         # Get a digest of the secret, plus other information.
-        mac = sha.new(secret + `issued`).hexdigest()
+        mac = sha_new(secret + `issued`).hexdigest()
         # Create the cookie object.
         c = Cookie.SimpleCookie()
         c[key] = binascii.hexlify(marshal.dumps((issued, mac)))
@@ -302,7 +305,8 @@ class SecurityManager:
                         usernames.append(k[len(prefix):])
             # If any check out, we're golden.  Note: `@'s are no longer legal
             # values in cookie keys.
-            for user in [Utils.UnobscureEmail(u) for u in usernames]:
+            for user in [Utils.UnobscureEmail(urllib.unquote(u))
+                         for u in usernames]:
                 ok = self.__checkone(c, authcontext, user)
                 if ok:
                     return True
@@ -339,7 +343,7 @@ class SecurityManager:
             return False
         # Calculate what the mac ought to be based on the cookie's timestamp
         # and the shared secret.
-        mac = sha.new(secret + `issued`).hexdigest()
+        mac = sha_new(secret + `issued`).hexdigest()
         if mac <> received_mac:
             return False
         # Authenticated!
@@ -351,11 +355,12 @@ splitter = re.compile(';\s*')
 
 def parsecookie(s):
     c = {}
-    for p in splitter.split(s):
-        try:
-            k, v = p.split('=', 1)
-        except ValueError:
-            pass
-        else:
-            c[k] = v
+    for line in s.splitlines():
+        for p in splitter.split(line):
+            try:
+                k, v = p.split('=', 1)
+            except ValueError:
+                pass
+            else:
+                c[k] = v
     return c
