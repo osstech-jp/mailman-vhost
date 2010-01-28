@@ -38,7 +38,7 @@ mcre = re.compile(r"""
     \d+.                                          # serial number
     \d+.                                          # time in seconds since epoch
     \d+.                                          # pid
-    (?P<listname>[^@]+)                           # list's internal_name()
+    (?P<localpart>[^@]+)                          # list's local_part
     @                                             # localpart@dom.ain
     (?P<hostname>[^>]+)                           # list's host_name
     >                                             # trailer
@@ -139,8 +139,10 @@ def prepare_message(mlist, msg, msgdata):
     if msgid:
         mo = mcre.search(msgid)
         if mo:
-            lname, hname = mo.group('listname', 'hostname')
-            if lname == mlist.internal_name() and hname == mlist.host_name:
+            lname, hname = mo.group('localname', 'hostname')
+            if '@'.join(lname, hname) == mlist.internal_name():
+                hackmsgid = False
+            elif lname == mlist.internal_name() and hname == mlist.host_name:
                 hackmsgid = False
     if hackmsgid:
         del msg['message-id']

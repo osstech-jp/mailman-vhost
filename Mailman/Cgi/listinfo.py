@@ -42,7 +42,7 @@ def main():
         listinfo_overview()
         return
 
-    listname = parts[0].lower()
+    listname = Utils.GetListName(parts)
     try:
         mlist = MailList.MailList(listname, lock=0)
     except Errors.MMListError, e:

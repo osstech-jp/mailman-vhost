@@ -108,13 +108,16 @@ def main():
     if not bare:
         print len(mlists), _('matching mailing lists found:')
 
-    format = '%%%ds - %%.%ds' % (longest, 77 - longest)
+    format = '%%%ds%%s - %%.%ds' % (longest, 77 - longest)
     for mlist in mlists:
         if bare:
             print mlist.internal_name()
         else:
             description = mlist.description or _('[no description available]')
-            print '   ', format % (mlist.real_name, description)
+            if '@' in mlist.internal_name():
+                print '   ', format % (mlist.real_name, '@', description)
+            else:
+                print '   ', format % (mlist.real_name, ' ', description)
 
 
 

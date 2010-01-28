@@ -55,7 +55,7 @@ def main():
         syslog('error', 'Bad URL specification: %s', parts)
         return
         
-    listname = parts[0].lower()
+    listname = Utils.GetListName(parts)
     try:
         mlist = MailList.MailList(listname, lock=0)
     except Errors.MMListError, e:
@@ -136,8 +136,9 @@ def process_request(doc, cgidata, mlist):
 
     problems = 0
     listname = mlist.internal_name()
+    local_part = mlist.local_part
     for dirtmpl in REMOVABLES:
-        dir = os.path.join(mm_cfg.VAR_PREFIX, dirtmpl % listname)
+        dir = os.path.join(mm_cfg.VAR_PREFIX, dirtmpl % local_part) # NDIM XXX
         if os.path.islink(dir):
             try:
                 os.unlink(dir)

@@ -180,7 +180,7 @@ def process(mlist, msg, msgdata):
     if msgdata.get('_nolist') or not mlist.include_rfc2369_headers:
         return
     # This will act like an email address for purposes of formataddr()
-    listid = '%s.%s' % (mlist.internal_name(), mlist.host_name)
+    listid = '%s.%s' % (mlist.local_part, mlist.host_name)
     cset = Utils.GetCharSet(mlist.preferred_language)
     if mlist.description:
         # Don't wrap the header since here we just want to get it properly RFC
@@ -193,10 +193,9 @@ def process(mlist, msg, msgdata):
     # We always add a List-ID: header.
     del msg['list-id']
     msg['List-Id'] = listid_h
-    # For internally crafted messages, we
-    # also add a (nonstandard), "X-List-Administrivia: yes" header.  For all
-    # others (i.e. those coming from list posts), we adda a bunch of other RFC
-    # 2369 headers.
+    # For internally crafted messages, we also add a (nonstandard),
+    # "X-List-Administrivia: yes" header.  For all others (i.e. those coming
+    # from list posts), we add a bunch of other RFC 2369 headers.
     requestaddr = mlist.GetRequestEmail()
     subfieldfmt = '<%s>, <mailto:%s?subject=%ssubscribe>'
     listinfo = mlist.GetScriptURL('listinfo', absolute=1)

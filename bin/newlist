@@ -73,6 +73,9 @@ where `mydom.ain' is the mail domain name. If you don't specify emailhost but
 urlhost is not in the virtual host list, then mm_cfg.DEFAULT_EMAIL_HOST will
 be used for the email interface.
 
+NDIM XXX Ooops. How to keep this backward compatibility below? The
+vhost branch newlist is currently following a different model.
+
 For backward compatibility, you can also specify the domain to create your
 new list in by spelling the listname like so:
 
@@ -154,12 +157,23 @@ def main():
     else:
         listname = raw_input(_('Enter the name of the list: '))
     listname = listname.lower()
-
+    
     if '@' in listname:
         # note that --urlhost and --emailhost have precedence
-        listname, domain = listname.split('@', 1)
-        urlhost = urlhost or domain
-        emailhost = emailhost or mm_cfg.VIRTUAL_HOSTS.get(domain, domain)
+        firstname, domain = listname.split('@', 1)
+        urlhost = urlhost or ('lists.%s' % domain) # TODO: Not configurable yet
+        if not emailhost:
+            emailhost = domain
+        else:
+            usage(1, _('You cannot use an email host different from the domain part of the list name.'))
+        if not mm_cfg.VIRTUAL_HOSTS.has_key(urlhost):
+            _urlhost = repr(urlhost)
+            _emailhost = repr(emailhost)
+            usage(1, _('The Mailman config file lacks a line mapping urlhost to emailhost:\n  add_virtualhost(%(_urlhost)s,\n                  %(_emailhost)s)'))
+    else:
+        # Handle site wide lists (non-vhost lists, i.e. without '@' in their name)
+        # in the traditional manner.
+        pass
 
     urlhost = urlhost or mm_cfg.DEFAULT_URL_HOST
     host_name = emailhost or \

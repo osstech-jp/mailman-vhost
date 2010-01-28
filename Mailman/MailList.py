@@ -186,8 +186,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
 
     def getListAddress(self, extra=None):
         if extra is None:
-            return '%s@%s' % (self.internal_name(), self.host_name)
-        return '%s-%s@%s' % (self.internal_name(), extra, self.host_name)
+            return '%s@%s' % (self.local_part, self.host_name)
+        return '%s-%s@%s' % (self.local_part, extra, self.host_name)
 
     # For backwards compatibility
     def GetBouncesEmail(self):
@@ -204,7 +204,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
 
     def GetConfirmEmail(self, cookie):
         return mm_cfg.VERP_CONFIRM_FORMAT % {
-            'addr'  : '%s-confirm' % self.internal_name(),
+            'addr'  : '%s-confirm' % self.local_part,
             'cookie': cookie,
             } + '@' + self.host_name
 
@@ -248,8 +248,10 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             return "%s%s@%s" % (acct, self.umbrella_member_suffix, host)
 
     def GetScriptURL(self, scriptname, absolute=0):
+        # Using "local_part" here works for both site wide lists on
+        # the default url host and for vhost lists on the vhost url host.
         return Utils.ScriptURL(scriptname, self.web_page_url, absolute) + \
-               '/' + self.internal_name()
+               '/' + self.local_part
 
     def GetOptionsURL(self, user, obscure=0, absolute=0):
         url = self.GetScriptURL('options', absolute)
@@ -293,6 +295,10 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         # Non-configurable list info
         if name:
           self._internal_name = name
+        if '@' in self._internal_name:
+            self.local_part = self._internal_name.split('@')[0]
+        else:
+            self.local_part = self._internal_name
 
         # When was the list created?
         self.created_at = time.time()
@@ -342,8 +348,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 mm_cfg.DEFAULT_BOUNCE_MATCHING_HEADERS
         self.header_filter_rules = []
         self.anonymous_list = mm_cfg.DEFAULT_ANONYMOUS_LIST
-        internalname = self.internal_name()
-        self.real_name = internalname[0].upper() + internalname[1:]
+        self.real_name = self.local_part[0].upper() + self.local_part[1:]
         self.description = ''
         self.info = ''
         self.welcome_msg = ''
@@ -477,7 +482,13 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         # the admin's email address, so transform the exception.
         if emailhost is None:
             emailhost = mm_cfg.DEFAULT_EMAIL_HOST
-        postingaddr = '%s@%s' % (name, emailhost)
+        if '@' in name:
+            firstname, emailhost = name.split('@', 1)
+        else:
+            firstname = name
+
+        # but we keep a sensible posting address
+        postingaddr = '%s@%s' % (firstname, emailhost)
         try:
             Utils.ValidateEmail(postingaddr)
         except Errors.MMBadEmailError:
@@ -485,11 +496,16 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         # Validate the admin's email address
         Utils.ValidateEmail(admin)
         self._internal_name = name
+
         self._full_path = Site.get_listpath(name, create=1)
         # Don't use Lock() since that tries to load the non-existant config.pck
         self.__lock.lock()
         self.InitVars(name, admin, crypted_password)
         self.CheckValues()
+        # this is for getListAddress
+        self.list_address = postingaddr
+        self.real_name = firstname
+        self.subject_prefix = mm_cfg.DEFAULT_SUBJECT_PREFIX % self.__dict__
         if langs is None:
             self.available_languages = [self.preferred_language]
         else:
@@ -752,6 +768,15 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             else:
                 goodtopics.append((name, pattern, desc, emptyflag))
         self.topics = goodtopics
+        # Define local_part if not defined yet (loaded ML in old data format).
+        if self.__dict__.has_key('local_part') and self.local_part:
+            pass
+        else:
+            _tmp = self.internal_name()
+            if '@' in _tmp:
+                self.local_part = _tmp.split('@')[0]
+            else:
+                self.local_part = _tmp
 
 
     #
@@ -1320,7 +1345,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         addresses in the recipient headers.
         """
         # This is the list's full address.
-        listfullname = '%s@%s' % (self.internal_name(), self.host_name)
+        listfullname = self.getListAddress()
         recips = []
         # Check all recipient addresses against the list's explicit addresses,
         # specifically To: Cc: and Resent-to:
@@ -1335,7 +1360,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             addr = addr.lower()
             localpart = addr.split('@')[0]
             if (# TBD: backwards compatibility: deprecated
-                    localpart == self.internal_name() or
+                    localpart == self.local_part or
                     # exact match against the complete list address
                     addr == listfullname):
                 return True

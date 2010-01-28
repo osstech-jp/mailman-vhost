@@ -129,12 +129,13 @@ def process(mlist, msg, msgdata):
         return
     # Get the sender of the message
     listname = mlist.internal_name()
-    adminaddr = listname + '-admin'
+    adminaddr = mlist.getListAddress('admin')
     sender = msg.get_sender()
     # Special case an ugly sendmail feature: If there exists an alias of the
     # form "owner-foo: bar" and sendmail receives mail for address "foo",
     # sendmail will change the envelope sender of the message to "bar" before
     # delivering.  This feature does not appear to be configurable.  *Boggle*.
+    # NDIM XXX Handle listname == 'foo@blah.com'
     if not sender or sender[:len(listname)+6] == adminaddr:
         sender = msg.get_sender(use_envelope=0)
     #

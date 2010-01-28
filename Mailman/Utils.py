@@ -218,11 +218,45 @@ def ValidateEmail(s):
 
 
 
+# Helper function for CGI scripts
 def GetPathPieces(envar='PATH_INFO'):
     path = os.environ.get(envar)
     if path:
         return [p for p in path.split('/') if p]
     return None
+
+
+
+# Helper function for CGI scripts
+def _GetURLHost(envar='SERVER_NAME'):
+    # NDIM XXX: Not pretty logic.
+    web_server_name = os.environ.get(envar)
+    if web_server_name:
+        return web_server_name.lower()
+    return mm_cfg.DEFAULT_URL_HOST
+
+
+
+# Helper function for CGI scripts
+def _GetEmailHost(url_host=None):
+    return mm_cfg.VIRTUAL_HOSTS.get(url_host or _GetURLHost(),
+                                    mm_cfg.DEFAULT_EMAIL_HOST)
+
+
+
+# Helper function for CGI scripts
+def GetListName(parts=None):
+    # NDIM XXX Not pretty either
+    if not parts:
+        parts = GetPathPieces()
+    local_part = parts[0].lower()
+    url_host = _GetURLHost()
+
+    if url_host == mm_cfg.DEFAULT_URL_HOST:
+        return local_part
+    else:
+        email_host = _GetEmailHost(url_host=url_host)
+        return '@'.join([local_part,email_host])
 
 
 
@@ -530,6 +564,19 @@ def findtext(templatefile, dict=None, raw=False, lang=None, mlist=None):
     fp.close()
     text = template
     if dict is not None:
+        # Fix up incorrect template usage introduced in vhost branch:
+        #   - templates use %(listname)s@%(hostname)s patterns
+        #   - pre-vhost Mailman uses { 'listname': mlist.internal_name(),
+        #                              'hostname': mlist.host_name, }
+        #   - vhost Mailman uses     { 'listname': mlist.local_part,
+        #                              'hostname': mlist.host_name, }
+        # Just to make sure, we also log this, so we can fix the code.
+        if dict.has_key('listname'):
+            if '@' in dict['listname']:
+                from Mailman.Logging.Syslog import syslog
+                syslog('vhost', 'vhost warning: listname %s is using @ for template file %s',
+                       repr(dict['listname']), repr(templatefile))
+                dict['listname'] = dict['listname'].split('@')[0]
         try:
             sdict = SafeDict(dict)
             try:
@@ -706,7 +753,7 @@ def unique_message_id(mlist):
     global _serial
     msgid = '<mailman.%d.%d.%d.%s@%s>' % (
         _serial, time.time(), os.getpid(),
-        mlist.internal_name(), mlist.host_name)
+        mlist.local_part, mlist.host_name)
     _serial += 1
     return msgid
 

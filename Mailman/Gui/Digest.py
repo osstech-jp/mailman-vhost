@@ -25,8 +25,9 @@ from Mailman.Gui.GUIBase import GUIBase
 
 # Common b/w nondigest and digest headers & footers.  Personalizations may add
 # to this.
+# NDIM XXX remove _internal_name?
 ALLOWEDS = ('real_name', 'list_name', 'host_name', 'web_page_url',
-            'description', 'info', 'cgiext', '_internal_name',
+            'description', 'info', 'cgiext', '_internal_name', 'local_part',
             )
 
 

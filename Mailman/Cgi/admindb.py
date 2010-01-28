@@ -81,7 +81,7 @@ def main():
         handle_no_list()
         return
 
-    listname = parts[0].lower()
+    listname = Utils.GetListName(parts)
     try:
         mlist = MailList.MailList(listname, lock=0)
     except Errors.MMListError, e:

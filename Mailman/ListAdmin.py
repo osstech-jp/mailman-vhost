@@ -392,7 +392,7 @@ class ListAdmin:
             text = Utils.maketext(
                 'subauth.txt',
                 {'username'   : addr,
-                 'listname'   : self.internal_name(),
+                 'listname'   : self.local_part,
                  'hostname'   : self.host_name,
                  'admindb_url': self.GetScriptURL('admindb', absolute=1),
                  }, mlist=self)
@@ -444,7 +444,7 @@ class ListAdmin:
             text = Utils.maketext(
                 'unsubauth.txt',
                 {'username'   : addr,
-                 'listname'   : self.internal_name(),
+                 'listname'   : self.local_part,
                  'hostname'   : self.host_name,
                  'admindb_url': self.GetScriptURL('admindb', absolute=1),
                  }, mlist=self)

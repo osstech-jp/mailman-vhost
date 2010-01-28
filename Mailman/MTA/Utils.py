@@ -22,6 +22,10 @@ import pwd
 from Mailman import mm_cfg
 
 
+_extensions = ('admin', 'bounces', 'confirm', 'join', 'leave', 'owner',
+               'request', 'subscribe', 'unsubscribe', )
+
+
 
 def getusername():
     username = os.environ.get('USER') or os.environ.get('LOGNAME')
@@ -34,7 +38,9 @@ def getusername():
 
 
 
-def _makealiases_mailprog(listname):
+def _makealiases_mailprog(listname, internal_listname=None):
+    if not internal_listname:
+        internal_listname = listname
     wrapper = os.path.join(mm_cfg.WRAPPER_DIR, 'mailman')
     # Most of the list alias extensions are quite regular.  I.e. if the
     # message is delivered to listname-foobar, it will be filtered to a
@@ -46,12 +52,11 @@ def _makealiases_mailprog(listname):
     #    need for the -admin address anymore).
     #
     # Seed this with the special cases.
-    aliases = [(listname,          '"|%s post %s"' % (wrapper, listname)),
+    aliases = [(listname,          '"|%s post %s"' % (wrapper, internal_listname)),
                ]
-    for ext in ('admin', 'bounces', 'confirm', 'join', 'leave', 'owner',
-                'request', 'subscribe', 'unsubscribe'):
+    for ext in _extensions:
         aliases.append(('%s-%s' % (listname, ext),
-                        '"|%s %s %s"' % (wrapper, ext, listname)))
+                        '"|%s %s %s"' % (wrapper, ext, internal_listname)))
     return aliases
 
 
@@ -66,8 +71,7 @@ def _makealiases_maildir(listname):
     # Note, don't use this unless your MTA leaves the envelope recipient in
     # Delivered-To:, Envelope-To:, or Apparently-To:
     aliases = [(listname, maildir)]
-    for ext in ('admin', 'bounces', 'confirm', 'join', 'leave', 'owner',
-                'request', 'subscribe', 'unsubscribe'):
+    for ext in _extensions:
         aliases.append(('%s-%s' % (listname, ext), maildir))
     return aliases
 

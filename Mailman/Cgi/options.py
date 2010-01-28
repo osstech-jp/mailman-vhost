@@ -65,7 +65,7 @@ def main():
         return
 
     # get the list and user's name
-    listname = parts[0].lower()
+    listname = Utils.GetListName(parts)
     # open list
     try:
         mlist = MailList.MailList(listname, lock=0)

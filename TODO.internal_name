@@ -1,0 +1,145 @@
+# All calls to MailList.internal_name() need to be check for
+# compatibility with '@' vhost lists. This file maintains the status:
+#
+#   OK   Usage is OK, or has been fixed.
+#   XXX  Still to be examined.
+#   QQQ  Still to be examined in connection with the queue stuff.
+#   FXD  Was broken, has to be fixed.
+#   LCK  Has to be fixed with locking
+#   TPL  Utils.maketext template stuff
+#   ""   Not examined yet.
+#
+#
+#
+XXX ./tests/TestBase.py:61:        listname = self._mlist.internal_name()
+    contains code deleting directories very similar to bin/rmlist
+    (i.e. also not vhost compatible)
+
+XXX ./bin/update.py:347:    b4_tmpl_dir = os.path.join(tmpl_dir, mlist._internal_name)
+XXX ./bin/update.py:348:    new_tmpl_dir = os.path.join(list_dir, mlist._internal_name)
+
+
+QQQ ./Mailman/Queue/BounceRunner.py:215:        self._queue_bounces(mlist.internal_name(), addrs, msg)
+QQQ ./Mailman/Queue/OutgoingRunner.py:106:                self._queue_bounces(mlist.internal_name(), e.permfailures, msg)
+    So... BounceMixin._queue_bounces() runs
+       cPickle.dump((listname, ...),...)
+    but where does this data end up?
+
+
+QQQ ./Mailman/Handlers/ToDigest.py:411:                    listname=mlist.internal_name(),
+QQQ ./Mailman/Handlers/ToDigest.py:419:                    listname=mlist.internal_name(),
+QQQ ./Mailman/Handlers/ToUsenet.py:44:    newsq.enqueue(msg, msgdata, listname=mlist.internal_name())
+QQQ ./Mailman/Handlers/ToOutgoing.py:55:    outq.enqueue(msg, msgdata, listname=mlist.internal_name())
+QQQ ./Mailman/Message.py:252:                        listname = mlist.internal_name(),
+QQQ ./Mailman/Message.py:283:                        listname = mlist.internal_name(),
+    Switchboard.enqueue(listname=ml.internal_name())
+
+
+XXX ./Mailman/Cgi/rmlist.py:138:    listname = mlist.internal_name()
+    Removing the REMOVABLES (i.e. the archive directories) still has
+    to be fixed for vhost lists (should work for site wide lists).
+
+
+
+FXD QQQ ./Mailman/Queue/NewsRunner.py:41:    (?P<listname>[^@]+)                           # list's internal_name()
+OK  ./Mailman/Queue/NewsRunner.py:79:                           mlist.internal_name(), e)
+OK  ./Mailman/Queue/NewsRunner.py:83:                           mlist.internal_name(), e)
+OK  ./Mailman/Queue/NewsRunner.py:143:            if lname == mlist.internal_name() and hname == mlist.host_name:
+OK  ./Mailman/Queue/NewsRunner.py:145:            elif '@'.join(lname, hname) == mlist.internal_name():
+OK  fix implies each vhost has a "mailman" list ./Mailman/Cgi/admin.py:421:           mlist.internal_name() <> mm_cfg.MAILMAN_SITE_LIST:
+OK  URL ./Mailman/MailList.py:257:                   '/' + self.internal_name() # .replace('@','%40')
+OK  URL ./Mailman/Archiver/Archiver.py:164:                'listname': self.internal_name(),
+OK? looks like internal reference to mlist object ./Mailman/Archiver/HyperArch.py:360:            d['__listname'] = self._mlist.internal_name()
+OK  XXX ./Mailman/Archiver/HyperArch.py:756:        listname = mlist.internal_name()
+OK  XXX ./Mailman/Archiver/Archiver.py:154:                            self.internal_name() + '.mbox')
+
+OK  looks fine, used internally only ./Mailman/Bouncer.py:167:        cookie = self.pend_new(Pending.RE_ENABLE, self.internal_name(), member)
+OK  also ends up in Pending.pend_new(content=(..))  ./Mailman/MailList.py:808:        userdesc.invitation = self.internal_name()
+OK  compares to userdesc.invitation() where the above code writes it into ./Mailman/MailList.py:1221:                if invitation <> self.internal_name():
+
+OK  XXX ./Mailman/Archiver/Archiver.py:195:        d = SafeDict({'listname': self.internal_name(),
+OK? XXX sendmail-workaround ignored for vhost lists ./Mailman/Handlers/Hold.py:131:    listname = mlist.internal_name()
+OK? ./Mailman/Handlers/SMTPDirect.py:178:                          'listname': mlist.internal_name(),
+OK? ./Mailman/Handlers/Decorate.py:204:                  'list_name'     : mlist.internal_name(),
+OK? ./Mailman/Handlers/Decorate.py:206:                  '_internal_name': mlist.internal_name(),
+OK? ./Mailman/HTMLFormatter.py:384:            '<mm-email-user>' : self._internal_name,
+OK  use get_mboxpath ./Mailman/Cgi/private.py:170:                                  mlist.internal_name() + '.mbox'))
+OK  TPL ./Mailman/ListAdmin.py:395:                 'listname'   : self.internal_name(),
+OK  TPL ./Mailman/ListAdmin.py:447:                 'listname'   : self.internal_name(),
+OK  LCK ./Mailman/Archiver/HyperArch.py:838:                         self.maillist.internal_name() + '-arch.lock'))
+OK  LCK ./bin/arch.py:159:        lockfile = os.path.join(mm_cfg.LOCK_DIR, mlist._internal_name) + \
+
+OK  XXX ./Mailman/MTA/Manual.py:58:    listname = mlist.internal_name()
+OK  XXX ./Mailman/MTA/Manual.py:106:    listname = mlist.internal_name()
+        The generic MTA support does not work for vhost lists, so we
+        guard the list names with asserts() against '@'. Thus, alias
+        generation will explicitly fail instead of creating broken output.
+
+OK  ./bin/clone_member.py:94:        print _('processing mailing list:'), mlist.internal_name()
+OK  ./admin/www/reset_pw.py:75:    listname = mlist.internal_name()
+OK  ./Mailman/Deliverer.py:102:                   user, self.internal_name())
+OK  ./Mailman/Commands/cmd_lists.py:49:        if listname == mlist.internal_name():
+OK  ./Mailman/ListAdmin.py:196:        filename = 'heldmsg-%s-%d.%s' % (self.internal_name(), id, ext)
+OK  ./Mailman/ListAdmin.py:346:                'listname' : self.internal_name(),
+OK  ./Mailman/ListAdmin.py:386:               self.internal_name(), addr)
+OK  ./Mailman/ListAdmin.py:438:               self.internal_name(), addr)
+OK  ./Mailman/Handlers/Sendmail.py:106:                   mlist.internal_name(), msg.get_sender(),
+OK  ./Mailman/Handlers/Sendmail.py:113:               mlist.internal_name(), msg.get_sender(), msglen)
+OK  ./Mailman/Handlers/MimeDel.py:229:        listname = mlist.internal_name()
+OK  ./Mailman/Handlers/Replybot.py:101:               mlist.internal_name(), rtext)
+OK  ./Mailman/Handlers/Cleanse.py:38:               mlist.internal_name(), msg.get('from'))
+OK  ./Mailman/Cgi/options.py:919:        if listname == mlist.internal_name():
+OK  ./Mailman/MTA/Postfix.py:86:    listname = mlist.internal_name()
+OK  ./Mailman/MTA/Postfix.py:100:    listname = mlist.internal_name()
+OK  ./Mailman/MTA/Postfix.py:131:    listname = mlist.internal_name()
+OK  ./Mailman/MTA/Postfix.py:152:    listname = mlist.internal_name()
+OK  ./Mailman/MTA/Postfix.py:265:    listname = mlist.internal_name()
+OK  ./Mailman/MTA/Postfix.py:310:        if mlist and '@' in mlist.internal_name(): # NDIM XXX and mlist.host_name in mm_cfg.POSTFIX_STYLE_VIRTUAL_DOMAINS:
+OK  ./Mailman/MTA/Postfix.py:321:    listname = mlist.internal_name()
+OK  ./Mailman/MailList.py:154:            self.internal_name(), status, id(self))
+OK  ./Mailman/MailList.py:181:    def internal_name(self):
+OK  ./Mailman/MailList.py:182:        return self._internal_name
+OK  ./Mailman/MailList.py:283:        self._internal_name = name
+OK  ./Mailman/MailList.py:303:          self._internal_name = name
+OK  ./Mailman/MailList.py:304:        if '@' in self._internal_name:
+OK  ./Mailman/MailList.py:305:            self.local_part = self._internal_name.split('@')[0]
+OK  ./Mailman/MailList.py:307:            self.local_part = self._internal_name
+OK  ./Mailman/MailList.py:504:        self._internal_name = name
+OK  ./Mailman/MailList.py:635:        if not Utils.list_exists(self.internal_name()):
+OK  ./Mailman/MailList.py:663:                   self.internal_name())
+OK  ./Mailman/MailList.py:763:                   self.reply_to_address, self.internal_name())
+OK  ./Mailman/MailList.py:773:                       pattern, self.internal_name())
+OK  ./Mailman/MailList.py:781:            _tmp = self.internal_name()
+OK  ./Mailman/MailList.py:935:                   self.internal_name(), who, by)
+OK  ./Mailman/MailList.py:1000:        syslog('subscribe', '%s: new%s %s, %s', self.internal_name(),
+OK  ./Mailman/MailList.py:1063:               self.internal_name(), name, whence)
+OK  ./Mailman/MailList.py:1071:            if listname == self.internal_name():
+OK  ./Mailman/MailList.py:1163:            if listname == self.internal_name():
+OK  ./Mailman/Archiver/HyperArch.py:194:        listname = mlist._internal_name
+OK  ./Mailman/Archiver/Archiver.py:149:        return Site.get_archpath(self.internal_name())
+OK  ./Mailman/Archiver/Archiver.py:249:        pubdir = Site.get_archpath(self.internal_name(), public=True)
+OK  ./Mailman/Gui/Digest.py:29:            'description', 'info', 'cgiext', '_internal_name',
+OK  ./Mailman/versions.py:509:                   k, l.internal_name())
+OK  ./Mailman/Bouncer.py:117:            syslog('bounce', '%s: %s bounce score: %s', self.internal_name(),
+OK  ./Mailman/Bouncer.py:125:                   self.internal_name(), member)
+OK  ./Mailman/Bouncer.py:130:                   self.internal_name(), member,
+OK  ./Mailman/Bouncer.py:141:                       self.internal_name(), member)
+OK  ./Mailman/Bouncer.py:148:                       self.internal_name(), member, info.score)
+OK  ./Mailman/Bouncer.py:157:                   self.internal_name(), member, info.score,
+OK  ./Mailman/Bouncer.py:172:                   self.internal_name(), member)
+OK  ./Mailman/Bouncer.py:175:                   self.internal_name(), member,
+OK  ./Mailman/Bouncer.py:230:                       self.internal_name(), member)
+OK  ./Mailman/Bouncer.py:232:                   self.internal_name(), member,
+OK  ./bin/list_lists.py:114:            print mlist.internal_name()
+OK  ./bin/list_lists.py:117:            if '@' in mlist.internal_name():
+OK  ./bin/reset_pw.py:75:    listname = mlist.internal_name()
+OK  ./bin/reset_pw.py.py:75:    listname = mlist.internal_name()
+OK  ./bin/withlist.py:173:            listname = m.internal_name()
+OK  ./bin/update.py:106:    listname = mlist.internal_name()
+OK  ./bin/update.py:266:""") % (mlist._internal_name, o_pri_mbox_file, o_pub_mbox_file,
+OK  ./bin/update.py:280:""") % (mlist._internal_name, o_pub_mbox_file, o_pri_mbox_file,
+FXD ./Mailman/SecurityManager.py:102:        key = self.internal_name().replace('@','%40') + '+'
+FXD ./Mailman/SecurityManager.py:296:                prefix = self.internal_name() + '+user+'
+FXD ./Mailman/Deliverer.py:161:        selfname = self.internal_name()
+FXD ./Mailman/Deliverer.py:210:            'bounces': self.internal_name() + '-bounces',
+FXD ./Mailman/Defaults.py:831:%(web_page_url)slistinfo%(cgiext)s/%(_internal_name)s

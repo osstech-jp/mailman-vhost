@@ -24,7 +24,6 @@ archival.
 
 import os
 import errno
-import traceback
 import re
 from cStringIO import StringIO
 
@@ -46,6 +45,17 @@ except NameError:
 
 def makelink(old, new):
     try:
+        # Before symlinking, make sure that the directory where the
+        # symlink will be created exists.
+        omask = os.umask(0)
+        try:
+            try:
+                os.makedirs(os.path.split(new)[0], 02775)
+            except OSError, e:
+                if e.errno <> errno.EEXIST:
+                    raise
+        finally:
+            os.umask(omask)
         os.symlink(old, new)
     except OSError, e:
         if e.errno <> errno.EEXIST:
@@ -80,9 +90,17 @@ class Archiver:
         #             listname.mbox
         #         listname/
         #             lots-of-pipermail-stuff
+        #         domain.com/
+        #             listname.mbox/
+        #                 listname.mbox
+        #             listname/
+        #                 lots-of-pipermail-stuff
         #     public/
         #         listname.mbox@ -> ../private/listname.mbox
         #         listname@ -> ../private/listname
+        #         domain.com/
+        #             listname.mbox@ -> ../../private/listname.mbox
+        #             listname@ -> ../../private/listname
         #
         # IOW, the mbox and pipermail archives are always stored in the
         # private archive for the list.  This is safe because archives/private
@@ -93,7 +111,7 @@ class Archiver:
         omask = os.umask(0)
         try:
             try:
-                os.mkdir(self.archive_dir()+'.mbox', 02775)
+                os.makedirs(self.archive_dir()+'.mbox', 02775)
             except OSError, e:
                 if e.errno <> errno.EEXIST: raise
                 # We also create an empty pipermail archive directory into
@@ -101,7 +119,7 @@ class Archiver:
                 # that lists that have not yet received a posting have
                 # /something/ as their index.html, and don't just get a 404.
             try:
-                os.mkdir(self.archive_dir(), 02775)
+                os.makedirs(self.archive_dir(), 02775)
             except OSError, e:
                 if e.errno <> errno.EEXIST: raise
             # See if there's an index.html file there already and if not,
@@ -132,8 +150,7 @@ class Archiver:
 
     def ArchiveFileName(self):
         """The mbox name where messages are left for archive construction."""
-        return os.path.join(self.archive_dir() + '.mbox',
-                            self.internal_name() + '.mbox')
+        return Site.get_mboxpath(self.internal_name())
 
     def GetBaseArchiveURL(self):
         url = self.GetScriptURL('private', absolute=1) + '/'
@@ -143,7 +160,7 @@ class Archiver:
             hostname = re.match('[^:]*://([^/]*)/.*', url).group(1)\
                        or mm_cfg.DEFAULT_URL_HOST
             url = mm_cfg.PUBLIC_ARCHIVE_URL % {
-                'listname': self.internal_name(),
+                'listname': self.local_part,
                 'hostname': hostname
                 }
             if not url.endswith('/'):

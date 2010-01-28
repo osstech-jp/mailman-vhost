@@ -90,6 +90,7 @@ class BounceMixin:
         if self._bounce_events_fp is None:
             self._bounce_events_fp = open(self._bounce_events_file, 'a+b')
         for addr in addrs:
+            # NDIM XXX: Where is this "listname" (aka internal_name()) read?
             cPickle.dump((listname, addr, today, msg),
                          self._bounce_events_fp, 1)
         self._bounce_events_fp.flush()

@@ -1,0 +1,348 @@
+========================================================================
+Virtual hosting branch of Mailman 2.1 ("vhost branch")
+========================================================================
+
+
+What is this?
+=============
+
+  This is a branch off official Mailman 2.1.7 we call "vhost branch"
+  which tries to solve the problem of virtual domain list hosting for
+  application in a specific place. We are considering all the ideas
+  made in the past and are not opposed to accomodate changes for
+  inclusion in the official Mailman.
+
+  bawue.net needs mailing lists for users' hosted virtual domains
+  which can have the same name (e.g. both "foo@bar.com" and
+  "foo@bla.net"). Mailman provides a nice GUI for users to work
+  with, and we have been using Mailman for ages. So we're trying to
+  make Mailman do what we need.
+
+  In case we cannot get our changes accepted into official Mailman,
+  we'll just maintain this branch until we can migrate to an official
+  Mailman version which supports our feature set.
+
+
+Who is behind this:
+===================
+
+  Mailman is Mailman, this requires no further discussion :)
+
+  The vhost branch is a project of bawue.net, written by Hans Ulrich
+  Niedermann.
+
+
+References:
+===========
+
+  * http://list.org/
+    The official Mailman site.
+
+  * https://sourceforge.net/tracker/index.php?func=detail&aid=943827&group_id=103&atid=300103
+    Mailman tracker item which suggests a "true virtual hosting" patch
+    for Mailman 2.1.1.
+  * http://al.blog.free.fr/mailman/mailman-vh-2.1.5.patch
+    Purportedly same patch ported to Mailman 2.1.5.
+  * http://nix.lauft.net/mailman/mailman-vh-2.1.7.patch
+    Our port of the 2.1.5 patch to 2.1.7.
+
+  * http://www.zope.org/Members/bwarsaw/MailmanDesignNotes/VirtualHosting
+    Design notes we try to adhere to while implementing what we need.
+
+  * http://nix.lauft.net/mailman/README.VHOST
+    The file where we maintain the status of the vhost branch.
+  * http://nix.lauft.net/mailman/
+    A place to get a number of patches against Mailman 2.1.7 and
+    helper scripts.
+  * http://git.n-dimensional.de/mailman-virtualhost.git/
+    git (cogito) repository with our changes, rooted at the official
+    2.1.7 release.
+
+  * "vhost branch" developer contact:
+    hun (att) n (hyphen) dimensional (spot) de (hyphen)
+
+  * Mailman mailing lists:
+    mailman (hyphen) users (aat) python (sp^H^Hdot) org
+    mailman (hyphen) developers (aat) python (sp^H^Hdot) org
+
+
+Remarks:
+========
+
+  * Why write a patch when there are existing patches?
+    * We haven't found any.
+
+  * Why not wait for Mailman 3?
+    * No idea when MM3 will happen.
+    * We're not sure we want the possibly fatter software layers
+      beneath it (e.g. Zope).
+
+  * Why git?
+    * I need some kind of version control system to do any kind of work
+    * I am not a Mailman SF.net CVS committer
+    * SF.net "anonymous CVS" is pretty much "unreachable CVS" nowadays
+    * CVS branching is horrible anyway
+    * Due to git's use for Linux kernel development, git is an easier
+      sell to people than, say, bzr, baz, darcs, or monotone.
+
+
+Ideas:
+======
+
+  * Get rid of list name conflicts between
+    'foo', 'foo@bar.com', 'foo@bla.com' by accepting all three names
+    as the internal list identifier. Then solve all appearing problems
+    in a simple to implement and reasonably clean way.
+
+  * There are now two kinds of lists:
+      * Lists named "mylist" without "@"
+        We call these "site wide lists". These are the traditional lists.
+      * Lists named "mylist@some.domain.com"
+        We call these "vhost lists".
+    If we want to be exact, we can also distinguish two kinds of "site
+    wide lists":
+      * Traditional lists using the default email host.
+      * "Postfix style" virtual lists with their special email host.
+
+  * Continue support for both kinds of "site wide lists": Maintaining
+    compatibility here avoids migration issues and breakage of command
+    line tools and stuff.
+
+  * Store list data, mail archives etc. as
+        (data|archives/(private|public))/
+           mylist0/            # "site default list"
+           mylist1/            # [A] "site default list"
+           some.domain.com/
+              mylist1/         # [B]
+              mylist2/
+           mydomain.com/
+              mylist1/         # [C]
+              mylist3/
+    Site default lists are compatible with non-vhost mailman.
+
+  * The web interface has these URLs:
+      http://lists.site-default.com/mailman/mylist1 [A]
+      http://lists.mydomain.com/mailman/mylist1     [B]
+      http://lists.some.domain.com/mailman/mylist1  [C]
+    and (optionally) one of these for [B]:
+      http://lists.site-default.com/mailman/lists.mydomain.com/mylist1
+      http://lists.site-default.com/mailman/mylist1@lists.mydomain.com
+    Method [A] is URL compatible to the non-vhost version.
+
+  * Try maintaining compatibility with existing Mailman installations
+    by supporting 
+
+  * Postfix support:
+      - site wide lists are supported using normal aliases
+      - "postfix style virtual hosted lists" are supported using both
+        the virtual-aliases and aliases tables. The virtual-aliases
+        redirects from "mylist@domain.com" to "domain.com=mylist"
+        which in turn is an alias for a pipe to mailman.
+      - vhost lists whose host_name is NOT in
+        mm_cfg.POSTFIX_STYLE_VIRTUAL_HOSTS are supported using the
+        Mailman transport.
+
+  * Sendmail support:
+      - According to a first glance at things, site wide lists and
+        vhost lists whose host_name is NOT in
+        mm_cfg.POSTFIX_STYLE_VIRTUAL_HOSTS can be supported for
+        sendmail.
+
+  * If someone wants to completely move the file storage policy into a
+    separate module, you'll have to change the Site.py and Utils.py
+    modules and look for all occurences of os.path.join(). And
+    probably other places for good measure.
+    
+    Bad example of redundant path construction is the
+       os.path.join(mlist.archive_dir() + '.mbox',
+                    mlist.internal_name() + '.mbox')
+    which appears in both Archiver.py and HyperArch.py.
+
+
+Issues:
+=======
+
+  * We now need a place to store domain specific settings, such as:
+     * "site password" (becomes a "vhost password")
+
+  * URL space for web interface.
+     * Will vhost lists be available on the "site wide" web interface?
+       Probably not.
+     * Matching *@foo.com to http://lists.foo.com/* is easy.
+       But what about matching *@foo.com and *@bar.com both onto
+       http://lists.foobar.com/? Do we support that? If so, how?
+       [ I don't think so. ]
+
+  * One separate "mailman" list per virtual domain? Probably.
+
+  * Where/how does one store the per-vhost settings such as the vhost
+    admin's password?
+
+  * Can vhost admins create their own lists? How?
+    (Note: We would not need list creation/removal at bawue.net, as
+           list creation/removal is driven by our customer database.)
+    Vhost admins must be able to execute these actions:
+     * list creation and removal
+     * changing the site admin's password
+
+  * Is the local_part case sensitive? If so, the vhost branch needs a
+    little rework.
+
+
+TODO:
+=====
+
+  * Mailman internals:
+     * Fix message ID generation for vhost lists. DONE.
+     * File storage: Use bar.com/foo/ dirs for 'foo@bar.com' list. DONE.
+     * Introduce new field for MailList objects: self.local_part
+       DONE.
+     * Examine and fix all handling of MailList.internal_name()
+       return values. A pity that this cannot be left to the
+       compiler. IN PROGRESS, MOSTLY DONE.
+     * Fix parsing of Message-IDs (VERP).
+     * Make sure the queuing stuff works with vhost list names:
+        * Look for *q.enqueue() calls.
+     * Simple test function for "site wide" vs. "vhost list"?
+
+  * Possible issues in existing code:
+     * Strange lockfile names:
+       Mailman/Archiver/HyperArch.py: "<listname>-archiver.lock"
+       bin/arch.py:                   "<listname>-arch.lock"
+       Shouldn't those be the same? Hmm. Probably not.
+
+  * vhost specific "mailman" lists:
+     * send notifications to vhost "mailman" list, not to site wide
+     * make sure the vhost "mailman" list exists
+     * autosubscribe site wide "mailman" list to all vhost "mailman" lists?
+  
+  * Fix list specific template directories to use the subdir
+    structure.
+
+  * Directory structure for lock files?
+    Grepping for "LOCK_DIR" should turn up the relevant code lines.
+    NOT REALLY REQUIRED.
+
+  * Command line utilities:
+     * Adapt newlist for vhost lists. DONE.
+     * Adapt list_lists to show vhost lists. HALFWAY-DONE.
+     * Adapt rmlist to remove vhost lists (handle dir structure)
+     * ...
+
+  * MTA support:
+     * Alias targets need to contain the complete list name possibly
+       including the '@' sign
+          mylist "|/var/lib/mailman/mail/mailman post mylist"
+          mylistWITHSOMETHING "|/var/lib/mailman/mail/mailman post mylist@mydomain.com"
+       DONE.
+
+  * Postfix support:
+
+     * Postfix aliases cannot be 'mylist@mydomain.com', so we need to
+       use/generate a combination of aliases and virtual aliases or
+       transports. DONE.
+
+       Note: Postfix can read its tables from an SQL DB. So
+             Mailman doesn't necessarily need to generate those
+             data items: You can also adapt the database and SQL
+             command(s) accordingly.
+
+     * Add Postfix transport script to contrib/. DONE.
+
+     * Add missing file README.POSTFIX. Where is it?
+       It is in the Mailman CVS Attic. Why?
+
+     * Fix transport rule generation for vhost lists. DONE.
+
+     * Find out how to configure postfix to accept mail for
+       foo-request@bar.com when there is
+         a) a virtual alias
+         b) a transport
+       matching that address.
+
+     * Make choice between postfix virtual aliases and transports in
+       mm_cfg or remove support for transports again?
+
+     * Make internal alias scheme configurable 
+         "foo-request@bar.com" -> "bar.com=foo-request"
+         "bar.com=foo-request" -> "|mailman request foo@bar.com"
+
+  * Adapt web interface:
+     * Make '@' style lists work in domain specific web interface.
+     * Make '@' style lists work in site wide web interface.
+     * Make site wide lists work in site wide web interface.
+
+  * Make sure that templates (for E-Mails and Web UI pages) correctly
+    use 'listname', 'local_part' and 'hostname'. They probably do not.
+    
+    Then fix the central points where those templates are invoked,
+    e.g. callers of Mailman.Utils.maketext() and
+    Mailman.Utils.findtext(). This will be non-trivial for Web UI
+    pages, as those depend on the ... what?
+    Anyway: It will be easy to just substitute "listname" by the
+    "local_part". Then if we ONLY use http://lists.bar.com/admin/foo
+    type URLs we can avoid distinguishing site wide and vhost lists in
+    the WWW and mail templates.
+
+    OK, so this is what we do:
+     * We avoid changing all the template files.
+     * templates use %(listname)s for the mlist.local_part
+     * templates use %(hostname)s for the mlist.host_name
+     * So we just change the substitution of mlist.internal_name() for
+       %(listname)s to mlist.local_part, and we are done. This is done
+       in the Mailman code, not in the templates.
+
+    DONE (if we keep the simple URL scheme of url_host for site wide
+    lists and one url_host per vhost)
+
+  * Correct links in E-mails:
+     * Make all list mails contain correct links. DONE.
+     * Make all list digest mails contain correct links.
+     * Make all notification mails contain correct links:
+        - "your message has been held"
+        - ...
+
+  * Is maintenance of a virtual host list required? Yes, by site admin.
+
+  * Send monthly reminders for each virtual host?
+
+  * Does VERP work? Seems so. DONE.
+
+  * Tests:
+     * Find out how tests/* is to be used.
+     * Test mail receiving.
+     * Test mail delivery.
+     * Test mail archival.
+     * Test mail bounces.
+     * Test site wide web interface.
+     * Test domain specific web interface.
+
+
+Maybe-TODO:
+===========
+
+  * Remove directory generation from Mailman.Archiver.Archiver. All
+    directory naming/generation should be in one module, probably in
+    Mailman.Site.
+
+  * Change directory scheme (back).
+    Mark Sapiro prefers the hierarchical structure, so scratch this.
+    It would have been from
+       <mailman-root>
+         list
+         domaina.com/
+            list
+         domainb.com/
+            list
+    to
+       <mailman-root>
+         list
+         list@domaina.com
+         list@domainb.com
+    Only useful if we do not need a place to store per-domain
+    settings.
+
+
+Local Variables:
+mode:indented-text
+End:

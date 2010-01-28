@@ -53,7 +53,7 @@ def main():
         print doc.Format()
         return
 
-    listname = parts[0].lower()
+    listname = Utils.GetListName(parts)
     try:
         mlist = MailList.MailList(listname, lock=0)
     except Errors.MMListError, e:

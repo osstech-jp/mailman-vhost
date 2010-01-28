@@ -86,6 +86,9 @@ class SecurityManager:
         # Non configurable
         self.passwords = {}
 
+    def _cookie_key(self):
+        return self.internal_name().replace('@','%40')
+
     def AuthContextInfo(self, authcontext, user=None):
         # authcontext may be one of AuthUser, AuthListModerator,
         # AuthListAdmin, AuthSiteAdmin.  Not supported is the AuthCreator
@@ -98,7 +101,8 @@ class SecurityManager:
         # AuthUser, but the user isn't a member of this mailing list, a
         # NotAMemberError will be raised.  If the user's secret is None, raise
         # a MMBadUserError.
-        key = self.internal_name() + '+'
+        # NDIM: XXX Does this have security implications?
+        key = self._cookie_key() + '+' 
         if authcontext == mm_cfg.AuthUser:
             if user is None:
                 # A bad system error
@@ -292,7 +296,7 @@ class SecurityManager:
                 usernames = [user]
             else:
                 usernames = []
-                prefix = self.internal_name() + '+user+'
+                prefix = self._cookie_key() + '+user+'
                 for k in c.keys():
                     if k.startswith(prefix):
                         usernames.append(k[len(prefix):])

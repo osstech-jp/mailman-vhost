@@ -29,6 +29,7 @@ from Mailman import Errors
 from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
+from Mailman.Site import get_mboxpath
 
 # Set up i18n.  Until we know which list is being requested, we use the
 # server's default.
@@ -79,7 +80,7 @@ def main():
     true_filename = os.path.join(
         mm_cfg.PRIVATE_ARCHIVE_FILE_DIR, tpath)
 
-    listname = parts[0].lower()
+    listname = parts[0].lower() # NDIM XXX use Utils.GetListname
     mboxfile = ''
     if len(parts) > 1:
         mboxfile = parts[1]
@@ -166,8 +167,7 @@ def main():
         if ctype is None:
             ctype = 'text/html'
         if mboxfile:
-            f = open(os.path.join(mlist.archive_dir() + '.mbox',
-                                  mlist.internal_name() + '.mbox'))
+            f = open(get_mboxpath(mlist.internal_name()))
             ctype = 'text/plain'
         elif true_filename.endswith('.gz'):
             import gzip

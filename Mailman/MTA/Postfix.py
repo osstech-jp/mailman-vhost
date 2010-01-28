@@ -28,12 +28,13 @@ from Mailman import mm_cfg
 from Mailman import Utils
 from Mailman import LockFile
 from Mailman.i18n import _
-from Mailman.MTA.Utils import makealiases
+from Mailman.MTA.Utils import makealiases, _extensions
 from Mailman.Logging.Syslog import syslog
 
 LOCKFILE = os.path.join(mm_cfg.LOCK_DIR, 'creator')
 ALIASFILE = os.path.join(mm_cfg.DATA_DIR, 'aliases')
 VIRTFILE = os.path.join(mm_cfg.DATA_DIR, 'virtual-mailman')
+TRANSPORTFILE = os.path.join(mm_cfg.DATA_DIR, 'transport-mailman')
 
 try:
     True, False
@@ -43,21 +44,23 @@ except NameError:
 
 
 
-def _update_maps():
-    msg = 'command failed: %s (status: %s, %s)'
-    acmd = mm_cfg.POSTFIX_ALIAS_CMD + ' ' + ALIASFILE
-    status = (os.system(acmd) >> 8) & 0xff
+def _update_map_file(mapfile, command=mm_cfg.POSTFIX_MAP_CMD):
+    msg = 'command failed: %s (status: %s, %s)'        
+    cmdline = command + ' ' + mapfile
+    status = os.spawnlp(os.P_WAIT, command, command, mapfile)
     if status:
         errstr = os.strerror(status)
-        syslog('error', msg, acmd, status, errstr)
-        raise RuntimeError, msg % (acmd, status, errstr)
+        syslog('error', msg, cmdline, status, errstr)
+        raise RuntimeError, msg % (cmdline, status, errstr)
+
+
+
+def _update_maps():
+    _update_map_file(ALIASFILE, command = mm_cfg.POSTFIX_ALIAS_CMD)
     if os.path.exists(VIRTFILE):
-        vcmd = mm_cfg.POSTFIX_MAP_CMD + ' ' + VIRTFILE
-        status = (os.system(vcmd) >> 8) & 0xff
-        if status:
-            errstr = os.strerror(status)
-            syslog('error', msg, vcmd, status, errstr)
-            raise RuntimeError, msg % (vcmd, status, errstr)
+        _update_map_file(VIRTFILE)
+    if os.path.exists(TRANSPORTFILE):
+        _update_map_file(TRANSPORTFILE)
 
 
 
@@ -79,7 +82,31 @@ def clear():
 
 
 
-def _addlist(mlist, fp):
+def _generate_alias(mlist, ext=None):
+    listname = mlist.internal_name()
+    if '@' in listname:
+        foo = listname.split('@')
+        foo.reverse()
+        aliaslistname = '='.join(foo)
+    else:
+        aliaslistname = listname
+    if ext:
+        return aliaslistname + '-' + ext
+    else:
+        return aliaslistname
+
+
+def _uses_transport(mlist):
+    listname = mlist.internal_name()
+    if False: # XXX mm_cfg.VHOST_USES_TRANSPORTS ... TBD NDIM
+        return ('@' in listname) and (mlist.host_name not in
+                                      mm_cfg.POSTFIX_STYLE_VIRTUAL_DOMAINS)
+    else:
+        return False
+
+
+
+def _addalias(mlist, fp):
     # Set up the mailman-loop address
     loopaddr = Utils.ParseEmail(Utils.get_site_email(extra='loop'))[0]
     loopmbox = os.path.join(mm_cfg.DATA_DIR, 'owner-bounces.mbox')
@@ -101,13 +128,18 @@ def _addlist(mlist, fp):
     # exercise is to get the minimal aliases.db file into existance.
     if mlist is None:
         return
+    # Only generate aliases for site wide lists and for lists in
+    # mm_cfg.POSTFIX_STYLE_VIRTUAL_DOMAINS
+    if _uses_transport(mlist):
+        return
     listname = mlist.internal_name()
-    fieldsz = len(listname) + len('-unsubscribe')
     # The text file entries get a little extra info
     print >> fp, '# STANZA START:', listname
     print >> fp, '# CREATED:', time.ctime(time.time())
     # Now add all the standard alias entries
-    for k, v in makealiases(listname):
+    fieldsz = len('-unsubscribe')
+    for k, v in makealiases(_generate_alias(mlist),
+                            internal_listname = listname):
         # Format the text file nicely
         print >> fp, k + ':', ((fieldsz - len(k)) * ' ') + v
     # Finish the text file stanza
@@ -118,8 +150,6 @@ def _addlist(mlist, fp):
 
 def _addvirtual(mlist, fp):
     listname = mlist.internal_name()
-    fieldsz = len(listname) + len('-unsubscribe')
-    hostname = mlist.host_name
     # Set up the mailman-loop address
     loopaddr = Utils.get_site_email(mlist.host_name, extra='loop')
     loopdest = Utils.ParseEmail(loopaddr)[0]
@@ -140,14 +170,26 @@ def _addvirtual(mlist, fp):
 %s\t%s
 # LOOP ADDRESSES END
 """ % (loopaddr, loopdest)
+    # NDIM XXX What are those loop addrs for, and do we need them for each
+    # virtual domain?
+    
+    # Only generate virtual alias for lists in
+    # NDIM DBG print "_addvirtual", listname
+    if '@' not in listname or _uses_transport(mlist):
+        return
     # The text file entries get a little extra info
     print >> fp, '# STANZA START:', listname
     print >> fp, '# CREATED:', time.ctime(time.time())
     # Now add all the standard alias entries
-    for k, v in makealiases(listname):
-        fqdnaddr = '%s@%s' % (k, hostname)
+    addrs = [ (mlist.getListAddress(),
+               _generate_alias(mlist)) ] # XXX name space clash
+    for ext in _extensions:
+        addrs.append((mlist.getListAddress(ext),
+                      _generate_alias(mlist, ext=ext))) # XXX name space clash
+    fieldsz = len(mlist.getListAddress('-unsubscribe'))
+    for addr, target in addrs:
         # Format the text file nicely
-        print >> fp, fqdnaddr, ((fieldsz - len(k)) * ' '), k
+        print >> fp, addr, ((fieldsz - len(addr)) * ' '), target
     # Finish the text file stanza
     print >> fp, '# STANZA END:', listname
     print >> fp
@@ -198,6 +240,42 @@ def _check_for_virtual_loopaddr(mlist, filename):
 
 
 
+def _addtransport(mlist, fp):
+    # XXX Set up the mailman-loop address
+    #loopaddr = Utils.get_site_email(mlist.host_name, extra='loop')
+    #loopdest = Utils.ParseEmail(loopaddr)[0]
+    # Seek to the end of the text file, but if it's empty write the standard
+    # disclaimer, and the loop catch address.
+    fp.seek(0, 2)
+    if not fp.tell():
+        print >> fp, """\
+# This file is generated by Mailman, and is kept in sync with the binary hash
+# file transport-mailman.db.  YOU SHOULD NOT MANUALLY EDIT THIS FILE unless you
+# know what you're doing, and can keep the two files properly in sync.  If you
+# screw it up, you're on your own.
+
+"""
+    # Only generate transport for vhost list
+    if not _uses_transport(mlist):
+        return
+    # The text file entries get a little extra info
+    print >> fp, '# STANZA START:', listname
+    print >> fp, '# CREATED:', time.ctime(time.time())
+    # Now add all the standard alias entries
+    listname = mlist.internal_name()
+    fieldsz = len('-unsubscribe')
+    addrs = [ mlist.getListAddress() ]
+    for ext in _extensions:
+        addrs.append(mlist.getListAddress(ext))
+    for addr in addrs:
+        target = "mailman:"
+        print >> fp, addr, ((fieldsz - len(ext)) * ' '), target
+    # Finish the text file stanza
+    print >> fp, '# STANZA END:', listname
+    print >> fp
+
+
+
 def _do_create(mlist, textfile, func):
     # Crack open the plain text file
     try:
@@ -213,6 +291,8 @@ def _do_create(mlist, textfile, func):
         func(mlist, fp)
     finally:
         fp.close()
+
+    # XXX check transports?
     # Now double check the virtual plain text file
     if func is _addvirtual:
         _check_for_virtual_loopaddr(mlist, textfile)
@@ -226,9 +306,10 @@ def create(mlist, cgi=False, nolock=False, quiet=False):
         lock.lock()
     # Do the aliases file, which need to be done in any case
     try:
-        _do_create(mlist, ALIASFILE, _addlist)
-        if mlist and mlist.host_name in mm_cfg.POSTFIX_STYLE_VIRTUAL_DOMAINS:
+        _do_create(mlist, ALIASFILE, _addalias)
+        if mlist and '@' in mlist.internal_name(): # NDIM XXX and mlist.host_name in mm_cfg.POSTFIX_STYLE_VIRTUAL_DOMAINS:
             _do_create(mlist, VIRTFILE, _addvirtual)
+        _do_create(mlist, TRANSPORTFILE, _addtransport)
         _update_maps()
     finally:
         if lock:

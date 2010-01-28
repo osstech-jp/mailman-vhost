@@ -52,6 +52,7 @@ from Mailman import i18n
 from Mailman.SafeDict import SafeDict
 from Mailman.Logging.Syslog import syslog
 from Mailman.Mailbox import ArchiverMailbox
+from Mailman import Site
 
 # Set up i18n.  Assume the current language has already been set in the caller.
 _ = i18n._
@@ -569,16 +570,21 @@ class Article(pipermail.Article):
         if d['_message_id']:
             headers.append('Message-ID: %(_message_id)s')
         body = EMPTYSTRING.join(self.body)
-        if isinstance(body, types.UnicodeType):
-            body = body.encode(Utils.GetCharSet(self._lang), 'replace')
+        cset = Utils.GetCharSet(self._lang)
+        # Coerce the body to Unicode and replace any invalid characters.
+        if not isinstance(body, types.UnicodeType):
+            body = unicode(body, cset, 'replace')
         if mm_cfg.ARCHIVER_OBSCURES_EMAILADDRS:
             otrans = i18n.get_translation()
             try:
+                atmark = unicode(_(' at '), cset)
                 i18n.set_language(self._lang)
                 body = re.sub(r'([-+,.\w]+)@([-+.\w]+)',
-                              '\g<1>' + _(' at ') + '\g<2>', body)
+                              '\g<1>' + atmark + '\g<2>', body)
             finally:
                 i18n.set_translation(otrans)
+        # Return body to character set of article.
+        body = body.encode(cset, 'replace')
         return NL.join(headers) % d + '\n\n' + body + '\n'
 
     def _set_date(self, message):
@@ -748,11 +754,11 @@ class HyperArchive(pipermail.T):
 
     def html_TOC(self):
         mlist = self.maillist
-        listname = mlist.internal_name()
-        mbox = os.path.join(mlist.archive_dir()+'.mbox', listname+'.mbox')
+        local_part = mlist.local_part
+        mbox = Site.get_mboxpath(mlist.internal_name())
         d = {"listname": mlist.real_name,
              "listinfo": mlist.GetScriptURL('listinfo', absolute=1),
-             "fullarch": '../%s.mbox/%s.mbox' % (listname, listname),
+             "fullarch": '../%s.mbox/%s.mbox' % (local_part, local_part), # NDIM XXX Path
              "size": sizeof(mbox, mlist.preferred_language),
              'meta': '',
              }
@@ -830,7 +836,7 @@ class HyperArchive(pipermail.T):
             return 1
         self._lock_file = LockFile.LockFile(
             os.path.join(mm_cfg.LOCK_DIR,
-                         self.maillist.internal_name() + '-arch.lock'))
+                         self.maillist.internal_name() + '-arch.lock')) # NDIM XXX Lock
         try:
             self._lock_file.lock(timeout=0.5)
         except LockFile.TimeOutError:

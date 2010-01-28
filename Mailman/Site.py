@@ -22,6 +22,7 @@ implementation should work for standard Mailman.
 
 import os
 import errno
+import sys
 
 from Mailman import mm_cfg
 
@@ -47,34 +48,56 @@ def _makedir(path):
 
 
 
-# BAW: We don't really support domain<>None yet.  This will be added in a
-# future version.  By default, Mailman will never pass in a domain argument.
-def get_listpath(listname, domain=None, create=0):
-    """Return the file system path to the list directory for the named list.
+def get_listsubdir(listname):
+    """Return subdirectory name for the named list.
 
-    If domain is given, it is the virtual domain for the named list.  The
-    default is to not distinguish list paths on the basis of virtual domains.
+    Append this subdirectory name to a subsystem specific directory
+    such as archives/private/ or similar.
+
+    The directory scheme implemented is like this:
+    
+        <subsystem directory>/
+           mylist0/            # one "site default list"
+           mylist1/            # another "site default list"
+           some.domain.com/
+              mylist1/         # a "vhost list"
+              mylist2/         # another "vhost list"
+           mydomain.com/
+              mylist1/         # yet another "vhost list"
+
+    Ideally, this function and get_listnames() below would be the only
+    code to modify if you want to introduce another disk storage
+    scheme, e.g. d/domain.com/mylist1 and m/mydomain.com/mylist1.
+    
+    See also get_listpath and get_archpath docs for example usage.
+    """
+    if '@' in listname:
+        tmp = listname.split('@')
+        return os.path.join(tmp[1],tmp[0])
+    else:
+        return listname
+    
+    
+
+def get_listpath(listname, create=0):
+    """Return the file system path to the list directory for the named list.
 
     If the create flag is true, then this method should create the path
     hierarchy if necessary.  If the create flag is false, then this function
     should not attempt to create the path heirarchy (and in fact the absence
     of the path might be significant).
     """
-    path = os.path.join(mm_cfg.LIST_DATA_DIR, listname)
+    path = os.path.join(mm_cfg.LIST_DATA_DIR,
+                        get_listsubdir(listname))
     if create:
         _makedir(path)
     return path
 
 
 
-# BAW: We don't really support domain<>None yet.  This will be added in a
-# future version.  By default, Mailman will never pass in a domain argument.
-def get_archpath(listname, domain=None, create=False, public=False):
+def get_archpath(listname, create=False, public=False):
     """Return the file system path to the list's archive directory for the
     named list in the named virtual domain.
-
-    If domain is given, it is the virtual domain for the named list.  The
-    default is to not distinguish list paths on the basis of virtual domains.
 
     If the create flag is true, then this method should create the path
     hierarchy if necessary.  If the create flag is false, then this function
@@ -88,15 +111,20 @@ def get_archpath(listname, domain=None, create=False, public=False):
         subdir = mm_cfg.PUBLIC_ARCHIVE_FILE_DIR
     else:
         subdir = mm_cfg.PRIVATE_ARCHIVE_FILE_DIR
-    path = os.path.join(subdir, listname)
+    path = os.path.join(subdir, get_listsubdir(listname))
     if create:
         _makedir(path)
     return path
 
 
 
-# BAW: We don't really support domain<>None yet.  This will be added in a
-# future version.  By default, Mailman will never pass in a domain argument.
+def get_mboxpath(listname, create=False, public=False):
+    """Get path to archive mbox file"""
+    return os.path.join(get_archpath(listname) + '.mbox',
+                        listname.split('@')[0] + '.mbox')
+
+
+
 def get_listnames(domain=None):
     """Return the names of all the known lists for the given domain.
 
@@ -105,9 +133,19 @@ def get_listnames(domain=None):
     """
     # Import this here to avoid circular imports
     from Mailman.Utils import list_exists
-    # We don't currently support separate virtual domain directories
     got = []
-    for fn in os.listdir(mm_cfg.LIST_DATA_DIR):
-        if list_exists(fn):
-            got.append(fn)
+    datadir = mm_cfg.LIST_DATA_DIR
+    if domain:
+        domaindir = os.path.join(datadir, domain)
+        if os.path.isdir(domaindir):
+            for localpart in os.listdir(domaindir):
+                listname = '@'.join([localpart, domain])
+                if list_exists(listname):
+                    got.append(listname)
+    else:
+        for fn in os.listdir(datadir):
+            if list_exists(fn):
+                got.append(fn)
+            else:
+                got.extend(get_listnames(fn))
     return got

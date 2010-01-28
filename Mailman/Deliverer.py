@@ -158,9 +158,8 @@ your membership administrative address, %(addr)s.'''))
         # Some one was invited to one list but tried to confirm to a different
         # list.  We inform both list owners of the bogosity, but be careful
         # not to reveal too much information.
-        selfname = self.internal_name()
         syslog('mischief', '%s was invited to %s but confirmed to %s',
-               address, listname, selfname)
+               address, listname, self.internal_name())
         # First send a notice to the attacked list
         msg = Message.OwnerNotification(
             self,
@@ -207,7 +206,7 @@ is required.""")))
         # probe message.
         token = self.pend_new(Pending.PROBE_BOUNCE, member, msg)
         probedict = {
-            'bounces': self.internal_name() + '-bounces',
+            'bounces': self.getListAddress('bounces'),
             'token': token,
             }
         probeaddr = '%s@%s' % ((mm_cfg.VERP_PROBE_FORMAT % probedict),

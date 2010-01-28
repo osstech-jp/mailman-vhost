@@ -198,12 +198,12 @@ def decorate(mlist, template, what, extradict={}):
     # example, a footer of "% silly %(real_name)s" would give a header
     # containing all list attributes.  While we've previously removed such
     # really bad ones like `password' and `passwords', it's much better to
-    # provide a whitelist of known good attributes, then to try to remove a
+    # provide a whitelist of known good attributes, than to try to remove a
     # blacklist of known bad ones.
     d = SafeDict({'real_name'     : mlist.real_name,
-                  'list_name'     : mlist.internal_name(),
+                  'list_name'     : mlist.local_part,
                   # For backwards compatibility
-                  '_internal_name': mlist.internal_name(),
+                  '_internal_name': mlist.local_part,
                   'host_name'     : mlist.host_name,
                   'web_page_url'  : mlist.web_page_url,
                   'description'   : mlist.description,
