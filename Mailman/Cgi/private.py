@@ -29,7 +29,7 @@ from Mailman import Errors
 from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
-from Mailman.Site import get_mboxpath
+from Mailman.Site import get_archpath, get_mboxpath
 
 # Set up i18n.  Until we know which list is being requested, we use the
 # server's default.
@@ -76,21 +76,23 @@ def main():
         print doc.Format()
         syslog('mischief', 'Private archive hostile path: %s', path)
         return
-    # BAW: This needs to be converted to the Site module abstraction
-    true_filename = os.path.join(
-        mm_cfg.PRIVATE_ARCHIVE_FILE_DIR, tpath)
+    listname = parts[0].lower()
 
-    listname = parts[0].lower() # NDIM XXX use Utils.GetListname
     mboxfile = ''
     if len(parts) > 1:
         mboxfile = parts[1]
+        tpath = SLASH.join(parts[1:])
+    else:
+        tpath = ''
 
     # See if it's the list's mbox file is being requested
     if listname.endswith('.mbox') and mboxfile.endswith('.mbox') and \
            listname[:-5] == mboxfile[:-5]:
-        listname = listname[:-5]
+        listname = Utils.GetListName([listname[:-5]])
     else:
         mboxfile = ''
+        listname = Utils.GetListName([listname])
+    true_filename = os.path.join(get_archpath(listname), tpath)
 
     # If it's a directory, we have to append index.html in this script.  We
     # must also check for a gzipped file, because the text archives are

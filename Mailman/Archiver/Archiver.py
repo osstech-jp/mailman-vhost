@@ -159,8 +159,12 @@ class Archiver:
         else:
             hostname = re.match('[^:]*://([^/]*)/.*', url).group(1)\
                        or mm_cfg.DEFAULT_URL_HOST
+            if hostname == mm_cfg.DEFAULT_URL_HOST:
+                fullname = self.local_part
+            else:
+                fullname = os.path.join(hostname, self.local_part)
             url = mm_cfg.PUBLIC_ARCHIVE_URL % {
-                'listname': self.local_part,
+                'listname': fullname,
                 'hostname': hostname
                 }
             if not url.endswith('/'):

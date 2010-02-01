@@ -484,8 +484,11 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         # pipe to the wrapper in an MTA alias or other delivery process
         # contains shell special characters so allow only defined characters
         # (default = '[-+_.=a-z0-9]').
-        if len(re.sub(mm_cfg.ACCEPTABLE_LISTNAME_CHARACTERS, '', name)) > 0:
-            raise Errors.BadListNameError, name
+        # Also allow a single '@' for vhosts.
+        filtername = re.sub(mm_cfg.ACCEPTABLE_LISTNAME_CHARACTERS, '', name)
+        if len(filtername) > 0:
+            if filtername <> '@':
+                raise Errors.BadListNameError, name
         # Validate what will be the list's posting address.  If that's
         # invalid, we don't want to create the mailing list.  The hostname
         # part doesn't really matter, since that better already be valid.

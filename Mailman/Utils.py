@@ -253,7 +253,7 @@ def GetPathPieces(envar='PATH_INFO'):
 
 
 # Helper function for CGI scripts
-def _GetURLHost(envar='SERVER_NAME'):
+def _GetURLHost(envar='HTTP_HOST'):
     # NDIM XXX: Not pretty logic.
     web_server_name = os.environ.get(envar)
     if web_server_name:
