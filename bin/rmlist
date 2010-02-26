@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 1998-2003 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -43,6 +43,7 @@ import shutil
 
 import paths
 from Mailman import mm_cfg
+from Mailman import Site
 from Mailman import Utils
 from Mailman import MailList
 from Mailman.i18n import _
@@ -121,25 +122,24 @@ def main():
             sys.modules[modname].remove(mlist)
 
         REMOVABLES = [
-            (os.path.join('lists', listname), _('list info')),
+            (mlist.fullpath(), _('list info')),
             ]
 
     # Remove any stale locks associated with the list
     for filename in os.listdir(mm_cfg.LOCK_DIR):
-        fn_listname = filename.split('.')[0]
-        if fn_listname == listname:
+        if filename.startswith(listname + '.lock'):
             REMOVABLES.append((os.path.join(mm_cfg.LOCK_DIR, filename),
                                _('stale lock file')))
 
     if removeArchives:
         REMOVABLES.extend([
-            (os.path.join('archives', 'private', listname),
+            (Site.get_archpath(listname),
              _('private archives')),
-            (os.path.join('archives', 'private', listname + '.mbox'),
+            (Site.get_archpath(listname) + '.mbox',
              _('private archives')),
-            (os.path.join('archives', 'public', listname),
+            (Site.get_archpath(listname, public=True),
              _('public archives')),
-            (os.path.join('archives', 'public', listname + '.mbox'),
+            (Site.get_archpath(listname, public=True) + '.mbox',
              _('public archives')),
             ])
 
