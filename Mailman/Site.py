@@ -1,4 +1,4 @@
-# Copyright (C) 2002-2003 by the Free Software Foundation, Inc.
+# Copyright (C) 2002-2010 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -120,7 +120,8 @@ def get_archpath(listname, create=False, public=False):
 
 def get_mboxpath(listname, create=False, public=False):
     """Get path to archive mbox file"""
-    return os.path.join(get_archpath(listname) + '.mbox',
+    # Pass public. Don't pass create as it won't do the right thing.
+    return os.path.join(get_archpath(listname, public=public) + '.mbox',
                         listname.split('@')[0] + '.mbox')
 
 
