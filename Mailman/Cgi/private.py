@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2006 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -134,12 +134,16 @@ def main():
         if cgidata.has_key('submit'):
             # This is a re-authorization attempt
             message = Bold(FontSize('+1', _('Authorization failed.'))).Format()
+            # give an HTTP 401 for authentication failure
+            print 'Status: 401 Unauthorized'
         # Output the password form
         charset = Utils.GetCharSet(mlist.preferred_language)
         print 'Content-type: text/html; charset=' + charset + '\n\n'
         # Put the original full path in the authorization form, but avoid
         # trailing slash if we're not adding parts.  We add it below.
         action = mlist.GetScriptURL('private', absolute=1)
+        if mboxfile:
+            action += '.mbox'
         if parts[1:]:
             action = os.path.join(action, SLASH.join(parts[1:]))
         # If we added '/index.html' to true_filename, add a slash to the URL.

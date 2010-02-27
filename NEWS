@@ -4,6 +4,44 @@ Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.14 (xx-xxx-xxxx)
+
+  i18n
+
+    - Changed a few DOCTYPE directives in templates for compliance.
+      Bug #500952 and Bug #500955.
+
+  Bug Fixes and other patches
+
+    - Added a urlhost argument to the MailList.MailList.Create() method to
+      allow bin/newlist and the the create CGI to pass urlhost so the host
+      will be correct in the listinfo link on the emptyarchive page.
+      Bug #529100.
+
+    - Added the List-Post header to the default list of headers retained in
+      messages in the MIME digest.  Bug #526143.
+
+    - When daemonizing mailmanctl, we now ensure terminal files are closed.
+
+    - Fixed a bug in pipermail archiving that caused fallback threading by
+      subject to fail.  Bug #266572.
+
+    - We now give an HTTP 401 status for authentication failures from admin,
+      admindb, private and options logins.
+
+    - Backported the listinfo template change from the 2.2 branch to fix
+      Bug #514050.
+
+    - Fixed a bug where going to an archives/private/list.mbox/list.mbox URL
+      would result in a munged URL if authentication was required. Bug #266164.
+
+    - Fixed a bug where check_perms would throw an OSError if an entry in
+      Mailman's lists/ directory was not a directory.  Bug #265613.
+
+    - Fixed a bug where a message with an Approved: header held by a handler
+      that precedes Approve (SpamDetect by default) would not have the
+      Approved: header removed if the held message was approved.  Bug #501739.
+
 2.1.13 (22-Dec-2009)
 
   i18n
