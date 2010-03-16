@@ -880,7 +880,7 @@ DEFAULT_MSG_HEADER = ""
 DEFAULT_MSG_FOOTER = """_______________________________________________
 %(real_name)s mailing list
 %(real_name)s@%(host_name)s
-%(web_page_url)slistinfo%(cgiext)s/%(local_part)s
+%(web_page_url)slistinfo%(cgiext)s/%(list_name)s
 """
 
 # Where to put subject prefix for 'Re:' messages:
