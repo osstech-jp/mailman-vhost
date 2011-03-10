@@ -1,17 +1,178 @@
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
 
-2.1.14 (xx-xxx-xxxx)
+2.1.15 (xx-xxx-xxxx)
+
+  Security
+
+    - An XSS vulnerability, CVE-2011-0707, has been fixed.
+
+  New Features
+
+    - A new mm_cfg.py setting RESPONSE_INCLUDE_LEVEL has been added to control
+      how much of the original message is included in automatic responses to
+      email commands.  The default is 2 to preserve the prior behavior of
+      including the full message.  Setting this to 1 in mm_cfg.py will include
+      only the original headers, and 0 will include none of the original.  It
+      is recommended to set this to 0 in mm_cfg.py to minimize the effects of
+      backscatter.  Bug #265835.
+
+    - A new mm_cfg.py setting DEFAULT_RESPOND_TO_POST_REQUESTS has been added
+      to control the default for respond_to_post_requests for new lists.  It is
+      set to Yes for backwards compatibility, but it is recommended that
+      serious consideration be given to setting it to No.  Bug #266051.
+
+    - A new mm_cfg.py setting DISCARD_MESSAGE_WITH_NO_COMMAND has been added to
+      control whether a message to the -request address without any commands or
+      a message to -confirm whose To: address doesn't match VERP_CONFIRM_REGEXP
+      is responded to or just logged.  It defaults to Yes which is different
+      from prior behavior.  Bug #410236.
 
   i18n
+
+    - Fixed a missing format character in the Spanish translation.
+      Bug #670988.
+
+  Bug Fixes and other patches
+
+    - Fixed a typo in the usage() definition cron/gate_news.  Bug #721015.
+
+    - Fixed an uncaught KeyError when poster tries to cancel a post which was
+      already handled.  Bug #266224.
+
+    - Held message user notifications now come From: list-owner instead of
+      list-bounces.  Bug #714424.
+
+    - Issue an HTTP 404 status for private archive file not found.
+
+    - @listname entries in *_these_nonmembers are no longer case sensitive.
+      Bug #705715.
+
+    - Changed bin/rmlist to also remove heldmsg files for the removed list and
+      fixed a problem with removal of stale locks for the list.  Bug #700528.
+
+    - Fixed a bug where content filtering could leave a multipart message or
+      part with just one sub-part. These should be recast to just the sub-part.
+      Bug #701558.
+
+    - Fixed a bug that could erroneously handle posts from addresses in
+      *_these_nonmembers and send held/rejected notices to bogus addresses when
+      The From or other sender header is RFC 2047 encoded.  Bug #702516.
+
+    - Updated contrib/mm-handler-2.1.10 to better handle lists with names that
+      look like admin addresses.  Bug #697161.
+
+    - Added bounce recognition for a bogus Dovecot MDN.  Bug #693134.
+
+    - Fixed a problem where an emailed command in the Subject: header with a
+      non-ascii l10n of an 'Re:' prefix is ignored.  Bug #685261.
+
+    - Fixed a problem with approving a post by email when the body of the
+      approval mail is base64 encoded.  Bug #677115.
+
+    - Fixed the host name in the From: address of the owner notification from
+      bin/add_members.  Bug #666181.
+
+2.1.14 (20-Sep-2010)
+
+  Security
+
+    - Two potential XSS vulnerabilities have been identified and fixed.
+
+  New Features
+
+    - A new feature for controlling the addition/replacement of the Sender:
+      header in outgoing mail has been implemented.  This allows a list owner
+      to set include_sender_header on the list's General Options page in the
+      admin GUI.  The default for this setting is Yes which preserves the prior
+      behavior of removing any pre-existing Sender: and setting it to the
+      list's -bounces address.  Setting this to No stops Mailman from adding or
+      modifying the Sender: at all.
+
+      Additionally, there is a new Defaults.py/mm_cfg.py setting
+      ALLOW_SENDER_OVERRIDES which defaults to Yes but which can be set to No
+      to remove the include_sender_header setting from General Options, and
+      thus preserve the prior behavior completely.
+
+    - Bounce processing has been enhanced so that if a bounce is returned to a
+      list from a non-member who is a member of a regular_include_list, the
+      bounce will be processed as a bounce for the included list.
+
+  i18n
+
+    - Fixed a missing format character in the German bin/mailmanctl docstring.
+
+    - Updated Dutch translation from Jan Veuger.
+
+    - Updated Japanese Translation from Tokio Kikuchi.
+
+    - Updated Finnish translation from Joni Töyrylä.
+
+    - Made a few corrections to some Polish templates.  Bug #566731.
+
+    - Made a minor change to the Chinese (China) message catalog.  Bug #545772.
 
     - Changed a few DOCTYPE directives in templates for compliance.
       Bug #500952 and Bug #500955.
 
   Bug Fixes and other patches
+
+    - Made minor wording improvements and typo corrections in some messages.
+      Bug #426979.
+
+    - Fixed i18n._() to catch exceptions due to bad formats.  Bug #632660.
+
+    - Fixed admindb interface to decode base64 and quoted-printable encoded
+      message body excerpts for display.  Bug #629738.
+
+    - Fixed web CGI tracebacks to properly report sys.path.  Bug #615114.
+
+    - Changed the member options login page unsubscribe request to include the
+      requesters IP address in the confirmation request.  Bug #610527.
+
+    - Changed fix_url to lock the list if not locked.  Bug #610364.
+
+    - Made a minor change to the English subscribeack.txt (welcome message)
+      template to emphasize that a password is only required to unsubscribe
+      *without confirmation*.
+
+    - Fixed an issue in admindb that could result in a KeyError and "we hit a
+      bug" response when a moderator acts on a post that had been handled by
+      someone else after the first moderator had retrieved it.  Bug #598671.
+
+    - Fixed a bug which would fail to show a list on the admin and listinfo
+      overview pages if its web_page_url contained a :port.  Bug # 597741.
+
+    - Fixed bin/genaliases to not throw TypeError when MTA = None.
+      Bug #587657.
+
+    - Provided the ability to specify in mm_cfg.py a local domain (e.g.
+      'localhost') for the local addresses in the generated virtual-mailman
+      when MTA = 'Postfix'.  See VIRTUAL_MAILMAN_LOCAL_DOMAIN in Defaults.py.
+      Bug #328907.
+
+    - Made a minor change to the removal of an Approved: pseudo-header from
+      a text/html alternative to allow for an inserted '\xA0' before the
+      password.
+
+    - Fixed Content Filtering collapse_alternatives to work on deeply nested
+      multipart/alternative parts.  Bug #576675.
+
+    - We now accept/remove X-Approved: and X-Approve: headers in addition to
+      Approved: and Approve: for pre-approving posts.  Bug #557750.
+
+    - Reordered the 'cancel' and 'subscribe' buttons on the subscription
+      confirmation web page so the default action upon 'enter' will be the
+      subscribe button in browsers that pick the first button.  Bug #530654.
+
+    - Fixed a bug in the admindb interface that could apply a moderator
+      action to a message not displayed.  Bug #533468.
+
+    - Added a traceback to the log message produced when processing the
+      digest.mbox throws an exception.
 
     - Added a urlhost argument to the MailList.MailList.Create() method to
       allow bin/newlist and the the create CGI to pass urlhost so the host
@@ -27,7 +188,8 @@ Here is a history of user visible changes to Mailman.
       subject to fail.  Bug #266572.
 
     - We now give an HTTP 401 status for authentication failures from admin,
-      admindb, private and options logins.
+      admindb, private, options and roster CGIs, and an HTTP 404 status from
+      all the CGIs for an invalid list name.
 
     - Backported the listinfo template change from the 2.2 branch to fix
       Bug #514050.

@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2009 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2011 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -61,6 +61,8 @@ def main():
         safelistname = Utils.websafe(listname)
         bad_confirmation(doc, _('No such list <em>%(safelistname)s</em>'))
         doc.AddItem(MailmanLogo())
+        # Send this with a 404 status.
+        print 'Status: 404 Not Found'
         print doc.Format()
         syslog('error', 'No such list "%s": %s', listname, e)
         return
@@ -300,8 +302,8 @@ def subscription_prompt(mlist, doc, cookie, userdesc):
     table.AddRow([Hidden('cookie', cookie)])
     table.AddCellInfo(table.GetCurrentRowIndex(), 0, colspan=2)
     table.AddRow([
-        Label(SubmitButton('cancel', _('Cancel my subscription request'))),
-        SubmitButton('submit', _('Subscribe to list %(listname)s'))
+        Label(SubmitButton('submit', _('Subscribe to list %(listname)s'))),
+        SubmitButton('cancel', _('Cancel my subscription request'))
         ])
     form.AddItem(table)
     doc.AddItem(form)
@@ -469,7 +471,7 @@ def unsubscription_prompt(mlist, doc, cookie, addr):
     if fullname is None:
         fullname = _('<em>Not available</em>')
     else:
-        fullname = Utils.uncanonstr(fullname, lang)
+        fullname = Utils.websafe(Utils.uncanonstr(fullname, lang))
     table.AddRow([_("""Your confirmation is required in order to complete the
     unsubscription request from the mailing list <em>%(listname)s</em>.  You
     are currently subscribed with
@@ -571,7 +573,7 @@ def addrchange_prompt(mlist, doc, cookie, oldaddr, newaddr, globally):
     if fullname is None:
         fullname = _('<em>Not available</em>')
     else:
-        fullname = Utils.uncanonstr(fullname, lang)
+        fullname = Utils.websafe(Utils.uncanonstr(fullname, lang))
     if globally:
         globallys = _('globally')
     else:
@@ -632,6 +634,7 @@ def heldmsg_confirm(mlist, doc, cookie):
         try:
             # Do this in two steps so we can get the preferred language for
             # the user who posted the message.
+            subject = 'n/a'
             op, id = mlist.pend_confirm(cookie)
             ign, sender, msgsubject, ign, ign, ign = mlist.GetRecord(id)
             lang = mlist.getMemberLanguage(sender)
@@ -642,7 +645,7 @@ def heldmsg_confirm(mlist, doc, cookie):
             # Discard the message
             mlist.HandleRequest(id, mm_cfg.DISCARD,
                                 _('Sender discarded message via web.'))
-        except Errors.LostHeldMessage:
+        except (Errors.LostHeldMessage, KeyError):
             bad_confirmation(doc, _('''The held message with the Subject:
             header <em>%(subject)s</em> could not be found.  The most likely
             reason for this is that the list moderator has already approved or
@@ -812,7 +815,7 @@ def reenable_prompt(mlist, doc, cookie, list, member):
     if username is None:
         username = _('<em>not available</em>')
     else:
-        username = Utils.uncanonstr(username, lang)
+        username = Utils.websafe(Utils.uncanonstr(username, lang))
 
     table.AddRow([_("""Your membership in the %(realname)s mailing list is
     currently disabled due to excessive bounces.  Your confirmation is

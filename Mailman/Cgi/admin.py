@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -72,6 +72,8 @@ def main():
     except Errors.MMListError, e:
         # Avoid cross-site scripting attacks
         safelistname = Utils.websafe(listname)
+        # Send this with a 404 status.
+        print 'Status: 404 Not Found'
         admin_overview(_('No such list <em>%(safelistname)s</em>'))
         syslog('error', 'admin.py access for non-existent list: %s',
                listname)
@@ -191,8 +193,8 @@ def main():
         if not mlist.nondigestable and mlist.getRegularMemberKeys():
             doc.addError(
                 _('''You have regular list members but non-digestified mail is
-                turned off.  They will receive mail until you fix this
-                problem.'''), tag=_('Warning: '))
+                turned off.  They will receive non-digestified mail until you
+                fix this problem.'''), tag=_('Warning: '))
         # Glom up the results page and print it out
         show_results(mlist, doc, category, subcat, cgidata)
         print doc.Format()
@@ -232,8 +234,9 @@ def admin_overview(msg=''):
     for name in listnames:
         mlist = MailList.MailList(name, lock=0)
         if mlist.advertised:
-            if mm_cfg.VIRTUAL_HOST_OVERVIEW and \
-                   mlist.web_page_url.find('/%s/' % hostname) == -1:
+            if mm_cfg.VIRTUAL_HOST_OVERVIEW and (
+                   mlist.web_page_url.find('/%s/' % hostname) == -1 and
+                   mlist.web_page_url.find('/%s:' % hostname) == -1):
                 # List is for different identity of this host - skip it.
                 continue
             else:
@@ -244,7 +247,7 @@ def admin_overview(msg=''):
     if msg:
         greeting = FontAttr(msg, color="ff5060", size="+1")
     else:
-        greeting = _("Welcome!")
+        greeting = FontAttr(_('Welcome!'), size='+2')
 
     welcome = []
     mailmanlink = Link(mm_cfg.MAILMAN_URL, _('Mailman')).Format()

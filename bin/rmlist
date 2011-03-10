@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -37,6 +37,7 @@ Where:
 """
 
 import os
+import re
 import sys
 import getopt
 import shutil
@@ -131,6 +132,14 @@ def main():
             REMOVABLES.append((os.path.join(mm_cfg.LOCK_DIR, filename),
                                _('stale lock file')))
 
+    # Remove any held messages for this list
+    for filename in os.listdir(mm_cfg.DATA_DIR):
+        cre = re.compile('^heldmsg-%s-\d+\.(pck|txt)$' % listname,
+                         re.IGNORECASE)
+        if cre.match(filename):
+            REMOVABLES.append((os.path.join(mm_cfg.DATA_DIR, filename),
+                               _('held message file')))
+
     if removeArchives:
         REMOVABLES.extend([
             (Site.get_archpath(listname),
@@ -143,8 +152,7 @@ def main():
              _('public archives')),
             ])
 
-    for dirtmpl, msg in REMOVABLES:
-        dir = os.path.join(mm_cfg.VAR_PREFIX, dirtmpl)
+    for dir, msg in REMOVABLES:
         remove_it(listname, dir, msg)
 
 

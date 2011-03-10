@@ -1,4 +1,4 @@
-# Copyright (C) 2001,2002 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2010 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -68,6 +68,8 @@ def main():
                    Bold(FontAttr(title, color='#ff0000', size='+2'))))
         doc.AddItem('<hr>')
         doc.AddItem(MailmanLogo())
+        # Send this with a 404 status.
+        print 'Status: 404 Not Found'
         print doc.Format()
         syslog('error', 'No such list "%s": %s\n', listname, e)
         return
@@ -200,7 +202,7 @@ def request_deletion(doc, mlist, errmsg=None):
             FontAttr(_('Error: '), color='#ff0000', size='+2').Format() +
             Italic(errmsg).Format()))])
 
-    table.AddRow([_("""This page allows you as the list owner, to permanent
+    table.AddRow([_("""This page allows you as the list owner, to permanently
     remove this mailing list from the system.  <strong>This action is not
     undoable</strong> so you should undertake it only if you are absolutely
     sure this mailing list has served its purpose and is no longer necessary.

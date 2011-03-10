@@ -78,6 +78,8 @@ def main():
         doc.addError(_('No such list <em>%(safelistname)s</em>'))
         doc.AddItem('<hr>')
         doc.AddItem(MailmanLogo())
+        # Send this with a 404 status.
+        print 'Status: 404 Not Found'
         print doc.Format()
         syslog('error', 'No such list "%s": %s\n', listname, e)
         return
@@ -177,7 +179,8 @@ def main():
                     forwarded to the list administrator for approval."""),
                                  tag='')
                 else:
-                    mlist.ConfirmUnsubscription(user, userlang)
+                    ip = os.environ.get('REMOTE_ADDR')
+                    mlist.ConfirmUnsubscription(user, userlang, remote=ip)
                     doc.addError(_('The confirmation email has been sent.'),
                                  tag='')
                 mlist.Save()

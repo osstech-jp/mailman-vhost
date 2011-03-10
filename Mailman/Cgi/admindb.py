@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -88,6 +88,8 @@ def main():
     except Errors.MMListError, e:
         # Avoid cross-site scripting attacks
         safelistname = Utils.websafe(listname)
+        # Send this with a 404 status.
+        print 'Status: 404 Not Found'
         handle_no_list(_('No such list <em>%(safelistname)s</em>'))
         syslog('error', 'No such list "%s": %s\n', listname, e)
         return
@@ -507,6 +509,7 @@ def show_helds_overview(mlist, form):
             if when:
                 t.AddRow(['&nbsp;', Bold(_('Received:')),
                           time.ctime(when)])
+            t.AddRow([InputObj(qsender, 'hidden', str(id), False).Format()])
             counter += 1
             right.AddRow([t])
         stable.AddRow([left, right])
@@ -596,7 +599,7 @@ def show_post_requests(mlist, id, info, total, count, form):
     chars = 0
     # A negative value means, include the entire message regardless of size
     limit = mm_cfg.ADMINDB_PAGE_TEXT_LIMIT
-    for line in email.Iterators.body_line_iterator(msg):
+    for line in email.Iterators.body_line_iterator(msg, decode=True):
         lines.append(line)
         chars += len(line)
         if chars > limit > 0:
@@ -684,9 +687,13 @@ def process_form(mlist, doc, cgidata):
                        'senderclearmodp-', 'senderbanp-'):
             if k.startswith(prefix):
                 action = k[:len(prefix)-1]
-                sender = unquote_plus(k[len(prefix):])
+                qsender = k[len(prefix):]
+                sender = unquote_plus(qsender)
                 value = cgidata.getvalue(k)
                 senderactions.setdefault(sender, {})[action] = value
+                for id in cgidata.getlist(qsender):
+                    senderactions[sender].setdefault('message_ids',
+                                                     []).append(int(id))
     # discard-all-defers
     try:
         discardalldefersp = cgidata.getvalue('discardalldefersp', 0)
@@ -708,6 +715,9 @@ def process_form(mlist, doc, cgidata):
             forwardaddr = actions.get('senderforwardto', '')
             bysender = helds_by_sender(mlist)
             for id in bysender.get(sender, []):
+                if id not in senderactions[sender]['message_ids']:
+                    # It arrived after the page was displayed. Skip it.
+                    continue
                 try:
                     msgdata = mlist.GetRecord(id)[5]
                     comment = msgdata.get('rejection_notice',
@@ -770,12 +780,16 @@ def process_form(mlist, doc, cgidata):
         forwardaddrkey = 'forward-addr-%d' % request_id
         bankey = 'ban-%d' % request_id
         # Defaults
-        if mlist.GetRecordType(request_id) == HELDMSG:
-            msgdata = mlist.GetRecord(request_id)[5]
-            comment = msgdata.get('rejection_notice',
-                                  _('[No explanation given]'))
-        else:
-            comment = _('[No explanation given]')
+        try:
+            if mlist.GetRecordType(request_id) == HELDMSG:
+                msgdata = mlist.GetRecord(request_id)[5]
+                comment = msgdata.get('rejection_notice',
+                                      _('[No explanation given]'))
+            else:
+                comment = _('[No explanation given]')
+        except KeyError:
+            # Someone else must have handled this one after we got the page.
+            continue
         preserve = 0
         forward = 0
         forwardaddr = ''

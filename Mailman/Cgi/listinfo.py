@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2009 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -49,6 +49,8 @@ def main():
     except Errors.MMListError, e:
         # Avoid cross-site scripting attacks
         safelistname = Utils.websafe(listname)
+        # Send this with a 404 status.
+        print 'Status: 404 Not Found'
         listinfo_overview(_('No such list <em>%(safelistname)s</em>'))
         syslog('error', 'No such list "%s": %s', listname, e)
         return
@@ -87,14 +89,15 @@ def listinfo_overview(msg=''):
     for name in listnames:
         mlist = MailList.MailList(name, lock=0)
         if mlist.advertised:
-            if mm_cfg.VIRTUAL_HOST_OVERVIEW and \
-                   mlist.web_page_url.find('/%s/' % hostname) == -1:
+            if mm_cfg.VIRTUAL_HOST_OVERVIEW and (
+                   mlist.web_page_url.find('/%s/' % hostname) == -1 and
+                   mlist.web_page_url.find('/%s:' % hostname) == -1):
                 # List is for different identity of this host - skip it.
                 continue
             else:
                 advertised.append((mlist.GetScriptURL('listinfo'),
                                    mlist.real_name,
-                                   mlist.description))
+                                   Utils.websafe(mlist.description)))
     if msg:
         greeting = FontAttr(msg, color="ff5060", size="+1")
     else:

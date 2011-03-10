@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -320,7 +320,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         self.new_member_options = mm_cfg.DEFAULT_NEW_MEMBER_OPTIONS
 
         # This stuff is configurable
-        self.respond_to_post_requests = 1
+        self.respond_to_post_requests = mm_cfg.DEFAULT_RESPOND_TO_POST_REQUESTS
         self.advertised = mm_cfg.DEFAULT_LIST_ADVERTISED
         self.max_num_recipients = mm_cfg.DEFAULT_MAX_NUM_RECIPIENTS
         self.max_message_size = mm_cfg.DEFAULT_MAX_MESSAGE_SIZE
@@ -368,6 +368,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         self.available_languages = []
         self.include_rfc2369_headers = 1
         self.include_list_post_header = 1
+        self.include_sender_header = 1
         self.filter_mime_types = mm_cfg.DEFAULT_FILTER_MIME_TYPES
         self.pass_mime_types = mm_cfg.DEFAULT_PASS_MIME_TYPES
         self.filter_filename_extensions = \
@@ -1285,7 +1286,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                     except IndexError:
                         subpart = None
                     if subpart:
-                        s = StringIO(subpart.get_payload())
+                        s = StringIO(subpart.get_payload(decode=True))
                         while True:
                             line = s.readline()
                             if not line:
@@ -1294,8 +1295,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                                 continue
                             i = line.find(':')
                             if i > 0:
-                                if (line[:i].lower() == 'approve' or
-                                    line[:i].lower() == 'approved'):
+                                if (line[:i].strip().lower() == 'approve' or
+                                    line[:i].strip().lower() == 'approved'):
                                     # then
                                     approved = line[i+1:].strip()
                             break
