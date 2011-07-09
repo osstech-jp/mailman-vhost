@@ -190,13 +190,12 @@ def _addvirtual(mlist, fp):
                       _generate_alias(mlist, ext=ext))) # XXX name space clash
     fieldsz = len(mlist.getListAddress('-unsubscribe'))
     for addr, target in addrs:
-        fqdnaddr = '%s@%s' % (addr, hostname)
         if mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN:
             localaddr = '%s@%s' % (target, mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN)
         else:
             localaddr = target
         # Format the text file nicely
-        print >> fp, fqdnaddr, ((fieldsz - len(k)) * ' '), localaddr
+        print >> fp, addr, ((fieldsz - len(addr)) * ' '), localaddr
     # Finish the text file stanza
     print >> fp, '# STANZA END:', listname
     print >> fp
