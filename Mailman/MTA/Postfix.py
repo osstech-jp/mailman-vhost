@@ -262,13 +262,13 @@ def _addtransport(mlist, fp):
 
 """
     # Only generate transport for vhost list
-    if not _uses_transport(mlist):
+    if not mlist or not _uses_transport(mlist):
         return
+    listname = mlist.internal_name()
     # The text file entries get a little extra info
     print >> fp, '# STANZA START:', listname
     print >> fp, '# CREATED:', time.ctime(time.time())
     # Now add all the standard alias entries
-    listname = mlist.internal_name()
     fieldsz = len('-unsubscribe')
     addrs = [ mlist.getListAddress() ]
     for ext in _extensions:
