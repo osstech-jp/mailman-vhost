@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -74,21 +74,20 @@ where `mydom.ain' is the mail domain name. If you don't specify emailhost but
 urlhost is not in the virtual host list, then mm_cfg.DEFAULT_EMAIL_HOST will
 be used for the email interface.
 
-NDIM XXX Ooops. How to keep this backward compatibility below? The
-vhost branch newlist is currently following a different model.
+Note: The above applies to non-virtual host lists.  To create a virtual host
+list, you must specify the list name as listname@email.host and you must
+specify the web host with the -u/--urlhost option unless the url host is
+lists.email.host. E.g.
 
-For backward compatibility, you can also specify the domain to create your
-new list in by spelling the listname like so:
+    newlist --urlhost=www.example.com mylist@example.com
 
-    mylist@www.mydom.ain
+If you specify the email host for a virtual host list with -e/--emailhost
+option, the email host must match the domain part of the listname.
 
-where www.mydom.ain is used for `urlhost' but it will also be used for
-`emailhost' if it is not found in the virtual host table. Note that
-'--urlhost' and '--emailhost' have precedence to this notation.
-
-If you spell the list name as just `mylist', then the email hostname will be
-taken from DEFAULT_EMAIL_HOST and the url will be taken from DEFAULT_URL (as
-defined in your Defaults.py file or overridden by settings in mm_cfg.py).
+If you spell the list name as just `mylist' without specifying other options,
+then the email hostname will be taken from DEFAULT_EMAIL_HOST and the url host
+will be taken from DEFAULT_URL_HOST (as defined in your Defaults.py file or
+overridden by settings in mm_cfg.py).
 
 Note that listnames are forced to lowercase.
 """
