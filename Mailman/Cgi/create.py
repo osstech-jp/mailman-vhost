@@ -99,10 +99,6 @@ def process_request(doc, cgidata):
         langs = [langs]
     # Sanity check
     safelistname = Utils.websafe(listname)
-    if '@' in listname:
-        request_creation(doc, cgidata,
-                         _('List name must not include "@": %(safelistname)s'))
-        return
     if Utils.list_exists(listname):
         # BAW: should we tell them the list already exists?  This could be
         # used to mine/guess the existance of non-advertised lists.  Then
@@ -164,6 +160,14 @@ def process_request(doc, cgidata):
                          _('Unknown virtual host: %(safehostname)s'))
         return
     emailhost = mm_cfg.VIRTUAL_HOSTS.get(hostname, mm_cfg.DEFAULT_EMAIL_HOST)
+    if '@' in listname:
+        if not listname.split('@')[1] == emailhost:
+            request_creation(doc, cgidata,
+                    _('List domain must match the email host for this domain'))
+            return
+    else:
+        if hostname <> mm_cfg.DEFAULT_URL_HOST:
+            listname = '%s@%s' % (listname, emailhost)
     # We've got all the data we need, so go ahead and try to create the list
     # See admin.py for why we need to set up the signal handler.
     mlist = MailList.MailList()
