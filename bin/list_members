@@ -32,7 +32,7 @@ Where:
     --moderated / -m
         Print just the moderated members.
 
-    --not-moderated / -M
+    --non-moderated / -M
         Print just the non-moderated members.
 
     --digest[=kind] / -d [kind]
@@ -161,7 +161,7 @@ def main():
     invalidonly = False
     unicodeonly = False
     moderatedonly = False
-    notmoderatedonly = False
+    nonmoderatedonly = False
 
     # Throw away the first (program) argument
     args = sys.argv[1:]
@@ -184,7 +184,7 @@ def main():
         elif opt in ('-m', '--moderated'):
             moderatedonly = True
         elif opt in ('-M', '--non-moderated'):
-            notmoderatedonly = True
+            nonmoderatedonly = True
         elif opt in ('-o', '--output'):
             try:
                 outfile = args.pop(0)
@@ -253,7 +253,7 @@ def main():
         rmembers = mlist.getMemberCPAddresses(rmembers)
         dmembers = mlist.getMemberCPAddresses(dmembers)
 
-    if invalidonly or unicodeonly or moderatedonly or notmoderatedonly:
+    if invalidonly or unicodeonly or moderatedonly or nonmoderatedonly:
         all = rmembers + dmembers
         all.sort()
         for addr in all:
@@ -265,7 +265,7 @@ def main():
                 showit = True
             if moderatedonly and mlist.getMemberOption(addr, mm_cfg.Moderate):
                 showit = True
-            if notmoderatedonly and not mlist.getMemberOption(addr, mm_cfg.Moderate):
+            if nonmoderatedonly and not mlist.getMemberOption(addr, mm_cfg.Moderate):
                 showit = True
             if showit:
                 print >> fp, formataddr((safe(name), addr))
