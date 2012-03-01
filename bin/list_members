@@ -29,16 +29,16 @@ Where:
     --regular / -r
         Print just the regular (non-digest) members.
 
+    --digest[=kind] / -d [kind]
+        Print just the digest members.  Optional argument can be "mime" or
+        "plain" which prints just the digest members receiving that kind of
+        digest.
+
     --moderated / -m
         Print just the moderated members.
 
     --non-moderated / -M
         Print just the non-moderated members.
-
-    --digest[=kind] / -d [kind]
-        Print just the digest members.  Optional argument can be "mime" or
-        "plain" which prints just the digest members receiving that kind of
-        digest.
 
     --nomail[=why] / -n [why]
         Print the members that have delivery disabled.  Optional argument can
