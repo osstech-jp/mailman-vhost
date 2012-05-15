@@ -429,7 +429,7 @@ def show_results(mlist, doc, category, subcat, cgidata):
                        '<br>&nbsp;<br>')
     # We do not allow through-the-web deletion of the site list!
     if mm_cfg.OWNERS_CAN_DELETE_THEIR_OWN_LISTS and \
-           mlist.local_name <> mm_cfg.MAILMAN_SITE_LIST:
+           mlist.local_part <> mm_cfg.MAILMAN_SITE_LIST:
         otherlinks.AddItem(Link(mlist.GetScriptURL('rmlist'),
                                 _('Delete this mailing list')).Format() +
                            _(' (requires confirmation)<br>&nbsp;<br>'))
