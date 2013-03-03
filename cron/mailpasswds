@@ -141,7 +141,9 @@ def main():
     for host in byhost.keys():
         # Site owner is `mailman@dom.ain'
         userinfo = {}
+         virtlist = {}
         for mlist in byhost[host]:
+             virtlist = mlist
             listaddr = mlist.GetListEmail()
             for member in mlist.getMembers():
                 # The user may have disabled reminders for this list
@@ -218,7 +220,7 @@ def main():
                 # Add the table to the end so it doesn't get wrapped/filled
                 text += (header + '\n' + NL.join(table))
                 msg = Message.UserNotification(
-                    addr, siteowner,
+                    addr, sitebounce,
                     _('%(host)s mailing list memberships reminder'),
                     text.encode(enc, 'replace'), poplang)
                 # Note that text must be encoded into 'enc' because unicode
@@ -228,11 +230,7 @@ def main():
             msg['X-No-Archive'] = 'yes'
             del msg['auto-submitted']
             msg['Auto-Submitted'] = 'auto-generated'
-            # We want to make this look like it's coming from the siteowner's
-            # list, but we also want to be sure that the apparent host name is
-            # the current virtual host.  Look in CookHeaders.py for why this
-            # trick works.  Blarg.
-            msg.send(sitelist, **{'errorsto': sitebounce,
+            msg.send(virtlist, **{'errorsto': sitebounce,
                                   '_nolist' : 1,
                                   'verp'    : mm_cfg.VERP_PASSWORD_REMINDERS,
                                   })
