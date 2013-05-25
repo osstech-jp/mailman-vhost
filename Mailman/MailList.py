@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2012 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -345,6 +345,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         self.umbrella_member_suffix = \
                 mm_cfg.DEFAULT_UMBRELLA_MEMBER_ADMIN_SUFFIX
         self.regular_exclude_lists = mm_cfg.DEFAULT_REGULAR_EXCLUDE_LISTS
+        self.regular_exclude_ignore = mm_cfg.DEFAULT_REGULAR_EXCLUDE_IGNORE
         self.regular_include_lists = mm_cfg.DEFAULT_REGULAR_INCLUDE_LISTS
         self.send_reminders = mm_cfg.DEFAULT_SEND_REMINDERS
         self.send_welcome_msg = mm_cfg.DEFAULT_SEND_WELCOME_MSG
@@ -847,6 +848,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         subj = self.GetConfirmJoinSubject(listname, cookie)
         del msg['subject']
         msg['Subject'] = subj
+        del msg['auto-submitted']
+        msg['Auto-Submitted'] = 'auto-generated'
         msg.send(self)
 
     def AddMember(self, userdesc, remote=None):
@@ -948,6 +951,14 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             del msg['subject']
             msg['Subject'] = self.GetConfirmJoinSubject(realname, cookie)
             msg['Reply-To'] = self.GetRequestEmail(cookie)
+            # Is this confirmation a reply to an email subscribe from this
+            # address?
+            if remote.lower().endswith(email.lower()):
+                autosub = 'auto-replied'
+            else:
+                autosub = 'auto-generated'
+            del msg['auto-submitted']
+            msg['Auto-Submitted'] = autosub
             msg.send(self)
             who = formataddr((name, email))
             syslog('subscribe', '%s: pending %s %s',
@@ -1369,6 +1380,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         del msg['subject']
         msg['Subject'] = self.GetConfirmLeaveSubject(realname, cookie)
         msg['Reply-To'] = self.GetRequestEmail(cookie)
+        del msg['auto-submitted']
+        msg['Auto-Submitted'] = 'auto-generated'
         msg.send(self)
 
 

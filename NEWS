@@ -1,10 +1,104 @@
+-*- coding: iso-8859-1 -*-
 Mailman - The GNU Mailing List Management System
 Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
 
-2.1.15 (xx-xxx-xxxx)
+2.1.16 (xx-xxx-xxxx)
+
+  New Features
+
+    - Setting digest_size_threshhold to zero now means no digests will be
+      sent based on size instead of a digest being sent with every post.
+      (LP: 558274)
+
+    - There is a new mm_cfg.py setting SUBSCRIBE_FORM_SECRET which will put
+      a dynamically generated, hidden hash in the listinfo subscribe form and
+      check it upon submission.  Setting this will prevent automated processes
+      (bots) from successfully POSTing web subscribes without first retrieving
+      and parsing the form from the listinfo page.  The form must also be
+      submitted no later than FORM_LIFETIME nor no earlier than
+      SUBSCRIBE_FORM_MIN_TIME after retrieval.  Note that enabling this will
+      break any static subscribe forms on your site.  See the description in
+      Defaults.py for more info.  (LP: 1082746)
+
+    - add_members now has an option to add members with mail delivery disabled
+      by admin.  (LP: 1070574)
+
+    - IncomingRunner now logs rejected messages to the vette log.
+      (LP: 1068837)
+
+    - The name of the mailmanctl master lock file is now congigurable via the
+      mm_cfg.py setting MASTER_LOCK_FILE.  (LP: 1082308)
+
+    - list_lists now has an option to list only lists with public archives.
+      (LP: 1082711)
+
+  Contributed programs
+
+    - A new import_majordomo_into_mailman.pl script has been contributed by
+      Geoff Mayes.  (LP: 1129742)
+
+    - A new "sitemap" bash script has been contributed by Tomasz Chmielewski
+      <mangoo@wpkg.org> to generate a sitemap.xml file of an installation's
+      public archives for submission to search engines.
+
+  i18n
+
+    - A Farsi (Persian) translation has been added thanks to Javad Hoseini and
+      Mahyar Moghimi.
+
+    - Fixed several misspelled or garbled string replacements in the Spanish
+      message catalog.  (LP: 1160138)
+
+    - pt_BR message catalog has two new and an updated message per Hugo Koji
+      Kobayashi.  (LP: 1138578)
+
+    - German message catalog has been updated per Ralf Hildebrandt.
+
+    - Corrected typo in templates/it/private.html.
+
+  Bug Fixes and other patches
+
+    - Defended against buggy web servers that don't include an empty
+      QUERY_STRING in the CGI environment.  (LP: 1160647)
+
+    - The Switchboard.finish() method now logs the text of the exception when
+      it fails to unlink/preserve a .bak file.  (LP: 1165589)
+
+    - The pending (un)subscriptions waiting approval are now sorted by email
+      address in the admindb interface as intended.  (LP: 1164160)
+
+    - The subscribe log entry for a bin/add_members subscribe now identifies
+      bin/add_members as the source.  (LP: 1161642)
+
+    - Fixed a bug where the Subject: of the user notification of a
+      bin/remove_members unsubscribe was not in the user's language.
+      (LP: 1161445)
+
+    - Fixed a bug where BounceRunner could create and leave behind zero length
+      bounce-events files.  (LP: 1161610)
+
+    - Added recognition for another Yahoo bounce format.  LP: #1157961
+    - Changed configure's method for getting Python's include directory from
+      distutils.sysconfig.get_config_var('CONFINCLUDEPY') to
+      distutils.sysconfig.get_python_inc().  (LP: 1098162)
+
+    - Added an Auto-Generated: header to password reminders.  (LP: 558240)
+
+    - Fixed a bug where non-ascii characters in the real name in a subscription
+      request could throw a UnicodeEncodeError upon subscription approval and
+      perhaps in other situations too.  (LP: 1047100)
+
+    - The query fragments send_unsub_notifications_to_list_owner and
+      send_unsub_ack_to_this_batch will now assume default values if not set
+      in mass unsubscribe URLs.  (LP: #1032378)
+
+    - Replaced utf-8 encoded characters in newly added German templates with
+      HTML entities. (LP: #1018208)
+
+2.1.15 (13-Jun-2012)
 
   Security
 
@@ -12,7 +106,25 @@ Here is a history of user visible changes to Mailman.
 
     - An XSS vulnerability, CVE-2011-0707, has been fixed.
 
+    - The web admin interface has been hardened against CSRF attacks by adding
+      a hidden, encrypted token with a time stamp to form submissions and not
+      accepting authentication by cookie if the token is missing, invalid or
+      older than the new mm_cfg.py setting FORM_LIFETIME which defaults to one
+      hour.  Posthumous thanks go to Tokio Kikuchi for this implementation
+      which is only one of his many contributions to Mailman prior to his
+      death from cancer on 14 January 2012.
+
   New Features
+
+    - Added a password reminder button to the private archive login page.
+      Backported from the 2.2 branch.
+
+    - There is a new list attribute regular_exclude_ignore set from mm_cfg.py
+      DEFAULT_REGULAR_EXCLUDE_IGNORE.  This defaults to True even though the
+      prior behavior is equivalent to False.  A True setting will ignore an
+      exclude list if the poster is not a member of that list.  The False
+      setting can result in list members not receiving posts if the nonmember
+      post is not accepted by the exclude list.  Backported from 2.2 branch.
 
     - Eliminated the list cache from the qrunners.  Indirect self-references
       caused lists to never be dropped from the cache which in turn caused
@@ -60,6 +172,8 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - Added some missing German templates from Egon Frerich.
+
     - Added Greek translation from Antonis Limperis.
 
     - A few errors in the Basque translation are fixed.  Bug #836861.
@@ -69,7 +183,60 @@ Here is a history of user visible changes to Mailman.
     - Fixed a missing format character in the Spanish translation.
       Bug #670988.
 
+    - Thanks go to the following for updating translations for the changes in
+      this release.
+        Thijs Kinkhorst
+        Stefan Förster
+        Fabian Wenk
+
   Bug Fixes and other patches
+
+    - Fixed a bug that could send an admin notice of a held subscription with
+      the subject in the user's preferred language instead of the list's
+      preferred language and possibly not properly RFC 2047 encoded.
+      (LP: #998949)
+
+    - Fixed a possible CPU bound loop in OutgoingRunner if the attempt to
+      Connect to the SMTP server throws a socket.error.  (LP: #966531)
+
+    - Fixed a potential crash in the web UI if a language is removed from the
+      LC_DESCRIPTIONS dictionary.  (LP: #966565)
+
+    - Added an Auto-Submitted: header to invitations and (un)subscription
+      confirmation requests to reduce the possibility of an autoresponder
+      confirming the request.  (LP: #265831)
+
+    - Added javascript to the private.html and admlogin.html templates to
+      focus the cursor on the entry field.  (LP: #266054)
+
+    - Added CPPFLAGS and LDFLAGS to src/Makefile to support their use.
+      (LP: #637652)
+
+    - Stopped removing the trailing slash from the List-Archive: header URL.
+      (LP: #964190)
+
+    - A configured version of contrib/courier-to-mailman.py is now created in
+      build/contrib/courier-to-mailman.py.  (LP: #999250)
+
+    - Subscription disabled warnings are now sent without a Precedence:
+      header.  Bug #808821.
+
+    - Backported 2.2 branch fix for a problem in SpamDetect.py that could
+      cause header_filter_rules to fail to match RFC 2047 encoded headers.
+
+    - Fix for bug #629738 could cause a crash in the admindb details display
+      if the decoded message body contained characters not in the character
+      set of the list's preferred language.  Fixed.  Bug #910440.
+
+    - Added recognition for another Qmail bounce format.
+
+    - Fixed an erroneous seek in the Mailman.Mailbox.Mailbox.AppendMessage
+      method that could cause a corrupt mailbox for files opened 'w+'.
+      Bug #901957.
+
+    - A held message with a null sender caused a crash in the admindb
+      interface.  This is fixed by changing the sender to <missing>.
+      Bug #897103.
 
     - Changed subject prefixing to allow for possible whitespace between an
       'Re' and the following colon when determining how to add the prefix.

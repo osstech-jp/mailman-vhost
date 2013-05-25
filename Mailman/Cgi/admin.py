@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2012 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -41,6 +41,7 @@ from Mailman.htmlformat import *
 from Mailman.Cgi import Auth
 from Mailman.Logging.Syslog import syslog
 from Mailman.Utils import sha_new
+from Mailman.CSRFcheck import csrf_check
 
 # Set up i18n
 _ = i18n._
@@ -54,6 +55,8 @@ try:
 except NameError:
     True = 1
     False = 0
+
+AUTH_CONTEXTS = (mm_cfg.AuthListAdmin, mm_cfg.AuthSiteAdmin)
 
 
 
@@ -83,6 +86,20 @@ def main():
     i18n.set_language(mlist.preferred_language)
     # If the user is not authenticated, we're done.
     cgidata = cgi.FieldStorage(keep_blank_values=1)
+
+    # CSRF check
+    safe_params = ['VARHELP', 'adminpw', 'admlogin',
+                   'letter', 'chunk', 'findmember',
+                   'legend']
+    params = cgidata.keys()
+    if set(params) - set(safe_params):
+        csrf_checked = csrf_check(mlist, cgidata.getvalue('csrf_token'))
+    else:
+        csrf_checked = True
+    # if password is present, void cookie to force password authentication.
+    if cgidata.getvalue('adminpw'):
+        os.environ['HTTP_COOKIE'] = ''
+        csrf_checked = True
 
     if not mlist.WebAuthenticate((mm_cfg.AuthListAdmin,
                                   mm_cfg.AuthSiteAdmin),
@@ -175,8 +192,12 @@ def main():
         signal.signal(signal.SIGTERM, sigterm_handler)
 
         if cgidata.keys():
-            # There are options to change
-            change_options(mlist, category, subcat, cgidata, doc)
+            if csrf_checked:
+                # There are options to change
+                change_options(mlist, category, subcat, cgidata, doc)
+            else:
+                doc.addError(
+                  _('The form lifetime has expired. (request forgery check)'))
             # Let the list sanity check the changed values
             mlist.CheckValues()
         # Additional sanity checks
@@ -363,7 +384,7 @@ def option_help(mlist, varhelp):
         url = '%s/%s/%s' % (mlist.GetScriptURL('admin'), category, subcat)
     else:
         url = '%s/%s' % (mlist.GetScriptURL('admin'), category)
-    form = Form(url)
+    form = Form(url, mlist=mlist, contexts=AUTH_CONTEXTS)
     valtab = Table(cellspacing=3, cellpadding=4, width='100%')
     add_options_table_item(mlist, category, subcat, valtab, item, detailsp=0)
     form.AddItem(valtab)
@@ -409,9 +430,10 @@ def show_results(mlist, doc, category, subcat, cgidata):
         encoding = 'multipart/form-data'
     if subcat:
         form = Form('%s/%s/%s' % (adminurl, category, subcat),
-                    encoding=encoding)
+                    encoding=encoding, mlist=mlist, contexts=AUTH_CONTEXTS)
     else:
-        form = Form('%s/%s' % (adminurl, category), encoding=encoding)
+        form = Form('%s/%s' % (adminurl, category), 
+                    encoding=encoding, mlist=mlist, contexts=AUTH_CONTEXTS)
     # This holds the two columns of links
     linktable = Table(valign='top', width='100%')
     linktable.AddRow([Center(Bold(_("Configuration Categories"))),
@@ -1416,10 +1438,12 @@ def change_options(mlist, category, subcat, cgidata, doc):
         removals += cgidata['unsubscribees_upload'].value
     if removals:
         names = filter(None, [n.strip() for n in removals.splitlines()])
-        send_unsub_notifications = int(
-            cgidata['send_unsub_notifications_to_list_owner'].value)
-        userack = int(
-            cgidata['send_unsub_ack_to_this_batch'].value)
+        send_unsub_notifications = safeint(
+            'send_unsub_notifications_to_list_owner',
+            mlist.admin_notify_mchanges)
+        userack = safeint(
+            'send_unsub_ack_to_this_batch',
+            mlist.send_goodbye_msg)
         unsubscribe_errors = []
         unsubscribe_success = []
         for addr in names:
@@ -1443,11 +1467,7 @@ def change_options(mlist, category, subcat, cgidata, doc):
             doc.AddItem('<p>')
     # See if this was a moderation bit operation
     if cgidata.has_key('allmodbit_btn'):
-        val = cgidata.getvalue('allmodbit_val')
-        try:
-            val = int(val)
-        except VallueError:
-            val = None
+        val = safeint('allmodbit_val')
         if val not in (0, 1):
             doc.addError(_('Bad moderation flag value'))
         else:

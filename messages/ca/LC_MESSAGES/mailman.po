@@ -14,10 +14,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman 2.1.11\n"
-"POT-Creation-Date: Sat Nov 26 10:46:18 2011\n"
+"POT-Creation-Date: Sun May 19 21:23:56 2013\n"
 "PO-Revision-Date: 2009-01-28 01:23+0100\n"
 "Last-Translator: David Planella <david.planella@gmail.com>\n"
 "Language-Team: Catalan <mailman@llistes.softcatala.org>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -227,14 +228,14 @@ msgstr "Notificació de mesura de retorn"
 msgid " The last bounce received from you was dated %(date)s"
 msgstr " El vostre darrer missatge retornat rebut és del %(date)s"
 
-#: Mailman/Bouncer.py:321 Mailman/Deliverer.py:143
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:286
-#: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:239
+#: Mailman/Bouncer.py:322 Mailman/Deliverer.py:144
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:284
+#: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:240
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
 msgstr "(sense assumpte)"
 
-#: Mailman/Bouncer.py:325
+#: Mailman/Bouncer.py:326
 msgid "[No bounce details are available]"
 msgstr "[No hi ha detalls disponibles sobre retorns]"
 
@@ -246,20 +247,24 @@ msgstr "Moderador"
 msgid "Administrator"
 msgstr "Administrador"
 
-#: Mailman/Cgi/admin.py:76 Mailman/Cgi/admindb.py:93 Mailman/Cgi/confirm.py:62
-#: Mailman/Cgi/edithtml.py:71 Mailman/Cgi/listinfo.py:54
+#: Mailman/Cgi/admin.py:79 Mailman/Cgi/admindb.py:93 Mailman/Cgi/confirm.py:62
+#: Mailman/Cgi/edithtml.py:71 Mailman/Cgi/listinfo.py:55
 #: Mailman/Cgi/options.py:78 Mailman/Cgi/private.py:108
 #: Mailman/Cgi/rmlist.py:64 Mailman/Cgi/roster.py:59
-#: Mailman/Cgi/subscribe.py:62
+#: Mailman/Cgi/subscribe.py:63
 msgid "No such list <em>%(safelistname)s</em>"
 msgstr "La llista <em>%(safelistname)s</em> no existeix"
 
-#: Mailman/Cgi/admin.py:91 Mailman/Cgi/admindb.py:109
+#: Mailman/Cgi/admin.py:108 Mailman/Cgi/admindb.py:109
 #: Mailman/Cgi/edithtml.py:91 Mailman/Cgi/private.py:135
 msgid "Authorization failed."
 msgstr "Ha fallat l'autorització."
 
-#: Mailman/Cgi/admin.py:184
+#: Mailman/Cgi/admin.py:199
+msgid "The form lifetime has expired. (request forgery check)"
+msgstr ""
+
+#: Mailman/Cgi/admin.py:205
 msgid ""
 "You have turned off delivery of both digest and\n"
 "                non-digest messages.  This is an incompatible state of\n"
@@ -273,12 +278,12 @@ msgstr ""
 "                de resum. En cas contrari, la vostra llista de correu\n"
 "                serà inutilitzable."
 
-#: Mailman/Cgi/admin.py:188 Mailman/Cgi/admin.py:196 Mailman/Cgi/admin.py:203
-#: Mailman/Cgi/admin.py:1477 Mailman/Gui/GUIBase.py:204
+#: Mailman/Cgi/admin.py:209 Mailman/Cgi/admin.py:217 Mailman/Cgi/admin.py:224
+#: Mailman/Cgi/admin.py:1497 Mailman/Gui/GUIBase.py:204
 msgid "Warning: "
 msgstr "Avís: "
 
-#: Mailman/Cgi/admin.py:193
+#: Mailman/Cgi/admin.py:214
 msgid ""
 "You have digest members, but digests are turned\n"
 "                off. Those people will not receive mail.\n"
@@ -288,7 +293,7 @@ msgstr ""
 "                de missatge agrupats està desactivat. Aquests usuaris no\n"
 "                podran rebre cap correu.%(dm)r"
 
-#: Mailman/Cgi/admin.py:200
+#: Mailman/Cgi/admin.py:221
 msgid ""
 "You have regular list members but non-digestified mail is\n"
 "                turned off.  They will receive non-digestified mail until "
@@ -301,19 +306,19 @@ msgstr ""
 "situació,\n"
 "                aquests usuaris no podran rebre cap correu.%(rm)r"
 
-#: Mailman/Cgi/admin.py:225
+#: Mailman/Cgi/admin.py:246
 msgid "%(hostname)s mailing lists - Admin Links"
 msgstr "Llistes de correu de %(hostname)s - Enllaços administratius"
 
-#: Mailman/Cgi/admin.py:256 Mailman/Cgi/listinfo.py:104
+#: Mailman/Cgi/admin.py:277 Mailman/Cgi/listinfo.py:105
 msgid "Welcome!"
 msgstr "Us donem la benvinguda"
 
-#: Mailman/Cgi/admin.py:259 Mailman/Cgi/listinfo.py:107
+#: Mailman/Cgi/admin.py:280 Mailman/Cgi/listinfo.py:108
 msgid "Mailman"
 msgstr "Mailman"
 
-#: Mailman/Cgi/admin.py:263
+#: Mailman/Cgi/admin.py:284
 msgid ""
 "<p>There currently are no publicly-advertised %(mailmanlink)s\n"
 "            mailing lists on %(hostname)s."
@@ -321,7 +326,7 @@ msgstr ""
 "<p>Actualment no hi ha llistes públiques de correu\n"
 "            %(mailmanlink)s a %(hostname)s."
 
-#: Mailman/Cgi/admin.py:269
+#: Mailman/Cgi/admin.py:290
 msgid ""
 "<p>Below is the collection of publicly-advertised\n"
 "            %(mailmanlink)s mailing lists on %(hostname)s.  Click on a list\n"
@@ -331,11 +336,11 @@ msgstr ""
 "            a %(hostname)s. Feu clic al nom d'una llista per a\n"
 "            accedir a la seva pàgina de configuració."
 
-#: Mailman/Cgi/admin.py:276
+#: Mailman/Cgi/admin.py:297
 msgid "right "
 msgstr "correcte "
 
-#: Mailman/Cgi/admin.py:278
+#: Mailman/Cgi/admin.py:299
 msgid ""
 "To visit the administrators configuration page for an\n"
 "        unadvertised list, open a URL similar to this one, but with a '/' "
@@ -347,39 +352,40 @@ msgid ""
 "        <p>General list information can be found at "
 msgstr ""
 "Per a accedir a la pàgina de configuració de l'administrador d'una\n"
-"        llista no pública, obriu un URL similar a aquest, però amb una «/» i\n"
+"        llista no pública, obriu un URL similar a aquest, però amb una «/» "
+"i\n"
 "        afegiu-hi el sufix %(extra)slist. Si disposeu dels privilegis\n"
 "        necessaris, també podeu <a href=\"%(creatorurl)s\">crear una llista "
 "de correu nova</a>.\n"
 "\n"
 "        <p>Trobareu informació general sobre les llistes a "
 
-#: Mailman/Cgi/admin.py:285
+#: Mailman/Cgi/admin.py:306
 msgid "the mailing list overview page"
 msgstr "la pàgina d'informació general de les llistes de correu"
 
-#: Mailman/Cgi/admin.py:287
+#: Mailman/Cgi/admin.py:308
 msgid "<p>(Send questions and comments to "
 msgstr "<p>(Envieu les preguntes o comentaris a "
 
-#: Mailman/Cgi/admin.py:297 Mailman/Cgi/listinfo.py:139 cron/mailpasswds:216
+#: Mailman/Cgi/admin.py:318 Mailman/Cgi/listinfo.py:140 cron/mailpasswds:216
 msgid "List"
 msgstr "Llista"
 
-#: Mailman/Cgi/admin.py:298 Mailman/Cgi/admin.py:565
-#: Mailman/Cgi/listinfo.py:140
+#: Mailman/Cgi/admin.py:319 Mailman/Cgi/admin.py:587
+#: Mailman/Cgi/listinfo.py:141
 msgid "Description"
 msgstr "Descripció"
 
-#: Mailman/Cgi/admin.py:304 Mailman/Cgi/listinfo.py:146 bin/list_lists:116
+#: Mailman/Cgi/admin.py:325 Mailman/Cgi/listinfo.py:147 bin/list_lists:124
 msgid "[no description available]"
 msgstr "[no té cap descripció]"
 
-#: Mailman/Cgi/admin.py:338
+#: Mailman/Cgi/admin.py:359
 msgid "No valid variable name found."
 msgstr "No s'ha trobat cap nom de variable vàlid."
 
-#: Mailman/Cgi/admin.py:348
+#: Mailman/Cgi/admin.py:369
 msgid ""
 "%(realname)s Mailing list Configuration Help\n"
 "    <br><em>%(varname)s</em> Option"
@@ -387,11 +393,11 @@ msgstr ""
 "Ajuda per a la configuració de la llista de correu %(realname)s\n"
 "    <br>opció <em>%(varname)s</em>"
 
-#: Mailman/Cgi/admin.py:355
+#: Mailman/Cgi/admin.py:376
 msgid "Mailman %(varname)s List Option Help"
 msgstr "Ajuda per a l'opció de llista %(varname)s del Mailman"
 
-#: Mailman/Cgi/admin.py:373
+#: Mailman/Cgi/admin.py:394
 msgid ""
 "<em><strong>Warning:</strong> changing this option here\n"
 "    could cause other screens to be out-of-sync.  Be sure to reload any "
@@ -407,60 +413,60 @@ msgstr ""
 "podeu\n"
 "    "
 
-#: Mailman/Cgi/admin.py:384
+#: Mailman/Cgi/admin.py:405
 msgid "return to the %(categoryname)s options page."
 msgstr "tornar a la pàgina d'opcions de la categoria %(categoryname)s."
 
-#: Mailman/Cgi/admin.py:399
+#: Mailman/Cgi/admin.py:420
 msgid "%(realname)s Administration (%(label)s)"
 msgstr "Administració de la llista %(realname)s (%(label)s)"
 
-#: Mailman/Cgi/admin.py:400
+#: Mailman/Cgi/admin.py:421
 msgid "%(realname)s mailing list administration<br>%(label)s Section"
 msgstr "Administració de la llista de correu %(realname)s<br>Secció %(label)s"
 
-#: Mailman/Cgi/admin.py:416
+#: Mailman/Cgi/admin.py:438
 msgid "Configuration Categories"
 msgstr "Categories de configuració"
 
-#: Mailman/Cgi/admin.py:417
+#: Mailman/Cgi/admin.py:439
 msgid "Other Administrative Activities"
 msgstr "Altres tasques administratives"
 
-#: Mailman/Cgi/admin.py:421
+#: Mailman/Cgi/admin.py:443
 msgid "Tend to pending moderator requests"
 msgstr "Atén les peticions pendents de moderació"
 
-#: Mailman/Cgi/admin.py:423
+#: Mailman/Cgi/admin.py:445
 msgid "Go to the general list information page"
 msgstr "Vés a la pàgina d'informació general de la llista"
 
-#: Mailman/Cgi/admin.py:425
+#: Mailman/Cgi/admin.py:447
 msgid "Edit the public HTML pages and text files"
 msgstr "Edita les pàgines HTML i fitxers de text públics"
 
-#: Mailman/Cgi/admin.py:427
+#: Mailman/Cgi/admin.py:449
 msgid "Go to list archives"
 msgstr "Vés als arxius de la llista"
 
-#: Mailman/Cgi/admin.py:433
+#: Mailman/Cgi/admin.py:455
 msgid "Delete this mailing list"
 msgstr "Suprimeix aquesta llista de correu"
 
-#: Mailman/Cgi/admin.py:434
+#: Mailman/Cgi/admin.py:456
 msgid " (requires confirmation)<br>&nbsp;<br>"
 msgstr " (requereix confirmació)<br>&nbsp;<br>"
 
-#: Mailman/Cgi/admin.py:440 Mailman/Cgi/admindb.py:195
+#: Mailman/Cgi/admin.py:462 Mailman/Cgi/admindb.py:195
 #: Mailman/Cgi/admindb.py:272
 msgid "Logout"
 msgstr "Surt"
 
-#: Mailman/Cgi/admin.py:484
+#: Mailman/Cgi/admin.py:506
 msgid "Emergency moderation of all list traffic is enabled"
 msgstr "La moderació d'emergència de tot el tràfic de la llista està activada"
 
-#: Mailman/Cgi/admin.py:495
+#: Mailman/Cgi/admin.py:517
 msgid ""
 "Make your changes in the following section, then submit them\n"
 "        using the <em>Submit Your Changes</em> button below."
@@ -468,11 +474,11 @@ msgstr ""
 "Feu els canvis a la secció següent, i feu clic al botó\n"
 "        <em>Envia els canvis</em> de més avall per a enviar-los."
 
-#: Mailman/Cgi/admin.py:513
+#: Mailman/Cgi/admin.py:535
 msgid "Additional Member Tasks"
 msgstr "Tasques addicionals de subscriptors"
 
-#: Mailman/Cgi/admin.py:519
+#: Mailman/Cgi/admin.py:541
 msgid ""
 "<li>Set everyone's moderation bit, including\n"
 "            those members not currently visible"
@@ -480,23 +486,23 @@ msgstr ""
 "<li>Activa l'opció de moderació per a tothom,\n"
 "            fins i tot per als subscriptors no visibles"
 
-#: Mailman/Cgi/admin.py:523
+#: Mailman/Cgi/admin.py:545
 msgid "Off"
 msgstr "Desactivat"
 
-#: Mailman/Cgi/admin.py:523
+#: Mailman/Cgi/admin.py:545
 msgid "On"
 msgstr "Activat"
 
-#: Mailman/Cgi/admin.py:525
+#: Mailman/Cgi/admin.py:547
 msgid "Set"
 msgstr "Estableix"
 
-#: Mailman/Cgi/admin.py:566
+#: Mailman/Cgi/admin.py:588
 msgid "Value"
 msgstr "Valor"
 
-#: Mailman/Cgi/admin.py:620
+#: Mailman/Cgi/admin.py:642
 msgid ""
 "Badly formed options entry:\n"
 " %(record)s"
@@ -504,106 +510,106 @@ msgstr ""
 "Entrada d'opcions mal formada:\n"
 " %(record)s"
 
-#: Mailman/Cgi/admin.py:678
+#: Mailman/Cgi/admin.py:700
 msgid "<em>Enter the text below, or...</em><br>"
 msgstr "<em>Introduïu el text a continuació, o bé...</em><br>"
 
-#: Mailman/Cgi/admin.py:680
+#: Mailman/Cgi/admin.py:702
 msgid "<br><em>...specify a file to upload</em><br>"
 msgstr "<br><em>...especifiqueu un fitxer per a pujar</em><br>"
 
-#: Mailman/Cgi/admin.py:706 Mailman/Cgi/admin.py:709
+#: Mailman/Cgi/admin.py:728 Mailman/Cgi/admin.py:731
 msgid "Topic %(i)d"
 msgstr "Tema %(i)d"
 
-#: Mailman/Cgi/admin.py:710 Mailman/Cgi/admin.py:760
+#: Mailman/Cgi/admin.py:732 Mailman/Cgi/admin.py:782
 msgid "Delete"
 msgstr "Suprimeix"
 
-#: Mailman/Cgi/admin.py:711
+#: Mailman/Cgi/admin.py:733
 msgid "Topic name:"
 msgstr "Nom del tema:"
 
-#: Mailman/Cgi/admin.py:713
+#: Mailman/Cgi/admin.py:735
 msgid "Regexp:"
 msgstr "Expressió regular:"
 
-#: Mailman/Cgi/admin.py:716 Mailman/Cgi/options.py:1053
+#: Mailman/Cgi/admin.py:738 Mailman/Cgi/options.py:1053
 msgid "Description:"
 msgstr "Descripció:"
 
-#: Mailman/Cgi/admin.py:720 Mailman/Cgi/admin.py:778
+#: Mailman/Cgi/admin.py:742 Mailman/Cgi/admin.py:800
 msgid "Add new item..."
 msgstr "Afegeix un element nou..."
 
-#: Mailman/Cgi/admin.py:722 Mailman/Cgi/admin.py:780
+#: Mailman/Cgi/admin.py:744 Mailman/Cgi/admin.py:802
 msgid "...before this one."
 msgstr "...abans d'aquest."
 
-#: Mailman/Cgi/admin.py:723 Mailman/Cgi/admin.py:781
+#: Mailman/Cgi/admin.py:745 Mailman/Cgi/admin.py:803
 msgid "...after this one."
 msgstr "...després d'aquest."
 
-#: Mailman/Cgi/admin.py:756 Mailman/Cgi/admin.py:759
+#: Mailman/Cgi/admin.py:778 Mailman/Cgi/admin.py:781
 msgid "Spam Filter Rule %(i)d"
 msgstr "Regla de filtre d'«spam» %(i)d"
 
-#: Mailman/Cgi/admin.py:761
+#: Mailman/Cgi/admin.py:783
 msgid "Spam Filter Regexp:"
 msgstr "Expressió regular de filtre d'«spam»:"
 
-#: Mailman/Cgi/admin.py:772 Mailman/Cgi/admindb.py:327
+#: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:327
 #: Mailman/Cgi/admindb.py:386 Mailman/Cgi/admindb.py:431
-#: Mailman/Cgi/admindb.py:669
+#: Mailman/Cgi/admindb.py:671
 msgid "Defer"
 msgstr "Ajorna"
 
-#: Mailman/Cgi/admin.py:772 Mailman/Cgi/admindb.py:329
+#: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:329
 #: Mailman/Cgi/admindb.py:388 Mailman/Cgi/admindb.py:431
-#: Mailman/Cgi/admindb.py:669 Mailman/Gui/ContentFilter.py:37
+#: Mailman/Cgi/admindb.py:671 Mailman/Gui/ContentFilter.py:37
 #: Mailman/Gui/Privacy.py:216 Mailman/Gui/Privacy.py:297
 msgid "Reject"
 msgstr "Rebutja"
 
-#: Mailman/Cgi/admin.py:772 Mailman/Gui/Privacy.py:216
+#: Mailman/Cgi/admin.py:794 Mailman/Gui/Privacy.py:216
 #: Mailman/Gui/Privacy.py:297
 msgid "Hold"
 msgstr "Mantén"
 
-#: Mailman/Cgi/admin.py:773 Mailman/Cgi/admindb.py:330
+#: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:330
 #: Mailman/Cgi/admindb.py:389 Mailman/Cgi/admindb.py:431
-#: Mailman/Cgi/admindb.py:669 Mailman/Commands/cmd_confirm.py:93
+#: Mailman/Cgi/admindb.py:671 Mailman/Commands/cmd_confirm.py:93
 #: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:216
 #: Mailman/Gui/Privacy.py:297
 msgid "Discard"
 msgstr "Descarta"
 
-#: Mailman/Cgi/admin.py:773 Mailman/Cgi/admindb.py:431
+#: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:431
 #: Mailman/Gui/Privacy.py:297
 msgid "Accept"
 msgstr "Accepta"
 
-#: Mailman/Cgi/admin.py:776 Mailman/Cgi/admindb.py:675
+#: Mailman/Cgi/admin.py:798 Mailman/Cgi/admindb.py:677
 msgid "Action:"
 msgstr "Acció:"
 
-#: Mailman/Cgi/admin.py:788
+#: Mailman/Cgi/admin.py:810
 msgid "Move rule up"
 msgstr "Mou la regla cap a amunt"
 
-#: Mailman/Cgi/admin.py:789
+#: Mailman/Cgi/admin.py:811
 msgid "Move rule down"
 msgstr "Mou la regla cap a avall"
 
-#: Mailman/Cgi/admin.py:822
+#: Mailman/Cgi/admin.py:844
 msgid "<br>(Edit <b>%(varname)s</b>)"
 msgstr "<br>(Edita <b>%(varname)s</b>)"
 
-#: Mailman/Cgi/admin.py:824
+#: Mailman/Cgi/admin.py:846
 msgid "<br>(Details for <b>%(varname)s</b>)"
 msgstr "<br>(Detalls per a <b>%(varname)s</b>)"
 
-#: Mailman/Cgi/admin.py:831
+#: Mailman/Cgi/admin.py:853
 msgid ""
 "<br><em><strong>Note:</strong>\n"
 "        setting this value performs an immediate action but does not modify\n"
@@ -614,111 +620,111 @@ msgstr ""
 "no\n"
 "        modifica l'estat permanent.</em>"
 
-#: Mailman/Cgi/admin.py:845
+#: Mailman/Cgi/admin.py:867
 msgid "Mass Subscriptions"
 msgstr "Subscripcions en massa"
 
-#: Mailman/Cgi/admin.py:852
+#: Mailman/Cgi/admin.py:874
 msgid "Mass Removals"
 msgstr "Cancel·lació de subscripcions en massa"
 
-#: Mailman/Cgi/admin.py:859
+#: Mailman/Cgi/admin.py:881
 msgid "Membership List"
 msgstr "Llista de subscriptors"
 
-#: Mailman/Cgi/admin.py:867
+#: Mailman/Cgi/admin.py:889
 msgid "(help)"
 msgstr "(ajuda)"
 
 # El %(link)s mostra un enllaç a l'ajuda del Python per a la sintaxi de les
 # expressions regulars (dpm)
-#: Mailman/Cgi/admin.py:868
+#: Mailman/Cgi/admin.py:890
 msgid "Find member %(link)s:"
 msgstr "Cerca de subscriptors %(link)s:"
 
-#: Mailman/Cgi/admin.py:871
+#: Mailman/Cgi/admin.py:893
 msgid "Search..."
 msgstr "Cerca..."
 
-#: Mailman/Cgi/admin.py:888
+#: Mailman/Cgi/admin.py:910
 msgid "Bad regular expression: "
 msgstr "L'expressió regular és incorrecta: "
 
-#: Mailman/Cgi/admin.py:942
+#: Mailman/Cgi/admin.py:964
 msgid "%(allcnt)s members total, %(membercnt)s shown"
 msgstr "%(allcnt)s subscriptors en total, %(membercnt)s mostrats"
 
-#: Mailman/Cgi/admin.py:945
+#: Mailman/Cgi/admin.py:967
 msgid "%(allcnt)s members total"
 msgstr "%(allcnt)s membres en total"
 
-#: Mailman/Cgi/admin.py:969
+#: Mailman/Cgi/admin.py:991
 msgid "unsub"
 msgstr "desubs"
 
-#: Mailman/Cgi/admin.py:970
+#: Mailman/Cgi/admin.py:992
 msgid "member address<br>member name"
 msgstr "adreça electrònica del subscriptor<br>nom del subscriptor"
 
-#: Mailman/Cgi/admin.py:971
+#: Mailman/Cgi/admin.py:993
 msgid "hide"
 msgstr "amaga"
 
-#: Mailman/Cgi/admin.py:971
+#: Mailman/Cgi/admin.py:993
 msgid "mod"
 msgstr "moderat"
 
-#: Mailman/Cgi/admin.py:972
+#: Mailman/Cgi/admin.py:994
 msgid "nomail<br>[reason]"
 msgstr "sense correu<br>[motiu]"
 
-#: Mailman/Cgi/admin.py:973
+#: Mailman/Cgi/admin.py:995
 msgid "ack"
 msgstr "confirmació"
 
-#: Mailman/Cgi/admin.py:973
+#: Mailman/Cgi/admin.py:995
 msgid "not metoo"
 msgstr "sense còpia"
 
-#: Mailman/Cgi/admin.py:974
+#: Mailman/Cgi/admin.py:996
 msgid "nodupes"
 msgstr "sense dupls"
 
-#: Mailman/Cgi/admin.py:975
+#: Mailman/Cgi/admin.py:997
 msgid "plain"
 msgstr "text pla"
 
-#: Mailman/Cgi/admin.py:975 Mailman/Cgi/options.py:307
+#: Mailman/Cgi/admin.py:997 Mailman/Cgi/options.py:307
 msgid "digest"
 msgstr "agrupats"
 
-#: Mailman/Cgi/admin.py:976
+#: Mailman/Cgi/admin.py:998
 msgid "language"
 msgstr "llengua"
 
-#: Mailman/Cgi/admin.py:987
+#: Mailman/Cgi/admin.py:1009
 msgid "?"
 msgstr "?"
 
-#: Mailman/Cgi/admin.py:988
+#: Mailman/Cgi/admin.py:1010
 msgid "U"
 msgstr "U"
 
-#: Mailman/Cgi/admin.py:989
+#: Mailman/Cgi/admin.py:1011
 msgid "A"
 msgstr "A"
 
-#: Mailman/Cgi/admin.py:990
+#: Mailman/Cgi/admin.py:1012
 msgid "B"
 msgstr "R"
 
-#: Mailman/Cgi/admin.py:1062
+#: Mailman/Cgi/admin.py:1084
 msgid "<b>unsub</b> -- Click on this to unsubscribe the member."
 msgstr ""
 "<b>desubs</b> -- feu clic aquí per a cancel·lar la subscripció del "
 "subscriptor."
 
-#: Mailman/Cgi/admin.py:1064
+#: Mailman/Cgi/admin.py:1086
 msgid ""
 "<b>mod</b> -- The user's personal moderation flag.  If this is\n"
 "        set, postings from them will be moderated, otherwise they will be\n"
@@ -728,7 +734,7 @@ msgstr ""
 "        està establert, els seus enviaments es moderaran. En cas contrari,\n"
 "        s'aprovaran."
 
-#: Mailman/Cgi/admin.py:1068
+#: Mailman/Cgi/admin.py:1090
 msgid ""
 "<b>hide</b> -- Is the member's address concealed on\n"
 "        the list of subscribers?"
@@ -736,7 +742,7 @@ msgstr ""
 "<b>amaga</b> -- s'ha d'amagar l'adreça del subscriptor a la\n"
 "        llista de subscriptors"
 
-#: Mailman/Cgi/admin.py:1070
+#: Mailman/Cgi/admin.py:1092
 msgid ""
 "<b>nomail</b> -- Is delivery to the member disabled?  If so, an\n"
 "        abbreviation will be given describing the reason for the disabled\n"
@@ -776,7 +782,7 @@ msgstr ""
 "                    antigues del Mailman.\n"
 "            </ul>"
 
-#: Mailman/Cgi/admin.py:1085
+#: Mailman/Cgi/admin.py:1107
 msgid ""
 "<b>ack</b> -- Does the member get acknowledgements of their\n"
 "        posts?"
@@ -784,7 +790,7 @@ msgstr ""
 "<b>confirmació</b> -- si el subscriptor rep confirmació dels\n"
 "        seus enviaments"
 
-#: Mailman/Cgi/admin.py:1088
+#: Mailman/Cgi/admin.py:1110
 msgid ""
 "<b>not metoo</b> -- Does the member want to avoid copies of their\n"
 "        own postings?"
@@ -792,7 +798,7 @@ msgstr ""
 "<b>sense còpia</b> -- si el subscriptor no vol rebre còpia dels\n"
 "        seus enviaments"
 
-#: Mailman/Cgi/admin.py:1091
+#: Mailman/Cgi/admin.py:1113
 msgid ""
 "<b>nodupes</b> -- Does the member want to avoid duplicates of the\n"
 "        same message?"
@@ -800,7 +806,7 @@ msgstr ""
 "<b>sense dupls</b> -- si el subscriptor no vol rebre duplicats d'un\n"
 "        mateix missatge"
 
-#: Mailman/Cgi/admin.py:1094
+#: Mailman/Cgi/admin.py:1116
 msgid ""
 "<b>digest</b> -- Does the member get messages in digests?\n"
 "        (otherwise, individual messages)"
@@ -808,7 +814,7 @@ msgstr ""
 "<b>agrupats</b> -- si el subscriptor rep els missatges agrupats\n"
 "        (en cas contrari, rebrà els missatges individuals)"
 
-#: Mailman/Cgi/admin.py:1097
+#: Mailman/Cgi/admin.py:1119
 msgid ""
 "<b>plain</b> -- If getting digests, does the member get plain\n"
 "        text digests?  (otherwise, MIME)"
@@ -816,19 +822,19 @@ msgstr ""
 "<b>text pla</b> -- en cas de rebre missatges agrupats, si s'envien\n"
 "        en text pla (en cas contrari, s'enviaran en MIME)"
 
-#: Mailman/Cgi/admin.py:1099
+#: Mailman/Cgi/admin.py:1121
 msgid "<b>language</b> -- Language preferred by the user"
 msgstr "<b>llengua</b> -- llengua preferida de l'usuari"
 
-#: Mailman/Cgi/admin.py:1113
+#: Mailman/Cgi/admin.py:1135
 msgid "Click here to hide the legend for this table."
 msgstr "Feu clic aquí per a amagar la llegenda d'aquesta taula."
 
-#: Mailman/Cgi/admin.py:1117
+#: Mailman/Cgi/admin.py:1139
 msgid "Click here to include the legend for this table."
 msgstr "Feu clic aquí per a mostrar la llegenda d'aquesta taula."
 
-#: Mailman/Cgi/admin.py:1124
+#: Mailman/Cgi/admin.py:1146
 msgid ""
 "<p><em>To view more members, click on the appropriate\n"
 "        range listed below:</em>"
@@ -836,29 +842,29 @@ msgstr ""
 "<p><em>Per a veure més subscriptors, feu clic al rang corresponent\n"
 "       que es llista a continuació:</em>"
 
-#: Mailman/Cgi/admin.py:1133
+#: Mailman/Cgi/admin.py:1155
 msgid "from %(start)s to %(end)s"
 msgstr "des de %(start)s fins a %(end)s"
 
-#: Mailman/Cgi/admin.py:1146
+#: Mailman/Cgi/admin.py:1168
 msgid "Subscribe these users now or invite them?"
 msgstr "Voleu subscriure a aquests usuaris immediatament, o bé convidar-los?"
 
-#: Mailman/Cgi/admin.py:1148
+#: Mailman/Cgi/admin.py:1170
 msgid "Invite"
 msgstr "Convida'ls"
 
 # FIXME: Subscriu-los vs Subscriu-me. La segona és molt més visible. jm
-#: Mailman/Cgi/admin.py:1148 Mailman/Cgi/listinfo.py:182
+#: Mailman/Cgi/admin.py:1170 Mailman/Cgi/listinfo.py:183
 msgid "Subscribe"
 msgstr "Subscriu"
 
-#: Mailman/Cgi/admin.py:1154
+#: Mailman/Cgi/admin.py:1176
 msgid "Send welcome messages to new subscribees?"
 msgstr "Voleu enviar el missatge de benvinguda als subscriptors nous?"
 
-#: Mailman/Cgi/admin.py:1156 Mailman/Cgi/admin.py:1165
-#: Mailman/Cgi/admin.py:1198 Mailman/Cgi/admin.py:1206
+#: Mailman/Cgi/admin.py:1178 Mailman/Cgi/admin.py:1187
+#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/admin.py:1228
 #: Mailman/Cgi/confirm.py:292 Mailman/Cgi/create.py:353
 #: Mailman/Cgi/create.py:388 Mailman/Cgi/create.py:426
 #: Mailman/Cgi/rmlist.py:230 Mailman/Gui/Archive.py:33
@@ -877,16 +883,16 @@ msgstr "Voleu enviar el missatge de benvinguda als subscriptors nous?"
 #: Mailman/Gui/General.py:382 Mailman/Gui/General.py:405
 #: Mailman/Gui/General.py:422 Mailman/Gui/NonDigest.py:45
 #: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
-#: Mailman/Gui/Privacy.py:110 Mailman/Gui/Privacy.py:116
-#: Mailman/Gui/Privacy.py:149 Mailman/Gui/Privacy.py:197
-#: Mailman/Gui/Privacy.py:312 Mailman/Gui/Privacy.py:331
-#: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
-#: Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
+#: Mailman/Gui/Privacy.py:116 Mailman/Gui/Privacy.py:149
+#: Mailman/Gui/Privacy.py:197 Mailman/Gui/Privacy.py:312
+#: Mailman/Gui/Privacy.py:331 Mailman/Gui/Usenet.py:52
+#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "No"
 msgstr "No"
 
-#: Mailman/Cgi/admin.py:1156 Mailman/Cgi/admin.py:1165
-#: Mailman/Cgi/admin.py:1198 Mailman/Cgi/admin.py:1206
+#: Mailman/Cgi/admin.py:1178 Mailman/Cgi/admin.py:1187
+#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/admin.py:1228
 #: Mailman/Cgi/confirm.py:292 Mailman/Cgi/create.py:353
 #: Mailman/Cgi/create.py:388 Mailman/Cgi/create.py:426
 #: Mailman/Cgi/rmlist.py:230 Mailman/Gui/Archive.py:33
@@ -904,29 +910,30 @@ msgstr "No"
 #: Mailman/Gui/General.py:350 Mailman/Gui/General.py:382
 #: Mailman/Gui/General.py:405 Mailman/Gui/General.py:422
 #: Mailman/Gui/NonDigest.py:45 Mailman/Gui/NonDigest.py:53
-#: Mailman/Gui/NonDigest.py:140 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:116 Mailman/Gui/Privacy.py:149
-#: Mailman/Gui/Privacy.py:197 Mailman/Gui/Privacy.py:312
-#: Mailman/Gui/Privacy.py:331 Mailman/Gui/Usenet.py:52
-#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/NonDigest.py:140 Mailman/Gui/NonDigest.py:162
+#: Mailman/Gui/Privacy.py:110 Mailman/Gui/Privacy.py:116
+#: Mailman/Gui/Privacy.py:149 Mailman/Gui/Privacy.py:197
+#: Mailman/Gui/Privacy.py:312 Mailman/Gui/Privacy.py:331
+#: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
+#: Mailman/Gui/Usenet.py:105
 msgid "Yes"
 msgstr "Sí"
 
-#: Mailman/Cgi/admin.py:1163
+#: Mailman/Cgi/admin.py:1185
 msgid "Send notifications of new subscriptions to the list owner?"
 msgstr ""
 "Voleu enviar notificacions de les subscripcions noves a l'administrador de "
 "la llista?"
 
-#: Mailman/Cgi/admin.py:1171 Mailman/Cgi/admin.py:1212
+#: Mailman/Cgi/admin.py:1193 Mailman/Cgi/admin.py:1234
 msgid "Enter one address per line below..."
 msgstr "Introduïu una adreça per línia aquí sota..."
 
-#: Mailman/Cgi/admin.py:1176 Mailman/Cgi/admin.py:1217
+#: Mailman/Cgi/admin.py:1198 Mailman/Cgi/admin.py:1239
 msgid "...or specify a file to upload:"
 msgstr "...o especifiqueu un fitxer per a pujar:"
 
-#: Mailman/Cgi/admin.py:1181
+#: Mailman/Cgi/admin.py:1203
 msgid ""
 "Below, enter additional text to be added to the\n"
 "    top of your invitation or the subscription notification.  Include at "
@@ -937,20 +944,20 @@ msgstr ""
 "    a la part superior de la vostra invitació o notificació de subscripció.\n"
 "    Incloeu almenys una línia en blanc al final..."
 
-#: Mailman/Cgi/admin.py:1196
+#: Mailman/Cgi/admin.py:1218
 msgid "Send unsubscription acknowledgement to the user?"
 msgstr ""
 "Voleu enviar una confirmació de la cancel·lació de la subscripció a l'usuari?"
 
-#: Mailman/Cgi/admin.py:1204
+#: Mailman/Cgi/admin.py:1226
 msgid "Send notifications to the list owner?"
 msgstr "Voleu enviar notificacions a l'administrador de la llista?"
 
-#: Mailman/Cgi/admin.py:1226
+#: Mailman/Cgi/admin.py:1248
 msgid "Change list ownership passwords"
 msgstr "Canvi de les contrasenyes d'administració de la llista"
 
-#: Mailman/Cgi/admin.py:1229
+#: Mailman/Cgi/admin.py:1251
 msgid ""
 "The <em>list administrators</em> are the people who have ultimate control "
 "over\n"
@@ -989,23 +996,23 @@ msgstr ""
 "proveir les adreces de correu electrònic dels moderadors a la\n"
 "<a href=\"%(adminurl)s/general\">secció d'opcions generals</a>."
 
-#: Mailman/Cgi/admin.py:1248
+#: Mailman/Cgi/admin.py:1270
 msgid "Enter new administrator password:"
 msgstr "Introduïu una contrasenya nova per a l'administrador:"
 
-#: Mailman/Cgi/admin.py:1250
+#: Mailman/Cgi/admin.py:1272
 msgid "Confirm administrator password:"
 msgstr "Confirmeu la contrasenya de l'administrador:"
 
-#: Mailman/Cgi/admin.py:1255
+#: Mailman/Cgi/admin.py:1277
 msgid "Enter new moderator password:"
 msgstr "Introduïu una contrasenya nova per al moderador:"
 
-#: Mailman/Cgi/admin.py:1257
+#: Mailman/Cgi/admin.py:1279
 msgid "Confirm moderator password:"
 msgstr "Confirmeu la contrasenya del moderador:"
 
-#: Mailman/Cgi/admin.py:1261
+#: Mailman/Cgi/admin.py:1283
 msgid ""
 "In addition to the above passwords you may specify a password for\n"
 "pre-approving posts to the list. Either of the above two passwords can\n"
@@ -1015,95 +1022,95 @@ msgid ""
 "no other."
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1272
+#: Mailman/Cgi/admin.py:1294
 #, fuzzy
 msgid "Enter new poster password:"
 msgstr "Introduïu una contrasenya nova per al moderador:"
 
-#: Mailman/Cgi/admin.py:1274
+#: Mailman/Cgi/admin.py:1296
 #, fuzzy
 msgid "Confirm poster password:"
 msgstr "Confirmeu la contrasenya del moderador:"
 
-#: Mailman/Cgi/admin.py:1283
+#: Mailman/Cgi/admin.py:1305
 msgid "Submit Your Changes"
 msgstr "Envia els canvis"
 
-#: Mailman/Cgi/admin.py:1306
+#: Mailman/Cgi/admin.py:1328
 msgid "Moderator passwords did not match"
 msgstr "Les contrasenyes del moderador no coincideixen"
 
-#: Mailman/Cgi/admin.py:1317
+#: Mailman/Cgi/admin.py:1339
 #, fuzzy
 msgid "Poster passwords did not match"
 msgstr "La vostra contrasenya no coincideix."
 
-#: Mailman/Cgi/admin.py:1327
+#: Mailman/Cgi/admin.py:1349
 msgid "Administrator passwords did not match"
 msgstr "Les contrasenyes de l'administrador no coincideixen"
 
-#: Mailman/Cgi/admin.py:1377
+#: Mailman/Cgi/admin.py:1399
 msgid "Already a member"
 msgstr "Ja sou membre"
 
-#: Mailman/Cgi/admin.py:1380
+#: Mailman/Cgi/admin.py:1402
 msgid "&lt;blank line&gt;"
 msgstr "&lt;línia en blanc&gt;"
 
-#: Mailman/Cgi/admin.py:1381 Mailman/Cgi/admin.py:1384
+#: Mailman/Cgi/admin.py:1403 Mailman/Cgi/admin.py:1406
 msgid "Bad/Invalid email address"
 msgstr "Adreça de correu electrònic errònia/invàlida"
 
-#: Mailman/Cgi/admin.py:1387
+#: Mailman/Cgi/admin.py:1409
 msgid "Hostile address (illegal characters)"
 msgstr "Adreça hostil (caràcters il·legals)"
 
-#: Mailman/Cgi/admin.py:1390 bin/add_members:140 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1412 bin/add_members:149 bin/clone_member:136
 #: bin/sync_members:264
 msgid "Banned address (matched %(pattern)s)"
 msgstr "L'adreça està bandejada (coincideix amb %(pattern)s)"
 
-#: Mailman/Cgi/admin.py:1396
+#: Mailman/Cgi/admin.py:1418
 msgid "Successfully invited:"
 msgstr "Convidat satisfactòriament:"
 
-#: Mailman/Cgi/admin.py:1398
+#: Mailman/Cgi/admin.py:1420
 msgid "Successfully subscribed:"
 msgstr "Subscrit satisfactòriament:"
 
-#: Mailman/Cgi/admin.py:1403
+#: Mailman/Cgi/admin.py:1425
 msgid "Error inviting:"
 msgstr "Error en convidar:"
 
-#: Mailman/Cgi/admin.py:1405
+#: Mailman/Cgi/admin.py:1427
 msgid "Error subscribing:"
 msgstr "Error en subscriure:"
 
-#: Mailman/Cgi/admin.py:1434
+#: Mailman/Cgi/admin.py:1458
 msgid "Successfully Unsubscribed:"
 msgstr "Subscripció cancel·lada satisfactòriament:"
 
-#: Mailman/Cgi/admin.py:1439
+#: Mailman/Cgi/admin.py:1463
 msgid "Cannot unsubscribe non-members:"
 msgstr "No es pot cancel·lar la subscripció d'adreces que no són membres:"
 
-#: Mailman/Cgi/admin.py:1451
+#: Mailman/Cgi/admin.py:1471
 msgid "Bad moderation flag value"
 msgstr "Valor erroni del senyal de moderació"
 
-#: Mailman/Cgi/admin.py:1473
+#: Mailman/Cgi/admin.py:1493
 msgid "Not subscribed"
 msgstr "No subscrit"
 
-#: Mailman/Cgi/admin.py:1476
+#: Mailman/Cgi/admin.py:1496
 msgid "Ignoring changes to deleted member: %(user)s"
 msgstr "S'estan ignorant els canvis al membre suprimit: %(user)s"
 
-#: Mailman/Cgi/admin.py:1516
+#: Mailman/Cgi/admin.py:1536
 msgid "Successfully Removed:"
 msgstr "Suprimit satisfactòriament:"
 
-#: Mailman/Cgi/admin.py:1520
+#: Mailman/Cgi/admin.py:1540
 msgid "Error Unsubscribing:"
 msgstr "Error en cancel·lar la subscripció:"
 
@@ -1180,7 +1187,7 @@ msgid "Reason for refusal"
 msgstr "Motiu del rebuig"
 
 #: Mailman/Cgi/admindb.py:328 Mailman/Cgi/admindb.py:387
-#: Mailman/Cgi/admindb.py:669 Mailman/Commands/cmd_confirm.py:90
+#: Mailman/Cgi/admindb.py:671 Mailman/Commands/cmd_confirm.py:90
 msgid "Approve"
 msgstr "Aprova"
 
@@ -1200,7 +1207,7 @@ msgstr "Sol·licituds de cancel·lació de subscripció"
 msgid "Held Messages"
 msgstr "Missatges retinguts"
 
-#: Mailman/Cgi/admindb.py:424 Mailman/Cgi/admindb.py:652
+#: Mailman/Cgi/admindb.py:424 Mailman/Cgi/admindb.py:654
 msgid "From:"
 msgstr "De:"
 
@@ -1264,7 +1271,7 @@ msgstr ""
 msgid "view all messages from %(esender)s"
 msgstr "veure tots els missatges de %(esender)s"
 
-#: Mailman/Cgi/admindb.py:519 Mailman/Cgi/admindb.py:655
+#: Mailman/Cgi/admindb.py:519 Mailman/Cgi/admindb.py:657
 msgid "Subject:"
 msgstr "Assumpte:"
 
@@ -1281,11 +1288,11 @@ msgstr "Mida:"
 msgid "not available"
 msgstr "no disponible"
 
-#: Mailman/Cgi/admindb.py:527 Mailman/Cgi/admindb.py:658
+#: Mailman/Cgi/admindb.py:527 Mailman/Cgi/admindb.py:660
 msgid "Reason:"
 msgstr "Motiu:"
 
-#: Mailman/Cgi/admindb.py:531 Mailman/Cgi/admindb.py:662
+#: Mailman/Cgi/admindb.py:531 Mailman/Cgi/admindb.py:664
 msgid "Received:"
 msgstr "Rebut:"
 
@@ -1305,40 +1312,40 @@ msgstr "<em>El missatge amb id #%(id)d s'ha perdut."
 msgid "<em>Message with id #%(id)d is corrupted."
 msgstr "<em>El missatge amb id #%(id)d està malmès."
 
-#: Mailman/Cgi/admindb.py:679
+#: Mailman/Cgi/admindb.py:681
 msgid "Preserve message for site administrator"
 msgstr "Mantingues una còpia del missatge per a l'administrador del lloc"
 
-#: Mailman/Cgi/admindb.py:683
+#: Mailman/Cgi/admindb.py:685
 msgid "Additionally, forward this message to: "
 msgstr "Addicionalment, reenvia aquest missatge a: "
 
-#: Mailman/Cgi/admindb.py:687 Mailman/Cgi/admindb.py:752
-#: Mailman/Cgi/admindb.py:815 Mailman/Cgi/admindb.py:817
+#: Mailman/Cgi/admindb.py:689 Mailman/Cgi/admindb.py:754
+#: Mailman/Cgi/admindb.py:817 Mailman/Cgi/admindb.py:819
 msgid "[No explanation given]"
 msgstr "[No s'ha donat cap explicació]"
 
-#: Mailman/Cgi/admindb.py:689
+#: Mailman/Cgi/admindb.py:691
 msgid "If you reject this post,<br>please explain (optional):"
 msgstr "Si rebutgeu aquest missatge,<br>expliqueu-ne el motiu (opcional):"
 
-#: Mailman/Cgi/admindb.py:695
+#: Mailman/Cgi/admindb.py:697
 msgid "Message Headers:"
 msgstr "Capçaleres del missatge:"
 
-#: Mailman/Cgi/admindb.py:700
+#: Mailman/Cgi/admindb.py:702
 msgid "Message Excerpt:"
 msgstr "Resum del missatge:"
 
-#: Mailman/Cgi/admindb.py:852
+#: Mailman/Cgi/admindb.py:854
 msgid "Database Updated..."
 msgstr "S'ha actualitzat la base de dades..."
 
-#: Mailman/Cgi/admindb.py:855
+#: Mailman/Cgi/admindb.py:857
 msgid " is already a member"
 msgstr " ja és un membre"
 
-#: Mailman/Cgi/admindb.py:858
+#: Mailman/Cgi/admindb.py:860
 msgid "%(addr)s is banned (matched: %(patt)s)"
 msgstr "%(addr)s està bandejat (coincideix amb: %(patt)s)"
 
@@ -1761,8 +1768,8 @@ msgid ""
 "    request."
 msgstr ""
 "Es requereix la vostra confirmació per a completar la\n"
-"    vostra sol·licitud de canvi d'adreça a la llista de correu <em>%"
-"(listname)s</em>. \n"
+"    vostra sol·licitud de canvi d'adreça a la llista de correu <em>"
+"%(listname)s</em>. \n"
 "    Actualment estàs subscrit amb \n"
 "\n"
 "    <ul><li><b>Nom real:</b> %(fullname)s\n"
@@ -2092,7 +2099,7 @@ msgid "Create a %(hostname)s Mailing List"
 msgstr "Crea una llista de correu a %(hostname)s"
 
 #: Mailman/Cgi/create.py:303 Mailman/Cgi/rmlist.py:201
-#: Mailman/Gui/Bounce.py:187 Mailman/htmlformat.py:343
+#: Mailman/Gui/Bounce.py:187 Mailman/htmlformat.py:345
 msgid "Error: "
 msgstr "Error: "
 
@@ -2317,11 +2324,11 @@ msgstr "No s'ha modificat la pàgina."
 msgid "HTML successfully updated."
 msgstr "S'ha actualitzat l'HTML satisfactòriament."
 
-#: Mailman/Cgi/listinfo.py:76
+#: Mailman/Cgi/listinfo.py:77
 msgid "%(hostname)s Mailing Lists"
 msgstr "Llistes de correu a %(hostname)s"
 
-#: Mailman/Cgi/listinfo.py:110
+#: Mailman/Cgi/listinfo.py:111
 msgid ""
 "<p>There currently are no publicly-advertised\n"
 "            %(mailmanlink)s mailing lists on %(hostname)s."
@@ -2329,7 +2336,7 @@ msgstr ""
 "<p>Actualment no hi ha llistes de correu %(mailmanlink)s\n"
 "            públiques a %(hostname)s."
 
-#: Mailman/Cgi/listinfo.py:114
+#: Mailman/Cgi/listinfo.py:115
 msgid ""
 "<p>Below is a listing of all the public mailing lists on\n"
 "            %(hostname)s.  Click on a list name to get more information "
@@ -2345,11 +2352,11 @@ msgstr ""
 "subscripcions, o\n"
 "            canviar les preferències de la vostra subscripció."
 
-#: Mailman/Cgi/listinfo.py:120
+#: Mailman/Cgi/listinfo.py:121
 msgid "right"
 msgstr "correcte"
 
-#: Mailman/Cgi/listinfo.py:123
+#: Mailman/Cgi/listinfo.py:124
 msgid ""
 " To visit the general information page for an unadvertised list,\n"
 "        open a URL similar to this one, but with a '/' and the %(adj)s\n"
@@ -2361,11 +2368,11 @@ msgstr ""
 "        de la llista afegit.\n"
 "        <p>Els administradors de la llista podeu visitar "
 
-#: Mailman/Cgi/listinfo.py:128
+#: Mailman/Cgi/listinfo.py:129
 msgid "the list admin overview page"
 msgstr "la pàgina de visualització general d'administració de la llista"
 
-#: Mailman/Cgi/listinfo.py:129
+#: Mailman/Cgi/listinfo.py:130
 msgid ""
 " to find the management interface for your list.\n"
 "         <p>If you are having trouble using the lists, please contact "
@@ -2373,11 +2380,11 @@ msgstr ""
 " per a trobar la interfície de gestió de la vostra llista.\n"
 "         <p>Si teniu preguntes o comentaris, contacteu "
 
-#: Mailman/Cgi/listinfo.py:194
+#: Mailman/Cgi/listinfo.py:208
 msgid "Edit Options"
 msgstr "Edita les opcions"
 
-#: Mailman/Cgi/listinfo.py:201 Mailman/Cgi/options.py:876
+#: Mailman/Cgi/listinfo.py:215 Mailman/Cgi/options.py:876
 #: Mailman/Cgi/roster.py:118
 msgid "View this page in"
 msgstr "Mostra aquesta pàgina en"
@@ -2399,7 +2406,7 @@ msgid "Illegal Email Address: %(safeuser)s"
 msgstr "Adreça de correu electrònic errònia: %(safeuser)s"
 
 #: Mailman/Cgi/options.py:128 Mailman/Cgi/options.py:193
-#: Mailman/Cgi/options.py:215
+#: Mailman/Cgi/options.py:215 Mailman/Cgi/private.py:154
 msgid "No such member: %(safeuser)s."
 msgstr "El membre no existeix: %(safeuser)s."
 
@@ -2800,7 +2807,7 @@ msgstr ""
 msgid "Remind"
 msgstr "Recorda-me-la"
 
-#: Mailman/Cgi/options.py:1030
+#: Mailman/Cgi/options.py:1030 Mailman/ListAdmin.py:225
 msgid "<missing>"
 msgstr "<manca>"
 
@@ -2836,7 +2843,21 @@ msgstr "Arxiu privat - no s'adment «./» ni «../» a l'URL."
 msgid "Private Archive Error - %(msg)s"
 msgstr "Error a l'arxiu privat - %(msg)s"
 
-#: Mailman/Cgi/private.py:185
+#: Mailman/Cgi/private.py:141
+#, fuzzy
+msgid ""
+"If you are a list member,\n"
+"                          your password has been emailed to you."
+msgstr ""
+"Se us ha enviat un recordatori de la vostra contrasenya per correu "
+"electrònic."
+
+#: Mailman/Cgi/private.py:145
+#, fuzzy
+msgid "Please enter your email address"
+msgstr "La vostra adreça de correu electrònic:"
+
+#: Mailman/Cgi/private.py:206
 msgid "Private archive file not found"
 msgstr "No s'ha trobat el l'arxiu privat"
 
@@ -2934,7 +2955,7 @@ msgstr "<b>Cancel·la</b> i torna a l'administració de la llista"
 msgid "Delete this list"
 msgstr "Suprimeix aquesta llista"
 
-#: Mailman/Cgi/roster.py:48 Mailman/Cgi/subscribe.py:51
+#: Mailman/Cgi/roster.py:48 Mailman/Cgi/subscribe.py:52
 msgid "Invalid options to CGI script"
 msgstr "Opcions no vàlides a l'script CGI."
 
@@ -2943,27 +2964,39 @@ msgid "%(realname)s roster authentication failed."
 msgstr "L'autenticació de la llista %(realname)s ha fallat."
 
 #: Mailman/Cgi/roster.py:134 Mailman/Cgi/roster.py:135
-#: Mailman/Cgi/subscribe.py:50 Mailman/Cgi/subscribe.py:61
+#: Mailman/Cgi/subscribe.py:51 Mailman/Cgi/subscribe.py:62
 msgid "Error"
 msgstr "Error"
 
-#: Mailman/Cgi/subscribe.py:114
+#: Mailman/Cgi/subscribe.py:115
 msgid "You must supply a valid email address."
 msgstr "Heu d'especificar una adreça electrònica vàlida."
 
-#: Mailman/Cgi/subscribe.py:126
+#: Mailman/Cgi/subscribe.py:138
+msgid "The form is too old.  Please GET it again."
+msgstr ""
+
+#: Mailman/Cgi/subscribe.py:141
+msgid "Please take a few seconds to fill out the form before submitting it."
+msgstr ""
+
+#: Mailman/Cgi/subscribe.py:144
+msgid "You must GET the form before submitting it."
+msgstr ""
+
+#: Mailman/Cgi/subscribe.py:148
 msgid "You may not subscribe a list to itself!"
 msgstr "No podeu subscriure una llista a ella mateixa!"
 
-#: Mailman/Cgi/subscribe.py:134
+#: Mailman/Cgi/subscribe.py:156
 msgid "If you supply a password, you must confirm it."
 msgstr "Si introduïu una contrasenya, l'heu de confirmar."
 
-#: Mailman/Cgi/subscribe.py:136
+#: Mailman/Cgi/subscribe.py:158
 msgid "Your passwords did not match."
 msgstr "La vostra contrasenya no coincideix."
 
-#: Mailman/Cgi/subscribe.py:170
+#: Mailman/Cgi/subscribe.py:192
 msgid ""
 "Your subscription request has been received, and will soon be acted upon.\n"
 "Depending on the configuration of this mailing list, your subscription "
@@ -2978,7 +3011,7 @@ msgstr ""
 "l'hagi d'aprovar. En cas que calgui la confirmació, ben aviat rebreu un\n"
 "correu electrònic amb més instruccions."
 
-#: Mailman/Cgi/subscribe.py:184
+#: Mailman/Cgi/subscribe.py:206
 msgid ""
 "The email address you supplied is banned from this\n"
 "        mailing list.  If you think this restriction is erroneous, please\n"
@@ -2988,7 +3021,7 @@ msgstr ""
 "        a aquesta llista de correu. Si creieu que aquesta restricció és\n"
 "        errònia contacteu amb el propietari de la llista a %(listowner)s."
 
-#: Mailman/Cgi/subscribe.py:188
+#: Mailman/Cgi/subscribe.py:210
 msgid ""
 "The email address you supplied is not valid.  (E.g. it must contain an\n"
 "`@'.)"
@@ -2996,7 +3029,7 @@ msgstr ""
 "L'adreça que heu especificat no és vàlida. (P.ex. ha de contenir una\n"
 "«@».)"
 
-#: Mailman/Cgi/subscribe.py:192
+#: Mailman/Cgi/subscribe.py:214
 msgid ""
 "Your subscription is not allowed because the email address you gave is\n"
 "insecure."
@@ -3004,7 +3037,7 @@ msgstr ""
 "La vostra subscripció no està permesa perquè l'adreça que heu especificat\n"
 "no és segura."
 
-#: Mailman/Cgi/subscribe.py:200
+#: Mailman/Cgi/subscribe.py:222
 msgid ""
 "Confirmation from your email address is required, to prevent anyone from\n"
 "subscribing you without permission.  Instructions are being sent to you at\n"
@@ -3016,7 +3049,7 @@ msgstr ""
 "han enviat a %(email)s. La vostra subscripció no s'inicirà fins que es "
 "confirmi. "
 
-#: Mailman/Cgi/subscribe.py:212
+#: Mailman/Cgi/subscribe.py:234
 msgid ""
 "Your subscription request was deferred because %(x)s.  Your request has "
 "been\n"
@@ -3030,15 +3063,15 @@ msgstr ""
 "electrònic\n"
 "informant-te de la decisió del moderador."
 
-#: Mailman/Cgi/subscribe.py:219 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:241 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Ja estàs subscrit."
 
-#: Mailman/Cgi/subscribe.py:233
+#: Mailman/Cgi/subscribe.py:255
 msgid "Mailman privacy alert"
 msgstr "Alerta de privacitat de Mailman"
 
-#: Mailman/Cgi/subscribe.py:234
+#: Mailman/Cgi/subscribe.py:256
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3075,15 +3108,15 @@ msgstr ""
 "llavors si ho considera oportú pot enviar\n"
 "un missatge a l'administrador de la llista a %(listowner)s.\n"
 
-#: Mailman/Cgi/subscribe.py:253
+#: Mailman/Cgi/subscribe.py:275
 msgid "This list does not support digest delivery."
 msgstr "Aquesta llista no és compatible amb l'entrega de resums."
 
-#: Mailman/Cgi/subscribe.py:255
+#: Mailman/Cgi/subscribe.py:277
 msgid "This list only supports digest delivery."
 msgstr "Aquesta llista només funciona amb l'entrega de resums."
 
-#: Mailman/Cgi/subscribe.py:262
+#: Mailman/Cgi/subscribe.py:284
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr ""
 "Se us ha subscrit satisfactòriament a la llista de correu %(realname)s."
@@ -3808,7 +3841,8 @@ msgstr ""
 "        només el poden veure els subscriptors, per la qual cosa caldrà que \n"
 "        proporcioneu la vostra contrasenya de subscriptor per a obtenir-lo.\n"
 "        En cas que envieu la sol·licitud des d'una adreça diferent de la de\n"
-"        subscripció, l'haureu d'especificar a l'argument «address=<address>»\n"
+"        subscripció, l'haureu d'especificar a l'argument "
+"«address=<address>»\n"
 "        (sense angles als costats de l'adreça, i sense cometes!). Si \n"
 "        especifiqueu la contrasenya de l'administrador o moderador, també\n"
 "        s'hi mostraran els membres ocults.\n"
@@ -3844,156 +3878,160 @@ msgstr "Membres sense resum (normals):"
 msgid "Digest members:"
 msgstr "Membres amb resum:"
 
-#: Mailman/Defaults.py:1478
+#: Mailman/Defaults.py:1508
 msgid "Arabic"
 msgstr "àrab"
 
-#: Mailman/Defaults.py:1479
+#: Mailman/Defaults.py:1509
 #, fuzzy
 msgid "Asturian"
 msgstr "estonià"
 
-#: Mailman/Defaults.py:1480
+#: Mailman/Defaults.py:1510
 msgid "Catalan"
 msgstr "català"
 
-#: Mailman/Defaults.py:1481
+#: Mailman/Defaults.py:1511
 msgid "Czech"
 msgstr "txec"
 
-#: Mailman/Defaults.py:1482
+#: Mailman/Defaults.py:1512
 msgid "Danish"
 msgstr "danès"
 
-#: Mailman/Defaults.py:1483
+#: Mailman/Defaults.py:1513
 msgid "German"
 msgstr "alemany"
 
-#: Mailman/Defaults.py:1484
+#: Mailman/Defaults.py:1514
 msgid "English (USA)"
 msgstr "anglès (EUA)"
 
-#: Mailman/Defaults.py:1485
+#: Mailman/Defaults.py:1515
 msgid "Spanish (Spain)"
 msgstr "espanyol (Espanya)"
 
-#: Mailman/Defaults.py:1486
+#: Mailman/Defaults.py:1516
 msgid "Estonian"
 msgstr "estonià"
 
-#: Mailman/Defaults.py:1487
+#: Mailman/Defaults.py:1517
 msgid "Euskara"
 msgstr "euskera"
 
-#: Mailman/Defaults.py:1488
+#: Mailman/Defaults.py:1518
+msgid "Persian"
+msgstr ""
+
+#: Mailman/Defaults.py:1519
 msgid "Finnish"
 msgstr "finlandès"
 
-#: Mailman/Defaults.py:1489
+#: Mailman/Defaults.py:1520
 msgid "French"
 msgstr "francès "
 
-#: Mailman/Defaults.py:1490
+#: Mailman/Defaults.py:1521
 msgid "Galician"
 msgstr "gallec"
 
-#: Mailman/Defaults.py:1491
+#: Mailman/Defaults.py:1522
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1492
+#: Mailman/Defaults.py:1523
 msgid "Hebrew"
 msgstr "hebreu"
 
-#: Mailman/Defaults.py:1493
+#: Mailman/Defaults.py:1524
 msgid "Croatian"
 msgstr "croat"
 
-#: Mailman/Defaults.py:1494
+#: Mailman/Defaults.py:1525
 msgid "Hungarian"
 msgstr "hongarès"
 
-#: Mailman/Defaults.py:1495
+#: Mailman/Defaults.py:1526
 msgid "Interlingua"
 msgstr "interlingua"
 
-#: Mailman/Defaults.py:1496
+#: Mailman/Defaults.py:1527
 msgid "Italian"
 msgstr "italià"
 
-#: Mailman/Defaults.py:1497
+#: Mailman/Defaults.py:1528
 msgid "Japanese"
 msgstr "japonès"
 
-#: Mailman/Defaults.py:1498
+#: Mailman/Defaults.py:1529
 msgid "Korean"
 msgstr "coreà"
 
-#: Mailman/Defaults.py:1499
+#: Mailman/Defaults.py:1530
 msgid "Lithuanian"
 msgstr "lituà"
 
-#: Mailman/Defaults.py:1500
+#: Mailman/Defaults.py:1531
 msgid "Dutch"
 msgstr "holandès"
 
-#: Mailman/Defaults.py:1501
+#: Mailman/Defaults.py:1532
 msgid "Norwegian"
 msgstr "noruec"
 
-#: Mailman/Defaults.py:1502
+#: Mailman/Defaults.py:1533
 msgid "Polish"
 msgstr "polonès"
 
-#: Mailman/Defaults.py:1503
+#: Mailman/Defaults.py:1534
 msgid "Portuguese"
 msgstr "portuguès"
 
-#: Mailman/Defaults.py:1504
+#: Mailman/Defaults.py:1535
 msgid "Portuguese (Brazil)"
 msgstr "portuguès (Brasil)"
 
-#: Mailman/Defaults.py:1505
+#: Mailman/Defaults.py:1536
 msgid "Romanian"
 msgstr "romanès"
 
-#: Mailman/Defaults.py:1506
+#: Mailman/Defaults.py:1537
 msgid "Russian"
 msgstr "rus"
 
-#: Mailman/Defaults.py:1507
+#: Mailman/Defaults.py:1538
 msgid "Slovak"
 msgstr "eslovac"
 
-#: Mailman/Defaults.py:1508
+#: Mailman/Defaults.py:1539
 msgid "Slovenian"
 msgstr "eslovè"
 
-#: Mailman/Defaults.py:1509
+#: Mailman/Defaults.py:1540
 msgid "Serbian"
 msgstr "serbi"
 
-#: Mailman/Defaults.py:1510
+#: Mailman/Defaults.py:1541
 msgid "Swedish"
 msgstr "suec"
 
-#: Mailman/Defaults.py:1511
+#: Mailman/Defaults.py:1542
 msgid "Turkish"
 msgstr "turc"
 
-#: Mailman/Defaults.py:1512
+#: Mailman/Defaults.py:1543
 msgid "Ukrainian"
 msgstr "ucraïnès"
 
-#: Mailman/Defaults.py:1513
+#: Mailman/Defaults.py:1544
 msgid "Vietnamese"
 msgstr "vietnamita"
 
-#: Mailman/Defaults.py:1514
+#: Mailman/Defaults.py:1545
 msgid "Chinese (China)"
 msgstr "xinès (Xina)"
 
-#: Mailman/Defaults.py:1515
+#: Mailman/Defaults.py:1546
 msgid "Chinese (Taiwan)"
 msgstr "xinès (Taiwan)"
 
@@ -4016,24 +4054,24 @@ msgstr " (mode de resum)"
 msgid "Welcome to the \"%(realname)s\" mailing list%(digmode)s"
 msgstr "Us donem la benvinguda a la llista de correu%(digmode)s «%(realname)s»"
 
-#: Mailman/Deliverer.py:86
+#: Mailman/Deliverer.py:87
 msgid "You have been unsubscribed from the %(realname)s mailing list"
 msgstr ""
 "S'ha cancel·lat la vostra subscripció a la llista de correu %(realname)s"
 
-#: Mailman/Deliverer.py:113
+#: Mailman/Deliverer.py:114
 msgid "%(listfullname)s mailing list reminder"
 msgstr "Recordatori de la llista de correu %(listfullname)s"
 
-#: Mailman/Deliverer.py:141
+#: Mailman/Deliverer.py:142
 msgid "No reason given"
 msgstr "No s'ha donat cap motiu"
 
-#: Mailman/Deliverer.py:165 Mailman/Deliverer.py:184
+#: Mailman/Deliverer.py:166 Mailman/Deliverer.py:185
 msgid "Hostile subscription attempt detected"
 msgstr "S'ha detectat un intent de subscripció hostil"
 
-#: Mailman/Deliverer.py:166
+#: Mailman/Deliverer.py:167
 msgid ""
 "%(address)s was invited to a different mailing\n"
 "list, but in a deliberate malicious attempt they tried to confirm the\n"
@@ -4046,7 +4084,7 @@ msgstr ""
 "i maliciosa. Això n'és simplement la notificació. No es requereix cap acció\n"
 "per part vostra."
 
-#: Mailman/Deliverer.py:185
+#: Mailman/Deliverer.py:186
 msgid ""
 "You invited %(address)s to your list, but in a\n"
 "deliberate malicious attempt, they tried to confirm the invitation to a\n"
@@ -4060,7 +4098,7 @@ msgstr ""
 "requereix\n"
 "cap acció per part vostra."
 
-#: Mailman/Deliverer.py:218
+#: Mailman/Deliverer.py:219
 msgid "%(listname)s mailing list probe message"
 msgstr "Missatge de sondeig de la llista de correu %(listname)s"
 
@@ -4898,7 +4936,10 @@ msgid "When receiving digests, which format is default?"
 msgstr "Quin voleu que sigui el format predeterminat de recepció de resums?"
 
 #: Mailman/Gui/Digest.py:59
-msgid "How big in Kb should a digest be before it gets sent out?"
+#, fuzzy
+msgid ""
+"How big in Kb should a digest be before it gets sent out?  0 implies no "
+"maximum size."
 msgstr "De quina mida (en kb) ha de ser el resum en Kb abans que s'enviï?"
 
 #: Mailman/Gui/Digest.py:63
@@ -6411,6 +6452,26 @@ msgstr ""
 
 #: Mailman/Gui/NonDigest.py:163
 msgid ""
+"Ignore regular_exlude_lists of which the poster is not a\n"
+"             member."
+msgstr ""
+
+#: Mailman/Gui/NonDigest.py:165
+msgid ""
+"If a post is addressed to this list and to one or more of\n"
+"             the exclude lists, regular members of those lists will not be\n"
+"             sent the post from this list, but if the poster is not a "
+"member\n"
+"             of an excluded list, the post may not be accepted by that list\n"
+"             which leaves the members of that list with no copy of the "
+"post.\n"
+"             Setting this to Yes ignores any of the exclude lists of which "
+"the\n"
+"             poster is not a member."
+msgstr ""
+
+#: Mailman/Gui/NonDigest.py:174
+msgid ""
 "Other mailing lists on this site whose members are\n"
 "             included in the regular (non-digest) delivery if those\n"
 "             list addresses don't appear in a To: or Cc: header."
@@ -6420,7 +6481,7 @@ msgstr ""
 "             si les adreces de les llistes apareixen en alguna de les\n"
 "             capçaleres Per a: o Cc:."
 
-#: Mailman/Gui/NonDigest.py:166
+#: Mailman/Gui/NonDigest.py:177
 msgid ""
 "The list addresses should be written in full mail address\n"
 "             format (e.g. mailman@example.com). Note also that the site\n"
@@ -8307,81 +8368,81 @@ msgstr "-------------- part següent --------------\n"
 msgid "The message headers matched a filter rule"
 msgstr "Les capçaleres del missatge coincideixen amb una regla de filtre"
 
-#: Mailman/Handlers/SpamDetect.py:135
+#: Mailman/Handlers/SpamDetect.py:119
 msgid "Message rejected by filter rule match"
 msgstr "S'ha rebutjat el missatge perquè coincideix amb una regla de filtre"
 
-#: Mailman/Handlers/ToDigest.py:162
+#: Mailman/Handlers/ToDigest.py:163
 msgid "%(realname)s Digest, Vol %(volume)d, Issue %(issue)d"
 msgstr "Resum de %(realname)s, vol %(volume)d, número %(issue)d"
 
-#: Mailman/Handlers/ToDigest.py:208
+#: Mailman/Handlers/ToDigest.py:209
 msgid "digest header"
 msgstr "capçalera del resum"
 
-#: Mailman/Handlers/ToDigest.py:211
+#: Mailman/Handlers/ToDigest.py:212
 msgid "Digest Header"
 msgstr "Capçalera del resum"
 
-#: Mailman/Handlers/ToDigest.py:224
+#: Mailman/Handlers/ToDigest.py:225
 msgid "Today's Topics:\n"
 msgstr "Temes d'avui:\n"
 
-#: Mailman/Handlers/ToDigest.py:304
+#: Mailman/Handlers/ToDigest.py:305
 msgid "Today's Topics (%(msgcount)d messages)"
 msgstr "Temes d'avui (%(msgcount)d missatges)"
 
-#: Mailman/Handlers/ToDigest.py:330
+#: Mailman/Handlers/ToDigest.py:331
 msgid "[Message discarded by content filter]"
 msgstr "[Missatge descartat pel filtre de contingut]"
 
-#: Mailman/Handlers/ToDigest.py:358
+#: Mailman/Handlers/ToDigest.py:359
 msgid "digest footer"
 msgstr "peu de pàgina del resum"
 
-#: Mailman/Handlers/ToDigest.py:361 Mailman/Handlers/ToDigest.py:369
+#: Mailman/Handlers/ToDigest.py:362 Mailman/Handlers/ToDigest.py:370
 msgid "Digest Footer"
 msgstr "Peu de pàgina del resum"
 
-#: Mailman/Handlers/ToDigest.py:376
+#: Mailman/Handlers/ToDigest.py:377
 msgid "End of "
 msgstr "Final de "
 
-#: Mailman/ListAdmin.py:297
+#: Mailman/ListAdmin.py:299
 msgid "Posting of your message titled \"%(subject)s\""
 msgstr "Enviament del vostre missatge anomenat «%(subject)s»"
 
-#: Mailman/ListAdmin.py:298 Mailman/ListAdmin.py:417
+#: Mailman/ListAdmin.py:300 Mailman/ListAdmin.py:422
 msgid "[No reason given]"
 msgstr "[No s'ha donat cap motiu]"
 
-#: Mailman/ListAdmin.py:336
+#: Mailman/ListAdmin.py:338
 msgid "Forward of moderated message"
 msgstr "Reenviament de missatge moderat"
 
-#: Mailman/ListAdmin.py:392
+#: Mailman/ListAdmin.py:395
 msgid "New subscription request to list %(realname)s from %(addr)s"
 msgstr ""
 "Sol·licitud de subscripció nova per a la llista %(realname)s de %(addr)s"
 
-#: Mailman/ListAdmin.py:416
+#: Mailman/ListAdmin.py:421
 msgid "Subscription request"
 msgstr "Sol·licitud de subscripció"
 
-#: Mailman/ListAdmin.py:447
+#: Mailman/ListAdmin.py:452
 msgid "New unsubscription request from %(realname)s by %(addr)s"
 msgstr ""
 "Sol·licitud de cancel·lació de subscripció nova a %(realname)s de %(addr)s"
 
-#: Mailman/ListAdmin.py:471
+#: Mailman/ListAdmin.py:476
 msgid "Unsubscription request"
 msgstr "Sol·licitud de cancel·lació de subscripció"
 
-#: Mailman/ListAdmin.py:504
+#: Mailman/ListAdmin.py:509
 msgid "Original Message"
 msgstr "Missatge original"
 
-#: Mailman/ListAdmin.py:507
+#: Mailman/ListAdmin.py:512
 msgid "Request to mailing list %(realname)s rejected"
 msgstr "S'ha refusat la sol·licitud a la llista de correu %(realname)s"
 
@@ -8493,46 +8554,46 @@ msgstr "El fitxer %(dbfile)s hauria de tenir permisos 066x (té %(octmode)s)"
 #: Mailman/MailList.py:216
 msgid "Your confirmation is required to join the %(listname)s mailing list"
 msgstr ""
-"Es requereix la vostra confirmació per a unir-vos a la llista de correu %"
-"(listname)s"
+"Es requereix la vostra confirmació per a unir-vos a la llista de correu "
+"%(listname)s"
 
 #: Mailman/MailList.py:227
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr ""
-"Es requereix la vostra confirmació per a abandonar la llista de correu %"
-"(listname)s"
+"Es requereix la vostra confirmació per a abandonar la llista de correu "
+"%(listname)s"
 
-#: Mailman/MailList.py:900 Mailman/MailList.py:1322
+#: Mailman/MailList.py:903 Mailman/MailList.py:1333
 msgid " from %(remote)s"
 msgstr " de %(remote)s"
 
-#: Mailman/MailList.py:933
+#: Mailman/MailList.py:944
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "les subscripcions a %(realname)s requereixen l'aprovació del moderador"
 
-#: Mailman/MailList.py:1002 bin/add_members:245
+#: Mailman/MailList.py:1013 bin/add_members:252
 msgid "%(realname)s subscription notification"
 msgstr "Notificació de subscripció a %(realname)s"
 
-#: Mailman/MailList.py:1021
+#: Mailman/MailList.py:1032
 msgid "unsubscriptions require moderator approval"
 msgstr ""
 "les cancel·lacions de subscripció requereixen l'aprovació del moderador"
 
-#: Mailman/MailList.py:1041
+#: Mailman/MailList.py:1052
 msgid "%(realname)s unsubscribe notification"
 msgstr "Notificació de la cancel·lació de la subscripció a %(realname)s"
 
-#: Mailman/MailList.py:1231
+#: Mailman/MailList.py:1242
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr ""
 "les subscripcions a %(name)s requereixen l'aprovació de l'administrador"
 
-#: Mailman/MailList.py:1494
+#: Mailman/MailList.py:1507
 msgid "Last autoresponse notification for today"
 msgstr "Última notificació d'auto-resposta per avui"
 
-#: Mailman/Queue/BounceRunner.py:341
+#: Mailman/Queue/BounceRunner.py:343
 msgid ""
 "The attached message was received as a bounce, but either the bounce format\n"
 "was not recognized, or no member addresses could be extracted from it.  "
@@ -8554,7 +8615,7 @@ msgstr ""
 "%(adminurl)s\n"
 "\n"
 
-#: Mailman/Queue/BounceRunner.py:351
+#: Mailman/Queue/BounceRunner.py:353
 msgid "Uncaught bounce notification"
 msgstr "Notificació de retorn no capturada"
 
@@ -8624,15 +8685,15 @@ msgstr ""
 
 # FIXME: Ve a ser el mateix que «Powered by», però juguen amb el fet que «delivery»
 # té més connotació de correu.
-#: Mailman/htmlformat.py:639
+#: Mailman/htmlformat.py:648
 msgid "Delivered by Mailman<br>version %(version)s"
 msgstr "Funciona amb el Mailman<br>versió %(version)s"
 
-#: Mailman/htmlformat.py:640
+#: Mailman/htmlformat.py:649
 msgid "Python Powered"
 msgstr "Funciona amb el Python"
 
-#: Mailman/htmlformat.py:641
+#: Mailman/htmlformat.py:650
 msgid "Gnu's Not Unix"
 msgstr "GNU No és Unix"
 
@@ -8752,6 +8813,10 @@ msgid ""
 "        the success/failure of these subscriptions, overriding whatever the\n"
 "        list's `admin_notify_mchanges' setting is.\n"
 "\n"
+"    --nomail\n"
+"    -n\n"
+"        Set the newly added members mail delivery to disabled by admin.\n"
+"\n"
 "    --help\n"
 "    -h\n"
 "        Print this help message and exit.\n"
@@ -8807,47 +8872,47 @@ msgstr ""
 "Has de proporcionar al menys una de les opcions -r i -d. Com a molt un\n"
 "dels fitxers pot ser `-'.\n"
 
-#: bin/add_members:137
+#: bin/add_members:146
 msgid "Already a member: %(member)s"
 msgstr "Ja és un membre: %(member)s"
 
-#: bin/add_members:143
+#: bin/add_members:152
 msgid "Bad/Invalid email address: blank line"
 msgstr "Adreça de correu electrònic incorrecta: línia en blanc"
 
-#: bin/add_members:145
+#: bin/add_members:154
 msgid "Bad/Invalid email address: %(member)s"
 msgstr "Adreça de correu electrònic incorrecta: %(member)s"
 
-#: bin/add_members:147
+#: bin/add_members:156
 msgid "Hostile address (illegal characters): %(member)s"
 msgstr "Adreça hostil (caràcter il·legals): %(member)s"
 
-#: bin/add_members:149
+#: bin/add_members:158
 msgid "Subscribed: %(member)s"
 msgstr "Subscrit: %(member)s"
 
-#: bin/add_members:194
+#: bin/add_members:199
 msgid "Bad argument to -w/--welcome-msg: %(arg)s"
 msgstr "Argument erroni -w/--welcome-msg: %(arg)s"
 
-#: bin/add_members:201
+#: bin/add_members:206
 msgid "Bad argument to -a/--admin-notify: %(arg)s"
 msgstr "Argument erroni a -a/--admin-notify: %(arg)s"
 
-#: bin/add_members:207
+#: bin/add_members:214
 msgid "Cannot read both digest and normal members from standard input."
 msgstr ""
 "No puc llegir als subscriptors regulars i als no regulars des de l'entrada "
 "estàndard."
 
-#: bin/add_members:213 bin/config_list:109 bin/export.py:271
+#: bin/add_members:220 bin/config_list:109 bin/export.py:271
 #: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:232
 #: bin/sync_members:222 cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "La llista no existeix: %(listname)s"
 
-#: bin/add_members:233 bin/change_pw:158 bin/check_db:114 bin/discard:83
+#: bin/add_members:240 bin/change_pw:158 bin/check_db:114 bin/discard:83
 #: bin/sync_members:244 bin/update:302 bin/update:323 bin/update:577
 #: cron/bumpdigests:78
 msgid "Nothing to do."
@@ -10274,6 +10339,7 @@ msgid "List: %(listname)s, \tOwners: %(owners)s"
 msgstr "Llista: %(listname)s, \tAmos: %(owners)s"
 
 #: bin/list_lists:19
+#, fuzzy
 msgid ""
 "List all mailing lists.\n"
 "\n"
@@ -10283,6 +10349,9 @@ msgid ""
 "\n"
 "    -a / --advertised\n"
 "        List only those mailing lists that are publically advertised\n"
+"\n"
+"    -p / --public-archive\n"
+"        List only those lists with public archives.\n"
 "\n"
 "    --virtual-host-overview=domain\n"
 "    -V domain\n"
@@ -10321,11 +10390,11 @@ msgstr ""
 "        Mostra aquest missatge i surt.\n"
 "\n"
 
-#: bin/list_lists:105
+#: bin/list_lists:113
 msgid "No matching mailing lists found"
 msgstr "No s'han trobat llistes de correu que coincideixin"
 
-#: bin/list_lists:109
+#: bin/list_lists:117
 msgid "matching mailing lists found:"
 msgstr "llistes de correu coincidents:"
 
@@ -10404,8 +10473,8 @@ msgstr ""
 "    --digest[=tipus] / -d [tipus]\n"
 "        Mostra només els membres amb lliurament per resum. L'argument "
 "opcional \n"
-"        pot tenir el valor «mime» o «plain», el qual farà que només es mostrin "
-"els \n"
+"        pot tenir el valor «mime» o «plain», el qual farà que només es "
+"mostrin els \n"
 "        subscriptors amb el tipus de resum especificat.\n"
 "\n"
 "    --nomail[=motiu] / -n [motiu]\n"
@@ -11288,8 +11357,8 @@ msgstr ""
 "\n"
 "Feu servir aquesta funció només per a «arreglar» els fitxers de base de "
 "dades\n"
-"«-article» dels arxius creats amb el Mailman 2.1.3 o amb versions anteriors i "
-"que\n"
+"«-article» dels arxius creats amb el Mailman 2.1.3 o amb versions anteriors "
+"i que\n"
 "continguin atributs «html_body». Aquests atributs poden portar a un ús "
 "excessiu\n"
 "de memòria i causar un impacte molt negatiu en el rendiment de llistes amb\n"
@@ -11487,8 +11556,8 @@ msgstr "Eliminant %(msg)s"
 #: bin/rmlist:81
 msgid "%(listname)s %(msg)s not found as %(filename)s"
 msgstr ""
-"No s'ha trobat el missatge %(msg)s de la llista %(listname)s com a fitxer %"
-"(filename)s"
+"No s'ha trobat el missatge %(msg)s de la llista %(listname)s com a fitxer "
+"%(filename)s"
 
 #: bin/rmlist:105
 msgid "No such list (or list already deleted): %(listname)s"

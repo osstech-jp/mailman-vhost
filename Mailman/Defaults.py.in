@@ -1,6 +1,6 @@
 # -*- python -*-
 
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2012 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -107,6 +107,29 @@ ALLOW_SITE_ADMIN_COOKIES = No
 # If the following is set to a non-zero value, web authentication cookies will
 # expire that many seconds following their last use.
 AUTHENTICATION_COOKIE_LIFETIME = 0
+
+# Form lifetime is set against Cross Site Request Forgery.
+FORM_LIFETIME = hours(1)
+
+# If the following is set to a non-empty string, this string in combination
+# with the time, list name and the IP address of the requestor is used to
+# create a hidden hash as part of the subscribe form on the listinfo page.
+# This hash is checked upon form submission and the subscribe fails if it
+# doesn't match.  I.e. the form posted must be first retrieved from the
+# listinfo CGI by the same IP that posts it.  The subscribe also fails if
+# the time the form was retrieved is more than the above FORM_LIFETIME or less
+# than the below SUBSCRIBE_FORM_MIN_TIME before submission.
+# Important: If you have any static subscribe forms on your web site, setting
+# this option will break them.  With this option set, subscribe forms must be
+# dynamically generated to include the hidden data.  See the code block
+# beginning with "if mm_cfg.SUBSCRIBE_FORM_SECRET:" in Mailman/Cgi/listinfo.py
+# for the details of the hidden data.
+SUBSCRIBE_FORM_SECRET = None
+
+# If SUBSCRIBE_FORM_SECRET is not None, this is the minimum time the user must
+# take after retrieving the form before submitting it.  Set to 0 to skip this
+# test.
+SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 
 # Command that is used to convert text/html parts into plain text.  This
 # should output results to standard output.  %(filename)s will contain the
@@ -841,6 +864,12 @@ BAD_SHUNT_ARCHIVE_DIRECTORY = None
 # affects both message pickles and MailList config.pck files.
 SYNC_AFTER_WRITE = No
 
+# This is the name used for the mailmanctl master lock file. In a clustered
+# load sharing environment with a shared 'locks' directory, it is desirable
+# to have separate locks for each host mailmanctl. This can be used to enable
+# that.
+MASTER_LOCK_FILE = 'master-qrunner'
+
 
 
 #####
@@ -1024,6 +1053,7 @@ DEFAULT_UMBRELLA_MEMBER_ADMIN_SUFFIX = "-owner"
 # Exclude/include (sibling) lists for non-digest delivery.
 DEFAULT_REGULAR_EXCLUDE_LISTS = []
 DEFAULT_REGULAR_INCLUDE_LISTS = []
+DEFAULT_REGULAR_EXCLUDE_IGNORE = True
 ALLOW_CROSS_DOMAIN_SIBLING = False
 
 # This variable controls whether monthly password reminders are sent.
@@ -1485,6 +1515,7 @@ add_language('en',    _('English (USA)'),       'us-ascii',    'ltr')
 add_language('es',    _('Spanish (Spain)'),     'iso-8859-1',  'ltr')
 add_language('et',    _('Estonian'),            'iso-8859-15', 'ltr')
 add_language('eu',    _('Euskara'),             'iso-8859-15', 'ltr') # Basque
+add_language('fa',    _('Persian'),             'utf-8',       'rtl')
 add_language('fi',    _('Finnish'),             'iso-8859-1',  'ltr')
 add_language('fr',    _('French'),              'iso-8859-1',  'ltr')
 add_language('gl',    _('Galician'),            'utf-8',       'ltr')

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2013 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -314,10 +314,10 @@ def show_pending_subs(mlist, form):
     for id in pendingsubs:
         addr = mlist.GetRecord(id)[1]
         byaddrs.setdefault(addr, []).append(id)
-    addrs = byaddrs.keys()
+    addrs = byaddrs.items()
     addrs.sort()
     num = 0
-    for addr, ids in byaddrs.items():
+    for addr, ids in addrs:
         # Eliminate duplicates
         for id in ids[1:]:
             mlist.HandleRequest(id, mm_cfg.DISCARD)
@@ -365,10 +365,10 @@ def show_pending_unsubs(mlist, form):
     for id in pendingunsubs:
         addr = mlist.GetRecord(id)
         byaddrs.setdefault(addr, []).append(id)
-    addrs = byaddrs.keys()
+    addrs = byaddrs.items()
     addrs.sort()
     num = 0
-    for addr, ids in byaddrs.items():
+    for addr, ids in addrs:
         # Eliminate duplicates
         for id in ids[1:]:
             mlist.HandleRequest(id, mm_cfg.DISCARD)
@@ -632,6 +632,8 @@ def show_post_requests(mlist, id, info, total, count, form):
         body = EMPTYSTRING.join(lines)
     # Get message charset and try encode in list charset
     # We get it from the first text part.
+    # We need to replace invalid characters here or we can throw an uncaught
+    # exception in doc.Format().
     for part in msg.walk():
         if part.get_content_maintype() == 'text':
             # Watchout for charset= with no value.
@@ -642,7 +644,7 @@ def show_post_requests(mlist, id, info, total, count, form):
     lcset = Utils.GetCharSet(mlist.preferred_language)
     if mcset <> lcset:
         try:
-            body = unicode(body, mcset).encode(lcset)
+            body = unicode(body, mcset).encode(lcset, 'replace')
         except (LookupError, UnicodeError, ValueError):
             pass
     hdrtxt = NL.join(['%s: %s' % (k, v) for k, v in msg.items()])
