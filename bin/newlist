@@ -163,7 +163,7 @@ def main():
         urlhost = urlhost or ('lists.%s' % domain) # TODO: Not configurable yet
         if not emailhost:
             emailhost = domain
-        else:
+        elif emailhost != domain:
             usage(1, _('You cannot use an email host different from the domain part of the list name.'))
         if not mm_cfg.VIRTUAL_HOSTS.has_key(urlhost):
             _urlhost = repr(urlhost)
