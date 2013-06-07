@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2012 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2013 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -250,10 +250,10 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             return "%s%s@%s" % (acct, self.umbrella_member_suffix, host)
 
     def GetScriptURL(self, scriptname, absolute=0):
-        # Using "local_part" here works for both site wide lists on
-        # the default url host and for vhost lists on the vhost url host.
-        return Utils.ScriptURL(scriptname, self.web_page_url, absolute) + \
-               '/' + self.local_part
+        return '%s/%s' % (
+                Utils.ScriptURL(scriptname, self.web_page_url, absolute),
+                self.internal_name()
+                )
 
     def GetOptionsURL(self, user, obscure=0, absolute=0):
         url = self.GetScriptURL('options', absolute)

@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2013 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -165,7 +165,7 @@ def main():
             emailhost = domain
         elif emailhost != domain:
             usage(1, _('You cannot use an email host different from the domain part of the list name.'))
-        if not mm_cfg.VIRTUAL_HOSTS.has_key(urlhost):
+        if mm_cfg.VIRTUAL_HOST_OVERVIEW and not mm_cfg.VIRTUAL_HOSTS.has_key(urlhost):
             _urlhost = repr(urlhost)
             _emailhost = repr(emailhost)
             usage(1, _('The Mailman config file lacks a line mapping urlhost to emailhost:\n  add_virtualhost(%(_urlhost)s,\n                  %(_emailhost)s)'))
