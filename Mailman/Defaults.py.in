@@ -1,6 +1,6 @@
 # -*- python -*-
 
-# Copyright (C) 1998-2012 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2013 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -107,6 +107,10 @@ ALLOW_SITE_ADMIN_COOKIES = No
 # If the following is set to a non-zero value, web authentication cookies will
 # expire that many seconds following their last use.
 AUTHENTICATION_COOKIE_LIFETIME = 0
+
+# The following must be set to Yes to enable the 'author is list' feature.
+# See DEFAULT_AUTHOR_IS_LIST below.
+ALLOW_AUTHOR_IS_LIST = No
 
 # Form lifetime is set against Cross Site Request Forgery.
 FORM_LIFETIME = hours(1)
@@ -247,6 +251,13 @@ BROKEN_BROWSER_REPLACEMENTS = {'\x8b': '&#8249;',  # single left angle quote
                                '\xbe': '&#190;',   # > plus high order bit
                                '\xa2': '&#162;',   # " plus high order bit
                               }
+#
+# Shall the admindb held message summary display the grouping and sorting
+# option radio buttons?  Set this in mm_cfg.py to one of the following:
+# SSENDER -> Default to grouped and sorted by sender.
+# SSENDERTIME -> Default to grouped by sender and sorted by time.
+# STIME -> Default to ungrouped and sorted by time.
+DISPLAY_HELD_SUMMARY_SORT_BUTTONS = No
 
 
 
@@ -548,7 +559,10 @@ NNTP_REWRITE_DUPLICATE_HEADERS = [
 # footer or scrubbing attachments or even reply-to munging can break these
 # signatures.  It is generally felt that these signatures have value, even if
 # broken and even if the outgoing message is resigned.  However, some sites
-# may wish to remove these headers by setting this to Yes.
+# may wish to remove these headers.  Possible values and meanings are:
+# No, 0, False -> do not remove headers.
+# 1 -> remove headers only if the list's author_is_list setting is Yes.
+# Yes, 2, True -> always remove headers.
 REMOVE_DKIM_HEADERS = No
 
 # All `normal' messages which are delivered to the entire list membership go
@@ -1065,6 +1079,10 @@ DEFAULT_SEND_WELCOME_MSG = Yes
 # Send goodbye messages to unsubscribed members?
 DEFAULT_SEND_GOODBYE_MSG = Yes
 
+# Rewrite the From: header of posts replacing the posters address with
+# that of the list.  Also see REMOVE_DKIM_HEADERS above.
+DEFAULT_AUTHOR_IS_LIST = No
+
 # Wipe sender information, and make it look like the list-admin
 # address sends all messages
 DEFAULT_ANONYMOUS_LIST = No
@@ -1395,6 +1413,11 @@ SUBSCRIBE = 4
 UNSUBSCRIBE = 5
 ACCEPT = 6
 HOLD = 7
+
+# admindb summary sort button settings.  All must evaluate to True.
+SSENDER = 1
+SSENDERTIME = 2
+STIME = 3
 
 # Standard text field width
 TEXTFIELDWIDTH = 40

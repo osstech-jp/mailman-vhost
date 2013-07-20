@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.14\n"
-"POT-Creation-Date: Sun May 19 21:23:56 2013\n"
-"PO-Revision-Date: 2013-05-06 22:17+0330\n"
-"Last-Translator: Javad Hoseini <javad2000@gmail.com>\n"
+"POT-Creation-Date: Fri Jul 19 12:28:04 2013\n"
+"PO-Revision-Date: 2013-07-17 12:52+0330\n"
+"Last-Translator: \n"
 "Language-Team: fa <translate@ifsug.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -23,143 +23,150 @@ msgid " %(size)i bytes "
 msgstr " %(size)i بایت "
 
 #: Mailman/Archiver/HyperArch.py:289 Mailman/Archiver/HyperArch.py:292
-#: Mailman/Archiver/HyperArch.py:423 Mailman/Archiver/HyperArch.py:480
-#: Mailman/Archiver/HyperArch.py:589 Mailman/Archiver/HyperArch.py:1063
-#: Mailman/Archiver/HyperArch.py:1192
+#: Mailman/Archiver/HyperArch.py:423 Mailman/Archiver/HyperArch.py:481
+#: Mailman/Archiver/HyperArch.py:590 Mailman/Archiver/HyperArch.py:1064
+#: Mailman/Archiver/HyperArch.py:1193
 msgid " at "
 msgstr "در"
 
-#: Mailman/Archiver/HyperArch.py:509
+#: Mailman/Archiver/HyperArch.py:510
 msgid "Previous message:"
-msgstr "پیام قبلی:"
+msgstr "پیام پیشین:"
 
-#: Mailman/Archiver/HyperArch.py:531
+#: Mailman/Archiver/HyperArch.py:532
 msgid "Next message:"
 msgstr "پیام بعدی:"
 
-#: Mailman/Archiver/HyperArch.py:704 Mailman/Archiver/HyperArch.py:740
+#: Mailman/Archiver/HyperArch.py:705 Mailman/Archiver/HyperArch.py:741
 msgid "thread"
 msgstr "مبحث"
 
-#: Mailman/Archiver/HyperArch.py:705 Mailman/Archiver/HyperArch.py:741
+#: Mailman/Archiver/HyperArch.py:706 Mailman/Archiver/HyperArch.py:742
 msgid "subject"
 msgstr "موضوع"
 
-#: Mailman/Archiver/HyperArch.py:706 Mailman/Archiver/HyperArch.py:742
-msgid "author"
-msgstr "پدید آورنده:"
-
 #: Mailman/Archiver/HyperArch.py:707 Mailman/Archiver/HyperArch.py:743
+msgid "author"
+msgstr "پدیدآور"
+
+#: Mailman/Archiver/HyperArch.py:708 Mailman/Archiver/HyperArch.py:744
 msgid "date"
 msgstr "تاریخ"
 
-#: Mailman/Archiver/HyperArch.py:779
+#: Mailman/Archiver/HyperArch.py:780
 msgid "<P>Currently, there are no archives. </P>"
 msgstr "<P>اکنون هیچ بایگانی‌ای وجود ندارد </P>"
 
-#: Mailman/Archiver/HyperArch.py:817
+#: Mailman/Archiver/HyperArch.py:818
 msgid "Gzip'd Text%(sz)s"
 msgstr "متن فشرده شده با جی‌زیپ %(sz)s"
 
-#: Mailman/Archiver/HyperArch.py:822
+#: Mailman/Archiver/HyperArch.py:823
 msgid "Text%(sz)s"
 msgstr "متن%(sz)s"
 
-#: Mailman/Archiver/HyperArch.py:912
+# explanation: This is used when figuring where in the archive to store the current post.
+# A detailed message is created which looks like:
+# "figuring article archives\n"
+# res + "\n"
+# where res is the result of the determination. This message is intended to
+# be seen if some error occurs to help locate the problem.
+#: Mailman/Archiver/HyperArch.py:913
 msgid "figuring article archives\n"
-msgstr "شکل‌دهی بایگانی‌های مقاله\n"
+msgstr "در حال جای‌دهی بایگانی‌های مقاله\n"
 
-#: Mailman/Archiver/HyperArch.py:922
+#: Mailman/Archiver/HyperArch.py:923
 msgid "April"
 msgstr "آوریل"
 
-#: Mailman/Archiver/HyperArch.py:922
+#: Mailman/Archiver/HyperArch.py:923
 msgid "February"
 msgstr "فوریه"
 
-#: Mailman/Archiver/HyperArch.py:922
+#: Mailman/Archiver/HyperArch.py:923
 msgid "January"
 msgstr "ژانویه"
 
-#: Mailman/Archiver/HyperArch.py:922
+#: Mailman/Archiver/HyperArch.py:923
 msgid "March"
 msgstr "مارس"
 
-#: Mailman/Archiver/HyperArch.py:923
+#: Mailman/Archiver/HyperArch.py:924
 msgid "August"
 msgstr "اوت"
 
-#: Mailman/Archiver/HyperArch.py:923
+#: Mailman/Archiver/HyperArch.py:924
 msgid "July"
 msgstr "ژولای"
 
-#: Mailman/Archiver/HyperArch.py:923
+#: Mailman/Archiver/HyperArch.py:924
 msgid "June"
 msgstr "ژوئن"
 
-#: Mailman/Archiver/HyperArch.py:923 Mailman/i18n.py:107
+#: Mailman/Archiver/HyperArch.py:924 Mailman/i18n.py:107
 msgid "May"
 msgstr "می"
 
-#: Mailman/Archiver/HyperArch.py:924
+#: Mailman/Archiver/HyperArch.py:925
 msgid "December"
 msgstr "دسامبر"
 
-#: Mailman/Archiver/HyperArch.py:924
+#: Mailman/Archiver/HyperArch.py:925
 msgid "November"
 msgstr "نوامبر"
 
-#: Mailman/Archiver/HyperArch.py:924
+#: Mailman/Archiver/HyperArch.py:925
 msgid "October"
 msgstr "اکتبر"
 
-#: Mailman/Archiver/HyperArch.py:924
+#: Mailman/Archiver/HyperArch.py:925
 msgid "September"
 msgstr "سپتامبر"
 
-#: Mailman/Archiver/HyperArch.py:932
+#: Mailman/Archiver/HyperArch.py:933
 msgid "First"
 msgstr "نخستین"
 
-#: Mailman/Archiver/HyperArch.py:932
+#: Mailman/Archiver/HyperArch.py:933
 msgid "Fourth"
-msgstr "چهارم"
+msgstr "چهارمین"
 
-#: Mailman/Archiver/HyperArch.py:932
+#: Mailman/Archiver/HyperArch.py:933
 msgid "Second"
-msgstr "دوم"
+msgstr "دومین"
 
-#: Mailman/Archiver/HyperArch.py:932
+#: Mailman/Archiver/HyperArch.py:933
 msgid "Third"
-msgstr "سوم"
+msgstr "سومین"
 
-#: Mailman/Archiver/HyperArch.py:934
+#: Mailman/Archiver/HyperArch.py:935
 msgid "%(ord)s quarter %(year)i"
 msgstr "%(ord)s چهارک %(year)i"
 
-#: Mailman/Archiver/HyperArch.py:941
+#: Mailman/Archiver/HyperArch.py:942
 msgid "%(month)s %(year)i"
 msgstr "%(month)s %(year)i"
 
-#: Mailman/Archiver/HyperArch.py:946
+#: Mailman/Archiver/HyperArch.py:947
 msgid "The Week Of Monday %(day)i %(month)s %(year)i"
-msgstr "هفته‌ی دوشنبه %(day)i %(month)s %(year)i"
+msgstr "هفته‌ی از دوشنبه %(day)i %(month)s %(year)i"
 
-#: Mailman/Archiver/HyperArch.py:950
+#: Mailman/Archiver/HyperArch.py:951
 msgid "%(day)i %(month)s %(year)i"
 msgstr "%(day)i %(month)s %(year)i"
 
-#: Mailman/Archiver/HyperArch.py:1050
+# "computing threaded index": Is it: now(while) computing to produce the index which is based on threads? (like a list of thread names)
+#: Mailman/Archiver/HyperArch.py:1051
 msgid "Computing threaded index\n"
-msgstr "در حال پردازش نمایه‌ی پیچ‌دار\n"
+msgstr "در حال پردازش نمایه‌ی مبحثی\n"
 
-#: Mailman/Archiver/HyperArch.py:1315
+#: Mailman/Archiver/HyperArch.py:1316
 msgid "Updating HTML for article %(seq)s"
-msgstr "در حال به‌روزرسانی HTML  برای مقاله %(seq)s"
+msgstr "در حال روزآمدسازی زنگام برای مقاله %(seq)s"
 
-#: Mailman/Archiver/HyperArch.py:1322
+#: Mailman/Archiver/HyperArch.py:1323
 msgid "article file %(filename)s is missing!"
-msgstr "پرونده‌ی %(filename)s مقاله% گم شده است!"
+msgstr "پرونده‌ی مقاله  %(filename)s  گم شده است!"
 
 #: Mailman/Archiver/pipermail.py:180 Mailman/Archiver/pipermail.py:181
 msgid "No subject"
@@ -169,17 +176,22 @@ msgstr "بدون موضوع"
 msgid "Creating archive directory "
 msgstr "در حال ایجاد شاخه‌ی بایگانی"
 
+# Pickling is the process of creating a Python pickle which is a way of
+# representing a Python object that can be stored in a file. In this case
+# the complete message has the file name as in
+# Pickling archive state into .../archives/private/list/pipermail.pck
 #: Mailman/Archiver/pipermail.py:300
 msgid "Reloading pickled archive state"
-msgstr "در حال بارکردن دوباره‌ی وضعیت بایگانی ترشی انداخته شده"
+msgstr "در حال بازخوانی وضعیت بایگانی ترشی انداخته شده"
 
+# what is pickling?
 #: Mailman/Archiver/pipermail.py:327
 msgid "Pickling archive state into "
-msgstr "در حال ترشی انداختن وضعیت آرشیو به "
+msgstr "در حال ترشی انداختن وضعیت بایگانی به "
 
 #: Mailman/Archiver/pipermail.py:439
 msgid "Updating index files for archive [%(archive)s]"
-msgstr "در حال به‌روزرسانی پرونده‌های نمایه برای بایگانی [%(archive)s]"
+msgstr "در حال روزآمدسازی پرونده‌های نمایه برای بایگانی [%(archive)s]"
 
 #: Mailman/Archiver/pipermail.py:472
 msgid "  Thread"
@@ -191,7 +203,7 @@ msgstr "#%(counter)05d %(msgid)s"
 
 #: Mailman/Bouncer.py:45
 msgid "due to excessive bounces"
-msgstr "بخاطر پس خوردن‌های بیش از اندازه"
+msgstr "به‌خاطر واگشت‌های مفرط"
 
 #: Mailman/Bouncer.py:46
 msgid "by yourself"
@@ -199,7 +211,7 @@ msgstr "توسط خود شما"
 
 #: Mailman/Bouncer.py:47
 msgid "by the list administrator"
-msgstr "توسط مدیر فهرست"
+msgstr "توسط سرپرست فهرست"
 
 #: Mailman/Bouncer.py:48 Mailman/Bouncer.py:286
 #: Mailman/Commands/cmd_set.py:182
@@ -208,18 +220,18 @@ msgstr "به دلایل ناشناخته"
 
 #: Mailman/Bouncer.py:233
 msgid "disabled"
-msgstr "از کار انداخته شده"
+msgstr "از کار انداخته"
 
 #: Mailman/Bouncer.py:238
 msgid "Bounce action notification"
-msgstr "آگاه‌سازی از عمل پس‌خورد"
+msgstr "آگاه‌سازی از واگشت"
 
 #: Mailman/Bouncer.py:293
 msgid " The last bounce received from you was dated %(date)s"
-msgstr "آخرین مورد برگشتی که از شما دریافت شد مربوط بود به تاریخ:  %(date)s "
+msgstr "آخرین مورد واگشتی دریافت شده از شما در این تاریخ بود:  %(date)s "
 
 #: Mailman/Bouncer.py:322 Mailman/Deliverer.py:144
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:284
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:286
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:240
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
@@ -227,32 +239,32 @@ msgstr "(بدون موضوع)"
 
 #: Mailman/Bouncer.py:326
 msgid "[No bounce details are available]"
-msgstr "[هیچ جزئیات پس‌خوردی در دسترس نیست]"
+msgstr "[هیچ جزئیات واگشتی موجود نیست]"
 
 #: Mailman/Cgi/Auth.py:48
 msgid "Moderator"
-msgstr "ناظم"
+msgstr "میان‌دار"
 
 #: Mailman/Cgi/Auth.py:50
 msgid "Administrator"
-msgstr "مدیر"
+msgstr "سرپرست"
 
-#: Mailman/Cgi/admin.py:79 Mailman/Cgi/admindb.py:93 Mailman/Cgi/confirm.py:62
-#: Mailman/Cgi/edithtml.py:71 Mailman/Cgi/listinfo.py:55
-#: Mailman/Cgi/options.py:78 Mailman/Cgi/private.py:108
-#: Mailman/Cgi/rmlist.py:64 Mailman/Cgi/roster.py:59
-#: Mailman/Cgi/subscribe.py:63
+#: Mailman/Cgi/admin.py:79 Mailman/Cgi/admindb.py:113
+#: Mailman/Cgi/confirm.py:62 Mailman/Cgi/edithtml.py:71
+#: Mailman/Cgi/listinfo.py:55 Mailman/Cgi/options.py:78
+#: Mailman/Cgi/private.py:108 Mailman/Cgi/rmlist.py:64
+#: Mailman/Cgi/roster.py:59 Mailman/Cgi/subscribe.py:63
 msgid "No such list <em>%(safelistname)s</em>"
 msgstr "چنین فهرستی وجود ندارد <em>%(safelistname)s</em>"
 
-#: Mailman/Cgi/admin.py:108 Mailman/Cgi/admindb.py:109
+#: Mailman/Cgi/admin.py:108 Mailman/Cgi/admindb.py:129
 #: Mailman/Cgi/edithtml.py:91 Mailman/Cgi/private.py:135
 msgid "Authorization failed."
-msgstr "اجازه دادن شکست خورد"
+msgstr "اجازه‌دهی شکست خورد"
 
 #: Mailman/Cgi/admin.py:199
 msgid "The form lifetime has expired. (request forgery check)"
-msgstr "مهلت پر کردن این فرم منقضی شده است. (request forgery check)"
+msgstr "مهلت زمانی پرکردن این فرم گذشته است. (بررسی جعل درخواست)"
 
 #: Mailman/Cgi/admin.py:205
 msgid ""
@@ -262,15 +274,15 @@ msgid ""
 "                non-digest delivery or your mailing list will basically be\n"
 "                unusable."
 msgstr ""
-"تو تحویل هر دو نوع پیام‌های یک‌جا و غیر یک‌جا را از کار انداخته‌ای\n"
-"               این حالت ناهمساز است. باید یکی از حالت یک‌جا  یا \n"
-"               غیر یک‌جا را به کار بیاندازی. در غیر این‌صورت فهرستت\n"
-"               اساسا غیر قابل استفاده خواهد شد."
+"شما رساندن هر دو نوع پیام‌های یک‌جا و غیر یک‌جا را از کار انداخته‌اید\n"
+"               این حالت ناهمساز است. باید یکی از حالت‌های‌ یک‌جا  یا \n"
+"               غیر یک‌جا را به کار بیاندازید. در غیر این‌صورت فهرست شما\n"
+"               اساسا غیر قابل استفاده خواهد بود."
 
 #: Mailman/Cgi/admin.py:209 Mailman/Cgi/admin.py:217 Mailman/Cgi/admin.py:224
-#: Mailman/Cgi/admin.py:1497 Mailman/Gui/GUIBase.py:204
+#: Mailman/Cgi/admin.py:1497 Mailman/Gui/GUIBase.py:207
 msgid "Warning: "
-msgstr "اخطار: "
+msgstr "هشدار: "
 
 #: Mailman/Cgi/admin.py:214
 msgid ""
@@ -278,8 +290,8 @@ msgid ""
 "                off. Those people will not receive mail.\n"
 "                Affected member(s) %(dm)r."
 msgstr ""
-"شما اعضایی برای حالت یکجا دارید ولی حالت یکجا \n"
-"                خاموش می‌باشد. این اعضا، ایمیل دریافت نخواهند کرد.\n"
+"شما اعضایی برای حالت یک‌جا دارید ولی حالت یک‌جا \n"
+"                خاموش می‌باشد. این اعضا، رایانامه‌ای دریافت نخواهند کرد.\n"
 "                اعضای متاثر از این مشکل %(dm)r."
 
 #: Mailman/Cgi/admin.py:221
@@ -289,17 +301,17 @@ msgid ""
 "you\n"
 "                fix this problem. Affected member(s) %(rm)r."
 msgstr ""
-"شما اعضای عادی دارید ولی دریافت ایمیل در حالت غیر یکجا خاموش است.\n"
-"                turned آنها تا زمانی که این مشکل را حل نمایید ایمیل‌های یکجا\n"
+"شما اعضای عادی دارید ولی دریافت رایانامه در حالت غیر یک‌جا(عادی) خاموش است.\n"
+"                 آنها تا زمانی که این مشکل را حل نکنید رایانامه‌های غیر یک‌جا\n"
 "                دریافت خواهند کرد. اعضای متاثر از این مشکل %(rm)r."
 
 #: Mailman/Cgi/admin.py:246
 msgid "%(hostname)s mailing lists - Admin Links"
-msgstr "فهرست پستی %(hostname)s - پیوندهای مدیر"
+msgstr "فهرست پستی %(hostname)s - پیوندهای سرپرست"
 
 #: Mailman/Cgi/admin.py:277 Mailman/Cgi/listinfo.py:105
 msgid "Welcome!"
-msgstr "خوش‌آمدی!"
+msgstr "خوش‌آمدید!"
 
 #: Mailman/Cgi/admin.py:280 Mailman/Cgi/listinfo.py:108
 msgid "Mailman"
@@ -310,8 +322,8 @@ msgid ""
 "<p>There currently are no publicly-advertised %(mailmanlink)s\n"
 "            mailing lists on %(hostname)s."
 msgstr ""
-"<p>اکنون هیچ فهرست پستی %(mailmanlink)s عمومی تبلیغ شده‌ای بر\n"
-"           روی %(hostname)s نیست."
+"<p>اکنون هیچ فهرست پستی عمومی %(mailmanlink)s تبلیغ‌شده‌ای \n"
+"بر روی %(hostname)s نیست."
 
 #: Mailman/Cgi/admin.py:290
 msgid ""
@@ -319,9 +331,9 @@ msgid ""
 "            %(mailmanlink)s mailing lists on %(hostname)s.  Click on a list\n"
 "            name to visit the configuration pages for that list."
 msgstr ""
-"<p>در زیر مجموعه‌ی فهرست پستی‌های %(mailmanlink)s عمومی تبلیغ شده\n"
+"<p>در زیر مجموعه‌ی فهرست‌های پستی %(mailmanlink)s عمومی تبلیغ شده\n"
 "          بر روی %(hostname)s آمده است. بر روی فهرستی\n"
-"            کلیک کن تا صفحه‌های تنظیمات آن فهرست را ببینی."
+"            کلیک کنید تا صفحه‌های تنظیمات آن فهرست را ببینید."
 
 #: Mailman/Cgi/admin.py:297
 msgid "right "
@@ -338,13 +350,12 @@ msgid ""
 "\n"
 "        <p>General list information can be found at "
 msgstr ""
-"برای دیدن صفحه‌ی تنظیمات مدیران برای یک فهرست\n"
-"        تبلیغ نشده، یک آدرس وبی مثل این یکی باز کن ولی یک '/' و \n"
-"        نام %(extra)s فهرست را به آن بیافزا. اگر توانایی و مجوز لازم را "
-"داری\n"
-"        همچنین می‌توانی <a href=\"%(creatorurl)s\">یک فهرست جدید بسازی</a>.\n"
+"برای دیدن صفحه‌ی تنظیمات سرپرست‌ها برای یک فهرست\n"
+"        تبلیغ نشده، یک نشانی وبی مثل این یکی باز کنید ولی یک '/' و \n"
+"        نام %(extra)s فهرست را به آن بیافزایید. اگر اجازه لازم را دارید\n"
+"        همچنین می‌توانید <a href=\"%(creatorurl)s\">یک فهرست جدید بسازی</a>.\n"
 "\n"
-"        <p>اطلاعات کلی فهرست را می‌توان یافت در"
+"        <p>اطلاعات عمومی فهرست را می‌توان این‌جا دید:"
 
 #: Mailman/Cgi/admin.py:306
 msgid "the mailing list overview page"
@@ -352,7 +363,7 @@ msgstr "صفحه‌ی نمای کلی فهرست پستی"
 
 #: Mailman/Cgi/admin.py:308
 msgid "<p>(Send questions and comments to "
-msgstr "<p>(سوال‌ها و نظرات را بفرست به"
+msgstr "<p>(سوال‌ها و نظرات را بفرستید به"
 
 #: Mailman/Cgi/admin.py:318 Mailman/Cgi/listinfo.py:140 cron/mailpasswds:216
 msgid "List"
@@ -361,15 +372,15 @@ msgstr "فهرست"
 #: Mailman/Cgi/admin.py:319 Mailman/Cgi/admin.py:587
 #: Mailman/Cgi/listinfo.py:141
 msgid "Description"
-msgstr "شرح"
+msgstr "توضیح"
 
 #: Mailman/Cgi/admin.py:325 Mailman/Cgi/listinfo.py:147 bin/list_lists:124
 msgid "[no description available]"
-msgstr "[شرحی موجود نیست]"
+msgstr "[توضیحی موجود نیست]"
 
 #: Mailman/Cgi/admin.py:359
 msgid "No valid variable name found."
-msgstr "هیچ نام متغیر معتبری یافت نشد."
+msgstr "هیچ نام متغیر معتبری پیدا نشد."
 
 #: Mailman/Cgi/admin.py:369
 msgid ""
@@ -381,7 +392,7 @@ msgstr ""
 
 #: Mailman/Cgi/admin.py:376
 msgid "Mailman %(varname)s List Option Help"
-msgstr "راهنمای گزینه‌ی فهرست  %(varname)s میل‌من"
+msgstr "راهنمای گزینه‌ی %(varname)s فهرست میل‌من"
 
 #: Mailman/Cgi/admin.py:394
 msgid ""
@@ -393,45 +404,48 @@ msgid ""
 "    "
 msgstr ""
 "<em><strong>هشدار:</strong> تغییر این گزینه اینجا می‌تواند باعث شود که\n"
-"    صفحه‌های نمایش دیگر ناهماهنگ باشند. مطمئن شو که صفحه‌های دیگر که این\n"
-"    گزینه را برای فهرست پستی نمایش می‌دهند دوباره بار کنی. همچنین می‌توانی\n"
+"    صفحه‌های نمایش دیگر ناهمگام باشند. مطمئن شوید که تمام صفحه‌های دیگری که "
+"این\n"
+"    گزینه را برای این فهرست پستی نمایش می‌دهند بازخوانی کنید. همچنین "
+"می‌توانید\n"
 "    "
 
 #: Mailman/Cgi/admin.py:405
 msgid "return to the %(categoryname)s options page."
 msgstr "بازگشت به صفحه‌ی گزینه‌های %(categoryname)s"
 
+# LISTNAME Administration (General Options)
 #: Mailman/Cgi/admin.py:420
 msgid "%(realname)s Administration (%(label)s)"
-msgstr "مدیریت (%(label)s) %(realname)s "
+msgstr "(%(label)s) سرپرستی %(realname)s"
 
 #: Mailman/Cgi/admin.py:421
 msgid "%(realname)s mailing list administration<br>%(label)s Section"
-msgstr "مدیریت فهرست پستی %(realname)s <br> بخش %(label)s"
+msgstr "سرپرستی فهرست پستی %(realname)s <br> بخش %(label)s"
 
 #: Mailman/Cgi/admin.py:438
 msgid "Configuration Categories"
-msgstr "دسته‌های پیکربندی:"
+msgstr "رسته‌های پیکربندی:"
 
 #: Mailman/Cgi/admin.py:439
 msgid "Other Administrative Activities"
-msgstr "دیگر فعالیت‌های مدیریتی"
+msgstr "دیگر فعالیت‌های سرپرستی"
 
 #: Mailman/Cgi/admin.py:443
 msgid "Tend to pending moderator requests"
-msgstr "بررسی درخواست‌های در انتظار برای ناظم شدن"
+msgstr "بررسی درخواست‌های در انتظار برای میان‌دار شدن"
 
 #: Mailman/Cgi/admin.py:445
 msgid "Go to the general list information page"
-msgstr "رفتن به صفحه‌ی اطلاعات کلی فهرست"
+msgstr "رفتن به صفحه‌ی اطلاعات عمومی فهرست"
 
 #: Mailman/Cgi/admin.py:447
 msgid "Edit the public HTML pages and text files"
-msgstr "پرونده‌های متنی و صفحه‌های HTML عمومی را ویرایش کن"
+msgstr "ویرایش پرونده‌های متنی و صفحه‌های زنگام عمومی"
 
 #: Mailman/Cgi/admin.py:449
 msgid "Go to list archives"
-msgstr "برو به بایگانی‌های فهرست"
+msgstr "رفتن به بایگانی‌های فهرست"
 
 #: Mailman/Cgi/admin.py:455
 msgid "Delete this mailing list"
@@ -441,34 +455,34 @@ msgstr "حذف این فهرست پستی"
 msgid " (requires confirmation)<br>&nbsp;<br>"
 msgstr "(نیاز به تایید دارد)<br>&nbsp;<br>"
 
-#: Mailman/Cgi/admin.py:462 Mailman/Cgi/admindb.py:195
-#: Mailman/Cgi/admindb.py:272
+#: Mailman/Cgi/admin.py:462 Mailman/Cgi/admindb.py:215
+#: Mailman/Cgi/admindb.py:292
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: Mailman/Cgi/admin.py:506
 msgid "Emergency moderation of all list traffic is enabled"
-msgstr "ناظم‌گری اضطراری برای همه‌ی ترافیک فهرست، فعال شد"
+msgstr "میان‌داری اضطراری برای همه‌ی ترافیک فهرست، فعال است"
 
 #: Mailman/Cgi/admin.py:517
 msgid ""
 "Make your changes in the following section, then submit them\n"
 "        using the <em>Submit Your Changes</em> button below."
 msgstr ""
-"تغییرات خود را در بخش زیر انجام ده، سپس آن‌ها را\n"
-"توسط دکمه‌ی<em>تغییرات خود را بفرست</em>، بفرست."
+"تغییرات مورد نظر خود را در بخش زیر انجام دهید، سپس آن‌ها را\n"
+"توسط دکمه‌ی<em>فرستادن تغییرات</em>، بفرستید."
 
 #: Mailman/Cgi/admin.py:535
 msgid "Additional Member Tasks"
-msgstr "اقدامات جنبی مربوط به اعضا"
+msgstr "دیگر وظایف عضو"
 
 #: Mailman/Cgi/admin.py:541
 msgid ""
 "<li>Set everyone's moderation bit, including\n"
 "            those members not currently visible"
 msgstr ""
-"<li>بیت ناظمگری همه را مشخص کن، حتی\n"
-"            آن اعضایی که اکنون قابل دیدن، نیستند"
+"<li>بیت میان‌داری همه را مشخص کن، حتی\n"
+"            آن اعضایی که الان دیده نمی‌شوند"
 
 #: Mailman/Cgi/admin.py:545
 msgid "Off"
@@ -500,11 +514,11 @@ msgstr "<em>متن زیر را وارد کنید، یا ....</em><br>"
 
 #: Mailman/Cgi/admin.py:702
 msgid "<br><em>...specify a file to upload</em><br>"
-msgstr "<br><em>یک پرونده را برای بارگذاری مشخص کن...</em><br>"
+msgstr "<br><em>یک پرونده را برای بارگذاری مشخص کنید...</em><br>"
 
 #: Mailman/Cgi/admin.py:728 Mailman/Cgi/admin.py:731
 msgid "Topic %(i)d"
-msgstr "موضوع %(i)d"
+msgstr "سرفصل %(i)d"
 
 #: Mailman/Cgi/admin.py:732 Mailman/Cgi/admin.py:782
 msgid "Delete"
@@ -512,15 +526,15 @@ msgstr "حذف"
 
 #: Mailman/Cgi/admin.py:733
 msgid "Topic name:"
-msgstr "نام موضوع"
+msgstr "نام سرفصل:"
 
 #: Mailman/Cgi/admin.py:735
 msgid "Regexp:"
-msgstr "عبارت منظم:"
+msgstr "عبارت باقاعده:"
 
 #: Mailman/Cgi/admin.py:738 Mailman/Cgi/options.py:1053
 msgid "Description:"
-msgstr "شرح:"
+msgstr "توضیح:"
 
 #: Mailman/Cgi/admin.py:742 Mailman/Cgi/admin.py:800
 msgid "Add new item..."
@@ -536,54 +550,54 @@ msgstr "...بعد از این یکی"
 
 #: Mailman/Cgi/admin.py:778 Mailman/Cgi/admin.py:781
 msgid "Spam Filter Rule %(i)d"
-msgstr "قانون پالایه‌ی هرزنامه %(i)d"
+msgstr "قاعده‌ی پالایه‌ی هرزنامه %(i)d"
 
 #: Mailman/Cgi/admin.py:783
 msgid "Spam Filter Regexp:"
-msgstr "عبارت منظم برای پالایه‌ی هرزنامه"
+msgstr "عبارت با قاعده برای پالایه‌ی هرزنامه"
 
-#: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:327
-#: Mailman/Cgi/admindb.py:386 Mailman/Cgi/admindb.py:431
-#: Mailman/Cgi/admindb.py:671
+#: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:347
+#: Mailman/Cgi/admindb.py:406 Mailman/Cgi/admindb.py:460
+#: Mailman/Cgi/admindb.py:701
 msgid "Defer"
 msgstr "به‌تاخیر‌انداختن"
 
-#: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:329
-#: Mailman/Cgi/admindb.py:388 Mailman/Cgi/admindb.py:431
-#: Mailman/Cgi/admindb.py:671 Mailman/Gui/ContentFilter.py:37
+#: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:349
+#: Mailman/Cgi/admindb.py:408 Mailman/Cgi/admindb.py:460
+#: Mailman/Cgi/admindb.py:701 Mailman/Gui/ContentFilter.py:37
 #: Mailman/Gui/Privacy.py:216 Mailman/Gui/Privacy.py:297
 msgid "Reject"
-msgstr "رد"
+msgstr "پس‌زدن"
 
 #: Mailman/Cgi/admin.py:794 Mailman/Gui/Privacy.py:216
 #: Mailman/Gui/Privacy.py:297
 msgid "Hold"
 msgstr "نگه داشتن"
 
-#: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:330
-#: Mailman/Cgi/admindb.py:389 Mailman/Cgi/admindb.py:431
-#: Mailman/Cgi/admindb.py:671 Mailman/Commands/cmd_confirm.py:93
+#: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:350
+#: Mailman/Cgi/admindb.py:409 Mailman/Cgi/admindb.py:460
+#: Mailman/Cgi/admindb.py:701 Mailman/Commands/cmd_confirm.py:93
 #: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:216
 #: Mailman/Gui/Privacy.py:297
 msgid "Discard"
 msgstr "رد کردن"
 
-#: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:431
+#: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:460
 #: Mailman/Gui/Privacy.py:297
 msgid "Accept"
-msgstr "پذیرش"
+msgstr "پذیرفتن"
 
-#: Mailman/Cgi/admin.py:798 Mailman/Cgi/admindb.py:677
+#: Mailman/Cgi/admin.py:798 Mailman/Cgi/admindb.py:707
 msgid "Action:"
 msgstr "کنش:"
 
 #: Mailman/Cgi/admin.py:810
 msgid "Move rule up"
-msgstr "جابه‌جایی قانون به بالا"
+msgstr "جابه‌جایی قاعده به بالا"
 
 #: Mailman/Cgi/admin.py:811
 msgid "Move rule down"
-msgstr "جابه‌جایی قانون به پایین"
+msgstr "جابه‌جایی قاعده به پایین"
 
 #: Mailman/Cgi/admin.py:844
 msgid "<br>(Edit <b>%(varname)s</b>)"
@@ -601,11 +615,11 @@ msgid ""
 msgstr ""
 "<br><em><strong>یادداشت:</strong>\n"
 "        تنظیم این مقدار بی‌درنگ باعث کنش می‌شود اما \n"
-"        وضعیت پایدار را تغییر نمی‌دهد."
+"        وضعیت دائمی را تغییر نمی‌دهد."
 
 #: Mailman/Cgi/admin.py:867
 msgid "Mass Subscriptions"
-msgstr "آبونمان کردن گروهی"
+msgstr "اشتراک‌های گروهی"
 
 #: Mailman/Cgi/admin.py:874
 msgid "Mass Removals"
@@ -645,7 +659,7 @@ msgstr "لغو اشتراک"
 
 #: Mailman/Cgi/admin.py:992
 msgid "member address<br>member name"
-msgstr "آدرس عضو<br>نام عضو"
+msgstr "نشانی عضو<br>نام عضو"
 
 #: Mailman/Cgi/admin.py:993
 msgid "hide"
@@ -653,7 +667,7 @@ msgstr "پنهان کردن"
 
 #: Mailman/Cgi/admin.py:993
 msgid "mod"
-msgstr "ناظم"
+msgstr "میان‌داری"
 
 #: Mailman/Cgi/admin.py:994
 msgid "nomail<br>[reason]"
@@ -661,11 +675,11 @@ msgstr "بدون رایانامه<br>[دلیل]"
 
 #: Mailman/Cgi/admin.py:995
 msgid "ack"
-msgstr "اطلاع رسانی"
+msgstr "تاییدیه"
 
 #: Mailman/Cgi/admin.py:995
 msgid "not metoo"
-msgstr "من نه"
+msgstr "خودم نه"
 
 #: Mailman/Cgi/admin.py:996
 msgid "nodupes"
@@ -687,21 +701,24 @@ msgstr "زبان"
 msgid "?"
 msgstr "؟"
 
+# user
 #: Mailman/Cgi/admin.py:1010
 msgid "U"
 msgstr "ع"
 
+# administrator
 #: Mailman/Cgi/admin.py:1011
 msgid "A"
-msgstr "یک"
+msgstr "س"
 
+# bounce
 #: Mailman/Cgi/admin.py:1012
 msgid "B"
-msgstr "پ"
+msgstr "و"
 
 #: Mailman/Cgi/admin.py:1084
 msgid "<b>unsub</b> -- Click on this to unsubscribe the member."
-msgstr "<b>لغو اشتراک</b> -- بر روی این کلیک کن تا اشتراک عضو لغو شود"
+msgstr "<b>لغو اشتراک</b> -- بر روی این کلیک کنید تا اشتراک عضو لغو شود"
 
 #: Mailman/Cgi/admin.py:1086
 msgid ""
@@ -709,16 +726,16 @@ msgid ""
 "        set, postings from them will be moderated, otherwise they will be\n"
 "        approved."
 msgstr ""
-"<b>ناظم</b> -- پرچم ناظم‌گری شخص کاربر، اگر این گزینه\n"
-"        تنظیم شده باشد، تمام فرستاده‌های آن‌ها نیاز به میان‌جی‌گری(تایید) خواهد "
+"<b>میان‌داری</b> -- پرچم میان‌داری شخصی کاربر، که اگر \n"
+"        تنظیم شده باشد، تمام فرستاده‌های آن‌ها نیاز به میان‌داری(تایید) خواهد "
 "داشت.\n"
-"        مگر این‌که تایید شوند."
+"        در غیر این‌صورت خودکار تایید خواهند شد."
 
 #: Mailman/Cgi/admin.py:1090
 msgid ""
 "<b>hide</b> -- Is the member's address concealed on\n"
 "        the list of subscribers?"
-msgstr "<b>پنهان کردن</b> -- آیا آدرس این عضو در فهرست مشترکان پنهان باشد؟"
+msgstr "<b>پنهان کردن</b> -- آیا نشانی این عضو در فهرست مشترک‌ها پنهان باشد؟"
 
 #: Mailman/Cgi/admin.py:1092
 msgid ""
@@ -743,11 +760,11 @@ msgstr ""
 "        خلاصه‌ای برای توضیح دلیل این غیرفعال بودن، ارایه می‌شود:\n"
 "            <ul><li><b>ع</b> -- رساندن توسط خود عضو از صفحه‌ی گزینه‌های شخصی\n"
 "                    عضو، غیر فعال شده است.\n"
-"                <li><b>م</b> -- رساندن توسط مدیر لیست\n"
+"                <li><b>م</b> -- رساندن توسط سرپرست فهرست\n"
 "                    غیر فعال شده است.\n"
-"                <li><b>پ</b> -- رساندن توسط خود سیستم به دلیل پس‌خورد‌های "
-"بیش‌از حد\n"
-"                    از آدرس عضو مورد نظر، غیر فعال شده است.\n"
+"                <li><b>پ</b> -- رساندن توسط خود سیستم به دلیل واگشت‌های "
+"زیادی\n"
+"                    از نشانی عضو، غیر فعال شده است.\n"
 "                <li><b>؟</b> -- دلیل غیرفعال بودن رساندن پیام‌ها ناشناخته "
 "است.\n"
 "                    این حالت برای تمام عضویت‌هایی است که در نسخه‌های\n"
@@ -767,7 +784,7 @@ msgid ""
 "<b>not metoo</b> -- Does the member want to avoid copies of their\n"
 "        own postings?"
 msgstr ""
-"<b>من نه</b> -- آیا عضو می‌خواهد که رونوشت نامه‌هایش برای خودش فرستاده نشود؟"
+"<b>خودم نه</b> -- آیا عضو می‌خواهد که رونوشت نامه‌هایش برای خودش فرستاده نشود؟"
 
 #: Mailman/Cgi/admin.py:1113
 msgid ""
@@ -782,7 +799,7 @@ msgid ""
 "<b>digest</b> -- Does the member get messages in digests?\n"
 "        (otherwise, individual messages)"
 msgstr ""
-"<b>یک‌جا</b> --  آیا عضو پیام‌ها را به صورت یک جا دریافت می‌کند؟\n"
+"<b>خلاصه</b> --  آیا عضو پیام‌ها را یک‌جا دریافت می‌کند؟\n"
 "        (در غیر این‌صورت، پیام‌های تکی)"
 
 #: Mailman/Cgi/admin.py:1119
@@ -790,7 +807,8 @@ msgid ""
 "<b>plain</b> -- If getting digests, does the member get plain\n"
 "        text digests?  (otherwise, MIME)"
 msgstr ""
-"<b>ساده</b> -- در صورت گرفتن یک‌جای پیام‌ها ، آیا عضو پیام‌ها را یک‌جا به صورت \n"
+"<b>ساده</b> -- در صورت گرفتن پیام‌ها به طور یک‌جا ، آیا عضو پیام‌های یک‌جا را به "
+"صورت \n"
 "        متن ساده دریافت می‌کند؟  (در غیراین‌صورت, MIME)"
 
 #: Mailman/Cgi/admin.py:1121
@@ -844,20 +862,21 @@ msgstr "پیام خوش‌آمد‌گویی به مشترک‌های جدید ب
 #: Mailman/Gui/Bounce.py:155 Mailman/Gui/ContentFilter.py:74
 #: Mailman/Gui/ContentFilter.py:116 Mailman/Gui/ContentFilter.py:120
 #: Mailman/Gui/Digest.py:46 Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84
-#: Mailman/Gui/Digest.py:89 Mailman/Gui/General.py:157
-#: Mailman/Gui/General.py:163 Mailman/Gui/General.py:241
-#: Mailman/Gui/General.py:268 Mailman/Gui/General.py:295
-#: Mailman/Gui/General.py:306 Mailman/Gui/General.py:309
-#: Mailman/Gui/General.py:319 Mailman/Gui/General.py:324
-#: Mailman/Gui/General.py:330 Mailman/Gui/General.py:350
-#: Mailman/Gui/General.py:382 Mailman/Gui/General.py:405
-#: Mailman/Gui/General.py:422 Mailman/Gui/NonDigest.py:45
-#: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
-#: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:116 Mailman/Gui/Privacy.py:149
-#: Mailman/Gui/Privacy.py:197 Mailman/Gui/Privacy.py:312
-#: Mailman/Gui/Privacy.py:331 Mailman/Gui/Usenet.py:52
-#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/Digest.py:89 Mailman/Gui/General.py:160
+#: Mailman/Gui/General.py:171 Mailman/Gui/General.py:177
+#: Mailman/Gui/General.py:255 Mailman/Gui/General.py:282
+#: Mailman/Gui/General.py:309 Mailman/Gui/General.py:320
+#: Mailman/Gui/General.py:323 Mailman/Gui/General.py:333
+#: Mailman/Gui/General.py:338 Mailman/Gui/General.py:344
+#: Mailman/Gui/General.py:364 Mailman/Gui/General.py:396
+#: Mailman/Gui/General.py:419 Mailman/Gui/General.py:436
+#: Mailman/Gui/NonDigest.py:45 Mailman/Gui/NonDigest.py:53
+#: Mailman/Gui/NonDigest.py:140 Mailman/Gui/NonDigest.py:162
+#: Mailman/Gui/Privacy.py:110 Mailman/Gui/Privacy.py:116
+#: Mailman/Gui/Privacy.py:149 Mailman/Gui/Privacy.py:197
+#: Mailman/Gui/Privacy.py:312 Mailman/Gui/Privacy.py:331
+#: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
+#: Mailman/Gui/Usenet.py:105
 msgid "No"
 msgstr "خیر"
 
@@ -872,30 +891,30 @@ msgstr "خیر"
 #: Mailman/Gui/ContentFilter.py:74 Mailman/Gui/ContentFilter.py:116
 #: Mailman/Gui/ContentFilter.py:120 Mailman/Gui/Digest.py:46
 #: Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84 Mailman/Gui/Digest.py:89
-#: Mailman/Gui/General.py:157 Mailman/Gui/General.py:163
-#: Mailman/Gui/General.py:241 Mailman/Gui/General.py:268
-#: Mailman/Gui/General.py:295 Mailman/Gui/General.py:306
-#: Mailman/Gui/General.py:309 Mailman/Gui/General.py:319
-#: Mailman/Gui/General.py:324 Mailman/Gui/General.py:330
-#: Mailman/Gui/General.py:350 Mailman/Gui/General.py:382
-#: Mailman/Gui/General.py:405 Mailman/Gui/General.py:422
-#: Mailman/Gui/NonDigest.py:45 Mailman/Gui/NonDigest.py:53
-#: Mailman/Gui/NonDigest.py:140 Mailman/Gui/NonDigest.py:162
-#: Mailman/Gui/Privacy.py:110 Mailman/Gui/Privacy.py:116
-#: Mailman/Gui/Privacy.py:149 Mailman/Gui/Privacy.py:197
-#: Mailman/Gui/Privacy.py:312 Mailman/Gui/Privacy.py:331
-#: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
-#: Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/General.py:160 Mailman/Gui/General.py:171
+#: Mailman/Gui/General.py:177 Mailman/Gui/General.py:255
+#: Mailman/Gui/General.py:282 Mailman/Gui/General.py:309
+#: Mailman/Gui/General.py:320 Mailman/Gui/General.py:323
+#: Mailman/Gui/General.py:333 Mailman/Gui/General.py:338
+#: Mailman/Gui/General.py:344 Mailman/Gui/General.py:364
+#: Mailman/Gui/General.py:396 Mailman/Gui/General.py:419
+#: Mailman/Gui/General.py:436 Mailman/Gui/NonDigest.py:45
+#: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
+#: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
+#: Mailman/Gui/Privacy.py:116 Mailman/Gui/Privacy.py:149
+#: Mailman/Gui/Privacy.py:197 Mailman/Gui/Privacy.py:312
+#: Mailman/Gui/Privacy.py:331 Mailman/Gui/Usenet.py:52
+#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "Yes"
 msgstr "بله"
 
 #: Mailman/Cgi/admin.py:1185
 msgid "Send notifications of new subscriptions to the list owner?"
-msgstr "پیام آگاه‌سازی از مشترک‌های جدید را به مالک فهرست بفرستم؟"
+msgstr "پیام آگاه‌سازی از اشتراک‌های جدید را به مالک فهرست بفرستم؟"
 
 #: Mailman/Cgi/admin.py:1193 Mailman/Cgi/admin.py:1234
 msgid "Enter one address per line below..."
-msgstr "در زیر، در هر خط یک آدرس وارد کنید..."
+msgstr "در زیر، در هر خط یک نشانی وارد کنید..."
 
 #: Mailman/Cgi/admin.py:1198 Mailman/Cgi/admin.py:1239
 msgid "...or specify a file to upload:"
@@ -909,20 +928,20 @@ msgid ""
 "    one blank line at the end..."
 msgstr ""
 "در زیر، متن اضافی را وارد کنید، که می‌خواهید به پیام دعوت\n"
-"    یا پیام آگاه‌سازی از اشتراک اضافه‌شود. در انتها دست‌کم یک خط خالی    قرار "
-"دهید..."
+"    یا پیام آگاه‌سازی از اشتراک بیافزایید. در انتها دست‌کم یک خط خالی \n"
+"قرار دهید..."
 
 #: Mailman/Cgi/admin.py:1218
 msgid "Send unsubscription acknowledgement to the user?"
-msgstr "تاییدیه‌ی لغو اشتراک به کاربر بفرستم؟"
+msgstr "تاییدیه‌ی لغو اشتراک به کاربر فرستاده شود؟"
 
 #: Mailman/Cgi/admin.py:1226
 msgid "Send notifications to the list owner?"
-msgstr "پیام آگاه‌سازی به مالک لیست بفرستم؟"
+msgstr "پیام آگاه‌سازی به مالک فهرست بفرستم؟"
 
 #: Mailman/Cgi/admin.py:1248
 msgid "Change list ownership passwords"
-msgstr "گذرواژه‌ی مالکیت فهرست را تغییر بده"
+msgstr "تغییر گذرواژه‌ها‌ی مالکیت فهرست"
 
 #: Mailman/Cgi/admin.py:1251
 msgid ""
@@ -943,37 +962,37 @@ msgid ""
 "and also provide the email addresses of the list moderators in the\n"
 "<a href=\"%(adminurl)s/general\">general options section</a>."
 msgstr ""
-"<em>مدیران فهرست</em> کسانی هستند که کنترل کاملی بر\n"
-"تمام پارامترهای این فهرست ایمیلی دارند.  آنها قادرند هر گونه\n"
-"تنظیمی را روی متغیرهای موجود در این صفحات مدیریتی اعمال نمایند.\n"
+"<em>سرپرست‌های فهرست</em> کسانی هستند که کنترل کاملی بر\n"
+"تمام پارامترهای این فهرست پستی دارند.  آنها می‌توانند تمام متغیرهایی\n"
+"را که در صفحات سرپرستی موجود‌اند، تغییر دهند.\n"
 "\n"
-"<p> <em>ناظم‌های لیست</em> اختیارات کمتری دارند. آنها قادر نیستند\n"
-"هیچ متغیری را در تنظیمات فهرست عوض کنند، اما اجازه دارند \n"
-"به تقاضاهای منتظر پاسخ مدیریتی جواب دهند و مثلاً اقدام به تایید یا رد \n"
-"تقاضاهای عضویت یا and پست‌های منتظر رسیدگی نمایند.\n"
-"طبیعتاً <em>مدیران فهرست</em> نیز می‌توانند به تقاضاهای منتظر پاسخ، رسیدگی "
-"کنند.\n"
+"<p> <em>میان‌دارهای فهرست</em> اختیارات محدودتری دارند. آنها نمی‌توانند\n"
+"هیچ متغیری را در تنظیمات فهرست تغییر دهند اما اجازه دارند \n"
+"به درخواست‌های سرپرستیِ معطل پاسخ دهند، از جمله تایید یا پس‌زدن \n"
+"درخواست‌های اشتراک یا رسیدگی به فرستاده‌های نگه‌داشته شده.\n"
+"طبیعتاً <em>سرپرست‌های فهرست</em>هم می‌توانند به درخواست‌های معطل، رسیدگی کنند.\n"
 "\n"
-"<p>جهت تقسیم وظایف سرپرستی گروه بین مدیران و\n"
-"ناظم ها، لازم است یک پسورد جداگانه‌ی مخصوص ناظم‌ها در اینجا تنظیم کنید.\n"
-"و همچنین آدرس ایمیل مدیران لیست را نیز در اینجا درج نمایید\n"
-"<a href=\"%(adminurl)s/general\">بخش تنظیمات کلی</a>."
+"<p>برای تقسیم وظایف مالکیت فهرست بین سرپرست‌ها و میان‌دارها\n"
+"میان‌دارها، لازم است یک گذرواژه‌ی جداگانه‌ی مخصوص میان‌دارها در خانه‌ی زیر وارد "
+"کنید.\n"
+"و همچنین نشانی رایانامه‌ی میان‌دارهای فهرست را نیز در اینجا وارد کنید:\n"
+" <a href=\"%(adminurl)s/general\">بخش تنظیمات عمومی</a>."
 
 #: Mailman/Cgi/admin.py:1270
 msgid "Enter new administrator password:"
-msgstr "گذرواژه‌ی جدید برای مدیر وارد کن:"
+msgstr "گذرواژه‌ی جدیدی برای سرپست وارد کنید:"
 
 #: Mailman/Cgi/admin.py:1272
 msgid "Confirm administrator password:"
-msgstr "گذرواژه‌ی مدیر را تایید کن:"
+msgstr "گذرواژه‌ی سرپرست را تایید کنید:"
 
 #: Mailman/Cgi/admin.py:1277
 msgid "Enter new moderator password:"
-msgstr "گذرواژه‌ی جدید برای ناظم وارد کن:"
+msgstr "گذرواژه‌ی جدیدی برای میان‌دار وارد کنید:"
 
 #: Mailman/Cgi/admin.py:1279
 msgid "Confirm moderator password:"
-msgstr "گذرواژه‌ی ناظم را تایید کن:"
+msgstr "گذرواژه‌ی میان‌دار را تایید کنید:"
 
 #: Mailman/Cgi/admin.py:1283
 msgid ""
@@ -985,37 +1004,37 @@ msgid ""
 "no other."
 msgstr ""
 "علاوه بر گذرواژه‌های بالا می‌توانید گذرواژه‌ای نیز برای \n"
-"پیش تایید پست‌های فرستادن شده به این فهرست تعیین نمایید. هر یک از دو گذرواژه "
-"ی مذکور\n"
-"می توانند در سربرگ Approved: و یا در اولین خط متن به عنوان سربرگ کاذب\n"
-"برای پست هایی استفاده شوند که در غیر این صورت برای اقدامات نظارتی نگه داشته "
-"می شود.\n"
+"پیش‌تایید پست‌های فرستاده شده به این فهرست تعیین کنید. هر یک از دو گذرواژه‌ی "
+"بالا\n"
+"می توانند در Approved: سربرگ و یا در اولین خط متن به عنوان شبه‌سربرگ \n"
+"برای پیش‌تایید پست‌هایی استفاده شوند که وگرنه برای اقدامات میان‌داری نگه داشته "
+"می شوند.\n"
 "اگر گذرواژه‌ی زیر تعیین شود، تنها به همین مقصود قابل استفاده خواهد بود و "
 "کاربرد دیگری ندارد."
 
 #: Mailman/Cgi/admin.py:1294
 msgid "Enter new poster password:"
-msgstr "گذرواژه‌ی مربوط به فرستنده‌ی جدید را وارد کنید:"
+msgstr "گذرواژه‌ی جدید برای فرستنده را وارد کنید:"
 
 #: Mailman/Cgi/admin.py:1296
 msgid "Confirm poster password:"
-msgstr "گذرواژه‌ی مربوط به فرستنده را تایید کنید:"
+msgstr "گذرواژه‌ی فرستنده را تایید کنید:"
 
 #: Mailman/Cgi/admin.py:1305
 msgid "Submit Your Changes"
-msgstr "تغییرات خود را بفرست"
+msgstr "فرستادن تغییرات"
 
 #: Mailman/Cgi/admin.py:1328
 msgid "Moderator passwords did not match"
-msgstr "گذرواژه‌های ناظم هملنگه نبودند"
+msgstr "گذرواژه‌های میان‌دار هم‌لنگه نبودند"
 
 #: Mailman/Cgi/admin.py:1339
 msgid "Poster passwords did not match"
-msgstr "گذرواژه‌های فرستنده همخوان نبودند."
+msgstr "گذرواژه‌های فرستنده هم‌لنگه نبودند."
 
 #: Mailman/Cgi/admin.py:1349
 msgid "Administrator passwords did not match"
-msgstr "گذرواژه‌های مدیر هملنگه نبودند"
+msgstr "گذرواژه‌های سرپرست هم‌لنگه نبودند"
 
 #: Mailman/Cgi/admin.py:1399
 msgid "Already a member"
@@ -1026,17 +1045,18 @@ msgid "&lt;blank line&gt;"
 msgstr "&lt;خط خالی&gt;"
 
 #: Mailman/Cgi/admin.py:1403 Mailman/Cgi/admin.py:1406
+#: Mailman/Cgi/admindb.py:916
 msgid "Bad/Invalid email address"
-msgstr "آدرس رایانامه‌ی نامعتبر یا بد"
+msgstr "نشانی رایانامه‌ی نادرست یا نا معتبر"
 
 #: Mailman/Cgi/admin.py:1409
 msgid "Hostile address (illegal characters)"
-msgstr "آدرس دشمن (نویسه‌های غیرمجاز)"
+msgstr "نشانی خصومت‌آمیز (نویسه‌های غیرمجاز)"
 
 #: Mailman/Cgi/admin.py:1412 bin/add_members:149 bin/clone_member:136
 #: bin/sync_members:264
 msgid "Banned address (matched %(pattern)s)"
-msgstr "آدرس قطع دسترسی شده (با %(pattern)s جور در آمد)"
+msgstr "نشانی تحریم‌شده (با %(pattern)s جور در آمد)"
 
 #: Mailman/Cgi/admin.py:1418
 msgid "Successfully invited:"
@@ -1064,7 +1084,7 @@ msgstr "نمی‌توان غیر-اعضا را لغو اشتراک کرد:"
 
 #: Mailman/Cgi/admin.py:1471
 msgid "Bad moderation flag value"
-msgstr "مقدار پرچم ناظم‌گری بد(نادرست)"
+msgstr "مقدار پرچم میان‌داری نادرست است"
 
 #: Mailman/Cgi/admin.py:1493
 msgid "Not subscribed"
@@ -1072,7 +1092,7 @@ msgstr "مشترک نشده"
 
 #: Mailman/Cgi/admin.py:1496
 msgid "Ignoring changes to deleted member: %(user)s"
-msgstr "چشم‌پوشی از تغییرات بر اعضای حذف شده: %(user)s"
+msgstr "چشم‌پوشی از تغییرات بر عضو حذف شده: %(user)s"
 
 #: Mailman/Cgi/admin.py:1536
 msgid "Successfully Removed:"
@@ -1082,240 +1102,256 @@ msgstr "با موفقیت حذف شد"
 msgid "Error Unsubscribing:"
 msgstr "خطای در لغو اشتراک"
 
-#: Mailman/Cgi/admindb.py:176 Mailman/Cgi/admindb.py:185
+#: Mailman/Cgi/admindb.py:196 Mailman/Cgi/admindb.py:205
 msgid "%(realname)s Administrative Database"
-msgstr "پایگاه‌داده‌ی مدیریتی %(realname)s"
+msgstr "پایگاه‌داده‌ی سرپرستی %(realname)s"
 
-#: Mailman/Cgi/admindb.py:179
+#: Mailman/Cgi/admindb.py:199
 msgid "%(realname)s Administrative Database Results"
-msgstr "نتیجه‌های پایگاه‌داده‌ی مدیریتی %(realname)s"
+msgstr "نتیجه‌های پایگاه‌داده‌ی سرپرستی %(realname)s"
 
-#: Mailman/Cgi/admindb.py:188
+#: Mailman/Cgi/admindb.py:208
 msgid "There are no pending requests."
-msgstr "هیچ درخواست در انتظاری وجود ندارد."
+msgstr "هیچ درخواستی معطل نیست."
 
-#: Mailman/Cgi/admindb.py:191
+#: Mailman/Cgi/admindb.py:211
 msgid "Click here to reload this page."
-msgstr "برای بارگیری مجدد این صفحه این‌جا را کلیک کنید."
+msgstr "برای بازخوانی این صفحه این‌جا را کلیک کنید."
 
-#: Mailman/Cgi/admindb.py:205
+#: Mailman/Cgi/admindb.py:225
 msgid "Detailed instructions for the administrative database"
-msgstr "راهنمای تفصیلی برای پایگاه داده‌ی مدیریتی"
+msgstr "دستورکار تفصیلی برای پایگاه داده‌ی سرپرستی"
 
-#: Mailman/Cgi/admindb.py:209
+#: Mailman/Cgi/admindb.py:229
 msgid "Administrative requests for mailing list:"
-msgstr "درخواست‌های مدیریتی برای فهرست پستی:"
+msgstr "درخواست‌های سرپرستی برای فهرست پستی:"
 
-#: Mailman/Cgi/admindb.py:212 Mailman/Cgi/admindb.py:268
+#: Mailman/Cgi/admindb.py:232 Mailman/Cgi/admindb.py:288
 msgid "Submit All Data"
 msgstr "فرستادن همه‌ی داده‌ها"
 
-#: Mailman/Cgi/admindb.py:218 Mailman/Cgi/admindb.py:266
+#: Mailman/Cgi/admindb.py:238 Mailman/Cgi/admindb.py:286
 msgid "Discard all messages marked <em>Defer</em>"
-msgstr "تمام پیام‌های نشان‌داده‌شده با <em>به‌تاخیرانداختن</em> را دور بیانداز"
+msgstr "تمام پیام‌های نشان‌داده‌شده با <em>به‌تاخیرانداختن</em> را رد کن"
 
-#: Mailman/Cgi/admindb.py:232
+#: Mailman/Cgi/admindb.py:252
 msgid "all of %(esender)s's held messages."
-msgstr "تمام نگه‌داشته‌شده‌ی %(esender)s"
+msgstr "تمام پیام‌های نگه‌داشته‌شده‌ی %(esender)s"
 
-#: Mailman/Cgi/admindb.py:237
+#: Mailman/Cgi/admindb.py:257
 msgid "a single held message."
 msgstr "یک تک پیام نگه داشته شده."
 
-#: Mailman/Cgi/admindb.py:242
+#: Mailman/Cgi/admindb.py:262
 msgid "all held messages."
-msgstr "تمام پیام‌های نگه‌داشته شده"
+msgstr "تمام پیام‌های نگه‌داشته شده."
 
-#: Mailman/Cgi/admindb.py:287
+#: Mailman/Cgi/admindb.py:307
 msgid "Mailman Administrative Database Error"
-msgstr "خطای پایگاه داده‌ی مدیریتی میل‌من"
+msgstr "خطای پایگاه داده‌ی سرپرستی میل‌من"
 
-#: Mailman/Cgi/admindb.py:292
+#: Mailman/Cgi/admindb.py:312
 msgid "list of available mailing lists."
-msgstr "فهرستی از فهرست‌های پستی دردسترس"
+msgstr "فهرستی از فهرست‌های پستی موجود."
 
-#: Mailman/Cgi/admindb.py:293
+#: Mailman/Cgi/admindb.py:313
 msgid "You must specify a list name.  Here is the %(link)s"
-msgstr "باید یک نام فهرست مشخص کنی. این هم %(link)s"
+msgstr "باید یک نام فهرست مشخص کنید. این هم %(link)s"
 
-#: Mailman/Cgi/admindb.py:306
+#: Mailman/Cgi/admindb.py:326
 msgid "Subscription Requests"
 msgstr "درخواست‌های اشتراک"
 
-#: Mailman/Cgi/admindb.py:308
+#: Mailman/Cgi/admindb.py:328
 msgid "Address/name"
-msgstr "آدرس/نام"
+msgstr "نشانی/نام"
 
-#: Mailman/Cgi/admindb.py:309 Mailman/Cgi/admindb.py:360
+#: Mailman/Cgi/admindb.py:329 Mailman/Cgi/admindb.py:380
 msgid "Your decision"
 msgstr "تصمیم شما"
 
-#: Mailman/Cgi/admindb.py:310 Mailman/Cgi/admindb.py:361
+#: Mailman/Cgi/admindb.py:330 Mailman/Cgi/admindb.py:381
 msgid "Reason for refusal"
 msgstr "دلیل رَد"
 
-#: Mailman/Cgi/admindb.py:328 Mailman/Cgi/admindb.py:387
-#: Mailman/Cgi/admindb.py:671 Mailman/Commands/cmd_confirm.py:90
+#: Mailman/Cgi/admindb.py:348 Mailman/Cgi/admindb.py:407
+#: Mailman/Cgi/admindb.py:701 Mailman/Commands/cmd_confirm.py:90
 msgid "Approve"
 msgstr "تایید"
 
-#: Mailman/Cgi/admindb.py:338
+#: Mailman/Cgi/admindb.py:358
 msgid "Permanently ban from this list"
-msgstr "قطع دسترسی برای همیشه از این فهرست"
+msgstr "تحریم همیشگی از این فهرست"
 
-#: Mailman/Cgi/admindb.py:359
+#: Mailman/Cgi/admindb.py:379
 msgid "User address/name"
-msgstr "آدرس کاربر/نام"
+msgstr "نشانی/نام کاربر"
 
-#: Mailman/Cgi/admindb.py:399
+#: Mailman/Cgi/admindb.py:419
 msgid "Unsubscription Requests"
 msgstr "درخواست‌های لغو اشتراک"
 
-#: Mailman/Cgi/admindb.py:411
+#: Mailman/Cgi/admindb.py:431
 msgid "Held Messages"
 msgstr "پیام‌های نگه داشته شده"
 
-#: Mailman/Cgi/admindb.py:424 Mailman/Cgi/admindb.py:654
+#: Mailman/Cgi/admindb.py:434
+msgid "Show this list grouped/sorted by"
+msgstr ""
+
+#: Mailman/Cgi/admindb.py:437
+msgid "sender/sender"
+msgstr ""
+
+#: Mailman/Cgi/admindb.py:437
+msgid "sender/time"
+msgstr ""
+
+#: Mailman/Cgi/admindb.py:437
+msgid "ungrouped/time"
+msgstr ""
+
+#: Mailman/Cgi/admindb.py:453 Mailman/Cgi/admindb.py:684
 msgid "From:"
 msgstr "از:"
 
-#: Mailman/Cgi/admindb.py:427
+#: Mailman/Cgi/admindb.py:456
 msgid "Action to take on all these held messages:"
 msgstr "کنشی که برای همه‌ی این پیام‌های نگه داشته انجام شود:"
 
-#: Mailman/Cgi/admindb.py:439
+#: Mailman/Cgi/admindb.py:468
 msgid "Preserve messages for the site administrator"
-msgstr "برای مدیر پایگاه نگه‌داشته شود"
+msgstr "پیام‌ها برای سرپرست پایگاه نگه‌داشته شوند"
 
-#: Mailman/Cgi/admindb.py:445
+#: Mailman/Cgi/admindb.py:474
 msgid "Forward messages (individually) to:"
 msgstr "پیش‌سو کردن پیام‌ها (دانه به دانه) به سمت:"
 
-#: Mailman/Cgi/admindb.py:463
+#: Mailman/Cgi/admindb.py:492
 msgid "Clear this member's <em>moderate</em> flag"
-msgstr "برداشتن پرچم <em>ناظم‌گری</em> این عضو"
+msgstr "برداشتن پرچم <em>میان‌داری</em> این عضو"
 
-#: Mailman/Cgi/admindb.py:467
+#: Mailman/Cgi/admindb.py:496
 msgid "<em>The sender is now a member of this list</em>"
-msgstr "<em>فرستنده اکنون عضو فهرست است</em>"
+msgstr "<em>فرستنده اکنون عضو این فهرست است</em>"
 
-#: Mailman/Cgi/admindb.py:476
+#: Mailman/Cgi/admindb.py:505
 msgid "Add <b>%(esender)s</b> to one of these sender filters:"
-msgstr " <b>%(esender)s</b>را به یکی از این پالایه‌ها بیافزا:"
+msgstr " <b>%(esender)s</b>را به یکی از این پالایه‌های مربوط به فرستنده بیافزا:"
 
-#: Mailman/Cgi/admindb.py:481
+#: Mailman/Cgi/admindb.py:510
 msgid "Accepts"
-msgstr "پذیرش ها"
+msgstr "پذیرش‌ها"
 
-#: Mailman/Cgi/admindb.py:481
+#: Mailman/Cgi/admindb.py:510
 msgid "Discards"
-msgstr "دور می‌اندازد"
+msgstr "رد شده‌ها"
 
-#: Mailman/Cgi/admindb.py:481
+#: Mailman/Cgi/admindb.py:510
 msgid "Holds"
-msgstr "نگه می‌دارد"
+msgstr "نگه‌داشته‌ها"
 
-#: Mailman/Cgi/admindb.py:481
+#: Mailman/Cgi/admindb.py:510
 msgid "Rejects"
-msgstr "پس می‌زند"
+msgstr "پس‌زده‌شده‌ها"
 
-#: Mailman/Cgi/admindb.py:490
+#: Mailman/Cgi/admindb.py:519
 msgid ""
 "Ban <b>%(esender)s</b> from ever subscribing to this\n"
 "                    mailing list"
 msgstr ""
-"<b>%(esender)s</b> برای همیشه از مشترک‌شدن در فهرست\n"
-"                    قطع دسترسی کن"
+"<b>%(esender)s</b> برای همیشه از مشترک‌شدن در این فهرست\n"
+"                    تحریم کن"
 
-#: Mailman/Cgi/admindb.py:495
+#: Mailman/Cgi/admindb.py:524
 msgid ""
 "Click on the message number to view the individual\n"
 "            message, or you can "
 msgstr ""
-"بر روی شماره‌ی پیام کلیک کن تا آن پیام را\n"
-"            به تنهایی ببینی، یا می‌توانی "
+"بر روی شماره‌ی پیام کلیک کنید تا آن پیام را\n"
+"            به تنهایی ببینید، یا می‌توانید "
 
-#: Mailman/Cgi/admindb.py:497
+#: Mailman/Cgi/admindb.py:526
 msgid "view all messages from %(esender)s"
-msgstr "همه‌ی پیام‌ها را از طرف %(esender)s را ببینی"
+msgstr "دیدن همه‌ی پیام‌ها از طرف %(esender)s "
 
-#: Mailman/Cgi/admindb.py:519 Mailman/Cgi/admindb.py:657
+#: Mailman/Cgi/admindb.py:548 Mailman/Cgi/admindb.py:687
 msgid "Subject:"
 msgstr "موضوع:"
 
-#: Mailman/Cgi/admindb.py:522
+#: Mailman/Cgi/admindb.py:551
 msgid " bytes"
 msgstr "بایت"
 
-#: Mailman/Cgi/admindb.py:522
+#: Mailman/Cgi/admindb.py:551
 msgid "Size:"
 msgstr "اندازه:"
 
-#: Mailman/Cgi/admindb.py:526 Mailman/Handlers/Scrubber.py:203
+#: Mailman/Cgi/admindb.py:555 Mailman/Handlers/Scrubber.py:203
 #: Mailman/Handlers/Scrubber.py:301 Mailman/Handlers/Scrubber.py:303
 msgid "not available"
-msgstr "در دسترس نیست"
+msgstr "موجود نیست"
 
-#: Mailman/Cgi/admindb.py:527 Mailman/Cgi/admindb.py:660
+#: Mailman/Cgi/admindb.py:556 Mailman/Cgi/admindb.py:690
 msgid "Reason:"
-msgstr "دلیل"
+msgstr "دلیل:"
 
-#: Mailman/Cgi/admindb.py:531 Mailman/Cgi/admindb.py:664
+#: Mailman/Cgi/admindb.py:560 Mailman/Cgi/admindb.py:694
 msgid "Received:"
-msgstr "دریافت شده:"
+msgstr "دریافت‌شده:"
 
-#: Mailman/Cgi/admindb.py:586
+#: Mailman/Cgi/admindb.py:616
 msgid "Posting Held for Approval"
 msgstr "فرستادن در انتظار تایید نگه داشته شده است"
 
-#: Mailman/Cgi/admindb.py:588
+#: Mailman/Cgi/admindb.py:618
 msgid " (%(count)d of %(total)d)"
 msgstr " (%(count)d از %(total)d)"
 
-#: Mailman/Cgi/admindb.py:599
+#: Mailman/Cgi/admindb.py:629
 msgid "<em>Message with id #%(id)d was lost."
 msgstr "<em>پیام با شناسه‌ی #%(id)d گمشده است."
 
-#: Mailman/Cgi/admindb.py:608
+#: Mailman/Cgi/admindb.py:638
 msgid "<em>Message with id #%(id)d is corrupted."
 msgstr "<em>پیام با شناسه‌ی #%(id)d خراب شده است."
 
-#: Mailman/Cgi/admindb.py:681
+#: Mailman/Cgi/admindb.py:711
 msgid "Preserve message for site administrator"
-msgstr "پیام را برای مدیر پایگاه باقی نگه‌دار"
+msgstr "پیام را برای سرپرست پایگاه باقی نگه‌دار"
 
-#: Mailman/Cgi/admindb.py:685
+#: Mailman/Cgi/admindb.py:715
 msgid "Additionally, forward this message to: "
-msgstr "همچنین علاوه، این پیام را پیش‌سو کن به:"
+msgstr "همچنین، این پیام را پیش‌سو کن به:"
 
-#: Mailman/Cgi/admindb.py:689 Mailman/Cgi/admindb.py:754
-#: Mailman/Cgi/admindb.py:817 Mailman/Cgi/admindb.py:819
+#: Mailman/Cgi/admindb.py:719 Mailman/Cgi/admindb.py:788
+#: Mailman/Cgi/admindb.py:865 Mailman/Cgi/admindb.py:867
 msgid "[No explanation given]"
-msgstr "[هیچ توضیحی داده نشده است]"
+msgstr "[هیچ توضیحی داده‌نشده‌است]"
 
-#: Mailman/Cgi/admindb.py:691
+#: Mailman/Cgi/admindb.py:721
 msgid "If you reject this post,<br>please explain (optional):"
-msgstr "اگر این پیام را پس‌می‌زنی،<br>لطفا توضیح دهید (دلبخواه):"
+msgstr "اگر این پیام را پس‌‌‌می‌زنید،<br>بهتر است، توضیحی بدهید (دلبخواه):"
 
-#: Mailman/Cgi/admindb.py:697
+#: Mailman/Cgi/admindb.py:727
 msgid "Message Headers:"
-msgstr "سرآیندهای پیام:"
+msgstr "سربرگ‌های پیام:"
 
-#: Mailman/Cgi/admindb.py:702
+#: Mailman/Cgi/admindb.py:732
 msgid "Message Excerpt:"
-msgstr "برگزیده‌ی پیام:"
+msgstr "گزیده‌ی پیام:"
 
-#: Mailman/Cgi/admindb.py:854
+#: Mailman/Cgi/admindb.py:904
 msgid "Database Updated..."
-msgstr "پایگاه داده به روزرسانی شد..."
+msgstr "پایگاه داده روزآمد شد..."
 
-#: Mailman/Cgi/admindb.py:857
+#: Mailman/Cgi/admindb.py:908
 msgid " is already a member"
 msgstr "پیشاپیش عضو است"
 
-#: Mailman/Cgi/admindb.py:860
+#: Mailman/Cgi/admindb.py:912
 msgid "%(addr)s is banned (matched: %(patt)s)"
-msgstr "%(addr)s قطع دسترسی شده است (جور در آمد با: %(patt)s)"
+msgstr "%(addr)s تحریم است (جور در آمد با: %(patt)s)"
 
 #: Mailman/Cgi/confirm.py:78
 msgid "Confirmation string was empty."
@@ -1332,14 +1368,14 @@ msgid ""
 "    Otherwise, <a href=\"%(confirmurl)s\">re-enter</a> your confirmation\n"
 "    string."
 msgstr ""
-"<b>کد تاییدیه قابل قبول نیست:</b>\n"
+"<b>کد تاییدیه خراب است:</b>\n"
 "    %(safecookie)s.\n"
 "\n"
-"    <p>توجه داشته باشید که کدهای تاییدیه تقریباً پس از مدت\n"
-"    %(days)s روز پس از انجام تقاضا، منقضی می‌شوند.\n"
+"    <p>به‌یاد داشته‌باشید که کدهای تاییدیه تقریباً پس از مدت\n"
+"    %(days)s روز از درخواست اشتراک، منقضی می‌شوند.\n"
 "    اگر کد تاییدیه شما نیز منقضی شده لطفاً درخواست خود را دوباره بفرستید.\n"
-"    در غیر این صورت، <a href=\"%(confirmurl)s\">اقدام به وارد کردن مجدد</a> "
-"تاییدیه نمایید."
+"    در غیر این صورت،  دوباره رشته‌ی تاییدیه‌ را <a href=\"%(confirmurl)s"
+"\">وارد کنید.</a>  "
 
 #: Mailman/Cgi/confirm.py:131
 msgid ""
@@ -1348,9 +1384,9 @@ msgid ""
 "been\n"
 "                unsubscribed, e.g. by the list administrator?"
 msgstr ""
-"آدرسی که تقاضای لغو عضویت کرده اصلاً جزو اعضای این فهرست ایمیلی نیست.\n"
-"شاید شما قبلاً لغو عضویت شده اید؛\n"
-"مثلاً توسط مدیر فهرست!"
+"نشانی که درخواست لغو اشتراک کرده اصلاً جزو اعضای این فهرست پستی نیست.\n"
+"شاید شما قبلاً به طریقی لغو عضویت شده‌اید؛\n"
+"مثلاً توسط سرپرست فهرست؟"
 
 #: Mailman/Cgi/confirm.py:147
 msgid ""
@@ -1358,9 +1394,9 @@ msgid ""
 "                    been subsequently unsubscribed.  This request has been\n"
 "                    cancelled."
 msgstr ""
-"آدرسی که تقاضای تغییر آن را کرده اید\n"
-"قبلاً لغو عضویت شده است.\n"
-"این تقاضا لغو گشت."
+"نشانی‌ای که درخواست تغییر آن را داشتید\n"
+"پیش‌تر لغو اشتراک شده است.\n"
+"این درخواست لغو گشت."
 
 #: Mailman/Cgi/confirm.py:167
 msgid "System error, bad content: %(content)s"
@@ -1372,7 +1408,7 @@ msgstr "کد تاییدیه نادرست"
 
 #: Mailman/Cgi/confirm.py:196
 msgid "Enter confirmation cookie"
-msgstr "کوکی تاییدیه را وارد نمایید"
+msgstr "کلوچک تاییدیه را وارد کنید"
 
 #: Mailman/Cgi/confirm.py:209
 msgid ""
@@ -1383,8 +1419,8 @@ msgid ""
 "    confirmation step."
 msgstr ""
 "لطفاً کد تاییدیه را وارد کنید\n"
-"    (یعنی <em>کوکی</em>) که در ایمیل دریافت کردید را در کادر زیر وارد "
-"نمایید.\n"
+"    (یعنی <em>کوکی</em>) که در رایانامه دریافت کردید را در کادر زیر وارد "
+"کنید.\n"
 "سپس دکمه <em>فرستادن</em> را بزنید تا به مرحله بعدی تاییدیه بروید."
 
 #: Mailman/Cgi/confirm.py:214
@@ -1397,7 +1433,7 @@ msgstr "فرستادن"
 
 #: Mailman/Cgi/confirm.py:233
 msgid "Confirm subscription request"
-msgstr "درخواست عضویت را تایید کنید"
+msgstr "درخواست اشتراک را تایید کنید"
 
 #: Mailman/Cgi/confirm.py:248
 msgid ""
@@ -1417,17 +1453,16 @@ msgid ""
 "to\n"
 "    subscribe to this list."
 msgstr ""
-"برای تکمیل درخواست عضویت در گروه زیر، نیاز به تاییدیه شما وجود دارد.\n"
+"برای تکمیل درخواست اشتراک در این فهرست پستی، به تایید شما نیاز است.\n"
 "<em>%(listname)s</em>\n"
-"تنظیمات عضویت در زیر نمایش داده شده اند. تغییرات لازم را انجام دهید و سپس "
+"تنظیمات اشتراک شما در زیر نمایش داده‌شده‌اند. تغییرات لازم را انجام دهید و سپس "
 "دکمه\n"
 "    <em>عضویت</em> را برای تکمیل فرایند تاییدیه بزنید.\n"
-"    پس از تایید درخواست عضویت،صفحه تنظیمات عضویت شما نمایش داده می‌شود\n"
-"که می‌توانید در آنجا ترجیحات مربوط به اشتراک خود را سفارشی نمایید.\n"
+"    پس از تایید درخواست اشتراک،صفحه‌ی گزینه‌های حساب شما نمایش داده می‌شود\n"
+"که می‌توانید در آنجا گزینه‌های مربوط به اشتراک خود را سفارشی کنید.\n"
 "\n"
-"    <p>به خاطر داشته باشید که گذرواژه‌ی شما پس از تایید عضویت برایتان ایمیل "
-"می شود\n"
-"با بازدید از صفحه‌ی تنظیمات شخصی خود می‌توانید آن را تغییر دهید.\n"
+"    <p>یادداشت: گذرواژه‌ی شما پس از تایید عضویت برای‌تان فرستاده می شود\n"
+"با بازدید از صفحه‌ی گزینه‌های شخصی‌تان می‌توانید آن را تغییر دهید.\n"
 "\n"
 "    <p>اگر دیگر قصد اشتراک در این فهرست را ندارید کلید لغو را بزنید."
 
@@ -1451,26 +1486,26 @@ msgid ""
 "        this mailing list, you can hit <em>Cancel my subscription\n"
 "        request</em>."
 msgstr ""
-"برای تکمیل مراحل عضویت در فهرست ایمیلی زیر نیاز به تایید شما وجود دارد\n"
+"برای ادامه‌ی مراحل اشتراک در فهرست پستی زیر به تایید شما نیاز است\n"
 "        <em>%(listname)s</em>.\n"
-"      تنظیمات عضویت شما در زیر نمایش داده شده اند.تغییرات دلخواه را اعمال "
+"      تنظیمات عضویت شما در زیر نمایش داده شده‌اند.تغییرات دلخواه را اعمال "
 "کنید و\n"
 "        دکمه <em>عضویت در فهرست....</em> را بزنید تا عضویت تایید و تکمیل "
 "شود.\n"
 "        وقتی شما مراحل تایید را به اتمام برسانید\n"
-"        یک ناظم باید درخواست شما را تایید یا رد نماید. سپس\n"
-"        نتیجه‌ی تصمیم آنها برایتان فرستادن می‌شود.\n"
+"        یک میان‌دار  باید درخواست شما را تایید کند یا پس‌بزند. سپس\n"
+"        نتیجه‌ی تصمیم آنها برایتان فرستاده خواهد شد.\n"
 "\n"
-"        <p>بعد از تایید عضویت، گذرواژه‌ی شما برایتان فرستاده خواهد شد.\n"
-"        با رفتن به صفحه‌ی تنظیمات شخصی خود می‌توانید آن را تغییر دهید.\n"
+"        <p>یادداشت: گذرواژه‌ی شما پس از تایید عضویت برای‌تان فرستاده می شود\n"
+"        با بازدید از صفحه‌ی گزینه‌های شخصی‌تان می‌توانید آن را تغییر دهید.\n"
 "        <p>یا اگر نظرتان عوض شده و دیگر نمی خواهید\n"
-"        به این فهرست ایمیلی بپیوندید، می‌توانید دکمه <em> لغو تقاضای عضویت</"
+"        به این فهرست پستی بپیوندید، می‌توانید دکمه <em> لغو درخواست اشتراک</"
 "em>\n"
 "        را بزنید."
 
 #: Mailman/Cgi/confirm.py:281
 msgid "Your email address:"
-msgstr "آدرس رایانامه‌ی شما:"
+msgstr "نشانی رایانامه‌ی شما:"
 
 #: Mailman/Cgi/confirm.py:282
 msgid "Your real name:"
@@ -1478,27 +1513,27 @@ msgstr "نام واقعی شما:"
 
 #: Mailman/Cgi/confirm.py:291
 msgid "Receive digests?"
-msgstr "دریافت در حالت یکجا"
+msgstr "دریافت یک‌جا؟"
 
 #: Mailman/Cgi/confirm.py:300
 msgid "Preferred language:"
-msgstr "زبان دلخواه:"
+msgstr "زبان ترجیحی:"
 
 #: Mailman/Cgi/confirm.py:305
 msgid "Subscribe to list %(listname)s"
-msgstr "عضویت در فهرست %(listname)s"
+msgstr "اشتراک در فهرست %(listname)s"
 
 #: Mailman/Cgi/confirm.py:306
 msgid "Cancel my subscription request"
-msgstr "لغو درخواست عضویت"
+msgstr "لغو درخواست اشتراک"
 
 #: Mailman/Cgi/confirm.py:323
 msgid "You have canceled your subscription request."
-msgstr "شما درخواست عضویت خود را لغو کرده اید"
+msgstr "شما درخواست اشتراک خود را لغو کرده‌اید"
 
 #: Mailman/Cgi/confirm.py:361
 msgid "Awaiting moderator approval"
-msgstr "در انتظار تایید ناظمین"
+msgstr "در انتظار تایید میان‌دار"
 
 #: Mailman/Cgi/confirm.py:364
 msgid ""
@@ -1511,11 +1546,11 @@ msgid ""
 "notified\n"
 "            of the moderator's decision."
 msgstr ""
-"درخواست عضویت شما در فهرست ایمیلی زیر با موفقیت تایید شد.\n"
+"درخواست اشتراک شما در فهرست پستی زیر با موفقیت تایید شد.\n"
 "            mailing list %(listname)s \n"
-"با این حال، قبل از تکمیل عضویت، نیاز به تایید ناظم فهرست وجود دارد.\n"
-"            درخواست شما برای ناظم فهرست فرستاده شده است \n"
-"            و نتیجه‌ی تصمیم ناظم برایتان ارسال خواهد شد."
+"با این حال، قبل از تکمیل اشتراک، به تایید میان‌دار فهرست نیاز است.\n"
+"            درخواست شما برای میان‌دار فهرست فرستاده شده است \n"
+"            و نتیجه‌ی تصمیم میان‌دار برایتان فرستاده خواهد شد."
 
 #: Mailman/Cgi/confirm.py:371 Mailman/Cgi/confirm.py:436
 #: Mailman/Cgi/confirm.py:525 Mailman/Cgi/confirm.py:762
@@ -1524,13 +1559,13 @@ msgid ""
 "            possible that you are attempting to confirm a request for an\n"
 "            address that has already been unsubscribed."
 msgstr ""
-"کد تاییدیه نادرست است. احتمال دارد\n"
-"            تایید خود را از آدرسی فرستاده باشید که\n"
-"            قبلاً لغو عضویت شده است."
+"رشته‌ی تاییدیه نادرست است. احتمال دارد\n"
+"            شما دارید درخواستی را تایید می‌کنید که\n"
+"            پیش‌تر لغو اشتراک شده است."
 
 #: Mailman/Cgi/confirm.py:375
 msgid "You are already a member of this mailing list!"
-msgstr "شما پیشاپیش، عضو این فهرست ایمیلی هستید."
+msgstr "شما پیشاپیش، عضو این فهرست پستی هستید!"
 
 #: Mailman/Cgi/confirm.py:378
 msgid ""
@@ -1538,9 +1573,9 @@ msgid ""
 "            this list.  If you think this restriction is erroneous, please\n"
 "            contact the list owners at %(owneraddr)s."
 msgstr ""
-"در حال حاضر، امکان اشتراک شما در این فهرست، مسدود شده است.\n"
-"            اگر می‌پندارید این محدودسازی به طور نادرست انجام شده،\n"
-"            لطفاً با مالکین فهرست به این آدرس تماس بگیرید: %(owneraddr)s."
+"در حال حاضر، شما از اشتراک در این فهرست تحریم شده‌اید.\n"
+"            اگر می‌پندارید این محدودیت اشتباهی بوده،\n"
+"            لطفاً با مالکان فهرست به این نشانی تماس بگیرید: %(owneraddr)s."
 
 #: Mailman/Cgi/confirm.py:382
 msgid ""
@@ -1548,13 +1583,13 @@ msgid ""
 "            been discarded, and both list administrators have been\n"
 "            alerted."
 msgstr ""
-"شما به این فهرست ایمیلی دعوت نشده بودید.            \n"
-"         این دعوتنامه نادیده گرفته شد و\n"
-"            هر دو دسته مدیران گروه از موضوع مطلع گشتند."
+"شما به این فهرست پستی دعوت نشده بودید.            \n"
+"         این دعوتنامه رد شده‌است و\n"
+"            هر دو دسته سرپرست‌های گروه خبردار شدند."
 
 #: Mailman/Cgi/confirm.py:392
 msgid "Subscription request confirmed"
-msgstr "تقاضای اشتراک، تایید شد."
+msgstr "درخواست اشتراک، تایید شد."
 
 #: Mailman/Cgi/confirm.py:396
 msgid ""
@@ -1567,10 +1602,10 @@ msgid ""
 "            <a href=\"%(optionsurl)s\">proceed to your membership login\n"
 "            page</a>."
 msgstr ""
-"            شما با موفقیت تقاضای عضویت خود را در این فهرست ایمیلی تایید "
+"            شما با موفقیت درخواست اشتراک خود را در این فهرست پستی تایید "
 "کردید.\n"
-"            \"%(addr)s\" to the %(listname)s \n"
-"            یک پیام تایید به نشانی رایان‌نامه‌ی شما ارسال می‌شود که در آن \n"
+"            اشتراک\"%(addr)s\" در %(listname)s \n"
+"            یک پیام تایید به نشانی رایا‌نامه‌ی شما فرستاده می‌شود که در آن \n"
 "            گذرواژه‌ی شما به همراه دیگر پیوندها و اطلاعات مفید موجودند.\n"
 "\n"
 "            <p>اکنون می‌توانید\n"
@@ -1578,11 +1613,11 @@ msgstr ""
 
 #: Mailman/Cgi/confirm.py:414
 msgid "You have canceled your unsubscription request."
-msgstr "شما درخواست لغو عضویت خود را پس گرفتید"
+msgstr "شما درخواست لغو اشتراک خود را پس گرفتید"
 
 #: Mailman/Cgi/confirm.py:442
 msgid "Unsubscription request confirmed"
-msgstr "درخواست لغو عضویت، تایید شد"
+msgstr "درخواست لغو اشتراک، تایید شد"
 
 #: Mailman/Cgi/confirm.py:446
 msgid ""
@@ -1592,8 +1627,8 @@ msgid ""
 "main\n"
 "            information page</a>."
 msgstr ""
-"            شما با موفقیت از این فهرست ایمیلی لغو عضویت کردید: %(listname)"
-"s \n"
+"            شما با موفقیت اشتراک خود را از این فهرست پستی لغو کردید: "
+"%(listname)s \n"
 "            اکنون می‌توانید<a href=\"%(listinfourl)s\">از صفحه اطلاعات اصلی "
 "فهرست بازدید کنید</a>."
 
@@ -1622,6 +1657,18 @@ msgid ""
 "    <p>Or hit <em>Cancel and discard</em> to cancel this unsubscription\n"
 "    request."
 msgstr ""
+"تاییدیه‌ی شما برا تکمیل درخواست لغو اشتراک از \n"
+"فهرست پستی <em>%(listname)s</em> لازم است. \n"
+"مشخصات اشتراک شما: \n"
+"\n"
+"    <ul><li><b>نام واقعی:</b> %(fullname)s\n"
+"        <li><b>نشانی رایانامه:</b> %(addr)s\n"
+"    </ul>\n"
+"\n"
+"در زیر بر روی <em>لغو اشتراک</em> کلیک کنید تا فرآیند تاییدیه کامل شود. \n"
+"\n"
+"    <p>یا  <em>لغو و نادیده‌گرفتن</em>را کلیک کنید تا این لغو اشتراک  \n"
+"لغو شود."
 
 #: Mailman/Cgi/confirm.py:491 Mailman/Cgi/options.py:767
 #: Mailman/Cgi/options.py:911 Mailman/Cgi/options.py:921
@@ -1630,18 +1677,22 @@ msgstr "لغو اشتراک"
 
 #: Mailman/Cgi/confirm.py:492 Mailman/Cgi/confirm.py:603
 msgid "Cancel and discard"
-msgstr "انصراف و دور انداختن"
+msgstr "لغو و رد کردن"
 
 #: Mailman/Cgi/confirm.py:502
 msgid "You have canceled your change of address request."
-msgstr "شما درخواست تغییر نشانی خود را لغو کرده اید."
+msgstr "شما درخواست تغییر نشانی خود را لغو کرده‌اید."
 
 #: Mailman/Cgi/confirm.py:531
+#, fuzzy
 msgid ""
 "%(newaddr)s is banned from subscribing to the\n"
 "            %(realname)s list.  If you think this restriction is erroneous,\n"
 "            please contact the list owners at %(owneraddr)s."
 msgstr ""
+"%(newaddr)s از اشتراک در فهرست  %(realname)s تحریم شده‌است \n"
+"اگر می‌پندارید این محدودیت اشتباه شده است، \n"
+"با مالکان لیست به نشانی %(owneraddr)s تماس بگیرید."
 
 #: Mailman/Cgi/confirm.py:536
 msgid ""
@@ -1663,19 +1714,19 @@ msgid ""
 "            can now <a href=\"%(optionsurl)s\">proceed to your membership\n"
 "            login page</a>."
 msgstr ""
-"            شما آدرس خود را در فهرست ایمیلی %(listname)s\n"
+"            شما نشانی خود را در فهرست پستی %(listname)s\n"
 "            با موفقیت از <b>%(oldaddr)s</b> به <b>%(newaddr)s</b> تغییر "
 "دادید. \n"
-"            اکنون می‌توانید<a href=\"%(optionsurl)s\">به ناحیه ورود کاربران \n"
-"            به سیستم بروید</a>."
+"            اکنون می‌توانید<a href=\"%(optionsurl)s\">به صفحه‌ی ورود اعضای \n"
+"            بروید</a>."
 
 #: Mailman/Cgi/confirm.py:559
 msgid "Confirm change of address request"
-msgstr "درخواست تغییر نشانی تایید شد"
+msgstr "تایید درخواست تغییر نشانی"
 
 #: Mailman/Cgi/confirm.py:578
 msgid "globally"
-msgstr ""
+msgstr "سراسری"
 
 #: Mailman/Cgi/confirm.py:581
 msgid ""
@@ -1700,23 +1751,24 @@ msgid ""
 "    <p>Or hit <em>Cancel and discard</em> to cancel this change of address\n"
 "    request."
 msgstr ""
-"نیاز به تایید شما وجود دارد تا درخواست تغییر نشانی ایمیلتان \n"
-"    در فهرست ایمیلی  <em>%(listname)s</em> تکمیل شود.  \n"
-"    در حال حاضر با این نشانی عضو شده اید:\n"
+"نیاز به تایید شما وجود دارد تا درخواست تغییر نشانی رایانامه‌تان \n"
+"    در فهرست پستی  <em>%(listname)s</em> تکمیل شود.  \n"
+"    در حال حاضر با این نشانی مشترک شده‌اید:\n"
 "\n"
 "    <ul><li><b>نام واقعی:</b> %(fullname)s\n"
-"        <li><b>نشانی قدیمی رایان‌نامه:</b> %(oldaddr)s\n"
+"        <li><b>نشانی قدیمی رایا‌نامه:</b> %(oldaddr)s\n"
 "    </ul>\n"
 "\n"
-"    و تقاضا کرده اید که به طور%(globallys)s نشانی ایمیلتان تغییر کند به:\n"
+"    و درخواست کرده‌اید که به طور%(globallys)s نشانی رایانامه‌تان تغییر کند "
+"به:\n"
 "\n"
-"    <ul><li><b>نشانی جدید رایان‌نامه:</b> %(newaddr)s\n"
+"    <ul><li><b>نشانی جدید رایانامه:</b> %(newaddr)s\n"
 "    </ul>\n"
 "\n"
-"    دکمه <em>تغییر نشانی</em> را در زیر بزنید تا تایید کامل شود.\n"
+"    دکمه <em>تغییر نشانی</em> را در زیر بزنید تا  فرآیند تایید کامل شود.\n"
 "\n"
-"    <p>یا دکمه <em>انصراف و نادیده گرفتن</em> را بزنید تا این درخواست تغییر "
-"نشانی، لغو شود."
+"    <p>یا دکمه <em>لغو و رد کردن</em> را بزنید تا این درخواست تغییر نشانی، "
+"لغو شود."
 
 #: Mailman/Cgi/confirm.py:602
 msgid "Change address"
@@ -1724,19 +1776,19 @@ msgstr "تغییر نشانی"
 
 #: Mailman/Cgi/confirm.py:611 Mailman/Cgi/confirm.py:727
 msgid "Continue awaiting approval"
-msgstr "ادامه دادن انتظار برای تایید"
+msgstr "ادامه‌دادن انتظار برای تایید"
 
 #: Mailman/Cgi/confirm.py:619
 msgid ""
 "Okay, the list moderator will still have the\n"
 "    opportunity to approve or reject this message."
 msgstr ""
-"بسیار خوب، ناظم فهرست هنوز می‌تواند این پیغام را\n"
-"    تایید یا رد کند."
+"بسیار خوب، میان‌دار فهرست هنوز می‌تواند این پیام را\n"
+"    تایید کند یا پس‌بزند."
 
 #: Mailman/Cgi/confirm.py:647
 msgid "Sender discarded message via web."
-msgstr "فرستنده، این پیام را از طریق وب به دور انداخت"
+msgstr "فرستنده، این پیام را از طریق وب رد کرد."
 
 #: Mailman/Cgi/confirm.py:649
 msgid ""
@@ -1751,7 +1803,7 @@ msgstr ""
 
 #: Mailman/Cgi/confirm.py:657
 msgid "Posted message canceled"
-msgstr "پیام ارسال شده لغو گشت"
+msgstr "پیام فرستاده شده لغو شد"
 
 #: Mailman/Cgi/confirm.py:660
 msgid ""
@@ -1759,13 +1811,13 @@ msgid ""
 "            the Subject: header <em>%(subject)s</em> to the mailing list\n"
 "            %(listname)s."
 msgstr ""
-"            شما ارسال پیام با موضوع: <em>%(subject)s</em>  \n"
-"            را که به فهرست ایمیلی %(listname)s \n"
-"            فرستاده شده بود، با موفقیت لغو کردید."
+"            شما فرستادن پیام‌تان با موضوع: <em>%(subject)s</em>  \n"
+"            را که به فهرست پستی %(listname)s \n"
+"            فرستاده بودید، با موفقیت لغو کردید."
 
 #: Mailman/Cgi/confirm.py:671
 msgid "Cancel held message posting"
-msgstr "لغو ارسال پیام نگه داشته شده"
+msgstr "لغو فرستادن پیام نگه‌داشته‌شده"
 
 #: Mailman/Cgi/confirm.py:696
 msgid ""
@@ -1788,22 +1840,22 @@ msgid ""
 "    <p>Or hit the <em>Continue awaiting approval</em> button to continue to\n"
 "    allow the list moderator to approve or reject the message."
 msgstr ""
-"تایید شما برای انصراف از ارسال پیامتان به \n"
-"    فهرست ایمیلی <em>%(listname)s</em> لازم است: \n"
+"تایید شما برای لغو فرستادن پیام‌تان به \n"
+"    فهرست پستی <em>%(listname)s</em> لازم است: \n"
 "\n"
 "    <ul><li><b>فرستنده:</b> %(sender)s\n"
 "        <li><b>موضوع:</b> %(subject)s\n"
 "        <li><b>دلیل:</b> %(reason)s\n"
 "    </ul>\n"
 "\n"
-"    دکمه <em>انصراف از فرستادن</em> را بزنید تا این پیام، نادیده گرفته شود.\n"
+"    دکمه <em>لغو فرستادن</em> را بزنید تا این پیام، رد شود.\n"
 "\n"
-"    <p>یا دکمه <em>ادامه‌ی انتظار تصویب</em> را بزنید تا \n"
-"    به ناظم فهرست اجازه‌ی تصویب یا رد کردن پیام را بدهید."
+"    <p>یا دکمه <em>ادامه‌دادن انتظار برای تایید</em> را بزنید تا \n"
+"    به بگذارید تا میان‌دار فهرست آن را تایید کند یا پس‌بزند."
 
 #: Mailman/Cgi/confirm.py:726
 msgid "Cancel posting"
-msgstr "انصراف از فرستادن"
+msgstr "لغو فرستادن"
 
 #: Mailman/Cgi/confirm.py:738
 msgid ""
@@ -1827,7 +1879,7 @@ msgstr ""
 
 #: Mailman/Cgi/confirm.py:784
 msgid "Re-enable mailing list membership"
-msgstr "به کار انداختن مجدد عضویت در فهرست ایمیلی "
+msgstr "به کار انداختن مجدد عضویت در فهرست پستی "
 
 #: Mailman/Cgi/confirm.py:801
 msgid ""
@@ -1835,8 +1887,8 @@ msgid ""
 "        from this mailing list.  To re-subscribe, please visit the\n"
 "        <a href=\"%(listinfourl)s\">list information page</a>."
 msgstr ""
-"متاسفانه شما قبلاً از این فهرست ایمیلی، لغو اشتراک شده اید.\n"
-"        جهت اشتراک دوباره، لطفاً بازدید کنید از:\n"
+"متاسفانه شما قبلاً از این فهرست پستی، لغو اشتراک شده‌اید.\n"
+"        جهت اشتراک دوباره، لطفاً از این صفحه بازدید کنید:\n"
 "        <a href=\"%(listinfourl)s\">صفحه اطلاعات فهرست</a>."
 
 #: Mailman/Cgi/confirm.py:816
@@ -1871,11 +1923,11 @@ msgstr "به کار انداختن مجدد عضویت"
 
 #: Mailman/Cgi/confirm.py:841
 msgid "Cancel"
-msgstr "انصراف"
+msgstr "لغو"
 
 #: Mailman/Cgi/create.py:49 Mailman/Cgi/rmlist.py:48
 msgid "Bad URL specification"
-msgstr "مشخصات نادرست uRL"
+msgstr "مشخصات نادرستURL"
 
 #: Mailman/Cgi/create.py:64 Mailman/Cgi/rmlist.py:178
 msgid "Return to the "
@@ -1883,7 +1935,7 @@ msgstr "بازگشت به"
 
 #: Mailman/Cgi/create.py:66 Mailman/Cgi/rmlist.py:180
 msgid "general list overview"
-msgstr "مرور کلی فهرست"
+msgstr "نمای کلی عمومی فهرست"
 
 #: Mailman/Cgi/create.py:67 Mailman/Cgi/rmlist.py:181
 msgid "<br>Return to the "
@@ -1891,7 +1943,7 @@ msgstr "<br>بازگشت به "
 
 #: Mailman/Cgi/create.py:69 Mailman/Cgi/rmlist.py:183
 msgid "administrative list overview"
-msgstr "مرور مدیریتی فهرست"
+msgstr "مرور کلی سرپرستی فهرست"
 
 #: Mailman/Cgi/create.py:104
 msgid "List name must not include \"@\": %(safelistname)s"
@@ -1899,15 +1951,15 @@ msgstr ""
 
 #: Mailman/Cgi/create.py:111
 msgid "List already exists: %(safelistname)s"
-msgstr ""
+msgstr "فهرست پیشاپیش وجود دارد: %(safelistname)s"
 
 #: Mailman/Cgi/create.py:115
 msgid "You forgot to enter the list name"
-msgstr ""
+msgstr "فراموش کردید نام فهرست را وارد کنید"
 
 #: Mailman/Cgi/create.py:119
 msgid "You forgot to specify the list owner"
-msgstr ""
+msgstr "فراموش کردید نام مالک فهرست را وارد کنید"
 
 #: Mailman/Cgi/create.py:126
 msgid ""
@@ -1916,36 +1968,36 @@ msgid ""
 "                passwords."
 msgstr ""
 "اگر می‌خواهید میلمن به طور خودکار\n"
-"گذرواژه‌ی شما را تعیین کند فیلدهای مربوط به \n"
-"گذرواژه و تایید گذرواژه را در اینجا خالی بگذارید."
+"برای شما گذرواژه بسازد فیلدهای مربوط به \n"
+"گذرواژه و تایید گذرواژه را خالی بگذارید."
 
 #: Mailman/Cgi/create.py:135
 msgid "Initial list passwords do not match"
-msgstr "دو گذرواژه‌ی تعیین شده برای فهرست با یکدیگر همخوان نیستند"
+msgstr "دو گذرواژه‌ی اولیه‌ی فهرست هم‌لنگه نیستند"
 
 #: Mailman/Cgi/create.py:144
 msgid "The list password cannot be empty<!-- ignore -->"
-msgstr "گذرواژه‌ی فهرست را نمی توان خالی گذاشت<!-- نادیده گرفتن -->"
+msgstr "گذرواژه‌ی فهرست را نمی توان خالی گذاشت<!-- نادید گرفتن -->"
 
 #: Mailman/Cgi/create.py:156
 msgid "You are not authorized to create new mailing lists"
-msgstr "شما اجازه‌ی ایجاد فهرست‌های ایمیلی جدید را ندارید."
+msgstr "شما اجازه‌ی ایجاد فهرست‌های پستی جدید را ندارید"
 
 #: Mailman/Cgi/create.py:164
 msgid "Unknown virtual host: %(safehostname)s"
-msgstr "هاست مجازی ناشناخته: %(safehostname)s"
+msgstr "میزبان مجازی ناشناخته: %(safehostname)s"
 
 #: Mailman/Cgi/create.py:200 bin/newlist:207
 msgid "Bad owner email address: %(s)s"
-msgstr ""
+msgstr "نشانی رایانامه‌ی مالک نادرست است: %(s)s"
 
-#: Mailman/Cgi/create.py:205 bin/newlist:170 bin/newlist:209
+#: Mailman/Cgi/create.py:205 bin/newlist:170 bin/newlist:211
 msgid "List already exists: %(listname)s"
-msgstr ""
+msgstr "فهرست پیشاپیش وجود دارد%(listname)s"
 
 #: Mailman/Cgi/create.py:213 bin/newlist:205
 msgid "Illegal list name: %(s)s"
-msgstr "نام غیر مجاز برای فهرست: %(s)s "
+msgstr "نام غیرمجاز برای فهرست: %(s)s "
 
 #: Mailman/Cgi/create.py:218
 msgid ""
@@ -1953,13 +2005,13 @@ msgid ""
 "                Please contact the site administrator for assistance."
 msgstr ""
 
-#: Mailman/Cgi/create.py:255 bin/newlist:250
+#: Mailman/Cgi/create.py:255 bin/newlist:252
 msgid "Your new mailing list: %(listname)s"
 msgstr ""
 
 #: Mailman/Cgi/create.py:264
 msgid "Mailing list creation results"
-msgstr "نتایج ایجاد فهرست ایمیلی"
+msgstr "نتایج ایجاد فهرست پستی"
 
 #: Mailman/Cgi/create.py:270
 msgid ""
@@ -1974,7 +2026,7 @@ msgstr "بازدید از صفحه‌ی اطلاعات فهرست"
 
 #: Mailman/Cgi/create.py:275
 msgid "Visit the list's admin page"
-msgstr "بازدید صفحه‌ی مدیریت فهرست"
+msgstr "بازدید صفحه‌ی سرپرستی فهرست"
 
 #: Mailman/Cgi/create.py:276
 msgid "Create another list"
@@ -2025,7 +2077,7 @@ msgstr "نام فهرست:"
 
 #: Mailman/Cgi/create.py:343
 msgid "Initial list owner address:"
-msgstr "نشانی نخستین مالک فهرست:"
+msgstr "نشانی اولیه مالک فهرست:"
 
 #: Mailman/Cgi/create.py:352
 msgid "Auto-generate initial list password?"
@@ -2033,7 +2085,7 @@ msgstr ""
 
 #: Mailman/Cgi/create.py:360
 msgid "Initial list password:"
-msgstr "نخستین گذرواژه فهرست:"
+msgstr "گذرواژه اولیه فهرست:"
 
 #: Mailman/Cgi/create.py:366
 msgid "Confirm initial password:"
@@ -2041,7 +2093,7 @@ msgstr ""
 
 #: Mailman/Cgi/create.py:381
 msgid "List Characteristics"
-msgstr "مشخصات فهرست"
+msgstr "ویژگی‌های فهرست"
 
 #: Mailman/Cgi/create.py:385
 msgid ""
@@ -2076,7 +2128,7 @@ msgstr "پاک کردن فرم"
 
 #: Mailman/Cgi/edithtml.py:45
 msgid "General list information page"
-msgstr "صفحه‌ی اطلاعات کلی فهرست"
+msgstr "صفحه‌ی اطلاعات عمومی فهرست"
 
 #: Mailman/Cgi/edithtml.py:46
 msgid "Subscribe results page"
@@ -2084,11 +2136,11 @@ msgstr "صفحه‌ی نتایج اشتراک"
 
 #: Mailman/Cgi/edithtml.py:47
 msgid "User specific options page"
-msgstr "صفحه گزینه‌های مخصوص کاربر"
+msgstr "صفحه‌ی گزینه‌های مخصوص کاربر"
 
 #: Mailman/Cgi/edithtml.py:48
 msgid "Welcome email text file"
-msgstr "فایل متنی رایان‌نامه‌ی خوشآمد"
+msgstr "فایل متنی رایا‌نامه‌ی خوش‌آمد"
 
 #: Mailman/Cgi/edithtml.py:49
 msgid "Digest masthead"
@@ -2096,7 +2148,7 @@ msgstr ""
 
 #: Mailman/Cgi/edithtml.py:61
 msgid "List name is required."
-msgstr "نام لیست باید وارد شود"
+msgstr "نام فهرست باید وارد شود"
 
 #: Mailman/Cgi/edithtml.py:103
 msgid "%(realname)s -- Edit html for %(template_info)s"
@@ -2120,11 +2172,11 @@ msgstr "انتخاب صفحه برای ویرایش:"
 
 #: Mailman/Cgi/edithtml.py:143
 msgid "View or edit the list configuration information."
-msgstr "مشاهده یا ویرایش تنظیمات فهرست"
+msgstr "دیدن یا ویرایش تنظیمات فهرست"
 
 #: Mailman/Cgi/edithtml.py:152
 msgid "When you are done making changes..."
-msgstr "پس از انجام تغییرات لازم...."
+msgstr "وقتی کار تغییرات‌تان تمام شد...."
 
 #: Mailman/Cgi/edithtml.py:153
 msgid "Submit Changes"
@@ -2136,7 +2188,7 @@ msgstr ""
 
 #: Mailman/Cgi/edithtml.py:161
 msgid "HTML Unchanged."
-msgstr "HTML تغییر نکرده است"
+msgstr "زنگام تغییر نکرده است"
 
 #: Mailman/Cgi/edithtml.py:167
 msgid ""
@@ -2153,7 +2205,7 @@ msgstr "رجوع شود به"
 
 #: Mailman/Cgi/edithtml.py:175
 msgid "FAQ 4.48."
-msgstr "پرسش متداول 4.48."
+msgstr "پرسش‌های متداول ۴.۴۸."
 
 #: Mailman/Cgi/edithtml.py:176
 msgid "Page Unchanged."
@@ -2197,7 +2249,7 @@ msgstr ""
 
 #: Mailman/Cgi/listinfo.py:129
 msgid "the list admin overview page"
-msgstr "صفحه مرور کلی مدیریتی"
+msgstr "صفحه مرور کلی سرپرستی"
 
 #: Mailman/Cgi/listinfo.py:130
 msgid ""
@@ -2224,11 +2276,11 @@ msgstr "گزینه‌های نامعتبر برای اسکریپت CGI"
 
 #: Mailman/Cgi/options.py:109
 msgid "No address given"
-msgstr "نشانی وارد نشده است"
+msgstr "نشانی‌ای وارد نشده است"
 
 #: Mailman/Cgi/options.py:121
 msgid "Illegal Email Address: %(safeuser)s"
-msgstr "نشانی رایان‌نامه غیر مجاز: %(safeuser)s"
+msgstr "نشانی رایا‌نامه‌ی غیرمجاز: %(safeuser)s"
 
 #: Mailman/Cgi/options.py:128 Mailman/Cgi/options.py:193
 #: Mailman/Cgi/options.py:215 Mailman/Cgi/private.py:154
@@ -2240,21 +2292,21 @@ msgid ""
 "Your unsubscription request has been\n"
 "                    forwarded to the list administrator for approval."
 msgstr ""
-"تقاضای لغو عضویت شما\n"
-"                    جهت تایید، به مدیر فهرست ارسال شده است."
+"درخواست لغو اشتراک شما\n"
+"                    جهت تایید، به سرپرست فهرست پیش‌سو شده‌است."
 
 #: Mailman/Cgi/options.py:184 Mailman/Cgi/options.py:198
 msgid "The confirmation email has been sent."
-msgstr "ایمیل تاییدیه ارسال شد"
+msgstr "رایانامه‌ی تاییدیه، فرستاده شد"
 
 #: Mailman/Cgi/options.py:209 Mailman/Cgi/options.py:221
 #: Mailman/Cgi/options.py:278
 msgid "A reminder of your password has been emailed to you."
-msgstr "یادآوری کننده‌ی گذرواژه‌ی شما برایتان ایمیل شده است."
+msgstr "یادآوری‌کننده‌ی گذرواژه‌ی شما برایتان رایانامه شده است."
 
 #: Mailman/Cgi/options.py:250
 msgid "Authentication failed."
-msgstr "مجوز دسترسی داده نشد"
+msgstr "اصالت‌سنجی شکست خورد."
 
 #: Mailman/Cgi/options.py:285
 msgid ""
@@ -2265,7 +2317,7 @@ msgstr ""
 #: Mailman/Cgi/options.py:286 Mailman/Cgi/options.py:335
 #: Mailman/Cgi/options.py:463 Mailman/Cgi/options.py:679
 msgid "Note: "
-msgstr "نکته:"
+msgstr "یادداشت:"
 
 #: Mailman/Cgi/options.py:291
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
@@ -2276,8 +2328,8 @@ msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
 msgstr ""
-"روی یک لینک کلیک کنید تا صفحه‌ی تنظیمات مربوط به\n"
-"        فهرست ایمیلی مورد نظر خود را ببینید."
+"روی یک لینک کلیک کنید تا صفحه‌ی گزینه‌های مربوط به\n"
+"        فهرست پستی مورد نظر خود را ببینید."
 
 #: Mailman/Cgi/options.py:305
 msgid "nomail"
@@ -2292,11 +2344,11 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:355
 msgid "Addresses did not match!"
-msgstr "آدرس‌ها همخوان نبودند"
+msgstr "نشانی‌ها همخوان نبودند"
 
 #: Mailman/Cgi/options.py:360
 msgid "You are already using that email address"
-msgstr "شما پیشاپیش در حال استفاده از این نشانی رایان‌نامه هستید"
+msgstr "شما پیشاپیش در حال استفاده از این نشانی رایا‌نامه هستید"
 
 #: Mailman/Cgi/options.py:372
 msgid ""
@@ -2313,19 +2365,19 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:387
 msgid "Addresses may not be blank"
-msgstr "نشانی‌ها نمی تواند خالی بماند"
+msgstr "نشانی‌ها نمی تواند خالی باشد"
 
 #: Mailman/Cgi/options.py:401
 msgid "A confirmation message has been sent to %(newaddr)s. "
-msgstr "یک پیام تایید فرستاده شد برای  %(newaddr)s. "
+msgstr "یک پیام تایید برای  %(newaddr)s فرستاده شد."
 
 #: Mailman/Cgi/options.py:410
 msgid "Bad email address provided"
-msgstr "نشانی رایان‌نامه، نادرست وارد شده است"
+msgstr "نشانی رایانامه‌ی وارد شده، نادرست است"
 
 #: Mailman/Cgi/options.py:412
 msgid "Illegal email address provided"
-msgstr "نشانی رایان‌نامه‌ی غیرقانونی وارد شده است"
+msgstr "نشانی رایا‌نامه وارد شده، غیرمجاز است"
 
 #: Mailman/Cgi/options.py:414
 msgid "%(newaddr)s is already a member of the list."
@@ -2340,7 +2392,7 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:428
 msgid "Member name successfully changed. "
-msgstr "نام این عضو با موفقیت عوض شد"
+msgstr "نام عضو با موفقیت عوض شد."
 
 #: Mailman/Cgi/options.py:438
 msgid ""
@@ -2350,11 +2402,11 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:447
 msgid "Passwords may not be blank"
-msgstr "گذرواژه‌ها نباید خالی بماند."
+msgstr "گذرواژه‌ها نباید خالی باشد"
 
 #: Mailman/Cgi/options.py:452
 msgid "Passwords did not match!"
-msgstr "گذرواژه‌ها مطابقت ندارند"
+msgstr "گذرواژه‌ها مطابقت ندارد!"
 
 #: Mailman/Cgi/options.py:460
 msgid ""
@@ -2366,7 +2418,7 @@ msgstr ""
 #: Mailman/Cgi/options.py:477 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
 msgid "Password successfully changed."
-msgstr "گذرواژه با موفقیت عوض شد"
+msgstr "گذرواژه با موفقیت عوض شد."
 
 #: Mailman/Cgi/options.py:486
 msgid ""
@@ -2374,13 +2426,13 @@ msgid ""
 "                on the checkbox below the <em>Unsubscribe</em> button.  You\n"
 "                have not been unsubscribed!"
 msgstr ""
-"لازم است درخواست لغو اشتراک خود را با تیک زدن گزینه‌ی زیر\n"
+"لازم است درخواست لغو اشتراک خود را با نشانه‌زدن جعبه‌ی نشانه‌زنی زیر\n"
 "                دکمه‌ی <em>لغو اشتراک</em> تایید کنید.  \n"
 "                شما هنوز لغو اشتراک نشده اید!"
 
 #: Mailman/Cgi/options.py:518
 msgid "Unsubscription results"
-msgstr "نتایج لغو عضویت"
+msgstr "نتایج لغو اشتراک"
 
 #: Mailman/Cgi/options.py:522
 msgid ""
@@ -2399,12 +2451,12 @@ msgid ""
 "            about your unsubscription, please contact the list owners at\n"
 "            %(owneraddr)s."
 msgstr ""
-"شما با موفقیت از فهرست ایمیلی \n"
-"            %(fqdn_listname)s لغو اشتراک کردید.  اگر ایمیل‌های حالت یکجا "
-"دریافت می‌نمودید\n"
-"            ممکن است یک ایمیل یکجای دیگر دریافت کنید.  در صورت داشتن هر گونه "
-"سوال\n"
-"            راجع به لغو اشتراک خود، می‌توانید با مالکین لیست به این نشانی "
+"شما با موفقیت از فهرست پستی \n"
+"            %(fqdn_listname)s لغو اشتراک کردید.  اگر رایانامه‌های حالت یک‌جا "
+"دریافت می‌کردید\n"
+"            ممکن است یک رایانامه‌ی یک‌جای دیگر دریافت کنید.  در صورت داشتن هر "
+"گونه سوال\n"
+"            درباره‌ی لغو اشتراک خود، می‌توانید با مالکان فهرست به این نشانی "
 "تماس بگیرید:\n"
 "            %(owneraddr)s."
 
@@ -2434,15 +2486,15 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:694
 msgid "You have successfully set your options."
-msgstr "شما تنظیمات خود را با موفقیت اعمال نمودید."
+msgstr "شما با موفقیت گزینه‌های خود را مشخص کردید."
 
 #: Mailman/Cgi/options.py:697
 msgid "You may get one last digest."
-msgstr "ممکن است فقط یک ایمیل یکجای دیگر دریافت نمایید."
+msgstr "ممکن است فقط یک رایانامه‌ی یک‌جای دیگر دریافت کنید."
 
 #: Mailman/Cgi/options.py:769
 msgid "<em>Yes, I really want to unsubscribe</em>"
-msgstr "<em>بله، واقعاً می‌خواهم لغو اشتراک نمایم</em>"
+msgstr "<em>بله، واقعاً می‌خواهم لغو اشتراک کنم</em>"
 
 #: Mailman/Cgi/options.py:773
 msgid "Change My Password"
@@ -2454,7 +2506,7 @@ msgstr "دیگر اشتراک‌های من"
 
 #: Mailman/Cgi/options.py:782
 msgid "Email My Password To Me"
-msgstr "گذرواژه‌ی مرا برایم ایمیل کن"
+msgstr "گذرواژه‌ی مرا برایم رایانامه کن"
 
 #: Mailman/Cgi/options.py:784
 msgid "password"
@@ -2486,7 +2538,7 @@ msgstr "نشانی و نام مرا تغییر بده"
 
 #: Mailman/Cgi/options.py:835
 msgid "<em>No topics defined</em>"
-msgstr "<em>هیچ موضوعی تعریف نشده است</em>"
+msgstr "<em>هیچ سرفصل تعریف نشده است</em>"
 
 #: Mailman/Cgi/options.py:843
 msgid ""
@@ -2497,11 +2549,11 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:857
 msgid "%(realname)s list: member options login page"
-msgstr "%(realname)s فهرست: صفحه‌ی ورود به گزینه‌های اعضا"
+msgstr "فهرست %(realname)s: صفحه‌ی ورود به گزینه‌های اعضا"
 
 #: Mailman/Cgi/options.py:858
 msgid "email address and "
-msgstr "نشانی رایان‌نامه و "
+msgstr "نشانی رایا‌نامه و "
 
 #: Mailman/Cgi/options.py:861
 msgid "%(realname)s list: member options for user %(safeuser)s"
@@ -2527,19 +2579,19 @@ msgstr ""
 "برای تغییر گزینه‌های عضویتی خود، لازم است\n"
 "    با وارد کردن %(extra)s گذرواژه‌ی عضویتی خود در قسمتn\n"
 "    زیر، وارد سیستم شوید.  اگر گذرواژه‌ی خود را به خاطر ندارید\n"
-"    با کلیک روی دکمه‌ی زیر، برایتان ایمیل خواهد شد.\n"
+"    با کلیک روی دکمه‌ی زیر، برایتان رایانامه خواهد شد.\n"
 "    در صورت تمایل به لغو اشتراک از این فهرست می‌توانید روی دکمه  <em>لغو "
-"اشتراک</em> کلیک کنید وn    پیغام تاییدیه برایتان ارسال خواهد شد.\n"
+"اشتراک</em> کلیک کنید\n"
+"    و پیام تاییدیه برایتان فرستاده خواهد شد.\n"
 "\n"
-"    <p><strong><em>مهم:</em></strong> از این نقطه به بعد، لازم است\n"
-"    در مرورگر خود، کوکی‌ها را فعال کرده باشید،  در غیر این صورت، هیچ یک از "
-"تغییرات شما\n"
-"    اعمال نمی گردد.\n"
+"    <p><strong><em>مهم:</em></strong> از این جا به بعد، لازم است\n"
+"    در مرورگر خود، کلوچک‌ها را فعال کرده باشید، وگرنه هیچ‌یک از تغییرات شما\n"
+"    عمل‌نخواهدکرد.\n"
 "    "
 
 #: Mailman/Cgi/options.py:901
 msgid "Email address:"
-msgstr "نشانی رایان‌نامه:"
+msgstr "نشانی رایا‌نامه:"
 
 #: Mailman/Cgi/options.py:905
 msgid "Password:"
@@ -2560,7 +2612,7 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:923
 msgid "Password reminder"
-msgstr "یادآور گذرواژه"
+msgstr "یادآوری گذرواژه"
 
 #: Mailman/Cgi/options.py:927
 msgid ""
@@ -2578,11 +2630,11 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:1041
 msgid "Requested topic is not valid: %(topicname)s"
-msgstr "موضوع مورد درخواست، معتبر نیست: %(topicname)s"
+msgstr "سرفصل درخواست‌شده، معتبر نیست: %(topicname)s"
 
 #: Mailman/Cgi/options.py:1046
 msgid "Topic filter details"
-msgstr "جزئیات مربوط به فیلتر موضوع"
+msgstr "جزئیات پالایه‌ی سرفصل"
 
 #: Mailman/Cgi/options.py:1049
 msgid "Name:"
@@ -2594,7 +2646,7 @@ msgstr ""
 
 #: Mailman/Cgi/private.py:64
 msgid "Private Archive Error"
-msgstr "خطای آرشیو خصوصی"
+msgstr "خطای بایگانی خصوصی"
 
 #: Mailman/Cgi/private.py:65
 msgid "You must specify a list."
@@ -2614,15 +2666,15 @@ msgid ""
 "                          your password has been emailed to you."
 msgstr ""
 "اگر عضوی از این فهرست باشید،\n"
-"                          هم اکنون گذرواژه تان برای شما ارسال شده است."
+"                          هم اکنون گذرواژه‌تان برای شما فرستاده شده است."
 
 #: Mailman/Cgi/private.py:145
 msgid "Please enter your email address"
-msgstr "لطفاً نشانی رایان‌نامه خود را وارد نمایید:"
+msgstr "لطفاً نشانی رایا‌نامه خود را وارد کنید"
 
 #: Mailman/Cgi/private.py:206
 msgid "Private archive file not found"
-msgstr "فایل آرشیو خصوصی پیدا نشد"
+msgstr "پرونده‌ی بایگانی خصوصی پیدا نشد"
 
 #: Mailman/Cgi/rmlist.py:83
 msgid "You're being a sneaky list owner!"
@@ -2630,18 +2682,18 @@ msgstr ""
 
 #: Mailman/Cgi/rmlist.py:121
 msgid "You are not authorized to delete this mailing list"
-msgstr "شما اجازه حذف این فهرست ایمیلی را ندارید"
+msgstr "شما اجازه حذف این فهرست پستی را ندارید"
 
 #: Mailman/Cgi/rmlist.py:162
 msgid "Mailing list deletion results"
-msgstr "نتایج حذف فهرست ایمیلی"
+msgstr "نتایج حذف فهرست پستی"
 
 #: Mailman/Cgi/rmlist.py:169
 msgid ""
 "You have successfully deleted the mailing list\n"
 "    <b>%(listname)s</b>."
 msgstr ""
-"شما فهرست ایمیلی زیر را با موفقیت حذف کردید:\n"
+"شما این فهرست پستی را با موفقیت حذف کردید:\n"
 "    <b>%(listname)s</b>."
 
 #: Mailman/Cgi/rmlist.py:173
@@ -2681,11 +2733,11 @@ msgstr ""
 
 #: Mailman/Cgi/rmlist.py:225
 msgid "List password:"
-msgstr "گذرواژه فهرست:"
+msgstr "گذرواژه‌ی فهرست:"
 
 #: Mailman/Cgi/rmlist.py:229
 msgid "Also delete archives?"
-msgstr "آیا آرشیوها نیز حذف شوند؟"
+msgstr "آیا بایگانی‌ها نیز حذف شوند؟"
 
 #: Mailman/Cgi/rmlist.py:237
 msgid "<b>Cancel</b> and return to list administration"
@@ -2710,7 +2762,7 @@ msgstr "خطا"
 
 #: Mailman/Cgi/subscribe.py:115
 msgid "You must supply a valid email address."
-msgstr "باید یک نشانی رایان‌نامه معتبر وارد نمایید"
+msgstr "باید یک نشانی رایا‌نامه معتبر وارد کنید."
 
 #: Mailman/Cgi/subscribe.py:138
 msgid "The form is too old.  Please GET it again."
@@ -2726,15 +2778,15 @@ msgstr ""
 
 #: Mailman/Cgi/subscribe.py:148
 msgid "You may not subscribe a list to itself!"
-msgstr "نمی توان یک فهرست را در خودش مشترک نمود"
+msgstr "نمی توان یک فهرست را در خودش مشترک کرد!"
 
 #: Mailman/Cgi/subscribe.py:156
 msgid "If you supply a password, you must confirm it."
-msgstr "اگر گذرواژه‌ای وارد کنید باید آن را تایید نمایید."
+msgstr "اگر گذرواژه‌ای وارد کنید باید آن را تایید کنید."
 
 #: Mailman/Cgi/subscribe.py:158
 msgid "Your passwords did not match."
-msgstr "گذرواژه‌های شما همخوان نبودند"
+msgstr "گذرواژه‌های شما هم‌لنگه نبود."
 
 #: Mailman/Cgi/subscribe.py:192
 msgid ""
@@ -2752,9 +2804,9 @@ msgid ""
 "        mailing list.  If you think this restriction is erroneous, please\n"
 "        contact the list owners at %(listowner)s."
 msgstr ""
-"نشانی رایان‌نامه‌ای که وارد کردید در این فهرست ایمیلی مسدود شده است.، \n"
-"اگر متصورید که این مسدودسازی به اشتباه صورت گرفته، لطفاً با مالک فهرست به "
-"نشانی زیر تماس بگیرید:\n"
+"نشانی رایانامه‌ای که وارد کردید در این فهرست پستی تحریم شده‌است. \n"
+"اگر می‌پندارید که این محدودیت اشتباهی بوده، لطفاً با مالکان فهرست به نشانی زیر "
+"تماس بگیرید:\n"
 "owners at %(listowner)s."
 
 #: Mailman/Cgi/subscribe.py:210
@@ -2762,8 +2814,8 @@ msgid ""
 "The email address you supplied is not valid.  (E.g. it must contain an\n"
 "`@'.)"
 msgstr ""
-"نشانی رایان‌نامه‌ای که وارد کردید معتبر نیست.\n"
-"(برای مثال این نشانی باید شامل علامت @ باشد)`@'.)"
+"نشانی رایا‌نامه‌ای که وارد کردید معتبر نیست.\n"
+"(برای مثال این نشانی باید شامل علامت '@` باشد.)"
 
 #: Mailman/Cgi/subscribe.py:214
 msgid ""
@@ -2790,7 +2842,7 @@ msgstr ""
 
 #: Mailman/Cgi/subscribe.py:241 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
-msgstr "شما پیشاپیش، مشترک شده اید."
+msgstr "شما پیشاپیش، مشترک شده‌اید."
 
 #: Mailman/Cgi/subscribe.py:255
 msgid "Mailman privacy alert"
@@ -2817,15 +2869,15 @@ msgstr ""
 
 #: Mailman/Cgi/subscribe.py:275
 msgid "This list does not support digest delivery."
-msgstr "این فهرست، حالت تحویل یکجا را پشتیبانی نمی کند."
+msgstr "این فهرست، حالت رساندن یک‌جا را پشتیبانی نمی‌کند."
 
 #: Mailman/Cgi/subscribe.py:277
 msgid "This list only supports digest delivery."
-msgstr "این فهرست، فقط حالت تحویل یکجا را پشتیبانی می‌کند."
+msgstr "این فهرست، فقط حالت رساندن یک‌جا را پشتیبانی می‌کند."
 
 #: Mailman/Cgi/subscribe.py:284
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
-msgstr "شما با موفقیت در فهرست ایمیلی the %(realname)s مشترک شدید."
+msgstr "شما با موفقیت در فهرست پستی the %(realname)s مشترک شدید."
 
 #: Mailman/Commands/cmd_confirm.py:18
 msgid ""
@@ -2850,22 +2902,22 @@ msgid ""
 "confirmation has expired, please try to re-submit your original request or\n"
 "message."
 msgstr ""
-"کد تاییدیه نامعتبر! به خاطر داشته باشید که کدهای تاییدیه\n"
-"تقریباً %(days)s روز بعد از درخواست اولیه‌ی عضویت، منقضی می‌گردند.\n"
-"اگر کد تاییدیه شما منقضی شده،  لطفاً سعی کنید درخواست یا ایمیل اولیه را \n"
-"دوباره بفرستید ."
+"رشته‌ی تاییدیه نامعتبر! به‌یاد داشته‌باشید که رشته‌های تاییدیه\n"
+"تقریباً %(days)s روز بعد از درخواست اولیه‌ی اشتراک، منقضی می‌شود.\n"
+"اگر کد تاییدیه شما منقضی شده، لطفاً درخواست یا پیام اولیه را \n"
+"دوباره بفرستید."
 
 #: Mailman/Commands/cmd_confirm.py:56
 msgid "Your request has been forwarded to the list moderator for approval."
-msgstr "درخواست شما جهت تصویب، به ناظم فهرست فرستاده شده است."
+msgstr "درخواست شما جهت تأیید، به میان‌دار فهرست فرستاده‌شده‌است."
 
 #: Mailman/Commands/cmd_confirm.py:64
 msgid ""
 "You are not currently a member.  Have you already unsubscribed or changed\n"
 "your email address?"
 msgstr ""
-"شما در حال حاضر عضو نیستید. آیا قبلاً اقدام به لغو اشتراک یا تغییر \n"
-"نشانی رایان‌نامه‌ی خود کرده اید؟"
+"شما در حال حاضر عضو نیستید. آیا قبلاً نشانی رایانامه‌ی خود را \n"
+"لغو اشتراک کرده یا تغییر داده‌اید؟"
 
 #: Mailman/Commands/cmd_confirm.py:69
 msgid ""
@@ -2873,9 +2925,9 @@ msgid ""
 "restriction is erroneous, please contact the list owners at\n"
 "%(owneraddr)s."
 msgstr ""
-"در حال حاضر، امکان اشتراک شما در این فهرست، مسدود شده است.\n"
-"اگر معتقدید که این محدودسازی به اشتباه صورت گرفته، لطفاً با مالک فهرست به این "
-"آدرس تماس بگیرید:\n"
+"در حال حاضر، شما از مشترک‌شدن در این فهرست، تحریم شده‌اید.\n"
+"اگر می‌پندارید که این محدودیت اشتباهی بوده، لطفاً با مالکان فهرست به این نشانی "
+"تماس بگیرید:\n"
 "%(owneraddr)s."
 
 #: Mailman/Commands/cmd_confirm.py:74
@@ -2884,8 +2936,8 @@ msgid ""
 "discarded,\n"
 "and both list administrators have been alerted."
 msgstr ""
-"شما به این فهرست ایمیلی دعوت نشده اید. این دعوتنامه نادیده گرفته شد.\n"
-"و هر دو مدیر فهرست، مطلع گشتند."
+"شما به این فهرست پستی دعوت نشده‌اید. این دعوت‌نامه رد شده‌است.\n"
+"  هر دو دسته سرپرست‌های گروه خبردار شدند."
 
 #: Mailman/Commands/cmd_confirm.py:78
 msgid "Bad approval password given.  Held message is still being held."
@@ -2940,11 +2992,11 @@ msgstr "نام فهرست:    %(listname)s"
 
 #: Mailman/Commands/cmd_info.py:45
 msgid "Description:  %(description)s"
-msgstr "شرح:  %(description)s"
+msgstr "توضیح:  %(description)s"
 
 #: Mailman/Commands/cmd_info.py:46
 msgid "Postings to:  %(postaddr)s"
-msgstr "پیام‌های ارسال شده به:  %(postaddr)s"
+msgstr "فرستادن به:  %(postaddr)s"
 
 #: Mailman/Commands/cmd_info.py:47
 msgid "List Helpbot: %(requestaddr)s"
@@ -2952,7 +3004,7 @@ msgstr ""
 
 #: Mailman/Commands/cmd_info.py:48
 msgid "List Owners:  %(owneraddr)s"
-msgstr "مالکین فهرست:  %(owneraddr)s"
+msgstr "مالکان فهرست:  %(owneraddr)s"
 
 #: Mailman/Commands/cmd_info.py:49
 msgid "More information: %(listurl)s"
@@ -2975,7 +3027,7 @@ msgstr ""
 
 #: Mailman/Commands/cmd_lists.py:44
 msgid "Public mailing lists at %(hostname)s:"
-msgstr "فهرست‌های ایمیلی همگانی در: %(hostname)s:"
+msgstr "فهرست‌های پستی همگانی در: %(hostname)s:"
 
 #: Mailman/Commands/cmd_lists.py:66
 msgid "%(i)3d. List name:   %(realname)s"
@@ -2983,7 +3035,7 @@ msgstr ""
 
 #: Mailman/Commands/cmd_lists.py:67
 msgid "     Description: %(description)s"
-msgstr "شرح:  %(description)s"
+msgstr "توضیح:  %(description)s"
 
 #: Mailman/Commands/cmd_lists.py:68
 msgid "     Requests to: %(requestaddr)s"
@@ -3015,7 +3067,7 @@ msgstr "گذرواژه شما این است: %(password)s"
 #: Mailman/Commands/cmd_password.py:95 Mailman/Commands/cmd_password.py:121
 #: Mailman/Commands/cmd_set.py:149 Mailman/Commands/cmd_set.py:219
 msgid "You are not a member of the %(listname)s mailing list"
-msgstr "شما عضو فهرست ایمیلی %(listname)s نیستید."
+msgstr "شما عضو فهرست پستی %(listname)s نیستید."
 
 #: Mailman/Commands/cmd_password.py:85 Mailman/Commands/cmd_password.py:111
 msgid ""
@@ -3024,9 +3076,9 @@ msgid ""
 "your\n"
 "current password, then try again."
 msgstr ""
-"گذرواژه‌ی قدیمی را درست وارد ننمودید. به همین دلیل، گذرواژه‌ی فعلی شما\n"
-"تغییر نکرد.  برای دریافت گذرواژه‌ی فعلی خود، می‌توانید دستور\n"
-"password را بدون هیچ آرگومان اضافه وارد کنید. سپس دوباره سعی نمایید."
+"گذرواژه‌ی قدیمی را درست وارد نکردید، بنابراین گذرواژه‌ی عوض نشد \n"
+"برای دریافت گذرواژه‌ی فعلی خود، می‌توانید دستور password \n"
+"را بدون هیچ آرگومان اضافه وارد کنید و سپس دوباره امتحان کنید."
 
 #: Mailman/Commands/cmd_password.py:89 Mailman/Commands/cmd_password.py:115
 msgid ""
@@ -3152,24 +3204,24 @@ msgstr ""
 
 #: Mailman/Commands/cmd_set.py:160
 msgid "    digest plain"
-msgstr "    حالت یکجا و متن خالی"
+msgstr "    حالت یک‌جا و متن خالی"
 
 #: Mailman/Commands/cmd_set.py:162
 msgid "    digest mime"
-msgstr "    حالت یکجا و mime"
+msgstr "    حالت یک‌جا و mime"
 
 #: Mailman/Commands/cmd_set.py:164
 msgid "    digest off"
-msgstr "حالت یکجا خاموش"
+msgstr "حالت یک‌جا خاموش"
 
 #: Mailman/Commands/cmd_set.py:169
 msgid "delivery on"
-msgstr "تحویل دادن، روشن"
+msgstr "رساندن، روشن"
 
 #: Mailman/Commands/cmd_set.py:171 Mailman/Commands/cmd_set.py:174
 #: Mailman/Commands/cmd_set.py:177 Mailman/Commands/cmd_set.py:181
 msgid "delivery off"
-msgstr "تحویل دادن، خاموش"
+msgstr "رساندن، خاموش"
 
 #: Mailman/Commands/cmd_set.py:172
 msgid "by you"
@@ -3177,11 +3229,11 @@ msgstr "توسط شما"
 
 #: Mailman/Commands/cmd_set.py:175
 msgid "by the admin"
-msgstr "توسط مدیر"
+msgstr "توسط سرپرست"
 
 #: Mailman/Commands/cmd_set.py:178
 msgid "due to bounces"
-msgstr "به دلیل موارد برگشتی"
+msgstr "به دلیل موارد واگشت"
 
 #: Mailman/Commands/cmd_set.py:186
 msgid "    %(status)s (%(how)s on %(date)s)"
@@ -3193,7 +3245,7 @@ msgstr ""
 
 #: Mailman/Commands/cmd_set.py:195
 msgid "    hide %(onoff)s"
-msgstr "پنهان کردن نوار _منو"
+msgstr "پنهان کردن %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:199
 msgid "    duplicates %(onoff)s"
@@ -3201,7 +3253,7 @@ msgstr "موارد تکراری %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:203
 msgid "    reminders %(onoff)s"
-msgstr "    یادآوری کننده‌ها %(onoff)s"
+msgstr "    یادآوری‌کننده‌ها %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:224
 msgid "You did not give the correct password"
@@ -3213,23 +3265,23 @@ msgstr ""
 
 #: Mailman/Commands/cmd_set.py:241 Mailman/Commands/cmd_set.py:261
 msgid "Not authenticated"
-msgstr "مجوز نگرفت"
+msgstr "اصالت‌سنجی نشد"
 
 #: Mailman/Commands/cmd_set.py:254
 msgid "ack option set"
-msgstr "تنظیم گزینه‌های اطلاع رسانی"
+msgstr "تنظیم گزینه‌ی تاییدیه"
 
 #: Mailman/Commands/cmd_set.py:286
 msgid "digest option set"
-msgstr "تنظیم گزینه‌های حالت مختصر شده"
+msgstr "تنظیم گزینه‌ی حالت یک‌جا"
 
 #: Mailman/Commands/cmd_set.py:301
 msgid "delivery enabled"
-msgstr "حالت تحویل، فعال است"
+msgstr "رساندن، فعال است"
 
 #: Mailman/Commands/cmd_set.py:304
 msgid "delivery disabled by user"
-msgstr "این کاربر، امکان تحویل دادن را از کار انداخته است."
+msgstr "این کاربر، رساندن را از کارانداخته است"
 
 #: Mailman/Commands/cmd_set.py:316
 msgid "myposts option set"
@@ -3237,15 +3289,15 @@ msgstr ""
 
 #: Mailman/Commands/cmd_set.py:327
 msgid "hide option set"
-msgstr "تنظیم گزینه‌های مربوط به پنهان سازی"
+msgstr "تنظیم گزینه‌ی پنهان کردن"
 
 #: Mailman/Commands/cmd_set.py:339
 msgid "duplicates option set"
-msgstr "تنظیم گزینه‌های مربوط به تکراری بودن"
+msgstr "تنظیم گزینه‌ی مربوط به تکراری بودن"
 
 #: Mailman/Commands/cmd_set.py:351
 msgid "reminder option set"
-msgstr "تنظیم گزینه‌های یادآوری کننده"
+msgstr "تنظیم گزینه‌ی یادآوری"
 
 #: Mailman/Commands/cmd_stop.py:17
 msgid "stop is synonymous with the end command.\n"
@@ -3275,7 +3327,7 @@ msgstr ""
 
 #: Mailman/Commands/cmd_subscribe.py:92
 msgid "No valid address found to subscribe"
-msgstr "هیچ نشانی معتبری برای مشترک کردن یافت نشد"
+msgstr "هیچ نشانی معتبری برای مشترک کردن پیدا نشد"
 
 #: Mailman/Commands/cmd_subscribe.py:113
 msgid ""
@@ -3283,9 +3335,9 @@ msgid ""
 "If you think this restriction is erroneous, please contact the list\n"
 "owners at %(listowner)s."
 msgstr ""
-"نشانی رایان‌نامه‌ای که وارد کردید در این فهرست ایمیلی مسدود شده است.، \n"
-"اگر متصورید که این مسدودسازی به اشتباه صورت گرفته، لطفاً با مالک فهرست به "
-"نشانی زیر تماس بگیرید:\n"
+"نشانی رایانامه‌ای که وارد کردید از این فهرست پستی تحریم شده‌است.، \n"
+"اگر می‌پندارید که این تحریم اشتباه شده است، لطفاً با مالکان فهرست به نشانی زیر "
+"تماس بگیرید:\n"
 "owners at %(listowner)s."
 
 #: Mailman/Commands/cmd_subscribe.py:119
@@ -3302,27 +3354,27 @@ msgstr ""
 
 #: Mailman/Commands/cmd_subscribe.py:129
 msgid "You are already subscribed!"
-msgstr "شما پیشاپیش مشترک شده اید"
+msgstr "شما پیشاپیش مشترک شده‌اید!"
 
 #: Mailman/Commands/cmd_subscribe.py:133
 msgid "No one can subscribe to the digest of this list!"
-msgstr "هیچ کس در این فهرست نمی تواند عضو حالت مختصرشده گردد"
+msgstr "هیچ‌کس در این فهرست نمی‌تواند مشترک حالت یک‌جا شود!"
 
 #: Mailman/Commands/cmd_subscribe.py:136
 msgid "This list only supports digest subscriptions!"
-msgstr "این فهرست صرفاً اشتراک در حالت مختصرشده را پشتیبانی می‌کند."
+msgstr "این فهرست صرفاً اشتراک در حالت یک‌جا را پشتیبانی می‌کند."
 
 #: Mailman/Commands/cmd_subscribe.py:142
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
 msgstr ""
-"تقاضای اشتراک شما برای بررسی ،به مالک فهرست به نشانی زیر، پیش فرست شد:\n"
+"درخواست اشتراک شما برای بررسی ،به سرپرست فهرست به نشانی زیر، پیش پیش‌سو شد:\n"
 "at %(listowner)s "
 
 #: Mailman/Commands/cmd_subscribe.py:147
 msgid "Subscription request succeeded."
-msgstr "درخواست عضویت، موفقیت آمیز بود"
+msgstr "درخواست اشتراک، موفقیت‌آمیز بود"
 
 #: Mailman/Commands/cmd_unsubscribe.py:17
 msgid ""
@@ -3340,7 +3392,7 @@ msgstr ""
 
 #: Mailman/Commands/cmd_unsubscribe.py:62
 msgid "%(address)s is not a member of the %(listname)s mailing list"
-msgstr "%(address)s عضوی از فهرست ایمیلی %(listname)s نمی باشد."
+msgstr "%(address)s عضوی از فهرست پستی %(listname)s نیست."
 
 #: Mailman/Commands/cmd_unsubscribe.py:69
 msgid ""
@@ -3348,17 +3400,18 @@ msgid ""
 "for\n"
 "approval."
 msgstr ""
-"تقاضای لغو اشتراک شما جهت تایید به\n"
-"مدیر فهرست فرستاده شد."
+"درخواست لغو اشتراک شما برای تایید به\n"
+"سرپرست فهرست پیش‌سو شد."
 
 #: Mailman/Commands/cmd_unsubscribe.py:84
 msgid "You gave the wrong password"
-msgstr "گذرواژه را نادرست وارد کرده اید"
+msgstr "گذرواژه را نادرست وارد کردید"
 
 #: Mailman/Commands/cmd_unsubscribe.py:87
 msgid "Unsubscription request succeeded."
-msgstr "درخواست لغو اشتراک، موفقیت آمیز بود"
+msgstr "درخواست لغو اشتراک، موفقیت‌آمیز بود."
 
+# what are who and who password here?
 #: Mailman/Commands/cmd_who.py:27
 msgid ""
 "\n"
@@ -3370,10 +3423,10 @@ msgid ""
 msgstr ""
 "\n"
 "    who\n"
-"        مشاهده اعضای غیر مخفی این فهرست ایمیلی.\n"
-"    who password\n"
-"        مشاهده‌ی تمام کسانی که در این فهرست ایمیلی هستند. گذرواژه\n"
-"        در اینجا باید متعلق به یک ناظم یا مدیر فهرست باشد.\n"
+"        دیدن اعضای غیر پنهان این فهرست پستی.\n"
+"    who گذرواژه\n"
+"        دیدن تمام کسانی که در این فهرست پستی هستند. گذرواژه\n"
+"        در اینجا باید متعلق به یک میان‌دار یا سرپرست فهرست باشد.\n"
 
 #: Mailman/Commands/cmd_who.py:35
 msgid ""
@@ -3399,7 +3452,7 @@ msgstr ""
 
 #: Mailman/Commands/cmd_who.py:128
 msgid "You are not allowed to retrieve the list membership."
-msgstr "شما اجازه‌ی در اختیار گرفتن مشخصات اعضای این فهرست را ندارید"
+msgstr "شما اجازه‌ی دسترسی به اعضای این فهرست را ندارید."
 
 #: Mailman/Commands/cmd_who.py:134
 msgid "This list has no members."
@@ -3407,165 +3460,165 @@ msgstr "این فهرست، هیچ عضوی ندارد"
 
 #: Mailman/Commands/cmd_who.py:148
 msgid "Non-digest (regular) members:"
-msgstr "اعضای حالت عادی (حالت غیر مختصر)"
+msgstr "اعضای حالت غیر‌یک‌جا(عاری):"
 
 #: Mailman/Commands/cmd_who.py:151
 msgid "Digest members:"
-msgstr "اعضای حالت یکجا"
+msgstr "اعضای حالت یک‌جا"
 
-#: Mailman/Defaults.py:1508
+#: Mailman/Defaults.py:1523
 msgid "Arabic"
-msgstr ""
+msgstr "عربی"
 
-#: Mailman/Defaults.py:1509
+#: Mailman/Defaults.py:1524
 msgid "Asturian"
 msgstr ""
 
-#: Mailman/Defaults.py:1510
+#: Mailman/Defaults.py:1525
 msgid "Catalan"
 msgstr ""
 
-#: Mailman/Defaults.py:1511
+#: Mailman/Defaults.py:1526
 msgid "Czech"
 msgstr ""
 
-#: Mailman/Defaults.py:1512
+#: Mailman/Defaults.py:1527
 msgid "Danish"
 msgstr ""
 
-#: Mailman/Defaults.py:1513
+#: Mailman/Defaults.py:1528
 msgid "German"
 msgstr ""
 
-#: Mailman/Defaults.py:1514
+#: Mailman/Defaults.py:1529
 msgid "English (USA)"
 msgstr ""
 
-#: Mailman/Defaults.py:1515
+#: Mailman/Defaults.py:1530
 msgid "Spanish (Spain)"
 msgstr ""
 
-#: Mailman/Defaults.py:1516
+#: Mailman/Defaults.py:1531
 msgid "Estonian"
 msgstr ""
 
-#: Mailman/Defaults.py:1517
+#: Mailman/Defaults.py:1532
 msgid "Euskara"
 msgstr ""
 
-#: Mailman/Defaults.py:1518
+#: Mailman/Defaults.py:1533
 msgid "Persian"
-msgstr ""
+msgstr "فارسی"
 
-#: Mailman/Defaults.py:1519
+#: Mailman/Defaults.py:1534
 msgid "Finnish"
 msgstr ""
 
-#: Mailman/Defaults.py:1520
+#: Mailman/Defaults.py:1535
 msgid "French"
 msgstr ""
 
-#: Mailman/Defaults.py:1521
+#: Mailman/Defaults.py:1536
 msgid "Galician"
 msgstr ""
 
-#: Mailman/Defaults.py:1522
+#: Mailman/Defaults.py:1537
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1523
+#: Mailman/Defaults.py:1538
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1524
+#: Mailman/Defaults.py:1539
 msgid "Croatian"
 msgstr ""
 
-#: Mailman/Defaults.py:1525
+#: Mailman/Defaults.py:1540
 msgid "Hungarian"
 msgstr ""
 
-#: Mailman/Defaults.py:1526
+#: Mailman/Defaults.py:1541
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1527
+#: Mailman/Defaults.py:1542
 msgid "Italian"
 msgstr ""
 
-#: Mailman/Defaults.py:1528
+#: Mailman/Defaults.py:1543
 msgid "Japanese"
 msgstr ""
 
-#: Mailman/Defaults.py:1529
+#: Mailman/Defaults.py:1544
 msgid "Korean"
 msgstr ""
 
-#: Mailman/Defaults.py:1530
+#: Mailman/Defaults.py:1545
 msgid "Lithuanian"
 msgstr ""
 
-#: Mailman/Defaults.py:1531
+#: Mailman/Defaults.py:1546
 msgid "Dutch"
 msgstr ""
 
-#: Mailman/Defaults.py:1532
+#: Mailman/Defaults.py:1547
 msgid "Norwegian"
 msgstr ""
 
-#: Mailman/Defaults.py:1533
+#: Mailman/Defaults.py:1548
 msgid "Polish"
 msgstr ""
 
-#: Mailman/Defaults.py:1534
+#: Mailman/Defaults.py:1549
 msgid "Portuguese"
 msgstr ""
 
-#: Mailman/Defaults.py:1535
+#: Mailman/Defaults.py:1550
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: Mailman/Defaults.py:1536
+#: Mailman/Defaults.py:1551
 msgid "Romanian"
 msgstr ""
 
-#: Mailman/Defaults.py:1537
+#: Mailman/Defaults.py:1552
 msgid "Russian"
 msgstr ""
 
-#: Mailman/Defaults.py:1538
+#: Mailman/Defaults.py:1553
 msgid "Slovak"
 msgstr ""
 
-#: Mailman/Defaults.py:1539
+#: Mailman/Defaults.py:1554
 msgid "Slovenian"
 msgstr ""
 
-#: Mailman/Defaults.py:1540
+#: Mailman/Defaults.py:1555
 msgid "Serbian"
 msgstr ""
 
-#: Mailman/Defaults.py:1541
+#: Mailman/Defaults.py:1556
 msgid "Swedish"
 msgstr ""
 
-#: Mailman/Defaults.py:1542
+#: Mailman/Defaults.py:1557
 msgid "Turkish"
 msgstr ""
 
-#: Mailman/Defaults.py:1543
+#: Mailman/Defaults.py:1558
 msgid "Ukrainian"
 msgstr ""
 
-#: Mailman/Defaults.py:1544
+#: Mailman/Defaults.py:1559
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1545
+#: Mailman/Defaults.py:1560
 msgid "Chinese (China)"
 msgstr ""
 
-#: Mailman/Defaults.py:1546
+#: Mailman/Defaults.py:1561
 msgid "Chinese (Taiwan)"
 msgstr ""
 
@@ -3578,15 +3631,15 @@ msgstr ""
 
 #: Mailman/Deliverer.py:71
 msgid " (Digest mode)"
-msgstr " (حالت یکجا)"
+msgstr " (حالت یک‌جا)"
 
 #: Mailman/Deliverer.py:77
 msgid "Welcome to the \"%(realname)s\" mailing list%(digmode)s"
-msgstr "به فهرست ایمیلی  \"%(realname)s\" خوش آمدید %(digmode)s"
+msgstr "به فهرست پستی  \"%(realname)s\" خوش آمدید %(digmode)s"
 
 #: Mailman/Deliverer.py:87
 msgid "You have been unsubscribed from the %(realname)s mailing list"
-msgstr "شما از فهرست ایمیلی  %(realname)s لغو عضویت شدید."
+msgstr "شما از فهرست پستی  %(realname)s لغو اشتراک شده‌اید."
 
 #: Mailman/Deliverer.py:114
 msgid "%(listfullname)s mailing list reminder"
@@ -3594,11 +3647,11 @@ msgstr ""
 
 #: Mailman/Deliverer.py:142
 msgid "No reason given"
-msgstr "هیچ دلیلی ذکر نشده است"
+msgstr "هیچ دلیلی داده نشده"
 
 #: Mailman/Deliverer.py:166 Mailman/Deliverer.py:185
 msgid "Hostile subscription attempt detected"
-msgstr "تلاش برای اشتراک خصمانه مشاهده شد"
+msgstr "تلاش برای اشتراک خصمانه دیده شد"
 
 #: Mailman/Deliverer.py:167
 msgid ""
@@ -3623,23 +3676,23 @@ msgstr ""
 
 #: Mailman/Errors.py:122
 msgid "For some unknown reason"
-msgstr "به دلایل نامعلوم"
+msgstr "به دلیلی ناشناخته"
 
 #: Mailman/Errors.py:128 Mailman/Errors.py:151
 msgid "Your message was rejected"
-msgstr "پیام شما رد شد"
+msgstr "پیام شما پس‌زده‌شد"
 
 #: Mailman/Gui/Archive.py:25
 msgid "Archiving Options"
-msgstr "گزینه‌های آرشیوسازی"
+msgstr "گزینه‌های بایگانی‌سازی"
 
 #: Mailman/Gui/Archive.py:31
 msgid "List traffic archival policies."
-msgstr "سیاست‌های آرشیوسازی ترافیک فهرست"
+msgstr "سیاست‌های بایگانی ترافیک فهرست"
 
 #: Mailman/Gui/Archive.py:34
 msgid "Archive messages?"
-msgstr "آیا پیغام‌ها آرشیو شوند؟"
+msgstr "آیا پیام‌ها بایگانی شوند؟"
 
 #: Mailman/Gui/Archive.py:36
 msgid "private"
@@ -3651,7 +3704,7 @@ msgstr "همگانی"
 
 #: Mailman/Gui/Archive.py:37
 msgid "Is archive file source for public or private archival?"
-msgstr "آیا سورس فایل آرشیوی برای آرشیوسازی همگانی است یا خصوصی؟"
+msgstr "آیا متن پرونده‌ی بایگانی برای بایگانی‌سازی همگانی است یا خصوصی؟"
 
 #: Mailman/Gui/Archive.py:40 Mailman/Gui/Digest.py:78
 msgid "Monthly"
@@ -3679,7 +3732,7 @@ msgstr ""
 
 #: Mailman/Gui/Autoresponse.py:31
 msgid "Auto-responder"
-msgstr "پاسخ دهنده خودکار"
+msgstr "پاسخ‌دهنده خودکار"
 
 #: Mailman/Gui/Autoresponse.py:39
 msgid ""
@@ -3703,11 +3756,11 @@ msgstr ""
 msgid ""
 "Should Mailman send an auto-response to mailing list\n"
 "             posters?"
-msgstr "آیا میلمن باید پاسخی خودکار به ارسال کننده‌های فهرست ایمیلی بفرستد؟"
+msgstr "آیا میلمن باید پاسخی خودکار به فرستنده‌های فهرست پستی بفرستد؟"
 
 #: Mailman/Gui/Autoresponse.py:60
 msgid "Auto-response text to send to mailing list posters."
-msgstr "متن پاسخ خودکار به پست دهنده‌های فهرست ایمیلی"
+msgstr "متن پاسخ خودکار به فرستنده‌های فهرست پستی."
 
 #: Mailman/Gui/Autoresponse.py:63
 msgid ""
@@ -3749,7 +3802,7 @@ msgstr ""
 
 #: Mailman/Gui/Bounce.py:26
 msgid "Bounce processing"
-msgstr "پردازش موارد برگشتی"
+msgstr "پردازش موارد واگشتی"
 
 #: Mailman/Gui/Bounce.py:32
 msgid ""
@@ -3814,11 +3867,11 @@ msgstr ""
 
 #: Mailman/Gui/Bounce.py:75
 msgid "Bounce detection sensitivity"
-msgstr "حساسیت کشف موارد برگشتی"
+msgstr "حساسیت کشف موارد واگشتی"
 
 #: Mailman/Gui/Bounce.py:78
 msgid "Should Mailman perform automatic bounce processing?"
-msgstr "آیا میلمن باید موارد برگشتی را به طور خودکار رسیدگی کند؟"
+msgstr "آیا میلمن باید پردازش موارد واگشتی را خودکار انجام دهد؟"
 
 #: Mailman/Gui/Bounce.py:79
 msgid ""
@@ -3878,9 +3931,9 @@ msgid ""
 "             Is Disabled</em> warnings.  This value must be an integer."
 msgstr ""
 
-#: Mailman/Gui/Bounce.py:117 Mailman/Gui/General.py:266
+#: Mailman/Gui/Bounce.py:117 Mailman/Gui/General.py:280
 msgid "Notifications"
-msgstr "یادآوری ها"
+msgstr "آگاه‌سازی‌ها"
 
 #: Mailman/Gui/Bounce.py:121
 msgid ""
@@ -3963,7 +4016,7 @@ msgstr ""
 
 #: Mailman/Gui/ContentFilter.py:37
 msgid "Forward to List Owner"
-msgstr "پیش فرست کردن به مالک لیست"
+msgstr "پیش‌سو کردن به مالک فهرست"
 
 #: Mailman/Gui/ContentFilter.py:39
 msgid "Preserve"
@@ -4128,7 +4181,7 @@ msgstr ""
 
 #: Mailman/Gui/Digest.py:36
 msgid "Digest options"
-msgstr "گزینه‌های حالت یکجا"
+msgstr "گزینه‌های حالت یک‌جا"
 
 #: Mailman/Gui/Digest.py:44
 msgid "Batched-delivery digest characteristics."
@@ -4140,7 +4193,7 @@ msgstr ""
 
 #: Mailman/Gui/Digest.py:51
 msgid "Digest"
-msgstr "حالت یکجا"
+msgstr "حالت یک‌جا"
 
 #: Mailman/Gui/Digest.py:51
 msgid "Regular"
@@ -4148,7 +4201,7 @@ msgstr "عادی"
 
 #: Mailman/Gui/Digest.py:52
 msgid "Which delivery mode is the default for new users?"
-msgstr "حالت تحویل پیشفرض به کاربران جدید کدام است؟"
+msgstr "حالت رساندن پیش‌فرض برای کاربران جدید کدام است؟"
 
 #: Mailman/Gui/Digest.py:55
 msgid "MIME"
@@ -4160,27 +4213,26 @@ msgstr "متن ساده"
 
 #: Mailman/Gui/Digest.py:56
 msgid "When receiving digests, which format is default?"
-msgstr "هنگام دریافت حالت مختصر شده، پیکربندی پیشفرض کدام است؟"
+msgstr "هنگام دریافت حالت یک‌جا، قالب پیش‌فرض کدام است؟"
 
 #: Mailman/Gui/Digest.py:59
-#, fuzzy
 msgid ""
 "How big in Kb should a digest be before it gets sent out?  0 implies no "
 "maximum size."
 msgstr ""
-"هر ایمیل حالت مختصر شده، قبل از ارسال باید بر حسب کیلوبایت چقدر بزرگ شده "
-"باشد؟"
+"هر رایانامه‌ی یک‌جا، به چه حجمی بر حسب کیلوبایت برسد تا فرستاده شود؟ «۰» (صفر) "
+"یعنی بدون محدودیت بیشینه"
 
 #: Mailman/Gui/Digest.py:63
 msgid ""
 "Should a digest be dispatched daily when the size threshold isn't reached?"
 msgstr ""
-"اگر ایمیل مختصر شده هنوز به بزرگی مورد نظر نرسیده باشد آیا می‌تواند به صورت "
-"روزانه ارسال گردد؟"
+"اگر رایانامه‌ی یک‌جا، هنوز به بزرگی مورد نظر نرسیده باشد آیا می‌تواند به صورت "
+"روزانه فرستاده شود؟"
 
 #: Mailman/Gui/Digest.py:67
 msgid "Header added to every digest"
-msgstr "سربرگی که به تمام ایمیل‌های مختصرشده اضافه می‌گردد"
+msgstr "سربرگی که به تمام رایانامه‌های یک‌جا افزوده می‌شود"
 
 #: Mailman/Gui/Digest.py:68
 msgid ""
@@ -4190,7 +4242,7 @@ msgstr ""
 
 #: Mailman/Gui/Digest.py:73
 msgid "Footer added to every digest"
-msgstr "پاورقی که به تمام ایمیل‌های مختصرشده افزوده می‌گردد"
+msgstr "پاورقی که به تمام رایانامه‌های یک‌جا افزوده می‌شود"
 
 #: Mailman/Gui/Digest.py:74
 msgid "Text attached (as a final message) to the bottom of digests. "
@@ -4221,7 +4273,7 @@ msgid ""
 "Should Mailman send the next digest right now, if it is not\n"
 "             empty?"
 msgstr ""
-"اگر پیام مختصرشده‌ی بعدی، خالی نباشد آیا میلمن باید آن را همین حالا بفرستد؟"
+"اگر رایانامه‌ی یک‌جای بعدی خالی نباشد، آیا میلمن باید آن را همین حالا بفرستد؟"
 
 #: Mailman/Gui/Digest.py:145
 msgid ""
@@ -4231,21 +4283,23 @@ msgstr ""
 
 #: Mailman/Gui/Digest.py:150
 msgid "A digest has been sent."
-msgstr "یک پیام مختصرشده ارسال گشت."
+msgstr "یک رایانامه‌ی یک‌جا فرستاده شد."
 
 #: Mailman/Gui/Digest.py:152
 msgid "There was no digest to send."
-msgstr "هیچ ایمیل مختصرشده‌ای برای فرستادن، موجود نبود"
+msgstr "هیچ رایانامه‌ی یک‌جایی برای فرستادن، موجود نبود."
 
-#: Mailman/Gui/GUIBase.py:169
+#: Mailman/Gui/GUIBase.py:172
 msgid "Invalid value for variable: %(property)s"
 msgstr "مقدار نامعتبر برای متغیر: %(property)s"
 
-#: Mailman/Gui/GUIBase.py:173
-msgid "Bad email address for option %(property)s: %(val)s"
+#: Mailman/Gui/GUIBase.py:176
+msgid "Bad email address for option %(property)s: %(error)s"
 msgstr ""
+"نشانی رایانامه‌ی نادرست برای گزینه‌ی :\n"
+" %(record)s"
 
-#: Mailman/Gui/GUIBase.py:199
+#: Mailman/Gui/GUIBase.py:202
 msgid ""
 "The following illegal substitution variables were\n"
 "                found in the <code>%(property)s</code> string:\n"
@@ -4255,7 +4309,7 @@ msgid ""
 "                problem."
 msgstr ""
 
-#: Mailman/Gui/GUIBase.py:213
+#: Mailman/Gui/GUIBase.py:216
 msgid ""
 "Your <code>%(property)s</code> string appeared to\n"
 "                    have some correctable problems in its new value.\n"
@@ -4270,19 +4324,19 @@ msgstr "گزینه‌های عمومی"
 
 #: Mailman/Gui/General.py:51
 msgid "Conceal the member's address"
-msgstr "مخفی سازی نشانی اعضا"
+msgstr "پنهان سازی نشانی عضو"
 
 #: Mailman/Gui/General.py:52
 msgid "Acknowledge the member's posting"
-msgstr "اطلاع رسانی درباره موارد ارسال شده توسط اعضا"
+msgstr "دادن تاییدیه برای فرستاده‌ی عضو"
 
 #: Mailman/Gui/General.py:53
 msgid "Do not send a copy of a member's own post"
-msgstr "نسخه‌ای از پیام ارسال شده توسط عضو را برای خودش نفرست"
+msgstr "رونوشت پیام فرستاده‌ی خود عضو را برایش نفرست"
 
 #: Mailman/Gui/General.py:55
 msgid "Filter out duplicate messages to list members (if possible)"
-msgstr "پیام‌های تکراری ارسال شده برای اعضای فهرست را در صورت امکان فیلتر کن"
+msgstr "پیام‌های تکراری فرستاده شده برای اعضای فهرست را در صورت امکان پالایش کن"
 
 #: Mailman/Gui/General.py:62
 msgid ""
@@ -4292,7 +4346,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:65
 msgid "General list personality"
-msgstr "شخصیت کلی فهرست"
+msgstr "شخصیت عمومی فهرست"
 
 #: Mailman/Gui/General.py:68
 msgid "The public name of this list (make case-changes only)."
@@ -4380,7 +4434,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:126
 msgid "A terse phrase identifying this list."
-msgstr "یک عبارت مختصر که معرف این فهرست باشد"
+msgstr "یک عبارت مختصر که معرف این فهرست باشد."
 
 #: Mailman/Gui/General.py:128
 msgid ""
@@ -4416,7 +4470,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:146
 msgid "Prefix for subject line of list postings."
-msgstr "پیشوند برای موضوع پیام‌های ارسال شده به فهرست"
+msgstr "پیش‌وند برای موضوع فرستاده‌های فهرست."
 
 #: Mailman/Gui/General.py:147
 msgid ""
@@ -4433,17 +4487,30 @@ msgid ""
 "             "
 msgstr ""
 
-#: Mailman/Gui/General.py:158
+#: Mailman/Gui/General.py:161
+msgid ""
+"Replace the sender with the list address to conform with\n"
+"                 policies like ADSP and DMARC.  It replaces the poster's\n"
+"                 address in the From: header with the list address and adds "
+"the\n"
+"                 poster to the Reply-To: header, but the anonymous_list and\n"
+"                 Reply-To: header munging settings below take priority.  If\n"
+"                 setting this to Yes, it is advised to set the MTA to DKIM "
+"sign\n"
+"                 all emails."
+msgstr ""
+
+#: Mailman/Gui/General.py:172
 msgid ""
 "Hide the sender of a message, replacing it with the list\n"
 "             address (Removes From, Sender and Reply-To fields)"
 msgstr ""
 
-#: Mailman/Gui/General.py:161
+#: Mailman/Gui/General.py:175
 msgid "<tt>Reply-To:</tt> header munging"
 msgstr ""
 
-#: Mailman/Gui/General.py:164
+#: Mailman/Gui/General.py:178
 msgid ""
 "Should any existing <tt>Reply-To:</tt> header found in the\n"
 "             original message be stripped?  If so, this will be done\n"
@@ -4451,19 +4518,19 @@ msgid ""
 "             added by Mailman or not."
 msgstr ""
 
-#: Mailman/Gui/General.py:170
+#: Mailman/Gui/General.py:184
 msgid "Explicit address"
 msgstr "نشانی صریح"
 
-#: Mailman/Gui/General.py:170
+#: Mailman/Gui/General.py:184
 msgid "Poster"
 msgstr "فرستنده"
 
-#: Mailman/Gui/General.py:170
+#: Mailman/Gui/General.py:184
 msgid "This list"
 msgstr "این فهرست"
 
-#: Mailman/Gui/General.py:171
+#: Mailman/Gui/General.py:185
 msgid ""
 "Where are replies to list messages directed?\n"
 "             <tt>Poster</tt> is <em>strongly</em> recommended for most "
@@ -4471,7 +4538,7 @@ msgid ""
 "             lists."
 msgstr ""
 
-#: Mailman/Gui/General.py:176
+#: Mailman/Gui/General.py:190
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -4513,11 +4580,11 @@ msgid ""
 "             list."
 msgstr ""
 
-#: Mailman/Gui/General.py:208
+#: Mailman/Gui/General.py:222
 msgid "Explicit <tt>Reply-To:</tt> header."
 msgstr ""
 
-#: Mailman/Gui/General.py:210
+#: Mailman/Gui/General.py:224
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"
@@ -4557,17 +4624,17 @@ msgid ""
 "             <tt>Reply-To:</tt> header, it will not be changed."
 msgstr ""
 
-#: Mailman/Gui/General.py:239
+#: Mailman/Gui/General.py:253
 msgid "Umbrella list settings"
-msgstr "تنظیم فهرست‌های زیر چتر این فهرست"
+msgstr "تنظیمات فهرست چتری"
 
-#: Mailman/Gui/General.py:242
+#: Mailman/Gui/General.py:256
 msgid ""
 "Send password reminders to, eg, \"-owner\" address instead of\n"
 "             directly to user."
 msgstr ""
 
-#: Mailman/Gui/General.py:245
+#: Mailman/Gui/General.py:259
 msgid ""
 "Set this to yes when this list is intended to cascade only\n"
 "             to other mailing lists.  When set, meta notices like\n"
@@ -4577,14 +4644,14 @@ msgid ""
 "             account name."
 msgstr ""
 
-#: Mailman/Gui/General.py:253
+#: Mailman/Gui/General.py:267
 msgid ""
 "Suffix for use when this list is an umbrella for other\n"
 "             lists, according to setting of previous \"umbrella_list\"\n"
 "             setting."
 msgstr ""
 
-#: Mailman/Gui/General.py:257
+#: Mailman/Gui/General.py:271
 msgid ""
 "When \"umbrella_list\" is set to indicate that this list has\n"
 "             other mailing lists as members, then administrative notices "
@@ -4599,11 +4666,11 @@ msgid ""
 "             is \"No\"."
 msgstr ""
 
-#: Mailman/Gui/General.py:269
+#: Mailman/Gui/General.py:283
 msgid "Send monthly password reminders?"
-msgstr "آیا یادآوری کننده‌ی ماهانه‌ی گذرواژه ارسال شود؟"
+msgstr "آیا یادآوری‌کننده‌ی ماهانه‌ی گذرواژه فرستاده شود؟"
 
-#: Mailman/Gui/General.py:271
+#: Mailman/Gui/General.py:285
 msgid ""
 "Turn this on if you want password reminders to be sent once\n"
 "             per month to your members.  Note that members may disable "
@@ -4611,13 +4678,13 @@ msgid ""
 "             own individual password reminders."
 msgstr ""
 
-#: Mailman/Gui/General.py:276
+#: Mailman/Gui/General.py:290
 msgid ""
 "List-specific text prepended to new-subscriber welcome\n"
 "             message"
 msgstr ""
 
-#: Mailman/Gui/General.py:279
+#: Mailman/Gui/General.py:293
 msgid ""
 "This value, if any, will be added to the front of the\n"
 "             new-subscriber welcome message.  The rest of the welcome "
@@ -4640,11 +4707,11 @@ msgid ""
 "             </ul>"
 msgstr ""
 
-#: Mailman/Gui/General.py:296
+#: Mailman/Gui/General.py:310
 msgid "Send welcome message to newly subscribed members?"
-msgstr "آیا برای اعضایی که تازه مشترک می‌شوند پیام خوشآمد ارسال گردد؟"
+msgstr "آیا برای اعضایی که تازه مشترک می‌شوند پیام خوش‌آمد فرستاده شود؟"
 
-#: Mailman/Gui/General.py:297
+#: Mailman/Gui/General.py:311
 msgid ""
 "Turn this off only if you plan on subscribing people manually\n"
 "             and don't want them to know that you did so.  This option is "
@@ -4654,24 +4721,24 @@ msgid ""
 "             list manager to Mailman."
 msgstr ""
 
-#: Mailman/Gui/General.py:303
+#: Mailman/Gui/General.py:317
 msgid ""
 "Text sent to people leaving the list.  If empty, no special\n"
 "             text will be added to the unsubscribe message."
 msgstr ""
 
-#: Mailman/Gui/General.py:307
+#: Mailman/Gui/General.py:321
 msgid "Send goodbye message to members when they are unsubscribed?"
 msgstr ""
 "وقتی اعضا از فهرست، لغو اشتراک می‌کنند آیا پیام خداحافظی برایشان فرستاده شود؟"
 
-#: Mailman/Gui/General.py:310
+#: Mailman/Gui/General.py:324
 msgid ""
 "Should the list moderators get immediate notice of new\n"
 "             requests, as well as daily notices about collected ones?"
 msgstr ""
 
-#: Mailman/Gui/General.py:313
+#: Mailman/Gui/General.py:327
 msgid ""
 "List moderators (and list administrators) are sent daily\n"
 "             reminders of requests pending approval, like subscriptions to "
@@ -4682,27 +4749,27 @@ msgid ""
 "             immediately on the arrival of new requests as well."
 msgstr ""
 
-#: Mailman/Gui/General.py:320
+#: Mailman/Gui/General.py:334
 msgid ""
 "Should administrator get notices of subscribes and\n"
 "             unsubscribes?"
 msgstr ""
 
-#: Mailman/Gui/General.py:325
+#: Mailman/Gui/General.py:339
 msgid "Send mail to poster when their posting is held for approval?"
 msgstr ""
-"هنگامی که یک پست در انتظار تایید نگه داشته می‌شود، هشداری به فرستنده‌ی آن "
-"ارسال گردد."
+"هنگامی که یک پست در انتظار تایید نگه داشته می‌شود، هشداری برای فرستنده‌ی آن "
+"فرستاده شود؟"
 
-#: Mailman/Gui/General.py:328
+#: Mailman/Gui/General.py:342
 msgid "Additional settings"
 msgstr "تنظیمات جنبی"
 
-#: Mailman/Gui/General.py:331
+#: Mailman/Gui/General.py:345
 msgid "Emergency moderation of all list traffic."
 msgstr ""
 
-#: Mailman/Gui/General.py:332
+#: Mailman/Gui/General.py:346
 msgid ""
 "When this option is enabled, all list traffic is emergency\n"
 "             moderated, i.e. held for moderation.  Turn this option on when\n"
@@ -4711,25 +4778,25 @@ msgid ""
 "             period."
 msgstr ""
 
-#: Mailman/Gui/General.py:344
+#: Mailman/Gui/General.py:358
 msgid ""
 "Default options for new members joining this list.<input\n"
 "             type=\"hidden\" name=\"new_member_options\" value=\"ignore\">"
 msgstr ""
 
-#: Mailman/Gui/General.py:347
+#: Mailman/Gui/General.py:361
 msgid ""
 "When a new member is subscribed to this list, their initial\n"
 "             set of options is taken from this variable's setting."
 msgstr ""
 
-#: Mailman/Gui/General.py:351
+#: Mailman/Gui/General.py:365
 msgid ""
 "(Administrivia filter) Check postings and intercept ones\n"
 "             that seem to be administrative requests?"
 msgstr ""
 
-#: Mailman/Gui/General.py:354
+#: Mailman/Gui/General.py:368
 msgid ""
 "Administrivia tests will check postings to see whether it's\n"
 "             really meant as an administrative request (like subscribe,\n"
@@ -4739,27 +4806,27 @@ msgid ""
 "             in the process."
 msgstr ""
 
-#: Mailman/Gui/General.py:361
+#: Mailman/Gui/General.py:375
 msgid ""
 "Maximum length in kilobytes (KB) of a message body.  Use 0\n"
 "             for no limit."
 msgstr ""
-"حداکثر اندازه هر پیام بر حسب کیلوبایت (KB).  \n"
+"بیشینه اندازه‌ی بدنه‌ی هر پیام بر حسب کیلوبایت (KB).  \n"
 "             اگر می‌خواهید نامحدود باشد، صفر بگذارید."
 
-#: Mailman/Gui/General.py:365
+#: Mailman/Gui/General.py:379
 msgid ""
 "Maximum number of members to show on one page of the\n"
 "             Membership List."
 msgstr ""
-"حداکثر تعداد اعضا که در هر صفحه \n"
+"بیشینه تعداد اعضایی که در هر صفحه \n"
 "             از فهرست عضویت نمایش داده می‌شود."
 
-#: Mailman/Gui/General.py:369
+#: Mailman/Gui/General.py:383
 msgid "Host name this list prefers for email."
-msgstr "نام میزبانی که این فهرست برای ایمیل ترجیح می‌دهد"
+msgstr "نام میزبانی که این فهرست برای رایاناه ترجیح می‌دهد."
 
-#: Mailman/Gui/General.py:371
+#: Mailman/Gui/General.py:385
 msgid ""
 "The \"host_name\" is the preferred name for email to\n"
 "             mailman-related addresses on this host, and generally should "
@@ -4771,7 +4838,7 @@ msgid ""
 "             multiple addresses."
 msgstr ""
 
-#: Mailman/Gui/General.py:383
+#: Mailman/Gui/General.py:397
 msgid ""
 "Should messages from this mailing list include the\n"
 "                 <a href=\"http://www.faqs.org/rfcs/rfc2369.html\">RFC 2369</"
@@ -4780,7 +4847,7 @@ msgid ""
 "                 recommended."
 msgstr ""
 
-#: Mailman/Gui/General.py:388
+#: Mailman/Gui/General.py:402
 msgid ""
 "RFC 2369 defines a set of List-* headers that are\n"
 "                 normally added to every message sent to the list "
@@ -4804,11 +4871,11 @@ msgid ""
 "                 these headers may eventually go away)."
 msgstr ""
 
-#: Mailman/Gui/General.py:406
+#: Mailman/Gui/General.py:420
 msgid "Should postings include the <tt>List-Post:</tt> header?"
 msgstr ""
 
-#: Mailman/Gui/General.py:407
+#: Mailman/Gui/General.py:421
 msgid ""
 "The <tt>List-Post:</tt> header is one of the headers\n"
 "             recommended by\n"
@@ -4826,14 +4893,14 @@ msgid ""
 "             headers.)"
 msgstr ""
 
-#: Mailman/Gui/General.py:423
+#: Mailman/Gui/General.py:437
 msgid ""
 "Should the <tt>Sender</tt> header be rewritten for this\n"
 "                 mailing list to avoid stray bounces?  <em>Yes</em> is\n"
 "                 recommended."
 msgstr ""
 
-#: Mailman/Gui/General.py:427
+#: Mailman/Gui/General.py:441
 msgid ""
 "<a href=\"http://www.faqs.org/rfcs/rfc2822.html\">RFC\n"
 "                 2822</a> defines the <tt>Sender</tt> header and defines it\n"
@@ -4855,20 +4922,20 @@ msgid ""
 "                 here."
 msgstr ""
 
-#: Mailman/Gui/General.py:445
+#: Mailman/Gui/General.py:459
 msgid ""
 "Discard held messages older than this number of days.\n"
 "            Use 0 for no automatic discarding."
 msgstr ""
 
-#: Mailman/Gui/General.py:455
+#: Mailman/Gui/General.py:469
 msgid ""
 "<b>real_name</b> attribute not\n"
 "            changed!  It must differ from the list's name by case\n"
 "            only."
 msgstr ""
 
-#: Mailman/Gui/General.py:483
+#: Mailman/Gui/General.py:497
 msgid ""
 "The <b>info</b> attribute you saved\n"
 "contains suspicious HTML that could potentially expose your users to cross-"
@@ -4882,13 +4949,13 @@ msgid ""
 "                        "
 msgstr ""
 
-#: Mailman/Gui/General.py:494
+#: Mailman/Gui/General.py:508
 msgid ""
 "<b>admin_member_chunksize</b> attribute not\n"
 "            changed!  It must be an integer > 0."
 msgstr ""
 
-#: Mailman/Gui/General.py:504
+#: Mailman/Gui/General.py:518
 msgid ""
 "You cannot add a Reply-To: to an explicit\n"
 "            address if that address is blank.  Resetting these values."
@@ -4900,11 +4967,11 @@ msgstr ""
 
 #: Mailman/Gui/Language.py:66
 msgid "Natural language (internationalization) options."
-msgstr "گزینه‌های زبان طبیعی (بین المللی سازی)."
+msgstr "گزینه‌های زبان طبیعی (بین المللی‌سازی)."
 
 #: Mailman/Gui/Language.py:71
 msgid "Default language for this list."
-msgstr "زبان پیشفرض این فهرست"
+msgstr "زبان پیش‌فرض این فهرست."
 
 #: Mailman/Gui/Language.py:72
 msgid ""
@@ -4922,7 +4989,7 @@ msgstr ""
 
 #: Mailman/Gui/Language.py:82
 msgid "Languages supported by this list."
-msgstr "زبان‌های مورد پشتیبانی این فهرست"
+msgstr "زبان‌های مورد پشتیبانی این فهرست."
 
 #: Mailman/Gui/Language.py:84
 msgid ""
@@ -4942,7 +5009,7 @@ msgstr "هنگام نیاز"
 
 #: Mailman/Gui/Language.py:90
 msgid "Never"
-msgstr "هیچ گاه"
+msgstr "هیچ‌گاه"
 
 #: Mailman/Gui/Language.py:91
 msgid ""
@@ -5008,12 +5075,12 @@ msgid ""
 "Can subscribers choose to receive mail immediately, rather\n"
 "             than in batched digests?"
 msgstr ""
-"آیا مشترکین می‌توانند انتخاب کنند که ایمیل را به جای حالت دسته جمعی مختصر "
-"شده، به شکل ایمیل فوری دریافت نمایند؟"
+"آیا مشترک‌ها می‌توانند انتخاب کنند که رایانامه را به جای حالت یک‌جا، \n"
+" به شکل فوری دریافت کنند؟"
 
 #: Mailman/Gui/NonDigest.py:53
 msgid "Full Personalization"
-msgstr "شخصی سازی کامل"
+msgstr "شخصی‌سازی کامل"
 
 #: Mailman/Gui/NonDigest.py:55
 msgid ""
@@ -5104,8 +5171,7 @@ msgstr ""
 
 #: Mailman/Gui/NonDigest.py:129
 msgid "Header added to mail sent to regular list members"
-msgstr ""
-"سربرگی که به ایمیل‌های ارسال شده توسط فهرست برای اعضای عادی افزوده می‌گردد"
+msgstr "سربرگی که به رایانامه‌های فرستاده‌شده برای اعضای عادی افزوده می‌شود"
 
 #: Mailman/Gui/NonDigest.py:130
 msgid ""
@@ -5115,7 +5181,7 @@ msgstr ""
 
 #: Mailman/Gui/NonDigest.py:134
 msgid "Footer added to mail sent to regular list members"
-msgstr "پاورقی که به ایمیل‌های ارسال شده به اعضای عادی گروه اضافه می‌گردد"
+msgstr "پاورقی که به رایانامه‌های فرستاده شده به اعضای عادی گروه افزوده می‌شود"
 
 #: Mailman/Gui/NonDigest.py:135
 msgid ""
@@ -5137,7 +5203,7 @@ msgstr ""
 
 #: Mailman/Gui/NonDigest.py:149
 msgid "Sibling lists"
-msgstr "فهرست‌های هم خانواده"
+msgstr "فهرست‌های هم‌خانواده"
 
 #: Mailman/Gui/NonDigest.py:152
 msgid ""
@@ -5193,11 +5259,11 @@ msgstr ""
 
 #: Mailman/Gui/Passwords.py:27
 msgid "Passwords"
-msgstr "گذرواژه ها"
+msgstr "گذرواژه‌ها"
 
 #: Mailman/Gui/Privacy.py:37
 msgid "Privacy options..."
-msgstr "گزینه‌های حفظ اطلاعات شخصی...."
+msgstr "گزینه‌های محرمانگی...."
 
 #: Mailman/Gui/Privacy.py:41
 msgid "Subscription&nbsp;rules"
@@ -5217,7 +5283,7 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:58 Mailman/Gui/Usenet.py:63
 msgid "None"
-msgstr "هیچ کدام"
+msgstr "هیچ‌کدام"
 
 #: Mailman/Gui/Privacy.py:59 Mailman/Gui/Privacy.py:82
 msgid "Confirm"
@@ -5233,7 +5299,7 @@ msgstr "تایید و موافقت"
 
 #: Mailman/Gui/Privacy.py:63 Mailman/Gui/Privacy.py:86
 msgid "What steps are required for subscription?<br>"
-msgstr "چه گام هایی برای اشتراک لازم است؟<br>"
+msgstr "چه گام‌هایی برای اشتراک لازم است؟<br>"
 
 #: Mailman/Gui/Privacy.py:64
 msgid ""
@@ -5283,7 +5349,7 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:109
 msgid "Subscribing"
-msgstr "مشترک شدن"
+msgstr "در حال مشترک‌شدن"
 
 #: Mailman/Gui/Privacy.py:111
 msgid ""
@@ -5317,7 +5383,7 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:131
 msgid "Ban list"
-msgstr "مسدود کردن فهرست"
+msgstr "فهرست تحریم"
 
 #: Mailman/Gui/Privacy.py:133
 msgid ""
@@ -5340,11 +5406,11 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:143
 msgid "Anyone"
-msgstr "همه کس"
+msgstr "هرکس"
 
 #: Mailman/Gui/Privacy.py:143
 msgid "List admin only"
-msgstr "فقط مدیر فهرست"
+msgstr "فقط سرپرست فهرست"
 
 #: Mailman/Gui/Privacy.py:143
 msgid "List members"
@@ -5418,12 +5484,13 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:195
 msgid "Member filters"
-msgstr "فیلترهای مربوط به عضو"
+msgstr "پالایه‌های برای اعضا"
 
 #: Mailman/Gui/Privacy.py:198
 msgid "By default, should new list member postings be moderated?"
 msgstr ""
-"آیا به طور پیشفرض، پست‌های اعضای جدید این فهرست، مستلزم نظم دهی خواهد بود؟"
+"آیا به طور پیش‌فرض، فرستاده‌های اعضای جدید این فهرست، نیاز به بررسی میان‌دار "
+"دارد؟"
 
 #: Mailman/Gui/Privacy.py:200
 msgid ""
@@ -5484,7 +5551,7 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:238
 msgid "Non-member filters"
-msgstr "فیلترهای مربوط به غیر اعضا"
+msgstr "پالایه‌های برای غیراعضا"
 
 #: Mailman/Gui/Privacy.py:241
 msgid ""
@@ -5608,7 +5675,7 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:328
 msgid "Recipient filters"
-msgstr "فیلترهای مربوط به دریافت کننده"
+msgstr "پالایه‌های مربوط به دریافت‌کننده"
 
 #: Mailman/Gui/Privacy.py:332
 msgid ""
@@ -5689,7 +5756,7 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:386
 msgid "Header filters"
-msgstr "فیلترهای مربوط به سربرگ"
+msgstr "پالایه‌های مربوط به سربرگ"
 
 #: Mailman/Gui/Privacy.py:389
 msgid "Filter rules to match against the headers of a message."
@@ -5761,15 +5828,15 @@ msgstr ""
 
 #: Mailman/Gui/Topics.py:36
 msgid "Topics"
-msgstr "موضوعات"
+msgstr "سرفصل‌ها"
 
 #: Mailman/Gui/Topics.py:44
 msgid "List topic keywords"
-msgstr "واژگان کلیدی موضوعات را فهرست کن"
+msgstr "واژگان کلیدی سرفصل‌ها را فهرست کن"
 
 #: Mailman/Gui/Topics.py:46
 msgid "Disabled"
-msgstr "از کار انداخته شده"
+msgstr "ازکار‌انداخته‌شده"
 
 #: Mailman/Gui/Topics.py:46
 msgid "Enabled"
@@ -5868,11 +5935,11 @@ msgstr ""
 
 #: Mailman/Gui/Usenet.py:37
 msgid "News server settings"
-msgstr "تنظیمات سرویس دهنده‌ی خبری"
+msgstr "تنظیمات کارگزار خبری"
 
 #: Mailman/Gui/Usenet.py:40
 msgid "The hostname of the machine your news server is running on."
-msgstr "نام میزبان دستگاهی که سرور خبررسانی شما روی آن نصب است."
+msgstr "نام میزبان دستگاهی که کارگزار خبررسانی شما روی آن در حال اجراست."
 
 #: Mailman/Gui/Usenet.py:41
 msgid ""
@@ -5905,19 +5972,19 @@ msgstr ""
 
 #: Mailman/Gui/Usenet.py:60
 msgid "Forwarding options"
-msgstr "تنظیمات پیش فرست کردن"
+msgstr "گزینه‌های پیش‌سو کردن"
 
 #: Mailman/Gui/Usenet.py:63
 msgid "Moderated"
-msgstr "نظم دهی شد"
+msgstr "میان‌داری شد"
 
 #: Mailman/Gui/Usenet.py:63
 msgid "Open list, moderated group"
-msgstr "فهرست باز، گروه نظم دهی شده"
+msgstr "فهرست باز، گروه میان‌داری شده"
 
 #: Mailman/Gui/Usenet.py:66
 msgid "The moderation policy of the newsgroup."
-msgstr "سیاست نظم دهی گروه خبری"
+msgstr "سیاست میان‌داری گروه خبری"
 
 #: Mailman/Gui/Usenet.py:68
 msgid ""
@@ -6008,19 +6075,19 @@ msgstr ""
 
 #: Mailman/HTMLFormatter.py:48
 msgid "%(listinfo_link)s list run by %(owner_link)s"
-msgstr ""
+msgstr "لیست %(listinfo_link)s با سرپرستی %(owner_link)s"
 
 #: Mailman/HTMLFormatter.py:56
 msgid "%(realname)s administrative interface"
-msgstr "%(realname)s رابط کاربری مدیریتی"
+msgstr "رابط کاربری سرپرستی %(realname)s"
 
 #: Mailman/HTMLFormatter.py:57
 msgid " (requires authorization)"
-msgstr "مستلزم مجوز دسترسی است"
+msgstr "(مستلزم اجازه‌دهی)"
 
 #: Mailman/HTMLFormatter.py:60
 msgid "Overview of all %(hostname)s mailing lists"
-msgstr "مرور کلیه‌ی فهرست‌های ایمیلی %(hostname)s "
+msgstr "مرور کلیه‌ی فهرست‌های پستی %(hostname)s "
 
 #: Mailman/HTMLFormatter.py:77
 msgid "<em>(1 private member not shown)</em>"
@@ -6036,7 +6103,7 @@ msgstr "; شما آن را از کار انداختید"
 
 #: Mailman/HTMLFormatter.py:137
 msgid "; it was disabled by the list administrator"
-msgstr "; مدیر فهرست، آن را از کار انداخت"
+msgstr "; سرپرست فهرست، آن را از کار انداخت"
 
 #: Mailman/HTMLFormatter.py:141
 msgid ""
@@ -6046,21 +6113,20 @@ msgstr ""
 
 #: Mailman/HTMLFormatter.py:144
 msgid "; it was disabled for unknown reasons"
-msgstr "; به دلایل نامعلوم، از کار افتاد"
+msgstr "; به دلایل ناشناخته، از کار انداخته‌شده"
 
 #: Mailman/HTMLFormatter.py:146
 msgid "Note: your list delivery is currently disabled%(reason)s."
 msgstr ""
-"یادآوری: امکان تحویل فهرست شما در حال حاضر  از کار انداخته شده زیرا:  "
-"%(reason)s."
+"یادداشت: امکان رساندن فهرست شما اکنون  از کار انداخته شده زیرا:  %(reason)s."
 
 #: Mailman/HTMLFormatter.py:149
 msgid "Mail delivery"
-msgstr "تحویل ایمیل"
+msgstr "رساندن رایانامه"
 
 #: Mailman/HTMLFormatter.py:151 Mailman/HTMLFormatter.py:296
 msgid "the list administrator"
-msgstr "مدیر فهرست"
+msgstr "سرپرست فهرست"
 
 #: Mailman/HTMLFormatter.py:152
 msgid ""
@@ -6096,8 +6162,8 @@ msgid ""
 "You will be sent email requesting confirmation, to\n"
 "            prevent others from gratuitously subscribing you."
 msgstr ""
-"یک ایمیل جهت تایید درخواست برایتان ارسال می‌شود تا\n"
-"دیگران نتوانند شما را به طور ناخواسته مشترک نمایند."
+"یک رایانامه جهت تایید درخواست برایتان فرستاده می‌شود تا\n"
+"دیگران نتوانند شما را به طور ناخواسته مشترک کنند."
 
 #: Mailman/HTMLFormatter.py:189
 msgid ""
@@ -6105,9 +6171,9 @@ msgid ""
 "            will be held for approval.  You will be notified of the list\n"
 "            moderator's decision by email."
 msgstr ""
-"این یک فهرست بسته است. یعنی تقاضای اشتراک شما\n"
-"            در انتظار تایید شدن می‌ماند. نتایج \n"
-"            تصمیم ناظمین برایتان ایمیل خواهد شد."
+"این یک فهرست بسته است. یعنی درخواست اشتراک شما\n"
+"            در انتظار تایید شدن می‌ماند. نتیجه‌ی تصمیم میان‌دار \n"
+"            با رایانامه به اطلاع‌تان خواهد رسید."
 
 #: Mailman/HTMLFormatter.py:192 Mailman/HTMLFormatter.py:199
 msgid "also "
@@ -6122,11 +6188,11 @@ msgid ""
 "            by the list moderator.  You will be notified of the moderator's\n"
 "            decision by email."
 msgstr ""
-"یک ایمیل محتوی درخواست تایید برایتان فرستاده خواهد شد تا\n"
-"            دیگران نتوانند شما را به طور ناخواسته عضو نمایند.\n"
-"            هنگامی که تایید را انجام دهید، درخواست عضویت شما در انتظار تصویب "
-"ناظم می‌ماند.\n"
-"            نتیجه‌ی تصمیم ناظم با ایمیل به اطلاعتان خواهد رسید."
+"یک رایانامه‌ی محتوی درخواست تایید برای‌تان فرستاده خواهد شد تا\n"
+"            دیگران نتوانند شما را به طور ناخواسته مشترک کنند.\n"
+"            هنگامی که تایید را انجام دهید، میان‌دار فهرست باید درخواست اشتراک "
+"شما را تایید کند.\n"
+"            نتیجه‌ی تصمیم میان‌دار با رایانامه به اطلاع‌تان خواهد رسید."
 
 #: Mailman/HTMLFormatter.py:203
 msgid ""
@@ -6145,6 +6211,8 @@ msgid ""
 "This is %(also)sa public list, which means that the\n"
 "            list of members list is available to everyone."
 msgstr ""
+"این %(also) یک فهرست همگانی است که یعنی فهرست‌های اعضای \n"
+"فهرست برای هرکس و ناکسی دسترسی‌پذیر است."
 
 #: Mailman/HTMLFormatter.py:212
 msgid ""
@@ -6152,19 +6220,24 @@ msgid ""
 "                easily recognizable by spammers)."
 msgstr ""
 " (ولی ما نشانی‌ها را به شکل خاصی در می‌آوریم\n"
-"                که به آسانی توسط اسپمرها قابل تشخیص نباشد)."
+"                که به آسانی توسط هرزفرست‌ها قابل تشخیص نباشد)."
 
 #: Mailman/HTMLFormatter.py:217
+#, fuzzy
 msgid ""
 "<p>(Note that this is an umbrella list, intended to\n"
 "            have only other mailing lists as members.  Among other things,\n"
 "            this means that your confirmation request will be sent to the\n"
 "            `%(sfx)s' account for your address.)"
 msgstr ""
+"<p>(آگاه باشید که این یک فهرست چتری است، که یعنی بقیه‌ی  \n"
+"            فهرست‌های پستی در آن عضو می‌شوند، و در این بین\n"
+"            درخواست تأییدیه‌ی شما به حساب `%(sfx)s' برای \n"
+"            نشانی شما فرستاده خواهد شد..)"
 
 #: Mailman/HTMLFormatter.py:246
 msgid "<b><i>either</i></b> "
-msgstr ""
+msgstr "<b><i>یا</i></b> "
 
 #: Mailman/HTMLFormatter.py:251
 msgid ""
@@ -6174,21 +6247,22 @@ msgid ""
 "        email address:\n"
 "        <p><center> "
 msgstr ""
-"برای لغو اشتراک از  %(realname)s، ابتدا یک یادآور گذرواژه\n"
-"        دریافت کنید یا گزینه‌های اشتراک خود را در قسمت  %(either)s با وارد "
-"کردن\n"
-"        نشانی رایان‌نامه‌ای که با آن عضو شده اید تغییر دهید:\n"
+"برای لغو اشتراک از  %(realname)s، گرفتن یادآور گذرواژه\n"
+"        یا  تغییر گزینه‌های اشتراکتان  %(either)s نشانی رایانامه‌ی \n"
+"        اشتراک‌تان را وارد کنید:\n"
 "        <p><center> "
 
 #: Mailman/HTMLFormatter.py:258
 msgid "Unsubscribe or edit options"
-msgstr "لغو اشتراک یا ویرایش گزینه ها"
+msgstr "لغو اشتراک یا ویرایش گزینه‌ها"
 
 #: Mailman/HTMLFormatter.py:262
 msgid ""
 "<p>... <b><i>or</i></b> select your entry from\n"
 "                      the subscribers list (see above)."
 msgstr ""
+"<p>... <b><i>یا</i></b> ورودی‌تان را از فهرست مشترک‌ها انتخاب کنید(بالا را "
+"ببینید)"
 
 #: Mailman/HTMLFormatter.py:264
 msgid ""
@@ -6196,19 +6270,19 @@ msgid ""
 "        your email address"
 msgstr ""
 "اگر این خانه را خالی بگذارید، از شما\n"
-"        نشانی رایان‌نامه تان پرسیده خواهد شد."
+"        نشانی رایا‌نامه‌تان پرسیده خواهد شد."
 
 #: Mailman/HTMLFormatter.py:272
 msgid ""
 "(<i>%(which)s is only available to the list\n"
 "                members.</i>)"
-msgstr ""
+msgstr "(<i>%(which)s تنها برای اعضای فهرست دسترسی‌پذیر است.</i>)"
 
 #: Mailman/HTMLFormatter.py:276
 msgid ""
 "(<i>%(which)s is only available to the list\n"
 "            administrator.</i>)"
-msgstr ""
+msgstr "(<i>%(which)s تنها برای سرپرست دسترسی‌پذیر است.</i>)"
 
 #: Mailman/HTMLFormatter.py:286
 msgid "Click here for the list of "
@@ -6216,11 +6290,11 @@ msgstr "اینجا را کلیک کنید برای دیدن فهرست "
 
 #: Mailman/HTMLFormatter.py:288
 msgid " subscribers: "
-msgstr "مشترکین:"
+msgstr "مشترک‌ها:"
 
 #: Mailman/HTMLFormatter.py:290
 msgid "Visit Subscriber list"
-msgstr "مشاهده فهرست مشترکین"
+msgstr "دیدن فهرست مشترک‌ها"
 
 #: Mailman/HTMLFormatter.py:293
 msgid "members"
@@ -6232,19 +6306,19 @@ msgstr "نشانی:"
 
 #: Mailman/HTMLFormatter.py:297
 msgid "Admin address:"
-msgstr "نشانی مدیر:"
+msgstr "نشانی سرپرست:"
 
 #: Mailman/HTMLFormatter.py:300
 msgid "The subscribers list"
-msgstr "فهرست مشترکین"
+msgstr "فهرست مشترک‌ها"
 
 #: Mailman/HTMLFormatter.py:302
 msgid " <p>Enter your "
-msgstr " <p>لطفاً وارد کنید "
+msgstr " <p>وارد کنید"
 
 #: Mailman/HTMLFormatter.py:304
 msgid " and password to visit  the subscribers list: <p><center> "
-msgstr ""
+msgstr "و گذرواژه‌تان را تا فهرست مشترک‌ها را ببینید: <p><center> "
 
 #: Mailman/HTMLFormatter.py:309
 msgid "Password: "
@@ -6252,15 +6326,15 @@ msgstr "گذرواژه:"
 
 #: Mailman/HTMLFormatter.py:313
 msgid "Visit Subscriber List"
-msgstr "مشاهده فهرست مشترکین"
+msgstr "دیدن فهرست مشترک‌ها"
 
 #: Mailman/HTMLFormatter.py:347
 msgid "Once a month, your password will be emailed to you as a reminder."
-msgstr "ماهی یک بار، گذرواژه‌ی شما جهت یادآوری، برایتان ایمیل خواهد شد."
+msgstr "ماهی یک بار، گذرواژه‌ی شما جهت یادآوری، برای‌تان رایانامه خواهد شد."
 
 #: Mailman/HTMLFormatter.py:394
 msgid "The current archive"
-msgstr "آرشیو فعلی"
+msgstr "بایگانی جاری"
 
 #: Mailman/Handlers/Acknowledge.py:59
 msgid "%(realname)s post acknowledgement"
@@ -6286,7 +6360,7 @@ msgstr ""
 
 #: Mailman/Handlers/Emergency.py:30 Mailman/Handlers/Hold.py:58
 msgid "Your message was deemed inappropriate by the moderator."
-msgstr "ناظم، پیام شما را نامناسب برشمرده است."
+msgstr "میان‌دار، پیام شما را نامناسب برشمرده است."
 
 #: Mailman/Handlers/Hold.py:53
 msgid "Sender is explicitly forbidden"
@@ -6294,39 +6368,39 @@ msgstr "فرستنده، صریحاً منع شده است"
 
 #: Mailman/Handlers/Hold.py:54
 msgid "You are forbidden from posting messages to this list."
-msgstr "شما از ارسال پیام به این فهرست، منع شده اید"
+msgstr "شما از فرستادن پیام به این فهرست، منع شده‌اید"
 
 #: Mailman/Handlers/Hold.py:57
 msgid "Post to moderated list"
-msgstr "ارسال به فهرست نظم دهی شده"
+msgstr "فرستادن به فهرست میان‌داری شده"
 
 #: Mailman/Handlers/Hold.py:61
 msgid "Post by non-member to a members-only list"
-msgstr "ارسال توسط غیرعضو به فهرست مختص اعضا"
+msgstr "فرستادن توسط غیرعضو به فهرست مختص اعضا"
 
 #: Mailman/Handlers/Hold.py:62
 msgid "Non-members are not allowed to post messages to this list."
-msgstr "غیر اعضا اجازه‌ی ارسال پیام به این فهرست را ندارند"
+msgstr "کسی غیر از اعضا اجازه‌ی فرستادن پیام به این فهرست را ندارد."
 
 #: Mailman/Handlers/Hold.py:65
 msgid "Posting to a restricted list by sender requires approval"
-msgstr "ارسال توسط فرستنده به یک فهرست محدودشده، نیاز به تایید دارد."
+msgstr "فرستادن به یک فهرست محرمانه توسط این فرستنده، نیاز به تایید دارد"
 
 #: Mailman/Handlers/Hold.py:66
 msgid "This list is restricted; your message was not approved."
-msgstr "این فهرست، محدودیت دارد؛ پیام شما تایید نشد."
+msgstr "این فهرست، محرمانه است؛ پیام شما تایید نشد."
 
 #: Mailman/Handlers/Hold.py:69
 msgid "Too many recipients to the message"
-msgstr "تعداد دریافت کنندگان این پیام، بیش از حد است"
+msgstr "تعداد دریافت‌کنندگان این پیام، بیش از حد است"
 
 #: Mailman/Handlers/Hold.py:70
 msgid "Please trim the recipient list; it is too long."
-msgstr "لطفاً فهرست دریافت کنندگان را کوتاه نمایید زیرا بیش از حد بلند است"
+msgstr "لطفاً فهرست دریافت‌کنندگان را کوتاه کنید زیرا بیش از حد بلند است."
 
 #: Mailman/Handlers/Hold.py:73
 msgid "Message has implicit destination"
-msgstr "این پیام دارای مقصد غیر صریح است"
+msgstr "مقصد این پیام آشکار نیست"
 
 #: Mailman/Handlers/Hold.py:74
 msgid ""
@@ -6350,11 +6424,11 @@ msgstr ""
 
 #: Mailman/Handlers/Hold.py:90
 msgid "Message has a suspicious header"
-msgstr "این پیام حاوی سربرگ مشکوک است"
+msgstr "سربرگ این پیام مشکوک است"
 
 #: Mailman/Handlers/Hold.py:91
 msgid "Your message had a suspicious header."
-msgstr "پیام شما دارای سربرگ مشکوک بود"
+msgstr "سربرگ پیام شما مشکوک بود."
 
 #: Mailman/Handlers/Hold.py:101
 msgid ""
@@ -6374,11 +6448,11 @@ msgstr ""
 
 #: Mailman/Handlers/Hold.py:110
 msgid "Posting to a moderated newsgroup"
-msgstr "ارسال به گروه خبری نظم دهی شده"
+msgstr "فرستادن به گروه خبری میان‌داری شده"
 
 #: Mailman/Handlers/Hold.py:247
 msgid "Your message to %(listname)s awaits moderator approval"
-msgstr "پیام شما به  %(listname)s در انتظار تایید ناظم می‌ماند."
+msgstr "پیام شما به  %(listname)s در انتظار تایید میان‌دار است"
 
 #: Mailman/Handlers/Hold.py:266
 msgid "%(listname)s post from %(sender)s requires approval"
@@ -6397,7 +6471,7 @@ msgstr ""
 
 #: Mailman/Handlers/MimeDel.py:59
 msgid "The message's content type was explicitly disallowed"
-msgstr "نوع محتوای این پیام، صریحاً غیرمجاز دانسته شده است."
+msgstr "نوع محتوای این پیام، صریحاً غیرمجاز دانسته شده است"
 
 #: Mailman/Handlers/MimeDel.py:64
 msgid "The message's content type was not explicitly allowed"
@@ -6405,15 +6479,15 @@ msgstr "نوع محتوای این پیام، صریحاً مجاز دانسته
 
 #: Mailman/Handlers/MimeDel.py:72
 msgid "The message's file extension was explicitly disallowed"
-msgstr "پسوند فایل این پیام صریحاً غیرمجاز دانسته شده است"
+msgstr "پسوند پرونده‌ی این پیام صریحاً غیرمجاز دانسته شده است"
 
 #: Mailman/Handlers/MimeDel.py:75
 msgid "The message's file extension was not explicitly allowed"
-msgstr "پسوند فایل این پیام، صریحاً مجاز دانسته نشده است"
+msgstr "پسوند پرونده‌ی این پیام، صریحاً مجاز دانسته نشده است"
 
 #: Mailman/Handlers/MimeDel.py:87
 msgid "After content filtering, the message was empty"
-msgstr "بعد از فیلتر کردن محتوا، این پیام خالی ماند."
+msgstr "بعد از پالایش محتوا، این پیام خالی ماند"
 
 #: Mailman/Handlers/MimeDel.py:264
 msgid ""
@@ -6427,7 +6501,7 @@ msgstr ""
 
 #: Mailman/Handlers/MimeDel.py:270
 msgid "Content filtered message notification"
-msgstr "یادآوری مربوط به پیامی که محتوایش فیلتر شده است"
+msgstr "آگاه‌سازی مربوط به پیامی که محتوایش پالایش شده است"
 
 #: Mailman/Handlers/Moderate.py:163
 msgid ""
@@ -6436,17 +6510,17 @@ msgid ""
 "in\n"
 "error, contact the mailing list owner at %(listowner)s."
 msgstr ""
-"شما مجاز به ارسال پیغام به این فهرست ایمیلی نیستید و پیغامتان\n"
-"به طور خودکار رد شد. اگر معتقدید که پیغام هایتان\n"
-"به اشتباه رد می‌شود، با مالک فهرست به این نشانی تماس بگیرید: %(listowner)s."
+"شما مجاز به فرستادن پیام به این فهرست پستی نیستید و پیام‌تان\n"
+"به طور خودکار پس‌زده‌شد. اگر معتقدید که پیام‌هایتان\n"
+"به اشتباه پس‌زده‌شده، با مالک فهرست به این نشانی تماس بگیرید: %(listowner)s."
 
 #: Mailman/Handlers/Moderate.py:179
 msgid "Auto-discard notification"
-msgstr "یادآوری مربوط به دور انداختن خودبخودی"
+msgstr "آگاه‌سازی مربوط به رد شدن خودبه‌خودی"
 
 #: Mailman/Handlers/Moderate.py:182
 msgid "The attached message has been automatically discarded."
-msgstr "پیام پیوست، به طور خودبخود دور انداخته شد"
+msgstr "پیام پیوست‌شده، به طور خودکار رد شد."
 
 #: Mailman/Handlers/Replybot.py:75
 msgid "Auto-response for your message to the \"%(realname)s\" mailing list"
@@ -6483,7 +6557,7 @@ msgstr "بدون تاریخ"
 
 #: Mailman/Handlers/Scrubber.py:271
 msgid "unknown sender"
-msgstr "فرستنده نامشخص"
+msgstr "فرستنده ناشناخته"
 
 #: Mailman/Handlers/Scrubber.py:273
 msgid ""
@@ -6515,11 +6589,11 @@ msgstr "-------------- قسمت بعدی --------------\n"
 
 #: Mailman/Handlers/SpamDetect.py:55
 msgid "The message headers matched a filter rule"
-msgstr "سربرگ‌های این پیام، مصداق یکی از قواعد فیلترینگ بودند"
+msgstr "سربرگ‌های این پیام، مصداق یکی از قواعد پالایش بودند"
 
 #: Mailman/Handlers/SpamDetect.py:119
 msgid "Message rejected by filter rule match"
-msgstr "این پیام بر اثر انطباق با قواعد فیلترینگ، رد شد."
+msgstr "این پیام به‌خاطر مطابقت با قواعد پالایش، پس‌زده‌شد"
 
 #: Mailman/Handlers/ToDigest.py:163
 msgid "%(realname)s Digest, Vol %(volume)d, Issue %(issue)d"
@@ -6527,31 +6601,31 @@ msgstr ""
 
 #: Mailman/Handlers/ToDigest.py:209
 msgid "digest header"
-msgstr "سربرگ حالت یکجا"
+msgstr "سربرگ حالت یک‌جا"
 
 #: Mailman/Handlers/ToDigest.py:212
 msgid "Digest Header"
-msgstr "سربرگ حالت یکجا"
+msgstr "سربرگ حالت یک‌جا"
 
 #: Mailman/Handlers/ToDigest.py:225
 msgid "Today's Topics:\n"
-msgstr "موضوعات امروز:\n"
+msgstr "سرفصل‌های امروز:\n"
 
 #: Mailman/Handlers/ToDigest.py:305
 msgid "Today's Topics (%(msgcount)d messages)"
-msgstr "موضوعات امروز (%(msgcount)d پیغام)"
+msgstr "سرفصل‌های امروز (%(msgcount)d پیام)"
 
 #: Mailman/Handlers/ToDigest.py:331
 msgid "[Message discarded by content filter]"
-msgstr "[این پیام توسط فیلتر محتوایی، دور انداخته شد]"
+msgstr "[این پیام توسط پالایه محتوایی، رد شد]"
 
 #: Mailman/Handlers/ToDigest.py:359
 msgid "digest footer"
-msgstr "پاورقی حالت یکجا"
+msgstr "پاورقی حالت یک‌جا"
 
 #: Mailman/Handlers/ToDigest.py:362 Mailman/Handlers/ToDigest.py:370
 msgid "Digest Footer"
-msgstr "پاورقی حالت یکجا"
+msgstr "پاورقی حالت یک‌جا"
 
 #: Mailman/Handlers/ToDigest.py:377
 msgid "End of "
@@ -6563,15 +6637,15 @@ msgstr "فرستادن پیام شما با عنوان \"%(subject)s\""
 
 #: Mailman/ListAdmin.py:300 Mailman/ListAdmin.py:422
 msgid "[No reason given]"
-msgstr "[هیچ دلیلی ذکر نشده است]"
+msgstr "[هیچ دلیلی داده نشده]"
 
 #: Mailman/ListAdmin.py:338
 msgid "Forward of moderated message"
-msgstr "پیش فرست پیام نظم دهی شده"
+msgstr "پیش‌سوکردن پیام میان‌داری شده"
 
 #: Mailman/ListAdmin.py:395
 msgid "New subscription request to list %(realname)s from %(addr)s"
-msgstr "تقاضای اشتراک جدید در فهرست %(realname)s از طرف %(addr)s"
+msgstr "درخواست اشتراک جدید در فهرست %(realname)s از طرف %(addr)s"
 
 #: Mailman/ListAdmin.py:421
 msgid "Subscription request"
@@ -6587,11 +6661,11 @@ msgstr "درخواست لغو اشتراک"
 
 #: Mailman/ListAdmin.py:509
 msgid "Original Message"
-msgstr "پیغام اصلی"
+msgstr "پیام اصلی"
 
 #: Mailman/ListAdmin.py:512
 msgid "Request to mailing list %(realname)s rejected"
-msgstr "درخواست ارسال شده به فهرست ایمیلی %(realname)s رد گشت."
+msgstr "درخواست فرستاده‌شده به فهرست پستی %(realname)s پس‌زده‌شد"
 
 #: Mailman/MTA/Manual.py:66
 msgid ""
@@ -6612,7 +6686,7 @@ msgstr ""
 
 #: Mailman/MTA/Manual.py:82
 msgid "## %(listname)s mailing list"
-msgstr "## %(listname)s فهرست ایمیلی"
+msgstr "فهرست پستی ## %(listname)s"
 
 #: Mailman/MTA/Manual.py:99
 msgid "Mailing list creation request for list %(listname)s"
@@ -6645,7 +6719,7 @@ msgstr ""
 
 #: Mailman/MTA/Postfix.py:320
 msgid "checking permissions on %(file)s"
-msgstr "در حال چک کردن مجوزهای موجود در  %(file)s"
+msgstr "در حال بررسی اجازه‌های %(file)s"
 
 #: Mailman/MTA/Postfix.py:330
 msgid "%(file)s permissions must be 066x (got %(octmode)s)"
@@ -6658,7 +6732,7 @@ msgstr ""
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
 #: bin/check_perms:358
 msgid "(fixing)"
-msgstr ")در حال تعمیر("
+msgstr "(در حال تعمیر)"
 
 #: Mailman/MTA/Postfix.py:348
 msgid "checking ownership of %(dbfile)s"
@@ -6674,39 +6748,39 @@ msgstr ""
 
 #: Mailman/MailList.py:216
 msgid "Your confirmation is required to join the %(listname)s mailing list"
-msgstr "برای پیوستن به فهرست ایمیلی  %(listname)s نیاز به تایید شما وجود دارد."
+msgstr "برای پیوستن به فهرست پستی  %(listname)s نیاز به تایید شما وجود دارد."
 
 #: Mailman/MailList.py:227
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
-msgstr "برای ترک فهرست ایمیلی %(listname)s نیاز به تایید شما وجود دارد."
+msgstr "برای ترک فهرست پستی %(listname)s نیاز به تایید شما وجود دارد."
 
-#: Mailman/MailList.py:903 Mailman/MailList.py:1333
+#: Mailman/MailList.py:904 Mailman/MailList.py:1334
 msgid " from %(remote)s"
 msgstr ""
 
-#: Mailman/MailList.py:944
+#: Mailman/MailList.py:945
 msgid "subscriptions to %(realname)s require moderator approval"
-msgstr "اشتراک در %(realname)s مستلزم تایید ناظم است."
+msgstr "برای اشتراک در %(realname)s نیاز به تایید میان‌دار است"
 
-#: Mailman/MailList.py:1013 bin/add_members:252
+#: Mailman/MailList.py:1014 bin/add_members:252
 msgid "%(realname)s subscription notification"
-msgstr "یادآوری اشتراک%(realname)s یادآوری اشتراک"
+msgstr "آگاه‌سازی از اشتراک%(realname)s "
 
-#: Mailman/MailList.py:1032
+#: Mailman/MailList.py:1033
 msgid "unsubscriptions require moderator approval"
-msgstr "تقاضاهای لغو اشتراک، مستلزم تایید مدیر است."
+msgstr "برای لغو اشتراک، تایید میان‌دار لازم است."
 
-#: Mailman/MailList.py:1052
+#: Mailman/MailList.py:1053
 msgid "%(realname)s unsubscribe notification"
 msgstr ""
 
-#: Mailman/MailList.py:1242
+#: Mailman/MailList.py:1243
 msgid "subscriptions to %(name)s require administrator approval"
-msgstr "اشتراک در %(name)s مستلزم تایید مدیر است."
+msgstr "برای اشتراک در %(name)s نیاز به تایید سرپرست است."
 
-#: Mailman/MailList.py:1507
+#: Mailman/MailList.py:1508
 msgid "Last autoresponse notification for today"
-msgstr "آخرین یادآوری پاسخگویی خودکار امروز"
+msgstr "آخرین آگاه‌سازی پاسخ‌گویی خودکار امروز"
 
 #: Mailman/Queue/BounceRunner.py:343
 msgid ""
@@ -6724,7 +6798,7 @@ msgstr ""
 
 #: Mailman/Queue/BounceRunner.py:353
 msgid "Uncaught bounce notification"
-msgstr "یادآوری مورد برگشتی به تور نیفتاده"
+msgstr "آگاه‌سازی مورد واگشت به تور نیفتاده"
 
 #: Mailman/Queue/CommandRunner.py:97
 msgid "Ignoring non-text/plain MIME parts"
@@ -6735,8 +6809,8 @@ msgid ""
 "The results of your email command are provided below.\n"
 "Attached is your original message.\n"
 msgstr ""
-"نتایج فرمان ایمیلی شما در زیر آمده است.\n"
-"پیغام اصلی شما نیز ضمیمه می‌باشد.\n"
+"نتایج فرمان رایانامه‌ای شما در زیر آمده است.\n"
+"پیام اصلی شما نیز پیوست شده است.\n"
 
 #: Mailman/Queue/CommandRunner.py:168
 msgid "- Results:"
@@ -6755,8 +6829,8 @@ msgid ""
 "No commands were found in this message.\n"
 "To obtain instructions, send a message containing just the word \"help\".\n"
 msgstr ""
-"هیچ فرمانی در این پیغام یافت نشد.\n"
-"برای دریافت راهنمایی، یک پیغام که فقط عبارت \"help\" در آن باشد بفرستید..\n"
+"هیچ فرمانی در این پیام پیدا نشد.\n"
+"برای دریافت دستور کار، یک پیام که فقط عبارت \"help\" در آن باشد بفرستید.\n"
 
 #: Mailman/Queue/CommandRunner.py:183
 msgid ""
@@ -6764,7 +6838,7 @@ msgid ""
 "- Ignored:"
 msgstr ""
 "\n"
-"- نادیده گرفته شده:"
+"- نادید گرفته شده:"
 
 #: Mailman/Queue/CommandRunner.py:185
 msgid ""
@@ -6778,7 +6852,7 @@ msgstr ""
 
 #: Mailman/Queue/CommandRunner.py:209
 msgid "The results of your email commands"
-msgstr "نتایج فرمان ایمیلی شما"
+msgstr "نتایج فرمان رایانامه‌ای شما"
 
 #: Mailman/Queue/CommandRunner.py:215
 msgid "Message body suppressed by Mailman site configuration\n"
@@ -6794,7 +6868,7 @@ msgstr ""
 
 #: Mailman/htmlformat.py:649
 msgid "Python Powered"
-msgstr "نیروگرفته از پیتون"
+msgstr "نیروگرفته با پیتون"
 
 #: Mailman/htmlformat.py:650
 msgid "Gnu's Not Unix"
@@ -6806,11 +6880,11 @@ msgstr "دوشنبه"
 
 #: Mailman/i18n.py:102
 msgid "Thu"
-msgstr "پنج شنبه"
+msgstr "پنج‌شنبه"
 
 #: Mailman/i18n.py:102
 msgid "Tue"
-msgstr "سه شنبه"
+msgstr "سه‌شنبه"
 
 #: Mailman/i18n.py:102
 msgid "Wed"
@@ -6826,7 +6900,7 @@ msgstr "شنبه"
 
 #: Mailman/i18n.py:103
 msgid "Sun"
-msgstr "یکشنبه"
+msgstr "یک‌شنبه"
 
 #: Mailman/i18n.py:107
 msgid "Apr"
@@ -6874,7 +6948,7 @@ msgstr "سپتامبر"
 
 #: Mailman/i18n.py:111
 msgid "Server Local Time"
-msgstr "زمان محلی سرور"
+msgstr "زمان محلی کارگزار"
 
 #: Mailman/i18n.py:150
 msgid ""
@@ -7025,7 +7099,7 @@ msgstr ""
 
 #: bin/arch:125
 msgid "listname is required"
-msgstr "نام فهرست، الزامی است"
+msgstr "نام فهرست، لازم است"
 
 #: bin/arch:143 bin/change_pw:106 bin/config_list:256
 msgid ""
@@ -7186,7 +7260,7 @@ msgstr ""
 
 #: bin/check_db:119
 msgid "No list named:"
-msgstr "نام فهرستی موجود نیست:"
+msgstr "فهرستی با این نام وجود ندارد:"
 
 #: bin/check_db:128
 msgid "List:"
@@ -7194,7 +7268,7 @@ msgstr "فهرست:"
 
 #: bin/check_db:148
 msgid "   %(file)s: okay"
-msgstr "   %(file)s: مشکلی ندارد"
+msgstr "   %(file)s: خوب است"
 
 #: bin/check_perms:20
 msgid ""
@@ -7298,7 +7372,7 @@ msgstr ""
 
 #: bin/check_perms:348
 msgid "    checking permissions on: %(path)s"
-msgstr "در حال بررسی مجوزهای موجود در: %(path)s"
+msgstr "در حال بررسی اجازه‌های موجود در: %(path)s"
 
 #: bin/check_perms:356
 msgid "file permissions must be at least 660: %(path)s"
@@ -7306,11 +7380,11 @@ msgstr ""
 
 #: bin/check_perms:401
 msgid "No problems found"
-msgstr "هیچ مشکلی یافت نشد"
+msgstr "هیچ مشکلی پیدا نشد"
 
 #: bin/check_perms:403
 msgid "Problems found:"
-msgstr "مشکلاتی پیدا شد:"
+msgstr "مشکلات پیدا شده:"
 
 #: bin/check_perms:404
 msgid "Re-run as %(MAILMAN_USER)s (or root) with -f flag to fix"
@@ -7360,7 +7434,7 @@ msgstr ""
 
 #: bin/cleanarch:167
 msgid "%(messages)d messages found"
-msgstr "%(messages)d پیغام پیدا شد"
+msgstr "%(messages)d پیام پیدا شد"
 
 #: bin/clone_member:19
 msgid ""
@@ -7422,19 +7496,19 @@ msgstr ""
 
 #: bin/clone_member:94
 msgid "processing mailing list:"
-msgstr "در حال پردازش فهرست ایمیلی:"
+msgstr "در حال پردازش فهرست پستی:"
 
 #: bin/clone_member:101
 msgid "    scanning list owners:"
-msgstr "در حال اسکن مالکین لیست:"
+msgstr "در حال پویش مالکان فهرست:"
 
 #: bin/clone_member:119
 msgid "    new list owners:"
-msgstr "مالکین جدید فهرست:"
+msgstr "مالکان جدید فهرست:"
 
 #: bin/clone_member:121
 msgid "(no change)"
-msgstr ")بدون تغییر("
+msgstr "(بدون تغییر)"
 
 #: bin/clone_member:130
 msgid "    address not found:"
@@ -7454,7 +7528,7 @@ msgstr "نشانی اصلی، حذف شد:"
 
 #: bin/clone_member:202
 msgid "Not a valid email address: %(toaddr)s"
-msgstr "آدرس ایمیل نامعتبر: %(toaddr)s"
+msgstr "نشانی رایانامه‌ی نامعتبر: %(toaddr)s"
 
 #: bin/clone_member:215
 msgid ""
@@ -7526,7 +7600,7 @@ msgstr ""
 
 #: bin/config_list:143
 msgid "options"
-msgstr "گزینه ها"
+msgstr "گزینه‌ها"
 
 #: bin/config_list:202
 msgid "legal values are:"
@@ -7562,7 +7636,7 @@ msgstr ""
 
 #: bin/config_list:351
 msgid "List name is required"
-msgstr "نام لیست باید وارد شود"
+msgstr "نام فهرست باید وارد شود"
 
 #: bin/convert.py:19
 msgid ""
@@ -7871,7 +7945,7 @@ msgstr ""
 
 #: bin/inject:89
 msgid "A list name is required"
-msgstr "وارد کردن یک نام برای فهرست، الزامی است"
+msgstr "وارد کردن یک نام برای فهرست، لازم است"
 
 #: bin/list_admins:20
 msgid ""
@@ -7932,11 +8006,11 @@ msgstr ""
 
 #: bin/list_lists:113
 msgid "No matching mailing lists found"
-msgstr "هیچ فهرست ایمیلی همخوان پیدا نشد"
+msgstr "هیچ فهرست پستی همخوان پیدا نشد"
 
 #: bin/list_lists:117
 msgid "matching mailing lists found:"
-msgstr "فهرست‌های ایمیلی همخوان پیدا شده:"
+msgstr "فهرست‌های پستی همخوان پیدا شده:"
 
 #: bin/list_members:19
 msgid ""
@@ -8007,7 +8081,7 @@ msgstr ""
 
 #: bin/list_members:224
 msgid "Could not open file for writing:"
-msgstr "امکان باز کردن این فایل برای نوشتن در آن فراهم نشد:"
+msgstr "امکان بازکردن این پرونده برای نوشتن در آن فراهم نشد:"
 
 #: bin/list_owners:20
 msgid ""
@@ -8146,21 +8220,21 @@ msgstr ""
 msgid "Stale pid file removed."
 msgstr ""
 
-#: bin/mailmanctl:220
+#: bin/mailmanctl:221
 msgid ""
 "The master qrunner lock could not be acquired because it appears as if "
 "another\n"
 "master qrunner is already running.\n"
 msgstr ""
 
-#: bin/mailmanctl:226
+#: bin/mailmanctl:227
 msgid ""
 "The master qrunner lock could not be acquired.  It appears as though there "
 "is\n"
 "a stale master qrunner lock.  Try re-running mailmanctl with the -s flag.\n"
 msgstr ""
 
-#: bin/mailmanctl:232
+#: bin/mailmanctl:233
 msgid ""
 "The master qrunner lock could not be acquired, because it appears as if "
 "some\n"
@@ -8175,39 +8249,39 @@ msgid ""
 "Exiting."
 msgstr ""
 
-#: bin/mailmanctl:279 cron/mailpasswds:119
+#: bin/mailmanctl:280 cron/mailpasswds:119
 msgid "Site list is missing: %(sitelistname)s"
 msgstr ""
 
-#: bin/mailmanctl:304
+#: bin/mailmanctl:305
 msgid "Run this program as root or as the %(name)s user, or use -u."
 msgstr ""
 
-#: bin/mailmanctl:335
+#: bin/mailmanctl:336
 msgid "No command given."
-msgstr "هیچ فرمانی داده نشده است"
+msgstr "هیچ فرمانی داده نشده است."
 
-#: bin/mailmanctl:338
+#: bin/mailmanctl:339
 msgid "Bad command: %(command)s"
 msgstr "دستور نادرست: %(command)s"
 
-#: bin/mailmanctl:343
+#: bin/mailmanctl:344
 msgid "Warning!  You may encounter permission problems."
 msgstr ""
 
-#: bin/mailmanctl:352
+#: bin/mailmanctl:353
 msgid "Shutting down Mailman's master qrunner"
 msgstr ""
 
-#: bin/mailmanctl:359
+#: bin/mailmanctl:360
 msgid "Restarting Mailman's master qrunner"
 msgstr ""
 
-#: bin/mailmanctl:363
+#: bin/mailmanctl:364
 msgid "Re-opening all log files"
-msgstr "در حال بازگشایی تمام فایل‌های محتوی گزارش "
+msgstr "در حال بازگشایی تمام پرونده‌های گزارش "
 
-#: bin/mailmanctl:399
+#: bin/mailmanctl:400
 msgid "Starting Mailman's master qrunner."
 msgstr ""
 
@@ -8242,7 +8316,7 @@ msgstr "وبگاه"
 
 #: bin/mmsitepass:80
 msgid "list creator"
-msgstr "ایجادکننده فهرست"
+msgstr "سازنده‌ی فهرست"
 
 #: bin/mmsitepass:86
 msgid "New %(pwdesc)s password: "
@@ -8250,11 +8324,11 @@ msgstr "گذرواژه جدید %(pwdesc)s: "
 
 #: bin/mmsitepass:87
 msgid "Again to confirm password: "
-msgstr "برای تایید دوباره گذرواژه:"
+msgstr "دوباره برای تایید گذرواژه:"
 
 #: bin/mmsitepass:89
 msgid "Passwords do not match; no changes made."
-msgstr "گذرواژه‌ها همخوان نیستند، هیچ تغییری انجام نشد."
+msgstr "گذرواژه‌ها هملنگه نیستند، هیچ تغییری نکرد."
 
 #: bin/mmsitepass:92
 msgid "Interrupted..."
@@ -8262,11 +8336,11 @@ msgstr "دچار وقفه شد..."
 
 #: bin/mmsitepass:98
 msgid "Password changed."
-msgstr "گذرواژه تغییر کرد"
+msgstr "گذرواژه تغییر کرد."
 
 #: bin/mmsitepass:100
 msgid "Password change failed."
-msgstr "تغییر گذرواژه ناموفق بود"
+msgstr "تغییر گذرواژه شکست خورد."
 
 #: bin/msgfmt.py:5
 msgid ""
@@ -8302,7 +8376,7 @@ msgstr ""
 
 #: bin/msgfmt.py:57
 msgid "Return the generated output."
-msgstr "به سراغ برونده تولید شده برگرد."
+msgstr "به سراغ خروجی تولید شده برگرد."
 
 #: bin/newlist:20
 msgid ""
@@ -8393,7 +8467,7 @@ msgstr ""
 
 #: bin/newlist:150
 msgid "Unknown language: %(lang)s"
-msgstr "زبان نامشخص: %(lang)s"
+msgstr "زبان ناشناخته: %(lang)s"
 
 #: bin/newlist:155
 msgid "Enter the name of the list: "
@@ -8411,7 +8485,13 @@ msgstr ""
 msgid "The list password cannot be empty"
 msgstr "گذرواژه‌ی فهرست نمی تواند خالی بماند"
 
-#: bin/newlist:230
+#: bin/newlist:208
+msgid ""
+" - owner addresses need to be fully-qualified names like \"owner@example.com"
+"\", not just \"owner\"."
+msgstr ""
+
+#: bin/newlist:232
 msgid "Hit enter to notify %(listname)s owner..."
 msgstr ""
 
@@ -8492,7 +8572,7 @@ msgstr ""
 
 #: bin/qrunner:215
 msgid "No runner name given."
-msgstr "نام هیچ اداره کننده‌ای وارد نگشته است"
+msgstr "نام هیچ اداره کننده‌ای وارد نگشته است."
 
 #: bin/rb-archfix:21
 msgid ""
@@ -8667,15 +8747,15 @@ msgstr ""
 
 #: bin/rmlist:141
 msgid "held message file"
-msgstr "پرونده پیغام نگه داشته شده"
+msgstr "پرونده پیام نگه‌داشته‌شده"
 
 #: bin/rmlist:146 bin/rmlist:148
 msgid "private archives"
-msgstr "آرشیوهای خصوصی"
+msgstr "بایگانی‌های خصوصی"
 
 #: bin/rmlist:150 bin/rmlist:152
 msgid "public archives"
-msgstr "آرشیوهای همگانی"
+msgstr "بایگانی‌های همگانی"
 
 #: bin/show_qfiles:20
 msgid ""
@@ -8781,11 +8861,11 @@ msgstr ""
 
 #: bin/sync_members:172
 msgid "Illegal option: %(opt)s"
-msgstr "گزینه غیرمجاز: %(opt)s"
+msgstr "گزینه‌ی غیرمجاز: %(opt)s"
 
 #: bin/sync_members:178
 msgid "No listname given"
-msgstr "هیچ نام فهرستی وارد نشده است"
+msgstr "هیچ نام فهرستی وارد نشده"
 
 #: bin/sync_members:182
 msgid "Must have a listname and a filename"
@@ -8797,7 +8877,7 @@ msgstr ""
 
 #: bin/sync_members:203
 msgid "Ignore  :  %(addr)30s"
-msgstr "نادیده بگیر:  %(addr)30s"
+msgstr "نادید بگیر:  %(addr)30s"
 
 #: bin/sync_members:212
 msgid "Invalid :  %(addr)30s"
@@ -8837,11 +8917,11 @@ msgstr ""
 
 #: bin/transcheck:68
 msgid "scan a string from the original file"
-msgstr "اسکن یک عبارت از فایل اصلی"
+msgstr "پویش یک رشته از پرونده‌ی اصلی"
 
 #: bin/transcheck:78
 msgid "scan a translated string"
-msgstr "اسکن یک عبارت ترجمه شده"
+msgstr "پویش یک رشته‌ی ترجمه شده"
 
 #: bin/transcheck:91
 msgid "check for differences between checked in and checked out"
@@ -8929,7 +9009,7 @@ msgstr ""
 
 #: bin/update:221
 msgid "Updating the held requests database."
-msgstr "در حال به روزرسانی بانک داده درخواست‌های نگه داشته شده"
+msgstr "در حال روزآمد‌سازی بانک‌داده‌ی درخواست‌های نگه‌داشته‌شده"
 
 #: bin/update:243
 msgid ""
@@ -9058,7 +9138,7 @@ msgstr ""
 
 #: bin/update:677
 msgid "no lists == nothing to do, exiting"
-msgstr "هیچ فهرستی یافت نشد == هیچ کاری برای انجام نیست، در حال خروج"
+msgstr "هیچ فهرستی پیدا نشد == هیچ کاری برای انجام نیست، در حال خروج"
 
 #: bin/update:684
 msgid ""
@@ -9072,7 +9152,7 @@ msgstr "انجام شد"
 
 #: bin/update:691
 msgid "Updating mailing list: %(listname)s"
-msgstr "در حال به روزرسانی فهرست ایمیلی: %(listname)s"
+msgstr "در حال روزآمدسازی فهرست پستی: %(listname)s"
 
 #: bin/update:694
 msgid "Updating Usenet watermarks"
@@ -9111,7 +9191,7 @@ msgstr ""
 
 #: bin/update:793
 msgid "No updates are necessary."
-msgstr "هیچ به روزرسانی لازم نیست"
+msgstr "هیچ روزآمدسازی‌ای لازم نیست."
 
 #: bin/update:796
 msgid ""
@@ -9142,7 +9222,7 @@ msgstr ""
 
 #: bin/version:19
 msgid "Print the Mailman version.\n"
-msgstr "چاپ ورژن میلمن\n"
+msgstr "چاپ نسخه‌ی میلمن\n"
 
 #: bin/version:26
 msgid "Using Mailman version:"
@@ -9278,7 +9358,7 @@ msgstr ""
 
 #: bin/withlist:175
 msgid "Unlocking (but not saving) list: %(listname)s"
-msgstr "در حال قفل گشایی (ولی نه ذخیره سازی) فهرست: %(listname)s"
+msgstr "در حال قفل‌گشایی (ولی نه ذخیره‌سازی) فهرست: %(listname)s"
 
 #: bin/withlist:179
 msgid "Finalizing"
@@ -9298,11 +9378,11 @@ msgstr ""
 
 #: bin/withlist:197
 msgid "Unknown list: %(listname)s"
-msgstr "فهرست نامشخص: %(listname)s"
+msgstr "فهرست ناشناخته: %(listname)s"
 
 #: bin/withlist:237
 msgid "No list name supplied."
-msgstr "هیچ نام فهرستی وارد نگشته است"
+msgstr "هیچ نام فهرستی وارد نشده است."
 
 #: bin/withlist:246
 msgid "--all requires --run"
@@ -9310,7 +9390,7 @@ msgstr ""
 
 #: bin/withlist:266
 msgid "Importing %(module)s..."
-msgstr "در حال واردسازی %(module)s..."
+msgstr "در حال درون‌بُرد %(module)s..."
 
 #: bin/withlist:270
 msgid "Running %(module)s.%(callable)s()..."
@@ -9364,11 +9444,11 @@ msgstr ""
 
 #: cron/checkdbs:144
 msgid "Pending subscriptions:"
-msgstr "در انتظار مشترک شدن:"
+msgstr "درخواست اشتراک‌های معلق:"
 
 #: cron/checkdbs:155
 msgid "Pending unsubscriptions:"
-msgstr "در انتظار لغو اشتراک: "
+msgstr "درخواست لغو اشتراک‌های معلق:"
 
 #: cron/checkdbs:162
 msgid ""
@@ -9376,7 +9456,7 @@ msgid ""
 "Pending posts:"
 msgstr ""
 "\n"
-"پست‌های در انتظار:"
+"فرستاده‌های معلق:"
 
 #: cron/checkdbs:169
 msgid ""
@@ -9503,7 +9583,7 @@ msgstr ""
 
 #: cron/mailpasswds:216
 msgid "Password // URL"
-msgstr "گذرواژه// uRL"
+msgstr "گذرواژه// URL"
 
 #: cron/mailpasswds:222
 msgid "%(host)s mailing list memberships reminder"
