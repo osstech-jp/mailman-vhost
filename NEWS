@@ -33,6 +33,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed an archiving bug that would cause messages with 'Subject: Re:'
+      only to be indexed in the archives without a link to the message.
+      (LP: #1388614)
+
     - The vette log entry for a message discarded by a handler now includes
       the list name and the name of the handler.  (LP: #558096)
 

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2010 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -271,6 +271,8 @@ class Article(pipermail.Article):
             if result:
                 i = result.end(0)
                 self.subject = self.subject[i:]
+                if self.subject == '':
+                    self.subject = _('No subject')
             else:
                 i = -1
         # Useful to keep around
