@@ -518,6 +518,13 @@ address.  Upon confirmation, any other mailing list containing the address
                     user, 'via the member options page', userack=1)
             except Errors.MMNeedApproval:
                 needapproval = True
+            except Errors.NotAMemberError:
+                # MAS This except should really be in the outer try so we
+                # don't save the list redundantly, but except and finally in
+                # the same try requires Python >= 2.5.
+                # Setting a switch and making the Save() conditional doesn't
+                # seem worth it as the Save() won't change anything.
+                pass
             mlist.Save()
         finally:
             mlist.Unlock()
