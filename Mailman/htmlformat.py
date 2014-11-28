@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2012 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -32,7 +32,7 @@ import types
 
 from Mailman import mm_cfg
 from Mailman import Utils
-from Mailman.i18n import _
+from Mailman.i18n import _, get_translation
 
 from Mailman.CSRFcheck import csrf_token
 
@@ -441,6 +441,7 @@ class InputObj:
         self.kws = kws
 
     def Format(self, indent=0):
+        charset = get_translation().charset() or 'us-ascii'
         output = ['<INPUT name="%s" type="%s" value="%s"' %
                   (self.name, self.type, self.value)]
         for item in self.kws.items():
@@ -448,7 +449,10 @@ class InputObj:
         if self.checked:
             output.append('CHECKED')
         output.append('>')
-        return SPACE.join(output)
+        ret = SPACE.join(output)
+        if self.type == 'TEXT' and isinstance(ret, unicode):
+            ret = ret.encode(charset, 'replace')
+        return ret
 
 
 class SubmitButton(InputObj):
@@ -486,6 +490,7 @@ class TextArea:
         self.readonly = readonly
 
     def Format(self, indent=0):
+        charset = get_translation().charset() or 'us-ascii'
         output = '<TEXTAREA NAME=%s' % self.name
         if self.rows:
             output += ' ROWS=%s' % self.rows
@@ -496,6 +501,8 @@ class TextArea:
         if self.readonly:
             output += ' READONLY'
         output += '>%s</TEXTAREA>' % self.text
+        if isinstance(output, unicode):
+            output = output.encode(charset, 'replace')
         return output
 
 class FileUpload(InputObj):
