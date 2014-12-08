@@ -33,6 +33,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Accept email command in Subject: prefixed with Re: or similar with no
+      intervening space.  (LP: #1400200)
+
     - Fixed a UnicodeDecodeError that could occur in the web admin interface
       if 'text' valued attributes have unicode values.  (LP: #1397170)
 

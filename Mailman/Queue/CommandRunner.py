@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -138,9 +138,17 @@ class Results:
             # localized version thereof) on the Subject: line that's messing
             # things up.  Pop the prefix off and try again... once.
             #
+            # At least one MUA (163.com web mail) has been observed that
+            # inserts 'Re:' with no following space, so try to account for
+            # that too.
+            #
             # If that still didn't work it isn't enough to stop processing.
             # BAW: should we include a message that the Subject: was ignored?
-            if not self.subjcmdretried and args:
+            if self.subjcmdretried < 1:
+                self.subjcmdretried += 1
+                if re.search('^.*:.+', cmd):
+                    return self.do_command(re.sub('.*:', '', cmd), args)
+            if self.subjcmdretried < 2 and args:
                 self.subjcmdretried += 1
                 cmd = args.pop(0)
                 return self.do_command(cmd, args)
