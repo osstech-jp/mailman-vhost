@@ -33,6 +33,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The Subject: of the list welcome message wasn't always in the user's
+      preferred language.  Fixed.  (LP: #1400988)
+
     - Accept email command in Subject: prefixed with Re: or similar with no
       intervening space.  (LP: #1400200)
 
