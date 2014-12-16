@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mailman 2.1.16\n"
+"Project-Id-Version: Mailman 2.1.18\n"
 "POT-Creation-Date: Fri Oct 17 08:53:32 2014\n"
-"PO-Revision-Date: 2013-11-07 09:00+09:00\n"
+"PO-Revision-Date: 2014-12-12 09:00+09:00\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@python.jp>\n"
 "Language: ja\n"
@@ -211,7 +211,7 @@ msgstr "何らかの理由により"
 
 #: Mailman/Bouncer.py:198
 msgid "bounce score incremented"
-msgstr ""
+msgstr "エラー点が加算されました"
 
 #: Mailman/Bouncer.py:228
 msgid "disabled"
@@ -259,7 +259,7 @@ msgstr "認証失敗"
 
 #: Mailman/Cgi/admin.py:199
 msgid "The form lifetime has expired. (request forgery check)"
-msgstr ""
+msgstr "フォームの有効期限が過ぎました。 (リクエスト偽装の防止)"
 
 #: Mailman/Cgi/admin.py:205
 msgid ""
@@ -1165,19 +1165,19 @@ msgstr "保留メール."
 
 #: Mailman/Cgi/admindb.py:443
 msgid "Show this list grouped/sorted by"
-msgstr ""
+msgstr "このリストをグループ化/並べ替えて表示"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/sender"
-msgstr ""
+msgstr "送信者/送信者"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/time"
-msgstr ""
+msgstr "送信者/時間"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "ungrouped/time"
-msgstr ""
+msgstr "グループ化なし/時間"
 
 #: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:702
 msgid "From:"
@@ -2329,7 +2329,7 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:317
 msgid "nomail"
-msgstr ""
+msgstr "配送停止"
 
 #: Mailman/Cgi/options.py:344
 msgid ""
@@ -2694,9 +2694,8 @@ msgid "Private archive file not found"
 msgstr "限定公開保存ファイルが見つかりません."
 
 #: Mailman/Cgi/rmlist.py:65
-#, fuzzy
 msgid "No such list %(safelistname)s"
-msgstr "%(listname)s というリストはありません"
+msgstr "%(safelistname)s というリストはありません"
 
 #: Mailman/Cgi/rmlist.py:83
 msgid "You're being a sneaky list owner!"
@@ -2728,12 +2727,11 @@ msgstr ""
 
 #: Mailman/Cgi/rmlist.py:190
 msgid "Permanently remove mailing list <em>%(realname)s</em>"
-msgstr "恒久的にメーリングリスト <em>%(realname)s</em> を削除"
+msgstr "完全にメーリングリスト <em>%(realname)s</em> を削除"
 
 #: Mailman/Cgi/rmlist.py:191
-#, fuzzy
 msgid "Permanently remove mailing list %(realname)s"
-msgstr "恒久的にメーリングリスト <em>%(realname)s</em> を削除"
+msgstr "完全にメーリングリスト %(realname)s を削除"
 
 #: Mailman/Cgi/rmlist.py:204
 msgid ""
@@ -2806,15 +2804,15 @@ msgstr "有効なメールアドレスを入力してください."
 
 #: Mailman/Cgi/subscribe.py:138
 msgid "The form is too old.  Please GET it again."
-msgstr ""
+msgstr "フォームが古すぎます。再取得してください。"
 
 #: Mailman/Cgi/subscribe.py:141
 msgid "Please take a few seconds to fill out the form before submitting it."
-msgstr ""
+msgstr "もう少し時間をかけてフォームを入力してから送信してください。"
 
 #: Mailman/Cgi/subscribe.py:144
 msgid "You must GET the form before submitting it."
-msgstr ""
+msgstr "フォームを送信する前にページを取得する必要があります。"
 
 #: Mailman/Cgi/subscribe.py:148
 msgid "You may not subscribe a list to itself!"
@@ -3699,7 +3697,7 @@ msgstr "バスク語"
 
 #: Mailman/Defaults.py:1592
 msgid "Persian"
-msgstr ""
+msgstr "ペルシャ語"
 
 #: Mailman/Defaults.py:1593
 msgid "Finnish"
@@ -3715,7 +3713,7 @@ msgstr "ガリシア語"
 
 #: Mailman/Defaults.py:1596
 msgid "Greek"
-msgstr ""
+msgstr "ギリシャ語"
 
 #: Mailman/Defaults.py:1597
 msgid "Hebrew"
@@ -3871,7 +3869,7 @@ msgstr ""
 
 #: Mailman/Deliverer.py:219
 msgid "%(listname)s mailing list probe message"
-msgstr "%(listname)s ML アドレス探知"
+msgstr "%(listname)s メーリングリスト アドレス探知メール"
 
 #: Mailman/Errors.py:122
 msgid "For some unknown reason"
@@ -4266,11 +4264,10 @@ msgstr ""
 "かもしれません."
 
 #: Mailman/Gui/Bounce.py:147
-#, fuzzy
 msgid ""
 "Should Mailman notify you, the list owner, when bounces\n"
 "             cause a member's bounce score to be incremented?"
-msgstr "エラー通知のため配送を停止する場合, リスト管理者に通知しますか?"
+msgstr "配送エラーにより会員のエラー点が増加したときにリスト管理者に通知しますか?"
 
 #: Mailman/Gui/Bounce.py:149
 msgid ""
@@ -4281,6 +4278,10 @@ msgid ""
 "but\n"
 "             doesn't cause a disable or a probe to be sent."
 msgstr ""
+"この値を「<em>はい</em>」に設定すると、"
+"エラーメールにより会員のエラー点が加算されたときに"
+"エラーメールを含む通知をリスト管理者に送ります。"
+"(配送停止とアドレス探知の場合は除く)"
 
 #: Mailman/Gui/Bounce.py:156
 msgid ""
@@ -4943,7 +4944,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:244
 msgid "Munge From"
-msgstr "送信者を書き換え"
+msgstr "From を書き換え"
 
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:244
 msgid "Wrap Message"
@@ -4955,8 +4956,11 @@ msgid ""
 "             address to mitigate issues stemming from the original From:\n"
 "             domain's DMARC or similar policies."
 msgstr ""
+"From: ヘッダーのメールアドレスをリストの投稿アドレスに置き換え、"
+"元の From: ドメインの DMARC あるいは類似のポリシーにより生じる問題を緩和する。"
 
 #: Mailman/Gui/General.py:162
+#, fuzzy
 msgid ""
 "Several protocols now in wide use attempt to ensure that use\n"
 "             of the domain in the author's address (ie, in the From: header\n"
@@ -6279,9 +6283,8 @@ msgstr ""
 "かき集められないように するためのものです."
 
 #: Mailman/Gui/Privacy.py:163
-#, fuzzy
 msgid "/Quarantine"
-msgstr "4半期毎"
+msgstr "/隔離"
 
 #: Mailman/Gui/Privacy.py:167
 msgid ""
@@ -6417,15 +6420,13 @@ msgid ""
 "             no notice sent to the post's author.\n"
 "             </ul>"
 msgstr ""
-"<ul><li><b>保留</b> -- リスト司会者の承認を受ける\n"
-"   ため, メールを保留します.\n"
-"\n"
-"<p><li><b>拒否</b> -- 自動的にメールを拒否して, そのことを\n"
-"   投稿者にメールで知らせます. 拒否通知の文は\n"
+"<ul><li><b>保留</b> -- リスト司会者の承認を受けるため、メールを保留します。\n"
+"<p><li><b>拒否</b> -- 自動的にメールを拒否して、そのことを\n"
+"   投稿者にメールで知らせます。拒否通知の文は"
 " <a href=\"?VARHELP=privacy/sender/member_moderation_notice\">\n"
-"   設定することが</a>できます.\n"
+"   設定することができます</a>。\n"
 "\n"
-"<p><li><b>破棄</b> -- 投稿者に通知せずにメールを破棄します.\n"
+"<p><li><b>破棄</b> -- 投稿者に通知せずにメールを破棄します。\n"
 "</ul>"
 
 #: Mailman/Gui/Privacy.py:238
@@ -6440,14 +6441,12 @@ msgstr ""
 ">拒否通知</a>に含める文."
 
 #: Mailman/Gui/Privacy.py:246
-#, fuzzy
 msgid ""
 "Action to take when anyone posts to the\n"
 "             list from a domain with a DMARC Reject%(quarantine)s Policy."
-msgstr "制限付き会員から投稿があったときの動作."
+msgstr "DMARC 拒否%(quarantine)sポリシーを持つドメインからの投稿に対する動作。"
 
 #: Mailman/Gui/Privacy.py:249
-#, fuzzy
 msgid ""
 "<ul><li><b>Munge From</b> -- applies the <a\n"
 "             href=\"?VARHELP=general/from_is_list\">from_is_list Munge From</"
@@ -6476,22 +6475,35 @@ msgid ""
 "             if the message is From: an affected domain and the setting is\n"
 "             other than Accept."
 msgstr ""
-"<ul><li><b>保留</b> -- リスト司会者の承認を受ける\n"
-"   ため, メールを保留します.\n"
+"<ul><li><b>From を書き換え</b> -- <a\n"
+"             href=\"?VARHELP=general/from_is_list\">from_is_list の「From を書き換え」</"
+"a>\n"
+"             をメールに適用します。\n"
 "\n"
-"<p><li><b>拒否</b> -- 自動的にメールを拒否して, そのことを\n"
-"   投稿者にメールで知らせます. 拒否通知の文は\n"
-" <a href=\"?VARHELP=privacy/sender/member_moderation_notice\">\n"
-"   設定することが</a>できます.\n"
+"             <p><li><b>メール内に添付</b> --"
+"             <a href=\"?VARHELP=general/from_is_list\">from_is_list の"
+"             「メール内に添付」</a> をメールに適用します。\n"
 "\n"
-"<p><li><b>破棄</b> -- 投稿者に通知せずにメールを破棄します.\n"
-"</ul>"
+"             <p><li><b>拒否</b> -- 自動的にメールを拒否して、"
+"             投稿者にメールで知らせます。拒否通知の文は"
+"             <a href=\"?VARHELP=privacy/sender/dmarc_moderation_notice\""
+"             >設定することができます</a>。\n"
+"\n"
+"             <p><li><b>破棄</b> -- 投稿者に通知せずにメールを破棄します。\n"
+"             </ul>\n"
+"\n"
+"             <p>この設定を「許可」以外に設定すると、"
+"             メールの From: のドメインが DMARC ポリシーを持つ場合、"
+"             <a href=\"?VARHELP=general/from_is_list\">from_is_list</a> "
+"             の設定よりも優先して実行されます。\n"
 
 #: Mailman/Gui/Privacy.py:274
 msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=quarantine as well as p=reject"
 msgstr ""
+"From: ドメインの DMARC が p=quarantine のときも p=reject のときと同様に"
+"dmarc_moderation_action をメールに適用する"
 
 #: Mailman/Gui/Privacy.py:277
 msgid ""
@@ -6509,9 +6521,21 @@ msgid ""
 "               the message will likely not bounce, but will be delivered to\n"
 "               recipients' spam folders or other hard to find places."
 msgstr ""
+"<ul><li><b>いいえ</b> -- 投稿の From: ドメインの DMARC が p=reject のときだけ"
+"               dmarc_moderation_action を適用します。\n"
+"               エラーメールに関心があるが、できるだけ少数のメールに対してだけ"
+"               dmarc_moderation_action を適用したいときに適しています。"
+"               <p><li><b>はい</b> -- 投稿の From: ドメインの DMARC が"
+"               p=reject または p=quarantine ときに dmarc_moderation_action"
+"               を適用します。"
+"               </ul><p>"
+"               この設定が「いいえ」のとき、"
+"               メールの From: ドメインの DMARC が p=quarantine で"
+"               dmarc_moderation_action は適用されず、メールはエラーとなりません。"
+"               しかし、会員のメールサーバーで spam 扱いされ、"
+"		隔離用のフォルダーなどに配送される可能性があります。"
 
 #: Mailman/Gui/Privacy.py:290
-#, fuzzy
 msgid ""
 "Text to include in any\n"
 "             <a href=\"?VARHELP=privacy/sender/dmarc_moderation_action\"\n"
@@ -6519,9 +6543,9 @@ msgid ""
 "             be sent to anyone who posts to this list from a domain\n"
 "             with a DMARC Reject%(quarantine)s Policy."
 msgstr ""
-"制限付き会員からの投稿に対して送られる\n"
+"DMARC 拒否%(quarantine)sポリシーを持つドメインからの投稿に対して送られる\n"
 "<a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
-">拒否通知</a>に含める文."
+">拒否通知</a>に含める文。"
 
 #: Mailman/Gui/Privacy.py:296
 msgid "Non-member filters"
@@ -6812,7 +6836,6 @@ msgid "Filter rules to match against the headers of a message."
 msgstr "へッダに適用するフィルタ規則."
 
 #: Mailman/Gui/Privacy.py:449
-#, fuzzy
 msgid ""
 "Each header filter rule has two parts, a list of regular\n"
 "             expressions, one per line, and an action to take.  Mailman\n"
@@ -6834,19 +6857,19 @@ msgid ""
 "             you can effectively sort out messages with dangerous file\n"
 "             types or file name extensions."
 msgstr ""
-"それぞれのへッダフィルタの規則には, 1行に1つの正規表現が記述されたリストと,\n"
-"それに対する動作を設定します. メールのへッダを\n"
-"この規則に記述された正規表現とマッチさせ, どれかとマッチした場合は\n"
-"指定された動作に従って拒否, 保留, または破棄されます.\n"
-"一時的にこの規則を無効にしたい場合は, <em>延期</em>を指定します.\n"
+"各へッダフィルタ規則には、1行に1つの正規表現が記述されたリストと、\n"
+"それに対する動作を設定します。メールのへッダを\n"
+"この規則に記述された正規表現とマッチさせ、どれかとマッチした場合は\n"
+"指定された動作に従って拒否、保留、または破棄されます。\n"
+"一時的に規則を無効にしたい場合は「<em>延期</em>」を指定します。\n"
 "\n"
-"それぞれのメーリングリストに複数のフィルタ規則を指定することができます.\n"
-"各規則は順番に検査され, マッチするへッダが検出された時点で処理が終了しま"
-"す. \n"
+"それぞれのメーリングリストに複数のフィルタ規則を指定することができます。\n"
+"各規則は順番に検査され、マッチするへッダが検出された時点で処理が終了します。\n"
 "\n"
-"(管理上のメールを除いて)ヘッダは全ての添付ファイルからも収集されます.\n"
-"こうすることで, 危険なファイルタイプや拡張子を持つメールを除くことが\n"
-"できます."
+"注意: ヘッダはすべての添付ファイル部分も含めてマッチ対象となります"
+"(ただし Mailman の管理用のメールは除く)。\n"
+"こうすることで、危険なファイルタイプや拡張子を持つメールを除くことが\n"
+"できます。"
 
 #: Mailman/Gui/Privacy.py:466
 msgid "Legacy anti-spam filters"
@@ -7799,7 +7822,6 @@ msgid "The message headers matched a filter rule"
 msgstr "メールへッダがフィルタ規則に合致しました"
 
 #: Mailman/Handlers/SpamDetect.py:109
-#, fuzzy
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
 "publishes a DMARC policy of reject or quarantine, and your message has been\n"
@@ -7807,9 +7829,10 @@ msgid ""
 "in\n"
 "error, contact the mailing list owner at %(listowner)s."
 msgstr ""
-"このメーリングリストへの投稿が許されていません.\n"
-"投稿は自動的に拒否されました. 拒否の設定が誤りと思われる場合は\n"
-"メーリングリスト管理者 %(listowner)s 宛にご連絡ください."
+"From: ヘッダーのメールアドレスのドメインが提示している DMARC 拒否/隔離\n"
+"ポリシーにより、このメーリングリストへの投稿は許されません。\n"
+"投稿は自動的に拒否されました。拒否の設定が誤りと思われる場合は\n"
+"メーリングリスト管理者 %(listowner)s 宛にご連絡ください。"
 
 #: Mailman/Handlers/SpamDetect.py:154
 msgid "Message rejected by filter rule match"
@@ -8110,11 +8133,11 @@ msgstr "メールコマンドの結果"
 
 #: Mailman/Queue/CommandRunner.py:215
 msgid "Message body suppressed by Mailman site configuration\n"
-msgstr ""
+msgstr "メールの本文は Mailman サイトの設定により削除されました\n"
 
 #: Mailman/Queue/CommandRunner.py:217
 msgid "Original message suppressed by Mailman site configuration\n"
-msgstr ""
+msgstr "元のメールは Mailman サイトの設定により削除されました\n"
 
 #: Mailman/htmlformat.py:650
 msgid "Delivered by Mailman<br>version %(version)s"
@@ -9611,7 +9634,7 @@ msgstr ""
 
 #: bin/genaliases:84
 msgid "genaliases can't do anything useful with mm_cfg.MTA = %(mta)s."
-msgstr ""
+msgstr "genaliases の実行は mm_cfg.MTA = %(mta)s 設定時は不要です。"
 
 #: bin/inject:20
 msgid ""
@@ -10517,6 +10540,7 @@ msgid ""
 " - owner addresses need to be fully-qualified names like \"owner@example.com"
 "\", not just \"owner\"."
 msgstr ""
+"- リスト管理者のアドレスは「owner@example.com」のように完全な形式である必要があります。"
 
 #: bin/newlist:232
 msgid "Hit enter to notify %(listname)s owner..."
@@ -12232,42 +12256,3 @@ msgstr ""
 "        リスト名をあげたリストについてだけ, まとめ読みを送信する.\n"
 "        これが無い場合, すべてのリストの処理をする.\n"
 
-#, fuzzy
-#~ msgid ""
-#~ "Replace the sender with the list address to conform with\n"
-#~ "             policies like ADSP and DMARC.  It replaces the poster's\n"
-#~ "             address in the From: header with the list address and adds "
-#~ "the\n"
-#~ "             poster to the Reply-To: header, but the anonymous_list and\n"
-#~ "             Reply-To: header munging settings below take priority.  If\n"
-#~ "             setting this to Yes, it is advised to set the MTA to DKIM "
-#~ "sign\n"
-#~ "             all emails."
-#~ msgstr ""
-#~ "送信者をメーリングリストに置き換え、ADSPやDMARCなどのポリシーに準拠するよ"
-#~ "うにします。送信者ヘッダーに含まれる送信者アドレスがメーリングリストに置き"
-#~ "換えられ、Reply-Toヘッダーに送信者が追加されますが、匿名リストおよびReply-"
-#~ "Toヘッダーの下記の設定に変更を加えるヘッダーが優先されます。この設定を「は"
-#~ "い」にする場合、すべてのメールでMTAをDKIM署名に設定することをお勧めしま"
-#~ "す。"
-
-#, fuzzy
-#~ msgid ""
-#~ "<p>If this is set to Wrap Message, just wrap the message\n"
-#~ "             in an outer message From: the list with Content-Type:\n"
-#~ "             message/rfc822."
-#~ msgstr ""
-#~ "「メール内に添付」の場合、送信者アドレスがメーリングリストでContent-Type: "
-#~ "message/rfc822 形式のメールに元のメールが添付されます。"
-
-#, fuzzy
-#~ msgid ""
-#~ "<p>If <a\n"
-#~ "             href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
-#~ "             dmarc_moderation_action</a> applies to this message with an\n"
-#~ "             action other than Accept, that action rather than this is\n"
-#~ "             applied"
-#~ msgstr ""
-#~ "制限付き会員からの投稿に対して送られる\n"
-#~ "<a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
-#~ ">拒否通知</a>に含める文."

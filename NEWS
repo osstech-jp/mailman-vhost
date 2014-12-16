@@ -28,6 +28,9 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Japanese translation has been updated by SATOH Fumiyasu.
+      (LP: #1402989)
+
     - A minor change in the French translation of a listinfo subscribe form
       message has been made.  (LP: #1331194)
 
