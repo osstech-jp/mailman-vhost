@@ -254,6 +254,10 @@ BROKEN_BROWSER_REPLACEMENTS = {'\x8b': '&#8249;',  # single left angle quote
 # SSENDERTIME -> Default to grouped by sender and sorted by time.
 # STIME -> Default to ungrouped and sorted by time.
 DISPLAY_HELD_SUMMARY_SORT_BUTTONS = No
+#
+# Shall the default for the admin Mass Subscription function be Invite rather
+# than Subscribe?  Set to Yes in mm_cfg.py to make the default be Invite.
+DEFAULT_SUBSCRIBE_OR_INVITE = No
 
 
 
