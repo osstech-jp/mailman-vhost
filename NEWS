@@ -40,6 +40,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - When applying DMARC mitigations, CookHeaders now adds the original From:
+      to Cc: rather than Reply-To: in some cases to make MUA 'reply' and
+      'reply all' more consistent with the non-DMARC cases.  (LP: #1407098)
+
     - The Subject: of the list welcome message wasn't always in the user's
       preferred language.  Fixed.  (LP: #1400988)
 

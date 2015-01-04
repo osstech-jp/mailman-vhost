@@ -1,4 +1,4 @@
-# Copyright (C) 2013-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 2013-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -49,6 +49,9 @@ def process(mlist, msg, msgdata):
             if a_h.get('Reply-To'):
                 del msg['reply-to']
                 msg['Reply-To'] = a_h.get('Reply-To')
+            if a_h.get('Cc'):
+                del msg['cc']
+                msg['Cc'] = a_h.get('Cc')
         return
 
     # There are various headers in msg that we don't want, so we basically
