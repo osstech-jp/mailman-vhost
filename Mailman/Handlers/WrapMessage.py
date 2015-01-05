@@ -18,7 +18,7 @@
 """Wrap the message in an outer message/rfc822 part and transfer/add
 some headers from the original.
 
-Also, in the case of Munge From, replace the From: and Reply-To: in the
+Also, in the case of Munge From, replace the From:, Reply-To: and Cc: in the
 original message.
 """
 
@@ -40,7 +40,8 @@ def process(mlist, msg, msgdata):
     # is wrap this message or from_is_list applies and is wrap.
     if not (msgdata.get('from_is_list') == 2 or
             (mlist.from_is_list == 2 and msgdata.get('from_is_list') == 0)):
-        # Now see if we need to add a From: and/or Reply-To: without wrapping.
+        # Now see if we need to add a From:, Reply-To: or Cc: without wrapping.
+        # See comments in CookHeaders.change_header for why we do this here.
         a_h = msgdata.get('add_header')
         if a_h:
             if a_h.get('From'):

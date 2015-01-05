@@ -7,11 +7,11 @@ Here is a history of user visible changes to Mailman.
 
 2.1.19 (xx-xxx-xxxx)
 
+  New Features
+
     - There is a new DEFAULT_SUBSCRIBE_OR_INVITE setting.  Set this to Yes
       to make the default selection on the admin Mass Subscriptions page
       Invite rather than Subscribe.  (LP: #1404511)
-
-  New Features
 
     - There is a new list attribute in the Bounce processing section.
       bounce_notify_owner_on_bounce_increment if set to Yes will cause

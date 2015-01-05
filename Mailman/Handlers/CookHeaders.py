@@ -72,6 +72,11 @@ def change_header(name, value, mlist, msg, msgdata, delete=True, repl=True):
         (msgdata.get('from_is_list') == 0 and mlist.from_is_list == 2)) and 
         not msgdata.get('_fasttrack')
        ) or name.lower() in ('from', 'reply-to', 'cc'):
+        # The or name.lower() in ... above is because when we are munging
+        # the From:, we want to defer the resultant changes to From:,
+        # Reply-To:, and/or Cc: until after the message passes through
+        # ToDigest, ToArchive and ToUsenet.  Thus, we put them in
+        # msgdata[add_header] here and apply them in WrapMessage.
         msgdata.setdefault('add_header', {})[name] = value
     elif repl or not msg.has_key(name):
         if delete:
