@@ -30,6 +30,14 @@ Here is a history of user visible changes to Mailman.
       have a logrotate process that creates new log files instead of letting
       Mailman create them, you will need to address that.  (LP: #1327404)
 
+  Other changes
+
+    - The Python Powered logo image has been replaced in the misc/ directory
+      in the source distribution.  Depending on how you've installed these
+      images, you may need to copy PythonPowered.png from the misc/ directory
+      in the source or from the $prefix/icons/ installed directory to another
+      location for your web server.  (LP: #1408575)
+
   i18n
 
     - The Russian templates have been updated by Danil Smirnov.  (LP: #1403462)
