@@ -9,6 +9,11 @@ Here is a history of user visible changes to Mailman.
 
   New Features
 
+    - There is a new WEB_HEAD_ADD setting to specify text to be added to the
+      <HEAD> section of Mailman's internally generated web pages.  This doesn't
+      apply to pages built from templates, but in those cases, custom templates
+      can be created.  (LP: #1409396)
+
     - There is a new DEFAULT_SUBSCRIBE_OR_INVITE setting.  Set this to Yes
       to make the default selection on the admin Mass Subscriptions page
       Invite rather than Subscribe.  (LP: #1404511)

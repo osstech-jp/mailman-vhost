@@ -1,6 +1,6 @@
 # -*- python -*-
 
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -223,6 +223,20 @@ WEB_ALINK_COLOR = ''                              # If true, forces ALINK=
 WEB_VLINK_COLOR = ''                              # If true, forces VLINK=
 WEB_HIGHLIGHT_COLOR = '#dddddd'                   # If true, alternating rows
                                                   # in listinfo & admin display
+
+# If you wish to include extra elements in the <HEAD> section of Mailman's
+# web pages, e.g. style information or a link to a style sheet, you can set
+# the following.  For example, to include a css style sheet reference, you
+# can put in mm_cfg.py
+# WEB_HEAD_ADD = """<LINK REL=stylesheet
+#                TYPE="text/css"
+#                HREF="path or URL"
+#                >"""
+# You can specify anything that is allowed in the <HEAD> section.  The default
+# is to not add anything.  This only applies to internally generated pages.
+# For pages built from templates you can create custom templates containing
+# this information.
+WEB_HEAD_ADD = None
 
 # User entered data is escaped for redisplay in web responses to avoid Cross
 # Site Scripting (XSS) attacks. The normal escaping replaces the characters

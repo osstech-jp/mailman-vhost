@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -318,6 +318,8 @@ class Document(Container):
                           'content="text/html; charset=%s">' % charset)
             if self.title:
                 output.append('%s<TITLE>%s</TITLE>' % (tab, self.title))
+            if mm_cfg.WEB_HEAD_ADD:
+                output.append(mm_cfg.WEB_HEAD_ADD)
             output.append('%s</HEAD>' % tab)
             quals = []
             # Default link colors
