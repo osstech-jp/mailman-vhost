@@ -206,10 +206,19 @@ def process(mlist, msg, msgdata):
         # We also need to put the old From: in Reply-To: in all cases where
         # it is not going in Cc:.  This is when reply_goes_to_list == 0 and
         # either there was no original Reply-To: or we stripped it.
-        if o_from and mlist.reply_goes_to_list == 0 and not o_rt: 
-            add(o_from)
-            # Flag that we added it.
-            o_from = None
+        # However, if there was an original Reply-To:, unstripped, and it
+        # contained the original From: address we need to flag that it's
+        # there so we don't add the original From: to Cc:
+        if o_from and mlist.reply_goes_to_list == 0:
+            if o_rt:
+                if d.has_key(o_from[1].lower()):
+                    # Original From: address is in original Reply-To:.
+                    # Pretend we added it.
+                    o_from = None
+            else:
+                add(o_from)
+                # Flag that we added it.
+                o_from = None
         # Set Reply-To: header to point back to this list.  Add this last
         # because some folks think that some MUAs make it easier to delete
         # addresses from the right than from the left.
