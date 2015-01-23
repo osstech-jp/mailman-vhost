@@ -5,6 +5,61 @@ Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.2 Branch Backports (released in conjunction with 2.1.19)
+
+  The following New Features and Bug Fixes have been in an "unofficial,
+  never to be released" Mailman 2.2 branch for several years. Until now,
+  they were never implemented on the official 2.1 branch because of their
+  i18n impacts.  Given that there have been a number of i18n impacting
+  changes due to DMARC mitigations in the last few releases, it has been
+  decided to backport these as well.
+
+  All of these changes have been running in production on several lists
+  for years without problems other than untranslated strings, so they should
+  be reasonably "bug free".
+
+  New Features
+
+    - There is a new list attribute 'subscribe_auto_approval' which is a list
+      of email addresses and regular expressions matching email addresses
+      whose subscriptions are exempt from admin approval.  (LP: #266609)
+
+    - Confirmed member change of address is logged in the 'subscribe' log,
+      and if admin_notify_mchanges is true, a notice is sent to the list
+      owner using a new adminaddrchgack.txt template.
+
+    - Added an 'automate' option to bin/newlist to send the notice to the
+      admin without the prompt.
+
+    - The processing of Topics regular expressions has changed. Previously the
+      Topics regexp was compiled in verbose mode but not documented as such
+      which caused some confusion.  Also, the documentation indicated that
+      topic keywords could be entered one per line, but these entries were not
+      handled properly.  Topics regexps are now compiled in non-verbose mode
+      and multi-line entries are 'ored'.  Existing Topics regexps will be
+      converted when the list is updated so they will continue to work.
+
+    - Added real name display to the web roster.  (LP: #266754)
+
+
+  Bug fixes and other patches
+
+    - Changed the response to an invalid confirmation to be more generic.
+      Not all confirmations are subscription requests.
+
+    - Changed the default nonmember_rejection_notice to be more user friendly.
+      (LP: #418728)
+
+    - Added "If you are a list member" qualification to some messages from the
+      options login page.  (LP: #266442)
+
+    - Changed the 'Approve' wording in the admindbdetails.html template to
+      'Accept/Approve' for better agreement with the button labels.
+
+    - Added '(by thread)' to the previous and next message links in the
+      archive to emphasize that even if you got to the message from a
+      subject, date or author index, previous and next are still by thread.
+
 2.1.19 (xx-xxx-xxxx)
 
   New Features

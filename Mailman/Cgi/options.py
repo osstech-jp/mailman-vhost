@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -33,6 +33,7 @@ from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
 
+OR = '|'
 SLASH = '/'
 SETLANGUAGE = -1
 
@@ -176,6 +177,9 @@ def main():
         return
 
     # Are we processing an unsubscription request from the login screen?
+    msgc = _('If you are a list member, a confirmation email has been sent.')
+    msga = _("""If you are a list member, your unsubscription request has been
+             forwarded to the list administrator for approval.""")
     if cgidata.has_key('login-unsub'):
         # Because they can't supply a password for unsubscribing, we'll need
         # to do the confirmation dance.
@@ -187,14 +191,11 @@ def main():
                 # be held.  Otherwise, send a confirmation.
                 if mlist.unsubscribe_policy:
                     mlist.HoldUnsubscription(user)
-                    doc.addError(_("""Your unsubscription request has been
-                    forwarded to the list administrator for approval."""),
-                                 tag='')
+                    doc.addError(msga, tag='')
                 else:
                     ip = os.environ.get('REMOTE_ADDR')
                     mlist.ConfirmUnsubscription(user, userlang, remote=ip)
-                    doc.addError(_('The confirmation email has been sent.'),
-                                 tag='')
+                    doc.addError(msgc, tag='')
                 mlist.Save()
             finally:
                 mlist.Unlock()
@@ -207,19 +208,21 @@ def main():
                 syslog('mischief',
                        'Unsub attempt of non-member w/ private rosters: %s',
                        user)
-                doc.addError(_('The confirmation email has been sent.'),
-                             tag='')
+                if mlist.unsubscribe_policy:
+                    doc.addError(msga, tag='')
+                else:
+                    doc.addError(msgc, tag='')
         loginpage(mlist, doc, user, language)
         print doc.Format()
         return
 
     # Are we processing a password reminder from the login screen?
+    msg = _("""If you are a list member,
+            your password has been emailed to you.""")
     if cgidata.has_key('login-remind'):
         if mlist.isMember(user):
             mlist.MailUserPassword(user)
-            doc.addError(
-                _('A reminder of your password has been emailed to you.'),
-                tag='')
+            doc.addError(msg, tag='')
         else:
             # Not a member
             if mlist.private_roster == 0:
@@ -229,9 +232,7 @@ def main():
                 syslog('mischief',
                        'Reminder attempt of non-member w/ private rosters: %s',
                        user)
-                doc.addError(
-                    _('A reminder of your password has been emailed to you.'),
-                    tag='')
+                doc.addError(msg, tag='')
         loginpage(mlist, doc, user, language)
         print doc.Format()
         return
@@ -1068,7 +1069,8 @@ def topic_details(mlist, doc, user, cpuser, userlang, varhelp):
     table.AddRow([Bold(Label(_('Name:'))),
                   Utils.websafe(name)])
     table.AddRow([Bold(Label(_('Pattern (as regexp):'))),
-                  '<pre>' + Utils.websafe(pattern) + '</pre>'])
+                  '<pre>' + Utils.websafe(OR.join(pattern.splitlines()))
+                   + '</pre>'])
     table.AddRow([Bold(Label(_('Description:'))),
                   Utils.websafe(description)])
     # Make colors look nice

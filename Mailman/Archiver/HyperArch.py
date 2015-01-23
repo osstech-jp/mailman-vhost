@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -509,7 +509,7 @@ class Article(pipermail.Article):
             subject = self._get_subject_enc(self.prev)
             prev = ('<LINK REL="Previous"  HREF="%s">'
                     % (url_quote(self.prev.filename)))
-            prev_wsubj = ('<LI>' + _('Previous message:') +
+            prev_wsubj = ('<LI>' + _('Previous message (by thread):') +
                           ' <A HREF="%s">%s\n</A></li>'
                           % (url_quote(self.prev.filename),
                              self.quote(subject)))
@@ -531,7 +531,7 @@ class Article(pipermail.Article):
             subject = self._get_subject_enc(self.next)
             next = ('<LINK REL="Next"  HREF="%s">'
                     % (url_quote(self.next.filename)))
-            next_wsubj = ('<LI>' + _('Next message:') +
+            next_wsubj = ('<LI>' + _('Next message (by thread):') +
                           ' <A HREF="%s">%s\n</A></li>'
                           % (url_quote(self.next.filename),
                              self.quote(subject)))

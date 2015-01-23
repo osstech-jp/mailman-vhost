@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -112,6 +112,15 @@ class Privacy(GUIBase):
              machine?''')),
 
             sub_cfentry,
+
+            ('subscribe_auto_approval', mm_cfg.EmailListEx, (10, WIDTH), 1,
+             _("""List of addresses (or regexps) whose subscriptions do not
+             require approval."""),
+
+             _("""When subscription requires approval, addresses in this list
+             are allowed to subscribe without administrator approval. Add
+             addresses one per line. You may begin a line with a ^ character
+             to designate a (case insensitive) regular expression match.""")),
 
             ('unsubscribe_policy', mm_cfg.Radio, (_('No'), _('Yes')), 0,
              _("""Is the list moderator's approval required for unsubscription

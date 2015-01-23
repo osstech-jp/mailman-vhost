@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -80,6 +80,7 @@ except ImportError:
 
 EMPTYSTRING = ''
 UEMPTYSTRING = u''
+CR = '\r'
 NL = '\n'
 DOT = '.'
 IDENTCHARS = ascii_letters + digits + '_'
@@ -916,6 +917,61 @@ def oneline(s, cset):
     except (LookupError, UnicodeError, ValueError, HeaderParseError):
         # possibly charset problem. return with undecoded string in one line.
         return EMPTYSTRING.join(s.splitlines())
+
+
+def strip_verbose_pattern(pattern):
+    # Remove white space and comments from a verbose pattern and return a
+    # non-verbose, equivalent pattern.  Replace CR and NL in the result
+    # with '\\r' and '\\n' respectively to avoid multi-line results.
+    if not isinstance(pattern, str):
+        return pattern
+    newpattern = ''
+    i = 0
+    inclass = False
+    skiptoeol = False
+    copynext = False
+    while i < len(pattern):
+        c = pattern[i]
+        if copynext:
+            if c == NL:
+                newpattern += '\\n'
+            elif c == CR:
+                newpattern += '\\r'
+            else:
+                newpattern += c
+            copynext = False
+        elif skiptoeol:
+            if c == NL:
+                skiptoeol = False
+        elif c == '#' and not inclass:
+            skiptoeol = True
+        elif c == '[' and not inclass:
+            inclass = True
+            newpattern += c
+            copynext = True
+        elif c == ']' and inclass:
+            inclass = False
+            newpattern += c
+        elif re.search('\s', c):
+            if inclass:
+                if c == NL:
+                    newpattern += '\\n'
+                elif c == CR:
+                    newpattern += '\\r'
+                else:
+                    newpattern += c
+        elif c == '\\' and not inclass:
+            newpattern += c
+            copynext = True
+        else:
+            if c == NL:
+                newpattern += '\\n'
+            elif c == CR:
+                newpattern += '\\r'
+            else:
+                newpattern += c
+        i += 1
+    return newpattern
 
 
 # Patterns and functions to flag possible XSS attacks in HTML.
