@@ -1216,3 +1216,37 @@ def IsDMARCProhibited(mlist, email):
 
     return False
 
+
+def check_eq_domains(email, domains_list):
+    """The arguments are an email address and a string representing a
+    list of lists in a form like 'a,b,c;1,2' representing [['a', 'b',
+    'c'],['1', '2']].  The inner lists are domains which are
+    equivalent in some sense.  The return is an empty list or a list
+    of email addresses equivalent to the first argument.
+    For example, given
+
+    email = 'user@me.com'
+    domains_list = '''domain1, domain2; mac.com, me.com, icloud.com;
+                   domaina, domainb
+                   '''
+
+    check_eq_domains(email, domains_list) will return
+    ['user@mac.com', 'user@icloud.com']
+    """
+    if not domains_list:
+        return []
+    try:
+        local, domain = email.rsplit('@', 1)
+    except ValueError:
+        return []
+    domain = domain.lower()
+    domains_list = re.sub('\s', '', domains_list).lower()
+    domains = domains_list.split(';')
+    domains_list = []
+    for d in domains:
+        domains_list.append(d.split(','))
+    for domains in domains_list:
+        if domain in domains:
+            return [local + '@' + x for x in domains if x != domain]
+    return []
+

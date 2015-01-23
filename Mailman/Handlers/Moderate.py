@@ -54,6 +54,12 @@ def process(mlist, msg, msgdata):
     for sender in msg.get_senders():
         if mlist.isMember(sender):
             break
+        for sender in Utils.check_eq_domains(sender,
+                          mlist.equivalent_domains):
+            if mlist.isMember(sender):
+                break
+        if mlist.isMember(sender):
+            break
     else:
         sender = None
     if sender:

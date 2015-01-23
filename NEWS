@@ -64,6 +64,13 @@ Here is a history of user visible changes to Mailman.
 
   New Features
 
+    - There is a new list attribute equivalent_domains and a
+      DEFAULT_EQUIVALENT_DOMAINS setting to set the default for new lists which
+      in turn defaults to the empty string.  This provides a way to specify one
+      or more groups of domains, e.g., mac.com, me.com, icloud.com, which are
+      considered equivalent for validating list membership for posting and
+      moderation purposes.
+
     - There is a new WEB_HEAD_ADD setting to specify text to be added to the
       <HEAD> section of Mailman's internally generated web pages.  This doesn't
       apply to pages built from templates, but in those cases, custom templates

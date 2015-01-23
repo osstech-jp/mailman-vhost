@@ -302,6 +302,33 @@ class Privacy(GUIBase):
              be sent to anyone who posts to this list from a domain
              with a DMARC Reject%(quarantine)s Policy.""")),
 
+            ('equivalent_domains', mm_cfg.Text, (10, WIDTH), 1,
+             _("""A 'two dimensional' list of email address domains which are
+               considered equivalent when checking if a post is from a list
+               member."""),
+
+             _("""If two poster addresses with the same local part but
+               different domains are to be considered equivalents for list
+               membership tests, the domains are put here.  The format is
+               one or more groups of equivalent domains.  Within a group,
+               the domains are separated by commas and multiple groups are
+               separated by semicolons. White space is ignored.
+               <p>For example:<pre>
+               example.com,mail.example.com;mac.com,me.com,icloud.com
+               </pre>
+               <p>In this example, if user@example.com is a list member,
+               a post from user@mail.example.com will be treated as if it is
+               from user@example.com for list membership/moderation purposes,
+               and likewise, if user@me.com is a list member, posts from
+               user@mac.com or user@icloud.com will be treated as if from
+               user@me.com.
+               <p>Note that the poster's address is first tested for list
+               membership, and the equivalent domain addresses are only tested
+               if the poster's address is not that of a member.
+               <p>Also note that moderation of the equivalent domain address
+               will apply to the post, but other options such as 'ack' or
+               'not&nbsp;metoo' will not.""")),
+
             _('Non-member filters'),
 
             ('accept_these_nonmembers', mm_cfg.EmailListEx, (10, WIDTH), 1,
