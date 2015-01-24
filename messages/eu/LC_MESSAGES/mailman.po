@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Thu Jan 22 16:33:00 2015\n"
+"POT-Creation-Date: Fri Jan 23 17:36:52 2015\n"
 "PO-Revision-Date: 2003-11-08 00:31+0100\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -567,12 +567,12 @@ msgstr "Atzeratu"
 #: Mailman/Cgi/admindb.py:417 Mailman/Cgi/admindb.py:469
 #: Mailman/Cgi/admindb.py:719 Mailman/Gui/ContentFilter.py:37
 #: Mailman/Gui/Privacy.py:230 Mailman/Gui/Privacy.py:253
-#: Mailman/Gui/Privacy.py:364
+#: Mailman/Gui/Privacy.py:405
 msgid "Reject"
 msgstr "Ezetsi"
 
 #: Mailman/Cgi/admin.py:794 Mailman/Gui/Privacy.py:230
-#: Mailman/Gui/Privacy.py:364
+#: Mailman/Gui/Privacy.py:405
 msgid "Hold"
 msgstr "Atxiki"
 
@@ -580,12 +580,12 @@ msgstr "Atxiki"
 #: Mailman/Cgi/admindb.py:418 Mailman/Cgi/admindb.py:469
 #: Mailman/Cgi/admindb.py:719 Mailman/Commands/cmd_confirm.py:93
 #: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:230
-#: Mailman/Gui/Privacy.py:254 Mailman/Gui/Privacy.py:364
+#: Mailman/Gui/Privacy.py:254 Mailman/Gui/Privacy.py:405
 msgid "Discard"
 msgstr "Baztertu"
 
 #: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:469
-#: Mailman/Gui/Privacy.py:253 Mailman/Gui/Privacy.py:364
+#: Mailman/Gui/Privacy.py:253 Mailman/Gui/Privacy.py:405
 msgid "Accept"
 msgstr "Onartu"
 
@@ -875,7 +875,7 @@ msgstr "Zerrendakide berriei ongietorri mezuak bidali?"
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
 #: Mailman/Gui/Privacy.py:125 Mailman/Gui/Privacy.py:158
 #: Mailman/Gui/Privacy.py:211 Mailman/Gui/Privacy.py:282
-#: Mailman/Gui/Privacy.py:379 Mailman/Gui/Privacy.py:398
+#: Mailman/Gui/Privacy.py:420 Mailman/Gui/Privacy.py:439
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "No"
@@ -904,7 +904,7 @@ msgstr "Ez"
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
 #: Mailman/Gui/Privacy.py:125 Mailman/Gui/Privacy.py:158
 #: Mailman/Gui/Privacy.py:211 Mailman/Gui/Privacy.py:282
-#: Mailman/Gui/Privacy.py:379 Mailman/Gui/Privacy.py:398
+#: Mailman/Gui/Privacy.py:420 Mailman/Gui/Privacy.py:439
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "Yes"
@@ -3743,166 +3743,166 @@ msgstr "Mezuak banaka jasotzen dituzten harpidedunak:"
 msgid "Digest members:"
 msgstr "Mezuak bildumetan jasotzen dituzten harpidedunak:"
 
-#: Mailman/Defaults.py:1600
+#: Mailman/Defaults.py:1630
 msgid "Arabic"
 msgstr ""
 
-#: Mailman/Defaults.py:1601
+#: Mailman/Defaults.py:1631
 #, fuzzy
 msgid "Asturian"
 msgstr "Estoniera"
 
-#: Mailman/Defaults.py:1602
+#: Mailman/Defaults.py:1632
 #, fuzzy
 msgid "Catalan"
 msgstr "Italiera"
 
-#: Mailman/Defaults.py:1603
+#: Mailman/Defaults.py:1633
 msgid "Czech"
 msgstr "Txekiera  "
 
-#: Mailman/Defaults.py:1604
+#: Mailman/Defaults.py:1634
 #, fuzzy
 msgid "Danish"
 msgstr "Finlandiera "
 
-#: Mailman/Defaults.py:1605
+#: Mailman/Defaults.py:1635
 msgid "German"
 msgstr "Alemaniera"
 
-#: Mailman/Defaults.py:1606
+#: Mailman/Defaults.py:1636
 msgid "English (USA)"
 msgstr "Ingelesa (AEB)"
 
-#: Mailman/Defaults.py:1607
+#: Mailman/Defaults.py:1637
 msgid "Spanish (Spain)"
 msgstr "Gaztelania (Espainia)"
 
-#: Mailman/Defaults.py:1608
+#: Mailman/Defaults.py:1638
 msgid "Estonian"
 msgstr "Estoniera"
 
-#: Mailman/Defaults.py:1609
+#: Mailman/Defaults.py:1639
 msgid "Euskara"
 msgstr ""
 
-#: Mailman/Defaults.py:1610
+#: Mailman/Defaults.py:1640
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1611
+#: Mailman/Defaults.py:1641
 msgid "Finnish"
 msgstr "Finlandiera "
 
-#: Mailman/Defaults.py:1612
+#: Mailman/Defaults.py:1642
 msgid "French"
 msgstr "Frantsesa"
 
-#: Mailman/Defaults.py:1613
+#: Mailman/Defaults.py:1643
 #, fuzzy
 msgid "Galician"
 msgstr "Italiera"
 
-#: Mailman/Defaults.py:1614
+#: Mailman/Defaults.py:1644
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1615
+#: Mailman/Defaults.py:1645
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1616
+#: Mailman/Defaults.py:1646
 msgid "Croatian"
 msgstr ""
 
-#: Mailman/Defaults.py:1617
+#: Mailman/Defaults.py:1647
 msgid "Hungarian"
 msgstr "Hungariera "
 
-#: Mailman/Defaults.py:1618
+#: Mailman/Defaults.py:1648
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1619
+#: Mailman/Defaults.py:1649
 msgid "Italian"
 msgstr "Italiera"
 
-#: Mailman/Defaults.py:1620
+#: Mailman/Defaults.py:1650
 msgid "Japanese"
 msgstr "Japoniera"
 
-#: Mailman/Defaults.py:1621
+#: Mailman/Defaults.py:1651
 msgid "Korean"
 msgstr "Koreera"
 
-#: Mailman/Defaults.py:1622
+#: Mailman/Defaults.py:1652
 msgid "Lithuanian"
 msgstr "Lituaniera"
 
-#: Mailman/Defaults.py:1623
+#: Mailman/Defaults.py:1653
 msgid "Dutch"
 msgstr "Almeaniera"
 
-#: Mailman/Defaults.py:1624
+#: Mailman/Defaults.py:1654
 msgid "Norwegian"
 msgstr "Norvegiera"
 
-#: Mailman/Defaults.py:1625
+#: Mailman/Defaults.py:1655
 msgid "Polish"
 msgstr "Poloniera"
 
-#: Mailman/Defaults.py:1626
+#: Mailman/Defaults.py:1656
 msgid "Portuguese"
 msgstr "Portugesa"
 
-#: Mailman/Defaults.py:1627
+#: Mailman/Defaults.py:1657
 msgid "Portuguese (Brazil)"
 msgstr "Brasileko Portugesa"
 
-#: Mailman/Defaults.py:1628
+#: Mailman/Defaults.py:1658
 #, fuzzy
 msgid "Romanian"
 msgstr "Estoniera"
 
-#: Mailman/Defaults.py:1629
+#: Mailman/Defaults.py:1659
 msgid "Russian"
 msgstr "Errusiera"
 
-#: Mailman/Defaults.py:1630
+#: Mailman/Defaults.py:1660
 #, fuzzy
 msgid "Slovak"
 msgstr "Serbiarra"
 
-#: Mailman/Defaults.py:1631
+#: Mailman/Defaults.py:1661
 #, fuzzy
 msgid "Slovenian"
 msgstr "Serbiarra"
 
-#: Mailman/Defaults.py:1632
+#: Mailman/Defaults.py:1662
 msgid "Serbian"
 msgstr "Serbiarra"
 
-#: Mailman/Defaults.py:1633
+#: Mailman/Defaults.py:1663
 msgid "Swedish"
 msgstr "Suediera"
 
-#: Mailman/Defaults.py:1634
+#: Mailman/Defaults.py:1664
 msgid "Turkish"
 msgstr ""
 
-#: Mailman/Defaults.py:1635
+#: Mailman/Defaults.py:1665
 msgid "Ukrainian"
 msgstr "Ukrainera"
 
-#: Mailman/Defaults.py:1636
+#: Mailman/Defaults.py:1666
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1637
+#: Mailman/Defaults.py:1667
 msgid "Chinese (China)"
 msgstr ""
 
-#: Mailman/Defaults.py:1638
+#: Mailman/Defaults.py:1668
 msgid "Chinese (Taiwan)"
 msgstr ""
 
@@ -6876,11 +6876,69 @@ msgstr ""
 "             <a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
 "             >oharra</a>."
 
-#: Mailman/Gui/Privacy.py:305
+#: Mailman/Gui/Privacy.py:306
+msgid ""
+"If dmarc_moderation_action applies and is Wrap Message,\n"
+"             and this text is provided, the text will be placed in a\n"
+"             separate text/plain MIME part preceding the original message\n"
+"             part in the wrapped message."
+msgstr ""
+
+#: Mailman/Gui/Privacy.py:311
+msgid ""
+"A wrapped message will either be a multipart/mixed message\n"
+"             with up to four sub-parts; a text/plain part containing\n"
+"             msg_header, a text/plain part containing \n"
+"             dmarc_wrapped_message_text, a message/rfc822 part containing "
+"the\n"
+"             original message and a text/plain part containing msg_footer, "
+"or\n"
+"             a message/rfc822 message containing only the original message "
+"if\n"
+"             none of the other parts are applicable."
+msgstr ""
+
+#: Mailman/Gui/Privacy.py:320
+msgid ""
+"A 'two dimensional' list of email address domains which are\n"
+"               considered equivalent when checking if a post is from a list\n"
+"               member."
+msgstr ""
+
+#: Mailman/Gui/Privacy.py:324
+msgid ""
+"If two poster addresses with the same local part but\n"
+"               different domains are to be considered equivalents for list\n"
+"               membership tests, the domains are put here.  The format is\n"
+"               one or more groups of equivalent domains.  Within a group,\n"
+"               the domains are separated by commas and multiple groups are\n"
+"               separated by semicolons. White space is ignored.\n"
+"               <p>For example:<pre>\n"
+"               example.com,mail.example.com;mac.com,me.com,icloud.com\n"
+"               </pre>\n"
+"               <p>In this example, if user@example.com is a list member,\n"
+"               a post from user@mail.example.com will be treated as if it "
+"is\n"
+"               from user@example.com for list membership/moderation "
+"purposes,\n"
+"               and likewise, if user@me.com is a list member, posts from\n"
+"               user@mac.com or user@icloud.com will be treated as if from\n"
+"               user@me.com.\n"
+"               <p>Note that the poster's address is first tested for list\n"
+"               membership, and the equivalent domain addresses are only "
+"tested\n"
+"               if the poster's address is not that of a member.\n"
+"               <p>Also note that moderation of the equivalent domain "
+"address\n"
+"               will apply to the post, but other options such as 'ack' or\n"
+"               'not&nbsp;metoo' will not."
+msgstr ""
+
+#: Mailman/Gui/Privacy.py:346
 msgid "Non-member filters"
 msgstr "Harpidedun ez direnen iragazkia"
 
-#: Mailman/Gui/Privacy.py:308
+#: Mailman/Gui/Privacy.py:349
 msgid ""
 "List of non-member addresses whose postings should be\n"
 "             automatically accepted."
@@ -6888,7 +6946,7 @@ msgstr ""
 "Harpidedun izan ez arren, mezuak automatikoki onartuko zaizkien\n"
 "             helbideen zerrenda."
 
-#: Mailman/Gui/Privacy.py:315
+#: Mailman/Gui/Privacy.py:356
 #, fuzzy
 msgid ""
 "Postings from any of these non-members will be automatically\n"
@@ -6906,7 +6964,7 @@ msgstr ""
 "karakterearekin\n"
 "             hasi lerroa."
 
-#: Mailman/Gui/Privacy.py:324
+#: Mailman/Gui/Privacy.py:365
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             immediately held for moderation."
@@ -6914,7 +6972,7 @@ msgstr ""
 "Zerrenda honetako helbideetatik datozen mezuak\n"
 "automatikoki moderatuko dira"
 
-#: Mailman/Gui/Privacy.py:327
+#: Mailman/Gui/Privacy.py:368
 msgid ""
 "Postings from any of these non-members will be immediately\n"
 "             and automatically held for moderation by the list moderators.\n"
@@ -6935,7 +6993,7 @@ msgstr ""
 "kasuan,\n"
 "             ^  karakterearekin hasi lerroa."
 
-#: Mailman/Gui/Privacy.py:335
+#: Mailman/Gui/Privacy.py:376
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically rejected."
@@ -6943,7 +7001,7 @@ msgstr ""
 "Zerrenda honetako helbideetatik datozen mezuak ez dira\n"
 "             onartuko."
 
-#: Mailman/Gui/Privacy.py:338
+#: Mailman/Gui/Privacy.py:379
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             rejected.  In other words, their messages will be bounced back "
@@ -6970,7 +7028,7 @@ msgstr ""
 "kasuan\n"
 "             lerroa ^ karakterearekin hasi."
 
-#: Mailman/Gui/Privacy.py:350
+#: Mailman/Gui/Privacy.py:391
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically discarded."
@@ -6978,7 +7036,7 @@ msgstr ""
 "Automatikoki mezu bidalketa atzera botako zaien harpidedun ez diren\n"
 "             helbideen zerrenda."
 
-#: Mailman/Gui/Privacy.py:353
+#: Mailman/Gui/Privacy.py:394
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             discarded.  That is, the message will be thrown away with no\n"
@@ -7004,7 +7062,7 @@ msgstr ""
 "kasuan\n"
 "             lerroa ^ karakterearekin hasi."
 
-#: Mailman/Gui/Privacy.py:365
+#: Mailman/Gui/Privacy.py:406
 msgid ""
 "Action to take for postings from non-members for which no\n"
 "             explicit action is defined."
@@ -7012,7 +7070,7 @@ msgstr ""
 "Euren mezuekin zer egin zehaztuta ez duten gainontzeko helbideekin\n"
 "             egin beharrekoa."
 
-#: Mailman/Gui/Privacy.py:368
+#: Mailman/Gui/Privacy.py:409
 msgid ""
 "When a post from a non-member is received, the message's\n"
 "             sender is matched against the list of explicitly\n"
@@ -7039,7 +7097,7 @@ msgstr ""
 "horko zerrenda\n"
 "              batean ere agertzen, ondokoa egingo da."
 
-#: Mailman/Gui/Privacy.py:380
+#: Mailman/Gui/Privacy.py:421
 msgid ""
 "Should messages from non-members, which are automatically\n"
 "             discarded, be forwarded to the list moderator?"
@@ -7047,7 +7105,7 @@ msgstr ""
 "Automatikoki baztertzen diren zerrendakide ez diren bidaltzaileen mezuen\n"
 "             kopiak moderatzaileari bidali?"
 
-#: Mailman/Gui/Privacy.py:384
+#: Mailman/Gui/Privacy.py:425
 msgid ""
 "Text to include in any rejection notice to be sent to\n"
 "             non-members who post to this list. This notice can include\n"
@@ -7055,7 +7113,7 @@ msgid ""
 "             internally crafted default message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:392
+#: Mailman/Gui/Privacy.py:433
 msgid ""
 "This section allows you to configure various filters based on\n"
 "            the recipient of the message."
@@ -7063,11 +7121,11 @@ msgstr ""
 "Atal honen bitartez, mezuaren hartzailearen araberako zenbait\n"
 "            iragazki konfiguratzeko aukera duzu."
 
-#: Mailman/Gui/Privacy.py:395
+#: Mailman/Gui/Privacy.py:436
 msgid "Recipient filters"
 msgstr "Hartzaileen iragazkia"
 
-#: Mailman/Gui/Privacy.py:399
+#: Mailman/Gui/Privacy.py:440
 msgid ""
 "Must posts have list named in destination (to, cc) field\n"
 "             (or be among the acceptable alias names, specified below)?"
@@ -7077,7 +7135,7 @@ msgstr ""
 "             (edo behekaldean ezarritako alias izenetan dagoeenetako "
 "batenbat)?"
 
-#: Mailman/Gui/Privacy.py:402
+#: Mailman/Gui/Privacy.py:443
 msgid ""
 "Many (in fact, most) spams do not explicitly name their\n"
 "             myriad destinations in the explicit destination addresses - in\n"
@@ -7117,7 +7175,7 @@ msgstr ""
 "\n"
 "             </ol>"
 
-#: Mailman/Gui/Privacy.py:420
+#: Mailman/Gui/Privacy.py:461
 msgid ""
 "Alias names (regexps) which qualify as explicit to or cc\n"
 "             destination names for this list."
@@ -7125,7 +7183,7 @@ msgstr ""
 "Zerrenda hau helburutzat duten mezuek erabili ditzazketen alias\n"
 "             (expresio erregularra) zehatza."
 
-#: Mailman/Gui/Privacy.py:423
+#: Mailman/Gui/Privacy.py:464
 msgid ""
 "Alternate addresses that are acceptable when\n"
 "             `require_explicit_destination' is enabled.  This option takes "
@@ -7171,11 +7229,11 @@ msgstr ""
 "osoarekin\n"
 "             erkatuko da."
 
-#: Mailman/Gui/Privacy.py:441
+#: Mailman/Gui/Privacy.py:482
 msgid "Ceiling on acceptable number of recipients for a posting."
 msgstr "Banaketa batean onar daitekeen gehienezko hartzaile kopurua."
 
-#: Mailman/Gui/Privacy.py:443
+#: Mailman/Gui/Privacy.py:484
 msgid ""
 "If a posting has this number, or more, of recipients, it is\n"
 "             held for admin approval.  Use 0 for no ceiling."
@@ -7184,7 +7242,7 @@ msgstr ""
 "             eta kudeatzailearen onespena jaso arte atxikirik geratuko da.\n"
 "             Ez baduzu mugarik nahi 0 ipini."
 
-#: Mailman/Gui/Privacy.py:448
+#: Mailman/Gui/Privacy.py:489
 msgid ""
 "This section allows you to configure various anti-spam\n"
 "            filters posting filters, which can help reduce the amount of "
@@ -7197,17 +7255,17 @@ msgstr ""
 "             zabor posta kopurua gutxitzen lagunduko zaitu.\n"
 "             "
 
-#: Mailman/Gui/Privacy.py:453
+#: Mailman/Gui/Privacy.py:494
 #, fuzzy
 msgid "Header filters"
 msgstr "Zerrendakideen iragazkia"
 
-#: Mailman/Gui/Privacy.py:456
+#: Mailman/Gui/Privacy.py:497
 #, fuzzy
 msgid "Filter rules to match against the headers of a message."
 msgstr "Mezuetan bilatu beharreko gako-hitzak, lerro bakoitzeko bana."
 
-#: Mailman/Gui/Privacy.py:458
+#: Mailman/Gui/Privacy.py:499
 msgid ""
 "Each header filter rule has two parts, a list of regular\n"
 "             expressions, one per line, and an action to take.  Mailman\n"
@@ -7230,16 +7288,16 @@ msgid ""
 "             types or file name extensions."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:475
+#: Mailman/Gui/Privacy.py:516
 #, fuzzy
 msgid "Legacy anti-spam filters"
 msgstr "Zabor posta aurkako iragazkiak"
 
-#: Mailman/Gui/Privacy.py:478
+#: Mailman/Gui/Privacy.py:519
 msgid "Hold posts with header value matching a specified regexp."
 msgstr "Adierazpen erregular baten pareko goiburua duten mezuak atxiki."
 
-#: Mailman/Gui/Privacy.py:479
+#: Mailman/Gui/Privacy.py:520
 msgid ""
 "Use this option to prohibit posts according to specific\n"
 "             header values.  The target value is a regular-expression for\n"
@@ -7274,13 +7332,13 @@ msgstr ""
 "              ezabatu egiten direla. Hori sahiesteko, hutsuneak\n"
 "              parentesi artean sartu."
 
-#: Mailman/Gui/Privacy.py:514
+#: Mailman/Gui/Privacy.py:555
 msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:564
+#: Mailman/Gui/Privacy.py:605
 #, fuzzy
 msgid ""
 "Header filter rules require a pattern.\n"
@@ -7289,7 +7347,7 @@ msgstr ""
 "Gaien espezifikazioek izena eta patroia behar dute.\n"
 "                Zerbait falta zaien definizioak ez dira onartuko."
 
-#: Mailman/Gui/Privacy.py:572
+#: Mailman/Gui/Privacy.py:613
 msgid ""
 "The header filter rule pattern\n"
 "                '%(safepattern)s' is not a legal regular expression.  This\n"
@@ -8125,7 +8183,7 @@ msgstr ""
 msgid "Content filtered message notification"
 msgstr "Edukiarengatik iragazitako mezuaren jakinarazpena"
 
-#: Mailman/Handlers/Moderate.py:164
+#: Mailman/Handlers/Moderate.py:170
 #, fuzzy
 msgid ""
 "Your message has been rejected, probably because you are not subscribed to "
@@ -8140,11 +8198,11 @@ msgstr ""
 "zure mezua baztertu egin dugu.Gure huts bat izan dela uste\n"
 "baduzu, idatzi zerrenda jabeari: %(listowner)s."
 
-#: Mailman/Handlers/Moderate.py:181
+#: Mailman/Handlers/Moderate.py:187
 msgid "Auto-discard notification"
 msgstr "Bazterketa automatikoen jakinarazpena"
 
-#: Mailman/Handlers/Moderate.py:184
+#: Mailman/Handlers/Moderate.py:190
 msgid "The attached message has been automatically discarded."
 msgstr "Erantsitako mezua automatikoki baztertu da."
 
@@ -8432,36 +8490,36 @@ msgstr "Zu ez zara %(listname)s ePosta zerrendako harpidedun"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "Zu ez zara %(listname)s ePosta zerrendako harpidedun"
 
-#: Mailman/MailList.py:911 Mailman/MailList.py:1378
+#: Mailman/MailList.py:915 Mailman/MailList.py:1382
 msgid " from %(remote)s"
 msgstr " %(remote)s-(e)tik"
 
-#: Mailman/MailList.py:955
+#: Mailman/MailList.py:959
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "%(realname)s zerrendan harpidetzeko moderatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1024 bin/add_members:252
+#: Mailman/MailList.py:1028 bin/add_members:252
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s harpidetza jakinarazpena"
 
-#: Mailman/MailList.py:1043
+#: Mailman/MailList.py:1047
 msgid "unsubscriptions require moderator approval"
 msgstr "zerrenda uzteko moderatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1064
+#: Mailman/MailList.py:1068
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s zerrenda utzi izanaren jakinarazpena"
 
-#: Mailman/MailList.py:1222
+#: Mailman/MailList.py:1226
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s zerrenda utzi izanaren jakinarazpena"
 
-#: Mailman/MailList.py:1287
+#: Mailman/MailList.py:1291
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "%(name)s zerrendako kide izateko, kudeatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1552
+#: Mailman/MailList.py:1556
 msgid "Last autoresponse notification for today"
 msgstr "Gaurko azkenengo jakinarazpen automatikoa"
 
