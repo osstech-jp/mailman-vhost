@@ -1093,6 +1093,11 @@ DEFAULT_DMARC_QUARANTINE_MODERATION_ACTION = Yes
 # 4 = Discard
 DEFAULT_DMARC_MODERATION_ACTION = 0
 
+# Default for text to be added to a separate text/plain part preceding the
+# message/rfc822 part containing the original message when
+# dmarc_moderation_action is Wrap Message.
+DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT = ''
+
 # Parameters for DMARC DNS lookups. If you are seeing 'DNSException:
 # Unable to query DMARC policy ...' entries in your error log, you may need
 # to adjust these.
@@ -1105,8 +1110,9 @@ DMARC_RESOLVER_LIFETIME = seconds(5)
 # for posting/moderation.
 # If two poster addresses with the same local part but
 # different domains are to be considered equivalents for list
-# membership tests, the domains are put here.  The format is
-# one or more groups of equivalent domains.  Within a group,
+# membership tests, the domains are put in the list's equivalent_domains.
+# This provides a default value for new lists.
+# The format is one or more groups of equivalent domains.  Within a group,
 # the domains are separated by commas and multiple groups are
 # separated by semicolons. White space is ignored.
 # For example:

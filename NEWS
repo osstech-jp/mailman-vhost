@@ -64,6 +64,13 @@ Here is a history of user visible changes to Mailman.
 
   New Features
 
+    - There is a new list attribute dmarc_wrapped_message_text and a
+      DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT setting to set the default for new
+      lists.  This text is added to a message which is wrapped because of
+      dmarc_moderation_action in a separate text/plain part that precedes the
+      message/rfc822 part containing the original message.  It can be used to
+      provide an explanation of why the message was wrapped or similar info.
+
     - There is a new list attribute equivalent_domains and a
       DEFAULT_EQUIVALENT_DOMAINS setting to set the default for new lists which
       in turn defaults to the empty string.  This provides a way to specify one

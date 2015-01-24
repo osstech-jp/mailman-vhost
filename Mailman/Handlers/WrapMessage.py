@@ -24,6 +24,9 @@ original message.
 
 import copy
 
+from email.MIMEMessage import MIMEMessage
+from email.MIMEText import MIMEText
+
 from Mailman import Utils
 
 # Headers from the original that we want to keep in the wrapper.
@@ -63,12 +66,23 @@ def process(mlist, msg, msgdata):
         if key.lower() not in KEEPERS:
             del msg[key]
     msg['MIME-Version'] = '1.0'
-    msg['Content-Type'] = 'message/rfc822'
-    msg['Content-Disposition'] = 'inline'
     msg['Message-ID'] = Utils.unique_message_id(mlist)
     # Add the headers from CookHeaders.
     for k, v in msgdata['add_header'].items():
         msg[k] = v
-    # And set the payload the way email parses it.
-    msg.set_payload([omsg])
+    # Are we including dmarc_wrapped_message_text?  I.e., do we have text and
+    # are we wrapping because of dmarc_moderation_action?
+    if mlist.dmarc_wrapped_message_text and msgdata.get('from_is_list') == 2:
+        part1 = MIMEText(Utils.wrap(mlist.dmarc_wrapped_message_text),
+                         'plain',
+                         Utils.GetCharSet(mlist.preferred_language))
+        part1['Content-Disposition'] = 'inline'
+        part2 = MIMEMessage(omsg)
+        part2['Content-Disposition'] = 'inline'
+        msg['Content-Type'] = 'multipart/mixed'
+        msg.set_payload([part1, part2])
+    else:
+        msg['Content-Type'] = 'message/rfc822'
+        msg['Content-Disposition'] = 'inline'
+        msg.set_payload([omsg])
 

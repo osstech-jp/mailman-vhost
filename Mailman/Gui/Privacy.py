@@ -301,6 +301,20 @@ class Privacy(GUIBase):
              >rejection notice</a> to
              be sent to anyone who posts to this list from a domain
              with a DMARC Reject%(quarantine)s Policy.""")),
+             
+            ('dmarc_wrapped_message_text', mm_cfg.Text, (10, WIDTH), 1,
+             _("""If dmarc_moderation_action applies and is Wrap Message,
+             and this text is provided, the text will be placed in a
+             separate text/plain MIME part preceding the original message
+             part in the wrapped message."""),
+             
+             _("""A wrapped message will either be a multipart/mixed message
+             with up to four sub-parts; a text/plain part containing
+             msg_header, a text/plain part containing 
+             dmarc_wrapped_message_text, a message/rfc822 part containing the
+             original message and a text/plain part containing msg_footer, or
+             a message/rfc822 message containing only the original message if
+             none of the other parts are applicable.""")),
 
             ('equivalent_domains', mm_cfg.Text, (10, WIDTH), 1,
              _("""A 'two dimensional' list of email address domains which are
