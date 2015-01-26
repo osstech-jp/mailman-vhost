@@ -1170,7 +1170,8 @@ def mass_subscribe(mlist, container):
         Label(_('Subscribe these users now or invite them?')),
         RadioButtonArray('subscribe_or_invite',
                          (_('Subscribe'), _('Invite')),
-                         0, values=(0, 1))
+                         mm_cfg.DEFAULT_SUBSCRIBE_OR_INVITE,
+                         values=(0, 1))
         ])
     table.AddCellInfo(table.GetCurrentRowIndex(), 0, bgcolor=GREY)
     table.AddCellInfo(table.GetCurrentRowIndex(), 1, bgcolor=GREY)

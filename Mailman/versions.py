@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -313,6 +313,15 @@ def UpdateOldVars(l, stored_state):
             pass
         else:
             l.digest_members[k] = 0
+    #
+    # Convert pre 2.2 topics regexps which were compiled in verbose mode
+    # to a non-verbose equivalent.
+    #
+    if stored_state['data_version'] < 106 and stored_state.has_key('topics'):
+        l.topics = []
+        for name, pattern, description, emptyflag in stored_state['topics']:
+            pattern = Utils.strip_verbose_pattern(pattern)
+            l.topics.append((name, pattern, description, emptyflag))
     # from_is_list was called author_is_list in 2.1.16rc2 (only).
     PreferStored('author_is_list', 'from_is_list',
                  mm_cfg.DEFAULT_FROM_IS_LIST)
@@ -352,6 +361,8 @@ def NewVars(l):
     add_only_if_missing('personalize', 0)
     add_only_if_missing('first_strip_reply_to',
                         mm_cfg.DEFAULT_FIRST_STRIP_REPLY_TO)
+    add_only_if_missing('subscribe_auto_approval',
+                        mm_cfg.DEFAULT_SUBSCRIBE_AUTO_APPROVAL)
     add_only_if_missing('unsubscribe_policy',
                         mm_cfg.DEFAULT_UNSUBSCRIBE_POLICY)
     add_only_if_missing('send_goodbye_msg', mm_cfg.DEFAULT_SEND_GOODBYE_MSG)
@@ -370,6 +381,9 @@ def NewVars(l):
     add_only_if_missing(
         'bounce_unrecognized_goes_to_list_owner',
         mm_cfg.DEFAULT_BOUNCE_UNRECOGNIZED_GOES_TO_LIST_OWNER)
+    add_only_if_missing(
+        'bounce_notify_owner_on_bounce_increment',
+        mm_cfg.DEFAULT_BOUNCE_NOTIFY_OWNER_ON_BOUNCE_INCREMENT)
     add_only_if_missing(
         'bounce_notify_owner_on_disable',
         mm_cfg.DEFAULT_BOUNCE_NOTIFY_OWNER_ON_DISABLE)
@@ -393,6 +407,10 @@ def NewVars(l):
     add_only_if_missing('dmarc_quarantine_moderation_action',
                        mm_cfg.DEFAULT_DMARC_QUARANTINE_MODERATION_ACTION)
     add_only_if_missing('dmarc_moderation_notice', '')
+    add_only_if_missing('dmarc_wrapped_message_text',
+                       mm_cfg.DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT)
+    add_only_if_missing('equivalent_domains', 
+                       mm_cfg.DEFAULT_EQUIVALENT_DOMAINS)
     add_only_if_missing('new_member_options',
                         mm_cfg.DEFAULT_NEW_MEMBER_OPTIONS)
     # Emergency moderation flag
