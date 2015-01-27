@@ -1,6 +1,6 @@
 -*- coding: iso-8859-1 -*-
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
@@ -123,6 +123,10 @@ Here is a history of user visible changes to Mailman.
       message has been made.  (LP: #1331194)
 
   Bug fixes and other patches
+
+    - Fixed a bug in bin/rmlist that would throw an exception or just fail to
+      remove held message files for a list with regexp special characters in
+      its name.  (LP:#1414864)
 
     - When applying DMARC mitigations, CookHeaders now adds the original From:
       to Cc: rather than Reply-To: in some cases to make MUA 'reply' and
