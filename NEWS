@@ -114,6 +114,8 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Romanian message catalog has been updated.  (LP: #1415489)
+
     - The Russian templates have been updated by Danil Smirnov.  (LP: #1403462)
 
     - The Japanese translation has been updated by SATOH Fumiyasu.

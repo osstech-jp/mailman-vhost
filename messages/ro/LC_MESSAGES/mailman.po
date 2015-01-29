@@ -266,7 +266,7 @@ msgstr "Autorizarea a eºuat."
 
 #: Mailman/Cgi/admin.py:199
 msgid "The form lifetime has expired. (request forgery check)"
-msgstr ""
+msgstr "Sesiuna dumneavoastrã a expirat."
 
 #: Mailman/Cgi/admin.py:205
 msgid ""
@@ -612,7 +612,6 @@ msgid "<br>(Details for <b>%(varname)s</b>)"
 msgstr "<br>(Detalii pentru <b>%(varname)s</b>)"
 
 #: Mailman/Cgi/admin.py:853
-#, fuzzy
 msgid ""
 "<br><em><strong>Note:</strong>\n"
 "        setting this value performs an immediate action but does not modify\n"
@@ -1020,14 +1019,12 @@ msgid ""
 msgstr ""
 
 #: Mailman/Cgi/admin.py:1296
-#, fuzzy
 msgid "Enter new poster password:"
-msgstr "Introduceþi noua parolã de moderator:"
+msgstr "Introduceþi noua parolã de contributor:"
 
 #: Mailman/Cgi/admin.py:1298
-#, fuzzy
 msgid "Confirm poster password:"
-msgstr "Confirmaþi parola de moderator:"
+msgstr "Confirmaþi parola de contributor:"
 
 #: Mailman/Cgi/admin.py:1307
 msgid "Submit Your Changes"
@@ -1040,7 +1037,7 @@ msgstr "Parolele de moderator nu se potrivesc"
 #: Mailman/Cgi/admin.py:1341
 #, fuzzy
 msgid "Poster passwords did not match"
-msgstr "Parolele dumneavoastrã nu se potrivesc."
+msgstr "Parolele contributorului nu se potrivesc."
 
 #: Mailman/Cgi/admin.py:1351
 msgid "Administrator passwords did not match"
@@ -1066,7 +1063,7 @@ msgstr "Adresã ostilã (caractere ilegale)"
 #: Mailman/Cgi/admin.py:1414 bin/add_members:149 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
-msgstr ""
+msgstr "Adresã blocatã cu expresia %(pattern)s"
 
 #: Mailman/Cgi/admin.py:1420
 msgid "Successfully invited:"
@@ -1141,7 +1138,6 @@ msgid "Submit All Data"
 msgstr "Salveazã toate datele"
 
 #: Mailman/Cgi/admindb.py:242 Mailman/Cgi/admindb.py:292
-#, fuzzy
 msgid "Discard all messages marked <em>Defer</em>"
 msgstr "Aruncã toate mesajele marcate cu <em>Defer</em>"
 
@@ -1203,25 +1199,24 @@ msgid "Unsubscription Requests"
 msgstr "Cereri de dezabonare"
 
 #: Mailman/Cgi/admindb.py:440
-#, fuzzy
 msgid "Held Messages"
-msgstr "toate mesajele reþinute."
+msgstr "Mesaje reþinute"
 
 #: Mailman/Cgi/admindb.py:443
 msgid "Show this list grouped/sorted by"
-msgstr ""
+msgstr "Aratã aceastã listã grupatã/sortatã pe"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/sender"
-msgstr ""
+msgstr "expeditor/expeditor"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/time"
-msgstr ""
+msgstr "expeditor/orã"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "ungrouped/time"
-msgstr ""
+msgstr "negrupate/orã"
 
 #: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:702
 msgid "From:"
@@ -1363,7 +1358,7 @@ msgstr " este deja membru"
 
 #: Mailman/Cgi/admindb.py:934
 msgid "%(addr)s is banned (matched: %(patt)s)"
-msgstr ""
+msgstr "%(addr)s este blocatã (expresia %(patt)s"
 
 #: Mailman/Cgi/confirm.py:78
 msgid "Confirmation string was empty."
@@ -1452,7 +1447,6 @@ msgid "Confirm subscription request"
 msgstr "Cerere de confirmare a abonãrii"
 
 #: Mailman/Cgi/confirm.py:249
-#, fuzzy
 msgid ""
 "Your confirmation is required in order to complete the\n"
 "    subscription request to the mailing list <em>%(listname)s</em>.  Your\n"
@@ -1473,7 +1467,7 @@ msgstr ""
 "Este necesarã confirmarea dumneavoastrã pentru a completa\n"
 "    cererea de abonare la lista de discuþii <em>%(listname)s</em>.\n"
 "    Datele dumneavoastrã de abonament sunt prezentate mai jos; faceþi\n"
-"    toate modificãrile necesareºi apãsaþi pe butonul <em>Aboneazã-mã</em>\n"
+"    toate modificãrile necesare ºi apãsaþi pe butonul <em>Aboneazã-mã</em>\n"
 "    pentru a completa procesul de confirmare. De îndatã ce veþi confirma "
 "cererea\n"
 "    de abonare, veþi putea accesa pagina de opþiuni personale de abonament,\n"
@@ -1592,13 +1586,12 @@ msgid "You are already a member of this mailing list!"
 msgstr "Sunteþi deja membru al acestei liste de discuþii!"
 
 #: Mailman/Cgi/confirm.py:380
-#, fuzzy
 msgid ""
 "You are currently banned from subscribing to\n"
 "            this list.  If you think this restriction is erroneous, please\n"
 "            contact the list owners at %(owneraddr)s."
 msgstr ""
-"Adresa pe care aþi dat-o este interzisã pe aceastã listã.\n"
+"Accesul dumneavoastrã la aceasta listã este interzis.\n"
 "        Dacã credeþi cã aceastã restricþie este eronatã, vã rugãm sã\n"
 "        contactaþi proprietarii listei la %(owneraddr)s."
 
@@ -1666,7 +1659,6 @@ msgid "<em>Not available</em>"
 msgstr "<em>Nu este disponibil</em>"
 
 #: Mailman/Cgi/confirm.py:477
-#, fuzzy
 msgid ""
 "Your confirmation is required in order to complete the\n"
 "    unsubscription request from the mailing list <em>%(listname)s</em>.  "
@@ -1683,7 +1675,7 @@ msgid ""
 "    <p>Or hit <em>Cancel and discard</em> to cancel this unsubscription\n"
 "    request."
 msgstr ""
-"Este necesarã confirmarea dumneavoatrã pentru a finaliza decerea\n"
+"Este necesarã confirmarea dumneavoatrã pentru a finaliza cererea\n"
 "    de pãrãsire a listei de discuþii <em>%(listname)s</em>.  În prezent\n"
 "    aveþi datele urmãtoare de abonament:\n"
 "\n"
@@ -1711,25 +1703,23 @@ msgid "You have canceled your change of address request."
 msgstr "Aþi anulat cererea de modificare a adresei."
 
 #: Mailman/Cgi/confirm.py:533
-#, fuzzy
 msgid ""
 "%(newaddr)s is banned from subscribing to the\n"
 "            %(realname)s list.  If you think this restriction is erroneous,\n"
 "            please contact the list owners at %(owneraddr)s."
 msgstr ""
-"Adresa pe care aþi dat-o este interzisã pe aceastã listã.\n"
+"Accesul la lista %(realname)s este interzis pentru %(newaddr)s.\n"
 "        Dacã credeþi cã aceastã restricþie este eronatã, vã rugãm sã\n"
 "        contactaþi proprietarii listei la %(owneraddr)s."
 
 #: Mailman/Cgi/confirm.py:538
-#, fuzzy
 msgid ""
 "%(newaddr)s is already a member of\n"
 "            the %(realname)s list.  It is possible that you are attempting\n"
 "            to confirm a request for an address that has already been\n"
 "            subscribed."
 msgstr ""
-"Cod de confirmare invalid.\n"
+"%(newaddr)s este deja membru al listei %(realname)s.\n"
 "            S-ar putea sã fi încercat sã confirmaþi o cerere pentru\n"
 "            o adresã care a fost deja dezabonatã."
 
@@ -2048,7 +2038,7 @@ msgstr "Nu aveþi autorizarea necesarã pentru a crea noi liste de discuþii"
 
 #: Mailman/Cgi/create.py:164
 msgid "Unknown virtual host: %(safehostname)s"
-msgstr "Listã necunoscutã: %(listname)s"
+msgstr "Listã necunoscutã: %(safelistname)s"
 
 #: Mailman/Cgi/create.py:200 bin/newlist:218
 msgid "Bad owner email address: %(s)s"
@@ -2248,9 +2238,8 @@ msgid "Welcome email text file"
 msgstr "Fiºierul text al mesajului email de întâmpinare"
 
 #: Mailman/Cgi/edithtml.py:49
-#, fuzzy
 msgid "Digest masthead"
-msgstr "introducere rezumat"
+msgstr "Antet de rezumat"
 
 #: Mailman/Cgi/edithtml.py:61
 msgid "List name is required."
@@ -2304,17 +2293,21 @@ msgid ""
 "must have shell access to your Mailman server.\n"
 "             "
 msgstr ""
+"Pagina pe care ai salvat-o conine HTML suspect care\n"
+"ar putea expune utilizatorii la atacuri XSS. În consecinã, aceastã "
+"schimbare\n"
+"a fost respinsã. Dacã totui vrei sã facei aceste schimbãri, trebuie sã avei\n"
+"shell access la server-ul dumneavoastrã Mailman."
 
 #: Mailman/Cgi/edithtml.py:172
 msgid "See "
-msgstr ""
+msgstr "Vezi "
 
 #: Mailman/Cgi/edithtml.py:175
 msgid "FAQ 4.48."
 msgstr ""
 
 #: Mailman/Cgi/edithtml.py:176
-#, fuzzy
 msgid "Page Unchanged."
 msgstr "Codul HTML este neschimbat."
 
@@ -2432,7 +2425,10 @@ msgstr ""
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
-msgstr "Un mesaj de reamintire a parolei v-a fost trimis prin email."
+msgstr ""
+"Daca sunteti un membru al listei,\n"
+"                          un mesaj de reamintire a parolei v-a fost trimis "
+"prin email."
 
 #: Mailman/Cgi/options.py:263
 msgid "Authentication failed."
@@ -2522,30 +2518,26 @@ msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s este deja abonatã pe listã."
 
 #: Mailman/Cgi/options.py:430
-#, fuzzy
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
 "                      think this restriction is erroneous, please contact\n"
 "                      the list owners at %(owneraddr)s."
 msgstr ""
-"Adresa de email pe care aþi specificat-o este interzisã pe aceastã listã.\n"
-"Dacã credeþi cã aceastã restricþie este eronatã, vã rugãm sã contactaþi\n"
-"proprietarii listei la adresa %(owneraddr)s."
+"Accesul la lista %(realname)s este interzis pentru %(newaddr)s.\n"
+"        Dacã credeþi cã aceastã restricþie este eronatã, vã rugãm sã\n"
+"        contactaþi proprietarii listei la %(owneraddr)s."
 
 #: Mailman/Cgi/options.py:441
 msgid "Member name successfully changed. "
 msgstr "Numele abonatului a fost modificat cu succes. "
 
 #: Mailman/Cgi/options.py:451
-#, fuzzy
 msgid ""
 "The list administrator may not change the\n"
 "                    password for a user."
 msgstr ""
-"Administratorul listei a dezactivat livrarea individualã (non-digest)\n"
-"            pentru aceastã listã, astfel încât opþiunea dumneavoastrã\n"
-"de livrare nu a fost salvatã. Totuºi,\n"
-"            celelalte opþiuni v-au fost setate cu succes."
+"Administratorul listei nu are voie sã schimbe\n"
+"                    parola pentru un utilizator."
 
 #: Mailman/Cgi/options.py:460
 msgid "Passwords may not be blank"
@@ -2556,16 +2548,14 @@ msgid "Passwords did not match!"
 msgstr "Parolele nu se potrivesc!"
 
 #: Mailman/Cgi/options.py:473
-#, fuzzy
 msgid ""
 "The list administrator may not change the\n"
 "            password for this user's other subscriptions.  However, the\n"
 "            password for this mailing list has been changed."
 msgstr ""
-"Administratorul listei a dezactivat livrarea individualã (non-digest)\n"
-"            pentru aceastã listã, astfel încât opþiunea dumneavoastrã\n"
-"de livrare nu a fost salvatã. Totuºi,\n"
-"            celelalte opþiuni v-au fost setate cu succes."
+"Administratorul listei nu are voie sã schimbe\n"
+"            parola pentru celelalte abonamente ale utilizatorului. Totuºi,\n"
+"            parola pentru aceastã listã a fost schimbatã\n"
 
 #: Mailman/Cgi/options.py:490 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
@@ -2834,29 +2824,29 @@ msgid "Private Archive Error - %(msg)s"
 msgstr "Eroare la arhiva privatã - %(msg)s"
 
 #: Mailman/Cgi/private.py:141
-#, fuzzy
 msgid ""
 "If you are a list member,\n"
 "                          your password has been emailed to you."
-msgstr "Un mesaj de reamintire a parolei v-a fost trimis prin email."
+msgstr ""
+"Daca sunteti un membru al listei,\n"
+"                          un mesaj de reamintire a parolei v-a fost trimis "
+"prin email."
 
 #: Mailman/Cgi/private.py:145
-#, fuzzy
 msgid "Please enter your email address"
-msgstr "Adresa de email:"
+msgstr "Vã rugãm, introducei adresa de email:"
 
 #: Mailman/Cgi/private.py:206
 msgid "Private archive file not found"
 msgstr "Fiºierul de arhivã privatã nu a fost gãsit"
 
 #: Mailman/Cgi/rmlist.py:65
-#, fuzzy
 msgid "No such list %(safelistname)s"
-msgstr "Nu ecistã o astfel de listã: %(listname)s"
+msgstr "Nu existã o astfel de listã: %(safelistname)s"
 
 #: Mailman/Cgi/rmlist.py:83
 msgid "You're being a sneaky list owner!"
-msgstr "Eºti un proprietar de listã dat dracului!"
+msgstr "Eºti un proprietar de listã tare viclean!"
 
 #: Mailman/Cgi/rmlist.py:121
 msgid "You are not authorized to delete this mailing list"
@@ -2891,9 +2881,8 @@ msgid "Permanently remove mailing list <em>%(realname)s</em>"
 msgstr "Åžterg definitiv lista de discuþii <em>%(realname)s</em>"
 
 #: Mailman/Cgi/rmlist.py:191
-#, fuzzy
 msgid "Permanently remove mailing list %(realname)s"
-msgstr "Åžterg definitiv lista de discuþii <em>%(realname)s</em>"
+msgstr "terg definitiv lista de discuþii %(realname)s"
 
 #: Mailman/Cgi/rmlist.py:204
 msgid ""
@@ -3153,14 +3142,13 @@ msgstr ""
 "sau v-aþi schimbat cumva adresa de email?"
 
 #: Mailman/Commands/cmd_confirm.py:69
-#, fuzzy
 msgid ""
 "You are currently banned from subscribing to this list.  If you think this\n"
 "restriction is erroneous, please contact the list owners at\n"
 "%(owneraddr)s."
 msgstr ""
-"Adresa de email pe care aþi specificat-o este interzisã pe aceastã listã.\n"
-"Dacã credeþi cã aceastã restricþie este eronatã, vã rugãm sã contactaþi\n"
+"Momentan, nu avei dreptul sã vã abonai la aceastã listã. Dacã credeþi cã\n"
+"aceastã restricþie este eronatã, vã rugãm sã contactaþi\n"
 "proprietarii listei la adresa %(owneraddr)s."
 
 #: Mailman/Commands/cmd_confirm.py:74
@@ -8262,9 +8250,7 @@ msgstr "Permisiunile %(dbfile)s trebuie sã fie 066x (sunt %(octmode)s)"
 
 #: Mailman/MailList.py:217
 msgid "Your confirmation is required to join the %(listname)s mailing list"
-msgstr ""
-"Este necesarã confirmarea dumneavoastrã pentru abonarea la lista de discuþii "
-"%(listname)s"
+msgstr "Invitaie abonare la lista de discuii %(listname)s"
 
 #: Mailman/MailList.py:228
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
