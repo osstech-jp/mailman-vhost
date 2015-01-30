@@ -5,7 +5,7 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.2 Branch Backports (released in conjunction with 2.1.19rc1)
+2.2 Branch Backports (released in conjunction with 2.1.19)
 
   The following New Features and Bug Fixes have been in an "unofficial,
   never to be released" Mailman 2.2 branch for several years. Until now,
@@ -60,7 +60,7 @@ Here is a history of user visible changes to Mailman.
       archive to emphasize that even if you got to the message from a
       subject, date or author index, previous and next are still by thread.
 
-2.1.19rc1 (29-Jan-2015)
+2.1.19 (xx-xxx-2015)
 
   New Features
 
@@ -125,6 +125,11 @@ Here is a history of user visible changes to Mailman.
       message has been made.  (LP: #1331194)
 
   Bug fixes and other patches
+
+    - The admindb interface has been fixed so the the detail message body
+      display doesn't lose part of a multi-byte character, and characters which
+      are invalid in the message's charset are replaced rather than the whole
+      body not being converted to the display charset.  (LP: #1415406)
 
     - Fixed a bug in bin/rmlist that would throw an exception or just fail to
       remove held message files for a list with regexp special characters in
