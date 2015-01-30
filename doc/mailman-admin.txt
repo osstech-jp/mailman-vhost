@@ -10,7 +10,7 @@ GNU Mailman - List Administration Manual
    Barry A. Warsaw
 
    Release 2.1
-   September 28, 2013
+   January 29, 2015
 
                                   Front Matter
 
@@ -330,9 +330,19 @@ Contents
           standards, you may or may not want to add a trailing space.
 
    from_is_list
-          Setting this variable to Yes causes the From: address to be
-          replaced by the list address so that policies like ADSP or DMARC
-          can be applied.
+          This applies to all non-digest messages sent by the list. For
+          settings that apply only to messages whose From: domain
+          publishes a DMARC p=reject or p=quarantine policy, see the
+          dmarc_moderaction_action description in section 2.7.
+
+          If set to Munge From, it replaces the From: header address with
+          the list's posting address to mitigate issues stemming from the
+          original From: domain's DMARC or similar policies and puts the
+          original From: address in a Reply-To: header.
+
+          If set to Wrap Message it wraps the original message as a MIME
+          subpart of an outer message with From: and Reply-To: headers as
+          above.
 
    anonymous_list
           This variable allows you to turn on some simple anonymizing
@@ -1065,6 +1075,29 @@ Description: An example of Mailman mailing lists
           member_moderation_action is Reject, this variable contains the
           text sent in the rejection notice.
 
+   The next group of settings control messages whose From: domain
+   publishes a DMARC p=reject or p=quarantine policy.
+
+   dmarc_moderation_action
+          These actions, Accept, Munge From, Wrap Message, Reject and
+          Discard apply only to messages whose From: domain publishes a
+          DMARC p=reject or optionally (see the next setting) p=quarantine
+          policy. If the message is From: such a domain and this action is
+          other than Accept, this action applies to the message. Otherwise
+          the from_is_list setting in section 2.1 applies. See the
+          from_is_list setting in section 2.1 for a description of the
+          Munge From and Wrap Message actions.
+
+   dmarc_quarantine_moderation_action
+          If this is set to Yes, the above dmarc_moderation_action applies
+          to messages with From: domain DMARC policy p=quarantine as well
+          as p=reject.
+
+   dmarc_moderation_notice
+          When dmarc_moderation_action applies and is Reject, this
+          variable contains the text sent in the rejection notice. If
+          empty, a generic notice mentioning DMARC is sent.
+
    The next batch of variables controls what happens when non-members post
    messages to the list. Each of these accepts one email address per line;
    regular expressions are allowed if the line starts with the (caret)
@@ -1311,8 +1344,7 @@ Just add another \section{}, but don't say \appendix again.
 
                             About this document ...
 
-   GNU Mailman - List Administration Manual, September 28, 2013, Release
-   2.1
+   GNU Mailman - List Administration Manual, January 29, 2015, Release 2.1
 
    This document was generated using the LaTeX2HTML translator.
 
@@ -1357,4 +1389,4 @@ Just add another \section{}, but don't say \appendix again.
                                                      Manual
      __________________________________________________________________
 
-   Release 2.1, documentation updated on September 28, 2013.
+   Release 2.1, documentation updated on January 29, 2015.
