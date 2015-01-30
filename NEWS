@@ -1,11 +1,11 @@
 -*- coding: iso-8859-1 -*-
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
 
-2.2 Branch Backports (released in conjunction with 2.1.19)
+2.2 Branch Backports (released in conjunction with 2.1.19rc1)
 
   The following New Features and Bug Fixes have been in an "unofficial,
   never to be released" Mailman 2.2 branch for several years. Until now,
@@ -60,7 +60,7 @@ Here is a history of user visible changes to Mailman.
       archive to emphasize that even if you got to the message from a
       subject, date or author index, previous and next are still by thread.
 
-2.1.19 (xx-xxx-xxxx)
+2.1.19rc1 (29-Jan-2015)
 
   New Features
 
@@ -114,6 +114,8 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Romanian message catalog has been updated.  (LP: #1415489)
+
     - The Russian templates have been updated by Danil Smirnov.  (LP: #1403462)
 
     - The Japanese translation has been updated by SATOH Fumiyasu.
@@ -123,6 +125,10 @@ Here is a history of user visible changes to Mailman.
       message has been made.  (LP: #1331194)
 
   Bug fixes and other patches
+
+    - Fixed a bug in bin/rmlist that would throw an exception or just fail to
+      remove held message files for a list with regexp special characters in
+      its name.  (LP:#1414864)
 
     - When applying DMARC mitigations, CookHeaders now adds the original From:
       to Cc: rather than Reply-To: in some cases to make MUA 'reply' and

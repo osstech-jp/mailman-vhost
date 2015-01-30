@@ -8,17 +8,17 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img4.png"
  ALT="$&gt;$">|; 
 
-$key = q/<;MSF=1.6;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="16" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img3.png"
- ALT="$&lt;$">|; 
-
 $key = q/nomath_inline}textquestiondownnomath_inline};MSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="8" HEIGHT="20" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img1.png"
  ALT="\textquestiondown">|; 
+
+$key = q/<;MSF=1.6;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="16" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img3.png"
+ ALT="$&lt;$">|; 
 
 $key = q/nomath_inline}textexclamdownnomath_inline};MSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
