@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Fri Jan 23 17:36:52 2015\n"
+"POT-Creation-Date: Tue Feb  3 20:49:32 2015\n"
 "PO-Revision-Date: 2005-05-14 12:07+0800\n"
 "Last-Translator: Dai Xiaoguang <leona@cs.hit.edu.cn>\n"
 "Language-Team:  <mailman-cn@mail.cs.hit.edu.cn>\n"
@@ -271,7 +271,7 @@ msgstr ""
 "不然你的邮件列表基本是无法使用的。"
 
 #: Mailman/Cgi/admin.py:209 Mailman/Cgi/admin.py:217 Mailman/Cgi/admin.py:224
-#: Mailman/Cgi/admin.py:1499 Mailman/Gui/GUIBase.py:207
+#: Mailman/Cgi/admin.py:1499 Mailman/Gui/GUIBase.py:208
 msgid "Warning: "
 msgstr "警告："
 
@@ -544,37 +544,37 @@ msgstr "垃圾邮件过滤正则表达式"
 
 #: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:354
 #: Mailman/Cgi/admindb.py:415 Mailman/Cgi/admindb.py:469
-#: Mailman/Cgi/admindb.py:719
+#: Mailman/Cgi/admindb.py:717
 msgid "Defer"
 msgstr "延期"
 
 #: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:356
 #: Mailman/Cgi/admindb.py:417 Mailman/Cgi/admindb.py:469
-#: Mailman/Cgi/admindb.py:719 Mailman/Gui/ContentFilter.py:37
-#: Mailman/Gui/Privacy.py:230 Mailman/Gui/Privacy.py:253
-#: Mailman/Gui/Privacy.py:405
+#: Mailman/Cgi/admindb.py:717 Mailman/Gui/ContentFilter.py:37
+#: Mailman/Gui/Privacy.py:233 Mailman/Gui/Privacy.py:256
+#: Mailman/Gui/Privacy.py:408
 msgid "Reject"
 msgstr "拒绝"
 
-#: Mailman/Cgi/admin.py:794 Mailman/Gui/Privacy.py:230
-#: Mailman/Gui/Privacy.py:405
+#: Mailman/Cgi/admin.py:794 Mailman/Gui/Privacy.py:233
+#: Mailman/Gui/Privacy.py:408
 msgid "Hold"
 msgstr "滞留"
 
 #: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:357
 #: Mailman/Cgi/admindb.py:418 Mailman/Cgi/admindb.py:469
-#: Mailman/Cgi/admindb.py:719 Mailman/Commands/cmd_confirm.py:93
-#: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:230
-#: Mailman/Gui/Privacy.py:254 Mailman/Gui/Privacy.py:405
+#: Mailman/Cgi/admindb.py:717 Mailman/Commands/cmd_confirm.py:93
+#: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:233
+#: Mailman/Gui/Privacy.py:257 Mailman/Gui/Privacy.py:408
 msgid "Discard"
 msgstr "丢弃"
 
 #: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:469
-#: Mailman/Gui/Privacy.py:253 Mailman/Gui/Privacy.py:405
+#: Mailman/Gui/Privacy.py:256 Mailman/Gui/Privacy.py:408
 msgid "Accept"
 msgstr "接受"
 
-#: Mailman/Cgi/admin.py:798 Mailman/Cgi/admindb.py:725
+#: Mailman/Cgi/admin.py:798 Mailman/Cgi/admindb.py:723
 msgid "Action:"
 msgstr "动作"
 
@@ -842,9 +842,9 @@ msgstr "向新的订阅者发送欢迎信件么?"
 #: Mailman/Gui/General.py:488 Mailman/Gui/NonDigest.py:45
 #: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:125 Mailman/Gui/Privacy.py:158
-#: Mailman/Gui/Privacy.py:211 Mailman/Gui/Privacy.py:282
-#: Mailman/Gui/Privacy.py:420 Mailman/Gui/Privacy.py:439
+#: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
+#: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:285
+#: Mailman/Gui/Privacy.py:423 Mailman/Gui/Privacy.py:442
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "No"
@@ -871,9 +871,9 @@ msgstr "不"
 #: Mailman/Gui/General.py:488 Mailman/Gui/NonDigest.py:45
 #: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:125 Mailman/Gui/Privacy.py:158
-#: Mailman/Gui/Privacy.py:211 Mailman/Gui/Privacy.py:282
-#: Mailman/Gui/Privacy.py:420 Mailman/Gui/Privacy.py:439
+#: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
+#: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:285
+#: Mailman/Gui/Privacy.py:423 Mailman/Gui/Privacy.py:442
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "Yes"
@@ -1007,7 +1007,7 @@ msgid "&lt;blank line&gt;"
 msgstr "&lt;空行&gt;"
 
 #: Mailman/Cgi/admin.py:1405 Mailman/Cgi/admin.py:1408
-#: Mailman/Cgi/admindb.py:938
+#: Mailman/Cgi/admindb.py:936
 msgid "Bad/Invalid email address"
 msgstr "错误/无效的邮件地址"
 
@@ -1137,7 +1137,7 @@ msgid "Reason for refusal"
 msgstr "拒绝的原因"
 
 #: Mailman/Cgi/admindb.py:355 Mailman/Cgi/admindb.py:416
-#: Mailman/Cgi/admindb.py:719 Mailman/Commands/cmd_confirm.py:90
+#: Mailman/Cgi/admindb.py:717 Mailman/Commands/cmd_confirm.py:90
 msgid "Approve"
 msgstr "批准"
 
@@ -1174,7 +1174,7 @@ msgstr ""
 msgid "ungrouped/time"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:702
+#: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:700
 msgid "From:"
 msgstr "来自:"
 
@@ -1234,7 +1234,7 @@ msgstr "点击信息序号来查看分别的信息，或者您可以"
 msgid "view all messages from %(esender)s"
 msgstr "查看来自 %(esender)s 所有的信息"
 
-#: Mailman/Cgi/admindb.py:566 Mailman/Cgi/admindb.py:705
+#: Mailman/Cgi/admindb.py:566 Mailman/Cgi/admindb.py:703
 msgid "Subject:"
 msgstr "主题:"
 
@@ -1251,11 +1251,11 @@ msgstr "大小:"
 msgid "not available"
 msgstr "不可用"
 
-#: Mailman/Cgi/admindb.py:574 Mailman/Cgi/admindb.py:708
+#: Mailman/Cgi/admindb.py:574 Mailman/Cgi/admindb.py:706
 msgid "Reason:"
 msgstr "原因:"
 
-#: Mailman/Cgi/admindb.py:578 Mailman/Cgi/admindb.py:712
+#: Mailman/Cgi/admindb.py:578 Mailman/Cgi/admindb.py:710
 msgid "Received:"
 msgstr "接收:"
 
@@ -1275,40 +1275,40 @@ msgstr "<em>ID号为 #%(id)d 的消息丢失了."
 msgid "<em>Message with id #%(id)d is corrupted."
 msgstr "<em>ID号为 #%(id)d 的消息损坏了."
 
-#: Mailman/Cgi/admindb.py:730
+#: Mailman/Cgi/admindb.py:728
 msgid "Preserve message for site administrator"
 msgstr "为站点管理员保留信息"
 
-#: Mailman/Cgi/admindb.py:736
+#: Mailman/Cgi/admindb.py:734
 msgid "Additionally, forward this message to: "
 msgstr "另外，发送这条消息给:"
 
-#: Mailman/Cgi/admindb.py:741 Mailman/Cgi/admindb.py:810
-#: Mailman/Cgi/admindb.py:887 Mailman/Cgi/admindb.py:889
+#: Mailman/Cgi/admindb.py:739 Mailman/Cgi/admindb.py:808
+#: Mailman/Cgi/admindb.py:885 Mailman/Cgi/admindb.py:887
 msgid "[No explanation given]"
 msgstr "[没有给出原因]"
 
-#: Mailman/Cgi/admindb.py:743
+#: Mailman/Cgi/admindb.py:741
 msgid "If you reject this post,<br>please explain (optional):"
 msgstr "如果您拒绝了这个邮件,<br>请给出原因 (可选l):"
 
-#: Mailman/Cgi/admindb.py:749
+#: Mailman/Cgi/admindb.py:747
 msgid "Message Headers:"
 msgstr "消息头部:"
 
-#: Mailman/Cgi/admindb.py:754
+#: Mailman/Cgi/admindb.py:752
 msgid "Message Excerpt:"
 msgstr "消息摘要:"
 
-#: Mailman/Cgi/admindb.py:926
+#: Mailman/Cgi/admindb.py:924
 msgid "Database Updated..."
 msgstr "数据库升级中..."
 
-#: Mailman/Cgi/admindb.py:930
+#: Mailman/Cgi/admindb.py:928
 msgid " is already a member"
 msgstr "已经是成员了"
 
-#: Mailman/Cgi/admindb.py:934
+#: Mailman/Cgi/admindb.py:932
 msgid "%(addr)s is banned (matched: %(patt)s)"
 msgstr ""
 
@@ -4654,15 +4654,15 @@ msgstr "发送了一则摘要。"
 msgid "There was no digest to send."
 msgstr "没有要发送的摘要。"
 
-#: Mailman/Gui/GUIBase.py:172
+#: Mailman/Gui/GUIBase.py:173
 msgid "Invalid value for variable: %(property)s"
 msgstr "该变量的值非法：%(property)s"
 
-#: Mailman/Gui/GUIBase.py:176
+#: Mailman/Gui/GUIBase.py:177
 msgid "Bad email address for option %(property)s: %(error)s"
 msgstr "错误的邮件地址选项%(property)s: %(error)s"
 
-#: Mailman/Gui/GUIBase.py:202
+#: Mailman/Gui/GUIBase.py:203
 msgid ""
 "The following illegal substitution variables were\n"
 "                found in the <code>%(property)s</code> string:\n"
@@ -4675,7 +4675,7 @@ msgstr ""
 "                <code>%(bad)s</code>\n"
 "                <p>不更正这些问题，你的列表可能无法正常运作"
 
-#: Mailman/Gui/GUIBase.py:216
+#: Mailman/Gui/GUIBase.py:217
 msgid ""
 "Your <code>%(property)s</code> string appeared to\n"
 "                    have some correctable problems in its new value.\n"
@@ -4924,11 +4924,11 @@ msgstr ""
 "                            (listname %%05d) -> (listname 00123)\n"
 "             "
 
-#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:253
+#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 msgid "Munge From"
 msgstr ""
 
-#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:253
+#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 #, fuzzy
 msgid "Wrap Message"
 msgstr "原文"
@@ -6143,13 +6143,19 @@ msgstr ""
 "此清单中的地址被禁止订阅此邮件列表，而无须审核。每行添加一\n"
 "              个地址；以 ^ 开头的行是一个正则表达式匹配。"
 
-#: Mailman/Gui/Privacy.py:126
+#: Mailman/Gui/Privacy.py:125
+msgid ""
+"You may also use the @listname notation to designate the\n"
+"             members of another list in this installation."
+msgstr ""
+
+#: Mailman/Gui/Privacy.py:129
 msgid ""
 "Is the list moderator's approval required for unsubscription\n"
 "             requests?  (<em>No</em> is recommended)"
 msgstr "退订请求需要经过列表主持者的核准吗？(推荐选<em>否</em>)"
 
-#: Mailman/Gui/Privacy.py:129
+#: Mailman/Gui/Privacy.py:132
 msgid ""
 "When members want to leave a list, they will make an\n"
 "             unsubscription request, either via the web or via email.\n"
@@ -6179,17 +6185,17 @@ msgstr ""
 "是\n"
 "              列表的成员。"
 
-#: Mailman/Gui/Privacy.py:140
+#: Mailman/Gui/Privacy.py:143
 msgid "Ban list"
 msgstr "黑名单"
 
-#: Mailman/Gui/Privacy.py:142
+#: Mailman/Gui/Privacy.py:145
 msgid ""
 "List of addresses which are banned from membership in this\n"
 "             mailing list."
 msgstr "被禁止加入列表的地址清单。"
 
-#: Mailman/Gui/Privacy.py:145
+#: Mailman/Gui/Privacy.py:148
 msgid ""
 "Addresses in this list are banned outright from subscribing\n"
 "             to this mailing list, with no further moderation required.  "
@@ -6200,39 +6206,39 @@ msgstr ""
 "此清单中的地址被禁止订阅此邮件列表，而无须审核。每行添加一\n"
 "              个地址；以 ^ 开头的行是一个正则表达式匹配。"
 
-#: Mailman/Gui/Privacy.py:150
+#: Mailman/Gui/Privacy.py:153
 msgid "Membership exposure"
 msgstr "成员身份公布"
 
-#: Mailman/Gui/Privacy.py:152
+#: Mailman/Gui/Privacy.py:155
 msgid "Anyone"
 msgstr "任何人"
 
-#: Mailman/Gui/Privacy.py:152
+#: Mailman/Gui/Privacy.py:155
 msgid "List admin only"
 msgstr "仅列表管理员"
 
-#: Mailman/Gui/Privacy.py:152
+#: Mailman/Gui/Privacy.py:155
 msgid "List members"
 msgstr "列表成员"
 
-#: Mailman/Gui/Privacy.py:153
+#: Mailman/Gui/Privacy.py:156
 msgid "Who can view subscription list?"
 msgstr "谁可以查看已订阅成员清单？"
 
-#: Mailman/Gui/Privacy.py:155
+#: Mailman/Gui/Privacy.py:158
 msgid ""
 "When set, the list of subscribers is protected by member or\n"
 "             admin password authentication."
 msgstr "若设置此项，则已订阅成员清单将受成员口令或管理员口令的保护。"
 
-#: Mailman/Gui/Privacy.py:159
+#: Mailman/Gui/Privacy.py:162
 msgid ""
 "Show member addresses so they're not directly recognizable\n"
 "             as email addresses?"
 msgstr "不以标准格式显示成员的邮件地址？"
 
-#: Mailman/Gui/Privacy.py:161
+#: Mailman/Gui/Privacy.py:164
 msgid ""
 "Setting this option causes member email addresses to be\n"
 "             transformed when they are presented on list web pages (both in\n"
@@ -6246,12 +6252,12 @@ msgstr ""
 "目\n"
 "             的是为了防止一些垃圾邮件制造者利用网络爬虫自动收集这些邮件地址。"
 
-#: Mailman/Gui/Privacy.py:172
+#: Mailman/Gui/Privacy.py:175
 #, fuzzy
 msgid "/Quarantine"
 msgstr "每季度"
 
-#: Mailman/Gui/Privacy.py:176
+#: Mailman/Gui/Privacy.py:179
 msgid ""
 "When a message is posted to the list, a series of\n"
 "            moderation steps are taken to decide whether a moderator must\n"
@@ -6323,15 +6329,15 @@ msgstr ""
 "\n"
 "            <p>请注意，总是先做非正则表达式匹配。"
 
-#: Mailman/Gui/Privacy.py:209
+#: Mailman/Gui/Privacy.py:212
 msgid "Member filters"
 msgstr "成员过滤器"
 
-#: Mailman/Gui/Privacy.py:212
+#: Mailman/Gui/Privacy.py:215
 msgid "By default, should new list member postings be moderated?"
 msgstr "默认情况下，列表新成员的信件是否被暂存？"
 
-#: Mailman/Gui/Privacy.py:214
+#: Mailman/Gui/Privacy.py:217
 msgid ""
 "Each list member has a <em>moderation flag</em> which says\n"
 "             whether messages from the list member can be posted directly "
@@ -6369,13 +6375,13 @@ msgstr ""
 "设\n"
 "             置某个成员的节制标志。"
 
-#: Mailman/Gui/Privacy.py:231
+#: Mailman/Gui/Privacy.py:234
 msgid ""
 "Action to take when a moderated member posts to the\n"
 "             list."
 msgstr "当一个被节制的成员发信到列表时应该执行的动作。"
 
-#: Mailman/Gui/Privacy.py:233
+#: Mailman/Gui/Privacy.py:236
 msgid ""
 "<ul><li><b>Hold</b> -- this holds the message for approval\n"
 "             by the list moderators.\n"
@@ -6405,7 +6411,7 @@ msgstr ""
 "             通知。\n"
 "             </ul>"
 
-#: Mailman/Gui/Privacy.py:247
+#: Mailman/Gui/Privacy.py:250
 msgid ""
 "Text to include in any\n"
 "             <a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
@@ -6415,14 +6421,14 @@ msgstr ""
 "应当被包含在<a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
 "             >退信通知</a>中的文本。"
 
-#: Mailman/Gui/Privacy.py:255
+#: Mailman/Gui/Privacy.py:258
 #, fuzzy
 msgid ""
 "Action to take when anyone posts to the\n"
 "             list from a domain with a DMARC Reject%(quarantine)s Policy."
 msgstr "当一个被节制的成员发信到列表时应该执行的动作。"
 
-#: Mailman/Gui/Privacy.py:258
+#: Mailman/Gui/Privacy.py:261
 #, fuzzy
 msgid ""
 "<ul><li><b>Munge From</b> -- applies the <a\n"
@@ -6465,13 +6471,13 @@ msgstr ""
 "             通知。\n"
 "             </ul>"
 
-#: Mailman/Gui/Privacy.py:283
+#: Mailman/Gui/Privacy.py:286
 msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=quarantine as well as p=reject"
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:286
+#: Mailman/Gui/Privacy.py:289
 msgid ""
 "<ul><li><b>No</b> -- this applies dmarc_moderation_action to\n"
 "               only those posts From: a domain with DMARC p=reject.  This "
@@ -6488,7 +6494,7 @@ msgid ""
 "               recipients' spam folders or other hard to find places."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:299
+#: Mailman/Gui/Privacy.py:302
 #, fuzzy
 msgid ""
 "Text to include in any\n"
@@ -6500,7 +6506,7 @@ msgstr ""
 "应当被包含在<a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
 "             >退信通知</a>中的文本。"
 
-#: Mailman/Gui/Privacy.py:306
+#: Mailman/Gui/Privacy.py:309
 msgid ""
 "If dmarc_moderation_action applies and is Wrap Message,\n"
 "             and this text is provided, the text will be placed in a\n"
@@ -6508,7 +6514,7 @@ msgid ""
 "             part in the wrapped message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:311
+#: Mailman/Gui/Privacy.py:314
 msgid ""
 "A wrapped message will either be a multipart/mixed message\n"
 "             with up to four sub-parts; a text/plain part containing\n"
@@ -6522,14 +6528,14 @@ msgid ""
 "             none of the other parts are applicable."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:320
+#: Mailman/Gui/Privacy.py:323
 msgid ""
 "A 'two dimensional' list of email address domains which are\n"
 "               considered equivalent when checking if a post is from a list\n"
 "               member."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:324
+#: Mailman/Gui/Privacy.py:327
 msgid ""
 "If two poster addresses with the same local part but\n"
 "               different domains are to be considered equivalents for list\n"
@@ -6558,17 +6564,17 @@ msgid ""
 "               'not&nbsp;metoo' will not."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:346
+#: Mailman/Gui/Privacy.py:349
 msgid "Non-member filters"
 msgstr "非成员过滤器"
 
-#: Mailman/Gui/Privacy.py:349
+#: Mailman/Gui/Privacy.py:352
 msgid ""
 "List of non-member addresses whose postings should be\n"
 "             automatically accepted."
 msgstr "其信件应当被自动接受的非成员地址清单。"
 
-#: Mailman/Gui/Privacy.py:356
+#: Mailman/Gui/Privacy.py:359
 #, fuzzy
 msgid ""
 "Postings from any of these non-members will be automatically\n"
@@ -6582,13 +6588,13 @@ msgstr ""
 "这些非成员的信件将会被列表不经审查而自动接受。每行添加\n"
 "             一个地址；行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:365
+#: Mailman/Gui/Privacy.py:368
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             immediately held for moderation."
 msgstr "所发信件会被立即暂存以待审查的非成员地址清单"
 
-#: Mailman/Gui/Privacy.py:368
+#: Mailman/Gui/Privacy.py:371
 msgid ""
 "Postings from any of these non-members will be immediately\n"
 "             and automatically held for moderation by the list moderators.\n"
@@ -6604,13 +6610,13 @@ msgstr ""
 "址；\n"
 "             行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:376
+#: Mailman/Gui/Privacy.py:379
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically rejected."
 msgstr "所发信件会被自动拒绝的非成员地址清单。"
 
-#: Mailman/Gui/Privacy.py:379
+#: Mailman/Gui/Privacy.py:382
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             rejected.  In other words, their messages will be bounced back "
@@ -6634,13 +6640,13 @@ msgstr ""
 "\n"
 "             <p>每行添加一个地址；行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:391
+#: Mailman/Gui/Privacy.py:394
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically discarded."
 msgstr "所发信件会被自动丢弃的非成员地址清单。"
 
-#: Mailman/Gui/Privacy.py:394
+#: Mailman/Gui/Privacy.py:397
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             discarded.  That is, the message will be thrown away with no\n"
@@ -6664,13 +6670,13 @@ msgstr ""
 "\n"
 "             <p>每行添加一个地址；行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:406
+#: Mailman/Gui/Privacy.py:409
 msgid ""
 "Action to take for postings from non-members for which no\n"
 "             explicit action is defined."
 msgstr "当一个没有被显式指定处理方法的非成员向列表发信时应执行的动作。"
 
-#: Mailman/Gui/Privacy.py:409
+#: Mailman/Gui/Privacy.py:412
 msgid ""
 "When a post from a non-member is received, the message's\n"
 "             sender is matched against the list of explicitly\n"
@@ -6695,13 +6701,13 @@ msgstr ""
 "             <a href=\"?VARHELP=privacy/sender/discard_these_nonmembers\"\n"
 "             >丢弃</a>的地址进行比较。如果没有匹配，那么将执行此动作。"
 
-#: Mailman/Gui/Privacy.py:421
+#: Mailman/Gui/Privacy.py:424
 msgid ""
 "Should messages from non-members, which are automatically\n"
 "             discarded, be forwarded to the list moderator?"
 msgstr "被自动丢弃的非成员信件是否应该被转发给列表管理员？"
 
-#: Mailman/Gui/Privacy.py:425
+#: Mailman/Gui/Privacy.py:428
 msgid ""
 "Text to include in any rejection notice to be sent to\n"
 "             non-members who post to this list. This notice can include\n"
@@ -6712,17 +6718,17 @@ msgstr ""
 "             此通知可以包含列表属主地址 %%(listowner)s, 并且替换掉Mailman\n"
 "             内定的默认信息。"
 
-#: Mailman/Gui/Privacy.py:433
+#: Mailman/Gui/Privacy.py:436
 msgid ""
 "This section allows you to configure various filters based on\n"
 "            the recipient of the message."
 msgstr "您可以在本小节配置一些基于收信人地址的过滤器。"
 
-#: Mailman/Gui/Privacy.py:436
+#: Mailman/Gui/Privacy.py:439
 msgid "Recipient filters"
 msgstr "收信人过滤器"
 
-#: Mailman/Gui/Privacy.py:440
+#: Mailman/Gui/Privacy.py:443
 msgid ""
 "Must posts have list named in destination (to, cc) field\n"
 "             (or be among the acceptable alias names, specified below)?"
@@ -6730,7 +6736,7 @@ msgstr ""
 "信件的目的地址(to,cc)必须包含此列表的地址(或在下面指定的\n"
 "             可接受的别名)吗？"
 
-#: Mailman/Gui/Privacy.py:443
+#: Mailman/Gui/Privacy.py:446
 msgid ""
 "Many (in fact, most) spams do not explicitly name their\n"
 "             myriad destinations in the explicit destination addresses - in\n"
@@ -6766,13 +6772,13 @@ msgstr ""
 "\n"
 "             </ol>"
 
-#: Mailman/Gui/Privacy.py:461
+#: Mailman/Gui/Privacy.py:464
 msgid ""
 "Alias names (regexps) which qualify as explicit to or cc\n"
 "             destination names for this list."
 msgstr "明确指明此列表的to或者cc地址的别名(正则表达式)。"
 
-#: Mailman/Gui/Privacy.py:464
+#: Mailman/Gui/Privacy.py:467
 msgid ""
 "Alternate addresses that are acceptable when\n"
 "             `require_explicit_destination' is enabled.  This option takes "
@@ -6810,11 +6816,11 @@ msgstr ""
 "式\n"
 "             模式将总是与完整的收件地址进行匹配。"
 
-#: Mailman/Gui/Privacy.py:482
+#: Mailman/Gui/Privacy.py:485
 msgid "Ceiling on acceptable number of recipients for a posting."
 msgstr "信件收件人的最大数目。"
 
-#: Mailman/Gui/Privacy.py:484
+#: Mailman/Gui/Privacy.py:487
 msgid ""
 "If a posting has this number, or more, of recipients, it is\n"
 "             held for admin approval.  Use 0 for no ceiling."
@@ -6822,7 +6828,7 @@ msgstr ""
 "如果某封信件的收件人数目大于或等于这个数字，就将被暂存以待\n"
 "             管理员核准。0表示无上限。"
 
-#: Mailman/Gui/Privacy.py:489
+#: Mailman/Gui/Privacy.py:492
 msgid ""
 "This section allows you to configure various anti-spam\n"
 "            filters posting filters, which can help reduce the amount of "
@@ -6834,15 +6840,15 @@ msgstr ""
 "            列表成员收到的垃圾邮件数量。\n"
 "            "
 
-#: Mailman/Gui/Privacy.py:494
+#: Mailman/Gui/Privacy.py:497
 msgid "Header filters"
 msgstr "头部过滤器"
 
-#: Mailman/Gui/Privacy.py:497
+#: Mailman/Gui/Privacy.py:500
 msgid "Filter rules to match against the headers of a message."
 msgstr "匹配邮件头部的过滤器规则"
 
-#: Mailman/Gui/Privacy.py:499
+#: Mailman/Gui/Privacy.py:502
 #, fuzzy
 msgid ""
 "Each header filter rule has two parts, a list of regular\n"
@@ -6877,15 +6883,15 @@ msgstr ""
 "            正则表达式进行匹配。您可以利用此特性来按照危险文件的种类或者文\n"
 "            件扩展名来对信件进行有效的排序。"
 
-#: Mailman/Gui/Privacy.py:516
+#: Mailman/Gui/Privacy.py:519
 msgid "Legacy anti-spam filters"
 msgstr "传统的垃圾邮件过滤器"
 
-#: Mailman/Gui/Privacy.py:519
+#: Mailman/Gui/Privacy.py:522
 msgid "Hold posts with header value matching a specified regexp."
 msgstr "暂存头部匹配指定正则表达式的信件。"
 
-#: Mailman/Gui/Privacy.py:520
+#: Mailman/Gui/Privacy.py:523
 msgid ""
 "Use this option to prohibit posts according to specific\n"
 "             header values.  The target value is a regular-expression for\n"
@@ -6917,13 +6923,13 @@ msgstr ""
 "此\n"
 "             限制，例如转义或者用括号把空白括起来。"
 
-#: Mailman/Gui/Privacy.py:555
+#: Mailman/Gui/Privacy.py:558
 msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:605
+#: Mailman/Gui/Privacy.py:608
 msgid ""
 "Header filter rules require a pattern.\n"
 "                Incomplete filter rules will be ignored."
@@ -6931,7 +6937,7 @@ msgstr ""
 "头部过滤器规则需要一个模式。\n"
 "                不完整的过滤器规则将被忽略。"
 
-#: Mailman/Gui/Privacy.py:613
+#: Mailman/Gui/Privacy.py:616
 msgid ""
 "The header filter rule pattern\n"
 "                '%(safepattern)s' is not a legal regular expression.  This\n"
