@@ -64,6 +64,10 @@ Here is a history of user visible changes to Mailman.
 
   New Features
 
+    - The subscribe_auto_approval feature backported from the 2.2 branch and
+      described above has been enhanced to accept entries of the form
+      @listname to auto approve members of another list.  (LP: #1417093)
+
     - There is a new list attribute dmarc_wrapped_message_text and a
       DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT setting to set the default for new
       lists.  This text is added to a message which is wrapped because of

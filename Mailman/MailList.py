@@ -1568,16 +1568,17 @@ bad regexp in bounce_matching_header line: %s
 
     def HasAutoApprovedSender(self, sender):
         """Returns True and logs if sender matches address or pattern
-        in subscribe_auto_approval.  Otherwise returns False.
+        or is a member of a referenced list in subscribe_auto_approval.
+        Otherwise returns False.
         """
         auto_approve = False
-        if self.GetPattern(sender, self.subscribe_auto_approval):
+        if self.GetPattern(sender, self.subscribe_auto_approval, at_list=True):
             auto_approve = True
             syslog('vette', '%s: auto approved subscribe from %s',
                    self.internal_name(), sender)
         return auto_approve
 
-    def GetPattern(self, email, pattern_list):
+    def GetPattern(self, email, pattern_list, at_list=False):
         """Returns matched entry in pattern_list if email matches.
         Otherwise returns None.
         """
@@ -1592,6 +1593,27 @@ bad regexp in bounce_matching_header line: %s
                 except re.error:
                     # BAW: we should probably remove this pattern
                     pass
+            elif at_list and pattern.startswith('@'):
+                # XXX Needs to be reviewed for list@domain names.
+                # this refers to the members of another list in this
+                # installation.
+                mname = pattern[1:].lower().strip()
+                if mname == self.internal_name():
+                    # don't reference your own list
+                    syslog('error',
+                        'subscribe_auto_approval in %s references own list',
+                        self.internal_name())
+                    continue
+                try:
+                    mother = MailList(mname, lock = False)
+                except Errors.MMUnknownListError:
+                    syslog('error',
+              'subscribe_auto_approval in %s references non-existent list %s',
+                        self.internal_name(), mname)
+                    continue
+                if mother.isMember(email.lower()):
+                    matched = pattern
+                    break
             else:
                 # Do the comparison case insensitively
                 if pattern.lower() == email.lower():
