@@ -1,28 +1,24 @@
 # Russian Messages for Mailman v2.1
-# Copyright (C) Mikhail Sobolev <mss@mawhrin.net>
 # Mikhail Sobolev <mss@mawhrin.net>, 2002-2005
 # Mikhail Zabaluev <mhz@alt-linux.org>, 2002
 # Dmitri I GOULIAEV <dmitri.gouliaev@telkel.net>, 2002-2005
 # Valia V. Vaneeva <fattie@altlinux.ru>, 2004
 # Andrew Martynov <andrewm@inventa.ru> 2004
-#
-# Please note that the mailing list home page is
-#   http://only.mawhrin.net/mailman/listinfo/mailman-ru
-#
-# And archives are available at
-#   http://only.mawhrin.net/pipermail/mailman-ru
-#
+# Danil Smirnov <danil@smirnov.la>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1\n"
 "POT-Creation-Date: Tue Feb  3 20:49:32 2015\n"
-"PO-Revision-Date: Fri Apr 08 23:26:45 2005\n"
-"Last-Translator: Mikhail Sobolev <mss@mawhrin.net>\n"
-"Language-Team: Russian <mailman-ru@only.mawhrin.net>\n"
+"PO-Revision-Date: 2015-02-04 14:16+0300\n"
+"Last-Translator: Danil Smirnov <danil@smirnov.la>\n"
+"Language-Team: Russian <danil@smirnov.la>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #: Mailman/Archiver/HyperArch.py:123
 msgid "size not available"
@@ -226,7 +222,7 @@ msgstr "по неизвестной причине"
 
 #: Mailman/Bouncer.py:198
 msgid "bounce score incremented"
-msgstr ""
+msgstr "счетчик ошибок увеличен"
 
 #: Mailman/Bouncer.py:228
 msgid "disabled"
@@ -274,7 +270,7 @@ msgstr "Ошибка доступа."
 
 #: Mailman/Cgi/admin.py:199
 msgid "The form lifetime has expired. (request forgery check)"
-msgstr ""
+msgstr "Форма устарела. (требуется проверка подлинности)"
 
 #: Mailman/Cgi/admin.py:205
 msgid ""
@@ -301,8 +297,8 @@ msgid ""
 "                Affected member(s) %(dm)r."
 msgstr ""
 "Отправка дайджестов отключена, однако есть\n"
-"                подписчики, которые бы хотели получать их. Они ничего не "
-"получат.%(dm)r"
+"подписчики, которые выбрали их получать. Они ничего не получают.\n"
+"Таких подписчиков %(dm)r."
 
 #: Mailman/Cgi/admin.py:221
 msgid ""
@@ -312,8 +308,8 @@ msgid ""
 "                fix this problem. Affected member(s) %(rm)r."
 msgstr ""
 "Обычная доставка сообщений отключена, однако есть\n"
-"                подписчики, которые бы хотели получать сообщения обычным\n"
-"                образом.  Они ничего не получат.%(rm)r"
+"подписчики, которые выбрали получать сообщения обычным\n"
+"образом. Они ничего не получают. Таких подписчиков %(rm)r."
 
 #: Mailman/Cgi/admin.py:246
 msgid "%(hostname)s mailing lists - Admin Links"
@@ -368,9 +364,9 @@ msgstr ""
 "       вы должны указать %(extra)sимя списка рассылки. Если у вас есть право "
 "создавать\n"
 "       списки рассылки на этом сервере, вы можете перейти к <a href="
-"\"%(creatorurl)s\">странице создания списков рассылок</a>.\n"
+"\"%(creatorurl)s\">странице создания списков рассылки</a>.\n"
 "\n"
-"       <p>Общая информация о списках рассылок может быть найдена на "
+"       <p>Общая информация о списках рассылки может быть найдена на "
 
 #: Mailman/Cgi/admin.py:306
 msgid "the mailing list overview page"
@@ -1034,16 +1030,20 @@ msgid ""
 "addition, the password below, if set, can be used for that purpose and\n"
 "no other."
 msgstr ""
+"Вдобавок к заданным выше паролям вы можете указать также пароль для\n"
+"автоматического подтверждения постинга в список рассылки. Каждый из них\n"
+"может использоваться в заголовке Approved: или в первой строке письма для\n"
+"подтверждения постинга и предотвращения его задержки для модерации.\n"
+"Но нижеуказанный пароль может быть использован только для этой цели\n"
+"и никакой больше."
 
 #: Mailman/Cgi/admin.py:1296
-#, fuzzy
 msgid "Enter new poster password:"
-msgstr "Укажите новый пароль модератора:"
+msgstr "Укажите новый пароль для постинга:"
 
 #: Mailman/Cgi/admin.py:1298
-#, fuzzy
 msgid "Confirm poster password:"
-msgstr "Подтвердите новый пароль модератора:"
+msgstr "Подтвердите пароль для постинга:"
 
 #: Mailman/Cgi/admin.py:1307
 msgid "Submit Your Changes"
@@ -1051,16 +1051,15 @@ msgstr "Внести изменения"
 
 #: Mailman/Cgi/admin.py:1330
 msgid "Moderator passwords did not match"
-msgstr "Ошибка при подтверждении пароля модератора"
+msgstr "Введенные пароли модератора не совпадают"
 
 #: Mailman/Cgi/admin.py:1341
-#, fuzzy
 msgid "Poster passwords did not match"
-msgstr "Введенные пароли не совпадают."
+msgstr "Введенные пароли постера не совпадают"
 
 #: Mailman/Cgi/admin.py:1351
 msgid "Administrator passwords did not match"
-msgstr "Ошибка при подтверждении пароля администратора"
+msgstr "Введенные пароли администратора не совпадают"
 
 #: Mailman/Cgi/admin.py:1401
 msgid "Already a member"
@@ -1082,7 +1081,7 @@ msgstr "Ошибочный адрес (встретились недопустимые символы)"
 #: Mailman/Cgi/admin.py:1414 bin/add_members:149 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
-msgstr ""
+msgstr "Заблокированный адрес (подходит под шаблон %(pattern)s)"
 
 #: Mailman/Cgi/admin.py:1420
 msgid "Successfully invited:"
@@ -1225,25 +1224,24 @@ msgid "Unsubscription Requests"
 msgstr "Запросы на прекращение подписки"
 
 #: Mailman/Cgi/admindb.py:440
-#, fuzzy
 msgid "Held Messages"
-msgstr "все задержанные сообщения"
+msgstr "Задержанные сообщения"
 
 #: Mailman/Cgi/admindb.py:443
 msgid "Show this list grouped/sorted by"
-msgstr ""
+msgstr "Группировать/сортировать по"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/sender"
-msgstr ""
+msgstr "отправитель/отправитель"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/time"
-msgstr ""
+msgstr "отправитель/время"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "ungrouped/time"
-msgstr ""
+msgstr "без сортировки/время"
 
 #: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:700
 msgid "From:"
@@ -1392,7 +1390,7 @@ msgstr " уже является подписчиком"
 
 #: Mailman/Cgi/admindb.py:932
 msgid "%(addr)s is banned (matched: %(patt)s)"
-msgstr ""
+msgstr "%(addr)s заблокирован (подходит под шаблон %(patt)s)"
 
 #: Mailman/Cgi/confirm.py:78
 msgid "Confirmation string was empty."
@@ -1615,15 +1613,14 @@ msgid "You are already a member of this mailing list!"
 msgstr "Вы уже являетесь подписчиком этого списка рассылки!"
 
 #: Mailman/Cgi/confirm.py:380
-#, fuzzy
 msgid ""
 "You are currently banned from subscribing to\n"
 "            this list.  If you think this restriction is erroneous, please\n"
 "            contact the list owners at %(owneraddr)s."
 msgstr ""
-"Указанный вами адрес запрещен для подписки на этот список рассылки.\n"
-"Если вы считаете это ошибкой, обратитесь к владельцам списка по адресу "
-"%(owneraddr)s."
+"Указанный Вами адрес запрещен для подписки на этот список рассылки.\n"
+"            Если вы считаете это ошибкой, обратитесь к администратору\n"
+"            по адресу %(owneraddr)s."
 
 #: Mailman/Cgi/confirm.py:384
 msgid ""
@@ -1728,27 +1725,27 @@ msgid "You have canceled your change of address request."
 msgstr "Вы отказались от запроса на изменение адреса."
 
 #: Mailman/Cgi/confirm.py:533
-#, fuzzy
 msgid ""
 "%(newaddr)s is banned from subscribing to the\n"
 "            %(realname)s list.  If you think this restriction is erroneous,\n"
 "            please contact the list owners at %(owneraddr)s."
 msgstr ""
-"Указанный вами адрес запрещен для подписки на этот список рассылки.\n"
-"Если вы считаете это ошибкой, обратитесь к владельцам списка по адресу "
-"%(listowner)s."
+"%(newaddr)s запрещен для подписки на список рассылки\n"
+"            %(realname)s. Если вы считаете это ошибкой, обратитесь к "
+"администратору\n"
+"            по адресу %(owneraddr)s."
 
 #: Mailman/Cgi/confirm.py:538
-#, fuzzy
 msgid ""
 "%(newaddr)s is already a member of\n"
 "            the %(realname)s list.  It is possible that you are attempting\n"
 "            to confirm a request for an address that has already been\n"
 "            subscribed."
 msgstr ""
-"Неизвестный код подтверждения.\n"
-"            Возможно, что вы пытаетесь подтвердить подписку на адрес,\n"
-"            подписка на который уже удалена."
+"%(newaddr)s уже является подписчиком списка рассылки\n"
+"            %(realname)s. Возможно, Вы пытаетесь подтвердить подписку на "
+"адрес,\n"
+"            который уже подписан."
 
 #: Mailman/Cgi/confirm.py:545
 msgid "Change of address request confirmed"
@@ -2054,7 +2051,7 @@ msgstr "Неизвестный виртуальный хост: %(safehostname)s"
 
 #: Mailman/Cgi/create.py:200 bin/newlist:218
 msgid "Bad owner email address: %(s)s"
-msgstr "Некорректный адрес электронной почты владельца списка"
+msgstr "Некорректный адрес владельца списка: %(s)s"
 
 #: Mailman/Cgi/create.py:205 bin/newlist:181 bin/newlist:222
 msgid "List already exists: %(listname)s"
@@ -2237,12 +2234,11 @@ msgstr "Страница пользовательских настроек"
 
 #: Mailman/Cgi/edithtml.py:48
 msgid "Welcome email text file"
-msgstr ""
+msgstr "Файл с текстом приветственного письма"
 
 #: Mailman/Cgi/edithtml.py:49
-#, fuzzy
 msgid "Digest masthead"
-msgstr "верхнего колонтитула дайджеста"
+msgstr "Шапка дайджеста"
 
 #: Mailman/Cgi/edithtml.py:61
 msgid "List name is required."
@@ -2262,7 +2258,7 @@ msgstr "%(safetemplatename)s: некорректный шаблон"
 
 #: Mailman/Cgi/edithtml.py:115 Mailman/Cgi/edithtml.py:116
 msgid "%(realname)s -- HTML Page Editing"
-msgstr ""
+msgstr "%(realname)s -- Редактирование HTML страниц"
 
 #: Mailman/Cgi/edithtml.py:117
 msgid "Select page to edit:"
@@ -2296,19 +2292,23 @@ msgid ""
 "must have shell access to your Mailman server.\n"
 "             "
 msgstr ""
+"Сохраненная Вами страница содержит подозрительный код HTML, который\n"
+"потенциально может сделать Ваших пользователей уязвимыми перед атаками\n"
+"злоумышленников. По этой причине Ваше изменение было отвергнуто. Если Вы "
+"все\n"
+"еще хотите сделать такие изменения, Вам понадобится shell-доступ к Mailman."
 
 #: Mailman/Cgi/edithtml.py:172
 msgid "See "
-msgstr ""
+msgstr "Смотрите"
 
 #: Mailman/Cgi/edithtml.py:175
 msgid "FAQ 4.48."
-msgstr ""
+msgstr "FAQ 4.48."
 
 #: Mailman/Cgi/edithtml.py:176
-#, fuzzy
 msgid "Page Unchanged."
-msgstr "HTML-код не был изменен."
+msgstr "Страница не была изменена."
 
 #: Mailman/Cgi/edithtml.py:194
 msgid "HTML successfully updated."
@@ -2389,7 +2389,7 @@ msgstr "Ошибка CGI-сценария"
 
 #: Mailman/Cgi/options.py:61
 msgid "Invalid request method: %(method)s"
-msgstr ""
+msgstr "Неверный формат запроса: %(method)s"
 
 #: Mailman/Cgi/options.py:74
 msgid "Invalid options to CGI script."
@@ -2428,7 +2428,9 @@ msgstr ""
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
-msgstr "Вам было отправлено сообщение с вашим паролем."
+msgstr ""
+"Если Вы подписчик списка рассылки,\n"
+"                          Вам было отправлено сообщение с Вашим паролем."
 
 #: Mailman/Cgi/options.py:263
 msgid "Authentication failed."
@@ -2443,11 +2445,13 @@ msgid ""
 "The list administrator may not view the other\n"
 "            subscriptions for this user."
 msgstr ""
+"Администратор списка рассылки не может видеть\n"
+"другие подписки этого пользователя."
 
 #: Mailman/Cgi/options.py:299 Mailman/Cgi/options.py:348
 #: Mailman/Cgi/options.py:476 Mailman/Cgi/options.py:699
 msgid "Note: "
-msgstr ""
+msgstr "Учтите: "
 
 #: Mailman/Cgi/options.py:304
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
@@ -2463,7 +2467,7 @@ msgstr ""
 
 #: Mailman/Cgi/options.py:318
 msgid "nomail"
-msgstr ""
+msgstr "без доставки"
 
 #: Mailman/Cgi/options.py:345
 msgid ""
@@ -2471,6 +2475,9 @@ msgid ""
 "            or addresses for this user's other subscriptions.  However, the\n"
 "            subscription for this mailing list has been changed."
 msgstr ""
+"Администратор списка рассылки не может изменить имя\n"
+"или адрес этого пользователя в других его подписках. Однако,\n"
+"подписка для этого списка рассылки была изменена."
 
 #: Mailman/Cgi/options.py:368
 msgid "Addresses did not match!"
@@ -2490,7 +2497,7 @@ msgid ""
 msgstr ""
 "Указанный вами новый адрес (%(newaddr)s) уже находится в списке рассылки\n"
 "\"%(listname)s, но вы также решили произвести глобальную смену адресов во\n"
-"всех списках рассылок на этом сайте. Поэтому после получения подтверждения\n"
+"всех списках рассылки на этом сайте. Поэтому после получения подтверждения\n"
 "во всех остальных списках ваш адрес будет изменен."
 
 #: Mailman/Cgi/options.py:394
@@ -2519,31 +2526,26 @@ msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s уже содержится в списке рассылки."
 
 #: Mailman/Cgi/options.py:430
-#, fuzzy
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
 "                      think this restriction is erroneous, please contact\n"
 "                      the list owners at %(owneraddr)s."
 msgstr ""
-"Указанный вами адрес запрещен для подписки на этот список рассылки.\n"
-"Если вы считаете это ошибкой, обратитесь к владельцам списка:\n"
-"%(owneraddr)s."
+"%(newaddr)s запрещен для подписки на этот список рассылки.\n"
+"Если Вы считаете это ошибкой, обратитесь к администратору\n"
+"по адресу %(owneraddr)s."
 
 #: Mailman/Cgi/options.py:441
 msgid "Member name successfully changed. "
 msgstr "Имя подписчика изменено. "
 
 #: Mailman/Cgi/options.py:451
-#, fuzzy
 msgid ""
 "The list administrator may not change the\n"
 "                    password for a user."
 msgstr ""
-"Администратор этого списка запретил обычную доставку сообщений (не "
-"дайджестов),\n"
-"поэтому значение соответствующего параметра в ваших настройках не "
-"сохранено.\n"
-"Значения других параметров сохранены"
+"Администратор списка рассылки не может изменить\n"
+"пароль пользователя."
 
 #: Mailman/Cgi/options.py:460
 msgid "Passwords may not be blank"
@@ -2554,17 +2556,14 @@ msgid "Passwords did not match!"
 msgstr "Пароли не совпадают!"
 
 #: Mailman/Cgi/options.py:473
-#, fuzzy
 msgid ""
 "The list administrator may not change the\n"
 "            password for this user's other subscriptions.  However, the\n"
 "            password for this mailing list has been changed."
 msgstr ""
-"Администратор этого списка запретил обычную доставку сообщений (не "
-"дайджестов),\n"
-"поэтому значение соответствующего параметра в ваших настройках не "
-"сохранено.\n"
-"Значения других параметров сохранены"
+"Администратор списка рассылки не может изменить\n"
+"пароль этого пользователя в других подписках. Однако,\n"
+"пароль пользователя для этого списка рассылки был изменен."
 
 #: Mailman/Cgi/options.py:490 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
@@ -2618,6 +2617,9 @@ msgid ""
 "                options for this mailing list subscription has been\n"
 "                changed."
 msgstr ""
+"Администратор списка рассылки не может изменить\n"
+"параметры этого пользователя в других его подписках. Однако,\n"
+"параметры для этого списка рассылки были изменены."
 
 #: Mailman/Cgi/options.py:706
 msgid ""
@@ -2823,32 +2825,31 @@ msgstr "Укажите список рассылки."
 
 #: Mailman/Cgi/private.py:72
 msgid "Private archive - \"./\" and \"../\" not allowed in URL."
-msgstr ""
+msgstr "Закрытый архив - \"./\" и \"../\" не разрешены в URL."
 
 #: Mailman/Cgi/private.py:109
 msgid "Private Archive Error - %(msg)s"
 msgstr "Ошибка доступа к закрытому архиву -- %(msg)s"
 
 #: Mailman/Cgi/private.py:141
-#, fuzzy
 msgid ""
 "If you are a list member,\n"
 "                          your password has been emailed to you."
-msgstr "Вам было отправлено сообщение с вашим паролем."
+msgstr ""
+"Если Вы подписчик списка рассылки,\n"
+"                          Вам было отправлено сообщение с Вашим паролем."
 
 #: Mailman/Cgi/private.py:145
-#, fuzzy
 msgid "Please enter your email address"
-msgstr "Ваш почтовый адрес:"
+msgstr "Введите Ваш почтовый адрес"
 
 #: Mailman/Cgi/private.py:206
 msgid "Private archive file not found"
 msgstr "Файл закрытого архива не найден"
 
 #: Mailman/Cgi/rmlist.py:65
-#, fuzzy
 msgid "No such list %(safelistname)s"
-msgstr "Нет такого списка рассылки: %(listname)s"
+msgstr "Нет такого списка рассылки: %(safelistname)s"
 
 # fattie: смешно %) нужно проверить %)
 #: Mailman/Cgi/rmlist.py:83
@@ -2884,9 +2885,8 @@ msgid "Permanently remove mailing list <em>%(realname)s</em>"
 msgstr "Полностью удалить список рассылки <em>%(realname)s</em>"
 
 #: Mailman/Cgi/rmlist.py:191
-#, fuzzy
 msgid "Permanently remove mailing list %(realname)s"
-msgstr "Полностью удалить список рассылки <em>%(realname)s</em>"
+msgstr "Полностью удалить список рассылки %(realname)s"
 
 #: Mailman/Cgi/rmlist.py:204
 msgid ""
@@ -2964,15 +2964,15 @@ msgstr "Укажите корректный адрес электронной почты."
 
 #: Mailman/Cgi/subscribe.py:138
 msgid "The form is too old.  Please GET it again."
-msgstr ""
+msgstr "Форма устарела. Пожалуйста повторите запрос GET."
 
 #: Mailman/Cgi/subscribe.py:141
 msgid "Please take a few seconds to fill out the form before submitting it."
-msgstr ""
+msgstr "Пожалуйста заполните поля формы перед тем как отправлять ее."
 
 #: Mailman/Cgi/subscribe.py:144
 msgid "You must GET the form before submitting it."
-msgstr ""
+msgstr "Вы должны загрузить форму запросом GET перед тем как отправлять ее."
 
 #: Mailman/Cgi/subscribe.py:148
 msgid "You may not subscribe a list to itself!"
@@ -3148,14 +3148,13 @@ msgstr ""
 "поменяли адрес подписки?"
 
 #: Mailman/Commands/cmd_confirm.py:69
-#, fuzzy
 msgid ""
 "You are currently banned from subscribing to this list.  If you think this\n"
 "restriction is erroneous, please contact the list owners at\n"
 "%(owneraddr)s."
 msgstr ""
 "Указанный вами адрес запрещен для подписки на этот список рассылки.\n"
-"Если вы считаете это ошибкой, обратитесь к владельцам списка:\n"
+"Если вы считаете это ошибкой, обратитесь к администратору по адресу\n"
 "%(owneraddr)s."
 
 #: Mailman/Commands/cmd_confirm.py:74
@@ -3528,39 +3527,39 @@ msgstr "Текущие параметры вашей подписки:"
 #: Mailman/Commands/cmd_set.py:194 Mailman/Commands/cmd_set.py:198
 #: Mailman/Commands/cmd_set.py:202
 msgid "off"
-msgstr ""
+msgstr "откл."
 
 # fattie: check this anf the following entries
 #: Mailman/Commands/cmd_set.py:153 Mailman/Commands/cmd_set.py:191
 #: Mailman/Commands/cmd_set.py:194 Mailman/Commands/cmd_set.py:198
 #: Mailman/Commands/cmd_set.py:202
 msgid "on"
-msgstr ""
+msgstr "вкл."
 
 #: Mailman/Commands/cmd_set.py:154
 msgid "    ack %(onoff)s"
-msgstr ""
+msgstr "    подтверждения %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:160
 msgid "    digest plain"
-msgstr ""
+msgstr "    дайжест plain text"
 
 #: Mailman/Commands/cmd_set.py:162
 msgid "    digest mime"
-msgstr ""
+msgstr "    дайджест MIME"
 
 #: Mailman/Commands/cmd_set.py:164
 msgid "    digest off"
-msgstr ""
+msgstr "    дайджест откл."
 
 #: Mailman/Commands/cmd_set.py:169
 msgid "delivery on"
-msgstr ""
+msgstr "доставка вкл."
 
 #: Mailman/Commands/cmd_set.py:171 Mailman/Commands/cmd_set.py:174
 #: Mailman/Commands/cmd_set.py:177 Mailman/Commands/cmd_set.py:181
 msgid "delivery off"
-msgstr ""
+msgstr "доставка откл."
 
 #: Mailman/Commands/cmd_set.py:172
 msgid "by you"
@@ -3580,19 +3579,19 @@ msgstr "    %(status)s (%(how)s %(date)s)"
 
 #: Mailman/Commands/cmd_set.py:192
 msgid "    myposts %(onoff)s"
-msgstr ""
+msgstr "    получение своих сообщений %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:195
 msgid "    hide %(onoff)s"
-msgstr ""
+msgstr "    скрыть %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:199
 msgid "    duplicates %(onoff)s"
-msgstr ""
+msgstr "    без копий %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:203
 msgid "    reminders %(onoff)s"
-msgstr ""
+msgstr "    напоминать пароль %(onoff)s"
 
 #: Mailman/Commands/cmd_set.py:224
 msgid "You did not give the correct password"
@@ -3794,9 +3793,14 @@ msgid ""
 "        See everyone who is on this mailing list. The password is the\n"
 "        list's admin or moderator password.\n"
 msgstr ""
+"\n"
+"    who\n"
+"        Посмотреть список открытых членов этого списка рассылки.\n"
+"    who password\n"
+"        Посмотреть список всех членов этого списка рассылки. В качестве "
+"password указывается пароль администратора или модератора списка рассылки.\n"
 
 #: Mailman/Commands/cmd_who.py:35
-#, fuzzy
 msgid ""
 "\n"
 "    who password [address=<address>]\n"
@@ -3810,11 +3814,11 @@ msgid ""
 msgstr ""
 "\n"
 "    who пароль [address=<адрес>]\n"
-"        Получить список подписчиков этого списка рассылки. Список\n"
-"        доступен для просмотра только самим подписчикам, поэтому вы\n"
-"        должны указать свой пароль. Если вы отправляете это сообщение\n"
-"        не с адреса своей подписки, укажите его с помощью\n"
-"        параметра `address=<адрес>' (без кавычек и скобок!).\n"
+"        Получить список открытых подписчиков этого списка рассылки. Список\n"
+"        доступен для просмотра только самими подписчиками, поэтому Вы\n"
+"        должны указать свой пароль подписчика. Если Вы отправляете это\n"
+"        сообщение не с адреса своей подписки, укажите его с помощью\n"
+"        параметра 'address=<адрес>' (без кавычек и скобок).\n"
 
 #: Mailman/Commands/cmd_who.py:46
 msgid ""
@@ -3849,12 +3853,11 @@ msgstr "Подписчики, получающие подписку в виде дайджеста:"
 
 #: Mailman/Defaults.py:1630
 msgid "Arabic"
-msgstr ""
+msgstr "Арабский"
 
 #: Mailman/Defaults.py:1631
-#, fuzzy
 msgid "Asturian"
-msgstr "Эстонский"
+msgstr "Астурийский"
 
 #: Mailman/Defaults.py:1632
 msgid "Catalan"
@@ -3890,7 +3893,7 @@ msgstr "Баскский"
 
 #: Mailman/Defaults.py:1640
 msgid "Persian"
-msgstr ""
+msgstr "Фарси"
 
 #: Mailman/Defaults.py:1641
 msgid "Finnish"
@@ -3901,17 +3904,16 @@ msgid "French"
 msgstr "Французский"
 
 #: Mailman/Defaults.py:1643
-#, fuzzy
 msgid "Galician"
-msgstr "Итальянский"
+msgstr "Галисийский"
 
 #: Mailman/Defaults.py:1644
 msgid "Greek"
-msgstr ""
+msgstr "Греческий"
 
 #: Mailman/Defaults.py:1645
 msgid "Hebrew"
-msgstr ""
+msgstr "Иврит"
 
 #: Mailman/Defaults.py:1646
 msgid "Croatian"
@@ -3923,7 +3925,7 @@ msgstr "Венгерский"
 
 #: Mailman/Defaults.py:1648
 msgid "Interlingua"
-msgstr ""
+msgstr "Интерлингва"
 
 #: Mailman/Defaults.py:1649
 msgid "Italian"
@@ -3970,9 +3972,8 @@ msgid "Russian"
 msgstr "Русский"
 
 #: Mailman/Defaults.py:1660
-#, fuzzy
 msgid "Slovak"
-msgstr "Словенский"
+msgstr "Словацкий"
 
 #: Mailman/Defaults.py:1661
 msgid "Slovenian"
@@ -3996,7 +3997,7 @@ msgstr "Украинский"
 
 #: Mailman/Defaults.py:1666
 msgid "Vietnamese"
-msgstr ""
+msgstr "Вьетнамский"
 
 #: Mailman/Defaults.py:1667
 msgid "Chinese (China)"
@@ -4381,6 +4382,19 @@ msgid ""
 "             score, above which they are automatically disabled, but not\n"
 "             removed from the mailing list."
 msgstr ""
+"У каждого подписчика имеется счетчик ошибок - действительное\n"
+"число. Всякий раз, когда Mailman получает сообщение об ошибке доставки,\n"
+"значение счетчика увеличивается. Окончательная ошибка доставки увеличивает "
+"счетчик\n"
+"на единицу, в то время как временная - на 0.5. Только одна ошибка в день "
+"влияет\n"
+"на значение счетчика, таким образом даже 10 ошибок доставки в течение одного "
+"дня\n"
+"увеличат счетчик не более чем на 1.\n"
+"\n"
+"Этот параметр задает верхний предел для счетчика ошибок подписчика списка\n"
+"рассылки, после достижения которого его подписка (но не удаляется\n"
+"из списка рассылки)."
 
 #: Mailman/Gui/Bounce.py:102
 msgid ""
@@ -4493,13 +4507,12 @@ msgstr ""
 "списка."
 
 #: Mailman/Gui/Bounce.py:147
-#, fuzzy
 msgid ""
 "Should Mailman notify you, the list owner, when bounces\n"
 "             cause a member's bounce score to be incremented?"
 msgstr ""
-"Должен ли администратор списка рассылки получать извещения о\n"
-"приостановке подписки из-за большого числа возвращаемых ошибок?"
+"Должен ли администратор списка рассылки получать извещения\n"
+"о том, что счетчик ошибок доставки подписчика был увеличен?"
 
 #: Mailman/Gui/Bounce.py:149
 msgid ""
@@ -4510,6 +4523,12 @@ msgid ""
 "but\n"
 "             doesn't cause a disable or a probe to be sent."
 msgstr ""
+"Установка этого значения в <em>Да</em> приведет к тому, что Mailman\n"
+"будет отправлять уведомление, содержащее копию сообщения с ошибкой "
+"доставки,\n"
+"администраторам списка рассылки когда эта ошибка увеличивает значение "
+"счетчика\n"
+"ошибок вместо того чтобы блокировать подписку и посылать тестовые сообщения."
 
 #: Mailman/Gui/Bounce.py:156
 msgid ""
@@ -4577,7 +4596,6 @@ msgid "Preserve"
 msgstr "Сохранить"
 
 #: Mailman/Gui/ContentFilter.py:42
-#, fuzzy
 msgid ""
 "Policies concerning the content of list traffic.\n"
 "\n"
@@ -4616,31 +4634,33 @@ msgid ""
 "            >convert_html_to_plaintext</a> is enabled and the site is\n"
 "            configured to allow these conversions."
 msgstr ""
-"Правила фильтрации содержимого сообщений.\n"
+"Правила фильтрации сообщений.\n"
 "\n"
-"<p>Фильтрация содержимого происходит следующим образом: при появлении\n"
-"сообщения, если включена фильтрация, перым делом MIME-типы вложений\n"
-"сравниваются с <a href=\"?VARHELP=contentfilter/filter_mime_types\">фильтром "
-"типов</a>.\n"
-"Если вложение в сообщение совпадает с каким-либо правилом фильтра,\n"
+"<p>Фильтрация сообщений работает следующим образом: при получении сообщения\n"
+"списком рассылки с включенной фильтрацией, сначала сравниваются его "
+"вложения\n"
+"со списком запрещенных типов вложений в <a href=\"?VARHELP=contentfilter/"
+"filter_mime_types\">фильтре типов</a>.\n"
+"Если тип вложения совпадает с каким-либо правилом этого фильтра,\n"
 "это вложение удаляется.\n"
 "\n"
-"<p>Затем тип вложения сверяется со списком допустимых <a\n"
-"href=\"?VARHELP=contentfilter/pass_mime_types\">MIME-типов</a>, если тип "
-"вложения\n"
-"<em>не<em> подпадает ни под одно перечисленное в этом фильтре правило,\n"
-"вложение удаляется. Если список правил этого фильтра пуст, данная проверка\n"
-"пропускается.\n"
+"<p>Затем тип вложения сверяется со <a\n"
+"href=\"?VARHELP=contentfilter/pass_mime_types\">списком допустимых MIME-"
+"типов</a>, если он\n"
+"<em>не подпадает<em> ни под одно перечисленное в этом фильтре правило,\n"
+"вложение удаляется. Если список правил этого фильтра пуст, эта проверка\n"
+"не производится.\n"
 "\n"
-"<p>После первоначальной проверки удаляются все пустые секции <tt>multipart</"
-"tt>.\n"
-"Если внешнее сообщение после этого окажется пустым, удаляется всё "
-"сообщение.\n"
-"Затем каждая секция сообщения с типом <tt>multipart/alternative</tt> "
-"заменяется\n"
-"ближайшим альтернативным вариантом, оставшимся непустым после фильтрации.\n"
+"<p>После предыдущих проверок удаляются все пустые <tt>multipart</tt>-"
+"вложения.\n"
+"Если сообщение после этого оказывается пустым, оно удаляется целиком.\n"
 "\n"
-"<p>Наконец, все оставшиеся части сообщения с типом <tt>text/html</tt>\n"
+"<p>Затем каждая <tt>multipart/alternative</tt>-секция заменяется\n"
+"ее первым вариантом, оставшимся не пустым после фильтрации, если включен\n"
+"параметр <a href=\"?VARHELP=contentfilter/collapse_alternatives"
+"\">collapse_alternatives</a>.\n"
+"\n"
+"<p>Наконец, все оставшиеся <tt>text/html</tt>-части сообщения\n"
 "могут быть преобразованы в <tt>text/plain</tt>, если установлено "
 "соответствующее\n"
 "значение параметра <a href=\"?VARHELP=contentfilter/convert_html_to_plaintext"
@@ -4736,13 +4756,12 @@ msgstr ""
 "           Оставьте список пустым, чтоб опустить проверку этого условия"
 
 #: Mailman/Gui/ContentFilter.py:117
-#, fuzzy
 msgid ""
 "Should Mailman collapse multipart/alternative to its\n"
 "             first part content?"
 msgstr ""
-"Должен ли Mailman использовать автоответчик в\n"
-"работе с пользователями?"
+"Должен ли Mailman сворачивать multipart/alternative-части сообщения\n"
+"к содержимому их первой части?"
 
 #: Mailman/Gui/ContentFilter.py:121
 msgid ""
@@ -4850,7 +4869,7 @@ msgstr "Обычная"
 
 #: Mailman/Gui/Digest.py:52
 msgid "Which delivery mode is the default for new users?"
-msgstr "Режим доставки дайджестов?"
+msgstr "Какой режим доставки устанавливать новым пользователям по умолчанию?"
 
 #: Mailman/Gui/Digest.py:55
 msgid "MIME"
@@ -4865,11 +4884,12 @@ msgid "When receiving digests, which format is default?"
 msgstr "Режим по умолчанию для доставки дайджестов?"
 
 #: Mailman/Gui/Digest.py:59
-#, fuzzy
 msgid ""
 "How big in Kb should a digest be before it gets sent out?  0 implies no "
 "maximum size."
-msgstr "По достижении какого размера отправлять новый дайджест (Кб)?"
+msgstr ""
+"По достижении какого веса в килобайтах новый дайджест должен быть отправлен? "
+"0 означает отсутствие предельного веса."
 
 #: Mailman/Gui/Digest.py:63
 msgid ""
@@ -4925,7 +4945,9 @@ msgstr ""
 msgid ""
 "Should Mailman send the next digest right now, if it is not\n"
 "             empty?"
-msgstr "Нужно ли отправлять следующий дайджест сразу же, если он не пуст?"
+msgstr ""
+"Должен ли Mailman отправить следующий дайджест прямо сейчас,\n"
+"если он не пустой?"
 
 #: Mailman/Gui/Digest.py:145
 msgid ""
@@ -5190,7 +5212,6 @@ msgid "Prefix for subject line of list postings."
 msgstr "Префикс для тем писем, отправляемых в рассылку."
 
 #: Mailman/Gui/General.py:147
-#, fuzzy
 msgid ""
 "This text will be prepended to subject lines of messages\n"
 "             posted to the list, to distinguish mailing list messages in\n"
@@ -5205,20 +5226,22 @@ msgid ""
 "             "
 msgstr ""
 "Этот текст будет вставлен автоматически в тему письма перед\n"
-"текстом, указанным подпписчиком, чтобы облегчить фильтрацию писем\n"
+"текстом, указанным подписчиком, чтобы облегчить фильтрацию писем\n"
 "подписчиками в своих почтовых ящиках. Здесь приветствуется краткость,\n"
 "поэтому можете сокращать длинные названия списков рассылки, но\n"
 "не забывайте, что это сокращение все равно должно идентифицировать\n"
-"список."
+"список.\n"
+"Вы также можете добавить последовательный номер при помощи подстановки %%d,\n"
+"например: [listname %%d] -> [listname 123]\n"
+"                            (listname %%05d) -> (listname 00123)"
 
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 msgid "Munge From"
-msgstr ""
+msgstr "Изменять From"
 
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
-#, fuzzy
 msgid "Wrap Message"
-msgstr "Исходное сообщение"
+msgstr "Вложить сообщение"
 
 #: Mailman/Gui/General.py:159
 msgid ""
@@ -5226,6 +5249,9 @@ msgid ""
 "             address to mitigate issues stemming from the original From:\n"
 "             domain's DMARC or similar policies."
 msgstr ""
+"Заменить адрес отправителя письма в заголовке From: адресом списка\n"
+"рассылки чтобы предупредить проблемы, связанные с настройками\n"
+"DMARC почтового домена отправителя письма."
 
 #: Mailman/Gui/General.py:162
 msgid ""
@@ -5306,6 +5332,69 @@ msgid ""
 "             action other than Accept, that action rather than this is\n"
 "             applied"
 msgstr ""
+"Некоторые ныне широко используемые протоколы пытаются удостовериться\n"
+"в том, что использование указанного адреса отправителя (например, в\n"
+"заголовке From:) разрешено настройками его домена. Эти протоколы\n"
+"могут быть несовместимы с обычными функциями списков рассылки,\n"
+"такими как колонтитулы, приводя к блокировке трафика только из-за\n"
+"определенного адреса в поле From:. <b>Это приведет к тому, что подписчики\n"
+"списка рассылки окажутся отписаны от него, несмотря на то, что их почта\n"
+"отлично работает.</b>\n"
+"<p>\n"
+"Следующие действия, если они тут выбраны, применяются ко всем сообщениям,\n"
+"поступающим в список рассылки. Чтобы применять эти действия только к тем\n"
+"сообщениям, домен в заголовке From: которых настроен на такой протокол,\n"
+"обратитесь к параметру <a href=\"?VARHELP=privacy/sender/"
+"dmarc_moderation_action\">dmarc_moderation_action</a>\n"
+"из раздела \"Параметры приватности\" -&gt; \"Фильтрация отправителей\".\n"
+"<p>Возможные действия:<p>\n"
+"<dl>\n"
+"<dt>Нет действий</dt>\n"
+"<dd>Ничего не делать. Этот вариант подходит для анонимных списков рассылки.\n"
+"Также он подходит для списков рассылки с ограниченным списком разрешенных\n"
+"отправителей, если их почтовые домены не настроены на использование DMARC\n"
+"или похожих технологий. Еще он подходит для случая, когда вы установили\n"
+"параметр dmarc_moderation_action в значение, отличное от \"Принять\".</dd>\n"
+"<dt>Подменить From</dt>\n"
+"<dd>Подменить адрес отправителя в заголовке From: адресом списка рассылки\n"
+"и добавить исходный адрес отправителя в заголовок Reply-To:.</dd>\n"
+"<dt>Вложить сообщение</dt>\n"
+"<dd>Вложить сообщение в другое сообщение с адресом списка рассылки в "
+"заголовке\n"
+"From:, исходным адресом отправителя в заголовке Reply-To: и заголовком\n"
+"Content-Type: message/rfc822. Это точно такой же формат, что и у MIME-"
+"дайджеста\n"
+"из одного сообщения.</dd>\n"
+"</dl>\n"
+"<p>Преобразования для анонимного списка производятся перед всеми "
+"действиями,\n"
+"приведенными выше. Для анонимного списка рассылки нет смысла выбирать\n"
+"что-либо иное чем \"Нет действий\". Если вы все же делаете это, "
+"приготовьтесь\n"
+"к странным результатам.\n"
+"<p>Действия по замене заголовка Reply-To:, описанные выше, сочетаются\n"
+"с этими преобразованиями следующим образом:\n"
+"<p>fist_strip_reply_to = Yes будет удалять все адреса из заголовка Reply-"
+"To:\n"
+"исходного сообщения, но сохранит в нем адрес отправителя для всех трех\n"
+"вариантов значений параметра reply_goes_to_list, а именно: только адрес\n"
+"отправителя, адрес отправителя плюс адрес списка рассылки, адрес "
+"отправителя\n"
+"плюс адрес, указанный в параметре explicit reply_to_address соответственно.\n"
+"В случае fist_strip_reply_to = No, адрес отправителя из заголовка From:\n"
+"исходного письма будет добавлен в заголовок Reply-To:, если его там нет.\n"
+"<p>Эти действия, выбранные здесь или в параметре\n"
+"<a href=\"?VARHELP=privacy/sender/dmarc_moderation_action"
+"\">dmarc_moderation_action</a>,\n"
+"не применяются к сообщениям дайджеста или архивам, а также к сообщениям,\n"
+"отправленным в группы Usenet через шлюз Список рассылки &lt;-&gt; News-"
+"группа.\n"
+"<p>Если параметром\n"
+"<a href=\"?VARHELP=privacy/sender/dmarc_moderation_action"
+"\">dmarc_moderation_action</a>\n"
+"задано какое-либо иное действие кроме \"Принять\", оно будет выполнено "
+"вместо\n"
+"указанных."
 
 #: Mailman/Gui/General.py:224
 msgid ""
@@ -5320,16 +5409,16 @@ msgid "<tt>Reply-To:</tt> header munging"
 msgstr "Обработка заголовка <tt>Reply-To:</tt>"
 
 #: Mailman/Gui/General.py:230
-#, fuzzy
 msgid ""
 "Should any existing <tt>Reply-To:</tt> header found in the\n"
 "             original message be stripped?  If so, this will be done\n"
 "             regardless of whether an explict <tt>Reply-To:</tt> header is\n"
 "             added by Mailman or not."
 msgstr ""
-"Должны ли значения найденных заголовков <tt>Reply-To</tt> быть убраны?\n"
-"Если да, то это будет сделано вне зависимости от того, добавляется\n"
-"ли автоматически в это поле адрес списка рассылки или нет."
+"Удалить все заголовки <tt>Reply-To</tt> из сообщения?\n"
+"Если да, то будут удалены все заголовки <tt>Reply-To</tt> независимо от "
+"того,\n"
+"были ли они добавлены Mailman или нет."
 
 #: Mailman/Gui/General.py:236
 msgid "Explicit address"
@@ -5350,11 +5439,11 @@ msgid ""
 "mailing\n"
 "             lists."
 msgstr ""
-"Куда должны быть направлены ответы на сообщения? В большинстве случаем\n"
-"рекомендуется направлять их <em>отправителю</em> исходного сообщения."
+"Куда должны быть направлены ответы на сообщения? Для большинства списков\n"
+"рассылки <em>лучший выбор</em> -- направлять их <tt>отправителю сообщения</"
+"tt>."
 
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -5397,41 +5486,47 @@ msgid ""
 msgstr ""
 "Этот параметр определяет действия по отношению к заголовку <tt>Reply-To:</"
 "tt>\n"
-"в сообщениях, приходящих в этот список рассылки. Значение <em>Отправителю</"
-"em>\n"
+"в сообщениях, приходящих в список рассылки. Значение <em>Отправителю</em>\n"
 "говорит о том, что заголовок остается неизменным. Значение <em>В список</"
 "em>\n"
-"или <em>На заданный адрес</em> показывает, что Mailman будет добавлять \n"
-"собственный заголовок <tt>Reply-To:</tt>, перекрывая исходные, если это\n"
-"необходимо (<em>На заданный адрес</em> -- на адрес, указанный параметром\n"
+"или <em>На заданный адрес</em> устанавливает, что Mailman будет добавлять\n"
+"собственный заголовок <tt>Reply-To:</tt>, подменяя исходный заголовок, если "
+"это\n"
+"необходимо (в случае <em>На заданный адрес</em> -- адресом, указанный в "
+"поле\n"
 "<a href=\"?VARHELP=general/reply_to_address\">reply_to_address</a>).\n"
 "\n"
-"<p>Есть много причин не вставлять новый заголовок <tt>Reply-To:</tt>. Одна\n"
+"<p>Есть много причин не вставлять и не подменять заголовок <tt>Reply-To:</"
+"tt>. Одна\n"
 "из них: некоторые отправители таким образом сообщают адрес, на который\n"
 "они хотят получать письма. Другая: смена значения поля <tt>Reply-To:</tt>\n"
-"несколько затрудняет частную переписку. Более подробно этот вопрос обсужден "
+"затрудняет отправку ответа отправителю. Более подробно этот вопрос обсужден "
 "на странице\n"
 "<a href=\"http://www.unicom.com/pw/reply-to-harmful.html\">`Reply-To'\n"
-"Munging Considered Harmful</a>. Обратное мнение представлено на странице\n"
+"Munging Considered Harmful</a>. Противоположное мнение представлено на "
+"странице\n"
 "<a href=\"http://www.metasystema.org/essays/reply-to-useful.mhtml\">Reply-"
 "To\n"
 "Munging Considered Useful</a>.\n"
 "\n"
-"<p>В некоторых списках рассылок права на отправку сообщений ограничиваются,\n"
-"но при этом открывается дополнительный список для обсуждения. Пример:\n"
-"списки рассылок `patches' и `checkin', куда сообщения об изменениях\n"
-"в коде отправляются системой контроля версий, а обсуждаются эти\n"
-"изменения уже в списках рассылок для разработчиков. Чтобы удобнее было "
-"пользоваться такой\n"
-"схемой, выберите значение <em>На заданный адрес</em> и укажите адрес\n"
-"параллельного списка."
+"<p>В некоторых списках рассылки возможности отправки сообщений "
+"ограничиваются,\n"
+"но при этом ведется параллельный список рассылки, предназначенный для "
+"обсуждений.\n"
+"Пример: списки рассылки 'patches' и 'checkin', куда отправляются "
+"автоматические сообщения\n"
+"от системы контроля версий, тогда как все обсуждения анонсированных "
+"изменений в коде\n"
+"осуществляются в параллельном списке рассылки для разработчиков. Для "
+"использования такой\n"
+"схемы выберите значение <em>На заданный адрес</em> и укажите в этом поле\n"
+"адрес параллельного списка рассылки."
 
 #: Mailman/Gui/General.py:274
 msgid "Explicit <tt>Reply-To:</tt> header."
 msgstr "Заданный адрес для <tt>Reply-To:</tt>."
 
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"
@@ -5475,29 +5570,35 @@ msgstr ""
 "\">reply_goes_to_list</a>\n"
 "является <em>На заданный адрес</em>.\n"
 "\n"
-"<p>Есть много причин не вставлять новый заголовок <tt>Reply-To:</tt>. Одна\n"
+"<p>Есть много причин не вставлять и не подменять заголовок <tt>Reply-To:</"
+"tt>. Одна\n"
 "из них: некоторые отправители таким образом сообщают адрес, на который\n"
 "они хотят получать письма. Другая: смена значения поля <tt>Reply-To:</tt>\n"
-"несколько затрудняет частную переписку. Более подробно этот вопрос обсужден "
+"затрудняет отправку ответа отправителю. Более подробно этот вопрос обсужден "
 "на странице\n"
-"<a href=\"http://www.unicom.com/pw/reply-to-harmful.html\">`Reply-To'\n"
-"Munging Considered Harmful</a>. Обратное мнение представлено на странице\n"
+"<a href=\"http://www.unicom.com/pw/reply-to-harmful.html\">'Reply-To'\n"
+"Munging Considered Harmful</a>. Противоположное мнение представлено на "
+"странице\n"
 "<a href=\"http://www.metasystema.org/essays/reply-to-useful.mhtml\">Reply-"
 "To\n"
 "Munging Considered Useful</a>.\n"
 "\n"
-"<p>В некоторых списках рассылок права на отправку сообщений ограничиваются,\n"
-"но при этом открывается дополнительный список для обсуждения. Пример:\n"
-"списки рассылок `patches' и `checkin', куда сообщения об изменениях\n"
-"в коде отправляются системой контроля версий, а обсуждаются эти\n"
-"изменения уже в списках рассылок для разработчиков. Чтобы удобнее было "
-"пользоваться такой\n"
-"схемой, укажите адрес здесь адрес параллельного списка. Следует также\n"
-"выбрать значение <em>На заданный адрес</em> у параметра\n"
-"<a href=\"?VARHELP=general/reply_goes_to_list\">reply_goes_to_list</a>.\n"
+"<p>В некоторых списках рассылки возможности отправки сообщений "
+"ограничиваются,\n"
+"но при этом ведется параллельный список рассылки, предназначенный для "
+"обсуждений.\n"
+"Пример: списки рассылки 'patches' и 'checkin', куда отправляются "
+"автоматические сообщения\n"
+"от системы контроля версий, тогда как все обсуждения анонсированных "
+"изменений в коде\n"
+"осуществляются в параллельном списке рассылки для разработчиков. Для "
+"использования такой\n"
+"схемы укажите в этом поле адрес параллельного списка рассылки. Вы также "
+"должны выбрать\n"
+"<tt>На заданный адрес</tt> в параметре <tt>reply_goes_to_list</tt>.\n"
 "\n"
 "<p>Имейте в виду, что если у исходного сообщения был собственный заголовок\n"
-"<tt>Reply-To:</tt>, он не будет изменен."
+"<tt>Reply-To:</tt>, то он не будет изменен."
 
 #: Mailman/Gui/General.py:305
 msgid "Umbrella list settings"
@@ -5521,7 +5622,7 @@ msgid ""
 "             account name."
 msgstr ""
 "Выбирайте <em>Да</em>, только если этот список рассылки\n"
-"предназначен для группирования других списков рассылки. Если\n"
+"предназначен для группировки других списков рассылки. Если\n"
 "выбрано это значение, такие извещения, как напоминания паролей,\n"
 "подтверждения, будут направлены по адресам, полученным из адресов\n"
 "подписанных сюда списков, с прибавлением суффикса (см. параметр\n"
@@ -5534,7 +5635,7 @@ msgid ""
 "             setting."
 msgstr ""
 "Суффикс, используемый в случае, если данный список рассылки\n"
-"создан только для группирования других списков (см. также\n"
+"создан только для группировки других списков (см. также\n"
 "параметр \"umbrella_list\")."
 
 #: Mailman/Gui/General.py:323
@@ -5553,8 +5654,8 @@ msgid ""
 msgstr ""
 "Если значение параметра \"umbrella_list\" показывает, что подписчиками\n"
 "этого списка являются другие списки рассылки, такие извещения, как\n"
-"напрминания паролей и подтверждения, должны направляться не прямо в списки,\n"
-"а владельцам списков рассылок. В этом случае указанный здесь суффикс\n"
+"напоминания паролей и подтверждения, должны направляться не прямо в списки,\n"
+"а владельцам списков рассылки. В этом случае указанный здесь суффикс\n"
 "добавляется к адресам списков, входящего в данный. Чаще всего\n"
 "это `-owner'. Этот параметр не играет никакой роли, если значением\n"
 "параметра \"umbrella_list\" выбрано \"Нет\"."
@@ -5752,6 +5853,8 @@ msgid ""
 "Maximum number of members to show on one page of the\n"
 "             Membership List."
 msgstr ""
+"Максимальное число подписчиков, отображаемых на одной странице\n"
+"Списка подписчиков."
 
 #: Mailman/Gui/General.py:435
 msgid "Host name this list prefers for email."
@@ -5855,16 +5958,14 @@ msgstr ""
 # MSS: очень плохо! :(
 # fattie: почему плохо? MSS: сложное предложение. можно запутаться :)
 #: Mailman/Gui/General.py:489
-#, fuzzy
 msgid ""
 "Should the <tt>Sender</tt> header be rewritten for this\n"
 "                 mailing list to avoid stray bounces?  <em>Yes</em> is\n"
 "                 recommended."
 msgstr ""
-"Должна ли программа Mailman пересылать вам, администратору списка рассылки,\n"
-"             все сообщения о невозможности доставить сообщение, "
-"необработанные\n"
-" обработчиком ошибок доставки? Рекомендуется установить в <em>Да</em>."
+"Нужно ли изменять заголовок <tt>Sender</tt> для этого списка рассылки\n"
+"чтобы избежать потерявшихся ошибок доставки сообщений?\n"
+"Рекомендуется установить в <em>Да</em>."
 
 #: Mailman/Gui/General.py:493
 msgid ""
@@ -5887,12 +5988,29 @@ msgid ""
 "                 bounce address on reply-to-all), so it can be disabled \n"
 "                 here."
 msgstr ""
+"<a href=\"http://www.faqs.org/rfcs/rfc2822.html\">RFC 2822</a> определяет "
+"заголовок <tt>Sender</tt>\n"
+"как \"почтовый ящик агента, реально отвечающего за передачу почтовых "
+"сообщений\".\n"
+"Mailman по умолчанию указывает в этом заголовке адрес для ошибок доставки.\n"
+"\n"
+"<p>Невзирая на то, что утверждение что Mailman является таким агентом "
+"является\n"
+"довольно спорным, добавление такого заголовка помогает направить сообщения\n"
+"об ошибках доставки по нужному адресу. С другой стороны, некоторые почтовые\n"
+"клиенты демонстрируют неожиданное поведение, встречая такой заголовок (как,\n"
+"например, потери адресов при пересылке почты или отправка копий сообщений\n"
+"на адрес ошибок доставки при использовании функции \"Ответить всем\"), "
+"поэтому\n"
+"Вы можете отключить его здесь."
 
 #: Mailman/Gui/General.py:511
 msgid ""
 "Discard held messages older than this number of days.\n"
 "            Use 0 for no automatic discarding."
 msgstr ""
+"Удалить ожидающие сообщения через указанное здесь число дней.\n"
+"Используйте 0 чтобы не удалять старые сообщения."
 
 #: Mailman/Gui/General.py:521
 msgid ""
@@ -5900,8 +6018,8 @@ msgid ""
 "            changed!  It must differ from the list's name by case\n"
 "            only."
 msgstr ""
-"Атрибут <b>real_name</b> не был изменен. Он может отличаться от названия "
-"списка рассылки только регистром букв!"
+"Атрибут <b>real_name</b> не был изменен! Он может отличаться от названия "
+"списка рассылки только регистром букв."
 
 #: Mailman/Gui/General.py:549
 msgid ""
@@ -5916,15 +6034,22 @@ msgid ""
 "mlist.info.\n"
 "                        "
 msgstr ""
+"Атрибут <b>info</b> который Вы сохранили содержит подозрительный код HTML, "
+"который\n"
+"потенциально может сделать Ваших пользователей уязвимыми перед атаками\n"
+"злоумышленников. По этой причине Ваше изменение было отвергнуто. Если Вы "
+"все\n"
+"еще хотите сделать такие изменения, Вам понадобится shell-доступ к Mailman.\n"
+"Это изменение также можно сделать при помощи сценариев bin/withlist или\n"
+"bin/config_list задав соответствующий mlist.info."
 
 #: Mailman/Gui/General.py:560
-#, fuzzy
 msgid ""
 "<b>admin_member_chunksize</b> attribute not\n"
 "            changed!  It must be an integer > 0."
 msgstr ""
-"Атрибут <b>real_name</b> не был изменен. Он может отличаться от названия "
-"списка рассылки только регистром букв!"
+"Атрибут <b>admin_member_chunksize</b> не был изменен!\n"
+"Он должен быть целым положительным числом."
 
 #: Mailman/Gui/General.py:570
 msgid ""
@@ -6159,7 +6284,7 @@ msgstr ""
 "служебной\n"
 "информации.\n"
 "\n"
-"<p>Однако в некоторых списках рассылок бывает оправдан более\n"
+"<p>Однако в некоторых списках рассылки бывает оправдан более\n"
 "индивидуализированный подход. В этом случае Mailman отправляет новое "
 "сообщение\n"
 "каждому подписчику, не получающему дайджесты. При использовании этой "
@@ -6245,7 +6370,7 @@ msgstr "Текст, включаемый в самый конец сообщения."
 
 #: Mailman/Gui/NonDigest.py:141
 msgid "Scrub attachments of regular delivery message?"
-msgstr ""
+msgstr "Убрать вложения из сообщений с обычной доставкой?"
 
 #: Mailman/Gui/NonDigest.py:142
 msgid ""
@@ -6254,11 +6379,14 @@ msgid ""
 "             access them via a web browser. If you want the attachments to\n"
 "             totally disappear, you can use content filtering options."
 msgstr ""
+"Когда Вы убираете вложения, они сохраняются в архиве\n"
+"и подписчики могут загрузить их в броузере по ссылкам из сообщения.\n"
+"Если Вы желаете удалять вложения совсем,\n"
+"воспользуйтесь функцией фильтрации содержимого сообщений."
 
 #: Mailman/Gui/NonDigest.py:149
-#, fuzzy
 msgid "Sibling lists"
-msgstr "Сохранение списка"
+msgstr "Связанные списки рассылки"
 
 #: Mailman/Gui/NonDigest.py:152
 msgid ""
@@ -6266,6 +6394,9 @@ msgid ""
 "             excluded from the regular (non-digest) delivery if those\n"
 "             list addresses appear in a To: or Cc: header."
 msgstr ""
+"Другие списки рассылки на этом сервере, чьи подписчики\n"
+"исключаются из обычной доставки (не дайджестов) в случае,\n"
+"если адреса этих списков присутствуют в заголовках To: или Cc:."
 
 #: Mailman/Gui/NonDigest.py:155
 msgid ""
@@ -6277,12 +6408,20 @@ msgid ""
 "domain\n"
 "             siblings."
 msgstr ""
+"Адреса списков рассылки следует указывать полностью\n"
+"(например, mailman@example.com). Не указывайте эти адреса взаимно\n"
+"для нескольких списков рассылки, иначе подписчики обоих списков рассылки\n"
+"не будут получать никаких сообщений. Имейте также в виду что администратор\n"
+"сервера может запретить связывание списков рассылки на разных доменах."
 
 #: Mailman/Gui/NonDigest.py:163
 msgid ""
 "Ignore regular_exlude_lists of which the poster is not a\n"
 "             member."
 msgstr ""
+"Игнорировать списки рассылки из regular_exlude_lists, в которых отправитель "
+"сообщения\n"
+"не является подписчиком."
 
 #: Mailman/Gui/NonDigest.py:165
 msgid ""
@@ -6297,6 +6436,16 @@ msgid ""
 "the\n"
 "             poster is not a member."
 msgstr ""
+"Если сообщение адресовано в этот список рассылки, а также\n"
+"в один или больше исключенных списков, то обычным подписчикам, участвующим\n"
+"также в исключенных списках, не будет переслано это сообщение. Однако, если\n"
+"отправитель письма не является подписчиком исключенных списков рассылки, "
+"его\n"
+"сообщение может быть не принято этими списками, что оставит их подписчиков\n"
+"вообще без этого сообщения. Задание значения \"Да\" позволит игнорировать "
+"все\n"
+"исключенные списки рассылки в том случае, если отправитель сообщения\n"
+"не является их подписчиком."
 
 #: Mailman/Gui/NonDigest.py:174
 msgid ""
@@ -6304,6 +6453,9 @@ msgid ""
 "             included in the regular (non-digest) delivery if those\n"
 "             list addresses don't appear in a To: or Cc: header."
 msgstr ""
+"Другие списки рассылки на этом сервере, чьи подписчики\n"
+"включаются в обычную доставку (не дайджестов) в случае,\n"
+"если их адреса отсутствуют в заголовках To: или Cc:."
 
 #: Mailman/Gui/NonDigest.py:177
 msgid ""
@@ -6311,6 +6463,9 @@ msgid ""
 "             format (e.g. mailman@example.com). Note also that the site\n"
 "             administrator may prohibit cross domain siblings."
 msgstr ""
+"Адреса списков рассылки следует указывать полностью\n"
+"(например, mailman@example.com). Имейте также в виду что администратор\n"
+"сервера может запретить связывание списков рассылки на разных доменах."
 
 #: Mailman/Gui/Passwords.py:27
 msgid "Passwords"
@@ -6583,9 +6738,8 @@ msgstr ""
 "предотвращения сбора адресов спамерами с помощью автоматических сканеров."
 
 #: Mailman/Gui/Privacy.py:175
-#, fuzzy
 msgid "/Quarantine"
-msgstr "Ежеквартально"
+msgstr "/Карантин"
 
 #: Mailman/Gui/Privacy.py:179
 msgid ""
@@ -6752,16 +6906,14 @@ msgstr ""
 "об отклонении</a> сообщения для подписчиков."
 
 #: Mailman/Gui/Privacy.py:258
-#, fuzzy
 msgid ""
 "Action to take when anyone posts to the\n"
 "             list from a domain with a DMARC Reject%(quarantine)s Policy."
 msgstr ""
-"Действия, которые следует предпринять при появлении сообщения\n"
-"от модерируемого подписчика."
+"Действия, которые следует предпринять при поступлении сообщения\n"
+"с доменом отправителя с настройкой DMARC-политики Reject%(quarantine)s."
 
 #: Mailman/Gui/Privacy.py:261
-#, fuzzy
 msgid ""
 "<ul><li><b>Munge From</b> -- applies the <a\n"
 "             href=\"?VARHELP=general/from_is_list\">from_is_list Munge From</"
@@ -6790,20 +6942,37 @@ msgid ""
 "             if the message is From: an affected domain and the setting is\n"
 "             other than Accept."
 msgstr ""
-"<ul><li><b>Задержать</b> -- задержать сообщение для проверки модератором.\n"
-"<p><li><b>Отклонять</b> -- автоматически отклонить сообщение и отослать\n"
+"<ul><li><b>Подменить From</b> -- осуществить преобразование \"Подменить From"
+"\", заданное параметром <a\n"
+"href=\"?VARHELP=general/from_is_list\">from_is_list</a>\n"
+"для этого сообщения.\n"
+"<p><li><b>Вложить сообщение</b> -- осуществить преобразование \"Вложить "
+"сообщение\", заданное параметром <a\n"
+"href=\"?VARHELP=general/from_is_list\">from_is_list</a>\n"
+"для этого сообщения.\n"
+"<p><li><b>Отклонить</b> -- автоматически отклонить сообщение и отослать\n"
 "извещение об этом отправителю исходного сообщения. Текст такого извещения\n"
-"может быть <a href=\"?VARHELP=privacy/sender/member_moderation_notice"
-"\"определен\n"
-"вами</a>.\n"
-"<p><li><b>Удалить</b> -- просто удалить сообщение без уведомления\n"
-"отправителя.</ul>"
+"может быть <a href=\"?VARHELP=privacy/sender/dmarc_moderation_notice"
+"\">задан\n"
+"Вами</a>.\n"
+"<p><li><b>Удалить</b> -- просто удалить сообщение без уведомления "
+"отправителя.</ul>\n"
+"\n"
+"             <p>Этот параметр имеет преимущество перед параметром <a\n"
+"             href=\"?VARHELP=general/from_is_list\">from_is_list</a> в том "
+"случае,\n"
+"             если домен отправителя в заголовке From: имеет соответствующие\n"
+"             настройки DMARC и выбрано что-либо иное, чем Принять."
 
 #: Mailman/Gui/Privacy.py:286
 msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=quarantine as well as p=reject"
 msgstr ""
+"Будет ли применяться действие dmarc_moderation_action, указанное выше, также "
+"и к сообщениям,\n"
+"домен поля From: которых использует DMARC-политику p=quarantine, а не только "
+"p=reject"
 
 #: Mailman/Gui/Privacy.py:289
 msgid ""
@@ -6821,9 +6990,23 @@ msgid ""
 "               the message will likely not bounce, but will be delivered to\n"
 "               recipients' spam folders or other hard to find places."
 msgstr ""
+"<ul><li><b>Нет</b> -- в этом случае действие dmarc_moderation_action\n"
+"будет применяться только к сообщениям с доменом отправителя с DMARC-"
+"политикой\n"
+"p=reject. Этот вариант подходит если Вы озабочены сообщениями об ошибках "
+"доставки,\n"
+"но хотите применять dmarc_moderation_action к минимально возможному числу "
+"сообщений.\n"
+"<p><li><b>Да</b> -- в этом случае dmarc_moderation_action будет применяться\n"
+"к сообщениям с DMARC-политиками p=reject и p=quarantine.\n"
+"</ul><p>Если домен отправителя сообщения имеет DMARC-политику p=quarantine\n"
+"и dmarc_moderation_action к нему не применяется (этот параметр установлен в "
+"\"Нет\"),\n"
+"то это сообщение скорее всего не будет отвергнуто, но попадет в папку \"Спам"
+"\"\n"
+"получателя или другие подобные места, где его будет трудно найти."
 
 #: Mailman/Gui/Privacy.py:302
-#, fuzzy
 msgid ""
 "Text to include in any\n"
 "             <a href=\"?VARHELP=privacy/sender/dmarc_moderation_action\"\n"
@@ -6831,9 +7014,11 @@ msgid ""
 "             be sent to anyone who posts to this list from a domain\n"
 "             with a DMARC Reject%(quarantine)s Policy."
 msgstr ""
-"Текст, включаемый в <a href=\"?VARHELP/privacy/sender/"
-"member_moderation_action\">извещение\n"
-"об отклонении</a> сообщения для подписчиков."
+"Текст, включаемый в <a href=\"?VARHELP=privacy/sender/dmarc_moderation_action"
+"\">извещение\n"
+"об отклонении</a> сообщения, отправленного в список рассылки с доменом\n"
+"отправителя, настроенным на использование DMARC-политики Reject"
+"%(quarantine)s."
 
 #: Mailman/Gui/Privacy.py:309
 msgid ""
@@ -6906,7 +7091,6 @@ msgstr ""
 "которых всегда должны приниматься."
 
 #: Mailman/Gui/Privacy.py:359
-#, fuzzy
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             accepted with no further moderation applied.  Add member\n"
@@ -6916,10 +7100,13 @@ msgid ""
 "             Mailman list in this installation, all of whose member\n"
 "             addresses will be accepted for this list."
 msgstr ""
-"Все сообщения с этих адресов будут автоматически попадать в список\n"
+"Все сообщения с этих адресов будут автоматически пропущены в список\n"
 "рассылки без прохождения проверки. В каждой строке должен быть\n"
 "один адрес. Строки, начинающиеся с ^, будут обрабатываться как\n"
-"регулярные выражения."
+"регулярные выражения. Строка, содержащая символ @, за которым\n"
+"следует имя списка рассылки, задает другой список рассылки Mailman\n"
+"на этом сервере, сообщения от подписчиков которого будут также\n"
+"пропущены без проверки."
 
 #: Mailman/Gui/Privacy.py:368
 msgid ""
@@ -7064,6 +7251,10 @@ msgid ""
 "             the list's owner address by %%(listowner)s and replaces the\n"
 "             internally crafted default message."
 msgstr ""
+"Текст, включаемый в любое уведомление об отклонении сообщения\n"
+"от не подписанного на список рассылки отправителя. Это уведомление может\n"
+"включать в себя подстановку %%(listowner)s для адреса администратора\n"
+"и заменит собой стандартный текст, сгенерированный Mailman."
 
 #: Mailman/Gui/Privacy.py:436
 msgid ""
@@ -7082,9 +7273,8 @@ msgid ""
 "Must posts have list named in destination (to, cc) field\n"
 "             (or be among the acceptable alias names, specified below)?"
 msgstr ""
-"Должны ли исходные значения полей <tt>To:</tt> и <tt>CC:</tt>\n"
-"заменяться адресом списка рассылка (если это не псевдонимы списка,\n"
-"указанные ниже)?"
+"Должен ли адрес списка рассылки обязательно присутствовать в одном из полей "
+"получателя (to, cc) сообщения (либо один из его псевдонимов, указанных ниже)?"
 
 # fattie: проверить <li>Адрес, с которого передается сообщение, имеет такое же имя.
 #: Mailman/Gui/Privacy.py:446
@@ -7209,7 +7399,6 @@ msgid "Filter rules to match against the headers of a message."
 msgstr "Правила фильтрации по заголовкам сообщений."
 
 #: Mailman/Gui/Privacy.py:502
-#, fuzzy
 msgid ""
 "Each header filter rule has two parts, a list of regular\n"
 "             expressions, one per line, and an action to take.  Mailman\n"
@@ -7232,20 +7421,23 @@ msgid ""
 "             types or file name extensions."
 msgstr ""
 "Каждое правило для фильтрации заголовков состоит из двух частей:\n"
-"списка регулярных выражений (один шаблон на одной строке) и\n"
-"действия, которое нужно предпринять. При получении сообщения\n"
-"будет производиться сравнение его заголовков с шаблонами из\n"
-"списков и при совпадении сообщение будет отклоняться,\n"
-"удерживаться для проверки или удаляться. Чтобы временно\n"
-"отключить правило, выберите <em>Отложить</em>.\n"
+"списка регулярных выражений (один шаблон на одной строке)\n"
+"и действия, которое нужно предпринять. При получении сообщения\n"
+"Mailman будет производить сравнение его заголовков с выражениями\n"
+"из списка и в случае совпадения отклонять, задерживать для проверки\n"
+"или удалять сообщение. Чтобы временно отключить правило, выберите "
+"<em>Отложить</em>.\n"
 "\n"
 "Можно создавать несколько правил фильтрации. В этом случае\n"
-"сообщение будет сверяться со всеми правилами по порядку, а\n"
-"обрабатываться будет в соответствии с первым совпадением.\n"
+"сообщение будет сверяться со всеми правилами по порядку до\n"
+"первого найденного совпадения.\n"
 "\n"
+"Учтите что проверяются и заголовки всех вложений (за исключением служебных\n"
+"сообщений Mailman). Это даст Вам возможность эффективно отфильтровывать\n"
+"сообщения с файловыми вложениями опасных типов или с нежелательными "
+"расширениями."
 
 #: Mailman/Gui/Privacy.py:519
-#, fuzzy
 msgid "Legacy anti-spam filters"
 msgstr "Традиционные фильтры спама"
 
@@ -7293,6 +7485,8 @@ msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
 msgstr ""
+"dmarc_moderation_action должно быть >= значения,\n"
+"                           заданного о умолчанию."
 
 #: Mailman/Gui/Privacy.py:608
 msgid ""
@@ -7954,12 +8148,18 @@ msgid ""
 "Approved: password line, but due to the way it is coded in the\n"
 "HTML it can't be safely removed.\n"
 msgstr ""
+"Сообщение отклонено.\n"
+"Обнаружено, что это сообщение содержит строку \"Approved: пароль\",\n"
+"которая не может быть безопасно удалена по причине кодирования ее\n"
+"в формате HTML.\n"
 
 #: Mailman/Handlers/CalcRecips.py:79
 msgid ""
 "Your urgent message to the %(realname)s mailing list was not authorized for\n"
 "delivery.  The original message as received by Mailman is attached.\n"
 msgstr ""
+"Доставка вашего срочного сообщения в список рассылки %(realname)s не была\n"
+"разрешена. Сообщение, полученное Mailman, находится во вложении.\n"
 
 #: Mailman/Handlers/Emergency.py:29
 msgid "Emergency hold on all list traffic is in effect"
@@ -8107,14 +8307,12 @@ msgstr "Сообщения с таким типом содержимого не разрешены"
 
 # MSS: или же таки "расширением файла"?
 #: Mailman/Handlers/MimeDel.py:72
-#, fuzzy
 msgid "The message's file extension was explicitly disallowed"
-msgstr "Сообщения с таким типом содержимого запрещены"
+msgstr "Сообщения с таким расширением файла запрещены"
 
 #: Mailman/Handlers/MimeDel.py:75
-#, fuzzy
 msgid "The message's file extension was not explicitly allowed"
-msgstr "Сообщения с таким типом содержимого не разрешены"
+msgstr "Сообщения с таким расширением файла не разрешены"
 
 #: Mailman/Handlers/MimeDel.py:87
 msgid "After content filtering, the message was empty"
@@ -8177,6 +8375,9 @@ msgid ""
 "Name: %(filename)s\n"
 "URL: %(url)s\n"
 msgstr ""
+"Вложенный текст с неопределенной кодировкой был извлечен&hellip;\n"
+"Имя: %(filename)s\n"
+"URL: %(url)s\n"
 
 # fattie: check 'scrub'
 # MSS: должно быть "вытащено" или что-то в этом роде, точно не "преобразовано"
@@ -8205,7 +8406,6 @@ msgid "unknown sender"
 msgstr "неизвестный отправитель"
 
 #: Mailman/Handlers/Scrubber.py:273
-#, fuzzy
 msgid ""
 "An embedded message was scrubbed...\n"
 "From: %(who)s\n"
@@ -8222,7 +8422,6 @@ msgstr ""
 "URL: %(url)s\n"
 
 #: Mailman/Handlers/Scrubber.py:305
-#, fuzzy
 msgid ""
 "A non-text attachment was scrubbed...\n"
 "Name: %(filename)s\n"
@@ -8232,11 +8431,11 @@ msgid ""
 "URL: %(url)s\n"
 msgstr ""
 "Вложение не в текстовом формате было извлечено&hellip;\n"
-"Имя     : %(filename)s\n"
-"Тип     : %(ctype)s\n"
-"Размер  : %(size)d байтов\n"
+"Имя: %(filename)s\n"
+"Тип: %(ctype)s\n"
+"Размер: %(size)d байтов\n"
 "Описание: %(desc)s\n"
-"Url     : %(url)s\n"
+"URL: %(url)s\n"
 
 #: Mailman/Handlers/Scrubber.py:344
 msgid "Skipped content of type %(partctype)s\n"
@@ -8251,7 +8450,6 @@ msgid "The message headers matched a filter rule"
 msgstr "Заголовки сообщения совпали с правилами фильтра"
 
 #: Mailman/Handlers/SpamDetect.py:109
-#, fuzzy
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
 "publishes a DMARC policy of reject or quarantine, and your message has been\n"
@@ -8259,7 +8457,9 @@ msgid ""
 "in\n"
 "error, contact the mailing list owner at %(listowner)s."
 msgstr ""
-"Вам не резрешено отправлять сообщения в этот список рассылки, и ваше "
+"Вам не разрешено отправлять сообщения в этот список рассылки с адреса, "
+"домен\n"
+"которого настроен на DMARC-политику \"отклонить\" или \"в карантин\", и ваше "
 "сообщение\n"
 "было автоматически отклонено. Если вы считаете это ошибкой, обратитесь к\n"
 "администратору списка рассылки по адресу %(listowner)s."
@@ -8291,7 +8491,7 @@ msgstr "В этом номере (сообщений: %(msgcount)d)"
 
 #: Mailman/Handlers/ToDigest.py:331
 msgid "[Message discarded by content filter]"
-msgstr ""
+msgstr "[Сообщение удалено фильтром содержимого]"
 
 #: Mailman/Handlers/ToDigest.py:359
 msgid "digest footer"
@@ -8445,7 +8645,6 @@ msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "владелец %(dbfile)s -- %(owner)s (должен быть %(user)s)"
 
 #: Mailman/MTA/Postfix.py:372
-#, fuzzy
 msgid "%(dbfile)s permissions must be 066x (got %(octmode)s)"
 msgstr "режим доступа к %(dbfile)s должен быть 066x (а не %(octmode)s)"
 
@@ -8505,11 +8704,12 @@ msgid ""
 "\n"
 msgstr ""
 "Вложенное сообщение получено как извещение об ошибке, но его\n"
-"формат не установлен, или из него невозможно получить адрес подписчика.\n"
-"Этот список настроен так, чтобы все такие извещения отправлялись\n"
-"администраторам списка рассылки.\n"
+"формат не распознан, или из него невозможно получить адрес подписчика.\n"
+"Этот список рассылки настроен так, чтобы все подобные сообщения\n"
+"отправлялись администраторам.\n"
 "\n"
-"См. также: %(adminurl)s\n"
+"См. также:\n"
+"%(adminurl)s\n"
 "\n"
 
 # MSS: хмм?
@@ -8574,11 +8774,11 @@ msgstr "Результат обработки ваших команд"
 
 #: Mailman/Queue/CommandRunner.py:223
 msgid "Message body suppressed by Mailman site configuration\n"
-msgstr ""
+msgstr "Тело исходного сообщения отключено настройками сервера\n"
 
 #: Mailman/Queue/CommandRunner.py:225
 msgid "Original message suppressed by Mailman site configuration\n"
-msgstr ""
+msgstr "Вложение исходного сообщения отключено настройками сервера\n"
 
 #: Mailman/htmlformat.py:659
 msgid "Delivered by Mailman<br>version %(version)s"
@@ -8672,9 +8872,9 @@ msgstr "Время на сервере"
 msgid ""
 "%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s %(year)04i"
 msgstr ""
+"%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s %(year)04i"
 
 #: bin/add_members:26
-#, fuzzy
 msgid ""
 "Add members to a list from the command line.\n"
 "\n"
@@ -8722,21 +8922,21 @@ msgid ""
 "You must supply at least one of -r and -d options.  At most one of the\n"
 "files can be `-'.\n"
 msgstr ""
-"Добавление пользователей в список из командной строки.\n"
+"Добавление пользователей в список рассылки из командной строки.\n"
 "\n"
 "Запуск:\n"
 "\n"
-"    add_members [параметры] имя_списка\n"
+"    add_members [параметры] имя_списка_рассылки\n"
 "\n"
 "Параметры:\n"
 "\n"
 "    --regular-members-file=файл\n"
 "    -r файл\n"
 "        Файл с адресами, которые нужно подписать, по одному в каждой\n"
-"        строке. Эти подписчики будут получать сообщения обычным образом\n"
+"        строке. Эти подписчики будут получать сообщения обычным образом.\n"
 "        Если вместо файла указан символ \"-\", адреса будут считываться из\n"
 "        стандартного ввода. Параметры -n и --non-digest-members=файл --\n"
-"        запрещенные синонимы описываемых параметров.\n"
+"        не рекомендуемые к применению синонимы описываемых параметров.\n"
 "\n"
 "    --digest-members-file=файл\n"
 "    -d файл\n"
@@ -8746,26 +8946,27 @@ msgstr ""
 "    --welcome-msg=<y|n>\n"
 "    -w <y|n>\n"
 "       Отправлять (y) или нет (n) новым подписчиком приветственное\n"
-"       сообщение. Перекрывает значение глобального параметра\n"
+"       сообщение. Переопределяет значение глобального параметра\n"
 "       \"send_welcome_msg\".\n"
 "\n"
 "    --admin-notify=<y|n>\n"
 "    -a <y|n>\n"
-"       Отправлять администратору списка уведомления о подписке новых\n"
-"       пользователей (y) или нет (n). Перекрывает значение глобального\n"
+"       Отправлять администратору списка рассылки уведомления о подписке\n"
+"       новых пользователей (y) или нет (n). Переопределяет значение "
+"глобального\n"
 "       параметра \"admin_notify_mchanges\".\n"
 "\n"
 "    --help\n"
 "    -h\n"
 "        Напечатать эту подсказку и завершить работу.\n"
 "\n"
-"    имя_списка\n"
-"        Имя списка, к которому нужно добавить новых подписчиков.\n"
-"        Список должен уже существовать.\n"
+"    имя_списка_рассылки\n"
+"        Имя списка рассылки, к которому нужно добавить новых подписчиков.\n"
+"        Список должен существовать.\n"
 "\n"
-"Для добавления подписчиков необходимо указать хотя бы один из\n"
-"параметров: -r или -d. Не более чем один из файлов может быть задан как\n"
-"\"-\".\n"
+"Для добавления подписчиков необходимо указать хотя бы один из параметров -r "
+"и -d.\n"
+"Только один из этих файлов может быть задан как \"-\".\n"
 
 #: bin/add_members:146
 msgid "Already a member: %(member)s"
@@ -9253,6 +9454,12 @@ msgid ""
 "         If you're on a shared multiuser system, you should consult the\n"
 "         installation manual on how to fix this."
 msgstr ""
+"Предупреждение: директория закрытых архивов имеет права o+x.\n"
+"Это может дать возможность другим пользователям этого сервера читать "
+"закрытые архивы.\n"
+"Если это сервер с разделяемым доступом, Вам стоит обратиться к справочному "
+"руководству\n"
+"за информацией как это исправить."
 
 #: bin/check_perms:240
 msgid "mbox file must be at least 0660:"
@@ -9270,27 +9477,23 @@ msgstr "проверка режима доступа к файлам в cgi-bin"
 
 # MSS: на самом деле, это немного о другом
 #: bin/check_perms:278
-#, fuzzy
 msgid "    checking set-gid for %(path)s"
-msgstr "    проверка группы владельца файла %(path)s"
+msgstr "    проверка флага setgid для %(path)s"
 
 # MSS: на самом деле, это немного о другом
 #: bin/check_perms:282
-#, fuzzy
 msgid "%(path)s must be set-gid"
-msgstr "у файла %(path)s должна быть группа"
+msgstr "у %(path)s должен быть флаг setgid"
 
 # MSS: на самом деле, это немного о другом
 #: bin/check_perms:292
-#, fuzzy
 msgid "checking set-gid for %(wrapper)s"
-msgstr "проверка группы владельца файла %(wrapper)s"
+msgstr "проверка флага setgid для %(wrapper)s"
 
 # MSS: на самом деле, это немного о другом
 #: bin/check_perms:296
-#, fuzzy
 msgid "%(wrapper)s must be set-gid"
-msgstr "у файла %(wrapper)s должна быть группа"
+msgstr "у %(wrapper)s должен быть флаг setgid"
 
 #: bin/check_perms:306
 msgid "checking permissions on %(pwfile)s"
@@ -9658,7 +9861,6 @@ msgstr ""
 "\n"
 
 #: bin/config_list:117
-#, fuzzy
 msgid ""
 "# -*- python -*-\n"
 "# -*- coding: %(charset)s -*-\n"
@@ -9666,7 +9868,7 @@ msgid ""
 "## captured on %(when)s\n"
 msgstr ""
 "# -*- python -*-\n"
-"# -*- coding: %(charset)s -*-\n"
+"# -*- кодировка: %(charset)s -*-\n"
 "## параметры списка рассылки \"%(listname)s\"\n"
 "## данные собраны %(when)s\n"
 
@@ -9858,19 +10060,19 @@ msgstr "Укажите один из ключей: -p или -m."
 
 #: bin/dumpdb:133
 msgid "[----- start %(typename)s file -----]"
-msgstr ""
+msgstr "[----- начало для файла %(typename)s -----]"
 
 #: bin/dumpdb:139
 msgid "[----- end %(typename)s file -----]"
-msgstr ""
+msgstr "[----- завершение для файла %(typename)s -----]"
 
 #: bin/dumpdb:142
 msgid "<----- start object %(cnt)s ----->"
-msgstr ""
+msgstr "<----- начало объекта %(cnt)s ----->"
 
 #: bin/export.py:20
 msgid "Export an XML representation of a mailing list."
-msgstr ""
+msgstr "Экспорт XML-представления списка рассылки."
 
 #: bin/export.py:319
 msgid ""
@@ -9878,6 +10080,9 @@ msgid ""
 "\n"
 "Export the configuration and members of a mailing list in XML format."
 msgstr ""
+"%%prog [параметры]\n"
+"\n"
+"Экспортирует настройки и подписчиков списка рассылки в формат XML."
 
 #: bin/export.py:325
 msgid ""
@@ -9885,6 +10090,8 @@ msgid ""
 "is\n"
 "used."
 msgstr ""
+"Записать XML в файл FILENAME. Если имя файла не задано, или оно \"-\", то "
+"записать в stdout."
 
 #: bin/export.py:329
 msgid ""
@@ -9892,6 +10099,9 @@ msgid ""
 "output.  Use -P to get a list of supported schemes, which are\n"
 "case-insensitive."
 msgstr ""
+"Задать схему хэширования выводимых паролей в стиле RFC 2307.\n"
+"Используйте -P чтобы получить регистронезависимый список\n"
+"поддерживаемых схем."
 
 #: bin/export.py:334
 msgid ""
@@ -9899,6 +10109,8 @@ msgid ""
 "are\n"
 "case-insensitive."
 msgstr ""
+"Вывести список поддерживаемых схем хэширования паролей и завершить работу.\n"
+"Имена схем регистронезависимы."
 
 #: bin/export.py:339
 msgid ""
@@ -9906,15 +10118,17 @@ msgid ""
 "are\n"
 "included in the XML output.  Multiple -l flags may be given."
 msgstr ""
+"Включить заданный список рассылки в вывод. Если ничего не задано, вывести в "
+"XML\n"
+"все списки рассылки сервера. Можно использовать несколько параметров -l."
 
 #: bin/export.py:345
 msgid "Unexpected arguments"
-msgstr ""
+msgstr "Неизвестные аргументы"
 
 #: bin/export.py:351
-#, fuzzy
 msgid "Invalid password scheme"
-msgstr "Пароль списка рассылки:"
+msgstr "Ошибка в схеме хэширования паролей"
 
 #: bin/find_member:19
 msgid ""
@@ -10062,9 +10276,8 @@ msgstr ""
 "сценария завершается.\n"
 
 #: bin/fix_url.py:75
-#, fuzzy
 msgid "Locking list"
-msgstr "Сохранение списка"
+msgstr "Блокировка списка рассылки"
 
 #: bin/fix_url.py:85
 msgid "Setting web_page_url to: %(web_page_url)s"
@@ -10111,7 +10324,7 @@ msgstr ""
 
 #: bin/genaliases:84
 msgid "genaliases can't do anything useful with mm_cfg.MTA = %(mta)s."
-msgstr ""
+msgstr "Скрипт genaliases бесполезен в случае параметра mm_cfg.MTA = %(mta)s."
 
 #: bin/inject:20
 msgid ""
@@ -10221,7 +10434,6 @@ msgid "List: %(listname)s, \tOwners: %(owners)s"
 msgstr "Список: %(listname)s, \tвладельцы: %(owners)s"
 
 #: bin/list_lists:19
-#, fuzzy
 msgid ""
 "List all mailing lists.\n"
 "\n"
@@ -10248,7 +10460,7 @@ msgid ""
 "        Print this text and exit.\n"
 "\n"
 msgstr ""
-"Вывести инфомрацию о всех списках рассылок.\n"
+"Вывести информацию обо всех списках рассылки.\n"
 "\n"
 "Запуск: %(program)s [параметры]\n"
 "\n"
@@ -10257,14 +10469,18 @@ msgstr ""
 "    -a / --advertised\n"
 "        Вывести информацию только о публично анонсированных списках.\n"
 "\n"
+"    -p / --public-archive\n"
+"        Вывести информацию только о списках с открытыми архивами.\n"
+"\n"
+"\n"
 "    --virtual-host-overview=домен\n"
 "    -V домен\n"
 "        Вывести информацию только о списках рассылки указанного домена.\n"
-"        Для использования должно быть задано значение параметра\n"
+"        Работает только в том случае, если задано значение параметра\n"
 "        VIRTUAL_HOST_OVERVIEW.\n"
 "\n"
 "    -b / --bare\n"
-"        Выводить только названия списков, без описания.\n"
+"        Выводить только названия списков рассылки, без описания.\n"
 "\n"
 "    -h / --help\n"
 "        Напечатать эту подсказку и завершить работу.\n"
@@ -10429,14 +10645,14 @@ msgid ""
 "of\n"
 "        all the lists will be displayed.\n"
 msgstr ""
-"Вывести список владельцев списка рассылки или всех списков рассылок.\n"
+"Вывести список владельцев списка рассылки или всех списков рассылки.\n"
 "\n"
 "Запуск: %(PROGRAM)s [параметры] [имя_списка ...]\n"
 "\n"
 "Параметры:\n"
 "\n"
 "    -w / --with-listnames\n"
-"        Группировать владельцев по их спискам рассылок, включая в вывод\n"
+"        Группировать владельцев по их спискам рассылки, включая в вывод\n"
 "        названия списков. Иначе владельцы будут отсортированы (с удалением\n"
 "        всех одинаковых значений, кроме одного) по их адресам эл. почты.\n"
 "\n"
@@ -10450,7 +10666,7 @@ msgstr ""
 "        Вывести список владельцев указанного списка рассылки. Можно\n"
 "        перечислить несколько имен списков, но только после ключей. Если\n"
 "        не указан никакой список, выводятся адреса владельцев всех\n"
-"        списков рассылок.\n"
+"        списков рассылки.\n"
 
 #: bin/mailmanctl:20
 msgid ""
@@ -10760,9 +10976,9 @@ msgstr ""
 "Параметры:\n"
 "\n"
 "    -c/--listcreator\n"
-"        Задать пароль создателя списков рассылок, а не администратора\n"
-"        сайта. Создатель списков рассылок может удалять и создавать\n"
-"        рассылки, но не облаадет всеми правами администратора сайта.\n"
+"        Задать пароль создателя списков рассылки, а не администратора\n"
+"        сайта. Создатель списков рассылки может удалять и создавать\n"
+"        рассылки, но не обладает всеми правами администратора сайта.\n"
 "\n"
 "    -h/--help\n"
 "        Напечатать эту подсказку и завершить работу.\n"
@@ -10776,7 +10992,7 @@ msgstr "администратора сайта"
 
 #: bin/mmsitepass:80
 msgid "list creator"
-msgstr "создателя списков рассылок"
+msgstr "создателя списков рассылки"
 
 #: bin/mmsitepass:86
 msgid "New %(pwdesc)s password: "
@@ -10803,7 +11019,6 @@ msgid "Password change failed."
 msgstr "Пароль изменить не удалось."
 
 #: bin/msgfmt.py:5
-#, fuzzy
 msgid ""
 "Generate binary message catalog from textual translation description.\n"
 "\n"
@@ -10830,12 +11045,11 @@ msgid ""
 "    --version\n"
 "        Display version information and exit.\n"
 msgstr ""
-"Создать бинарный файл сообщений из файла текстовых сообщений с\n"
-"переводом.\n"
+"Создать бинарный файл сообщений из текстового файла с переводами.\n"
 "\n"
-"Эта программа преобраузет текстовые сообщения стандартного вида\n"
-"(po-файл) в бинарный файл GNU (mo-файл). То есть данный сценарий\n"
-"является упрощенным аналогом GNU-программы msgfmt.\n"
+"Эта программа преобразует стандартный текстовый файл с переводами\n"
+"(po-файл) в бинарный файл GNU (mo-файл). Данный сценарий является\n"
+"упрощенным аналогом GNU-программы msgfmt.\n"
 "\n"
 "Запуск: msgfmt.py [параметры] filename.po\n"
 "\n"
@@ -10843,9 +11057,8 @@ msgstr ""
 "    -o файл\n"
 "    --output-file=файл\n"
 "        Выходной файл, в который должна производиться запись. Если этот\n"
-"        параметр опущен, выходным файлом будет filename.mo (то есть\n"
-"        используется исходное имя файла, но расширение \"po\" заменяется\n"
-"        на \"mo\").\n"
+"        параметр опущен, выходным файлом будет filename.mo (то же имя\n"
+"        что и у входного файла, только с расширением \".mo\").\n"
 "\n"
 "    -h\n"
 "    --help\n"
@@ -10856,12 +11069,10 @@ msgstr ""
 "        Напечатать версию сценария и завершить работу.\n"
 
 #: bin/msgfmt.py:49
-#, fuzzy
 msgid "Add a non-fuzzy translation to the dictionary."
 msgstr "Добавить точный перевод в словарь."
 
 #: bin/msgfmt.py:57
-#, fuzzy
 msgid "Return the generated output."
 msgstr "Возвратить сгенерированный вывод."
 
@@ -10966,50 +11177,89 @@ msgstr ""
 "Создать новый пустой список рассылки.\n"
 "\n"
 "Запуск:\n"
-"    %(PROGRAM)s [параметры] [имя [адрес_администратора [пароль]]]\n"
+"    %(PROGRAM)s [параметры] [имя_списка [адрес_администратора [пароль]]]\n"
 "\n"
 "Параметры:\n"
 "\n"
 "    -l язык\n"
-"    --language язык\n"
-"        Задать предпочитаемый яхык интерфейса списка рассылки в виде\n"
+"    --language=язык\n"
+"        Задать предпочитаемый язык интерфейса списка рассылки в виде\n"
 "        двухбуквенного кода.\n"
 "\n"
+"    -u urlhost\n"
+"    --urlhost=домен\n"
+"        Задать имя домена для web-интерфейса управления списком рассылки.\n"
+"\n"
+"    -e emailhost\n"
+"    --emailhost=домен\n"
+"        Задать имя почтового домена списка рассылки.\n"
+"\n"
 "    -q/--quiet\n"
-"        Обычно администратор списка уведомляется по электронной почте о\n"
-"        создании спсика рассылки, этот параметр отменяет отправку\n"
-"        уведомления.\n"
+"        Обычно администратор списка рассылки уведомляется о его создании\n"
+"        по электронной почте (после подтверждения). Этот параметр отменяет "
+"запрос\n"
+"        подтверждения и отправку уведомления.\n"
 "\n"
 "    -h/--help\n"
 "        Напечатать эту подсказку и завершить работу.\n"
 "\n"
-"Вы можете указать столько начальных аргументов, сколько хотите, если вы\n"
-"прпоустите что-то нужное, вам будет предложено ввести это значение.\n"
+"Вы можете указать столько аргументов, сколько хотите, если Вы\n"
+"пропустите что-то нужное, Вам будет предложено ввести это значение.\n"
 "\n"
 "У каждого списка рассылки, управляемого Mailman, есть два параметра,\n"
 "определяющие имя узла по умолчанию для исходящей почты и URL по\n"
-"умолчанию для веб-интерфейса. При создании списка эти значения\n"
-"вычисляются автоматически, но если у вас несколько виртуальных серверов,\n"
-"возможно, значения по умолчанию могут не подходить вам.\n"
+"умолчанию для веб-интерфейса. При создании списка рассылки эти значения\n"
+"вычисляются автоматически, но если у вас несколько виртуальных хостов,\n"
+"то, возможно, значения по умолчанию Вам не подойдут.\n"
 "\n"
-"Альтернативное имя домена можно задать, создав список с таким именем:\n"
+"Вы можете задать альтернативное имя домена в котором будет создан список\n"
+"рассылки следующим образом:\n"
 "\n"
-"    mylist@www.mydom.ain\n"
+"    newlist --urlhost=www.mydom.ain имя_списка_рассылки\n"
 "\n"
-"Здесь \"www.mydom.ain\" нужно заменить на нужное вам имя узла. Например,\n"
-"с таким значением описание списка рассылки будет доступно по адресу\n"
-"http://www.mydom.ain/mailman/listinfo. Кроме того, значение\n"
-"\"www.mydom.ain\" должно быть ключом для параметра VIRTUAL_HOSTS в файлах\n"
-" mm_cfg.py и Defaults.py. По этому параметру будет определяться адрес\n"
-"эл. почты списка. Если этот параметр не найден, значение \"www.mydom.ain\"\n"
-"будет использоваться в обоих случаях.\n"
+"Здесь \"www.mydom.ain\" нужно заменить на нужное имя виртуального хоста.\n"
+"Со значением, указанным в этом примере, общее описание списков рассылки\n"
+"этого виртуального хоста будет доступно по адресу\n"
+"http://www.mydom.ain/mailman/listinfo. Кроме того, \"www.mydom.ain\"\n"
+"должен быть указан в качестве ключа в параметре VIRTUAL_HOSTS в файлах\n"
+"mm_cfg.py и Defaults.py если Вы хотите чтобы почтовый домен был задан\n"
+"автоматически.\n"
 "\n"
-"Если вы зададите имя списка просто как \"mylist\", имя узла для адреса эл.\n"
-"почты будет взято из параметра DEFAULT_EMAIL_HOST, а имя узла для веб-\n"
-"интерфейса -- из параметра DEFAULT_URL (как указано в файле Defaults.py\n"
-"или перекрывающем его значения файле mm_cfg.py).\n"
+"Если Вы хотите чтобы почтовый домен отличался от виртуального хоста или\n"
+"если домен заданный в urlhost отсутствует в VIRTUAL_HOSTS, Вы можете задать\n"
+"параметр \"emailhost\" следующим образом:\n"
 "\n"
-"Имена списков рассылки приводятся к нижнему регистру.\n"
+"    newlist --urlhost=www.mydom.ain --emailhost=mydom.ain "
+"имя_списка_рассылки\n"
+"\n"
+"где \"mydom.ain\" представляет собой имя почтового домена. Если Вы не "
+"укажете\n"
+"\"emailhost\", а \"urlhost\" не будет найден в списке виртуальных хостов, "
+"то\n"
+"для определения почтового домена будет использоваться значение параметра\n"
+"mm_cfg.DEFAULT_EMAIL_HOST.\n"
+"\n"
+"Для обратной совместимости Вы также можете задавать домен для списка "
+"рассылки\n"
+"в формате\n"
+"\n"
+"    имя_списка_рассылки@www.mydom.ain\n"
+"\n"
+"где \"www.mydom.ain\" будет использоваться в качестве значения \"urlhost\", "
+"а также\n"
+"\"emailhost\", если последний не найден в таблице виртуальных хостов. Учтите "
+"что\n"
+"\"--urlhost\" и \"--emailhost\" имеют преимущество перед этой формой "
+"записи.\n"
+"\n"
+"Если вы задаете имя списка рассылки без указания имени домена, то имя "
+"почтового\n"
+"домена будет взято из параметра DEFAULT_EMAIL_HOST, а URL для web-интерфейса "
+"--\n"
+"из параметра DEFAULT_URL (которые заданы в Вашем файле Defaults.py или\n"
+"переопределены в mm_cfg.py).\n"
+"\n"
+"Имена списков рассылки всегда приводятся к нижнему регистру.\n"
 
 #: bin/newlist:161
 msgid "Unknown language: %(lang)s"
@@ -11036,6 +11286,8 @@ msgid ""
 " - owner addresses need to be fully-qualified names like \"owner@example.com"
 "\", not just \"owner\"."
 msgstr ""
+" - адрес владельца должен быть полноценным адресом e-mail, таким как "
+"\"owner@example.com\", а не просто \"owner\"."
 
 # MSS: could be better?
 #: bin/newlist:243
@@ -11044,7 +11296,6 @@ msgstr ""
 "Нажмите <Enter> для отправки извещения о создании списка %(listname)s..."
 
 #: bin/qrunner:20
-#, fuzzy
 msgid ""
 "Run one or more qrunners, once or repeatedly.\n"
 "\n"
@@ -11110,11 +11361,11 @@ msgid ""
 "Note also that this script should be started up from mailmanctl as a normal\n"
 "operation.  It is only useful for debugging if it is run separately.\n"
 msgstr ""
-"Запустить один или более обработчиков Mailman единожды или в цикле.\n"
+"Запустить один или более обработчиков qrunner, единожды или в цикле.\n"
 "\n"
 "Каждый обработчик запускается и обрабатывает все файлы в своем каталоге.\n"
 "Когда он закончит работу, запускается другой обработчик и обрабатывает\n"
-"файлы в своем каталоге и т. д. Количество итераций можно задавать в\n"
+"файлы в своем каталоге и т.д. Количество итераций можно задавать в\n"
 "командной строке.\n"
 "\n"
 "Запуск: %(PROGRAM)s [параметры]\n"
@@ -11128,20 +11379,22 @@ msgstr ""
 "        номер:диапазон, оно используется для обработки очереди\n"
 "        несколькими обработчиками. Здесь диапазон -- общее число\n"
 "        обработчиков для очереди, а номер -- номер обработчика из\n"
-"        промежутка (0..диапазон].\n"
-"        Если вы используете несколько обработчиков для одной очереди, у\n"
-"        них всех должно быть одно и то же значение диапазона. Если\n"
+"        интервала [0..диапазон].\n"
+"\n"
+"        Если вы используете несколько обработчиков для одной очереди,\n"
+"        убедитесь что все они имеют одно и то же значение диапазона. Если\n"
 "        параметр номер:диапазон отсутствует, подразумевается значение\n"
 "        1:1.\n"
+"\n"
 "        Можно использовать несколько ключей -r, обработчики будут\n"
 "        запускаться по очереди. Имя обработчика \"All\" является\n"
 "        псевдонимом для всех обработчиков, перечисленных в списке,\n"
-"        выдаваемом по ключу -l.\n"
+"        доступном по ключу -l.\n"
 "\n"
 "    --once\n"
 "    -o\n"
 "        Запустить каждый обработчик только один раз. Иначе обработчики\n"
-"        будут запускаться по кругу, пока не получат сигнал SIGTERM или\n"
+"        будут запускаться снова, пока не получат сигнал SIGTERM или\n"
 "        SIGINT.\n"
 "\n"
 "    -l/--list\n"
@@ -11153,16 +11406,17 @@ msgstr ""
 "\n"
 "    -s/--subproc\n"
 "        Используется только если обработчик -- дочерний процесс сценария\n"
-"        mailmanctl. Этот ключ параметр несколько меняет поведение\n"
-"        обработчика при завершении работы из-за ошибки, когда обработчик\n"
-"        является дочерним.\n"
+"        mailmanctl. Этот параметр меняет поведение обработчика\n"
+"        при завершении работы из-за ошибки.\n"
 "\n"
 "    -h/--help\n"
 "        Напечатать эту подсказку и завершить работу.\n"
 "\n"
 "Имя обработчика необходимо, если не указан ключ -l или -h, и оно должно\n"
-"совпадать с одним из имен, возвращаемых при запуске сценария с ключом\n"
-"-l.\n"
+"совпадать с одним из имен, возвращаемых при запуске сценария с ключом -l.\n"
+"\n"
+"Учтите, что этот сценарий должен запускаться из mailmanctl при нормальных\n"
+"условиях. Запуск его независимо имеет смысл только для целей отладки.\n"
 
 #: bin/qrunner:178
 msgid "%(name)s runs the %(runnername)s qrunner"
@@ -11207,9 +11461,34 @@ msgid ""
 "\n"
 "This script is provided for convenience purposes only.  It isn't supported.\n"
 msgstr ""
+"Уменьшает использование диска архивами Pipermail.\n"
+"\n"
+"Запуск: %(PROGRAM)s [параметры] файл ...\n"
+"\n"
+"Параметры:\n"
+"    -h / --help\n"
+"        Вывести это справочное сообщение и завершить работу.\n"
+"\n"
+"Используется только для исправления архивных файлов -article, созданных\n"
+"Mailman версий 2.1.3 или более ранних, в которых есть атрибуты html_body.\n"
+"Эти атрибуты могут занимать большой объем дискового пространства и снижать\n"
+"скорость работы списков рассылки с высокой активностью подписчиков,\n"
+"особенно в случае частых постингов больших объемов текста.\n"
+"\n"
+"Примеры:\n"
+"\n"
+"%% ls -1 archives/private/*/database/*-article | xargs %(PROGRAM)s\n"
+"\n"
+"После использования этого сценария рекомендуется проверить права доступа\n"
+"при помощи \"bin/check_perms -f\".\n"
+"\n"
+"Вам скорее всего захочется удалить резервные копии файлов -article.bak,\n"
+"создаваемые этим сценарием, после проверки того что все прошло нормально.\n"
+"\n"
+"Этот сценарий предлагается только для удобства. Его поддержка не "
+"осуществляется.\n"
 
 #: bin/remove_members:20
-#, fuzzy
 msgid ""
 "Remove members from a list.\n"
 "\n"
@@ -11253,27 +11532,28 @@ msgid ""
 "\n"
 "    addr1 ... are additional addresses to remove.\n"
 msgstr ""
-"Удалить пользователей из списка.\n"
+"Удалить пользователей из списка рассылки.\n"
 "\n"
 "Запуск:\n"
-"    remove_members [параметры] имя_спсика] [адрес ...]\n"
+"    remove_members [параметры] имя_списка_рассылки] [адрес1 ...]\n"
 "\n"
 "Параметры:\n"
 "\n"
 "    --file=файл\n"
 "    -f файл\n"
-"        Удалить подписки, соответствущие адресам из файла. Если вместо\n"
+"        Удалить подписки, соответствующие адресам из файла. Если вместо\n"
 "        файла указан символ \"-\", производится чтение из стандартного\n"
-"        ввода.\n"
+"        потока ввода.\n"
 "\n"
 "    --all\n"
 "    -a\n"
-"        Удалить все подписки (исключает использование --fromall).\n"
+"        Удалить все подписки заданного списка рассылки\n"
+"        (не используется вместе с --fromall).\n"
 "\n"
 "    --fromall\n"
 "        Удаляет данные адреса из всех списков рассылки этой системы,\n"
-"        независимо от того, какому виртуальному серверу они принадлежат.\n"
-"        Не может использоваться совместо с -a/--all. Также не нужно\n"
+"        независимо от того, какому виртуальному хосту они принадлежат.\n"
+"        Не может использоваться совместно с -a/--all. Также не нужно\n"
 "        указывать имя списка рассылки.\n"
 "\n"
 "    --nouserack\n"
@@ -11288,13 +11568,13 @@ msgstr ""
 "\n"
 "    --help\n"
 "    -h\n"
-"        Напечатать эту подсказку и завершить работу.\n"
+"        Вывести эту подсказку и завершить работу.\n"
 "\n"
-"    имя_списка\n"
-"        Имя списка, в котором удалять подписки.\n"
+"    имя_списка_рассылки\n"
+"        Имя списка рассылки, в котором удаляются подписки.\n"
 "\n"
-"    адрес ...\n"
-"        Адреса, чьи подписки нужно удалить.\n"
+"    адрес1 ...\n"
+"        Адреса, которые нужно отписать.\n"
 
 #: bin/remove_members:156
 msgid "Could not open file for reading: %(filename)s."
@@ -11331,6 +11611,22 @@ msgid ""
 "    -v / --verbose\n"
 "        Print what the script is doing.\n"
 msgstr ""
+"Сбросить пароли для всех подписчиков списка рассылки.\n"
+"\n"
+"Этот сценарий сбрасывает пароли всех подписчиков списка рассылки. Его также "
+"можно\n"
+"использовать для того чтобы сбросить пароли всех подписчиков всех списков "
+"рассылки\n"
+"на сервере, но это Ваша ответственность - уведомить подписчиков о смене их "
+"паролей.\n"
+"\n"
+"Этот сценарий предназначен для запуска в формате bin/withlist, например:\n"
+"\n"
+"% bin/withlist -l -r reset_pw имя_списка_рассылки [параметры]\n"
+"\n"
+"Параметры:\n"
+"    -v / --verbose\n"
+"        Напечатать справку о работе сценария.\n"
 
 #: bin/reset_pw.py:77
 msgid "Changing passwords for list: %(listname)s"
@@ -11411,9 +11707,8 @@ msgid "stale lock file"
 msgstr "оставшийся файл блокировки"
 
 #: bin/rmlist:141
-#, fuzzy
 msgid "held message file"
-msgstr "все задержанные сообщения"
+msgstr "файл с задержанными сообщениями"
 
 #: bin/rmlist:146 bin/rmlist:148
 msgid "private archives"
@@ -11710,7 +12005,6 @@ msgid "scan the po file comparing msgids with msgstrs"
 msgstr "обработать po-файл, сравнивая содержимое полей msgid и msgstr"
 
 #: bin/unshunt:20
-#, fuzzy
 msgid ""
 "Move a message from the shunt queue to the original queue.\n"
 "\n"
@@ -11732,12 +12026,14 @@ msgstr ""
 "\n"
 "Параметры:\n"
 "\n"
-"    --help\n"
-"    -h\n"
+"    -h / --help\n"
 "        Напечатать эту подсказку и завершить работу.\n"
 "\n"
-"Вы можете указать \"каталог\", если нужно обработать сообщения в каталоге\n"
-"отличном от qfiles/shunt.\n"
+"Необязательный параметр \"каталог\" используется в том случае, если нужно\n"
+"обработать сообщения в каталоге, отличном от qfiles/shunt.\n"
+"*** Предупреждение *** Не перемещайте сообщения которые не были отложены.\n"
+"Например, запуск сценария в каталоге qfiles/out/ приведет к потере\n"
+"всех сообщений из этой очереди.\n"
 
 #: bin/unshunt:85
 msgid ""
@@ -11931,17 +12227,16 @@ msgid "updating old qfiles"
 msgstr "обновляются старые файлы очереди"
 
 #: bin/update:455
-#, fuzzy
 msgid "Warning!  Not a directory: %(dirpath)s"
 msgstr "Несуществующий каталог очереди: %(dirpath)s"
 
 #: bin/update:530
 msgid "message is unparsable: %(filebase)s"
-msgstr ""
+msgstr "сообщение нечитаемо: %(filebase)s"
 
 #: bin/update:544
 msgid "Warning!  Deleting empty .pck file: %(pckfile)s"
-msgstr ""
+msgstr "Предупреждение! Удаляется пустой .pck файл: %(pckfile)s"
 
 #: bin/update:563
 msgid "Updating Mailman 2.0 pending_subscriptions.db database"
@@ -11953,11 +12248,11 @@ msgstr "Обновляется база данных pending.pck версии 2.1.4"
 
 #: bin/update:598
 msgid "Ignoring bad pended data: %(key)s: %(val)s"
-msgstr ""
+msgstr "Игнорируются плохие данные: %(key)s: %(val)s"
 
 #: bin/update:614
 msgid "WARNING: Ignoring duplicate pending ID: %(id)s."
-msgstr ""
+msgstr "ПРЕДУПРЕЖДЕНИЕ: игнорируются повторяющиеся ID: %(id)s."
 
 #: bin/update:667
 msgid "getting rid of old source files"
@@ -12094,7 +12389,6 @@ msgid "Using Mailman version:"
 msgstr "Используется Mailman версии:"
 
 #: bin/withlist:20
-#, fuzzy
 msgid ""
 "General framework for interacting with a mailing list object.\n"
 "\n"
@@ -12210,7 +12504,7 @@ msgid ""
 "and run this from the command line:\n"
 " %% bin/withlist -l -r changepw mylist somebody@somewhere.org foobar\n"
 msgstr ""
-"Среда взаимодействия со объектом списка рассылки.\n"
+"Программная оболочка для взаимодействия с объектом списка рассылки.\n"
 "\n"
 "Существуют два способа использовать этот сценарий: интерактивно и\n"
 "программно. При использовании первого способа можно менять и проверять\n"
@@ -12220,52 +12514,56 @@ msgstr ""
 "пространство имен.\n"
 "\n"
 "При использовании второго способа можно написать функцию, оперирующую\n"
-"объектом MailList, и такой сценарий будет выполнять всю работу (см.\n"
-"примеры ниже). В этом случае используется синтаксис:\n"
+"объектом MailList, и этот сценарий возьмет на себя всю вспомогательную\n"
+"работу (см. примеры ниже). В этом случае используется синтаксис:\n"
 "\n"
-"%% bin/withlist [параметры] имя_спсика [аргументы ...]\n"
+"%% bin/withlist [параметры] имя_списка_рассылки [аргументы ...]\n"
 "\n"
 "Параметры:\n"
 "\n"
 "    -l / --lock\n"
 "        Заблокировать список при открытии. Обычно список открывается\n"
-"        незаблокированным (то есть доступным, например, для чтения). Вы\n"
-"        всегда можете заблокировать файл, набрав \"m.Lock()\".\n"
-"        Если вы используете этот параметр, вам нужно будет явно вызвать\n"
+"        незаблокированным (то есть доступным, например, для чтения).\n"
+"        Вы всегда можете заблокировать файл, набрав \"m.Lock()\".\n"
+"\n"
+"        Если вы используете этот параметр, Вам нужно будет явно вызвать\n"
 "        функцию m.Save() перед выходом, иначе изменения объекта MailList\n"
-"        сохранены не будут (хотя список разблокируется в любом случае).\n"
+"        не будут сохранены (хотя список разблокируется в любом случае).\n"
 "\n"
 "    -i / --interactive\n"
 "        Вывести приглашение интерпретатора после выполнения всех\n"
-"        процедур. По умолчанию присутствует, если не указан ключ -r.\n"
+"        действий. Это поведение по умолчанию, если не указан ключ -r.\n"
 "\n"
-"    --run [модуль.]вызов\n"
-"    -r [модуль.]вызов\n"
-"        Запустить сценарий для открытого объекта MailList. Производится\n"
-"        попытка загрузить модуль \"модуль\" (который должен быть\n"
-"        доступен), затем производится \"вызов\". В качестве вызова может\n"
-"        выступать функция или класс, вызов производится с объектом\n"
+"    --run [модуль.]подпрограмма\n"
+"    -r [модуль.]подпрограмма\n"
+"        Запустить сценарий для текущего объекта MailList. Производится\n"
+"        попытка загрузить сценарий \"модуль\" (который должен находиться\n"
+"        в каталоге содержащем withlist или быть доступным по sys.path)\n"
+"        после чего производится запуск \"подпрограммы\". Это может\n"
+"        быть функция или класс, ее вызов производится с объектом\n"
 "        MailList в качестве первого аргумента. Если в командной строке\n"
-"        заданы дополнительные аргументы, они передаются как следующие\n"
-"        аргументы \"вызову\". \"Модуль\" можно опустить, если его нет,\n"
-"        производится попытка импортировать модуль, одноименный \"вызову\".\n"
+"        заданы дополнительные \"аргументы\", то они передаются\n"
+"        \"подпрограмме\" последовательно.\n"
+"\n"
+"        \"Модуль\" можно опустить, в этом случае в качестве имени сценария\n"
+"        используется \"подпрограмма\".\n"
+"\n"
 "        Результаты вызова передаются глобальной переменной \"r\".\n"
 "\n"
 "    --all / -a\n"
 "        Имеет смысл только при совместном использовании с ключом -r.\n"
 "        Приводит к выполнению сценария для всех списков рассылки. При\n"
 "        использовании ключа -a не указывайте список рассылки в командной\n"
-"        строке. Спсиок результатов передается глобальной переменной \"r\".\n"
+"        строке. Список результатов передается глобальной переменной \"r\".\n"
 "\n"
 "    --quiet / -q\n"
-"        Не выводить сообщения о состоянии.\n"
+"        Не выводить сообщения о ходе выполнения.\n"
 "\n"
 "    --help / -h\n"
 "        Напечатать эту подсказку и завершить работу.\n"
 "\n"
-"\n"
-"Пример использования ключа -r. Пусть у нас есть файл listaddr.py,\n"
-"содержащий следующие лве функции:\n"
+"Ниже приводятся примеры использования ключа -r. Пусть у нас есть файл\n"
+"listaddr.py, содержащий следующие две функции:\n"
 "\n"
 "def listaddr(mlist):\n"
 "    print mlist.GetListEmail()\n"
@@ -12273,7 +12571,7 @@ msgstr ""
 "def requestaddr(mlist):\n"
 "    print mlist.GetRequestEmail()\n"
 "\n"
-"Тогда вы можете напечатать адрес списка рассылки из командной строки,\n"
+"Тогда Вы можете напечатать адрес списка рассылки из командной строки,\n"
 "выполнив:\n"
 "\n"
 "%% bin/withlist -r listaddr mylist\n"
@@ -12282,7 +12580,15 @@ msgstr ""
 "Выполняется listaddr.listaddr() ...\n"
 "mylist@myhost.com\n"
 "\n"
-"Другой пример. Пусть вы хотите изменить пароль определенного\n"
+"Или Вы можете вывести адрес списка рассылки для командных запросов:\n"
+"\n"
+"%% bin/withlist -r listaddr.requestaddr mylist\n"
+"Загружается информация о списке рассылки mylist (разблокирован)\n"
+"Импортируется listaddr ...\n"
+"Выполняется listaddr.requestaddr() ...\n"
+"mylist-request@myhost.com\n"
+"\n"
+"Другой пример. Допустим, Вы хотите изменить пароль определенного\n"
 "пользователя в определенном списке. Тогда можно создать такой файл\n"
 "changepw.py:\n"
 "\n"
@@ -12295,7 +12601,7 @@ msgstr ""
 "    except NotAMemberError:\n"
 "        print 'No address matched:', addr\n"
 "\n"
-"Теперь выполним его из командной строки:\n"
+"и запустить его из командной строки:\n"
 "\n"
 "%% bin/withlist -l -r changepw mylist somebody@somewhere.org foobar\n"
 
@@ -12404,12 +12710,22 @@ msgid ""
 "    -h/--help\n"
 "        Print this message and exit.\n"
 msgstr ""
+"Проверяет наличие необработанных административных запросов\n"
+"и уведомляет о них владельцев списка рассылки в случае необходимости.\n"
+"\n"
+"Запуск: %(PROGRAM)s [параметры]\n"
+"\n"
+"Параметры:\n"
+"\n"
+"    -h/--help\n"
+"        Вывести это сообщение и завершить работу.\n"
 
 #: cron/checkdbs:108
 msgid ""
 "Notice: %(discarded)d old request(s) automatically expired.\n"
 "\n"
 msgstr ""
+"Уведомление: автоматически удалено устаревших запросов - %(discarded)d.\n"
 
 #: cron/checkdbs:121
 msgid "%(count)d %(realname)s moderator request(s) waiting"
@@ -12417,16 +12733,15 @@ msgstr "Необработанных модератором %(realname)s запросов: %(count)d"
 
 #: cron/checkdbs:124
 msgid "%(realname)s moderator request check result"
-msgstr ""
+msgstr "Результаты проверки необработанных запросов %(realname)s"
 
 #: cron/checkdbs:144
 msgid "Pending subscriptions:"
 msgstr "Запросы на подписку, ожидающие обработки:"
 
 #: cron/checkdbs:155
-#, fuzzy
 msgid "Pending unsubscriptions:"
-msgstr "Запросы на подписку, ожидающие обработки:"
+msgstr "Запросы на отписку, ожидающие обработки:"
 
 #: cron/checkdbs:162
 msgid ""
@@ -12466,9 +12781,27 @@ msgid ""
 "    -h / --help\n"
 "        Print this message and exit.\n"
 msgstr ""
+"Очистка очередей плохих и задержанных сообщений, рекомендуется\n"
+"запускать ежедневно.\n"
+"\n"
+"Этот сценарий просматривает каталоги с \"плохими\" и \"задержанными\"\n"
+"сообщениями и, если параметр mm_cfg.BAD_SHUNT_STALE_AFTER is > 0,\n"
+"удаляет все файлы, созданные ранее указанного числа секунд назад.\n"
+"\n"
+"Если mm_cfg.BAD_SHUNT_ARCHIVE_DIRECTORY содержит путь к каталогу\n"
+"с правом на запись, то эти файлы перемещаются в этот каталог.\n"
+"В противном случае они удаляются.\n"
+"\n"
+"Только обычные файлы, находящиеся непосредственно в папках очередей\n"
+"\"плохих\" и \"задержанных\" сообщений, будут обработаны.\n"
+"\n"
+"Запуск: %(PROGRAM)s [параметры]\n"
+"\n"
+"Параметры:\n"
+"    -h / --help\n"
+"        Вывести это сообщение и завершить работу.\n"
 
 #: cron/disabled:20
-#, fuzzy
 msgid ""
 "Process disabled members, recommended once per day.\n"
 "\n"
@@ -12519,24 +12852,24 @@ msgid ""
 msgstr ""
 "Обработать блокированных подписчиков, рекомендуется запускать раз в день.\n"
 "\n"
-"Этот сценарий рассматривает подписчиков, для которых достака сообщений\n"
-"была приостановлена. Если они заблокированы в силу ошибок доставки, им\n"
-"будет отправлено дополнительно извещение, или же, если им было\n"
-"отправлено максимальное количество извещений, их подписка может быть\n"
-"удалена.\n"
+"Этот сценарий просматривает подписчиков, для которых доставка сообщений\n"
+"была приостановлена. Если они заблокированы из-за ошибок доставки, им\n"
+"будет отправлено очередное извещение, или же, если им уже отправлено\n"
+"максимальное количество извещений, их подписка будет удалена.\n"
 "\n"
-"С помощью ключей --byadmin, --byuser и --unknown укажите пользователей,\n"
-"которым нужно отправить извещения. Чтобы отправить извещения всем\n"
-"пользователям, укажите ключ --all.\n"
+"С помощью ключей --byadmin, --byuser и --unknown можно включить отправку\n"
+"извещений также подписчикам, заблокированным по соответствующим причинам.\n"
+"Чтобы отправить извещения всем заблокированным пользователям,\n"
+"укажите ключ --all.\n"
 "\n"
 "Запуск: %(PROGRAM)s [параметры]\n"
 "\n"
-"Options:\n"
+"Параметры:\n"
 "    -h / --help\n"
 "        Напечатать эту подсказку и завершить работу.\n"
 "\n"
 "    -o / --byadmin\n"
-"        Известить пользователей, заблокироваванных администратором\n"
+"        Известить пользователей, заблокированных администратором\n"
 "        списка рассылки.\n"
 "\n"
 "    -m / --byuser\n"
@@ -12545,23 +12878,24 @@ msgstr ""
 "\n"
 "    -u / --unknown\n"
 "        Известить пользователей, чья подписка заблокирована по\n"
-"        неизвестной причине.\n"
+"        неизвестным причинам (обычно это блокировки, унаследованные\n"
+"        из прошлого).\n"
 "\n"
 "    -b / --notbybounce\n"
 "        Не извещать пользователей, чья подписка была заблокирована из-за\n"
-"        ошибок.\n"
+"        ошибок доставки (по умолчанию они оповещаются).\n"
 "\n"
 "    -a / --all\n"
-"        Известить всех блокированных подписчиков.\n"
+"        Известить всех заблокированных подписчиков.\n"
 "\n"
 "    -f / --force\n"
 "        Известить подписчиков, даже если очередь для отправки им извещения\n"
 "        еще не дошла.\n"
 "\n"
 "    -l имя_списка\n"
-"    --listname=имя_списка\n"
+"    --listname=имя_списка_рассылки\n"
 "        Обработать только указанный список рассылки. Если не указан, то\n"
-"        обработать все.\n"
+"        обработать все списки рассылки на сервере.\n"
 
 #: cron/disabled:145
 msgid "[disabled by periodic sweep and cull, no message available]"
@@ -12619,7 +12953,7 @@ msgid ""
 "    -h/--help\n"
 "        Print this message and exit.\n"
 msgstr ""
-"Разослать напоминание о паролях всем подписчикам всех списков рассылок\n"
+"Разослать напоминание о паролях всем подписчикам всех списков рассылки\n"
 "\n"
 "Эта программа просматривает все списки рассылки и собирает информацию о\n"
 "пользователях (если значение переменной mm_cfg.VIRTUAL_HOST_OVERVIEW "
@@ -12723,11 +13057,11 @@ msgstr ""
 "    -h\n"
 "        Вывести подсказку и завершить работу.\n"
 "    -l listname\n"
-"    --listname=имясписка\n"
-"        Разослать дайджесты только для указанного списка рассыкли, если ни\n"
-"        одного списка рассылки не указано, разослать дайджесты для все "
+"    --listname=имя_списка_рассылки\n"
+"        Разослать дайджесты только для указанного списка рассылки, если ни\n"
+"        одного списка рассылки не указано, разослать дайджесты для всех "
 "списков\n"
-"        рассылок.\n"
+"        рассылки на сервере.\n"
 
 #, fuzzy
 #~ msgid ""
