@@ -118,6 +118,9 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - Mailman's character set for Romanian has been changed from iso-8859-2
+      to utf-8 and the templates and messages recoded.  (LP: #1418735)
+
     - Mailman's character set for Russian has been changed from koi8-r to
       utf-8 and the templates and messages recoded.  (LP: #1418448)
 
