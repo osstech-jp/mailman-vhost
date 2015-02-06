@@ -138,6 +138,11 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Organization: headers are now unconditionally removed from posts to
+      anonymous lists.  Regexps in ANONYMOUS_LIST_KEEP_HEADERS weren't kept
+      if the regexp included the trailing ':'.  This is fixed too.
+      (LP: #1419132)
+
     - The admindb interface has been fixed so the the detail message body
       display doesn't lose part of a multi-byte character, and characters which
       are invalid in the message's charset are replaced rather than the whole
