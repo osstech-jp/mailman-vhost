@@ -119,10 +119,20 @@ Here is a history of user visible changes to Mailman.
   i18n
 
     - Mailman's character set for Romanian has been changed from iso-8859-2
-      to utf-8 and the templates and messages recoded.  (LP: #1418735)
+      to utf-8 and the templates and messages recoded.  This change will
+      require running 'bin/arch --wipe' on any existing Romanian language
+      lists in order to recode the list's archives, and will require recoding
+      any edited templates in lists/LISTNAME/ro/*, templates/DOMAIN/ro/* and
+      templates/site/ro/*.  It may also require recoding any existing
+      iso-8859-2 text in list attributes.  (LP: #1418735)
 
     - Mailman's character set for Russian has been changed from koi8-r to
-      utf-8 and the templates and messages recoded.  (LP: #1418448)
+      utf-8 and the templates and messages recoded.  This change will
+      require running 'bin/arch --wipe' on any existing Russian language
+      lists in order to recode the list's archives, and will require recoding
+      any edited templates in lists/LISTNAME/ru/*, templates/DOMAIN/ru/* and
+      templates/site/ru/*.  It may also require recoding any existing koi8-r
+      text in list attributes.  (LP: #1418448)
 
     - The Russian message catalog has been updated by Danil Smirnov.
 
