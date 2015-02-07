@@ -60,7 +60,7 @@ Here is a history of user visible changes to Mailman.
       archive to emphasize that even if you got to the message from a
       subject, date or author index, previous and next are still by thread.
 
-2.1.19rc2 (06-Feb-2015)
+2.1.19rc3 (07-Feb-2015)
 
   New Features
 
@@ -133,6 +133,15 @@ Here is a history of user visible changes to Mailman.
       any edited templates in lists/LISTNAME/ru/*, templates/DOMAIN/ru/* and
       templates/site/ru/*.  It may also require recoding any existing koi8-r
       text in list attributes.  (LP: #1418448)
+
+    - Mailman's versions.py has been augmented to help with the above two
+      character set changes.  The first time a list with preferred_language
+      of Romanian or Russian is accessed or upon upgrade to this release,
+      any list attributes which have string values such as description, info,
+      welcome_msg, etc. that appear to be in the old character set will be
+      converted to utf-8.  This is done recursively for the values (but not
+      the keys) of dictionary attributes and the elements of list and tuple
+      attributes.
 
     - The Russian message catalog has been updated by Danil Smirnov.
 
