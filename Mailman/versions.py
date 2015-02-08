@@ -110,28 +110,20 @@ def UpdateOldVars(l, stored_state):
         """Recursively process lists, tuples and dictionary values and
         convert strings as needed. Return either the updated item or None
         if no change."""
+        changed = False
         if isinstance(v, str):
-            nv = convert(v, f, t)
-            if nv == v:
-                return None
-            else:
-                return nv
+            return convert(v, f, t)
         elif isinstance(v, list):
-            changed = False
-            nl = []
             for i in range(len(v)):
                 nv = doitem(v[i], f, t)
                 if nv:
                     changed = True
-                    nl += [nv]
-                else:
-                    nl += v[i]
+                    v[i] = nv
             if changed:
-                return nl
+                return v
             else:
                 return None
         elif isinstance(v, tuple):
-            changed = False
             nt = ()
             for i in range(len(v)):
                 nv = doitem(v[i], f, t)
@@ -145,17 +137,13 @@ def UpdateOldVars(l, stored_state):
             else:
                 return None
         elif isinstance(v, dict):
-            changed = False
-            nd = {}
             for k, ov in v.items():
                 nv = doitem(ov, f, t)
                 if nv:
                     changed = True
-                    nd[k] = nv
-                else:
-                    nd[k] = ov
+                    v[k] = nv
             if changed:
-                return nd
+                return v
             else:
                 return None
         else:
@@ -178,7 +166,7 @@ def UpdateOldVars(l, stored_state):
         if is_f and not is_t:
             return u.encode(t, 'replace')
         else:
-            return s
+            return None
 
     # Migrate to 2.1b3, baw 17-Aug-2001
     if hasattr(l, 'dont_respond_to_post_requests'):
