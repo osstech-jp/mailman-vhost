@@ -158,6 +158,11 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Because of privacy concerns with the 2.2 backport adding real name to
+      list rosters, this is controlled by a new ROSTER_DISPLAY_REALNAME
+      setting that defaults to No.  You may wish to set this to Yes in
+      mm_cfg.py.
+
     - Organization: headers are now unconditionally removed from posts to
       anonymous lists.  Regexps in ANONYMOUS_LIST_KEEP_HEADERS weren't kept
       if the regexp included the trailing ':'.  This is fixed too.

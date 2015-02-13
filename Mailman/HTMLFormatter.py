@@ -91,7 +91,7 @@ class HTMLFormatter:
             else:
                 showing = person
             realname = Utils.uncanonstr(self.getMemberName(person), lang)
-            if realname:
+            if realname and mm_cfg.ROSTER_DISPLAY_REALNAME:
                 showing += " (%s)" % Utils.websafe(realname)
             got = Link(url, showing)
             if self.getDeliveryStatus(person) <> MemberAdaptor.ENABLED:
