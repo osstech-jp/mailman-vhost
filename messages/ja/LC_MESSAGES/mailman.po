@@ -38,14 +38,12 @@ msgid " at "
 msgstr " ＠ "
 
 #: Mailman/Archiver/HyperArch.py:512
-#, fuzzy
 msgid "Previous message (by thread):"
-msgstr "前の記事"
+msgstr "前の記事 (スレッド)"
 
 #: Mailman/Archiver/HyperArch.py:534
-#, fuzzy
 msgid "Next message (by thread):"
-msgstr "次の記事"
+msgstr "次の記事 (スレッド)"
 
 #: Mailman/Archiver/HyperArch.py:707 Mailman/Archiver/HyperArch.py:743
 msgid "thread"
@@ -1327,7 +1325,6 @@ msgid "Confirmation string was empty."
 msgstr "確認文字列が空です"
 
 #: Mailman/Cgi/confirm.py:98
-#, fuzzy
 msgid ""
 "<b>Invalid confirmation string:</b>\n"
 "    %(safecookie)s.\n"
@@ -1340,13 +1337,13 @@ msgid ""
 "    string."
 msgstr ""
 "<b>確認文字列が無効です:</b>\n"
-"    %(safecookie)s.\n"
+"    %(safecookie)s\n"
 "\n"
 "<p>確認文字列は最初の入会申請からおよそ %(days)s日で\n"
-"期限が切れることに注意してください. もし確認が期限切れであれば, もう一度\n"
-"入会申請からやり直してください.\n"
-"あるいは, 確認文字列を<a href=\"%(confirmurl)s\">ここで再入力</a>してくださ"
-"い."
+"期限が切れることに注意してください。\n"
+"すでに何らかの手順で処理済みの場合も無効になります。\n"
+"もし確認が期限切れであれば、もう一度入会申請からやり直してください。\n"
+"あるいは、確認文字列を<a href=\"%(confirmurl)s\">ここで再入力</a>してください。"
 
 #: Mailman/Cgi/confirm.py:132
 msgid ""
@@ -2290,23 +2287,20 @@ msgid "No such member: %(safeuser)s."
 msgstr "そのような会員はいません: %(safeuser)s."
 
 #: Mailman/Cgi/options.py:180
-#, fuzzy
 msgid "If you are a list member, a confirmation email has been sent."
-msgstr "確認メールを送信しました."
+msgstr "あなたがリスト会員であれば、確認メールを送信しました。"
 
 #: Mailman/Cgi/options.py:181
-#, fuzzy
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
 "             forwarded to the list administrator for approval."
-msgstr "承認手続きのために退会申請をリスト管理者に転送しました."
+msgstr "あなたがリスト会員であれば、承認手続きのために退会申請をリスト管理者に転送しました。"
 
 #: Mailman/Cgi/options.py:220
-#, fuzzy
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
-msgstr "パスワード備忘通知を送信しました."
+msgstr "あなたがリスト会員であれば、パスワード備忘通知を送信しました。"
 
 #: Mailman/Cgi/options.py:263
 msgid "Authentication failed."
@@ -2973,16 +2967,16 @@ msgid "Usage:"
 msgstr "使用法:"
 
 #: Mailman/Commands/cmd_confirm.py:50
-#, fuzzy
 msgid ""
 "Invalid confirmation string.  Note that confirmation strings expire\n"
 "approximately %(days)s days after the initial request.  They also expire if\n"
 "the request has already been handled in some way.  If your confirmation has\n"
 "expired, please try to re-submit your original request or message."
 msgstr ""
-"確認文字列が無効です. 確認用文字列は入会申請から約 %(days)s 日で\n"
-"期限切れになりますのでご注意ください. 確認期限が切れている場合は\n"
-"もう一度入会申請をお願いします."
+"確認文字列が無効です。確認用文字列は入会申請から約 %(days)s日で\n"
+"期限切れになりますのでご注意ください。すでに何らかの手順で\n"
+"処理済みの場合も無効になります。確認期限が切れている場合は\n"
+"もう一度入会申請をお願いします。"
 
 #: Mailman/Commands/cmd_confirm.py:56
 msgid "Your request has been forwarded to the list moderator for approval."
@@ -6198,7 +6192,6 @@ msgid ""
 msgstr ""
 
 #: Mailman/Gui/Privacy.py:120
-#, fuzzy
 msgid ""
 "When subscription requires approval, addresses in this list\n"
 "             are allowed to subscribe without administrator approval. Add\n"
@@ -6206,9 +6199,9 @@ msgid ""
 "character\n"
 "             to designate a (case insensitive) regular expression match."
 msgstr ""
-"これらのアドレスによる入会申請は, 管理者の作業を省略して無条件に拒否します.\n"
-"1行につき1つ会員アドレスを記入します. \n"
-"正規表現を使うときは, 行の最初を ^ で始めてください."
+"入会に承認が必要な設定であっても、これらのアドレスからの入会申請は管理者の承認なしに許可されます。"
+"1行につき1つ会員アドレスを記入します。\n"
+"正規表現を使うときは、行の最初を ^ で始めてください(大文字・小文字は無視されます)。"
 
 #: Mailman/Gui/Privacy.py:125
 msgid ""
@@ -6265,9 +6258,9 @@ msgid ""
 "             addresses one per line; start the line with a ^ character to\n"
 "             designate a regular expression match."
 msgstr ""
-"これらのアドレスによる入会申請は, 管理者の作業を省略して無条件に拒否します.\n"
-"1行につき1つ会員アドレスを記入します. \n"
-"正規表現を使うときは, 行の最初を ^ で始めてください."
+"これらのアドレスによる入会申請は、管理者の作業を省略して無条件に拒否します。\n"
+"1行につき1つ会員アドレスを記入します。\n"
+"正規表現を使うときは、行の最初を ^ で始めてください。"
 
 #: Mailman/Gui/Privacy.py:153
 msgid "Membership exposure"
@@ -7812,7 +7805,6 @@ msgid "Content filtered message notification"
 msgstr "添付ファイル削除通知"
 
 #: Mailman/Handlers/Moderate.py:170
-#, fuzzy
 msgid ""
 "Your message has been rejected, probably because you are not subscribed to "
 "the\n"
@@ -7822,9 +7814,10 @@ msgid ""
 "the\n"
 "mailing list owner at %(listowner)s."
 msgstr ""
-"このメーリングリストへの投稿が許されていません.\n"
-"投稿は自動的に拒否されました. 拒否の設定が誤りと思われる場合は\n"
-"メーリングリスト管理者 %(listowner)s 宛にご連絡ください."
+"あなたのメールは拒否されました。おそらく、あなたはメーリングリストの\n"
+"会員ではなく、リストのポリシーで会員以外からの投稿を禁止しています。\n"
+"拒否が設定の誤りのためと思われる場合はメーリングリスト管理者\n"
+"%(listowner)s 宛にご連絡ください。"
 
 #: Mailman/Handlers/Moderate.py:187
 msgid "Auto-discard notification"
@@ -7930,7 +7923,7 @@ msgid ""
 msgstr ""
 "From: ヘッダーのメールアドレスのドメインが提示している DMARC 拒否/隔離\n"
 "ポリシーにより、このメーリングリストへの投稿は許されません。\n"
-"投稿は自動的に拒否されました。拒否の設定が誤りと思われる場合は\n"
+"投稿は自動的に拒否されました。拒否が設定の誤りのためと思われる場合は\n"
 "メーリングリスト管理者 %(listowner)s 宛にご連絡ください。"
 
 #: Mailman/Handlers/SpamDetect.py:154
@@ -8142,9 +8135,8 @@ msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s 退会通知"
 
 #: Mailman/MailList.py:1226
-#, fuzzy
 msgid "%(realname)s address change notification"
-msgstr "%(realname)s 退会通知"
+msgstr "%(realname)s アドレス変更通知"
 
 #: Mailman/MailList.py:1291
 msgid "subscriptions to %(name)s require administrator approval"
@@ -10464,7 +10456,6 @@ msgid "Return the generated output."
 msgstr "生成した出力を返す."
 
 #: bin/newlist:20
-#, fuzzy
 msgid ""
 "Create a new, unpopulated mailing list.\n"
 "\n"
@@ -10583,6 +10574,12 @@ msgstr ""
 "        通常管理者には(確認の後)メールでリスト作成を通知する. この\n"
 "        オプションを付けると確認とメール通知を行わない.\n"
 "\n"
+"    -a/--automate\n"
+"        管理者への通知前の確認待ちをせずに通知を送信する. newlist の\n"
+"        コマンドラインにこのオプションとリスト名、管理者アドレス、\n"
+"        管理者パスワードのすべてを指定することで、newlist を非対話形式で\n"
+"        実行、かつ管理者への通知も行なうことができる.\n"
+"\n"
 "    -h/--help\n"
 "        このヘルプメッセージを表示して終了する.\n"
 "\n"
@@ -10626,8 +10623,8 @@ msgstr ""
 "指定が優先されることに注意.\n"
 "\n"
 "もし, リスト名がただの `mylist' だったら, メールホスト名とURLはそれぞれ\n"
-"Defaults.py または mm_cfg.py の DEFAULT_EMAIL_HOST と DEFAULT_URL が\n"
-"使われる.\n"
+"Defaults.py または mm_cfg.py の DEFAULT_EMAIL_HOST と DEFAULT_URL\n"
+"(DEFAULT_URL_PATTERN への埋め込みに利用) が使われる.\n"
 "\n"
 "リスト名は小文字に変換される.\n"
 

@@ -118,6 +118,8 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Japanese message catalog has been updated by SATOH Fumiyasu.
+
     - Mailman's character set for Romanian has been changed from iso-8859-2
       to utf-8 and the templates and messages recoded.  This change will
       require running 'bin/arch --wipe' on any existing Romanian language
