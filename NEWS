@@ -118,6 +118,8 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Interlingua translation has been updated by Martijn Dekker.
+
     - The Japanese message catalog has been updated by SATOH Fumiyasu.
 
     - Mailman's character set for Romanian has been changed from iso-8859-2
