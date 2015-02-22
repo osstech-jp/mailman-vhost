@@ -75,7 +75,7 @@ msgstr "Texto%(sz)s"
 
 #: Mailman/Archiver/HyperArch.py:915
 msgid "figuring article archives\n"
-msgstr "a crear archivos de articulos\n"
+msgstr "generante archivos de articulos\n"
 
 #: Mailman/Archiver/HyperArch.py:925
 msgid "April"
@@ -199,7 +199,7 @@ msgstr "debite a un excesso de messages retrosaltate"
 
 #: Mailman/Bouncer.py:46
 msgid "by yourself"
-msgstr "per te mesme"
+msgstr "per te"
 
 #: Mailman/Bouncer.py:47
 msgid "by the list administrator"
@@ -256,7 +256,7 @@ msgstr "Le lista <em>%(safelistname)s</em> non existe"
 #: Mailman/Cgi/admin.py:108 Mailman/Cgi/admindb.py:132
 #: Mailman/Cgi/edithtml.py:91 Mailman/Cgi/private.py:135
 msgid "Authorization failed."
-msgstr "Autorisation non concedite."
+msgstr "Autorisation fallite."
 
 #: Mailman/Cgi/admin.py:199
 msgid "The form lifetime has expired. (request forgery check)"
@@ -376,7 +376,7 @@ msgstr "[description non disponibile]"
 
 #: Mailman/Cgi/admin.py:359
 msgid "No valid variable name found."
-msgstr "Nulle nomine de variabile valide esseva trovate."
+msgstr "Nulle nomine de variabile valide ha essite trovate."
 
 #: Mailman/Cgi/admin.py:369
 msgid ""
@@ -426,7 +426,7 @@ msgstr "Altere activitates administrative"
 
 #: Mailman/Cgi/admin.py:443
 msgid "Tend to pending moderator requests"
-msgstr "Controlar requestas administrative pendente"
+msgstr "Tractar le requestas administrative attendente"
 
 #: Mailman/Cgi/admin.py:445
 msgid "Go to the general list information page"
@@ -442,7 +442,7 @@ msgstr "Vader al archivos del lista"
 
 #: Mailman/Cgi/admin.py:455
 msgid "Delete this mailing list"
-msgstr "Deler iste lista"
+msgstr "Deler iste lista de diffusion"
 
 #: Mailman/Cgi/admin.py:456
 msgid " (requires confirmation)<br>&nbsp;<br>"
@@ -463,7 +463,7 @@ msgid ""
 "Make your changes in the following section, then submit them\n"
 "        using the <em>Submit Your Changes</em> button below."
 msgstr ""
-"Face cambios in le section sequente, postea confirma los\n"
+"Face cambiamentos in le section sequente, postea confirma los\n"
 "        con le button <em>Confirmar cambiamentos</em> infra."
 
 #: Mailman/Cgi/admin.py:535
@@ -476,7 +476,7 @@ msgid ""
 "            those members not currently visible"
 msgstr ""
 "<li>Activar le moderation pro tote le abonatos,\n"
-"            incluse illos non actualmente visibile"
+"            incluse illes non actualmente visibile"
 
 #: Mailman/Cgi/admin.py:545
 msgid "Off"
@@ -554,7 +554,7 @@ msgstr "Expression regular anti-spam:"
 #: Mailman/Cgi/admindb.py:415 Mailman/Cgi/admindb.py:469
 #: Mailman/Cgi/admindb.py:717
 msgid "Defer"
-msgstr "Disactivar"
+msgstr "Postponer"
 
 #: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:356
 #: Mailman/Cgi/admindb.py:417 Mailman/Cgi/admindb.py:469
@@ -749,20 +749,16 @@ msgid ""
 "            </ul>"
 msgstr ""
 "<b>sin posta</b> -- Es le livration al membro disactivate?  In tal caso,\n"
-"        on dara un abbreviation del ration pro disactivation:\n"
-"            <ul><li><b>U</b> -- Le livration esseva disactivate per le "
-"usator\n"
+"        le systema indica un littera denotante le ration:\n"
+"            <ul><li><b>U</b> -- Le livration ha essite disactivate per le [U]sator\n"
 "                    in su pagina de optiones personal.\n"
-"                <li><b>A</b> -- Le livration esseva disactivate per le "
-"administratores\n"
+"                <li><b>A</b> -- Le livration ha essite disactivate per le [A]dministratores\n"
 "                    del lista.\n"
-"                <li><b>R</b> -- Le livration esseva disactivate per le "
-"systema a causa\n"
-"                    de excesso de messages retrosaltate del adresse del membro.\n"
+"                <li><b>R</b> -- Le livration ha essite disactivate per le systema a causa\n"
+"                    de excesso de messages [R]etrosaltate del adresse del membro.\n"
 "                <li><b>?</b> -- Le ration del disactivation es incognite.\n"
-"                    Iste es le caso de tote abonamentos disactivate in "
-"precedente\n"
-"                    versiones de Mailman.\n"
+"                    Iste es le caso pro tote abonamentos disactivate in versiones\n"
+"                    ancian de Mailman.\n"
 "            </ul>"
 
 #: Mailman/Cgi/admin.py:1107
@@ -770,7 +766,7 @@ msgid ""
 "<b>ack</b> -- Does the member get acknowledgements of their\n"
 "        posts?"
 msgstr ""
-"<b>conf</b> -- Le membro recipe confirmation pro su proprie\n"
+"<b>conf</b> -- Recipe le membro confirmation pro su proprie\n"
 "        messages?"
 
 #: Mailman/Cgi/admin.py:1110
@@ -778,7 +774,7 @@ msgid ""
 "<b>not metoo</b> -- Does the member want to avoid copies of their\n"
 "        own postings?"
 msgstr ""
-"<b>sin propries</b> -- Le membro vole evitar copias de su\n"
+"<b>sin propries</b> -- Vole le membro evitar copias de su\n"
 "        proprie messages?"
 
 #: Mailman/Cgi/admin.py:1113
@@ -786,7 +782,7 @@ msgid ""
 "<b>nodupes</b> -- Does the member want to avoid duplicates of the\n"
 "        same message?"
 msgstr ""
-"<b>sin duples</b> -- Le membro vole evitar duplicatos del\n"
+"<b>sin duples</b> -- Vole le membro evitar duplicatos del\n"
 "        mesme message?"
 
 #: Mailman/Cgi/admin.py:1116
@@ -794,7 +790,7 @@ msgid ""
 "<b>digest</b> -- Does the member get messages in digests?\n"
 "        (otherwise, individual messages)"
 msgstr ""
-"<b>digesto</b> -- Le membro recipe messages in digestos?\n"
+"<b>digesto</b> -- Recipe le membro messages in digestos?\n"
 "        (alteremente, messages individual)"
 
 #: Mailman/Cgi/admin.py:1119
@@ -802,7 +798,7 @@ msgid ""
 "<b>plain</b> -- If getting digests, does the member get plain\n"
 "        text digests?  (otherwise, MIME)"
 msgstr ""
-"<b>texto</b> -- Si ille recipe digestos, esque le membro obtene\n"
+"<b>texto</b> -- Si ille recipe digestos, esque le membro recipe\n"
 "        digestos in texto simple? (alteremente, MIME)"
 
 #: Mailman/Cgi/admin.py:1121
@@ -958,23 +954,20 @@ msgid ""
 "and also provide the email addresses of the list moderators in the\n"
 "<a href=\"%(adminurl)s/general\">general options section</a>."
 msgstr ""
-"Le <em>administratores del lista</em> es illes qui ha le maxime controlo "
-"super\n"
-"tote parametros del lista.  Illes pote cambiar qualcunque variabile de "
-"configuration\n"
+"Le <em>administratores del lista</em> es illes qui ha le maxime controlo super\n"
+"tote parametros del lista.  Illes pote cambiar qualcunque variabile de configuration\n"
 "disponibile per iste paginas de administration.\n"
 "\n"
 "<p>Le <em>moderatores del lista</em> ha permissiones plus limitate; illes\n"
-"non pote cambiar variables de configuration, ma illes pote controlar "
-"requestas\n"
-"pendente de administration, p.ex. approbar or rejectar requestas de\n"
-"abonamento retenite, e abandonar messages retenite.  Certemente, le\n"
-"<em>administratores del lista</em> etiam pote controlar requestas pendente.\n"
+"non pote cambiar variables de configuration, ma illes pote tractar le requestas\n"
+"de administration attendente, p.ex. approbar or rejectar requestas de\n"
+"abonamento retenite, e abandonar messages retenite.  Naturalmente, le\n"
+"<em>administratores del lista</em> pote etiam tractar le requestas attendente.\n"
 "\n"
 "<p>Pro divider le deberes del lista inter administratores e moderatores,\n"
-"tu debe poner un contrasigno differente in le campos infra,\n"
-"etiam scriber le adresses de e-mail del moderatores del lista in le\n"
-"<a href=\"%(adminurl)s/general\">section del optiones general</a>."
+"tu debe mitter un contrasigno differente in le campos infra,\n"
+"e scriber le adresses de e-mail del moderatores del lista in le\n"
+"<a href=\"%(adminurl)s/general\">section de optiones general</a>."
 
 #: Mailman/Cgi/admin.py:1272
 msgid "Enter new administrator password:"
@@ -1001,6 +994,12 @@ msgid ""
 "addition, the password below, if set, can be used for that purpose and\n"
 "no other."
 msgstr ""
+"In addition, il es possibile definir un contrasigno pro le\n"
+"pre-approbation de messages al lista. Un del duo contrasignos supra pote\n"
+"esser usate in un capite (o pseudo-capite in le prime linea de texto) 'Approved:' pro\n"
+"pre-approbar un message que esserea alteremente retenite pro moderation. In\n"
+"addition, le contrasigno infra, si definite, pote esser usate pro iste scopo e\n"
+"nulle altere."
 
 #: Mailman/Cgi/admin.py:1296
 msgid "Enter new poster password:"
@@ -1074,7 +1073,7 @@ msgstr "Impossibile disabonar non-membros:"
 
 #: Mailman/Cgi/admin.py:1473
 msgid "Bad moderation flag value"
-msgstr "Valor de signo de moderation errate"
+msgstr "Valor de signal de moderation invalide"
 
 #: Mailman/Cgi/admin.py:1495
 msgid "Not subscribed"
@@ -1082,7 +1081,7 @@ msgstr "Non abonate"
 
 #: Mailman/Cgi/admin.py:1498
 msgid "Ignoring changes to deleted member: %(user)s"
-msgstr "Ignorante cambios al membro delite: %(user)s"
+msgstr "Ignorante cambiamentos al membro delite: %(user)s"
 
 #: Mailman/Cgi/admin.py:1538
 msgid "Successfully Removed:"
@@ -1187,19 +1186,19 @@ msgstr "Messages retenite"
 
 #: Mailman/Cgi/admindb.py:443
 msgid "Show this list grouped/sorted by"
-msgstr ""
+msgstr "Ordinar/gruppar iste lista per"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/sender"
-msgstr ""
+msgstr "expeditor/expeditor"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "sender/time"
-msgstr ""
+msgstr "expeditor/hora"
 
 #: Mailman/Cgi/admindb.py:446
 msgid "ungrouped/time"
-msgstr ""
+msgstr "sin gruppo/hora"
 
 #: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:700
 msgid "From:"
@@ -1207,7 +1206,7 @@ msgstr "De:"
 
 #: Mailman/Cgi/admindb.py:465
 msgid "Action to take on all these held messages:"
-msgstr "Action a executar pro tote iste messages retenite:"
+msgstr "Action a prender pro tote iste messages retenite:"
 
 #: Mailman/Cgi/admindb.py:478
 msgid "Preserve messages for the site administrator"
@@ -1250,7 +1249,7 @@ msgid ""
 "Ban <b>%(esender)s</b> from ever subscribing to this\n"
 "                    mailing list"
 msgstr ""
-"Bannir <b>%(esender)s</b>, prohibiente le de abonar se a iste lista\n"
+"Bannir <b>%(esender)s</b>, prohibente le de abonar se a iste lista\n"
 "                    in le futuro"
 
 #: Mailman/Cgi/admindb.py:542
@@ -1271,7 +1270,7 @@ msgstr "Subjecto:"
 
 #: Mailman/Cgi/admindb.py:569
 msgid " bytes"
-msgstr " octettos"
+msgstr " bytes"
 
 #: Mailman/Cgi/admindb.py:569
 msgid "Size:"
@@ -1288,7 +1287,7 @@ msgstr "Ration:"
 
 #: Mailman/Cgi/admindb.py:578 Mailman/Cgi/admindb.py:710
 msgid "Received:"
-msgstr "Recepite:"
+msgstr "Recipite:"
 
 #: Mailman/Cgi/admindb.py:634
 msgid "Posting Held for Approval"
@@ -1325,7 +1324,7 @@ msgstr "Si tu rejecta iste message,<br>per favor explica (optional):"
 
 #: Mailman/Cgi/admindb.py:747
 msgid "Message Headers:"
-msgstr "Testa del message:"
+msgstr "Capite del message:"
 
 #: Mailman/Cgi/admindb.py:752
 msgid "Message Excerpt:"
@@ -1682,7 +1681,7 @@ msgstr "Cancella e abandona"
 
 #: Mailman/Cgi/confirm.py:504
 msgid "You have canceled your change of address request."
-msgstr "Tu ha cancellate tu requesta de cambio de adresse."
+msgstr "Tu ha cancellate tu requesta de cambiamento de adresse."
 
 #: Mailman/Cgi/confirm.py:533
 msgid ""
@@ -1707,7 +1706,7 @@ msgstr ""
 
 #: Mailman/Cgi/confirm.py:545
 msgid "Change of address request confirmed"
-msgstr "Requesta de cambio de adresse confirmate"
+msgstr "Requesta de cambiamento de adresse confirmate"
 
 #: Mailman/Cgi/confirm.py:549
 msgid ""
@@ -1725,7 +1724,7 @@ msgstr ""
 
 #: Mailman/Cgi/confirm.py:561
 msgid "Confirm change of address request"
-msgstr "Confirma le requesta de cambio de adresse"
+msgstr "Confirma le requesta de cambiamento de adresse"
 
 #: Mailman/Cgi/confirm.py:580
 msgid "globally"
@@ -1754,7 +1753,7 @@ msgid ""
 "    <p>Or hit <em>Cancel and discard</em> to cancel this change of address\n"
 "    request."
 msgstr ""
-"Tu confirmation es necessari pro completar le requesta de cambio\n"
+"Tu confirmation es necessari pro completar le requesta de cambiamento\n"
 "    de adresse pro le lista <em>%(listname)s</em>.  Tu es\n"
 "    actualmente abonate con\n"
 "\n"
@@ -1773,7 +1772,7 @@ msgstr ""
 "\n"
 "    <p>O selectiona <em>Cancella e abandona</em> pro cancellar iste "
 "requesta\n"
-"    de cambio de adresse."
+"    de cambiamento de adresse."
 
 #: Mailman/Cgi/confirm.py:604
 msgid "Change address"
@@ -2458,7 +2457,7 @@ msgid ""
 "%(safeuser)s will be changed. "
 msgstr ""
 "Le nove adresse %(newaddr)s que tu requireva jam es un membro del lista\n"
-"%(listname)s, ma comocunque tu mesmo requireva un cambio global del "
+"%(listname)s, ma comocunque tu mesmo requireva un cambiamento global del "
 "adresse.\n"
 "Post tu confirmation, tote altere listas continente le adresse\n"
 "%(safeuser)s essera cambiate. "
@@ -2641,7 +2640,7 @@ msgstr "Claude session"
 
 #: Mailman/Cgi/options.py:808
 msgid "Submit My Changes"
-msgstr "Confirma mi cambios"
+msgstr "Confirma mi cambiamentos"
 
 #: Mailman/Cgi/options.py:820
 msgid "days"
@@ -2711,8 +2710,8 @@ msgstr ""
 "    confirmation te essera inviate.\n"
 "\n"
 "    <p><strong><em>Importante:</em></strong>  De iste puncto in\n"
-"    avante, tu debe haber le cookies abilitate in tu navigator\n"
-"    o tu cambios non habera ulle effecto.\n"
+"    avante, tu debe haber le cookies activate in tu navigator,\n"
+"    o tu cambiamentos non habera effecto.\n"
 "    "
 
 #: Mailman/Cgi/options.py:921
@@ -4140,7 +4139,7 @@ msgstr ""
 "\n"
 "<p>Pro cata quadro de texto tu pote o inserer le texto directemente in le "
 "cassa\n"
-"textual, o tu pote specificar un file in tu computator local pro cargar como "
+"de texto, o tu pote specificar un file in tu computator local pro incargar como "
 "le texto."
 
 #: Mailman/Gui/Autoresponse.py:55
@@ -5067,7 +5066,7 @@ msgstr "Personalitate general del lista"
 
 #: Mailman/Gui/General.py:68
 msgid "The public name of this list (make case-changes only)."
-msgstr "Le nomine public del lista (face solmente cambios de capitalisation)."
+msgstr "Le nomine public del lista (face solmente cambiamentos de majusulas e minusculas)."
 
 #: Mailman/Gui/General.py:69
 msgid ""
@@ -5081,16 +5080,13 @@ msgid ""
 "             addresses are not case sensitive, but they are sensitive to\n"
 "             almost everything else :-)"
 msgstr ""
-"Scriber le nomine in majusculas pote esser cambiate pro facer lo\n"
-"             presentabile in compania polite como un nomine o pro facer un\n"
-"             parte acronyme in maiusculas, etc.  Totevia, le nomine essera\n"
-"             usate como le adresse de e-mail (i.e. in le notitias de "
-"confirmation del\n"
-"             abonamento), dunque illo <em>non</em> debe esser cambiate "
-"alteremente.  (Adresses\n"
-"             de e-mail non es sensibile al capitalisation, ma illos es "
-"sensitive a\n"
-"             quasi tote altere cosas :-)"
+"Majusculas e minusculas in iste nomine pote esser cambiate pro pro render lo\n"
+"             presentabile in compania polite como nomine proprie, o pro mitter un\n"
+"             acronymo in majusculas, etc.  Nonobstante, le nomine essera\n"
+"             usate como le adresse de e-mail (p.ex. in le notitias de confirmation de\n"
+"             abonamento), dunque illo <em>non</em> debe esser cambiate alteremente. (Adresses\n"
+"             de e-mail non distingue inter majusculas e minusculas, ma illos es multo\n"
+"             distinguite in quasi tote altere aspectos :-)"
 
 #: Mailman/Gui/General.py:78
 msgid ""
@@ -5098,8 +5094,7 @@ msgid ""
 "             administrator addresses, each on separate line is okay."
 msgstr ""
 "Le adresses de e-mail del administrator del lista.  Multiple\n"
-"             adresses de administrator, cata uno a su linea separate, es in "
-"ordine."
+"             adresses de administrator, cata un in su linea separate, es in ordine."
 
 #: Mailman/Gui/General.py:81
 msgid ""
@@ -5129,30 +5124,24 @@ msgid ""
 "             are changing here specifies the list administrators."
 msgstr ""
 "Il ha duo rolos de proprietario associate a cata lista\n"
-"             de diffusion.  Le <em>administratores del lista</em> ha "
-"le\n"
-"             controlo ultimate de tote parametros de iste lista de "
-"diffusion.  Illes\n"
-"             pote cambiar tote variabiles de configuration a disposition\n"
-"             per iste paginas de administration de Internet.\n"
+"             de diffusion.  Le <em>administratores del lista</em> ha le\n"
+"             controlo ultimate de tote parametros de iste lista de diffusion.  Illes\n"
+"             pote cambiar omne variabile de configuration a disposition\n"
+"             per iste paginas web de administration.\n"
 "\n"
-"             <p>Le <em>moderatores del lista</em> ha permissiones plus "
-"limitate;\n"
-"             illes non pote cambiar ulle variabile de configuration del "
-"lista, ma\n"
-"             illes pote tractar requestas administrative pendente,\n"
-"             inclusive approbar o rejectar requestas de abonamento, e\n"
-"             deler messages stoppate.  Naturalmente le <em>administratores\n"
-"             del lista</em> anque pote tractar requestas pendente.\n"
+"             <p>Le <em>moderatores del lista</em> ha permissiones plus limitate;\n"
+"             illes non pote cambiar alcun variabile de configuration del lista, ma\n"
+"             illes pote tractar requestas administrative attendente,\n"
+"             incluse approbar o rejectar requestas de abonamento, e\n"
+"             abandonar messages retenite.  Naturalmente le <em>administratores\n"
+"             del lista</em> anque pote tractar requestas attendente.\n"
 "\n"
-"             <p>A fin de dividier le cargas del proprietarioes del lista in\n"
-"             administratores e moderatores tu debe\n"
-"             <a href=\"passwords\">establir un separate contrasigno de "
-"moderator</a>,\n"
-"             e anque provider le adresses de <a href=\"?VARHELP=general/"
-"moderator\">e-mail\n"
+"             <p>A fin de divider le cargas del proprietarios del lista in\n"
+"             administratores e moderatores, tu debe\n"
+"             <a href=\"passwords\">definir un contrasigno separate de moderator</a>,\n"
+"             e fornir le adresses de <a href=\"?VARHELP=general/moderator\">e-mail\n"
 "             del moderatores del lista</a>.  Nota que le quadro que tu\n"
-"             cambia ci specifica le administratores del lista."
+"             modifica ci specifica le administratores del lista."
 
 #: Mailman/Gui/General.py:102
 msgid ""
@@ -5188,31 +5177,25 @@ msgid ""
 "             this section.  Note that the field you are changing here\n"
 "             specifies the list moderators."
 msgstr ""
-"Il ha duo rolos de proprietario associate a cata lista de\n"
-"             diffusion.  Le <em>administratores del lista</em> ha le\n"
-"             controlo ultimate de tote parametros de iste lista de "
-"diffusion.  Illes\n"
-"             pote cambiar ulle variabile de configuration a disposition\n"
-"             per iste paginas administrative de Internet.\n"
+"Il ha duo rolos de proprietario associate a cata lista\n"
+"             de diffusion.  Le <em>administratores del lista</em> ha le\n"
+"             controlo ultimate de tote parametros de iste lista de diffusion.  Illes\n"
+"             pote cambiar omne variabile de configuration a disposition\n"
+"             per iste paginas web de administration.\n"
 "\n"
-"             <p>Le <em>moderatores del lista</em> ha permissiones plus "
-"limitate;\n"
-"             illes non pote cambiar ulle variabile de configuration, ma\n"
-"             illes pote tractar requestas administrative pendente,\n"
-"             inclusive approbar o rejectar requestas de abonamento "
-"arrestate\n"
-"             e disponer de messages arrestate.  Naturalmente le "
-"<em>administratores\n"
-"             del lista</em> pote anque tractar requestas pendente.\n"
+"             <p>Le <em>moderatores del lista</em> ha permissiones plus limitate;\n"
+"             illes non pote cambiar alcun variabile de configuration del lista, ma\n"
+"             illes pote tractar requestas administrative attendente,\n"
+"             incluse approbar o rejectar requestas de abonamento, e\n"
+"             abandonar messages retenite.  Naturalmente le <em>administratores\n"
+"             del lista</em> anque pote tractar requestas attendente.\n"
 "\n"
 "             <p>A fin de divider le cargas del proprietarios del lista in\n"
-"             administratores e moderatores tu debe\n"
-"             <a href=\"passwords\">establir un separate contrasigno de "
-"moderator</a>,\n"
-"             a anque provider le adresses de e-mail del listatores del "
-"lista\n"
-"             in iste section.  Nota que le quadro que tu cambia ci\n"
-"             specifica le moderatores del lista."
+"             administratores e moderatores, tu debe\n"
+"             <a href=\"passwords\">definir un contrasigno separate de moderator</a>,\n"
+"             e fornir le adresses de <a href=\"?VARHELP=general/moderator\">e-mail\n"
+"             del moderatores del lista</a>.  Nota que le quadro que tu\n"
+"             modifica ci specifica le administratores del lista."
 
 #: Mailman/Gui/General.py:126
 msgid "A terse phrase identifying this list."
@@ -5228,10 +5211,8 @@ msgid ""
 "                the list is."
 msgstr ""
 "Iste description es usate quando le lista de diffusion es listate con\n"
-"                altere listas de diffusion o in capites etc.  Illo "
-"debe\n"
-"                esser si succincte como possibile ma ancora identificante\n"
-"                le lista."
+"                altere listas de diffusion o in capites, etc.  Illo deberea\n"
+"                describer le lista in le maniera le plus succincte possibile."
 
 #: Mailman/Gui/General.py:134
 msgid ""
@@ -5241,11 +5222,9 @@ msgid ""
 "             page.  Carriage returns will end a paragraph - see the details\n"
 "             for more info."
 msgstr ""
-"Un description introductori - alcun phrases - super le\n"
-"             lista.  Illo essera includite, in formato HTML, al summitate "
-"del pagina de information\n"
-"             del lista.  Nove lineas va finir cata paragrapho - reguarda le "
-"detalios\n"
+"Un description introductori - alcun phrases - del lista.  Illo essera\n"
+"             includite, in formato HTML, al initio del pagina de information\n"
+"             del lista.  Nove lineas fini un paragrapho. Vide le detalios\n"
 "             pro plus information."
 
 #: Mailman/Gui/General.py:138
@@ -5261,12 +5240,10 @@ msgid ""
 "             display of the entire listinfo page."
 msgstr ""
 "Iste texto essera tractate como HTML <em>excepte</em> que\n"
-"             nove lineas essera traducite in &lt;BR&gt; - dunque tu pote "
-"usar ligamines,\n"
+"             nove lineas essera traducite in &lt;BR&gt; - dunque tu pote usar ligamines,\n"
 "             texto preformatate etc., ma non insere nove lineas excepte\n"
-"             quando tu vole separar paragraphos.  E revide tu cambios -\n"
-"             mal HTML (como certe constructiones HTML non-finite) pote "
-"significar\n"
+"             quando tu vole separar paragraphos.  E revide tu cambiamentos -\n"
+"             mal HTML (como certe constructiones HTML non-finite) pote significar\n"
 "             que tote le pagina del information del lista non es monstrate."
 
 #: Mailman/Gui/General.py:146
@@ -5287,26 +5264,23 @@ msgid ""
 "                            (listname %%05d) -> (listname 00123)\n"
 "             "
 msgstr ""
-"Iste texto va esser placiate ante le linea de subjecto de messages\n"
-"             inviate al lista pro distinguer messages de listas de "
-"diffusion in\n"
-"             le digestos del cassa postal.  Brevitate es eminente ci, il es "
-"in ordine abbreviar\n"
-"             longe nomines de listas a qualcosa plus concise, si longe que "
-"illo\n"
-"             continua identificar le lista de diffusion.\n"
-"             Tu pote anque adder un numero continuante per directiva %%d de\n"
-"             substitution, p.ex. [listname %%d] -> [listname 123]\n"
+"Iste texto es inserite al initio del linea de subjecto de messages\n"
+"             inviate al lista pro distinguer le messages del lista in\n"
+"             le summarios de cassa postal. Brevitate es eminente ci. Il es in ordine abbreviar\n"
+"             un longe nomine de lista a qualcosa plus concise, a condition que illo\n"
+"             continua a esser recognoscibile como le nomine del lista.\n"
+"             Tu pote anque adder un numero sequential con un directiva de\n"
+"             substitution %%d, p.ex. [listname %%d] -> [listname 123]\n"
 "                            (listname %%05d) -> (listname 00123)\n"
 "             "
 
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 msgid "Munge From"
-msgstr "Reimplaciar 'From'"
+msgstr "Reimplaciar 'From:'"
 
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 msgid "Wrap Message"
-msgstr "Divider lineas longe in message"
+msgstr "Inveloppar message"
 
 #: Mailman/Gui/General.py:159
 msgid ""
@@ -5314,6 +5288,9 @@ msgid ""
 "             address to mitigate issues stemming from the original From:\n"
 "             domain's DMARC or similar policies."
 msgstr ""
+"Reimplaciar le adresse in le capite From: per le adresse de invo al lista\n"
+"             pro mitigar problemas causate per le politica DMARC o similar\n"
+"             restrictiones imponite per le dominio del expeditor original."
 
 #: Mailman/Gui/General.py:162
 msgid ""
@@ -5405,7 +5382,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:227
 msgid "<tt>Reply-To:</tt> header munging"
-msgstr "Rescriptura del <tt>Reply-To:</tt>"
+msgstr "Rescriptura de <tt>Reply-To:</tt>"
 
 #: Mailman/Gui/General.py:230
 msgid ""
@@ -5414,10 +5391,9 @@ msgid ""
 "             regardless of whether an explict <tt>Reply-To:</tt> header is\n"
 "             added by Mailman or not."
 msgstr ""
-"Debe ulle existente capite <tt>Reply-To:</tt> trovate in le\n"
-"             message original esser removite?  In tal caso, illo essera "
-"facite\n"
-"             independente de si un capite explicite <tt>Reply-To:</tt> es\n"
+"Debe omne existente capite <tt>Reply-To:</tt> trovate in le\n"
+"             message original esser removite?  In tal caso, illo essera facite\n"
+"             independentemente de si un capite explicite <tt>Reply-To:</tt> es\n"
 "             addite per Mailman o non."
 
 #: Mailman/Gui/General.py:236
@@ -5440,7 +5416,7 @@ msgid ""
 "             lists."
 msgstr ""
 "A ubi debe omne responsas al messages del lista esser dirigite?\n"
-"             <tt>Poster</tt> es <em>fortemente</em> recommendate pro le "
+"             <tt>Expeditor</tt> es <em>fortemente</em> recommendate pro le "
 "majoritate de\n"
 "             listas de diffusion."
 
@@ -5486,44 +5462,38 @@ msgid ""
 "             <tt>Reply-To:</tt> address below to point to the parallel\n"
 "             list."
 msgstr ""
-"Iste option controla que Mailman debe facer\n"
-"             del capites <tt>Reply-To:</tt> in messages fluente per iste\n"
-"             lista de diffusion.  Si indicate a <em>Poster "
-"(Expeditor)</em>, nulle capite <tt>Reply-To:</tt>\n"
+"Iste option controla que Mailman debe facer con\n"
+"             le capites <tt>Reply-To:</tt> in messages passante per iste\n"
+"             lista de diffusion.  Si indicate a <em>Expeditor</em>, nulle capite <tt>Reply-To:</tt>\n"
 "             es addite per Mailman, ma si un tal es presente in le\n"
-"             message original illo non es removite.  Si iste valor es fixate "
-"a\n"
-"             o <em>Iste lista</em> o <em>Adresse explicite</em>\n"
-"             Mailman insere un capite specific <tt>Reply-To:</tt> in tote\n"
-"             messages, superscribente le capite in le message original si\n"
+"             message original, illo non es removite.  Si iste valor es fixate a\n"
+"             <em>Iste lista</em> o <em>Adresse explicite</em>,\n"
+"             Mailman insere un capite specific <tt>Reply-To:</tt> in tote le\n"
+"             messages, reimplaciante le capite in le message original si\n"
 "             necessari (<em>Adresse explicite</em> insere le valor de <a\n"
-"             href=\"?VARHELP=general/reply_to_address\">responde_a_adresse</"
-"a>).\n"
+"             href=\"?VARHELP=general/reply_to_address\">responde_a_adresse</a>).\n"
 "\n"
-"             <p>Il ha multe rationes pro non introducer o superscriber le\n"
-"             capite <tt>Reply-To:</tt>.  Un tal es que certe expeditores "
-"depende de\n"
-"             lor proprie configurationes de <tt>Reply-To:</tt> pro dar lor "
-"valide\n"
-"             adresse de retorno.  Un altere es que modificar <tt>Reply-To:</"
-"tt>\n"
-"             lo face plus difficile inviar responsas private.  Reguarda <a\n"
+"             <p>Il ha multe rationes pro non introducer o reimplaciar le\n"
+"             capite <tt>Reply-To:</tt>.  Un tal es que certe expeditores depende de\n"
+"             lor proprie configurationes de <tt>Reply-To:</tt> pro dar lor\n"
+"             adresse de retorno valide.  Un altere es que modificar <tt>Reply-To:</tt>\n"
+"             rende plus difficile inviar responsas private.  Vide <a\n"
 "             href=\"http://www.unicom.com/pw/reply-to-harmful.html\">\n"
-"             rescriptura del `Reply-To' considerate malitiose</a> pro un\n"
+"             reimplaciamento del `Reply-To' considerate como nocive</a> pro un\n"
 "             discussion general de iste thema.  Reguarda <a\n"
 "        href=\"http://www.metasystema.org/essays/reply-to-useful.mhtml\">\n"
-"             rescriptura del Reply-To\n"
-"             considerate utile</a> pro un opinion dissentiente.\n"
+"             reimplaciamento del Reply-To\n"
+"             considerate como utile</a> pro un opinion dissentiente.\n"
 "\n"
 "             <p>Alcun listas de diffusion ha restringite privilegios "
 "de inviar, con un\n"
 "             lista parallel devotate a discussiones.  Exemplos es listas de "
 "`correctiones' o\n"
-"             `examination', ubi cambios de programmas computatorial es "
+"             `examination', ubi cambiamentos de programmas computatorial es "
 "inviate per un\n"
-"             systema de controlo de revision, ma discussion super le cambios "
+"             systema de controlo de versiones, ma discussion super le cambiamentos "
 "occurre in un\n"
-"             lista pro developpatores.  Pro supportar iste typo de listas "
+"             lista pro le programmatores. Pro supportar iste typo de listas "
 "de\n"
 "             diffusion, selige <tt>Adresse explicite</tt> e fixa le\n"
 "             adresse <tt>Reply-To:</tt> in basso a indicar le lista\n"
@@ -5531,7 +5501,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:274
 msgid "Explicit <tt>Reply-To:</tt> header."
-msgstr "Capite explicite de <tt>Reply-To:</tt>."
+msgstr "Capite <tt>Reply-To:</tt> explicite."
 
 #: Mailman/Gui/General.py:276
 #, fuzzy
@@ -5600,9 +5570,9 @@ msgstr ""
 "de inviar, con un\n"
 "             lista parallel devotate a discussiones.  Exemplos es listas de "
 "`correctiones'\n"
-"             o `examination', ubi cambios de programmas computatorial es "
+"             o `examination', ubi cambiamentos de programmas computatorial es "
 "inviate per un systema\n"
-"             de controlo de revision, ma discussion super le cambios occurre "
+"             de controlo de revision, ma discussion super le cambiamentos occurre "
 "in un\n"
 "             lista pro developpatores.  Pro supportar iste typos de listas "
 "de\n"
@@ -7450,11 +7420,11 @@ msgstr ""
 
 #: Mailman/Gui/Privacy.py:497
 msgid "Header filters"
-msgstr "Filtros del testas"
+msgstr "Filtros de capites"
 
 #: Mailman/Gui/Privacy.py:500
 msgid "Filter rules to match against the headers of a message."
-msgstr "Regulas pro filtrar in base al testa del message"
+msgstr "Regulas pro filtrar a base del capite de un message"
 
 #: Mailman/Gui/Privacy.py:502
 #, fuzzy
@@ -7481,7 +7451,7 @@ msgid ""
 msgstr ""
 "Omne regula de filtro ha duo partes: un lista de expressiones\n"
 "             regular, uno per linea, e un action a prender.  Mailman\n"
-"             compara le lineas de testa del message con cata expression e\n"
+"             compara le lineas de capite del message con cata expression e\n"
 "             si uno corresponde, le message es rejectate, retenite o\n"
 "             abandonate in base al action que tu specifica.  Usa\n"
 "             <em>disactivar</em> pro disactivar temporaneemente un regula.\n"
@@ -7501,7 +7471,7 @@ msgstr "Ancian filtros anti-spam"
 
 #: Mailman/Gui/Privacy.py:522
 msgid "Hold posts with header value matching a specified regexp."
-msgstr "Suspende messages habente un testa correspondente a un regexp."
+msgstr "Retener messages con un capite correspondente a un regexp specificate."
 
 #: Mailman/Gui/Privacy.py:523
 msgid ""
@@ -7522,20 +7492,18 @@ msgid ""
 "             can be circumvented in a number of ways, e.g. by escaping or\n"
 "             bracketing it."
 msgstr ""
-"Usa iste option pro prohibir le invio dependente del valor\n"
-"             de alicun capites.  Le valor a inserer es un expression "
-"regular\n"
-"             a comparar con le capite specificate.  In le comparation on\n"
-"             ignora le capitalisation.  Lineas initiante per '#' es "
-"ignorate\n"
+"Usa iste option pro prohiber le invio dependente del valor\n"
+"             de alicun capites.  Le valor a inserer es un expression regular\n"
+"             a comparar con le capite specificate.  Le comparation non\n"
+"             distingue inter majusculas e minusculas. Lineas initiante per '#' es ignorate\n"
 "             como commentos.\n"
 "\n"
-"             <p>Pro exemplo:<pre>to: .*@public.com </pre> dice de bloccar\n"
+"             <p>Per exemplo:<pre>to: .*@public.com </pre> dice de bloccar\n"
 "             tote messages habente in le capite <em>To:</em> le texto\n"
 "             '@public.com' in qualcunque parte.\n"
 "\n"
 "             <p>Nota que spatios blanc al initio es eliminate del regexp.\n"
-"             Isto pote esser superate in multe modos, p.ex. con un escape o\n"
+"             Isto pote esser superate in plure manieras, p.ex. con un escape o\n"
 "             con parentheses."
 
 #: Mailman/Gui/Privacy.py:558
@@ -7543,6 +7511,8 @@ msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
 msgstr ""
+"dmarc_moderation_action debe esser superior o equal al valor\n"
+"                           predefinite que ha essite configurate."
 
 #: Mailman/Gui/Privacy.py:608
 msgid ""
@@ -7670,7 +7640,7 @@ msgstr ""
 
 #: Mailman/Gui/Topics.py:85
 msgid "Topic keywords, one per line, to match against each message."
-msgstr "Parolas clave de themas, uno pro linea, a cercar in cata message."
+msgstr "Parolas clave de themas, un per linea, a cercar in cata message."
 
 #: Mailman/Gui/Topics.py:87
 msgid ""
@@ -7696,8 +7666,8 @@ msgid ""
 "Topic specifications require both a name and\n"
 "                a pattern.  Incomplete topics will be ignored."
 msgstr ""
-"Le specification de un thema require sia un nomine\n"
-"                sia un patrono.  Themas incomplete essera ignorate."
+"Le specification de un thema require e un nomine\n"
+"                e un patrono.  Themas incomplete essera ignorate."
 
 #: Mailman/Gui/Topics.py:135
 msgid ""
@@ -7705,7 +7675,7 @@ msgid ""
 "                legal regular expression.  It will be discarded."
 msgstr ""
 "Le patrono de thema '%(safepattern)s' non es un\n"
-"                expression regular legal.  Illo essera abandonate."
+"                expression regular valide.  Illo essera abandonate."
 
 #: Mailman/Gui/Usenet.py:25
 msgid "Mail&lt;-&gt;News&nbsp;gateways"
@@ -7735,7 +7705,7 @@ msgid ""
 "             recognize the machine this mailing list runs on as a machine\n"
 "             capable of reading and posting news."
 msgstr ""
-"Iste valos pote esser le nomine de tu servitor de novas, o\n"
+"Iste valor pote esser le nomine de tu servitor de novas, o\n"
 "             optionalmente in le formato nomine:porto, ubi porto es un\n"
 "             numero de porto.\n"
 "\n"
@@ -7746,7 +7716,7 @@ msgstr ""
 
 #: Mailman/Gui/Usenet.py:50
 msgid "The name of the Usenet group to gateway to and/or from."
-msgstr "Le nomine del gruppo Usenet a colligar per le ponte."
+msgstr "Le nomine del gruppo Usenet a ligar per le ponte."
 
 #: Mailman/Gui/Usenet.py:53
 msgid ""
@@ -7845,7 +7815,7 @@ msgstr ""
 
 #: Mailman/Gui/Usenet.py:94
 msgid "Prefix <tt>Subject:</tt> headers on postings gated to news?"
-msgstr "Prefige le <tt>Subject:</tt> pro messages transportate al gruppo?"
+msgstr "Mitter prefixo in <tt>Subject:</tt> pro messages transportate al gruppo?"
 
 #: Mailman/Gui/Usenet.py:95
 msgid ""
@@ -7859,15 +7829,13 @@ msgid ""
 "             normal <tt>Subject:</tt> prefixes, they won't be prefixed for\n"
 "             gated messages either."
 msgstr ""
-"Mailman prefige le campo <tt>Subject:</tt>con le\n"
+"Mailman mitte un prefixo in le campo <tt>Subject:</tt>con un\n"
 "             <a href=\"?VARHELP=general/subject_prefix\">texto\n"
 "             personalisabile</a> e normalmente iste prefixo essera\n"
 "             transportate a Usenet.  Si tu pone iste option a <em>No</em>,\n"
-"             tu disabilita le prefixo pro le messages exportate.  "
-"Obviemente\n"
-"             si jam il non ha prefixos in le <tt>Subject:</tt> pro le "
-"lista,\n"
-"             il non habera prefixos e in le gruppo."
+"             tu disactiva le prefixo pro le messages exportate. Obviemente,\n"
+"             si tu disactiva le prefixos in le <tt>Subject:</tt> pro le lista,\n"
+"             il equalmente non habera prefixos in le gruppo."
 
 #: Mailman/Gui/Usenet.py:103
 msgid "Mass catch up"
@@ -9503,7 +9471,7 @@ msgstr "    nove proprietarios:"
 
 #: bin/clone_member:121
 msgid "(no change)"
-msgstr "(nulle cambio)"
+msgstr "(nulle cambiamento)"
 
 #: bin/clone_member:130
 msgid "    address not found:"
@@ -10629,7 +10597,7 @@ msgstr "De novo pro confirmar contrasigno: "
 
 #: bin/mmsitepass:89
 msgid "Passwords do not match; no changes made."
-msgstr "Contrasignos non es identic; nulle cambios facite."
+msgstr "Contrasignos non es identic; nulle cambiamentos facite."
 
 #: bin/mmsitepass:92
 msgid "Interrupted..."
