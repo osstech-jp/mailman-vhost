@@ -5,7 +5,7 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.2 Branch Backports (released in conjunction with 2.1.19rc1)
+2.2 Branch Backports (released in conjunction with 2.1.19)
 
   The following New Features and Bug Fixes have been in an "unofficial,
   never to be released" Mailman 2.2 branch for several years. Until now,
@@ -60,9 +60,13 @@ Here is a history of user visible changes to Mailman.
       archive to emphasize that even if you got to the message from a
       subject, date or author index, previous and next are still by thread.
 
-2.1.19rc1 (29-Jan-2015)
+2.1.19 (28-Feb-2015)
 
   New Features
+
+    - The subscribe_auto_approval feature backported from the 2.2 branch and
+      described above has been enhanced to accept entries of the form
+      @listname to auto approve members of another list.  (LP: #1417093)
 
     - There is a new list attribute dmarc_wrapped_message_text and a
       DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT setting to set the default for new
@@ -114,6 +118,40 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Polish translation has been updated by Stefan Plewako.
+
+    - The Interlingua translation has been updated by Martijn Dekker.
+
+    - The Japanese message catalog has been updated by SATOH Fumiyasu.
+
+    - Mailman's character set for Romanian has been changed from iso-8859-2
+      to utf-8 and the templates and messages recoded.  This change will
+      require running 'bin/arch --wipe' on any existing Romanian language
+      lists in order to recode the list's archives, and will require recoding
+      any edited templates in lists/LISTNAME/ro/*, templates/DOMAIN/ro/* and
+      templates/site/ro/*.  It may also require recoding any existing
+      iso-8859-2 text in list attributes.  (LP: #1418735)
+
+    - Mailman's character set for Russian has been changed from koi8-r to
+      utf-8 and the templates and messages recoded.  This change will
+      require running 'bin/arch --wipe' on any existing Russian language
+      lists in order to recode the list's archives, and will require recoding
+      any edited templates in lists/LISTNAME/ru/*, templates/DOMAIN/ru/* and
+      templates/site/ru/*.  It may also require recoding any existing koi8-r
+      text in list attributes.  (LP: #1418448)
+
+    - Mailman's versions.py has been augmented to help with the above two
+      character set changes.  The first time a list with preferred_language
+      of Romanian or Russian is accessed or upon upgrade to this release,
+      any list attributes which have string values such as description, info,
+      welcome_msg, etc. that appear to be in the old character set will be
+      converted to utf-8.  This is done recursively for the values (but not
+      the keys) of dictionary attributes and the elements of list and tuple
+      attributes.
+
+    - The Russian message catalog and templates have been further updated by
+      Danil Smirnov.
+
     - The Romanian message catalog has been updated.  (LP: #1415489)
 
     - The Russian templates have been updated by Danil Smirnov.  (LP: #1403462)
@@ -125,6 +163,21 @@ Here is a history of user visible changes to Mailman.
       message has been made.  (LP: #1331194)
 
   Bug fixes and other patches
+
+    - Because of privacy concerns with the 2.2 backport adding real name to
+      list rosters, this is controlled by a new ROSTER_DISPLAY_REALNAME
+      setting that defaults to No.  You may wish to set this to Yes in
+      mm_cfg.py.
+
+    - Organization: headers are now unconditionally removed from posts to
+      anonymous lists.  Regexps in ANONYMOUS_LIST_KEEP_HEADERS weren't kept
+      if the regexp included the trailing ':'.  This is fixed too.
+      (LP: #1419132)
+
+    - The admindb interface has been fixed so the the detail message body
+      display doesn't lose part of a multi-byte character, and characters which
+      are invalid in the message's charset are replaced rather than the whole
+      body not being converted to the display charset.  (LP: #1415406)
 
     - Fixed a bug in bin/rmlist that would throw an exception or just fail to
       remove held message files for a list with regexp special characters in

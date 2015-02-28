@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: Fri Jan 23 17:36:52 2015\n"
+"POT-Creation-Date: Tue Feb  3 20:49:32 2015\n"
 "PO-Revision-Date: 2002-03-28 19:21+09:00\n"
 "Last-Translator: Hyejin Soang, Wongyo Jung<redcloak@igrus.inha.ac.kr, "
 "andsoon@igrus.inha.ac.kr>\n"
@@ -290,7 +290,7 @@ msgstr ""
 "            배달 방식에서 둘 중 하나를 꼭 선택하시기 바랍니다."
 
 #: Mailman/Cgi/admin.py:209 Mailman/Cgi/admin.py:217 Mailman/Cgi/admin.py:224
-#: Mailman/Cgi/admin.py:1499 Mailman/Gui/GUIBase.py:207
+#: Mailman/Cgi/admin.py:1499 Mailman/Gui/GUIBase.py:208
 msgid "Warning: "
 msgstr "경고: "
 
@@ -565,37 +565,37 @@ msgstr ""
 
 #: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:354
 #: Mailman/Cgi/admindb.py:415 Mailman/Cgi/admindb.py:469
-#: Mailman/Cgi/admindb.py:719
+#: Mailman/Cgi/admindb.py:717
 msgid "Defer"
 msgstr "연기하기"
 
 #: Mailman/Cgi/admin.py:794 Mailman/Cgi/admindb.py:356
 #: Mailman/Cgi/admindb.py:417 Mailman/Cgi/admindb.py:469
-#: Mailman/Cgi/admindb.py:719 Mailman/Gui/ContentFilter.py:37
-#: Mailman/Gui/Privacy.py:230 Mailman/Gui/Privacy.py:253
-#: Mailman/Gui/Privacy.py:405
+#: Mailman/Cgi/admindb.py:717 Mailman/Gui/ContentFilter.py:37
+#: Mailman/Gui/Privacy.py:233 Mailman/Gui/Privacy.py:256
+#: Mailman/Gui/Privacy.py:408
 msgid "Reject"
 msgstr "거절하기"
 
-#: Mailman/Cgi/admin.py:794 Mailman/Gui/Privacy.py:230
-#: Mailman/Gui/Privacy.py:405
+#: Mailman/Cgi/admin.py:794 Mailman/Gui/Privacy.py:233
+#: Mailman/Gui/Privacy.py:408
 msgid "Hold"
 msgstr "잡아두기"
 
 #: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:357
 #: Mailman/Cgi/admindb.py:418 Mailman/Cgi/admindb.py:469
-#: Mailman/Cgi/admindb.py:719 Mailman/Commands/cmd_confirm.py:93
-#: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:230
-#: Mailman/Gui/Privacy.py:254 Mailman/Gui/Privacy.py:405
+#: Mailman/Cgi/admindb.py:717 Mailman/Commands/cmd_confirm.py:93
+#: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:233
+#: Mailman/Gui/Privacy.py:257 Mailman/Gui/Privacy.py:408
 msgid "Discard"
 msgstr "버리기"
 
 #: Mailman/Cgi/admin.py:795 Mailman/Cgi/admindb.py:469
-#: Mailman/Gui/Privacy.py:253 Mailman/Gui/Privacy.py:405
+#: Mailman/Gui/Privacy.py:256 Mailman/Gui/Privacy.py:408
 msgid "Accept"
 msgstr "받이들이기"
 
-#: Mailman/Cgi/admin.py:798 Mailman/Cgi/admindb.py:725
+#: Mailman/Cgi/admin.py:798 Mailman/Cgi/admindb.py:723
 msgid "Action:"
 msgstr "행동:"
 
@@ -868,9 +868,9 @@ msgstr "여기서 가입된 회원들에게 환영 메일을 보낼 것인가?"
 #: Mailman/Gui/General.py:488 Mailman/Gui/NonDigest.py:45
 #: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:125 Mailman/Gui/Privacy.py:158
-#: Mailman/Gui/Privacy.py:211 Mailman/Gui/Privacy.py:282
-#: Mailman/Gui/Privacy.py:420 Mailman/Gui/Privacy.py:439
+#: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
+#: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:285
+#: Mailman/Gui/Privacy.py:423 Mailman/Gui/Privacy.py:442
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "No"
@@ -897,9 +897,9 @@ msgstr "아니요"
 #: Mailman/Gui/General.py:488 Mailman/Gui/NonDigest.py:45
 #: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:125 Mailman/Gui/Privacy.py:158
-#: Mailman/Gui/Privacy.py:211 Mailman/Gui/Privacy.py:282
-#: Mailman/Gui/Privacy.py:420 Mailman/Gui/Privacy.py:439
+#: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
+#: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:285
+#: Mailman/Gui/Privacy.py:423 Mailman/Gui/Privacy.py:442
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "Yes"
@@ -1034,7 +1034,7 @@ msgid "&lt;blank line&gt;"
 msgstr "&lt;공백 줄&gt;"
 
 #: Mailman/Cgi/admin.py:1405 Mailman/Cgi/admin.py:1408
-#: Mailman/Cgi/admindb.py:938
+#: Mailman/Cgi/admindb.py:936
 msgid "Bad/Invalid email address"
 msgstr "잘못된/없는 E메일 주소"
 
@@ -1166,7 +1166,7 @@ msgid "Reason for refusal"
 msgstr "거절 이유"
 
 #: Mailman/Cgi/admindb.py:355 Mailman/Cgi/admindb.py:416
-#: Mailman/Cgi/admindb.py:719 Mailman/Commands/cmd_confirm.py:90
+#: Mailman/Cgi/admindb.py:717 Mailman/Commands/cmd_confirm.py:90
 msgid "Approve"
 msgstr "승인하기"
 
@@ -1203,7 +1203,7 @@ msgstr ""
 msgid "ungrouped/time"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:702
+#: Mailman/Cgi/admindb.py:462 Mailman/Cgi/admindb.py:700
 msgid "From:"
 msgstr "보낸이:"
 
@@ -1266,7 +1266,7 @@ msgstr "개인 메세지를 보기위해 메세지 번호를 클릭하세요."
 msgid "view all messages from %(esender)s"
 msgstr "%(esender)s 가 보낸 모든 메세지 보기"
 
-#: Mailman/Cgi/admindb.py:566 Mailman/Cgi/admindb.py:705
+#: Mailman/Cgi/admindb.py:566 Mailman/Cgi/admindb.py:703
 msgid "Subject:"
 msgstr "제목:"
 
@@ -1283,11 +1283,11 @@ msgstr "크기:"
 msgid "not available"
 msgstr "이용할 수 없숩니다."
 
-#: Mailman/Cgi/admindb.py:574 Mailman/Cgi/admindb.py:708
+#: Mailman/Cgi/admindb.py:574 Mailman/Cgi/admindb.py:706
 msgid "Reason:"
 msgstr "이유:"
 
-#: Mailman/Cgi/admindb.py:578 Mailman/Cgi/admindb.py:712
+#: Mailman/Cgi/admindb.py:578 Mailman/Cgi/admindb.py:710
 #, fuzzy
 msgid "Received:"
 msgstr "묶음배달(Digest) 로 받을까요?"
@@ -1308,40 +1308,40 @@ msgstr "<em>ID #%(id)d 인 메세지를 읽어버렸습니다."
 msgid "<em>Message with id #%(id)d is corrupted."
 msgstr "<em>ID #%(id)d 인 메세지가 깨졌습니다."
 
-#: Mailman/Cgi/admindb.py:730
+#: Mailman/Cgi/admindb.py:728
 msgid "Preserve message for site administrator"
 msgstr "사이트 관리자를 위해 메세지 보존하기"
 
-#: Mailman/Cgi/admindb.py:736
+#: Mailman/Cgi/admindb.py:734
 msgid "Additionally, forward this message to: "
 msgstr "게다가, 이 메세지를 다음 사람에게 전달: "
 
-#: Mailman/Cgi/admindb.py:741 Mailman/Cgi/admindb.py:810
-#: Mailman/Cgi/admindb.py:887 Mailman/Cgi/admindb.py:889
+#: Mailman/Cgi/admindb.py:739 Mailman/Cgi/admindb.py:808
+#: Mailman/Cgi/admindb.py:885 Mailman/Cgi/admindb.py:887
 msgid "[No explanation given]"
 msgstr "[설명이 없습니다.]"
 
-#: Mailman/Cgi/admindb.py:743
+#: Mailman/Cgi/admindb.py:741
 msgid "If you reject this post,<br>please explain (optional):"
 msgstr "만약 이글을 거절한다면,<br>그 이유를 설명하세요.(선택사항):"
 
-#: Mailman/Cgi/admindb.py:749
+#: Mailman/Cgi/admindb.py:747
 msgid "Message Headers:"
 msgstr "메세지 헤더:"
 
-#: Mailman/Cgi/admindb.py:754
+#: Mailman/Cgi/admindb.py:752
 msgid "Message Excerpt:"
 msgstr "메세지 인용:"
 
-#: Mailman/Cgi/admindb.py:926
+#: Mailman/Cgi/admindb.py:924
 msgid "Database Updated..."
 msgstr "DB 가 업데이트되었습니다..."
 
-#: Mailman/Cgi/admindb.py:930
+#: Mailman/Cgi/admindb.py:928
 msgid " is already a member"
 msgstr " 는 이미 회원입니다."
 
-#: Mailman/Cgi/admindb.py:934
+#: Mailman/Cgi/admindb.py:932
 msgid "%(addr)s is banned (matched: %(patt)s)"
 msgstr ""
 
@@ -4532,15 +4532,15 @@ msgstr "묶음배달이 보내졌습니다."
 msgid "There was no digest to send."
 msgstr "보낼 묶음배달이 없습니다."
 
-#: Mailman/Gui/GUIBase.py:172
+#: Mailman/Gui/GUIBase.py:173
 msgid "Invalid value for variable: %(property)s"
 msgstr "잘못된 값은 변수값 : %(property)s"
 
-#: Mailman/Gui/GUIBase.py:176
+#: Mailman/Gui/GUIBase.py:177
 msgid "Bad email address for option %(property)s: %(error)s"
 msgstr "%(property)s 옵션을 위한 잘못된 E메일 주소 : %(error)s"
 
-#: Mailman/Gui/GUIBase.py:202
+#: Mailman/Gui/GUIBase.py:203
 msgid ""
 "The following illegal substitution variables were\n"
 "                found in the <code>%(property)s</code> string:\n"
@@ -4553,7 +4553,7 @@ msgstr ""
 "<code>%(bad)s</code> <p>당신의 리스트는 이 문제를 수정하기 전에 제대로 작동 "
 "안할 수 있습니다. "
 
-#: Mailman/Gui/GUIBase.py:216
+#: Mailman/Gui/GUIBase.py:217
 msgid ""
 "Your <code>%(property)s</code> string appeared to\n"
 "                    have some correctable problems in its new value.\n"
@@ -4787,11 +4787,11 @@ msgstr ""
 "두사를 붇이는 것을 뜻합니다. 접두사의 이름은 간결해야 하며 메일링 리스트 잘 "
 "구분할 수 있도록 해야 합니다."
 
-#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:253
+#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 msgid "Munge From"
 msgstr ""
 
-#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:253
+#: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 #, fuzzy
 msgid "Wrap Message"
 msgstr "원본 메세지"
@@ -5910,7 +5910,13 @@ msgstr ""
 "을 나열하세요. 줄(line)당 하나의 주소를 추가하시고, ^ 문자로 시작하는 줄은 정"
 "규 표현식으로 인식합니다."
 
-#: Mailman/Gui/Privacy.py:126
+#: Mailman/Gui/Privacy.py:125
+msgid ""
+"You may also use the @listname notation to designate the\n"
+"             members of another list in this installation."
+msgstr ""
+
+#: Mailman/Gui/Privacy.py:129
 msgid ""
 "Is the list moderator's approval required for unsubscription\n"
 "             requests?  (<em>No</em> is recommended)"
@@ -5918,7 +5924,7 @@ msgstr ""
 "탈퇴를 하기 위해선 글관리자의 승인을 받아야 합니까? (<em>아니요</em> 를 추천"
 "합니다.)"
 
-#: Mailman/Gui/Privacy.py:129
+#: Mailman/Gui/Privacy.py:132
 msgid ""
 "When members want to leave a list, they will make an\n"
 "             unsubscription request, either via the web or via email.\n"
@@ -5942,18 +5948,18 @@ msgstr ""
 "을 원할 수 있습니다. 협동을 요구하는 리스트의 경우는 모두 고용인이 회원으로 "
 "있기 때문에 이런 것을 적용할 수 있을 것이다."
 
-#: Mailman/Gui/Privacy.py:140
+#: Mailman/Gui/Privacy.py:143
 msgid "Ban list"
 msgstr "추방 목록"
 
-#: Mailman/Gui/Privacy.py:142
+#: Mailman/Gui/Privacy.py:145
 msgid ""
 "List of addresses which are banned from membership in this\n"
 "             mailing list."
 msgstr ""
 "이 메일링 리스트의 회원으로 절대 받아들이지 않을 주소 목록을 입력하십시오."
 
-#: Mailman/Gui/Privacy.py:145
+#: Mailman/Gui/Privacy.py:148
 msgid ""
 "Addresses in this list are banned outright from subscribing\n"
 "             to this mailing list, with no further moderation required.  "
@@ -5965,41 +5971,41 @@ msgstr ""
 "을 나열하세요. 줄(line)당 하나의 주소를 추가하시고, ^ 문자로 시작하는 줄은 정"
 "규 표현식으로 인식합니다."
 
-#: Mailman/Gui/Privacy.py:150
+#: Mailman/Gui/Privacy.py:153
 msgid "Membership exposure"
 msgstr "회원 보여주기 부분"
 
-#: Mailman/Gui/Privacy.py:152
+#: Mailman/Gui/Privacy.py:155
 msgid "Anyone"
 msgstr "누구나"
 
-#: Mailman/Gui/Privacy.py:152
+#: Mailman/Gui/Privacy.py:155
 msgid "List admin only"
 msgstr "리스트 관리자만"
 
-#: Mailman/Gui/Privacy.py:152
+#: Mailman/Gui/Privacy.py:155
 msgid "List members"
 msgstr "리스트 회원"
 
-#: Mailman/Gui/Privacy.py:153
+#: Mailman/Gui/Privacy.py:156
 msgid "Who can view subscription list?"
 msgstr "어떤 사람들이 가입자 목록을 볼 수 있습니까?"
 
-#: Mailman/Gui/Privacy.py:155
+#: Mailman/Gui/Privacy.py:158
 msgid ""
 "When set, the list of subscribers is protected by member or\n"
 "             admin password authentication."
 msgstr ""
 "설정했을때 가입자의 목록은 회원 혹은 관리자 비밀번호 인증으로 보호됩니다."
 
-#: Mailman/Gui/Privacy.py:159
+#: Mailman/Gui/Privacy.py:162
 #, fuzzy
 msgid ""
 "Show member addresses so they're not directly recognizable\n"
 "             as email addresses?"
 msgstr "회원들의 E메일 주소를 스패머가 악용못하게 변형시켜 보일까요?"
 
-#: Mailman/Gui/Privacy.py:161
+#: Mailman/Gui/Privacy.py:164
 msgid ""
 "Setting this option causes member email addresses to be\n"
 "             transformed when they are presented on list web pages (both in\n"
@@ -6013,12 +6019,12 @@ msgstr ""
 "지 않습니다. 이렇게 하는 이유는 스패머들이 즐겨 사용하는 E메일 모으는 프로그"
 "램을 막기 위해서 입니다."
 
-#: Mailman/Gui/Privacy.py:172
+#: Mailman/Gui/Privacy.py:175
 #, fuzzy
 msgid "/Quarantine"
 msgstr "계절"
 
-#: Mailman/Gui/Privacy.py:176
+#: Mailman/Gui/Privacy.py:179
 msgid ""
 "When a message is posted to the list, a series of\n"
 "            moderation steps are taken to decide whether a moderator must\n"
@@ -6078,15 +6084,15 @@ msgstr ""
 "할 수 있습니다.(예를 들어 당신은 일반적으로 하나의 백슬래쉬를 사용합니다.)<p>"
 "비정규식 패턴이 항상 처음에 오도록 하십시오."
 
-#: Mailman/Gui/Privacy.py:209
+#: Mailman/Gui/Privacy.py:212
 msgid "Member filters"
 msgstr "회원 걸러내기"
 
-#: Mailman/Gui/Privacy.py:212
+#: Mailman/Gui/Privacy.py:215
 msgid "By default, should new list member postings be moderated?"
 msgstr "기본적으로 새로운 리스트 회원의 글은 글관리 되도록 하겠습니까?"
 
-#: Mailman/Gui/Privacy.py:214
+#: Mailman/Gui/Privacy.py:217
 msgid ""
 "Each list member has a <em>moderation flag</em> which says\n"
 "             whether messages from the list member can be posted directly "
@@ -6120,13 +6126,13 @@ msgstr ""
 "href=\"%(adminurl)s/members\">회원 관리 화면</a>를 사용하여 개인회원 각각의 "
 "글관리 기호를 설정할 수 있습니다."
 
-#: Mailman/Gui/Privacy.py:231
+#: Mailman/Gui/Privacy.py:234
 msgid ""
 "Action to take when a moderated member posts to the\n"
 "             list."
 msgstr "글관리되는 회원이 리스트에 글을 보냈을때 취하는 행동."
 
-#: Mailman/Gui/Privacy.py:233
+#: Mailman/Gui/Privacy.py:236
 msgid ""
 "<ul><li><b>Hold</b> -- this holds the message for approval\n"
 "             by the list moderators.\n"
@@ -6149,7 +6155,7 @@ msgstr ""
 "sender/member_moderation_notice\">여러분이 설정</a>할 수 있습니다.<p><li><b>"
 "버리기</b> -- 이것은 글의 저자에게 버린다는 편지없이 메세지를 버립니다.</ul>"
 
-#: Mailman/Gui/Privacy.py:247
+#: Mailman/Gui/Privacy.py:250
 msgid ""
 "Text to include in any\n"
 "             <a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
@@ -6160,14 +6166,14 @@ msgstr ""
 "privacy/sender/member_moderation_action\">거절 공지</a>에 포함될 글을 입력하"
 "세요."
 
-#: Mailman/Gui/Privacy.py:255
+#: Mailman/Gui/Privacy.py:258
 #, fuzzy
 msgid ""
 "Action to take when anyone posts to the\n"
 "             list from a domain with a DMARC Reject%(quarantine)s Policy."
 msgstr "글관리되는 회원이 리스트에 글을 보냈을때 취하는 행동."
 
-#: Mailman/Gui/Privacy.py:258
+#: Mailman/Gui/Privacy.py:261
 #, fuzzy
 msgid ""
 "<ul><li><b>Munge From</b> -- applies the <a\n"
@@ -6203,13 +6209,13 @@ msgstr ""
 "sender/member_moderation_notice\">여러분이 설정</a>할 수 있습니다.<p><li><b>"
 "버리기</b> -- 이것은 글의 저자에게 버린다는 편지없이 메세지를 버립니다.</ul>"
 
-#: Mailman/Gui/Privacy.py:283
+#: Mailman/Gui/Privacy.py:286
 msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=quarantine as well as p=reject"
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:286
+#: Mailman/Gui/Privacy.py:289
 msgid ""
 "<ul><li><b>No</b> -- this applies dmarc_moderation_action to\n"
 "               only those posts From: a domain with DMARC p=reject.  This "
@@ -6226,7 +6232,7 @@ msgid ""
 "               recipients' spam folders or other hard to find places."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:299
+#: Mailman/Gui/Privacy.py:302
 #, fuzzy
 msgid ""
 "Text to include in any\n"
@@ -6239,7 +6245,7 @@ msgstr ""
 "privacy/sender/member_moderation_action\">거절 공지</a>에 포함될 글을 입력하"
 "세요."
 
-#: Mailman/Gui/Privacy.py:306
+#: Mailman/Gui/Privacy.py:309
 msgid ""
 "If dmarc_moderation_action applies and is Wrap Message,\n"
 "             and this text is provided, the text will be placed in a\n"
@@ -6247,7 +6253,7 @@ msgid ""
 "             part in the wrapped message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:311
+#: Mailman/Gui/Privacy.py:314
 msgid ""
 "A wrapped message will either be a multipart/mixed message\n"
 "             with up to four sub-parts; a text/plain part containing\n"
@@ -6261,14 +6267,14 @@ msgid ""
 "             none of the other parts are applicable."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:320
+#: Mailman/Gui/Privacy.py:323
 msgid ""
 "A 'two dimensional' list of email address domains which are\n"
 "               considered equivalent when checking if a post is from a list\n"
 "               member."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:324
+#: Mailman/Gui/Privacy.py:327
 msgid ""
 "If two poster addresses with the same local part but\n"
 "               different domains are to be considered equivalents for list\n"
@@ -6297,17 +6303,17 @@ msgid ""
 "               'not&nbsp;metoo' will not."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:346
+#: Mailman/Gui/Privacy.py:349
 msgid "Non-member filters"
 msgstr "비회원 걸러내기"
 
-#: Mailman/Gui/Privacy.py:349
+#: Mailman/Gui/Privacy.py:352
 msgid ""
 "List of non-member addresses whose postings should be\n"
 "             automatically accepted."
 msgstr "비회원의 주소중 보낸 글을 자동으로 받아들일 목록을 나열하세요."
 
-#: Mailman/Gui/Privacy.py:356
+#: Mailman/Gui/Privacy.py:359
 #, fuzzy
 msgid ""
 "Postings from any of these non-members will be automatically\n"
@@ -6321,13 +6327,13 @@ msgstr ""
 "비회원의 주소중 보낸 글을 자동으로 받아들일 목록입니다. 줄(line)당 하나의 주"
 "소를 넣으시고 ^ 문자로 시작하는 줄은 정규 표현식을 나타냅니다."
 
-#: Mailman/Gui/Privacy.py:365
+#: Mailman/Gui/Privacy.py:368
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             immediately held for moderation."
 msgstr "비회원의 주소중 보낸 글을 즉각 글관리로 유지할 목록을 나열하세요."
 
-#: Mailman/Gui/Privacy.py:368
+#: Mailman/Gui/Privacy.py:371
 msgid ""
 "Postings from any of these non-members will be immediately\n"
 "             and automatically held for moderation by the list moderators.\n"
@@ -6343,13 +6349,13 @@ msgstr ""
 "줄(line)당 하나의 주소를 넣으시고 ^ 문자로 시작하는 줄은 정규 표현식을 나타냅"
 "니다."
 
-#: Mailman/Gui/Privacy.py:376
+#: Mailman/Gui/Privacy.py:379
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically rejected."
 msgstr "비회원의 주소중 보낸 글을 자동으로 거절할 목록을 나열하세요."
 
-#: Mailman/Gui/Privacy.py:379
+#: Mailman/Gui/Privacy.py:382
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             rejected.  In other words, their messages will be bounced back "
@@ -6371,13 +6377,13 @@ msgstr ""
 "넣어 져야 합니다. <p>줄(line)당 하나의 주소를 넣으시고 ^ 문자로 시작하는 줄"
 "은 정규 표현식을 나타냅니다."
 
-#: Mailman/Gui/Privacy.py:391
+#: Mailman/Gui/Privacy.py:394
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically discarded."
 msgstr "비회원의 주소중 보낸 글을 자동으로 글을 버릴 목록을 나열하세요."
 
-#: Mailman/Gui/Privacy.py:394
+#: Mailman/Gui/Privacy.py:397
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             discarded.  That is, the message will be thrown away with no\n"
@@ -6398,13 +6404,13 @@ msgstr ""
 "으로 설정할 수 있습니다. <p>줄(line)당 하나의 주소를 넣으시고 ^ 문자로 시작하"
 "는 줄은 정규 표현식을 나타냅니다."
 
-#: Mailman/Gui/Privacy.py:406
+#: Mailman/Gui/Privacy.py:409
 msgid ""
 "Action to take for postings from non-members for which no\n"
 "             explicit action is defined."
 msgstr "처리를 정의하지 않은 비회원으로 부터 온 글에 대한 행동 지침은?"
 
-#: Mailman/Gui/Privacy.py:409
+#: Mailman/Gui/Privacy.py:412
 msgid ""
 "When a post from a non-member is received, the message's\n"
 "             sender is matched against the list of explicitly\n"
@@ -6430,13 +6436,13 @@ msgstr ""
 "             >버리기</a> 주소와 대조하여 검사됩니다.  만약 찾는 것이 발견되"
 "지 않으면 이 행동이 취해 집니다."
 
-#: Mailman/Gui/Privacy.py:421
+#: Mailman/Gui/Privacy.py:424
 msgid ""
 "Should messages from non-members, which are automatically\n"
 "             discarded, be forwarded to the list moderator?"
 msgstr "비회원으로 온 글은 자동으로 버리고, 리스트 글관리자에게 전달할까요?"
 
-#: Mailman/Gui/Privacy.py:425
+#: Mailman/Gui/Privacy.py:428
 msgid ""
 "Text to include in any rejection notice to be sent to\n"
 "             non-members who post to this list. This notice can include\n"
@@ -6444,18 +6450,18 @@ msgid ""
 "             internally crafted default message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:433
+#: Mailman/Gui/Privacy.py:436
 msgid ""
 "This section allows you to configure various filters based on\n"
 "            the recipient of the message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:436
+#: Mailman/Gui/Privacy.py:439
 #, fuzzy
 msgid "Recipient filters"
 msgstr "회원 걸러내기"
 
-#: Mailman/Gui/Privacy.py:440
+#: Mailman/Gui/Privacy.py:443
 msgid ""
 "Must posts have list named in destination (to, cc) field\n"
 "             (or be among the acceptable alias names, specified below)?"
@@ -6463,7 +6469,7 @@ msgstr ""
 "포스팅 된 글의 목적지 항목(to, cc)에 리스트의 주소가 적혀져 있어야 합니까? "
 "(혹은 밑에서 입력하게 될 특정 별칭(alias)만 허락하게 할것입니까?)"
 
-#: Mailman/Gui/Privacy.py:443
+#: Mailman/Gui/Privacy.py:446
 msgid ""
 "Many (in fact, most) spams do not explicitly name their\n"
 "             myriad destinations in the explicit destination addresses - in\n"
@@ -6492,7 +6498,7 @@ msgstr ""
 "주소가 리스트상에서 받아들일 수 있는 특정 별칭을 가지고 있지</ol>\n"
 "않으면 다른 주소로 부터 중계되는 어떤한 글도 받아 들이지 않을 것입니다."
 
-#: Mailman/Gui/Privacy.py:461
+#: Mailman/Gui/Privacy.py:464
 msgid ""
 "Alias names (regexps) which qualify as explicit to or cc\n"
 "             destination names for this list."
@@ -6500,7 +6506,7 @@ msgstr ""
 "이 메일링 리스트의 목적 항목(to, cc)의 별칭(alias) 이름들을 넣어 주세요. 여"
 "기 입력된 주소는 편지의 목적지에 적혀 있어도 되는것을 가르킵니다."
 
-#: Mailman/Gui/Privacy.py:464
+#: Mailman/Gui/Privacy.py:467
 msgid ""
 "Alternate addresses that are acceptable when\n"
 "             `require_explicit_destination' is enabled.  This option takes "
@@ -6535,13 +6541,13 @@ msgstr ""
 "분만 비교하는 것은 반대되는 여론이 있기에, 나중에 발표될 버전에서는 패턴 비"
 "교 부분은 항상 전체 참조자 주소를 검사하도록 할 생각입니다."
 
-#: Mailman/Gui/Privacy.py:482
+#: Mailman/Gui/Privacy.py:485
 msgid "Ceiling on acceptable number of recipients for a posting."
 msgstr ""
 "포스팅 글의 참조자의 최대 인원 수를 정하십시오. 만약 이 수보다 크면스팸 메일"
 "로 간주됩니다."
 
-#: Mailman/Gui/Privacy.py:484
+#: Mailman/Gui/Privacy.py:487
 msgid ""
 "If a posting has this number, or more, of recipients, it is\n"
 "             held for admin approval.  Use 0 for no ceiling."
@@ -6549,7 +6555,7 @@ msgstr ""
 "만약 배달되어 온 글에서 참조자가 이 숫자보다 크다면 이 글은 관리자의 승인을 "
 "대기하도록 합니다. 만약 이것을 생각하지 않는다면 0 으로 설정하십시오."
 
-#: Mailman/Gui/Privacy.py:489
+#: Mailman/Gui/Privacy.py:492
 msgid ""
 "This section allows you to configure various anti-spam\n"
 "            filters posting filters, which can help reduce the amount of "
@@ -6561,17 +6567,17 @@ msgstr ""
 "절히 사용하시면 여러분의 메일링 리스트 회원에게 스팸 메일이 가는 것을 막는데 "
 "도움을 줄 것입니다."
 
-#: Mailman/Gui/Privacy.py:494
+#: Mailman/Gui/Privacy.py:497
 #, fuzzy
 msgid "Header filters"
 msgstr "회원 걸러내기"
 
-#: Mailman/Gui/Privacy.py:497
+#: Mailman/Gui/Privacy.py:500
 #, fuzzy
 msgid "Filter rules to match against the headers of a message."
 msgstr "각 편지와 비교할 주제 키워드를 줄(line) 당 입력하세요."
 
-#: Mailman/Gui/Privacy.py:499
+#: Mailman/Gui/Privacy.py:502
 msgid ""
 "Each header filter rule has two parts, a list of regular\n"
 "             expressions, one per line, and an action to take.  Mailman\n"
@@ -6594,16 +6600,16 @@ msgid ""
 "             types or file name extensions."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:516
+#: Mailman/Gui/Privacy.py:519
 #, fuzzy
 msgid "Legacy anti-spam filters"
 msgstr "스팸 메일은 물러가라!"
 
-#: Mailman/Gui/Privacy.py:519
+#: Mailman/Gui/Privacy.py:522
 msgid "Hold posts with header value matching a specified regexp."
 msgstr "특정 정규표현식에 맞는 헤드를 가진 메일 잡아둡니다."
 
-#: Mailman/Gui/Privacy.py:520
+#: Mailman/Gui/Privacy.py:523
 #, fuzzy
 msgid ""
 "Use this option to prohibit posts according to specific\n"
@@ -6637,19 +6643,19 @@ msgstr ""
 "<p>또한 관계있는 메커니즘을 사용하는 <em>forbidden_posters</em> 설정 또한 참"
 "고 하시기 바랍니다."
 
-#: Mailman/Gui/Privacy.py:555
+#: Mailman/Gui/Privacy.py:558
 msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:605
+#: Mailman/Gui/Privacy.py:608
 msgid ""
 "Header filter rules require a pattern.\n"
 "                Incomplete filter rules will be ignored."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:613
+#: Mailman/Gui/Privacy.py:616
 msgid ""
 "The header filter rule pattern\n"
 "                '%(safepattern)s' is not a legal regular expression.  This\n"
