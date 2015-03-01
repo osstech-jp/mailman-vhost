@@ -5,6 +5,14 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.20 (xx-xxx-xxxx)
+
+  Bug fixes and other patches
+
+    - Fixed a bug in CommandRunner that threw an uncaught KeyError if
+      the input to the list-request address contained a command word
+      terminated by a period.  (LP: #1426825)
+
 2.2 Branch Backports (released in conjunction with 2.1.19)
 
   The following New Features and Bug Fixes have been in an "unofficial,

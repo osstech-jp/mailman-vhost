@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -12,7 +12,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
 
 """-request robot command queue runner."""
 
@@ -132,7 +133,8 @@ class Results:
             __import__(modname)
             handler = sys.modules[modname]
         # ValueError can be raised if cmd has dots in it.
-        except (ImportError, ValueError):
+        # and KeyError if cmd is otherwise good but ends with a dot.
+        except (ImportError, ValueError, KeyError):
             # If we're on line zero, it was the Subject: header that didn't
             # contain a command.  It's possible there's a Re: prefix (or
             # localized version thereof) on the Subject: line that's messing
