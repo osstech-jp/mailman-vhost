@@ -9,6 +9,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed a bug in CommandRunner that could process the second word of a
+      body line as a command word and a case sensitivity in commands in
+      Subject: with an Re: prefix.  (LP: #1426829)
+
     - Fixed a bug in CommandRunner that threw an uncaught KeyError if
       the input to the list-request address contained a command word
       terminated by a period.  (LP: #1426825)

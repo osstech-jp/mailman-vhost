@@ -146,18 +146,21 @@ class Results:
             #
             # If that still didn't work it isn't enough to stop processing.
             # BAW: should we include a message that the Subject: was ignored?
+            #
+            # But first, be sure we're looking at the Subject: and not past
+            # it already.
+            if self.lineno != 0:
+                return BADCMD
             if self.subjcmdretried < 1:
                 self.subjcmdretried += 1
                 if re.search('^.*:.+', cmd):
-                    return self.do_command(re.sub('.*:', '', cmd), args)
+                    cmd = re.sub('.*:', '', cmd).lower()
+                    return self.do_command(cmd, args)
             if self.subjcmdretried < 2 and args:
                 self.subjcmdretried += 1
-                cmd = args.pop(0)
+                cmd = args.pop(0).lower()
                 return self.do_command(cmd, args)
-            if self.lineno <> 0:
-                return BADCMD
-            else:
-                return BADSUBJ
+            return BADSUBJ
         if handler.process(self, args):
             return STOP
         else:
