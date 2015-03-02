@@ -9,6 +9,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - A LookupError in SpamDetect on a message with RFC 2047 encoded headers
+      in an unknown character set is fixed.  (LP: #1427389)
+
     - Fixed a bug in CommandRunner that could process the second word of a
       body line as a command word and a case sensitivity in commands in
       Subject: with an Re: prefix.  (LP: #1426829)
