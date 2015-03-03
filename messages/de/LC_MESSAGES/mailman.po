@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue Feb  3 20:49:32 2015\n"
+"POT-Creation-Date: Mon Mar  2 21:32:04 2015\n"
 "PO-Revision-Date: 2013-08-02 11:21+0200\n"
 "Last-Translator: Ralf Hildebrandt <ralf.hildebrandt@charite.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -4313,169 +4313,169 @@ msgstr "Normale Mitglieder (sofortiger Bezug, keine digests):"
 msgid "Digest members:"
 msgstr "Mitglieder, die Nachrichtensammlungen erhalten:"
 
-#: Mailman/Defaults.py:1630
+#: Mailman/Defaults.py:1634
 msgid "Arabic"
 msgstr "Arabisch"
 
-#: Mailman/Defaults.py:1631
+#: Mailman/Defaults.py:1635
 msgid "Asturian"
 msgstr "Asturisch"
 
 # Mailman/Defaults.py:777
-#: Mailman/Defaults.py:1632
+#: Mailman/Defaults.py:1636
 msgid "Catalan"
 msgstr "Katalanisch"
 
-#: Mailman/Defaults.py:1633
+#: Mailman/Defaults.py:1637
 msgid "Czech"
 msgstr "Tschechisch"
 
-#: Mailman/Defaults.py:1634
+#: Mailman/Defaults.py:1638
 msgid "Danish"
 msgstr "Dänisch"
 
-#: Mailman/Defaults.py:1635
+#: Mailman/Defaults.py:1639
 msgid "German"
 msgstr "Deutsch"
 
 # Mailman/Defaults.py:772
-#: Mailman/Defaults.py:1636
+#: Mailman/Defaults.py:1640
 msgid "English (USA)"
 msgstr "Englisch (USA)"
 
 # Mailman/Defaults.py:773
-#: Mailman/Defaults.py:1637
+#: Mailman/Defaults.py:1641
 msgid "Spanish (Spain)"
 msgstr "Spanisch (Spanien)"
 
-#: Mailman/Defaults.py:1638
+#: Mailman/Defaults.py:1642
 msgid "Estonian"
 msgstr "Estnisch"
 
-#: Mailman/Defaults.py:1639
+#: Mailman/Defaults.py:1643
 msgid "Euskara"
 msgstr "Euskarisch"
 
-#: Mailman/Defaults.py:1640
+#: Mailman/Defaults.py:1644
 msgid "Persian"
 msgstr "Farsi"
 
-#: Mailman/Defaults.py:1641
+#: Mailman/Defaults.py:1645
 msgid "Finnish"
 msgstr "Finnisch"
 
 # Mailman/Defaults.py:774
-#: Mailman/Defaults.py:1642
+#: Mailman/Defaults.py:1646
 msgid "French"
 msgstr "Französisch"
 
 # Mailman/Defaults.py:777
-#: Mailman/Defaults.py:1643
+#: Mailman/Defaults.py:1647
 msgid "Galician"
 msgstr "Galizisch"
 
-#: Mailman/Defaults.py:1644
+#: Mailman/Defaults.py:1648
 msgid "Greek"
 msgstr "Griechisch"
 
-#: Mailman/Defaults.py:1645
+#: Mailman/Defaults.py:1649
 msgid "Hebrew"
 msgstr "Hebräisch"
 
-#: Mailman/Defaults.py:1646
+#: Mailman/Defaults.py:1650
 msgid "Croatian"
 msgstr "Kroatisch"
 
 # Mailman/Defaults.py:776
-#: Mailman/Defaults.py:1647
+#: Mailman/Defaults.py:1651
 msgid "Hungarian"
 msgstr "Ungarisch"
 
-#: Mailman/Defaults.py:1648
+#: Mailman/Defaults.py:1652
 msgid "Interlingua"
 msgstr "Interlingua"
 
 # Mailman/Defaults.py:777
-#: Mailman/Defaults.py:1649
+#: Mailman/Defaults.py:1653
 msgid "Italian"
 msgstr "Italienisch"
 
 # Mailman/Defaults.py:778
-#: Mailman/Defaults.py:1650
+#: Mailman/Defaults.py:1654
 msgid "Japanese"
 msgstr "Japanisch"
 
 # Mailman/Defaults.py:779
-#: Mailman/Defaults.py:1651
+#: Mailman/Defaults.py:1655
 msgid "Korean"
 msgstr "Koreanisch"
 
-#: Mailman/Defaults.py:1652
+#: Mailman/Defaults.py:1656
 msgid "Lithuanian"
 msgstr "Litauisch"
 
-#: Mailman/Defaults.py:1653
+#: Mailman/Defaults.py:1657
 msgid "Dutch"
 msgstr "Holländisch"
 
 # Mailman/Defaults.py:779
-#: Mailman/Defaults.py:1654
+#: Mailman/Defaults.py:1658
 msgid "Norwegian"
 msgstr "Norwegisch"
 
-#: Mailman/Defaults.py:1655
+#: Mailman/Defaults.py:1659
 msgid "Polish"
 msgstr "Polnisch"
 
-#: Mailman/Defaults.py:1656
+#: Mailman/Defaults.py:1660
 msgid "Portuguese"
 msgstr "Portugiesisch"
 
-#: Mailman/Defaults.py:1657
+#: Mailman/Defaults.py:1661
 msgid "Portuguese (Brazil)"
 msgstr "Brasilianisches Portugiesisch"
 
-#: Mailman/Defaults.py:1658
+#: Mailman/Defaults.py:1662
 msgid "Romanian"
 msgstr "Rumänisch"
 
-#: Mailman/Defaults.py:1659
+#: Mailman/Defaults.py:1663
 msgid "Russian"
 msgstr "Russisch"
 
-#: Mailman/Defaults.py:1660
+#: Mailman/Defaults.py:1664
 msgid "Slovak"
 msgstr "Slovakisch"
 
-#: Mailman/Defaults.py:1661
+#: Mailman/Defaults.py:1665
 msgid "Slovenian"
 msgstr "Slowenisch"
 
-#: Mailman/Defaults.py:1662
+#: Mailman/Defaults.py:1666
 msgid "Serbian"
 msgstr "Serbisch"
 
-#: Mailman/Defaults.py:1663
+#: Mailman/Defaults.py:1667
 msgid "Swedish"
 msgstr "Schwedisch"
 
-#: Mailman/Defaults.py:1664
+#: Mailman/Defaults.py:1668
 msgid "Turkish"
 msgstr "Türkisch"
 
-#: Mailman/Defaults.py:1665
+#: Mailman/Defaults.py:1669
 msgid "Ukrainian"
 msgstr "Ukrainisch"
 
-#: Mailman/Defaults.py:1666
+#: Mailman/Defaults.py:1670
 msgid "Vietnamese"
 msgstr "Vietnamesisch"
 
-#: Mailman/Defaults.py:1667
+#: Mailman/Defaults.py:1671
 msgid "Chinese (China)"
 msgstr "Chinesisch (China)"
 
-#: Mailman/Defaults.py:1668
+#: Mailman/Defaults.py:1672
 msgid "Chinese (Taiwan)"
 msgstr "Chinesisch (Taiwan)"
 
@@ -5840,9 +5840,10 @@ msgid ""
 "             Munging Considered Harmful</a> for a general discussion of "
 "this\n"
 "             issue.  See <a\n"
-"             href=\"http://www.metasystema.net/essays/reply-to.mhtml\">Reply-"
-"To\n"
-"             Munging Considered Useful</a> for a dissenting opinion.\n"
+"             href=\"http://marc.merlins.org/netrants/reply-to-useful.html"
+"\">\n"
+"             Reply-To Munging Considered Useful</a> for a dissenting "
+"opinion.\n"
 "\n"
 "             <p>Some mailing lists have restricted posting privileges, with "
 "a\n"
@@ -5874,7 +5875,7 @@ msgstr ""
 "Mailantworten zu verschicken. Siehe hier zu die Diskussion auf: <a href="
 "\"http://www.unicom.com/pw/reply-to-harmful.html\"> Reply-To Munging "
 "Considered Harmful</a>. Gegenteilige Ansichten finden Sie auf <a href="
-"\"http://www.metasystema.net/essays/reply-to.mhtml\"> Reply-To Munging "
+"\"http://marc.merlins.org/netrants/reply-to-useful.html\"> Reply-To Munging "
 "Considered Useful</a>. Soweit dazu....\n"
 " <p>Einige Mailinglisten laufen mit eingeschränkten Nutzungsrechten, "
 "begleitet von einer parallelen Liste für Diskussionszwecke. Beispiele "
@@ -5909,9 +5910,10 @@ msgid ""
 "             Munging Considered Harmful</a> for a general discussion of "
 "this\n"
 "             issue.  See <a\n"
-"             href=\"http://www.metasystema.net/essays/reply-to.mhtml\">Reply-"
-"To\n"
-"             Munging Considered Useful</a> for a dissenting opinion.\n"
+"             href=\"http://marc.merlins.org/netrants/reply-to-useful.html"
+"\">\n"
+"             Reply-To Munging Considered Useful</a> for a dissenting "
+"opinion.\n"
 "\n"
 "             <p>Some mailing lists have restricted posting privileges, with "
 "a\n"
@@ -5940,7 +5942,7 @@ msgstr ""
 "macht, private E-Mail-Antworten zu verschicken. Siehe hier zu die Diskussion "
 "auf: <a href=\"http://www.unicom.com/pw/reply-to-harmful.html\"> Reply-To "
 "Munging Considered Harmful</a>. Und um sich vom Gegenteil zu überzeugen, "
-"siehe: <a href=\"http://www.metasystema.org/essays/reply-to-useful.mhtml\"> "
+"siehe: <a href=\"http://marc.merlins.org/netrants/reply-to-useful.html\"> "
 "Reply-To Munging Considered Useful</a>. Soweit dazu....\n"
 " <p>Einige Mailinglisten laufen mit eingeschränkten Nutzungsrechten, "
 "begleitet von einer parallelen Liste für Diskussionszwecke. beispiele "
@@ -8828,7 +8830,7 @@ msgstr "-------------- nächster Teil --------------\n"
 msgid "The message headers matched a filter rule"
 msgstr "Der Nachrichten-Header traf auf eine Filter-Regel zu"
 
-#: Mailman/Handlers/SpamDetect.py:109
+#: Mailman/Handlers/SpamDetect.py:117
 #, fuzzy
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
@@ -8845,7 +8847,7 @@ msgstr ""
 "Sie sich bitte mit dem Eigentümer der Mailingliste, %(listowner)s, in\n"
 "Verbindung."
 
-#: Mailman/Handlers/SpamDetect.py:154
+#: Mailman/Handlers/SpamDetect.py:162
 msgid "Message rejected by filter rule match"
 msgstr "Nachricht wurde durch Filter-Regeln geblockt"
 
@@ -9140,11 +9142,11 @@ msgstr ""
 msgid "Uncaught bounce notification"
 msgstr "Unerkannte Bounce-Benachrichtigung"
 
-#: Mailman/Queue/CommandRunner.py:97
+#: Mailman/Queue/CommandRunner.py:98
 msgid "Ignoring non-text/plain MIME parts"
 msgstr "Ignoriere non-text/plain MIME Teil"
 
-#: Mailman/Queue/CommandRunner.py:171
+#: Mailman/Queue/CommandRunner.py:176
 msgid ""
 "The results of your email command are provided below.\n"
 "Attached is your original message.\n"
@@ -9152,11 +9154,11 @@ msgstr ""
 "Das Ergebnis Ihres Kommandos ist unten aufgeführt.\n"
 "Angehängt ist Ihre ursprüngliche Nachricht.\n"
 
-#: Mailman/Queue/CommandRunner.py:176
+#: Mailman/Queue/CommandRunner.py:181
 msgid "- Results:"
 msgstr "- Ergebnis:"
 
-#: Mailman/Queue/CommandRunner.py:182
+#: Mailman/Queue/CommandRunner.py:187
 msgid ""
 "\n"
 "- Unprocessed:"
@@ -9164,7 +9166,7 @@ msgstr ""
 "\n"
 "- Unbearbeitet:"
 
-#: Mailman/Queue/CommandRunner.py:186
+#: Mailman/Queue/CommandRunner.py:191
 msgid ""
 "No commands were found in this message.\n"
 "To obtain instructions, send a message containing just the word \"help\".\n"
@@ -9173,7 +9175,7 @@ msgstr ""
 "Um eine Hilfe und Liste möglicher Kommandos zu erhalten, senden\n"
 "Sie eine Mail mit dem Wort \"help\" im Nachrichtentext.\n"
 
-#: Mailman/Queue/CommandRunner.py:191
+#: Mailman/Queue/CommandRunner.py:196
 msgid ""
 "\n"
 "- Ignored:"
@@ -9181,7 +9183,7 @@ msgstr ""
 "\n"
 "- Ignoriert:"
 
-#: Mailman/Queue/CommandRunner.py:193
+#: Mailman/Queue/CommandRunner.py:198
 msgid ""
 "\n"
 "- Done.\n"
@@ -9191,15 +9193,15 @@ msgstr ""
 "- Erledigt.\n"
 "\n"
 
-#: Mailman/Queue/CommandRunner.py:217
+#: Mailman/Queue/CommandRunner.py:222
 msgid "The results of your email commands"
 msgstr "Das Ergebnis Ihres E-Mail-Kommandos"
 
-#: Mailman/Queue/CommandRunner.py:223
+#: Mailman/Queue/CommandRunner.py:228
 msgid "Message body suppressed by Mailman site configuration\n"
 msgstr "Nachrichteninhalt durch Mailmain Konfiguration unterdrückt\n"
 
-#: Mailman/Queue/CommandRunner.py:225
+#: Mailman/Queue/CommandRunner.py:230
 msgid "Original message suppressed by Mailman site configuration\n"
 msgstr "Original Nachricht durch Mailmain Konfiguration unterdrückt\n"
 
