@@ -7,6 +7,13 @@ Here is a history of user visible changes to Mailman.
 
 2.1.20 (xx-xxx-xxxx)
 
+  New Features
+
+    - There is a new Address Change sub-section in the web admin Membership
+      Management section to allow a list admin to change a list member's
+      address in one step rather than adding the new address, copying settings
+      and deleting the old address.  (LP: #266809)
+
   Bug fixes and other patches
 
     - A LookupError in SpamDetect on a message with RFC 2047 encoded headers
