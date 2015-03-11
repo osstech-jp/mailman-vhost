@@ -5992,7 +5992,6 @@ msgstr ""
 
 # Mailman/Gui/General.py:154
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -6086,7 +6085,6 @@ msgstr "Izrecna glava <tt>Povratni naslov:</tt>"
 
 # Mailman/Gui/General.py:188
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"

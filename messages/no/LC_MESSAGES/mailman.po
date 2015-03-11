@@ -5422,7 +5422,6 @@ msgstr ""
 "epostlister."
 
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -5508,7 +5507,6 @@ msgid "Explicit <tt>Reply-To:</tt> header."
 msgstr "Egendefinert <tt>Reply-To:</tt> adresse."
 
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"

@@ -5361,7 +5361,6 @@ msgstr ""
 "             <tt>Bidaltzailea</tt> aukeratzea <em>oso</em> gomendagarria da."
 
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -5453,7 +5452,6 @@ msgid "Explicit <tt>Reply-To:</tt> header."
 msgstr "<tt>Reply-To:</tt> goiburu esplizitua."
 
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"
@@ -5511,7 +5509,7 @@ msgstr ""
 "To'\n"
 "             Munging Considered Harmful</a> webgunea gai honi buruzko\n"
 "             datu gehiago izateko. Edo bestela <a\n"
-"        ref=\"http://marc.merlins.org/netrants/reply-to-useful.html\">Reply-"
+"        href=\"http://marc.merlins.org/netrants/reply-to-useful.html\">Reply-"
 "To\n"
 "             Munging Considered Useful</a>.\n"
 "\n"

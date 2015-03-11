@@ -5148,7 +5148,6 @@ msgstr ""
 "             对大多数邮件列表来说，<em>强烈</em>推荐使用<tt>发布者</tt>。"
 
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -5227,7 +5226,6 @@ msgid "Explicit <tt>Reply-To:</tt> header."
 msgstr "显式的<tt>Reply-To:</tt>头部。"
 
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"

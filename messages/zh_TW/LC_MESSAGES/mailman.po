@@ -4860,7 +4860,6 @@ msgstr ""
 "<tt>投書者</tt>作為論壇所發信件的回信人。"
 
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -4931,7 +4930,6 @@ msgid "Explicit <tt>Reply-To:</tt> header."
 msgstr "明確的 <tt>Reply-To:</tt> 標題。"
 
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"

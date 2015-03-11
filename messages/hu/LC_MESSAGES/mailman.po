@@ -5389,7 +5389,6 @@ msgstr ""
 "a <tt>Beküldõ</tt> az <em>ajánlott</em>."
 
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -5476,7 +5475,6 @@ msgid "Explicit <tt>Reply-To:</tt> header."
 msgstr "Külön megadott <tt>Reply-To:</tt> fejléc."
 
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"

@@ -7037,7 +7037,6 @@ msgstr ""
 # Mailman/Gui/General.py:163
 # Mailman/Gui/General.py:167
 #: Mailman/Gui/General.py:242
-#, fuzzy
 msgid ""
 "This option controls what Mailman does to the\n"
 "             <tt>Reply-To:</tt> header in messages flowing through this\n"
@@ -7131,7 +7130,6 @@ msgstr "Egendefinierad <tt>Reply-To:</tt> adress."
 # Mailman/Gui/General.py:197
 # Mailman/Gui/General.py:201
 #: Mailman/Gui/General.py:276
-#, fuzzy
 msgid ""
 "This is the address set in the <tt>Reply-To:</tt> header\n"
 "             when the <a\n"
