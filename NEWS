@@ -5,7 +5,15 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.20 (xx-xxx-xxxx)
+2.1.20 (31-Mar-2015)
+
+  Security
+
+    - A path traversal vulnerability has been discovered and fixed.  This
+      vulnerability is only exploitable by a local user on a Mailman server
+      where the suggested Exim transport, the Postfix postfix_to_mailman.py
+      transport or some other programmatic MTA delivery not using aliases
+      is employed.  CVE-2015-2775  (LP: #1437145)
 
   New Features
 
