@@ -6,20 +6,20 @@ $key = q/sender-filters/;
 $external_labels{$key} = "$URL/" . q|node22.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/contents/;
-$external_labels{$key} = "$URL/" . q|node2.html|; 
+$key = q/about/;
+$external_labels{$key} = "$URL/" . q|node36.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/general-personality/;
 $external_labels{$key} = "$URL/" . q|node10.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/front/;
-$external_labels{$key} = "$URL/" . q|node1.html|; 
+$key = q/contents/;
+$external_labels{$key} = "$URL/" . q|node2.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/about/;
-$external_labels{$key} = "$URL/" . q|node36.html|; 
+$key = q/front/;
+$external_labels{$key} = "$URL/" . q|node1.html|; 
 $noresave{$key} = "$nosave";
 
 1;
