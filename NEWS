@@ -22,6 +22,10 @@ Here is a history of user visible changes to Mailman.
       address in one step rather than adding the new address, copying settings
       and deleting the old address.  (LP: #266809)
 
+  i18n
+ 
+    - The Polish translation has been updated by Stefan Plewako.
+ 
   Bug fixes and other patches
 
     - A LookupError in SpamDetect on a message with RFC 2047 encoded headers
