@@ -55,9 +55,9 @@
 </h3>
 
 <p>
-When a message is posted to the list, a series of moderation criteria are
+When a message is posted to the list, a series of moderation criteria is
 applied to determine the disposition of the message.  This section
-contains the modeation controls for postings from both members and
+contains the moderation controls for postings from both members and
 non-members.
 
 <p>
@@ -149,9 +149,9 @@ domain publishes a DMARC <code>p=reject</code> or <code>p=quarantine</code> poli
 The next batch of variables controls what happens when non-members
 post messages to the list.  Each of these accepts one email address
 per line; regular expressions are allowed if the line starts with the
-(caret) character.  These address lists are always consulted in the
-order in which they're presented on this page (i.e. accepts first,
-followed by holds, rejections, and discards).
+^ (caret) character.  These address lists are always
+consulted in the order in which they're presented on this page (i.e.
+accepts first, followed by holds, rejections, and discards).
 
 <p>
 <dl>
@@ -172,7 +172,7 @@ followed by holds, rejections, and discards).
 <dt><strong>reject_these_nonmembers</strong></dt>
 <dd>Postings from non-members whose addresses match this list are
     rejected, i.e. bounced back to the original sender.  There
-    currently is no way to add additional text to the rejection
+    is currently no way to add additional text to the rejection
     message.
 
 <p>
@@ -198,7 +198,7 @@ followed by holds, rejections, and discards).
 <dd>When messages from non-members are discarded, either because the
     sender address matched <code>discard_these_nonmembers</code>, or because
     <code>generic_nonmember_action</code> is <em>Discard</em>, you can choose
-    whether such messages are forwarded to the lsit administrators or
+    whether such messages are forwarded to the list administrators or
     not.
 </dd>
 </dl>
@@ -238,7 +238,7 @@ followed by holds, rejections, and discards).
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on January 29, 2015.</span>
+<span class="release-info">Release 2.1, documentation updated on March 2, 2015.</span>
 </div>
 <!--End of Navigation Panel-->
 

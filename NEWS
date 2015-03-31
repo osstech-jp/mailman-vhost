@@ -5,6 +5,42 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.20 (31-Mar-2015)
+
+  Security
+
+    - A path traversal vulnerability has been discovered and fixed.  This
+      vulnerability is only exploitable by a local user on a Mailman server
+      where the suggested Exim transport, the Postfix postfix_to_mailman.py
+      transport or some other programmatic MTA delivery not using aliases
+      is employed.  CVE-2015-2775  (LP: #1437145)
+
+  New Features
+
+    - There is a new Address Change sub-section in the web admin Membership
+      Management section to allow a list admin to change a list member's
+      address in one step rather than adding the new address, copying settings
+      and deleting the old address.  (LP: #266809)
+
+  i18n
+ 
+    - The Russian translation has been updated by Danil Smirnov.
+
+    - The Polish translation has been updated by Stefan Plewako.
+ 
+  Bug fixes and other patches
+
+    - A LookupError in SpamDetect on a message with RFC 2047 encoded headers
+      in an unknown character set is fixed.  (LP: #1427389)
+
+    - Fixed a bug in CommandRunner that could process the second word of a
+      body line as a command word and a case sensitivity in commands in
+      Subject: with an Re: prefix.  (LP: #1426829)
+
+    - Fixed a bug in CommandRunner that threw an uncaught KeyError if
+      the input to the list-request address contained a command word
+      terminated by a period.  (LP: #1426825)
+
 2.2 Branch Backports (released in conjunction with 2.1.19)
 
   The following New Features and Bug Fixes have been in an "unofficial,
