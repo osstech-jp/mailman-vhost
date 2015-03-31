@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1\n"
 "POT-Creation-Date: Mon Mar  9 13:14:18 2015\n"
-"PO-Revision-Date: 2015-02-10 14:56+0300\n"
+"PO-Revision-Date: 2015-03-31 10:35+0300\n"
 "Last-Translator: Danil Smirnov <danil@smirnov.la>\n"
 "Language-Team: Russian <danil@smirnov.la>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.7.1\n"
 
 #: Mailman/Archiver/HyperArch.py:123
@@ -644,9 +644,8 @@ msgid "Mass Removals"
 msgstr "Массовое удаление подписчиков"
 
 #: Mailman/Cgi/admin.py:882
-#, fuzzy
 msgid "Address Change"
-msgstr "Адрес/имя"
+msgstr "Изменение адреса"
 
 #: Mailman/Cgi/admin.py:889
 msgid "Membership List"
@@ -976,19 +975,21 @@ msgid ""
 "    member's current and new addresses below. Use the check boxes to send\n"
 "    notice of the change to the old and/or new address(es)."
 msgstr ""
+"Чтобы изменить email-адрес подписчика,\n"
+"укажите текущий и новый адрес. Используйте чекбоксы, чтобы инициировать\n"
+"отправку уведомлений о смене адреса на старый и/или новый адрес."
 
 #: Mailman/Cgi/admin.py:1264
-#, fuzzy
 msgid "Member's current address"
-msgstr "Текущий архив"
+msgstr "Текущий адрес подписчика"
 
 #: Mailman/Cgi/admin.py:1268 Mailman/Cgi/admin.py:1278
 msgid "Send notice"
-msgstr ""
+msgstr "Отправить уведомление"
 
 #: Mailman/Cgi/admin.py:1274
 msgid "Address to change to"
-msgstr ""
+msgstr "Новый адрес"
 
 #: Mailman/Cgi/admin.py:1290
 msgid "Change list ownership passwords"
@@ -1131,62 +1132,56 @@ msgid "Cannot unsubscribe non-members:"
 msgstr "Не удалось удалить подписку у не-подписчиков:"
 
 #: Mailman/Cgi/admin.py:1518
-#, fuzzy
 msgid "You must provide both current and new addresses."
-msgstr "Сначала вы должны поправить вышеуказанные адреса."
+msgstr "Вы должны указать текущий и новый email-адреса."
 
 #: Mailman/Cgi/admin.py:1520
 msgid "Current and new addresses must be different."
-msgstr ""
+msgstr "Текущий и новый адреса должны быть различными."
 
 #: Mailman/Cgi/admin.py:1524
-#, fuzzy
 msgid "%(schange_to)s is already a list member."
-msgstr " уже является подписчиком"
+msgstr "%(schange_to)s уже является подписчиком."
 
 #: Mailman/Cgi/admin.py:1529
-#, fuzzy
 msgid "%(schange_to)s is not a valid email address."
-msgstr "Укажите корректный адрес электронной почты."
+msgstr "%(schange_to)s не является корректным адресом электронной почты."
 
 #: Mailman/Cgi/admin.py:1537
 msgid "%(schange_from)s is not a member"
-msgstr ""
+msgstr "%(schange_from)s не является подписчиком"
 
 #: Mailman/Cgi/admin.py:1539
-#, fuzzy
 msgid "%(schange_to)s is already a member"
-msgstr " уже является подписчиком"
+msgstr "%(schange_to)s уже является подписчиком"
 
 #: Mailman/Cgi/admin.py:1542
-#, fuzzy
 msgid "%(schange_to)s matches banned pattern %(spat)s"
-msgstr "%(addr)s заблокирован (подходит под шаблон %(patt)s)"
+msgstr "%(schange_to)s заблокирован (подходит под шаблон %(patt)s)"
 
 #: Mailman/Cgi/admin.py:1544
 msgid "Address %(schange_from)s changed to %(schange_to)s"
-msgstr ""
+msgstr "Адрес изменен с %(schange_from)s на %(schange_to)s"
 
 #: Mailman/Cgi/admin.py:1551
 msgid ""
 "The member address %(change_from)s on the\n"
 "%(list_name)s list has been changed to %(change_to)s.\n"
 msgstr ""
+"Адрес подписчика списка рассылки %(list_name)s\n"
+"был изменен с %(change_from)s на %(change_to)s."
 
 #: Mailman/Cgi/admin.py:1554
-#, fuzzy
 msgid "%(list_name)s address change notice."
-msgstr "уведомление об изменении адреса подписчика %(realname)s"
+msgstr "Уведомление об изменении адреса подписчика %(list_name)s."
 
 #: Mailman/Cgi/admin.py:1565
-#, fuzzy
 msgid "Notification sent to %(schange_from)s."
-msgstr "Оповещения"
+msgstr "Уведомление отправлено на адрес %(schange_from)s."
 
 #: Mailman/Cgi/admin.py:1575
-#, fuzzy
 msgid "Notification sent to %(schange_to)s."
-msgstr "Оповещения"
+msgstr "Уведомление отправлено на адрес %(schange_to)s."
 
 #: Mailman/Cgi/admin.py:1581
 msgid "Bad moderation flag value"
@@ -6271,9 +6266,8 @@ msgid "Mass&nbsp;Removal"
 msgstr "Массовое&nbsp;удаление&nbsp;подписчиков"
 
 #: Mailman/Gui/Membership.py:33
-#, fuzzy
 msgid "Address&nbsp;Change"
-msgstr "Адрес/имя"
+msgstr "Изменение&nbsp;адреса"
 
 #: Mailman/Gui/NonDigest.py:35
 msgid "Non-digest&nbsp;options"
