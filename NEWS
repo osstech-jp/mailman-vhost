@@ -9,6 +9,11 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - If SUBSCRIBE_FORM_SECRET is enabled and a user's network has a load
+      balancer or similar in use the POSTing IP might not exactly match the
+      GETting IP.  This is now accounted for by not requiring the last
+      octet (16 bits for ipV6) to match.  (LP: #1447445)
+
     - DKIM-Signature:, DomainKey-Signature: and Authentication-Results:
       headers are now removed by default from posts to anonymous lists.
       (LP: #1444673)
