@@ -9,6 +9,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The vette log entry for DMARC policy hits now contains the list name.
+      (LP: #1450826)
+
     - If SUBSCRIBE_FORM_SECRET is enabled and a user's network has a load
       balancer or similar in use the POSTing IP might not exactly match the
       GETting IP.  This is now accounted for by not requiring the last

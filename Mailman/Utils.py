@@ -1209,15 +1209,15 @@ def IsDMARCProhibited(mlist, email):
             for entry in dmarcs:
                 if re.search(r'\bp=reject\b', entry, re.IGNORECASE):
                     syslog('vette',
-                        'DMARC lookup for %s (%s) found p=reject in %s = %s',
-                        email, dmarc_domain, name, entry)
+                      '%s: DMARC lookup for %s (%s) found p=reject in %s = %s',
+                      mlist.real_name,  email, dmarc_domain, name, entry)
                     return True
 
                 if (mlist.dmarc_quarantine_moderation_action and
                     re.search(r'\bp=quarantine\b', entry, re.IGNORECASE)):
                     syslog('vette',
-                      'DMARC lookup for %s (%s) found p=quarantine in %s = %s',
-                            email, dmarc_domain, name, entry)
+                  '%s: DMARC lookup for %s (%s) found p=quarantine in %s = %s',
+                          mlist.real_name,  email, dmarc_domain, name, entry)
                     return True
 
     return False
