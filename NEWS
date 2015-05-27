@@ -14,6 +14,12 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Mailman-Postfix integration will now add mailman@domain entries in
+      data/virtual-mailman for each domain in POSTFIX_STYLE_VIRTUAL_DOMAINS
+      which is a host_name of a list.  This is so the addresses which are
+      exposed on admin and listinfo overview pages of virtual domains will
+      be deliverable.  (LP: #1459236)
+
     - The vette log entry for DMARC policy hits now contains the list name.
       (LP: #1450826)
 
