@@ -14,6 +14,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed an issue with shunted messages on a list where the charset for
+      the list's preferred_language had been changed from iso-8859-1 to
+      utf-8 without recoding the list's description.  (LP: #1462755)
+
     - Mailman-Postfix integration will now add mailman@domain entries in
       data/virtual-mailman for each domain in POSTFIX_STYLE_VIRTUAL_DOMAINS
       which is a host_name of a list.  This is so the addresses which are
