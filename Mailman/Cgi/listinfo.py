@@ -187,9 +187,10 @@ def list_listinfo(mlist, lang):
         'subscribe')
     if mm_cfg.SUBSCRIBE_FORM_SECRET:
         now = str(int(time.time()))
-        remote = os.environ.get('REMOTE_HOST',
-                                os.environ.get('REMOTE_ADDR',
-                                               'w.x.y.z'))
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'w.x.y.z'))
         # Try to accept a range in case of load balancers, etc.  (LP: #1447445)
         if remote.find('.') >= 0:
             # ipv4 - drop last octet
