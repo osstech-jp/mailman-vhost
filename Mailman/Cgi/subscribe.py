@@ -118,9 +118,10 @@ def process_form(mlist, doc, cgidata, lang):
     # Canonicalize the full name
     fullname = Utils.canonstr(fullname, lang)
     # Who was doing the subscribing?
-    remote = os.environ.get('REMOTE_HOST',
-                            os.environ.get('REMOTE_ADDR',
-                                           'unidentified origin'))
+    remote = os.environ.get('HTTP_FORWARDED_FOR',
+             os.environ.get('HTTP_X_FORWARDED_FOR',
+             os.environ.get('REMOTE_ADDR',
+                            'unidentified origin')))
     # Are we checking the hidden data?
     if mm_cfg.SUBSCRIBE_FORM_SECRET:
         now = int(time.time())

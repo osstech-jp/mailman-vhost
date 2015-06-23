@@ -262,7 +262,14 @@ def GetPathPieces(envar='PATH_INFO'):
     if path:
         if CRNLpat.search(path):
             path = CRNLpat.split(path)[0]
-            syslog('error', 'Warning: Possible malformed path attack.')
+            remote = os.environ.get('HTTP_FORWARDED_FOR',
+                     os.environ.get('HTTP_X_FORWARDED_FOR',
+                     os.environ.get('REMOTE_ADDR',
+                                    'unidentified origin')))
+            syslog('error',
+                'Warning: Possible malformed path attack domain=%s remote=%s',
+                   get_domain(),
+                   remote)
         return [p for p in path.split('/') if p]
     return None
 
