@@ -139,7 +139,7 @@ HTML_TO_PLAIN_TEXT_COMMAND = '/usr/bin/lynx -dump %(filename)s'
 # A Python regular expression character class which defines the characters
 # allowed in list names.  Lists cannot be created with names containing any
 # character that doesn't match this class.  Do not include '/' in this list.
-ACCEPTABLE_LISTNAME_CHARACTERS = '[-+_.=a-z0-9]'
+ACCEPTABLE_LISTNAME_CHARACTERS = '[-+_.=a-z0-9@]'
 
 # Shall the user's real names be displayed along with their email addresses
 # in list rosters?  Defaults to No to preserve prior behavior.

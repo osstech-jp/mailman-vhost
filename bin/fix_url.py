@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 2001-2010 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -31,6 +31,9 @@ Options:
 
         Without this option, the default web_page_url and host_name values are
         used.
+
+        The above applies to non-vhost lists. For vhost lists (name@domain),
+        this must be the urlhost that maps to 'domain'.
 
     -v / --verbose
         Print what the script is doing.
@@ -69,6 +72,19 @@ def fix_url(mlist, *args):
         elif opt in ('-v', '--verbose'):
             verbose = 1
 
+    # Check for vhost requirements.
+    listname = mlist.internal_name()
+    if '@' in listname:
+        firstname, emailhost = listname.split('@', 1)
+        if emailhost != mm_cfg.VIRTUAL_HOSTS.get(urlhost):
+            usage(1,
+"""Vhost lists of the form name@domain require the -u/--urlhost option
+with a url_host that maps to domain - i.e., in mm_cfg.py
+add_virtualhost(url_host, domain)
+""")
+    else:
+        firstname = emailhost = None
+
     # Make sure list is locked.
     if not mlist.Locked():
         if verbose:
@@ -87,6 +103,14 @@ def fix_url(mlist, *args):
     if verbose:
         print _('Setting host_name to: %(mailhost)s')
     mlist.host_name = mailhost
+    if firstname:
+        if verbose:
+            print _('Setting local_part to: %(firstname)s')
+        mlist.local_part = firstname
+    if listname:
+        if verbose:
+            print _('Setting list_address to %(listname)s')
+        list_address = listname
     print _('Saving list')
     mlist.Save()
     mlist.Unlock()

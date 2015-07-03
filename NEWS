@@ -7,6 +7,17 @@ Here is a history of user visible changes to Mailman.
 
 2.1.21 (xx-xxx-xxxx)
 
+  vhost
+
+    - Added '@' to ACCEPTABLE_LISTNAME_CHARACTERS because of fix for
+      LP: #1437145.
+
+    - Changed fix_url.py to better handle vhost lists.
+
+    - Fixed CSRFcheck.py to account for '@' to '%40' changes.
+
+    - Fixed generated public archive URL for vhost lists.
+
   i18n
 
     - The Brazilian Portugese translation has been updated by Emerson Ribeiro

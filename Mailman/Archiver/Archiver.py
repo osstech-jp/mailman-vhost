@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2003 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -160,9 +160,10 @@ class Archiver:
             hostname = re.match('[^:]*://([^/]*)/.*', url).group(1)\
                        or mm_cfg.DEFAULT_URL_HOST
             if hostname == mm_cfg.DEFAULT_URL_HOST:
-                fullname = self.local_part
+                fullname = os.path.join(self.host_name, self.local_part)
             else:
-                fullname = os.path.join(hostname, self.local_part)
+                fullname = os.path.join(hostname,
+                                        self.host_name, self.local_part)
             url = mm_cfg.PUBLIC_ARCHIVE_URL % {
                 'listname': fullname,
                 'hostname': hostname
