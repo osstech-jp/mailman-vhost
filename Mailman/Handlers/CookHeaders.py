@@ -65,7 +65,12 @@ def uheader(mlist, s, header_name=None, continuation_ws='\t', maxlinelen=None):
     else:
         # there is no nonascii so ...
         charset = 'us-ascii'
-    return Header(s, charset, maxlinelen, header_name, continuation_ws)
+    try:
+        return Header(s, charset, maxlinelen, header_name, continuation_ws)
+    except UnicodeError:
+        syslog('error', 'list: %s: can\'t decode "%s" as %s',
+               mlist.internal_name(), s, charset)
+        return Header('', charset, maxlinelen, header_name, continuation_ws)
 
 def change_header(name, value, mlist, msg, msgdata, delete=True, repl=True):
     if ((msgdata.get('from_is_list') == 2 or

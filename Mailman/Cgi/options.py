@@ -193,7 +193,10 @@ def main():
                     mlist.HoldUnsubscription(user)
                     doc.addError(msga, tag='')
                 else:
-                    ip = os.environ.get('REMOTE_ADDR')
+                    ip = os.environ.get('HTTP_FORWARDED_FOR',
+                         os.environ.get('HTTP_X_FORWARDED_FOR',
+                         os.environ.get('REMOTE_ADDR',
+                                        'unidentified origin')))
                     mlist.ConfirmUnsubscription(user, userlang, remote=ip)
                     doc.addError(msgc, tag='')
                 mlist.Save()
@@ -264,9 +267,13 @@ def main():
             # So as not to allow membership leakage, prompt for the email
             # address and the password here.
             if mlist.private_roster <> 0:
+                remote = os.environ.get('HTTP_FORWARDED_FOR',
+                         os.environ.get('HTTP_X_FORWARDED_FOR',
+                         os.environ.get('REMOTE_ADDR',
+                                        'unidentified origin')))
                 syslog('mischief',
-                       'Login failure with private rosters: %s',
-                       user)
+                       'Login failure with private rosters: %s from %s',
+                       user, remote)
                 user = None
             # give an HTTP 401 for authentication failure
             print 'Status: 401 Unauthorized'

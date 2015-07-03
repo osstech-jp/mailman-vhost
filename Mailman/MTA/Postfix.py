@@ -157,10 +157,13 @@ def _addvirtual(mlist, fp):
     # Set up the mailman-loop address
     loopaddr = Utils.get_site_email(mlist.host_name, extra='loop')
     loopdest = Utils.ParseEmail(loopaddr)[0]
+    # And the site list posting address.
+    siteaddr = Utils.get_site_email(mlist.host_name)
+    sitedest = Utils.ParseEmail(siteaddr)[0]
     if mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN:
         loopdest += '@' + mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN
     # Seek to the end of the text file, but if it's empty write the standard
-    # disclaimer, and the loop catch address.
+    # disclaimer, and the loop catch address and site address.
     fp.seek(0, 2)
     if not fp.tell():
         print >> fp, """\
@@ -175,7 +178,13 @@ def _addvirtual(mlist, fp):
 # LOOP ADDRESSES START
 %s\t%s
 # LOOP ADDRESSES END
-""" % (loopaddr, loopdest)
+
+# We also add the site list address in each virtual domain as that address
+# is exposed on admin and listinfo overviews.
+# SITE ADDRESSES START
+%s\t%s
+# SITE ADDRESSES END
+""" % (loopaddr, loopdest, siteaddr, sitedest)
     # NDIM XXX What are those loop addrs for, and do we need them for each
     # virtual domain?
     
@@ -210,6 +219,8 @@ def _addvirtual(mlist, fp):
 def _check_for_virtual_loopaddr(mlist, filename):
     loopaddr = Utils.get_site_email(mlist.host_name, extra='loop')
     loopdest = Utils.ParseEmail(loopaddr)[0]
+    siteaddr = Utils.get_site_email(mlist.host_name)
+    sitedest = Utils.ParseEmail(siteaddr)[0]
     infp = open(filename)
     omask = os.umask(007)
     try:
@@ -236,6 +247,32 @@ def _check_for_virtual_loopaddr(mlist, filename):
                 outfp.write(line)
                 break
             elif line.startswith(loopaddr):
+                # We just found it
+                outfp.write(line)
+                break
+            else:
+                # This isn't our loop address, so spit it out and continue
+                outfp.write(line)
+        # Now do it all again for the site list address. It must follow the
+        # loop addresses.
+        while True:
+            line = infp.readline()
+            if not line:
+                break
+            outfp.write(line)
+            if line.startswith('# SITE ADDRESSES START'):
+                break
+        # Now see if our domain has already been written
+        while True:
+            line = infp.readline()
+            if not line:
+                break
+            if line.startswith('# SITE ADDRESSES END'):
+                # It hasn't
+                print >> outfp, '%s\t%s' % (siteaddr, sitedest)
+                outfp.write(line)
+                break
+            elif line.startswith(siteaddr):
                 # We just found it
                 outfp.write(line)
                 break

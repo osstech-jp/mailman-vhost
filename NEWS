@@ -5,6 +5,45 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.21 (xx-xxx-xxxx)
+
+  i18n
+
+    - The Brazilian Portugese translation has been updated by Emerson Ribeiro
+      de Mello.
+
+  Bug fixes and other patches
+
+    - Improved identification of remote clients for logging and subscribe
+      form checking in cases where access is via a proxy server.  Thanks to
+      Jim Popovitch.
+
+    - Fixed an issue with shunted messages on a list where the charset for
+      the list's preferred_language had been changed from iso-8859-1 to
+      utf-8 without recoding the list's description.  (LP: #1462755)
+
+    - Mailman-Postfix integration will now add mailman@domain entries in
+      data/virtual-mailman for each domain in POSTFIX_STYLE_VIRTUAL_DOMAINS
+      which is a host_name of a list.  This is so the addresses which are
+      exposed on admin and listinfo overview pages of virtual domains will
+      be deliverable.  (LP: #1459236)
+
+    - The vette log entry for DMARC policy hits now contains the list name.
+      (LP: #1450826)
+
+    - If SUBSCRIBE_FORM_SECRET is enabled and a user's network has a load
+      balancer or similar in use the POSTing IP might not exactly match the
+      GETting IP.  This is now accounted for by not requiring the last
+      octet (16 bits for ipV6) to match.  (LP: #1447445)
+
+    - DKIM-Signature:, DomainKey-Signature: and Authentication-Results:
+      headers are now removed by default from posts to anonymous lists.
+      (LP: #1444673)
+
+    - The list admin web UI Mambership List search function often doesn't
+      return correct results for search strings (regexps) that contain
+      non-ascii characters.  This is partially fixed.  (LP: #1442298)
+
 2.1.20 (31-Mar-2015)
 
   Security

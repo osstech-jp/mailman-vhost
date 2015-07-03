@@ -262,7 +262,14 @@ def GetPathPieces(envar='PATH_INFO'):
     if path:
         if CRNLpat.search(path):
             path = CRNLpat.split(path)[0]
-            syslog('error', 'Warning: Possible malformed path attack.')
+            remote = os.environ.get('HTTP_FORWARDED_FOR',
+                     os.environ.get('HTTP_X_FORWARDED_FOR',
+                     os.environ.get('REMOTE_ADDR',
+                                    'unidentified origin')))
+            syslog('error',
+                'Warning: Possible malformed path attack domain=%s remote=%s',
+                   get_domain(),
+                   remote)
         return [p for p in path.split('/') if p]
     return None
 
@@ -1255,15 +1262,15 @@ def IsDMARCProhibited(mlist, email):
             for entry in dmarcs:
                 if re.search(r'\bp=reject\b', entry, re.IGNORECASE):
                     syslog('vette',
-                        'DMARC lookup for %s (%s) found p=reject in %s = %s',
-                        email, dmarc_domain, name, entry)
+                      '%s: DMARC lookup for %s (%s) found p=reject in %s = %s',
+                      mlist.real_name,  email, dmarc_domain, name, entry)
                     return True
 
                 if (mlist.dmarc_quarantine_moderation_action and
                     re.search(r'\bp=quarantine\b', entry, re.IGNORECASE)):
                     syslog('vette',
-                      'DMARC lookup for %s (%s) found p=quarantine in %s = %s',
-                            email, dmarc_domain, name, entry)
+                  '%s: DMARC lookup for %s (%s) found p=quarantine in %s = %s',
+                          mlist.real_name,  email, dmarc_domain, name, entry)
                     return True
 
     return False
