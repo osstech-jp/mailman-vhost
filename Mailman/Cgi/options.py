@@ -17,6 +17,7 @@
 
 """Produce and handle the member options."""
 
+import re
 import sys
 import os
 import cgi
@@ -36,6 +37,9 @@ from Mailman.Logging.Syslog import syslog
 OR = '|'
 SLASH = '/'
 SETLANGUAGE = -1
+DIGRE = re.compile(
+    '<!--Start-Digests-Delete-->.*<!--End-Digests-Delete-->',
+     re.DOTALL)
 
 # Set up i18n
 _ = i18n._
@@ -873,8 +877,10 @@ You are subscribed to this list with the case-preserved address
     else:
         replacements['<mm-case-preserved-user>'] = ''
 
-    doc.AddItem(mlist.ParseTags('options.html', replacements, userlang))
-
+    page_text = mlist.ParseTags('options.html', replacements, userlang)
+    if not (mlist.digestable or mlist.getMemberOption(user, mm_cfg.Digests)):
+        page_text = DIGRE.sub('', page_text)
+    doc.AddItem(page_text)
 
 
 def loginpage(mlist, doc, user, lang):

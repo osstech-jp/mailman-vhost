@@ -14,6 +14,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - If a list is not digestable an the user is not currently set to
+      receive digests, the digest options will not be shown on the user's
+      options page.  (LP: #1476298)
+
     - Improved identification of remote clients for logging and subscribe
       form checking in cases where access is via a proxy server.  Thanks to
       Jim Popovitch.
