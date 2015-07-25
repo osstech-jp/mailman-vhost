@@ -181,6 +181,11 @@
 #               Updated on: Fri Mar 21 19:47:19 PDT 2014
 #               Updated the "No such list" error report to include the newly
 #               added name of the CGI module.
+#
+# 0.0.23        Update by Mark Sapiro <mark@msapiro.net>
+#               Updated on: Sat Jul 25 07:52:55 PDT 2015
+#               Updated "Login failure with private rosters" report to
+#               account for newly added IP in log message.
 
 ###############################################################################
 # Set up locations of standard commands, directories, etc....
@@ -456,7 +461,7 @@ do
 	    echo "" >> $TMP
 	    echo "Login failure with private rosters (by user):" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $GREP -i 'Login failure with private rosters' $TMPLOG | $AWK '{ print $NF }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+	    $GREP -i 'Login failure with private rosters' $TMPLOG | $AWK '{ print $(NF-2) " " $(NF-1) " " $NF }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	    echo "" >> $TMP
 	    echo "Unsub attempt of non-member (by user):" >> $TMP

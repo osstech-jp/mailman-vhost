@@ -20,7 +20,7 @@ Here is a history of user visible changes to Mailman.
 
     - Improved identification of remote clients for logging and subscribe
       form checking in cases where access is via a proxy server.  Thanks to
-      Jim Popovitch.
+      Jim Popovitch.  Also updated contrib/mmdsr for log change.
 
     - Fixed an issue with shunted messages on a list where the charset for
       the list's preferred_language had been changed from iso-8859-1 to
