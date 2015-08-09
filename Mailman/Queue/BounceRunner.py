@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2013 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -151,10 +151,17 @@ class BounceMixin:
         try:
             op, addr, bmsg = mlist.pend_confirm(token)
             info = mlist.getBounceInfo(addr)
-            mlist.disableBouncingMember(addr, info, bmsg)
-            # Only save the list if we're unlocking it
-            if not locked:
-                mlist.Save()
+            if not info:
+                syslog('bounce',
+                       '%s: Probe bounce received for %s with no bounce info',
+                       mlist.internal_name(),
+                       addr)
+                maybe_forward(mlist, bmsg)
+            else:
+                mlist.disableBouncingMember(addr, info, bmsg)
+                # Only save the list if we're unlocking it
+                if not locked:
+                    mlist.Save()
         finally:
             if not locked:
                 mlist.Unlock()
