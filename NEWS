@@ -15,8 +15,7 @@ Here is a history of user visible changes to Mailman.
   Bug fixes and other patches
 
     - Fixed a bug where a delayed probe bounce can throw an AttributeError.
-      Now this will be logged and the probe bounce forwarded to the list
-      admin if bounce_unrecognized_goes_to_list_owner is Yes.  (LP: #1482940)
+      (LP: #1482940)
 
     - If a list is not digestable an the user is not currently set to
       receive digests, the digest options will not be shown on the user's

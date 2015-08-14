@@ -30,6 +30,7 @@ from Mailman import mm_cfg
 from Mailman import Utils
 from Mailman import LockFile
 from Mailman.Message import UserNotification
+from Mailman.Bouncer import _BounceInfo
 from Mailman.Bouncers import BouncerAPI
 from Mailman.Queue.Runner import Runner
 from Mailman.Queue.sbcache import get_switchboard
@@ -152,16 +153,17 @@ class BounceMixin:
             op, addr, bmsg = mlist.pend_confirm(token)
             info = mlist.getBounceInfo(addr)
             if not info:
-                syslog('bounce',
-                       '%s: Probe bounce received for %s with no bounce info',
-                       mlist.internal_name(),
-                       addr)
-                maybe_forward(mlist, bmsg)
-            else:
-                mlist.disableBouncingMember(addr, info, bmsg)
-                # Only save the list if we're unlocking it
-                if not locked:
-                    mlist.Save()
+                # info was deleted before probe bounce was received.
+                # Just create a new info.
+                info = _BounceInfo(addr,
+                                   0.0,
+                                   time.localtime()[:3],
+                                   mlist.bounce_you_are_disabled_warnings
+                                   )
+            mlist.disableBouncingMember(addr, info, bmsg)
+            # Only save the list if we're unlocking it
+            if not locked:
+                mlist.Save()
         finally:
             if not locked:
                 mlist.Unlock()
