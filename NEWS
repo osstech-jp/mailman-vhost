@@ -14,6 +14,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed cron/gate_news to catch EOFError on opening the newsgroup.
+      (LP: #1486263)
+
     - Fixed a bug where a delayed probe bounce can throw an AttributeError.
       (LP: #1482940)
 
