@@ -1564,7 +1564,9 @@ bad regexp in bounce_matching_header line: %s
         """Returns matched entry in ban_list if email matches.
         Otherwise returns None.
         """
-        return self.GetPattern(email, self.ban_list)
+        return (self.GetPattern(email, self.ban_list) or
+                self.GetPattern(email, mm_cfg.GLOBAL_BAN_LIST)
+               )
 
     def HasAutoApprovedSender(self, sender):
         """Returns True and logs if sender matches address or pattern

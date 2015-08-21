@@ -7,6 +7,12 @@ Here is a history of user visible changes to Mailman.
 
 2.1.21 (xx-xxx-xxxx)
 
+  New Features
+
+    - There is now a mm_cfg.py setting GLOBAL_BAN_LIST which is like the
+      individual list's ban_list but applies globally to all subscribe
+      requests.  See the description in Defaults.py for more details.
+
   i18n
 
     - The Brazilian Portugese translation has been updated by Emerson Ribeiro
