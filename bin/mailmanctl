@@ -288,7 +288,7 @@ def check_privs():
     # the uid/gid.
     gid = grp.getgrnam(mm_cfg.MAILMAN_GROUP)[2]
     uid = pwd.getpwnam(mm_cfg.MAILMAN_USER)[2]
-    myuid = os.getuid()
+    myuid = os.geteuid()
     if myuid == 0:
         # Set the process's supplimental groups.
         groups = [x[2] for x in grp.getgrall() if mm_cfg.MAILMAN_USER in x[3]]

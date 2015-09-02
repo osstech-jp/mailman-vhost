@@ -20,6 +20,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed bin/mailmanctl to check its effective rather than real uid.
+      (LP: #1491187)
+
     - Fixed cron/gate_news to catch EOFError on opening the newsgroup.
       (LP: #1486263)
 
