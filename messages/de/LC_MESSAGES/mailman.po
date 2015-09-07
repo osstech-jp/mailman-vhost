@@ -3,26 +3,28 @@
 #
 # Jens Vagelpohl <jens@zope.com>,
 # Dieter Kirchner <dkirchner@bupnet.de>,
-# Holger Jahn <holja@t-online.de>, 2001-2002,
-# Peer Heinlein <p.heinlein@heinlein-support.de.de>, 2003, 2004, 2005, 2006, 2008 und
-# Ralf Hildebrandt <ralf.hildebrandt@charite.de>, 2013
+# Holger Jahn <holja@t-online.de>, 2001-2002,.
+# Peer Heinlein <p.heinlein@heinlein-support.de.de>, 2003, 2004, 2005, 2006, 2008 und.
+# Ralf Hildebrandt <ralf.hildebrandt@charite.de>, 2013.
+# Mirian Margiani <mirian@margiani.ch>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
 "POT-Creation-Date: Fri May  1 13:20:57 2015\n"
-"PO-Revision-Date: 2013-08-02 11:21+0200\n"
-"Last-Translator: Ralf Hildebrandt <ralf.hildebrandt@charite.de>\n"
-"Language-Team:  <de@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2015-09-07 20:59+0200\n"
+"Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 # Mailman/Handlers/Decorate.py:49
 #: Mailman/Archiver/HyperArch.py:123
 msgid "size not available"
-msgstr "Größe nicht verfügbar "
+msgstr "Größe nicht verfügbar"
 
 #: Mailman/Archiver/HyperArch.py:129
 msgid " %(size)i bytes "
@@ -42,15 +44,13 @@ msgid " at "
 msgstr " at "
 
 #: Mailman/Archiver/HyperArch.py:512
-#, fuzzy
 msgid "Previous message (by thread):"
-msgstr "Vorherige Nachricht:"
+msgstr "Vorherige Nachricht (dieses Gesprächs):"
 
 # Mailman/Gui/Archive.py:31
 #: Mailman/Archiver/HyperArch.py:534
-#, fuzzy
 msgid "Next message (by thread):"
-msgstr "Nächste Nachricht:"
+msgstr "Nächste Nachricht (dieses Gesprächs):"
 
 # Mailman/Archiver/pipermail.py:448
 #: Mailman/Archiver/HyperArch.py:707 Mailman/Archiver/HyperArch.py:743
@@ -1097,20 +1097,25 @@ msgid ""
 "    member's current and new addresses below. Use the check boxes to send\n"
 "    notice of the change to the old and/or new address(es)."
 msgstr ""
+"Um die E-Mail-Adresse eines Listenmitglieds zu ändern,\n"
+"    geben Sie unten die die aktuelle und die neue Adresse\n"
+"    ein. Wählen Sie den ... To change a list member's address, enter the\n"
+"    member's current and new addresses below. Use the check boxes to send\n"
+"    notice of the change to the old and/or new address(es)."
 
 # Mailman/HTMLFormatter.py:358
 #: Mailman/Cgi/admin.py:1273
 #, fuzzy
 msgid "Member's current address"
-msgstr "Das aktuelle Archiv"
+msgstr "Aktuelle E-Mail-Adresse des Mitglieds"
 
 #: Mailman/Cgi/admin.py:1277 Mailman/Cgi/admin.py:1287
 msgid "Send notice"
-msgstr ""
+msgstr "Benachrichtigung senden"
 
 #: Mailman/Cgi/admin.py:1283
 msgid "Address to change to"
-msgstr ""
+msgstr "Neue Adresse"
 
 # Mailman/Cgi/admin.py:994
 #: Mailman/Cgi/admin.py:1299
@@ -1281,35 +1286,31 @@ msgid "Cannot unsubscribe non-members:"
 msgstr "Nichtmitglieder können nicht aus der Mailingliste ausgetragen werden:"
 
 #: Mailman/Cgi/admin.py:1527
-#, fuzzy
 msgid "You must provide both current and new addresses."
-msgstr "Korrigieren Sie zuerst die vorangehende ungültige Adresse."
+msgstr "Sie müssen sowohl die aktuelle und eine neue Adresse angeben."
 
 #: Mailman/Cgi/admin.py:1529
 msgid "Current and new addresses must be different."
-msgstr ""
+msgstr "Die aktuelle und die neue Adresse müssen unterschiedlich sein."
 
 # Mailman/Cgi/admindb.py:364
 #: Mailman/Cgi/admin.py:1533
-#, fuzzy
 msgid "%(schange_to)s is already a list member."
-msgstr " ist bereits Mitglied."
+msgstr "%(schange_to)s ist bereits Mitglied."
 
 # Mailman/Cgi/subscribe.py:103
 #: Mailman/Cgi/admin.py:1538
-#, fuzzy
 msgid "%(schange_to)s is not a valid email address."
-msgstr "Sie müssen eine gültige E-Mail-Adresse angeben."
+msgstr "Die E-Mail-Adresse %(schange_to)s ist ungültig."
 
 #: Mailman/Cgi/admin.py:1546
 msgid "%(schange_from)s is not a member"
-msgstr ""
+msgstr "%(schange_from)s ist kein Mitglied"
 
 # Mailman/Cgi/admindb.py:364
 #: Mailman/Cgi/admin.py:1548
-#, fuzzy
 msgid "%(schange_to)s is already a member"
-msgstr " ist bereits Mitglied."
+msgstr "%(schange_to)s ist bereits Mitglied"
 
 #: Mailman/Cgi/admin.py:1551
 #, fuzzy
@@ -1318,13 +1319,15 @@ msgstr "%(addr)s ist geblockt (traf zu auf: %(patt)s)"
 
 #: Mailman/Cgi/admin.py:1553
 msgid "Address %(schange_from)s changed to %(schange_to)s"
-msgstr ""
+msgstr "Adresse %(schange_from)s zu %(schange_to)s geändert"
 
 #: Mailman/Cgi/admin.py:1560
 msgid ""
 "The member address %(change_from)s on the\n"
 "%(list_name)s list has been changed to %(change_to)s.\n"
 msgstr ""
+"Die Adresse %(change_from)s auf der Liste\n"
+"%(list_name)s wurde zu %(change_to)s geändert.\n"
 
 # Mailman/MailList.py:739
 #: Mailman/Cgi/admin.py:1563
@@ -1335,7 +1338,7 @@ msgstr "%(realname)s Abbestellungbenachrichtigung"
 #: Mailman/Cgi/admin.py:1574
 #, fuzzy
 msgid "Notification sent to %(schange_from)s."
-msgstr "Benachrichtigungen"
+msgstr "Benachrichtigungen "
 
 #: Mailman/Cgi/admin.py:1584
 #, fuzzy
@@ -2797,9 +2800,8 @@ msgstr " %(safeuser)s ist nicht Abonnent."
 
 # Mailman/Cgi/options.py:133
 #: Mailman/Cgi/options.py:180
-#, fuzzy
 msgid "If you are a list member, a confirmation email has been sent."
-msgstr "Die E-Mail mit der Bestätigung wurde verschickt."
+msgstr "Eine E-Mail zur Bestätigung wurde verschickt."
 
 #: Mailman/Cgi/options.py:181
 #, fuzzy
@@ -11712,6 +11714,8 @@ msgid ""
 " - owner addresses need to be fully-qualified names like \"owner@example.com"
 "\", not just \"owner\"."
 msgstr ""
+" - die Adressen des Listenbesitzers müssen gültig sein wie "
+"bspw. \"owner@example.com\" , nicht einfach \"Besitzer\"."
 
 #: bin/newlist:243
 msgid "Hit enter to notify %(listname)s owner..."
