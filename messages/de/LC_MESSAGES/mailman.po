@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
 "POT-Creation-Date: Fri May  1 13:20:57 2015\n"
-"PO-Revision-Date: 2015-09-07 21:12+0200\n"
+"PO-Revision-Date: 2015-09-07 22:53+0200\n"
 "Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -1141,25 +1141,27 @@ msgid ""
 "and also provide the email addresses of the list moderators in the\n"
 "<a href=\"%(adminurl)s/general\">general options section</a>."
 msgstr ""
-"<a name=\"passwords\">Die</a> <em>Listen-Administratoren</em> haben volle\n"
-"Kontrolle über die Konfiguration dieser Liste. Alle Einstellungen auf "
-"diesen\n"
-"Webseiten können von ihnen geändert werden.\n"
+"Die <em>Listen-Administratoren</em> haben volle Kontrolle über die "
+"Konfiguration\n"
+"dieser Liste. Alle Einstellungen auf diesen Webseiten können von ihnen "
+"geändert werden.\n"
 "\n"
-"<em>Listen-Moderatoren</em> haben limitierte Befugnisse. Die können keine\n"
+"<p>Die <em> Listen-Moderatoren</em> haben begrenzte Befugnisse. Sie können "
+"keine\n"
 "Einstellungen ändern, aber über Anmeldungen neuer Listenmitglieder "
 "entscheiden.\n"
 "Sie können auch zurückgehaltene Mitteilungen an die Liste freigeben oder "
 "löschen.\n"
-"All diese Tätigkeiten können natürlich auch von <em>Listen-Administratoren</"
-"em>\n"
+"All diese Tätigkeiten können natürlich auch von <em>Listen-Administratoren<"
+"/em>\n"
 "vorgenommen werden.\n"
 "\n"
-"<p>Um die Listenpflege auf Administratoren und Moderatoren aufzuteilen, "
+"<p>Um die Listenpflege unter Administratoren und Moderatoren aufzuteilen, "
 "müssen Sie\n"
 "in den entsprechenden Feldern unten ein separates Passwort für Moderatoren "
 "setzen\n"
-"und die Adressen der Moderatoren in der oberen Sektion angeben."
+"und die Adressen der Moderatoren im Abschnitt <a href=\"%"
+"(adminurl)s/general\">Allgemeine Optionen</a>  angeben. "
 
 # Mailman/Cgi/admin.py:1017
 #: Mailman/Cgi/admin.py:1321
@@ -1252,7 +1254,7 @@ msgstr "Unzulässige E-Mail-Adresse (illegale Zeichen!)"
 #: Mailman/Cgi/admin.py:1463 bin/add_members:149 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
-msgstr "Geblockte Adresse (traf auf %(pattern)s zu)"
+msgstr "Blockierte Adresse (passte auf %(pattern)s)"
 
 # Mailman/Cgi/admin.py:1242
 #: Mailman/Cgi/admin.py:1469
@@ -1329,9 +1331,8 @@ msgstr ""
 
 # Mailman/MailList.py:739
 #: Mailman/Cgi/admin.py:1563
-#, fuzzy
 msgid "%(list_name)s address change notice."
-msgstr "%(realname)s Abbestellungbenachrichtigung"
+msgstr "Adressänderungsbenachrichtigungen der Liste %(list_name)s"
 
 #: Mailman/Cgi/admin.py:1574
 msgid "Notification sent to %(schange_from)s."
@@ -1659,7 +1660,7 @@ msgstr " ist bereits Mitglied."
 
 #: Mailman/Cgi/admindb.py:932
 msgid "%(addr)s is banned (matched: %(patt)s)"
-msgstr "%(addr)s ist geblockt (traf zu auf: %(patt)s)"
+msgstr "%(addr)s ist blockiert (passte auf: %(patt)s)"
 
 # Mailman/Cgi/confirm.py:66
 #: Mailman/Cgi/confirm.py:78
@@ -3307,9 +3308,8 @@ msgstr "Archivdatei nicht gefunden"
 # Mailman/Cgi/rmlist.py:60 Mailman/Cgi/roster.py:55
 # Mailman/Cgi/subscribe.py:57
 #: Mailman/Cgi/rmlist.py:65
-#, fuzzy
 msgid "No such list %(safelistname)s"
-msgstr "Liste nicht vorhanden: %(listname)s"
+msgstr "Die Liste %(safelistname)s ist nicht vorhanden."
 
 # Mailman/Cgi/rmlist.py:88
 #: Mailman/Cgi/rmlist.py:83
@@ -3448,6 +3448,8 @@ msgstr ""
 #: Mailman/Cgi/subscribe.py:150
 msgid "Please take a few seconds to fill out the form before submitting it."
 msgstr ""
+"Bitte nehmen Sie sich die Zeit, das Formular auszufüllen bevor Sie es "
+"übermitteln."
 
 #: Mailman/Cgi/subscribe.py:153
 msgid "The hidden token didn't match.  Did your IP change?"
@@ -4739,16 +4741,15 @@ msgid ""
 msgstr ""
 "Verhalten des automatischen Beantworters.<p>\n"
 "\n"
-"In den Textfeldern unten wird Python %(string)s die Schlüssel durch die "
-"Werte\n"
-"ersetzen (Schlüssel - Wert):\n"
+"Die folgenden Schlüsselworte werden in den Textfeldern unten durch die\n"
+"folgenden Werte ersetzt."
 "<p><ul>\n"
-"<li><b>%(listname)s</b> - <em>ergibt den Listennamen</em>\n"
-"<li><b>%(listurl)s</b> - <em>ergibt die Informations-URL der Liste</em>\n"
-"<li><b>%(requestemail)s</b> - <em>ergibt die -request Adresse der Liste</"
-"em>\n"
-"<li><b>%(adminemail)s</b> - <em>ergibt die -admin Adresse der Liste</em>\n"
-"<li><b>%(owneremail)s</b> - <em>ergibt die -owner Adresse der Liste</em>\n"
+"    <li><b>listname</b> - <em>ergibt den Listennamen</em>\n"
+"    <li><b>listurl</b> - <em>ergibt die Informations-URL der Liste</em>\n"
+"    <li><b>requestemail</b> - <em>ergibt die \"-request\"-Adresse der Liste<"
+"/em>\n"
+"    <li><b>adminemail</b> - <em>ergibt die \"-admin\"-Adresse der Liste</em>\n"
+"    <li><b>owneremail</b> - <em>ergibt die \"-owner\"-Adresse der Liste</em>\n"
 "</ul>\n"
 "\n"
 "<p>In jedem Textfeld können Sie entweder direkt den Text eingeben oder eine\n"
@@ -5238,14 +5239,16 @@ msgid ""
 "             <tt>multipart</tt> to this list, any messages with attachments\n"
 "             will be rejected by the pass filter."
 msgstr ""
-"Netzen Sie diese Option um jede Nachricht entfernen zu lassen, die <i>nicht</"
-"i> auf\n"
-"diesen MIME content-type zutrifft. Das Format dieses Parameters ist wie in "
-"<a href=\"?VARHELP=contentfilter/filter_mime_types\">filter_mime_types</a>.\n"
+"Nutzen Sie diese Option um alle Nachrichten entfernen zu lassen, deren\n"
+"             Inhalt nicht passend ist. Das Format dieses Parameters ist wie "
+"in\n"
+"             <a href=\"?VARHELP=contentfilter/filter_mime_types\">"
+"filter_mime_types</a>.\n"
 "\n"
-"             <p><b>Beachten Sie:</b>Wenn Sie hier Einträge vornehmen und "
-"nicht auch den Eintrag <tt>multipart</tt> mit aufnehmen, wird jede Nachricht "
-"mit Attachment geblocket werden!"
+"              <p><b>Beachten Sie:</b>Wenn Sie hier Einträge vornehmen und\n"
+"              nicht auch den Eintrag <tt>multipart</tt> mit aufnehmen, wird "
+"jede\n"
+"              Nachricht mit Anhängen blockiert werden! "
 
 #: Mailman/Gui/ContentFilter.py:108
 msgid ""
@@ -7078,7 +7081,6 @@ msgid ""
 msgstr ""
 
 #: Mailman/Gui/Privacy.py:120
-#, fuzzy
 msgid ""
 "When subscription requires approval, addresses in this list\n"
 "             are allowed to subscribe without administrator approval. Add\n"
@@ -7086,10 +7088,14 @@ msgid ""
 "character\n"
 "             to designate a (case insensitive) regular expression match."
 msgstr ""
-"Adressen dieser Liste können sich grundsätzlich nicht in die Mailingliste\n"
-"eintragen, der Admin erhält darüber auch keine weitere Nachricht. \n"
-"Fügen Sie eine E-Mail-Adresse pro Zeile hinzu.\n"
-"Beginnen Sie mit einem ^, um reguläre Ausdrücke einzuleiten. "
+"Die in dieser Liste aufgezählten Adressen können, auch wenn normalerweise\n"
+"             eine Bestätigung des Administrators nötig wäre, direkt "
+"eingetragen\n"
+"             werden. Der Administrator erhält darüber auch keine weitere "
+"Nachricht.\n"
+"             Fügen Sie eine E-Mail-Adresse pro Zeile hinzu. Beginnen Sie mit "
+"einem ^,\n"
+"             um reguläre Ausdrücke einzuleiten."
 
 #: Mailman/Gui/Privacy.py:125
 msgid ""
@@ -7221,7 +7227,7 @@ msgstr ""
 #: Mailman/Gui/Privacy.py:175
 #, fuzzy
 msgid "/Quarantine"
-msgstr "quartalsweise"
+msgstr "/Quarantäne"
 
 #: Mailman/Gui/Privacy.py:179
 msgid ""
@@ -7398,8 +7404,8 @@ msgid ""
 "Action to take when anyone posts to the\n"
 "             list from a domain with a DMARC Reject%(quarantine)s Policy."
 msgstr ""
-"Was soll passieren, wenn ein auf 'moderiert' geschaltetes Mitglied\n"
-"an die Liste sendet?"
+"Was soll geschehen, wenn jemand an die Liste schreibt,\n"
+"             auf dessen Domain eine DMARC-Reject%(quarantine)s-Regel passt?"
 
 #: Mailman/Gui/Privacy.py:261
 #, fuzzy
@@ -8950,7 +8956,7 @@ msgstr ""
 
 #: Mailman/Handlers/SpamDetect.py:162
 msgid "Message rejected by filter rule match"
-msgstr "Nachricht wurde durch Filter-Regeln geblockt"
+msgstr "Nachricht wurde durch Filter-Regeln blockiert"
 
 # Mailman/Handlers/ToDigest.py:148
 #: Mailman/Handlers/ToDigest.py:163
@@ -10769,7 +10775,7 @@ msgstr ""
 # Mailman/MailCommandHandler.py:444
 #: bin/fix_url.py:75
 msgid "Locking list"
-msgstr "Blockiere Liste"
+msgstr "Blockierungsliste"
 
 #: bin/fix_url.py:85
 msgid "Setting web_page_url to: %(web_page_url)s"
