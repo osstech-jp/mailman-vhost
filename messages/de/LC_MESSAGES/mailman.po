@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
 "POT-Creation-Date: Fri May  1 13:20:57 2015\n"
-"PO-Revision-Date: 2015-09-07 20:59+0200\n"
+"PO-Revision-Date: 2015-09-07 21:12+0200\n"
 "Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -1105,7 +1105,6 @@ msgstr ""
 
 # Mailman/HTMLFormatter.py:358
 #: Mailman/Cgi/admin.py:1273
-#, fuzzy
 msgid "Member's current address"
 msgstr "Aktuelle E-Mail-Adresse des Mitglieds"
 
@@ -1313,9 +1312,8 @@ msgid "%(schange_to)s is already a member"
 msgstr "%(schange_to)s ist bereits Mitglied"
 
 #: Mailman/Cgi/admin.py:1551
-#, fuzzy
 msgid "%(schange_to)s matches banned pattern %(spat)s"
-msgstr "%(addr)s ist geblockt (traf zu auf: %(patt)s)"
+msgstr "%(schange_to)s ist durch das Muster %(spat)s blockiert"
 
 #: Mailman/Cgi/admin.py:1553
 msgid "Address %(schange_from)s changed to %(schange_to)s"
@@ -1336,18 +1334,16 @@ msgid "%(list_name)s address change notice."
 msgstr "%(realname)s Abbestellungbenachrichtigung"
 
 #: Mailman/Cgi/admin.py:1574
-#, fuzzy
 msgid "Notification sent to %(schange_from)s."
-msgstr "Benachrichtigungen "
+msgstr "Eine Benachrichtigung wurde an %(schange_from)s gesendet."
 
 #: Mailman/Cgi/admin.py:1584
-#, fuzzy
 msgid "Notification sent to %(schange_to)s."
-msgstr "Benachrichtigungen"
+msgstr "Eine Benachrichtigung wurde an %(schange_to)s gesendet."
 
 #: Mailman/Cgi/admin.py:1590
 msgid "Bad moderation flag value"
-msgstr "UngÃ¼ltiger Wert der Moderationseinstellung"
+msgstr "Ungültiger Wert der Moderationseinstellung"
 
 # Mailman/Cgi/admin.py:1301
 #: Mailman/Cgi/admin.py:1612
