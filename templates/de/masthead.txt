@@ -7,7 +7,7 @@ Um sich via Internet von der Liste auszutragen oder in die Liste einzutragen:
 
     %(got_listinfo_url)s
 
-Oder schicken Sie eine E-Mail mit dem Wort 'help' in der Betreffzeile oder im
+Oder schicken Sie eine E-Mail mit dem Wort "help" in der Betreffzeile oder im
 Text an
 
     %(got_request_email)s
