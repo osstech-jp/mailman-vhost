@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
 "POT-Creation-Date: Fri May  1 13:20:57 2015\n"
-"PO-Revision-Date: 2015-09-11 15:25+0200\n"
+"PO-Revision-Date: 2015-09-11 16:36+0200\n"
 "Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -237,7 +237,7 @@ msgstr "Aus unbekannten Gründen "
 
 #: Mailman/Bouncer.py:198
 msgid "bounce score incremented"
-msgstr ""
+msgstr "Bounce-Zahl gestiegen"
 
 # Mailman/Bouncer.py:158 Mailman/Bouncer.py:162
 #: Mailman/Bouncer.py:228
@@ -716,9 +716,8 @@ msgstr "Massenaustrag von Mitgliedern"
 
 # Mailman/Cgi/admindb.py:173
 #: Mailman/Cgi/admin.py:882
-#, fuzzy
 msgid "Address Change"
-msgstr "Benutzer-Adresse / Name "
+msgstr "Adressänderung"
 
 # Mailman/Cgi/admin.py:721 Mailman/Gui/Membership.py:30
 #: Mailman/Cgi/admin.py:889
@@ -1669,7 +1668,6 @@ msgstr "Leere Bestätigungszeile."
 
 # Mailman/Cgi/confirm.py:84
 #: Mailman/Cgi/confirm.py:98
-#, fuzzy
 msgid ""
 "<b>Invalid confirmation string:</b>\n"
 "    %(safecookie)s.\n"
@@ -1681,11 +1679,15 @@ msgid ""
 "    Otherwise, <a href=\"%(confirmurl)s\">re-enter</a> your confirmation\n"
 "    string."
 msgstr ""
-"<b>Ungültige Bestätigung:</b> %(safecookie)s.\n"
-" <p>Bitte beachten Sie, dass Bestätigungen ungefähr %(days)s Tage nach der "
-"Anfrage ungültig werden. Falls Ihre Bestätigung ungültig geworden ist, "
-"senden Sie bitte eine neue Anfrage. Andernfalls geben Sie bitte Ihre "
-"Bestätigung <a href=\"%(confirmurl)s\">erneut</a> ein."
+"<b>Ungültiger Bestätigungscode:</b>\n"
+"    %(safecookie)s.\n"
+"\n"
+"    <p>Bitte beachten Sie, dass Bestätigungscodes ungefähr\n"
+"    %(days)s Tage nach der Anfrage sowie nach einmaliger Verwendung\n"
+"    ungültig werden. Falls Ihre Bestätigung ungültig ist, senden Sie bitte "
+"eine\n"
+"    neue Anfrage. Andernfalls geben Sie bitte Ihre Bestätigung <a href=\"%"
+"(confirmurl)s\">erneut</a> ein."
 
 #: Mailman/Cgi/confirm.py:132
 msgid ""
@@ -2772,7 +2774,7 @@ msgstr "CGI Skript Fehler"
 
 #: Mailman/Cgi/options.py:61
 msgid "Invalid request method: %(method)s"
-msgstr ""
+msgstr "Ungültige Anfrage: %(method)s"
 
 # Mailman/Cgi/options.py:52
 #: Mailman/Cgi/options.py:74
@@ -2801,23 +2803,21 @@ msgid "If you are a list member, a confirmation email has been sent."
 msgstr "Eine E-Mail zur Bestätigung wurde verschickt."
 
 #: Mailman/Cgi/options.py:181
-#, fuzzy
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
 "             forwarded to the list administrator for approval."
 msgstr ""
 "Ihr Abbestelllungsantrag wurde mit der Bitte um Bestätigung an den\n"
-"Listenadministrator weitergeleitet. "
+"             Listenadministrator weitergeleitet."
 
 # Mailman/Cgi/options.py:144 Mailman/Cgi/options.py:181
 #: Mailman/Cgi/options.py:220
-#, fuzzy
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
 msgstr ""
-"Wenn Sie ein Mitglieder der Liste sind, dann wurde Ihnen ihr Passwort "
-"zugesendet."
+"Wenn Sie ein Mitglied der Liste sind,\n"
+"            wurde Ihnen ihr Passwort zugesandt."
 
 # Mailman/Cgi/options.py:161
 #: Mailman/Cgi/options.py:263
@@ -3351,9 +3351,8 @@ msgstr "Dauerhaft die Mailingliste <em>%(realname)s</em> löschen"
 
 # Mailman/Cgi/rmlist.py:172
 #: Mailman/Cgi/rmlist.py:191
-#, fuzzy
 msgid "Permanently remove mailing list %(realname)s"
-msgstr "Dauerhaft die Mailingliste <em>%(realname)s</em> löschen"
+msgstr "Die Mailingliste %(realname)s dauerhaft löschen"
 
 # Mailman/Cgi/rmlist.py:186
 #: Mailman/Cgi/rmlist.py:204
@@ -3629,17 +3628,16 @@ msgstr "Benutzung:"
 
 # Mailman/MailCommandHandler.py:684
 #: Mailman/Commands/cmd_confirm.py:50
-#, fuzzy
 msgid ""
 "Invalid confirmation string.  Note that confirmation strings expire\n"
 "approximately %(days)s days after the initial request.  They also expire if\n"
 "the request has already been handled in some way.  If your confirmation has\n"
 "expired, please try to re-submit your original request or message."
 msgstr ""
-"Ungültiger Bestätigungtext. Bitte beachten Sie, dass die Bestätigungtexte\n"
-"ein Verfallsdatum von ca. %(days)s Tagen nach Erhalt der ersten\n"
-"Abonnementantrages aufweisen. Sollte Ihr Abonnementantrag abgelaufen sein,\n"
-"fordern Sie bitte einen neuen an."
+"Ungültiger Bestätigungscode. Bitte beachten Sie, dass die\n"
+"Bestätigungscodes %(days)s Tage nach der Anfrage\n"
+"sowie nach einmaliger Verwendung ungültig werden. Falls Ihr Antrag ungültig\n"
+"ist, fordern Sie bitte einen neuen an."
 
 # Mailman/MailCommandHandler.py:692
 #: Mailman/Commands/cmd_confirm.py:56
@@ -5055,13 +5053,12 @@ msgstr ""
 "\">Autoresponder</a> einsetzen, um diese E-Mails beantworten zu lassen!"
 
 #: Mailman/Gui/Bounce.py:147
-#, fuzzy
 msgid ""
 "Should Mailman notify you, the list owner, when bounces\n"
 "             cause a member's bounce score to be incremented?"
 msgstr ""
 "Soll Mailman den Listeninhaber benachrichtigen, wenn ein\n"
-"Nutzer wegen permanenter Bounces deaktiviert wird?"
+"             Nutzer wegen permanenter Bounces deaktiviert wird?"
 
 #: Mailman/Gui/Bounce.py:149
 msgid ""
@@ -5376,11 +5373,12 @@ msgstr "Welches Format der Nachrichtensammlungen ist Voreinstellung?"
 
 # Mailman/Gui/Digest.py:48
 #: Mailman/Gui/Digest.py:59
-#, fuzzy
 msgid ""
 "How big in Kb should a digest be before it gets sent out?  0 implies no "
 "maximum size."
-msgstr "Wie groß (in KB) soll eine Sammlung vor dem Verschicken werden?"
+msgstr ""
+"Wie groß (in KB) soll eine Sammlung vor dem Verschicken werden? Ein Wert "
+"von 0 hebt die Obergrenze auf."
 
 # Mailman/Gui/Digest.py:52
 #: Mailman/Gui/Digest.py:63
@@ -5768,9 +5766,8 @@ msgstr ""
 
 # Mailman/ListAdmin.py:399
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
-#, fuzzy
 msgid "Wrap Message"
-msgstr "Ursprüngliche Nachricht"
+msgstr "Nachricht zusammenfassen"
 
 #: Mailman/Gui/General.py:159
 msgid ""
@@ -6662,9 +6659,8 @@ msgstr "Löschen/Austragen"
 
 # Mailman/Cgi/admindb.py:173
 #: Mailman/Gui/Membership.py:33
-#, fuzzy
 msgid "Address&nbsp;Change"
-msgstr "Benutzer-Adresse / Name "
+msgstr "Adressänderung"
 
 # Mailman/Gui/NonDigest.py:28
 #: Mailman/Gui/NonDigest.py:35
@@ -7225,7 +7221,6 @@ msgstr ""
 
 # Mailman/Gui/Archive.py:37 Mailman/Gui/Digest.py:67
 #: Mailman/Gui/Privacy.py:175
-#, fuzzy
 msgid "/Quarantine"
 msgstr "/Quarantäne"
 
@@ -7399,7 +7394,6 @@ msgstr ""
 "Liste durchgelassen werden."
 
 #: Mailman/Gui/Privacy.py:258
-#, fuzzy
 msgid ""
 "Action to take when anyone posts to the\n"
 "             list from a domain with a DMARC Reject%(quarantine)s Policy."
@@ -7408,7 +7402,6 @@ msgstr ""
 "             auf dessen Domain eine DMARC-Reject%(quarantine)s-Regel passt?"
 
 #: Mailman/Gui/Privacy.py:261
-#, fuzzy
 msgid ""
 "<ul><li><b>Munge From</b> -- applies the <a\n"
 "             href=\"?VARHELP=general/from_is_list\">from_is_list Munge From</"
@@ -7437,19 +7430,32 @@ msgid ""
 "             if the message is From: an affected domain and the setting is\n"
 "             other than Accept."
 msgstr ""
-"<ul><li><b>Halten</b> -- dies hält die Nachricht weiterhin vor um später "
-"über eien Freigabe zu entscheiden. \n"
+"<ul><li><b>Absender verschleiern</b> -- Wendet die<a\n"
+"             href=\"?VARHELP=general/from_is_list\">from_is_list Munge From</"
+"a>\n"
+"             Technik auf die Nachrichten an.\n"
 "\n"
-"             <p><li><b>Reject</b> -- weist die Nachricht zurück und schickt "
-"eine Bounce-Nachricht\n"
-"an den Autor. Der Text der Bounce-Nachricht kann  <a\n"
-"             href=\"?VARHELP=privacy/sender/member_moderation_notice\"\n"
-"             >hier</a> eingegeben werden.\n"
+"             <p><li><b>Nachricht zusammenfassen</b> -- Wendet die<a\n"
+"             href=\"?VARHELP=general/from_is_list\">from_is_list Wrap\n"
+"             Message</a>-Technik auf die Nachrichten an.\n"
 "\n"
-"             <p><li><b>Verwerfen</b> -- entfernt die Nachricht und schickt "
-"keine\n"
-" Bounce-Nachricht an den Absender zurück.\n"
-"             </ul>"
+"             <p><li><b>Abweisen</b> -- Hierdurch werden die Nachrichten\n"
+"             nicht angenommen. Dem Absender wird eine Benachrichtigung "
+"gesendet.\n"
+"             Der Text der Benachrichtigung kann <a\n"
+"             href=\"?VARHELP=privacy/sender/dmarc_moderation_notice\"\n"
+"             >konfiguriert werden</a>.\n"
+"\n"
+"             <p><li><b>Verwerfen</b> -- Hierdurch werden die Nachrichten\n"
+"             einfach verworfen (ohne den Autor zu benachrichtigen).\n"
+"             </ul>\n"
+"\n"
+"             <p>Diese Einstellungen überschreiben die <a\n"
+"             href=\"?VARHELP=general/from_is_list\">from_is_list</a>"
+"-Einstellungen,"
+"             wenn die Nachrichten von einer betroffenen Domain gesendet "
+"wurde,\n"
+"             und die Einstellung nicht einfach \"Akzeptieren\" ist."
 
 #: Mailman/Gui/Privacy.py:286
 msgid ""
@@ -7475,7 +7481,6 @@ msgid ""
 msgstr ""
 
 #: Mailman/Gui/Privacy.py:302
-#, fuzzy
 msgid ""
 "Text to include in any\n"
 "             <a href=\"?VARHELP=privacy/sender/dmarc_moderation_action\"\n"
@@ -8811,7 +8816,6 @@ msgid "Content filtered message notification"
 msgstr "Benachrichtigung über gefilterte E-Mail"
 
 #: Mailman/Handlers/Moderate.py:170
-#, fuzzy
 msgid ""
 "Your message has been rejected, probably because you are not subscribed to "
 "the\n"
@@ -8822,12 +8826,10 @@ msgid ""
 "mailing list owner at %(listowner)s."
 msgstr ""
 "Es ist Ihnen nicht gestattet, Nachrichten auf dieser Mailingliste zu\n"
-"veröffentlichen, vielleicht, weil Sie nicht Mitglied der Liste sind oder "
-"unter einer anderen, nicht eingetragenenen E-Mail-Adresse geschrieben haben. "
-"Ihre E-Mail wurden deshalb automatisch abgewiesen. Sollten Sie der Meinung "
-"sein, dass dies auf einem Fehler beruht, setzen\n"
-"Sie sich bitte mit dem Eigentümer der Mailingliste, %(listowner)s, in\n"
-"Verbindung."
+"veröffentlichen. Vielleicht, weil Sie nicht Mitglied der Liste sind oder\n"
+"unter einer anderen, nicht eingetragenen E-Mail-Adresse geschrieben haben.\n"
+"Sollten Sie der Meinung sein, dass dies auf einem Fehler beruht, setzen Sie\n"
+"sich bitte mit dem Eigentümer der Mailingliste, %(listowner)s, in Verbindung."
 
 #: Mailman/Handlers/Moderate.py:187
 msgid "Auto-discard notification"
@@ -8931,7 +8933,6 @@ msgid "The message headers matched a filter rule"
 msgstr "Der Nachrichten-Header traf auf eine Filter-Regel zu"
 
 #: Mailman/Handlers/SpamDetect.py:117
-#, fuzzy
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
 "publishes a DMARC policy of reject or quarantine, and your message has been\n"
@@ -8940,12 +8941,10 @@ msgid ""
 "error, contact the mailing list owner at %(listowner)s."
 msgstr ""
 "Es ist Ihnen nicht gestattet, Nachrichten auf dieser Mailingliste zu\n"
-"veröffentlichen, vielleicht, weil Sie nicht Mitglied der Liste sind oder "
-"unter einer anderen, nicht eingetragenenen E-Mail-Adresse geschrieben haben. "
-"Ihre E-Mail wurden deshalb automatisch abgewiesen. Sollten Sie der Meinung "
-"sein, dass dies auf einem Fehler beruht, setzen\n"
-"Sie sich bitte mit dem Eigentümer der Mailingliste, %(listowner)s, in\n"
-"Verbindung."
+"veröffentlichen, da auf Ihre Domain eine DMARC-Regel zum Abweisen oder\n"
+"Überprüfen der Nachricht zutrifft. Sollten Sie der Meinung sein, dass dies\n"
+"auf einem Fehler beruht, setzen Sie sich bitte mit dem Eigentümer der\n"
+"Mailingliste, %(listowner)s, in Verbindung."
 
 #: Mailman/Handlers/SpamDetect.py:162
 msgid "Message rejected by filter rule match"
@@ -9201,9 +9200,8 @@ msgstr "%(realname)s Abbestellungbenachrichtigung"
 
 # Mailman/MailList.py:739
 #: Mailman/MailList.py:1226
-#, fuzzy
 msgid "%(realname)s address change notification"
-msgstr "%(realname)s Abbestellungbenachrichtigung"
+msgstr "Adressänderungsbenachrichtigung für %(realname)s"
 
 # Mailman/MailList.py:860
 #: Mailman/MailList.py:1291
@@ -9432,7 +9430,6 @@ msgstr ""
 "%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s %(year)04i"
 
 #: bin/add_members:26
-#, fuzzy
 msgid ""
 "Add members to a list from the command line.\n"
 "\n"
@@ -9482,46 +9479,46 @@ msgid ""
 msgstr ""
 "Hinzufügen neuer Mitglieder zu einer Mailingliste.\n"
 "\n"
-"Benutzung:\n"
+"Verwendung:\n"
 "    add_members [Optionen] Listenname\n"
 "\n"
 "Optionen:\n"
 "\n"
 "    --regular-members-file=Dateiname\n"
 "    -r Dateiname\n"
-"        Lese hinzuzufügende Adressen aus einer Datei (eine Adresse "
-"proZeile).\n"
-"        Diese Mitglieder werden zu normalen Mitgliedern, erhalten somit\n"
-"        keine Nachrichtensammlungen (Digests).\n"
-"        Ist der Dateiname '-', wird von stdin gelesen.\n"
+"        Die hinzuzufügenden Adressen werden aus einer Datei gelesen\n"
+"        (eine Adresse pro Zeile). Diese Mitglieder werden zu normalen\n"
+"        Mitgliedern, erhalten somit keine Nachrichtensammlungen (Digests).\n"
+"        Ist der Dateiname `-', wird von stdin gelesen.\n"
+"        Bitte beachten Sie, dass -n/--non-digest-members-file veraltete "
+"Synonyme\n"
+"        für diese Option sind, und nicht mehr verwendet werden sollten."
 "\n"
 "    --digest-members-file=Dateiname\n"
 "    -d=Dateiname\n"
-"        Analog wie oben, aber die Mitglieder werden zu Digest-Mitgliedern.\n"
+"        Ähnlich wie oben, aber die Mitglieder werden zu Digest-Mitgliedern.\n"
 "\n"
 "    --welcome-msg=<y|n>\n"
 "    -w <y|n>\n"
-"        Legt fest, ob die Listenmitglieder eine Begrüssungsnachricht\n"
+"        Legt fest, ob die Listenmitglieder eine Begrüßungsnachricht\n"
 "        erhalten. Diese Option hat Vorrang vor der `send_welcome_msg'\n"
 "        Option der Mailingliste.\n"
 "\n"
 "    --admin-notify=<y|n>\n"
 "    -a <y|n>\n"
 "        Legt fest, ob die Listenadministratoren eine Benachrichtigung über\n"
-"        das Gelingen/Scheitern dieses Abonnements erhalten. Diese Option "
-"hat\n"
-"        Vorrang vor der `admin_notify_mchanges' Option der Mailingliste.\n"
+"        das Gelingen/Scheitern dieses Abonnements erhalten. Diese Option\n"
+"        hat Vorrang vor der Option `admin_notify_mchanges' der Mailingliste.\n"
 "\n"
 "    --help\n"
 "    -h\n"
-"        Ausgabe dieser Hilfe.\n"
+"        Diese Hilfe zeigen und beenden.\n"
 "\n"
 "    Listenname\n"
 "        Der Name der (bereits vorhandenen) Mailingliste.\n"
 "\n"
 "Sie müssen mindestens eine der beiden Optionen -n oder -d angeben. "
-"Höchstens\n"
-"eine der Dateien kann '-' sein.\n"
+"Höchstens eine der Dateien kann `-' sein.\n"
 
 # Mailman/Cgi/admin.py:1228
 #: bin/add_members:146
@@ -10902,7 +10899,6 @@ msgid "List: %(listname)s, \tOwners: %(owners)s"
 msgstr "Liste: %(listname)s, \tEigentümer: %(owners)s"
 
 #: bin/list_lists:19
-#, fuzzy
 msgid ""
 "List all mailing lists.\n"
 "\n"
@@ -10929,7 +10925,7 @@ msgid ""
 "        Print this text and exit.\n"
 "\n"
 msgstr ""
-"Anzeige aller Mailinglisten.\n"
+"Liste aller Mailinglisten.\n"
 "\n"
 "Benutzung: %(program)s [optionen]\n"
 "\n"
@@ -10937,11 +10933,11 @@ msgstr ""
 "\n"
 "    --advertised\n"
 "    -a\n"
-"        Nur solche Listen anzeigen, die öffentlich gelisted werden.\n"
+"        Nur solche Listen anzeigen, die öffentlich aufgelistet werden.\n"
 "\n"
 "    --virtual-host-overview=domain\n"
 "    -V domain\n"
-"        Nur Listen anzeigen, die in der angegebenen virtuellen Domäne\n"
+"        Nur Listen anzeigen, die in der angegebenen virtuellen Domain\n"
 "        zu Hause sind. Dies funktioniert nur, wenn die Umgebungsvariable\n"
 "        VIRTUAL_HOST_OVERVIEW gesetzt ist.\n"
 "\n"
@@ -10950,7 +10946,7 @@ msgstr ""
 "\n"
 "    --help\n"
 "    -h\n"
-"        Ausgabe dieser Meldung und Schluss.\n"
+"        Diese Hilfe zeigen und beenden.\n"
 "\n"
 
 # Mailman/Cgi/admin.py:377
@@ -11507,7 +11503,6 @@ msgid "Return the generated output."
 msgstr "Gibt die erzeugte Ausgabe zurück."
 
 #: bin/newlist:20
-#, fuzzy
 msgid ""
 "Create a new, unpopulated mailing list.\n"
 "\n"
@@ -11606,14 +11601,14 @@ msgid ""
 msgstr ""
 "Erzeugt eine neue, leere Mailingliste.\n"
 "\n"
-"Benutzung: %(PROGRAM)s [opt.] [listenname [listadmin-E-Mail [admin-"
-"passwd]]]\n"
+"Verwendung: %(PROGRAM)s [Optionen] [Listenname [Listenadmin-E-Mail [Admin-"
+"Passwort]]]\n"
 "\n"
 "Optionen:\n"
 "\n"
-"    -l language\n"
-"    --language language\n"
-"        Setzt `language' als Standard-Sprache der Liste an. Geben Sie dazu\n"
+"    -l Sprache\n"
+"    --language Sprache\n"
+"        Setzt `Sprache' als Standard-Sprache der Liste. Geben Sie dazu\n"
 "        den zwei Buchstaben langen Ländercode an (z.B. 'de' oder 'en').\n"
 "\n"
 "\n"
@@ -11623,14 +11618,14 @@ msgstr ""
 "\n"
 "    -e emailhost\n"
 "    --emailhost=emailhost\n"
-"        Setzt den Hostnamen der Liste für die E-Mails..\n"
+"        Setzt den Hostnamen der Liste für die E-Mails.\n"
 "\n"
 "    -q/--quiet\n"
 "        Normalerweise erhält der Administrator eine E-Mail, wenn eine neue\n"
 "        Mailingliste angelegt wurde. Diese Option unterdrückt diese E-Mail.\n"
 "\n"
 "    -h/--help\n"
-"        Ausgabe dieser Meldung und Programm beenden.\n"
+"        Diese Hilfe zeigen und beenden.\n"
 "\n"
 "Auf der Kommandozeile können so viele Argumente angegeben werden, wie Sie\n"
 "wollen. Fehlende Parameter werden vom Programm abgefragt.\n"
@@ -11638,45 +11633,44 @@ msgstr ""
 "Jede Mailman-Liste hat zwei Parameter, die den Standard-Hostnamen\n"
 "für ausgehende E-Mails und die Standard-URL für das Web-Interface\n"
 "festlegen. Mailman kommt zwar mit einer sinnvollen Grundeinstellung daher,\n"
-"wenn Sie aber mehrere virtuelle Mailman-Sites betreiben sollten, kann es\n"
+"wenn Sie aber mehrere virtuelle Mailman-Seiten betreiben sollten, kann es\n"
 "durchaus vorkommen, dass die Standardwerte ungenügend sind für die Liste\n"
 "welche Sie erstellen wollen.\n"
 "\n"
 "Die Domäne, die zur Erzeugung neuer Listen benutzt wird, kann wie folgt\n"
 "angegeben werden:\n"
 "\n"
-"    newlist --urlhost=www.mydom.ain mylist\n"
+"    newlist --urlhost=example.org mylist\n"
 "\n"
-"wobei `www.mydom.ain' der Hostname der URL dieser Mailingliste sein sollte. "
-"Mit dieser Einstellung werden die Benutzer via die Allgemeine "
-"Listenübersicht unter http://www.mydom.ain/mailman/listinfo sehen. Bei "
-"virtuellen Mailinglisten muss eine entsprechende Zuordnung im VIRTUAL_HOST-"
-"Mapping in mm_cfg.py/Defaults.py eingetragen sein, wenn der Mail-Hostname "
-"automatisch bestimmt werden soll. Wird keine Zuordnung gefunden, so wird der "
+"wobei `example.org' der Hostname der URL dieser Mailingliste sein sollte.\n"
+"Mit dieser Einstellung werden die Benutzer die allgemeine\n"
+"Listenübersicht unter http://example.org/mailman/listinfo sehen. Bei\n"
+"virtuellen Mailinglisten muss eine entsprechende Zuordnung im VIRTUAL_HOST-\n"
+"Mapping in mm_cfg.py/Defaults.py eingetragen sein, wenn der Mail-Hostname\n"
+"automatisch bestimmt werden soll. Wird keine Zuordnung gefunden, so wird der\n"
 "eingetragene DEFAULT_EMAIL_HOST genutzt.\n"
 "\n"
-"Wenn der Mail-Hostname vom autmatischen Mapping abweichen soll, so können "
+"Wenn der E-Mail-Hostname vom automatischen Mapping abweichen soll, so können "
 "Sie die Liste wie folgt angeben:\n"
 "\n"
-"    newlist --urlhost=www.mydom.ain --emailhost=mydom.ain mylist\n"
+"    newlist --urlhost=www.example.org --emailhost=example.org mylist\n"
 "\n"
-"wobei `mydom.ain' der Mail-Domäne-Name ist. Wenn Sie emailhost nicht angeben "
-"und urlhost ist nicht in der Liste der virtuellen Host, dann wird mm_cfg."
+"wobei `example.org' der Name der E-Mail-Domain ist. Wenn Sie emailhost\n"
+"nicht angeben und urlhost ist nicht in der Liste der virtuellen Host, dann "
+"wird mm_cfg\n"
 "DEFAULT_EMAIL_HOST für die E-Mail Schnittstelle verwendet\n"
 "\n"
-"Abwärtskompatibel zu älteren Versionen können Sie zum erstellen der neuen "
+"Abwärtskompatibel zu älteren Versionen können Sie zum Erstellen der neuen\n"
 "Liste auch folgende Variante verwenden:\n"
 "\n"
-"    mylist@www.mydom.ain\n"
+"    mylist@www.example.org\n"
 "\n"
-"wobei `www.mydom.ain' wieder der URL-Hostname sein sollte. der Basis-"
-"Hostname der virtuellen Hosts sein sollte.\n"
+"wobei `www.example.org' wieder der URL-Hostname sein sollte.\n"
 "\n"
 "Werden beide Varianten parallel genutzt, so haben die Angaben von --urlhost "
 "und --emailhost Vorrang.\n"
 "\n"
-"Bei Angabe eines einfachen Listennamens (`mylist'), wird der E-Mail-"
-"Hostname\n"
+"Bei Angabe eines einfachen Listennamens (`mylist'), wird der E-Mail-Hostname\n"
 "der Variablen DEFAULT_HOST_NAME und die URL aus DEFAULT_URL entnommen (wie\n"
 "in der Datei Defaults.py hinterlegt, oder überschrieben in mm_cfg.py).\n"
 "\n"
