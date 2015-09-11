@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
 "POT-Creation-Date: Fri May  1 13:20:57 2015\n"
-"PO-Revision-Date: 2015-09-11 16:36+0200\n"
+"PO-Revision-Date: 2015-09-11 17:02+0200\n"
 "Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -3442,7 +3442,7 @@ msgstr "Sie müssen eine gültige E-Mail-Adresse angeben."
 
 #: Mailman/Cgi/subscribe.py:147
 msgid "The form is too old.  Please GET it again."
-msgstr ""
+msgstr "Das Formular ist zu alt. Bitte aktualisieren Sie es."
 
 #: Mailman/Cgi/subscribe.py:150
 msgid "Please take a few seconds to fill out the form before submitting it."
@@ -3453,14 +3453,17 @@ msgstr ""
 #: Mailman/Cgi/subscribe.py:153
 msgid "The hidden token didn't match.  Did your IP change?"
 msgstr ""
+"Das versteckte Token stimmte nicht überein. Hat sich Ihre IP-Adresse "
+"verändert?"
 
 #: Mailman/Cgi/subscribe.py:156
 msgid "There was no hidden token in your submission or it was corrupted."
 msgstr ""
+"Ihre Übertragung wurde unterbrochen oder es fehlte die versteckte Kennung."
 
 #: Mailman/Cgi/subscribe.py:157
 msgid "You must GET the form before submitting it."
-msgstr ""
+msgstr "Sie müssen das Formular aktualisieren, bevor sie es übertragen."
 
 # Mailman/Cgi/subscribe.py:121
 #: Mailman/Cgi/subscribe.py:161
@@ -5069,6 +5072,12 @@ msgid ""
 "but\n"
 "             doesn't cause a disable or a probe to be sent."
 msgstr ""
+"Setzen Sie diese Option auf <em>Ja</em>, wird Mailman den Listenbesitzer\n"
+"             benachrichtigen und ihm eine Kopie der Bounce-Nachricht senden,\n"
+"             wenn die Bounce-Zahl eines Mitglieds sich ändert, aber dies "
+"nicht\n"
+"             eine automatische Blockierung oder das Senden einer Test-E-Mail\n"
+"             auslöst."
 
 #: Mailman/Gui/Bounce.py:156
 msgid ""
@@ -5762,7 +5771,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
 msgid "Munge From"
-msgstr ""
+msgstr "Absender verschleiern"
 
 # Mailman/ListAdmin.py:399
 #: Mailman/Gui/General.py:158 Mailman/Gui/Privacy.py:256
@@ -5775,6 +5784,9 @@ msgid ""
 "             address to mitigate issues stemming from the original From:\n"
 "             domain's DMARC or similar policies."
 msgstr ""
+"Ersetzt den \"From:\"-Header mit der E-Mail-Adresse der Mailingsliste,n "
+"             wenn Probleme mit der Domain des Absenders und einer\n"
+"             DMARC-Regel o.ä. auftreten."
 
 #: Mailman/Gui/General.py:162
 msgid ""
@@ -7075,6 +7087,8 @@ msgid ""
 "List of addresses (or regexps) whose subscriptions do not\n"
 "             require approval."
 msgstr ""
+"Eine Liste aller Adressen (oder regulärer Ausdrücke), deren Eintragung\n"
+"             keine Bestätigung erfordert."
 
 #: Mailman/Gui/Privacy.py:120
 msgid ""
@@ -7098,6 +7112,8 @@ msgid ""
 "You may also use the @listname notation to designate the\n"
 "             members of another list in this installation."
 msgstr ""
+"Sie können auch @listname schreiben, um die Mitglieder einer anderen\n"
+"             Liste in dieser Installation zu benennen."
 
 #: Mailman/Gui/Privacy.py:129
 msgid ""
@@ -7462,6 +7478,9 @@ msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=quarantine as well as p=reject"
 msgstr ""
+"Soll die obige dmarc_moderation_action auf Nachrichten\n"
+"               von Domains mit DMARC p=quarantine und as p=reject "
+"               angewendet werden"
 
 #: Mailman/Gui/Privacy.py:289
 msgid ""
@@ -7500,6 +7519,12 @@ msgid ""
 "             separate text/plain MIME part preceding the original message\n"
 "             part in the wrapped message."
 msgstr ""
+"Falls die dmarc_moderation_action angewendet wird und eine "
+"E-Mail-Zusammenfassung\n"
+"             erfordert, wird er, wenn dieser Text angegeben wird, in einem "
+"separaten\n"
+"             Klartext-MIME-Teil vor der ursprünglichen Nachricht eingefügt "
+"werden."
 
 #: Mailman/Gui/Privacy.py:314
 msgid ""
@@ -7521,6 +7546,9 @@ msgid ""
 "               considered equivalent when checking if a post is from a list\n"
 "               member."
 msgstr ""
+"Eine 'zweidimensionale' Liste mit E-Mail-Domains, welche als\n"
+"             bei der Überprüfung des Absenders als gleich\n"
+"             angesehen werden."
 
 #: Mailman/Gui/Privacy.py:327
 msgid ""
@@ -7925,6 +7953,8 @@ msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
 msgstr ""
+"dmarc_moderation_action muss >= dem konfigurierten\n"
+"                           Standard-Wert sein."
 
 #: Mailman/Gui/Privacy.py:608
 msgid ""
@@ -10628,6 +10658,10 @@ msgid ""
 "are\n"
 "included in the XML output.  Multiple -l flags may be given."
 msgstr ""
+"Die Liste, welche in die Ausgabe aufgenommen werden soll. \n"
+"Ist keine Liste angegeben, werden alle Mailinglisten in die XML-Ausgabe "
+"aufgenommen.\n"
+"Die Option -l kann mehrfach angegeben werden."
 
 #: bin/export.py:345
 msgid "Unexpected arguments"
@@ -10810,7 +10844,7 @@ msgstr ""
 
 #: bin/genaliases:84
 msgid "genaliases can't do anything useful with mm_cfg.MTA = %(mta)s."
-msgstr ""
+msgstr "genaliases kann mit mm_cfg.MTA = %(mta)s nichts anfangen."
 
 #: bin/inject:20
 msgid ""
@@ -12374,16 +12408,25 @@ msgid ""
 "            4  end\n"
 "        "
 msgstr ""
+"Status-Tabelle für den Parser des endlichen Automaten:\n"
+"            0  idle\n"
+"            1  filename-or-comment\n"
+"            2  msgid\n"
+"            3  msgstr\n"
+"            4  end\n"
+"        "
 
 #: bin/transcheck:280
 msgid ""
 "check a translated template against the original one\n"
 "       search also <MM-*> tags if html is not zero"
 msgstr ""
+"überprüfe eine übersetzte Vorlage\n"
+"       suche auch <MM-*>-Tags, wenn html nicht gleich null ist."
 
 #: bin/transcheck:327
 msgid "scan the po file comparing msgids with msgstrs"
-msgstr ""
+msgstr "durchsuche die PO-Datei, um msgids mit msgstrs zu vergleichen"
 
 #: bin/unshunt:20
 msgid ""
@@ -12473,6 +12516,8 @@ msgstr "WARNUNG: Keine Kontrolle über die Dateisperre der Liste: %(listname)s"
 #: bin/update:215
 msgid "Resetting %(n)s BYBOUNCEs disabled addrs with no bounce info"
 msgstr ""
+"%(n)s BYBOUNCEs deaktivierte Adressen ohne Bounce-Informationen werden "
+"zurückgesetzt."
 
 #: bin/update:221
 msgid "Updating the held requests database."
@@ -12616,7 +12661,7 @@ msgstr "Update der alten pending_subscriptions.db Datenbank von Mailman 2.1.4"
 
 #: bin/update:598
 msgid "Ignoring bad pended data: %(key)s: %(val)s"
-msgstr ""
+msgstr "Ungültige zurückgehaltene Daten werden ignoriert: %(key)s: %(val)s"
 
 #: bin/update:614
 msgid "WARNING: Ignoring duplicate pending ID: %(id)s."
@@ -13057,7 +13102,7 @@ msgstr "Ausführen von %(module)s.%(callable)s()..."
 
 #: bin/withlist:291
 msgid "The variable `m' is the %(listname)s MailList instance"
-msgstr ""
+msgstr "Die Variable `m' ist die MailList-Instanz für %(listname)s"
 
 #: cron/bumpdigests:19
 msgid ""
@@ -13227,6 +13272,7 @@ msgstr ""
 #: cron/disabled:145
 msgid "[disabled by periodic sweep and cull, no message available]"
 msgstr ""
+"[deaktiviert wegen regelmäßiger Aufräumarbeiten; keine Nachrichten verfügbar]"
 
 #: cron/gate_news:19
 msgid ""
