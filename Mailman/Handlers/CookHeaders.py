@@ -380,7 +380,13 @@ def prefix_subject(mlist, msg, msgdata):
     else:
         old_style = mm_cfg.OLD_STYLE_PREFIXING
     subject = re.sub(prefix_pattern, '', subject)
-    rematch = re.match('((RE|AW|SV|VS)\s*(\[\d+\])?\s*:\s*)+', subject, re.I)
+    # Previously the following re didn't have the first \s*. It would fail
+    # if the incoming Subject: was like '[prefix] Re: Re: Re:' because of the
+    # leading space after stripping the prefix. It is not known what MUA would
+    # create such a Subject:, but the issue was reported.
+    rematch = re.match(
+                       '(\s*(RE|AW|SV|VS)\s*(\[\d+\])?\s*:\s*)+',
+                        subject, re.I)
     if rematch:
         subject = subject[rematch.end():]
         recolon = 'Re:'
