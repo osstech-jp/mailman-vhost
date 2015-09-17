@@ -129,6 +129,14 @@ def main():
             return
     else:
         user = Utils.LCDomain(Utils.UnobscureEmail(SLASH.join(parts[1:])))
+    # If a user submits a form or URL with post data or query fragments
+    # with multiple occurrences of the same variable, we can get a list
+    # here.  Be as careful as possible.
+    if isinstance(user, list) or isinstance(user, tuple):
+        if len(user) == 0:
+            user = ''
+        else:
+            user = user[-1]
 
     # Avoid cross-site scripting attacks
     safeuser = Utils.websafe(user)

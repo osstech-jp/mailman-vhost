@@ -20,6 +20,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Defended against a user submitting URLs with query fragments or POST
+      data containing multiple occurrences of the same variable.
+      (LP: #1496632)
+
     - Fixed bin/mailmanctl to check its effective rather than real uid.
       (LP: #1491187)
 

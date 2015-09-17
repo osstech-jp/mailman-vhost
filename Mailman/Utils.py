@@ -234,6 +234,14 @@ _valid_domain = re.compile('[-a-z0-9]', re.IGNORECASE)
 
 def ValidateEmail(s):
     """Verify that an email address isn't grossly evil."""
+    # If a user submits a form or URL with post data or query fragments
+    # with multiple occurrences of the same variable, we can get a list
+    # here.  Be as careful as possible.
+    if isinstance(s, list) or isinstance(s, tuple):
+        if len(s) == 0:
+            s = ''
+        else:
+            s = s[-1]
     # Pretty minimal, cheesy check.  We could do better...
     if not s or s.count(' ') > 0:
         raise Errors.MMBadEmailError
@@ -454,6 +462,14 @@ def check_global_password(response, siteadmin=True):
 
 _ampre = re.compile('&amp;((?:#[0-9]+|[a-z]+);)', re.IGNORECASE)
 def websafe(s):
+    # If a user submits a form or URL with post data or query fragments
+    # with multiple occurrences of the same variable, we can get a list
+    # here.  Be as careful as possible.
+    if isinstance(s, list) or isinstance(s, tuple):
+        if len(s) == 0:
+            s = ''
+        else:
+            s = s[-1]
     if mm_cfg.BROKEN_BROWSER_WORKAROUND:
         # Archiver can pass unicode here. Just skip them as the
         # archiver escapes non-ascii anyway.
