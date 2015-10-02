@@ -186,6 +186,13 @@
 #               Updated on: Sat Jul 25 07:52:55 PDT 2015
 #               Updated "Login failure with private rosters" report to
 #               account for newly added IP in log message.
+#
+# 0.0.24        Update by Mark Sapiro <mark@msapiro.net>
+#               Updated on: Thu Oct  1 15:15:39 PDT 2015
+#               Report vette log held and banned subscriptions as their
+#               own categories instead of in other errors.
+#               Replaced s/\+\d+@/+<digits>@/ in vette log
+#               banned subscription messages due to flood of such.
 
 ###############################################################################
 # Set up locations of standard commands, directories, etc....
@@ -520,9 +527,19 @@ do
 	    $GREP -i 'Post to moderated list' $TMPLOG | $AWK '{ print $6 }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	    echo "" >> $TMP
+	    echo "Held Subscriptions" >> $TMP
+	    echo "------------------------------" >> $TMP
+	    $GREP -i 'held subscription request' $TMPLOG | $AWK '{ print $6 " " $11 }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+
+	    echo "" >> $TMP
+	    echo "Banned Subscriptions" >> $TMP
+	    echo "------------------------------" >> $TMP
+	    $GREP -i 'banned subscription' $TMPLOG | $AWK '{ print $6 " " $9 }' | $SED -e 's/\+[0-9][0-9]*@/+<digits>@/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+
+	    echo "" >> $TMP
 	    echo "Other Errors:" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $EGREP -vi '(Post by non-member|suspicious header|message approved|Discarded posting|bulk message discarded|junk message discarded|Message has implicit destination|Posting to a moderated newsgroup|Post to moderated list|Message discarded, msgid)' $TMPLOG | $SED -e 's/^.* ([0-9]*) //' -e 's/, message-id=<[^> ]*>:/:/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP 
+	    $EGREP -vi '(Post by non-member|suspicious header|message approved|Discarded posting|bulk message discarded|junk message discarded|Message has implicit destination|Posting to a moderated newsgroup|Post to moderated list|Message discarded, msgid|held subscription request|banned subscription)' $TMPLOG | $SED -e 's/^.* ([0-9]*) //' -e 's/, message-id=<[^> ]*>:/:/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP 
 
 	elif [ "${LOG}" = "smtp-failure" ] ; then
 
