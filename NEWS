@@ -22,6 +22,8 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed the 'pidfile' path in the sample init.d script.  (LP: # 1503422)
+
     - Subject prefixing could fail to collapse multiple 'Re:' in an incomming
       message if they all came after the list's subject_prefix.  This is now
       fixed.  (LP: #1496620)
