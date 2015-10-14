@@ -34,7 +34,7 @@ from Mailman import Utils
 from Mailman.i18n import _
 from Mailman.Logging.Syslog import syslog
 
-CONTINUATION = ',\n\t'
+CONTINUATION = ',\n '
 COMMASPACE = ', '
 MAXLINELEN = 78
 
@@ -52,7 +52,7 @@ def _isunicode(s):
 
 nonascii = re.compile('[^\s!-~]')
 
-def uheader(mlist, s, header_name=None, continuation_ws='\t', maxlinelen=None):
+def uheader(mlist, s, header_name=None, continuation_ws=' ', maxlinelen=None):
     # Get the charset to encode the string in. Then search if there is any
     # non-ascii character is in the string. If there is and the charset is
     # us-ascii then we use iso-8859-1 instead. If the string is ascii only
@@ -350,7 +350,7 @@ def prefix_subject(mlist, msg, msgdata):
         lines = str(subject).splitlines()
     else:
         lines = subject.splitlines()
-    ws = '\t'
+    ws = ' '
     if len(lines) > 1 and lines[1] and lines[1][0] in ' \t':
         ws = lines[1][0]
     msgdata['origsubj'] = subject

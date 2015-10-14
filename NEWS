@@ -22,6 +22,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Changed CookHeaders to default to using space rather than tab as
+      continuation_ws when folding headers.  (LP: #1505878)
+
     - Fixed the 'pidfile' path in the sample init.d script.  (LP: # 1503422)
 
     - Subject prefixing could fail to collapse multiple 'Re:' in an incomming
