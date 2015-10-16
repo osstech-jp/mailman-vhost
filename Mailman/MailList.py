@@ -1574,17 +1574,29 @@ bad regexp in bounce_matching_header line: %s
         Otherwise returns False.
         """
         auto_approve = False
-        if self.GetPattern(sender, self.subscribe_auto_approval, at_list=True):
+        if self.GetPattern(sender,
+                           self.subscribe_auto_approval,
+                           at_list='subscribe_auto_approval'
+                          ):
             auto_approve = True
             syslog('vette', '%s: auto approved subscribe from %s',
                    self.internal_name(), sender)
         return auto_approve
 
-    def GetPattern(self, email, pattern_list, at_list=False):
+    def GetPattern(self, email, pattern_list, at_list=None):
         """Returns matched entry in pattern_list if email matches.
-        Otherwise returns None.
+        Otherwise returns None.  The at_list argument, if "true",
+        says process the @listname syntax and provides the name of
+        the list attribute for log messages.
         """
         matched = None
+        # First strip out all the regular expressions and listnames because
+        # documentation says we do non-regexp first (Why?).
+        plainaddrs = [x.strip() for x in pattern_list if x.strip() and not
+                         (x.startswith('^') or x.startswith('@'))]
+        addrdict = Utils.List2Dict(plainaddrs, foldcase=1)
+        if addrdict.has_key(email.lower()):
+            return email
         for pattern in pattern_list:
             if pattern.startswith('^'):
                 # This is a regular expression match
@@ -1603,22 +1615,21 @@ bad regexp in bounce_matching_header line: %s
                 if mname == self.internal_name():
                     # don't reference your own list
                     syslog('error',
-                        'subscribe_auto_approval in %s references own list',
+                        '%s in %s references own list',
+                        at_list,
                         self.internal_name())
                     continue
                 try:
                     mother = MailList(mname, lock = False)
                 except Errors.MMUnknownListError:
                     syslog('error',
-              'subscribe_auto_approval in %s references non-existent list %s',
-                        self.internal_name(), mname)
+                           '%s in %s references non-existent list %s',
+                           at_list,
+                           self.internal_name(),
+                           mname
+                          )
                     continue
                 if mother.isMember(email.lower()):
-                    matched = pattern
-                    break
-            else:
-                # Do the comparison case insensitively
-                if pattern.lower() == email.lower():
                     matched = pattern
                     break
         return matched

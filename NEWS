@@ -22,6 +22,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Refactored the GetPattern list method to simplify extending @listname
+      syntax to new attributes in the future.  Changed Moderate.py to use the
+      GetPattern method to process the *_these_nonmembers lists.
+
     - Changed CookHeaders to default to using space rather than tab as
       continuation_ws when folding headers.  (LP: #1505878)
 
