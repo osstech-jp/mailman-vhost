@@ -1604,9 +1604,19 @@ bad regexp in bounce_matching_header line: %s
                     if re.search(pattern, email, re.IGNORECASE):
                         matched = pattern
                         break
-                except re.error:
+                except re.error, e:
                     # BAW: we should probably remove this pattern
-                    pass
+                    # The GUI won't add a bad regexp, but at least log it.
+                    # The following kludge works because the ban_list stuff
+                    # is the only caller with no at_list.
+                    attr_name = at_list or 'ban_list'
+                    syslog('error',
+                           '%s in %s has bad regexp "%s": %s',
+                           attr_name,
+                           self.internal_name(),
+                           pattern,
+                           str(e)
+                          )
             elif at_list and pattern.startswith('@'):
                 # XXX Needs to be reviewed for list@domain names.
                 # this refers to the members of another list in this

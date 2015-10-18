@@ -22,6 +22,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Invalid regexps in *_these_nonmembers, subscribe_auto_approval and
+      ban_list are now logged.  (LP: #1507241)
+
     - Refactored the GetPattern list method to simplify extending @listname
       syntax to new attributes in the future.  Changed Moderate.py to use the
       GetPattern method to process the *_these_nonmembers lists.
