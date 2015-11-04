@@ -229,6 +229,18 @@ class Privacy(GUIBase):
              <a href="%(adminurl)s/members">membership management
              screens</a>.""")),
 
+            ('member_verbosity_threshold', mm_cfg.Number, 5, 0,
+             _('Ceiling on acceptable number of member posts, per interval, before automatic moderation.'),
+
+             _('''If a member posts this many times, within sender_verbosity_interval,
+             the member is automatically moderated.  Use 0 to disable.''')),
+
+            ('member_verbosity_interval', mm_cfg.Number, 5, 300,
+             _('Number of seconds to use in determining whether or not to automatically moderate a member.'),
+
+             _('''If a member posts exceed member_verbosity_threshold, within sender_verbosity_interval,
+             the member is automatically moderated.''')),
+
             ('member_moderation_action', mm_cfg.Radio,
              (_('Hold'), _('Reject'), _('Discard')), 0,
              _("""Action to take when a moderated member posts to the

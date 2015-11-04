@@ -122,6 +122,12 @@ error, contact the mailing list owner at %(listowner)s."""))
                     raise Errors.RejectMessage, text
                 elif mlist.dmarc_moderation_action == 4:
                     raise Errors.DiscardMessage
+
+        if Utils.IsVerboseMember(mlist, addr):
+             mlist.setMemberOption(addr, mm_cfg.Moderate, 1)
+             syslog('vette', '%s: Automatically Moderated %s for verbose postings.',
+                   mlist.real_name, addr) 
+
     if msgdata.get('approved'):
         return
     # First do site hard coded header spam checks
@@ -169,3 +175,5 @@ error, contact the mailing list owner at %(listowner)s."""))
                     hold_for_approval(mlist, msg, msgdata, HeaderMatchHold)
                 if action == mm_cfg.ACCEPT:
                     return
+
+

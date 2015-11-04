@@ -1246,6 +1246,32 @@ def IsDMARCProhibited(mlist, email):
     return False
 
 
+# Check a known list in order to auto-moderate verbose members
+recentMemberPostings = {};
+def IsVerboseMember(mlist, email):
+
+    threshold = 5 if mlist.member_verbosity_threshold is None else mlist.member_verbosity_threshold
+    if threshold == 0:
+        return False
+
+    interval = 5 if mlist.member_verbosity_interval is None else mlist.member_verbosity_interval
+    email = email.lower()
+
+    t = time.time()
+    recentMemberPostings.setdefault(email,[]).append(t)
+
+    syslog('vette', 'DEBUG: %s: Appended %f to recentMemberPostings[%s] (%d).',
+           mlist.real_name, t, email, len(recentMemberPostings[email]))
+
+    for t in recentMemberPostings[email]:
+        if t < time.time() - float(interval):
+            recentMemberPostings[email].remove(t)
+            syslog('vette', 'DEBUG: %s: Removed %f from recentMemberPostings[%s] (%d).',
+                   mlist.real_name, t, email, len(recentMemberPostings[email]))
+
+    return len(recentMemberPostings[email]) >= threshold
+
+
 def check_eq_domains(email, domains_list):
     """The arguments are an email address and a string representing a
     list of lists in a form like 'a,b,c;1,2' representing [['a', 'b',
