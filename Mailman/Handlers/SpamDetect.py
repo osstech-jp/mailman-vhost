@@ -123,7 +123,7 @@ error, contact the mailing list owner at %(listowner)s."""))
                 elif mlist.dmarc_moderation_action == 4:
                     raise Errors.DiscardMessage
 
-        if Utils.IsVerboseMember(mlist, addr):
+        if mlist.member_verbosity_threshold > 0 and Utils.IsVerboseMember(mlist, addr):
              mlist.setMemberOption(addr, mm_cfg.Moderate, 1)
              syslog('vette', '%s: Automatically Moderated %s for verbose postings.',
                    mlist.real_name, addr) 

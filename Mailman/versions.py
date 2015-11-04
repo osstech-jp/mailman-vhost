@@ -497,7 +497,8 @@ def NewVars(l):
     add_only_if_missing('dmarc_moderation_notice', '')
     add_only_if_missing('dmarc_wrapped_message_text',
                        mm_cfg.DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT)
-    add_only_if_missing('member_verbosity_threshold', 0)
+    add_only_if_missing('member_verbosity_threshold', 
+                       mm_cfg.DEFAULT_MEMBER_VERBOSITY_THRESHOLD)
     add_only_if_missing('member_verbosity_interval',
                        mm_cfg.DEFAULT_MEMBER_VERBOSITY_INTERVAL)
     add_only_if_missing('equivalent_domains', 

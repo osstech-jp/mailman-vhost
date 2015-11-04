@@ -1250,21 +1250,19 @@ def IsDMARCProhibited(mlist, email):
 recentMemberPostings = {};
 def IsVerboseMember(mlist, email):
 
-    threshold = 5 if mlist.member_verbosity_threshold is None else mlist.member_verbosity_threshold
-    if threshold == 0:
+    if mlist.member_verbosity_threshold == 0:
         return False
 
-    interval = 5 if mlist.member_verbosity_interval is None else mlist.member_verbosity_interval
     email = email.lower()
 
     t = time.time()
     recentMemberPostings.setdefault(email,[]).append(t)
 
     for t in recentMemberPostings[email]:
-        if t < time.time() - float(interval):
+        if t < time.time() - float(mlist.member_verbosity_interval):
             recentMemberPostings[email].remove(t)
 
-    return len(recentMemberPostings[email]) >= threshold
+    return len(recentMemberPostings[email]) >= mlist.member_verbosity_threshold
 
 
 def check_eq_domains(email, domains_list):

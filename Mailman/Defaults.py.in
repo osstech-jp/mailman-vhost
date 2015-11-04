@@ -1122,7 +1122,7 @@ DMARC_RESOLVER_LIFETIME = seconds(5)
 # DEFAULT_MEMBER_VERBOSITY_INTERVAL = number of seconds to track posts
 # DEFAULT_MEMBER_VERBOSITY_THRESHOLD = number of allowed posts per interval (0 to disable).
 DEFAULT_MEMBER_VERBOSITY_INTERVAL = 300
-DEFAULT_MEMBER_VERBOSITY_THRESHOLD = 5
+DEFAULT_MEMBER_VERBOSITY_THRESHOLD = 0
 
 # What domains should be considered equivalent when testing list membership
 # for posting/moderation.
