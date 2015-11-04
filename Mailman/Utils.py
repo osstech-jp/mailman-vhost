@@ -1260,14 +1260,9 @@ def IsVerboseMember(mlist, email):
     t = time.time()
     recentMemberPostings.setdefault(email,[]).append(t)
 
-    syslog('vette', 'DEBUG: %s: Appended %f to recentMemberPostings[%s] (%d).',
-           mlist.real_name, t, email, len(recentMemberPostings[email]))
-
     for t in recentMemberPostings[email]:
         if t < time.time() - float(interval):
             recentMemberPostings[email].remove(t)
-            syslog('vette', 'DEBUG: %s: Removed %f from recentMemberPostings[%s] (%d).',
-                   mlist.real_name, t, email, len(recentMemberPostings[email]))
 
     return len(recentMemberPostings[email]) >= threshold
 
