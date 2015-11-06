@@ -1,4 +1,4 @@
-# Copyright (C) 2000-2005 by the Free Software Foundation, Inc.
+# Copyright (C) 2000-2015 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -111,20 +111,12 @@ def prepare_message(mlist, msg, msgdata):
         del msg['subject']
         msg['subject'] = stripped_subject
     # Add the appropriate Newsgroups: header
-    ngheader = msg['newsgroups']
-    if ngheader is not None:
-        # See if the Newsgroups: header already contains our linked_newsgroup.
-        # If so, don't add it again.  If not, append our linked_newsgroup to
-        # the end of the header list
-        ngroups = [s.strip() for s in ngheader.split(',')]
-        if mlist.linked_newsgroup not in ngroups:
-            ngroups.append(mlist.linked_newsgroup)
-            # Subtitute our new header for the old one.
-            del msg['newsgroups']
-            msg['Newsgroups'] = COMMASPACE.join(ngroups)
-    else:
-        # Newsgroups: isn't in the message
-        msg['Newsgroups'] = mlist.linked_newsgroup
+    if msg['newsgroups'] is not None:
+        # This message is gated from our list to it's associated usnet group.
+        # If it has a Newsgroups: header mentioning other groups, it's not
+        # up to us to post it to those groups.
+        del msg['newsgroups']
+    msg['Newsgroups'] = mlist.linked_newsgroup
     # Note: We need to be sure two messages aren't ever sent to the same list
     # in the same process, since message ids need to be unique.  Further, if
     # messages are crossposted to two Usenet-gated mailing lists, they each

@@ -22,6 +22,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Posts gated to usenet will no longer have other than the target group
+      in the Newsgroups: header.  (LP: #1512866)
+
     - Invalid regexps in *_these_nonmembers, subscribe_auto_approval and
       ban_list are now logged.  (LP: #1507241)
 
