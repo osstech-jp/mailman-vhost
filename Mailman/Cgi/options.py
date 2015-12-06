@@ -297,6 +297,14 @@ def main():
     # options.  The first set of checks does not require the list to be
     # locked.
 
+    # However, if a form is submitted for a user who has been asynchronously
+    # unsubscribed, uncaught NotAMemberError exceptions can be thrown.
+
+    if not mlist.isMember(user):
+        loginpage(mlist, doc, user, language)
+        print doc.Format()
+        return
+
     if cgidata.has_key('logout'):
         print mlist.ZapCookie(mm_cfg.AuthUser, user)
         loginpage(mlist, doc, user, language)

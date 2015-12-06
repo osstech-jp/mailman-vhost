@@ -22,6 +22,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Submitting the user options form for a user who was asynchronously
+      unsubscribed would throw an uncaught NotAMemberError.  (LP: #1523273)
+
     - It was possible under some circumstances for a message to be shunted
       after a handler rejected or discarded it, and the handler would be
       skipped upon unshunting and the message accepted.  (LP: #1519062)
