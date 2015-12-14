@@ -425,6 +425,11 @@ def prefix_subject(mlist, msg, msgdata):
         except UnicodeError:
             pass
     # Get the header as a Header instance, with proper unicode conversion
+    # Because of rfc2047 encoding, spaces between encoded words can be
+    # insignificant, so we need to append a space to prefix but only when
+    # we have Re:.
+    if recolon:
+        prefix += ' '
     if old_style:
         h = uheader(mlist, recolon, 'Subject', continuation_ws=ws)
         h.append(prefix)

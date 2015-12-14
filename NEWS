@@ -21,6 +21,10 @@ Here is a history of user visible changes to Mailman.
       de Mello.
 
   Bug fixes and other patches
+
+    - Fixed an issue that sometimes left no white space following
+      subject_prefix.  (LP: #1525954)
+
     - Vette log entries for banned subscriptions now include the source of
       the request if available.  (LP: #1525733)
 
