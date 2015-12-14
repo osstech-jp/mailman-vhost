@@ -883,8 +883,12 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         # Is the subscribing address banned from this list?
         pattern = self.GetBannedPattern(email)
         if pattern:
-            syslog('vette', '%s banned subscription: %s (matched: %s)',
-                   realname, email, pattern)
+            if remote:
+                whence = ' from %s' % remote
+            else:
+                whence = ''
+            syslog('vette', '%s banned subscription: %s%s (matched: %s)',
+                   realname, email, whence, pattern)
             raise Errors.MembershipIsBanned, pattern
         # Sanity check the digest flag
         if digest and not self.digestable:

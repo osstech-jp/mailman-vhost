@@ -21,6 +21,8 @@ Here is a history of user visible changes to Mailman.
       de Mello.
 
   Bug fixes and other patches
+    - Vette log entries for banned subscriptions now include the source of
+      the request if available.  (LP: #1525733)
 
     - Submitting the user options form for a user who was asynchronously
       unsubscribed would throw an uncaught NotAMemberError.  (LP: #1523273)
