@@ -22,6 +22,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Treat a poster's address which matches an equivalent_domains address as
+      a list member for the regular_exclude_ignore check.  (LP: #1526550)
+
     - Fixed an issue that sometimes left no white space following
       subject_prefix.  (LP: #1525954)
 
