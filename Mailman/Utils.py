@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -1244,6 +1244,53 @@ def IsDMARCProhibited(mlist, email):
                     return True
 
     return False
+
+
+# Check a known list in order to auto-moderate verbose members
+# dictionary to remember recent posts.
+recentMemberPostings = {}
+# counter of times through
+clean_count = 0
+def IsVerboseMember(mlist, email):
+    """For lists that request it, we keep track of recent posts by address.
+A message from an address to a list, if the list requests it, is remembered
+for a specified time whether or not the address is a list member, and if the
+address is a member and the member is over the threshold for the list, that
+fact is returned."""
+
+    global clean_count
+
+    if mlist.member_verbosity_threshold == 0:
+        return False
+
+    email = email.lower()
+
+    now = time.time()
+    recentMemberPostings.setdefault(email,[]).append(now +
+                                       float(mlist.member_verbosity_interval)
+                                   )
+    x = range(len(recentMemberPostings[email]))
+    x.reverse()
+    for i in x:
+        if recentMemberPostings[email][i] < now:
+            del recentMemberPostings[email][i]
+
+    clean_count += 1
+    if clean_count >= mm_cfg.VERBOSE_CLEAN_LIMIT:
+        clean_count = 0
+        for addr in recentMemberPostings.keys():
+            x = range(len(recentMemberPostings[addr]))
+            x.reverse()
+            for i in x:
+                if recentMemberPostings[addr][i] < now:
+                    del recentMemberPostings[addr][i]
+            if not recentMemberPostings[addr]:
+                del recentMemberPostings[addr]
+    if not mlist.isMember(email):
+        return False
+    return (len(recentMemberPostings.get(email, [])) >=
+                mlist.member_verbosity_threshold
+           )
 
 
 def check_eq_domains(email, domains_list):

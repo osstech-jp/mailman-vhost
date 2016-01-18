@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -497,6 +497,10 @@ def NewVars(l):
     add_only_if_missing('dmarc_moderation_notice', '')
     add_only_if_missing('dmarc_wrapped_message_text',
                        mm_cfg.DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT)
+    add_only_if_missing('member_verbosity_threshold', 
+                       mm_cfg.DEFAULT_MEMBER_VERBOSITY_THRESHOLD)
+    add_only_if_missing('member_verbosity_interval',
+                       mm_cfg.DEFAULT_MEMBER_VERBOSITY_INTERVAL)
     add_only_if_missing('equivalent_domains', 
                        mm_cfg.DEFAULT_EQUIVALENT_DOMAINS)
     add_only_if_missing('new_member_options',

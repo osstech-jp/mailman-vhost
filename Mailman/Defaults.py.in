@@ -1118,6 +1118,25 @@ DMARC_RESOLVER_TIMEOUT = seconds(3)
 # The total time to spend trying to get an answer to the question.
 DMARC_RESOLVER_LIFETIME = seconds(5)
 
+# Should the list server auto-moderate members who post too frequently
+# This is intended to stop people who join a list and then use a bot to
+# send many spam messages in a short interval.  These are default settings
+# for new lists.  See the web admin Privacy options -> Sender filters page
+# and the Details for member_verbosity_threshold and member_verbosity_interval
+# links for more information.
+# DEFAULT_MEMBER_VERBOSITY_INTERVAL = number of seconds to track posts
+# DEFAULT_MEMBER_VERBOSITY_THRESHOLD = number of allowed posts per interval
+#                                     (0 to disable).
+DEFAULT_MEMBER_VERBOSITY_INTERVAL = 300
+DEFAULT_MEMBER_VERBOSITY_THRESHOLD = 0
+ 
+# This controls how often to clean old post time entries from the dictionary
+# used to implement the member verbosity feature. This is a compromise between
+# using resources for cleaning and allowing the dictionary to grow very large.
+# The setting is the number of passes through the code before the dictionary
+# is cleaned.
+VERBOSE_CLEAN_LIMIT = 1000
+
 # What domains should be considered equivalent when testing list membership
 # for posting/moderation.
 # If two poster addresses with the same local part but
