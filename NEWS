@@ -9,6 +9,9 @@ Here is a history of user visible changes to Mailman.
 
   New Features
 
+    - bin/list_members now has options to display all moderated or all
+      non-moderated members.
+
     - There is now a mm_cfg.py setting GLOBAL_BAN_LIST which is like the
       individual list's ban_list but applies globally to all subscribe
       requests.  See the description in Defaults.py for more details.
