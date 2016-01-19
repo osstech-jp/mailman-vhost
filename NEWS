@@ -14,7 +14,8 @@ Here is a history of user visible changes to Mailman.
       with spam.  See the details for the Privacy options ... -> Sender
       filters -> member_verbosity_threshold and member_verbosity_interval
       settings in the web admin UI and the documentation in Defaults.py for
-      the DEFAULT_MEMBER_VERBOSITY_* and VERBOSE_CLEAN_LIMIT for information.
+      the DEFAULT_MEMBER_VERBOSITY_* and VERBOSE_CLEAN_LIMIT settings for
+      information.
 
     - bin/list_members now has options to display all moderated or all
       non-moderated members.

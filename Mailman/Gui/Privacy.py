@@ -246,12 +246,12 @@ class Privacy(GUIBase):
                multiple lists or by a single post to an umbrella list.""")),
 
             ('member_verbosity_interval', mm_cfg.Number, 5, 0,
-             _("""Number of seconds to keep posts to this list to determine
+             _("""Number of seconds to remember posts to this list to determine
                member_verbosity_threshold for automatic moderation of a
                member."""),
 
              _("""If a member's total posts to all lists in this installation
-               with member_verbosity_threshold enabled exceeds this list's
+               with member_verbosity_threshold enabled reaches this list's
                member_verbosity_threshold, the member is automatically
                moderated on this list.
 
