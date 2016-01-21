@@ -36,6 +36,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed a bug that could create a garbled From: header with certain DMARC
+      mitigation actions.  (LP: #1536816)
+
     - Treat a poster's address which matches an equivalent_domains address as
       a list member for the regular_exclude_ignore check.  (LP: #1526550)
 

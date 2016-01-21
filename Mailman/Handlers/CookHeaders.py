@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -152,8 +152,11 @@ def process(mlist, msg, msgdata):
                 realname = email
         # Remove domain from realname if it looks like an email address
         realname = re.sub(r'@([^ .]+\.)+[^ .]+$', '---', realname)
+        # RFC 2047 encode realname if necessary.
+        realname = str(uheader(mlist, realname))
+        lrn = mlist.real_name
         change_header('From',
-                      formataddr(('%s via %s' % (realname, mlist.real_name),
+                      formataddr((_('%(realname)s via %(lrn)s'),
                                  mlist.GetListEmail())),
                       mlist, msg, msgdata)
     else:
