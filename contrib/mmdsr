@@ -193,6 +193,11 @@
 #               own categories instead of in other errors.
 #               Replaced s/\+\d+@/+<digits>@/ in vette log
 #               banned subscription messages due to flood of such.
+#
+# 0.0.25        Update by Mark Sapiro <mark@msapiro.net>
+#               Updated on: Sun Jan 31 07:13:47 PST 2016
+#               Report vette log DMARC lookups as their own
+#               category instead of in other errors.
 
 ###############################################################################
 # Set up locations of standard commands, directories, etc....
@@ -537,9 +542,14 @@ do
 	    $GREP -i 'banned subscription' $TMPLOG | $AWK '{ print $6 " " $9 }' | $SED -e 's/\+[0-9][0-9]*@/+<digits>@/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	    echo "" >> $TMP
+	    echo "DMARC lookups" >> $TMP
+	    echo "------------------------------" >> $TMP
+	    $GREP -i "DMARC lookup for" $TMPLOG | $AWK '{ print $10 " " $13 }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+
+	    echo "" >> $TMP
 	    echo "Other Errors:" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $EGREP -vi '(Post by non-member|suspicious header|message approved|Discarded posting|bulk message discarded|junk message discarded|Message has implicit destination|Posting to a moderated newsgroup|Post to moderated list|Message discarded, msgid|held subscription request|banned subscription)' $TMPLOG | $SED -e 's/^.* ([0-9]*) //' -e 's/, message-id=<[^> ]*>:/:/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP 
+	    $EGREP -vi '(Post by non-member|suspicious header|message approved|Discarded posting|bulk message discarded|junk message discarded|Message has implicit destination|Posting to a moderated newsgroup|Post to moderated list|Message discarded, msgid|held subscription request|banned subscription|dmarc lookup for)' $TMPLOG | $SED -e 's/^.* ([0-9]*) //' -e 's/, message-id=<[^> ]*>:/:/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP 
 
 	elif [ "${LOG}" = "smtp-failure" ] ; then
 

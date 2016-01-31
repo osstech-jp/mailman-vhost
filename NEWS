@@ -36,6 +36,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Modified contrib/mmdsr to report held and banned subscriptions and DMARC
+      lookups in their own categories.
+
     - Fixed a bug that could create a garbled From: header with certain DMARC
       mitigation actions.  (LP: #1536816)
 
