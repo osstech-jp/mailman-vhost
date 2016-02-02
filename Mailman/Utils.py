@@ -1243,6 +1243,15 @@ def IsDMARCProhibited(mlist, email):
                           mlist.real_name,  email, dmarc_domain, name, entry)
                     return True
 
+                if (mlist.dmarc_none_moderation_action and
+                    mlist.dmarc_quarantine_moderation_action and
+                    mlist.dmarc_moderation_action in (1, 2) and
+                    re.search(r'\bp=none\b', entry, re.IGNORECASE)):
+                    syslog('vette',
+                  '%s: DMARC lookup for %s (%s) found p=none in %s = %s',
+                          mlist.real_name,  email, dmarc_domain, name, entry)
+                    return True
+
     return False
 
 

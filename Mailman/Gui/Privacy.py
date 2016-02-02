@@ -329,6 +329,25 @@ class Privacy(GUIBase):
                the message will likely not bounce, but will be delivered to
                recipients' spam folders or other hard to find places.""")),
 
+            ('dmarc_none_moderation_action', mm_cfg.Radio,
+             (_('No'), _('Yes')), 0,
+             _("""Shall the above dmarc_moderation_action apply to messages
+               From: domains with DMARC p=none as well as p=quarantine and
+               p=reject"""),
+
+             _("""<ul><li><b>No</b> -- this applies dmarc_moderation_action to
+               only those posts From: a domain with DMARC p=reject and
+               possibly p=quarantine depending on the setting of
+               dmarc_quarantine_moderation_action.
+               <p><li><b>Yes</b> -- this applies dmarc_moderation_action to
+               posts From: a domain with DMARC p=none if
+               dmarc_moderation_action is Munge From or Wrap Message and
+               dmarc_quarantine_moderation_action is Yes.
+               <p>The intent of this setting is to eliminate failure reports
+               to the owner of a domain that publishes DMARC p=none by applying
+               the message transformations that would be applied if the
+               domain's DMARC policy were stronger.""")),
+
             ('dmarc_moderation_notice', mm_cfg.Text, (10, WIDTH), 1,
              _("""Text to include in any
              <a href="?VARHELP=privacy/sender/dmarc_moderation_action"

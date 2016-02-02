@@ -1,6 +1,6 @@
 -*- coding: iso-8859-1 -*-
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
@@ -8,6 +8,14 @@ Here is a history of user visible changes to Mailman.
 2.1.21 (xx-xxx-xxxx)
 
   New Features
+
+    - There is a new dmarc_none_moderation_action list setting and a
+      DEFAULT_DMARC_NONE_MODERATION_ACTION mm_cfg.py setting to optionally
+      apply Munge From or Wrap Message actions to posts From: domains that
+      publish DMARC p=none.  The intent is to eliminate failure reports to
+      the domain owner for messages that would be munged or wrapped if the
+      domain published a stronger DMARC policy.  See the descriptions in
+      Defaults.py, the web UI and the bug report for more.  (LP: #1539384)
 
     - Thanks to Jim Popovitch there is now a feature to automatically turn
       on moderation for a malicious list member who attempts to flood a list

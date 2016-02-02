@@ -1,6 +1,6 @@
 # -*- python -*-
 
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -1104,6 +1104,18 @@ DEFAULT_DMARC_QUARANTINE_MODERATION_ACTION = Yes
 # 3 = Reject
 # 4 = Discard
 DEFAULT_DMARC_MODERATION_ACTION = 0
+
+# Domain owners can publish DMARC p=none policy in order to request that
+# reports of DMARC failures be sent but special action not be taken on
+# messages From: their domain that fail DMARC.  This can result in over
+# estimation of the number of messages that would be quarantined or rejected
+# with a stronger DMARC policy if such a policy would result in message
+# modification because dmarc_moderation_action is 1 or 2.  Thus, there is
+# a list setting to apply dmarc_moderaction_action of 1 or 2 to messages
+# From: domains with DMARC p=none.  Setting this to Yes is only effective if 
+# dmarc_quarantine_moderaction_action is also Yes.  The following is the
+# default for this setting for new lists.
+DEFAULT_DMARC_NONE_MODERATION_ACTION = No
 
 # Default for text to be added to a separate text/plain part preceding the
 # message/rfc822 part containing the original message when
