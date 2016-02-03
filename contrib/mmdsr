@@ -544,7 +544,7 @@ do
 	    echo "" >> $TMP
 	    echo "DMARC lookups" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $GREP -i "DMARC lookup for" $TMPLOG | $AWK '{ print $10 " " $13 }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+	    $GREP -i "DMARC lookup for" $TMPLOG | $AWK '{ print $6 " " $10 " " $13 }' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	    echo "" >> $TMP
 	    echo "Other Errors:" >> $TMP
