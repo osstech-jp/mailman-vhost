@@ -386,6 +386,10 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                                        mm_cfg.DEFAULT_DEFAULT_MEMBER_MODERATION
         # Emergency moderation bit
         self.emergency = 0
+        self.member_verbosity_threshold = (
+            mm_cfg.DEFAULT_MEMBER_VERBOSITY_THRESHOLD)
+        self.member_verbosity_interval = (
+            mm_cfg.DEFAULT_MEMBER_VERBOSITY_INTERVAL)
         # This really ought to default to mm_cfg.HOLD, but that doesn't work
         # with the current GUI description model.  So, 0==Hold, 1==Reject,
         # 2==Discard
@@ -394,6 +398,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         self.dmarc_moderation_action = mm_cfg.DEFAULT_DMARC_MODERATION_ACTION
         self.dmarc_quarantine_moderation_action = (
             mm_cfg.DEFAULT_DMARC_QUARANTINE_MODERATION_ACTION)
+        self.dmarc_none_moderation_action = (
+            mm_cfg.DEFAULT_DMARC_NONE_MODERATION_ACTION)
         self.dmarc_moderation_notice = ''
         self.dmarc_wrapped_message_text = (
             mm_cfg.DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT)
