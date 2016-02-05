@@ -7,7 +7,7 @@ Ihr Mailinglisten-Passwort lautet:
 
 Sie benötigen dieses Passwort um die Liste zu konfigurieren. Darüberhinaus
 wird es zur Bearbeitung von administrativen Anfragen (z.B. Genehmigung von
-Emails an die Liste) benötigt.
+E-Mails an die Liste) benötigt.
 
 Sie können Ihre Mailingliste unter der folgenden Adresse administrieren:
 
