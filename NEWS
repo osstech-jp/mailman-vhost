@@ -34,6 +34,9 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - Merged a minor change from Bernhard Schmidt into the German newlist.txt
+      template.
+
     - Several Galician templates that were improperly encoded as iso-8859-1
       have been fixed.  (LP: #1532504)
 
