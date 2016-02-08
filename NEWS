@@ -47,6 +47,12 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - DEFAULT_PASS_MIME_TYPES has been changed to accept text/plain sub-parts
+      from message/rfc822 parts and multipart parts other than mixed and
+      alternative and also accept pgp signatures.  This only applies to newly
+      created lists and other than pgp signatures, still only accepts
+      text/plain.  (LP: #1517446)
+
     - Modified contrib/mmdsr to report held and banned subscriptions and DMARC
       lookups in their own categories.
 

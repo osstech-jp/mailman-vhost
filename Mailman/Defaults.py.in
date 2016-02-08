@@ -1305,9 +1305,11 @@ DEFAULT_FILTER_MIME_TYPES = []
 
 # DEFAULT_PASS_MIME_TYPES is a list of MIME types to be passed through.
 # Format is the same as DEFAULT_FILTER_MIME_TYPES
-DEFAULT_PASS_MIME_TYPES = ['multipart/mixed',
-                           'multipart/alternative',
-                           'text/plain']
+DEFAULT_PASS_MIME_TYPES = ['multipart',
+                           'message/rfc822',
+                           'application/pgp-signature',
+                           'text/plain',
+                          ]
 
 # DEFAULT_FILTER_FILENAME_EXTENSIONS is a list of filename extensions to be
 # removed. It is useful because many viruses fake their content-type as
