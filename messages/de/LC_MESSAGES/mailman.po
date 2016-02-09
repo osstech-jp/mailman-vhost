@@ -5,12 +5,12 @@
 # Holger Jahn <holja@t-online.de>, 2001-2002,.
 # Peer Heinlein <p.heinlein@heinlein-support.de.de>, 2003, 2004, 2005, 2006, 2008 und.
 # Ralf Hildebrandt <ralf.hildebrandt@charite.de>, 2013.
-# Mirian Margiani <mirian@margiani.ch>, 2015.
+# Mirian Margiani <mirian@margiani.ch>, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
 "POT-Creation-Date: Tue Feb  2 17:09:05 2016\n"
-"PO-Revision-Date: 2015-09-19 22:42+0200\n"
+"PO-Revision-Date: 2016-02-09 18:06+0100\n"
 "Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
 "Language-Team: German <mailman-i18n@python.org>\n"
 "Language: de\n"
@@ -7596,11 +7596,12 @@ msgstr ""
 
 # Mailman/Gui/Privacy.py:190
 #: Mailman/Gui/Privacy.py:233
-#, fuzzy
 msgid ""
 "Ceiling on acceptable number of member posts, per interval,\n"
 "               before automatic moderation."
-msgstr "Obergrenze der Empfängeranzahl einer Veröffentlichung."
+msgstr ""
+"Obergrenze der Veröffentlichungen eines Mitglieds, pro Intervall,\n"
+"               vor der automatischen Moderation."
 
 #: Mailman/Gui/Privacy.py:236
 msgid ""
@@ -7622,6 +7623,24 @@ msgid ""
 "               this can be triggered by a single post cross-posted to\n"
 "               multiple lists or by a single post to an umbrella list."
 msgstr ""
+"Wenn ein Mitglied diese Anzahl Male in einer angegebenen Zeitspanne\n"
+"               Nachrichten verfasst, wird es automatisch auf \"moderiert\" "
+"umgeschaltet.\n"
+"               Verwenden Sie 0 zum Abschalten. Unter\n"
+"               <a href=\"?VARHELP=privacy/sender/member_verbosity_interval\">"
+"member_verbosity_interval</a>\n"
+"               finden Sie weitere Informationen über die Zeitspanne.\n"
+"\n"
+"               <p>Diese Einstellung ist dazu gedacht, Mitglieder, die sich "
+"nur in\n"
+"               einer Liste eintragen, um viele Spam-Nachrichten in einer "
+"kurzen Zeit\n"
+"               zu verschicken, zu sperren.\n"
+"\n"
+"               <p>Seien Sie vorsichtig. Ist der Wert zu tief, kann es schon "
+"durch eine\n"
+"               einzelne Nachricht, die an mehrere Listen geschrieben wird, "
+"ausgelöst werden.\n"
 
 #: Mailman/Gui/Privacy.py:249
 msgid ""
@@ -7629,6 +7648,10 @@ msgid ""
 "               member_verbosity_threshold for automatic moderation of a\n"
 "               member."
 msgstr ""
+"Anzahl Sekunden, die Nachrichten an diese Liste vorgehalten werden sollen,\n"
+"               um member_verbosity_threshold für die automatische Moderation "
+"eines\n"
+"               Mitglieds zu ermitteln."
 
 #: Mailman/Gui/Privacy.py:253
 msgid ""
@@ -7642,6 +7665,13 @@ msgid ""
 "               member_verbosity_threshold enabled that arrived within that\n"
 "               list's member_verbosity_interval."
 msgstr ""
+"Wenn die Gesamtanzahl Nachrichten eines Mitglieds an alle Listen\n"
+"               dieser Installation mit der Option member_verbosity_threshold\n"
+"               den Wert von member_verbosity_threshold erreicht, so wird das\n"
+"               Mitglied auf dieser Liste auf \"moderiert\" umgestellt.\n"
+"\n"
+"               <p>Hierbei werden alle Nachrichten gezählt, die während\n"
+"               einer Zeitspanne member_verbosity_interval eingetroffen sind."
 
 #: Mailman/Gui/Privacy.py:265
 msgid ""
@@ -7803,18 +7833,16 @@ msgstr ""
 "               geliefert werden."
 
 #: Mailman/Gui/Privacy.py:334
-#, fuzzy
 msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=none as well as p=quarantine and\n"
 "               p=reject"
 msgstr ""
 "Soll die obige dmarc_moderation_action auf Nachrichten\n"
-"               von Domains mit DMARC p=quarantine und as "
-"p=reject                angewendet werden"
+"               von Domains mit DMARC p=none, p=quarantine und p=reject "
+"               angewendet werden?"
 
 #: Mailman/Gui/Privacy.py:338
-#, fuzzy
 msgid ""
 "<ul><li><b>No</b> -- this applies dmarc_moderation_action to\n"
 "               only those posts From: a domain with DMARC p=reject and\n"
@@ -7832,24 +7860,23 @@ msgid ""
 "               domain's DMARC policy were stronger."
 msgstr ""
 "<ul><li><b>Nein</b> -- Dies wendet dmarc_moderation_action nur auf\n"
-"               die Nachrichten von einer Domain mit DMARC p=reject an. Dies "
-"ist\n"
-"               passend, wenn Sie Schwierigkeiten mit der Zustellung haben,\n"
-"               aber dmarc_moderation_action auf möglichst wenige "
-"Nachrichten\n"
-"               anwenden wollen.\n"
+"               die Nachrichten von einer Domain mit DMARC p=reject und "
+"möglicherweise\n"
+"               auch p=quarantine an, abhängig von der Einstellung von\n"
+"               dmarc_quarantine_moderation_action.\n"
 "               <p><li><b>Ja</b> -- Dies wendet dmarc_moderation_action auf\n"
-"               Nachrichten von einer Domain mit DMARC p=reject oder "
-"p=quarantine an.\n"
-"               </ul><p>Ist eine Nachricht von einer Domain mit DMARC "
-"p=quarantine\n"
-"               und dmarc_moderation_action ist nicht angegeben (dies ist auf "
-"\"Nein\" gesetzt\"),\n"
-"               so wird die Nachricht voraussichtlich nicht abgewiesen "
-"werden, aber dem\n"
-"               Empfänger in den Spam-Ordner oder an einen anderen schwer zu "
-"findenden Ort\n"
-"               geliefert werden."
+"               Nachrichten von einer Domain mit DMARC p=none an, wenn\n"
+"               dmarc_moderation_action auf \"Absender verschleiern\" oder\n"
+"               \"Nachricht zusammenfassen\" sowie "
+"dmarc_quarantine_moderation_action\n"
+"               auf \"Ja\" gesetzt ist.\n"
+"               <p>Die Absicht dieser Einstellung ist, möglichst "
+"Fehlerberichte an den\n"
+"               Besitzer einer Domain auszuschliessen, die DMARC p=none "
+"setzt,\n"
+"               indem die Nachrichten verarbeitet werden, als wenn die "
+"DMARC-Regulierung\n"
+"               stärker wäre."
 
 #: Mailman/Gui/Privacy.py:352
 msgid ""
@@ -9103,9 +9130,8 @@ msgstr ""
 
 # Mailman/Cgi/admin.py:355
 #: Mailman/Handlers/CookHeaders.py:159
-#, fuzzy
 msgid "%(realname)s via %(lrn)s"
-msgstr "%(realname)s Administration (%(label)s)"
+msgstr "%(realname)s via %(lrn)s"
 
 #: Mailman/Handlers/Emergency.py:29
 msgid "Emergency hold on all list traffic is in effect"
@@ -11565,7 +11591,6 @@ msgid "matching mailing lists found:"
 msgstr "Passende Mailinglisten gefunden: "
 
 #: bin/list_members:19
-#, fuzzy
 msgid ""
 "List all the members of a mailing list.\n"
 "\n"
@@ -11653,10 +11678,10 @@ msgstr ""
 "    --nomail[=why] / -n [why]\n"
 "        Listet Mitglieder, deren Account deaktiviert ist. Optional können "
 "Sie\n"
-"        nach der Ursache der Deaktivierung filtern: \"byadmin\", \"byuser"
-"\", \n"
+"        nach der Ursache der Deaktivierung filtern: \"byadmin\", \"byuser\", "
+"\n"
 "        \"bybounce\", oder \"unknown\". Sie können auch \"enabled\"\n"
-"       angeben, das listet alle normalen Nutzer auf.\n"
+"        angeben, das listet alle normalen Nutzer auf.\n"
 "\n"
 "    --fullnames / -f\n"
 "        Gibt auch den Realnamen der User mit aus.\n"
@@ -11665,8 +11690,7 @@ msgstr ""
 "    -p\n"
 "        Behält die Schreibweise der Mitglieder-E-Mail-Adressen so bei, wie "
 "sie\n"
-"        eingetragen wurden. Ansonsten werden die Adressen in "
-"Kleinbuchstaben\n"
+"        eingetragen wurden. Ansonsten werden die Adressen in Kleinbuchstaben\n"
 "        umgewandelt.\n"
 "\n"
 "    --invalid / -i\n"
@@ -11687,8 +11711,7 @@ msgstr ""
 "Mitglieder ausgegeben werden (zuerst die normalen Mitglieder, gefolgt von\n"
 "den Mitgliedern der Nachrichtenübersichten (Digests)). Es wird allerdings\n"
 "keine gesonderte Statusanzeige mit ausgegeben. Somit ist nicht sichtbar, in\n"
-"welcher Katagorie ein Benutzer Mitglied ist\n"
-".\n"
+"welcher Katagorie ein Benutzer Mitglied ist.\n"
 
 #: bin/list_members:198
 msgid "Bad --nomail option: %(why)s"
@@ -11702,7 +11725,7 @@ msgstr "Falsche --digest Option: %(kind)s"
 #: bin/list_members:213 bin/list_members:217 bin/list_members:221
 #: bin/list_members:225
 msgid "Only one of -m, -M, -i or -u may be specified."
-msgstr ""
+msgstr "Nur eine der Optionen -m, -M, -i oder -u darf angegeben werden."
 
 #: bin/list_members:243
 msgid "Could not open file for writing:"
