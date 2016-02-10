@@ -44,8 +44,6 @@ Here is a history of user visible changes to Mailman.
     - Several Galician templates that were improperly encoded as iso-8859-1
       have been fixed.  (LP: #1532504)
 
-    - The German translation has been updated by Mirian Margiani.
-
     - The Brazilian Portugese translation has been updated by Emerson Ribeiro
       de Mello.
 
