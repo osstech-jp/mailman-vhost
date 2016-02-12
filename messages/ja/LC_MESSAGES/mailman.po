@@ -1,16 +1,16 @@
 # Mailman Japanese Translation
-# Copyright (C) 2002-2013
+# Copyright (C) 2002-2014
 # SATOH Fumiyasu <fumiyas@osstech.co.jp>, 2013
-# Tokio Kikuchi <tkikuchi@is.kochi-u.ac.jp>, 2002-2010
+# Tokio Kikuchi <tokio.kikuchi@gmail.com>, 2002-2011
 # Yukihiro Yasuda <yukihiro@poem.co.jp>, 2004
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mailman 2.1.18\n"
+"Project-Id-Version: Mailman 2.1.20rc2\n"
 "POT-Creation-Date: Tue Feb  2 17:09:05 2016\n"
-"PO-Revision-Date: 2014-12-12 09:00+09:00\n"
-"Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
-"Language-Team: Japanese <mailman-users-jp@python.jp>\n"
+"PO-Revision-Date: 2016-02-10 16:11+09:00\n"
+"Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
+"Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=EUC-JP\n"
@@ -205,8 +205,7 @@ msgstr "本人により"
 msgid "by the list administrator"
 msgstr "リスト管理者により"
 
-#: Mailman/Bouncer.py:48 Mailman/Bouncer.py:293
-#: Mailman/Commands/cmd_set.py:182
+#: Mailman/Bouncer.py:48 Mailman/Bouncer.py:293 Mailman/Commands/cmd_set.py:182
 msgid "for unknown reasons"
 msgstr "何らかの理由により"
 
@@ -245,11 +244,11 @@ msgstr "司会者"
 msgid "Administrator"
 msgstr "管理者"
 
-#: Mailman/Cgi/admin.py:80 Mailman/Cgi/admindb.py:116
-#: Mailman/Cgi/confirm.py:62 Mailman/Cgi/edithtml.py:71
-#: Mailman/Cgi/listinfo.py:55 Mailman/Cgi/options.py:95
-#: Mailman/Cgi/private.py:108 Mailman/Cgi/rmlist.py:64
-#: Mailman/Cgi/roster.py:59 Mailman/Cgi/subscribe.py:63
+#: Mailman/Cgi/admin.py:80 Mailman/Cgi/admindb.py:116 Mailman/Cgi/confirm.py:62
+#: Mailman/Cgi/edithtml.py:71 Mailman/Cgi/listinfo.py:55
+#: Mailman/Cgi/options.py:95 Mailman/Cgi/private.py:108
+#: Mailman/Cgi/rmlist.py:64 Mailman/Cgi/roster.py:59
+#: Mailman/Cgi/subscribe.py:63
 msgid "No such list <em>%(safelistname)s</em>"
 msgstr "<em>%(safelistname)s</em>というリストはありません"
 
@@ -618,9 +617,8 @@ msgid "Mass Removals"
 msgstr "まとめて退会処理"
 
 #: Mailman/Cgi/admin.py:882
-#, fuzzy
 msgid "Address Change"
-msgstr "アドレス/名前"
+msgstr "アドレス変更"
 
 #: Mailman/Cgi/admin.py:889
 msgid "Membership List"
@@ -859,8 +857,8 @@ msgstr "新入会員に歓迎メールを出しますか?"
 #: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
 #: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:316
 #: Mailman/Gui/Privacy.py:333 Mailman/Gui/Privacy.py:473
-#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52
-#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56
+#: Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "No"
 msgstr "いいえ"
 
@@ -870,26 +868,26 @@ msgstr "いいえ"
 #: Mailman/Cgi/create.py:388 Mailman/Cgi/create.py:426
 #: Mailman/Cgi/rmlist.py:230 Mailman/Gui/Archive.py:33
 #: Mailman/Gui/Autoresponse.py:54 Mailman/Gui/Autoresponse.py:62
-#: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120
-#: Mailman/Gui/Bounce.py:146 Mailman/Gui/Bounce.py:155
-#: Mailman/Gui/Bounce.py:164 Mailman/Gui/ContentFilter.py:74
-#: Mailman/Gui/ContentFilter.py:116 Mailman/Gui/ContentFilter.py:120
-#: Mailman/Gui/Digest.py:46 Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84
-#: Mailman/Gui/Digest.py:89 Mailman/Gui/General.py:223
-#: Mailman/Gui/General.py:229 Mailman/Gui/General.py:307
-#: Mailman/Gui/General.py:334 Mailman/Gui/General.py:361
-#: Mailman/Gui/General.py:372 Mailman/Gui/General.py:375
-#: Mailman/Gui/General.py:385 Mailman/Gui/General.py:390
-#: Mailman/Gui/General.py:396 Mailman/Gui/General.py:416
-#: Mailman/Gui/General.py:448 Mailman/Gui/General.py:471
-#: Mailman/Gui/General.py:488 Mailman/Gui/NonDigest.py:45
-#: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
-#: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
-#: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:316
-#: Mailman/Gui/Privacy.py:333 Mailman/Gui/Privacy.py:473
-#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52
-#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120 Mailman/Gui/Bounce.py:146
+#: Mailman/Gui/Bounce.py:155 Mailman/Gui/Bounce.py:164
+#: Mailman/Gui/ContentFilter.py:74 Mailman/Gui/ContentFilter.py:116
+#: Mailman/Gui/ContentFilter.py:120 Mailman/Gui/Digest.py:46
+#: Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84 Mailman/Gui/Digest.py:89
+#: Mailman/Gui/General.py:223 Mailman/Gui/General.py:229
+#: Mailman/Gui/General.py:307 Mailman/Gui/General.py:334
+#: Mailman/Gui/General.py:361 Mailman/Gui/General.py:372
+#: Mailman/Gui/General.py:375 Mailman/Gui/General.py:385
+#: Mailman/Gui/General.py:390 Mailman/Gui/General.py:396
+#: Mailman/Gui/General.py:416 Mailman/Gui/General.py:448
+#: Mailman/Gui/General.py:471 Mailman/Gui/General.py:488
+#: Mailman/Gui/NonDigest.py:45 Mailman/Gui/NonDigest.py:53
+#: Mailman/Gui/NonDigest.py:140 Mailman/Gui/NonDigest.py:162
+#: Mailman/Gui/Privacy.py:110 Mailman/Gui/Privacy.py:128
+#: Mailman/Gui/Privacy.py:161 Mailman/Gui/Privacy.py:214
+#: Mailman/Gui/Privacy.py:316 Mailman/Gui/Privacy.py:333
+#: Mailman/Gui/Privacy.py:473 Mailman/Gui/Privacy.py:492
+#: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
+#: Mailman/Gui/Usenet.py:105
 msgid "Yes"
 msgstr "はい"
 
@@ -929,19 +927,21 @@ msgid ""
 "    member's current and new addresses below. Use the check boxes to send\n"
 "    notice of the change to the old and/or new address(es)."
 msgstr ""
+"会員のアドレスを変更するには、現在のアドレスと新しいアドレスを\n"
+"以下に記入してください。変更の通知を新しいアドレスか古いアドレス、\n"
+"あるいは両方に送るにはチェックボックスにチェックを入れます"
 
 #: Mailman/Cgi/admin.py:1273
-#, fuzzy
 msgid "Member's current address"
-msgstr "現在の保存書庫"
+msgstr "会員の現在のアドレス"
 
 #: Mailman/Cgi/admin.py:1277 Mailman/Cgi/admin.py:1287
 msgid "Send notice"
-msgstr ""
+msgstr "通知を送る"
 
 #: Mailman/Cgi/admin.py:1283
 msgid "Address to change to"
-msgstr ""
+msgstr "変更後のアドレス"
 
 #: Mailman/Cgi/admin.py:1299
 msgid "Change list ownership passwords"
@@ -1005,6 +1005,12 @@ msgid ""
 "addition, the password below, if set, can be used for that purpose and\n"
 "no other."
 msgstr ""
+"上の２つのパスワードに加えて, このリストに投稿するためのパスワードを\n"
+"設定することができます. 上のどちらのパスワードも投稿メールのヘッダ, \n"
+"又は本文中の最初の行である擬似ヘッダに, ヘッダ名を Approved: として\n"
+"パスワードを書いておくことで, 保留されずにそのまま配送されるように\n"
+"できます. これに加えて下のパスワードも同じように使うことができますが、\n"
+"こちらは他の用途 (admin や admindb へのログイン) に使うことはできません."
 
 #: Mailman/Cgi/admin.py:1345
 msgid "Enter new poster password:"
@@ -1077,62 +1083,56 @@ msgid "Cannot unsubscribe non-members:"
 msgstr "非会員は退会できません:"
 
 #: Mailman/Cgi/admin.py:1527
-#, fuzzy
 msgid "You must provide both current and new addresses."
-msgstr "まず, 無効なアドレスを修正してください."
+msgstr "現在のアドレスと変更後のアドレスの両方が必要です."
 
 #: Mailman/Cgi/admin.py:1529
 msgid "Current and new addresses must be different."
-msgstr ""
+msgstr "現在のアドレスと変更後のアドレスは異なっていなければなりません."
 
 #: Mailman/Cgi/admin.py:1533
-#, fuzzy
 msgid "%(schange_to)s is already a list member."
-msgstr " は既に会員です"
+msgstr "%(schange_t)s は既に会員です"
 
 #: Mailman/Cgi/admin.py:1538
-#, fuzzy
 msgid "%(schange_to)s is not a valid email address."
-msgstr "有効なメールアドレスを入力してください."
+msgstr "%(schange_to)s は有効なメールアドレスではありません."
 
 #: Mailman/Cgi/admin.py:1546
 msgid "%(schange_from)s is not a member"
-msgstr ""
+msgstr "%(schange_from)s は会員ではありません"
 
 #: Mailman/Cgi/admin.py:1548
-#, fuzzy
 msgid "%(schange_to)s is already a member"
-msgstr " は既に会員です"
+msgstr "%(schange_t)s は既に会員です"
 
 #: Mailman/Cgi/admin.py:1551
-#, fuzzy
 msgid "%(schange_to)s matches banned pattern %(spat)s"
-msgstr "%(addr)s は入会禁止です (%(patt)s に一致)"
+msgstr "%(schange_to)s は入会禁止パターン %(spat)s にマッチします"
 
 #: Mailman/Cgi/admin.py:1553
 msgid "Address %(schange_from)s changed to %(schange_to)s"
-msgstr ""
+msgstr "アドレス %(schange_from)s を %(schange_to)s へ変更しました"
 
 #: Mailman/Cgi/admin.py:1560
 msgid ""
 "The member address %(change_from)s on the\n"
 "%(list_name)s list has been changed to %(change_to)s.\n"
 msgstr ""
+"メーリングリスト %(list_name)s の 会員のアドレス %(change_from)s を\n"
+"%(change_to)s へと変更しました"
 
 #: Mailman/Cgi/admin.py:1563
-#, fuzzy
 msgid "%(list_name)s address change notice."
-msgstr "%(realname)s アドレス変更通知"
+msgstr "%(list_name)s アドレス変更通知"
 
 #: Mailman/Cgi/admin.py:1574
-#, fuzzy
 msgid "Notification sent to %(schange_from)s."
-msgstr "通知"
+msgstr "通知を %(schange_from)s へ送りました."
 
 #: Mailman/Cgi/admin.py:1584
-#, fuzzy
 msgid "Notification sent to %(schange_to)s."
-msgstr "通知"
+msgstr "通知を %(schange_to)s. へ送りました."
 
 #: Mailman/Cgi/admin.py:1590
 msgid "Bad moderation flag value"
@@ -2351,7 +2351,7 @@ msgstr "CGI スクリプトエラー"
 
 #: Mailman/Cgi/options.py:65
 msgid "Invalid request method: %(method)s"
-msgstr ""
+msgstr "HTTPリクエストのメソッドが不正です: %(method)s"
 
 #: Mailman/Cgi/options.py:78
 msgid "Invalid options to CGI script."
@@ -2905,11 +2905,11 @@ msgstr "もう少し時間をかけてフォームを入力してから送信してください。"
 
 #: Mailman/Cgi/subscribe.py:154
 msgid "The hidden token didn't match.  Did your IP change?"
-msgstr ""
+msgstr "隠しトークンが一致しません。IPアドレスが変わっていませんか?"
 
 #: Mailman/Cgi/subscribe.py:157
 msgid "There was no hidden token in your submission or it was corrupted."
-msgstr ""
+msgstr "フォーム入力に隠しトークンがないかあるいは壊れています。"
 
 #: Mailman/Cgi/subscribe.py:158
 msgid "You must GET the form before submitting it."
@@ -5057,8 +5057,9 @@ msgid ""
 "             address to mitigate issues stemming from the original From:\n"
 "             domain's DMARC or similar policies."
 msgstr ""
-"From: ヘッダーのメールアドレスをリストの投稿アドレスに置き換え、元の From: ド"
-"メインの DMARC あるいは類似のポリシーにより生じる問題を緩和する。"
+"From: ヘッダーのメールアドレスをリストの投稿アドレスに置き換え、\n"
+"             元の From: ドメインの DMARC あるいは類似のポリシーにより\n"
+"生じる問題を緩和する。"
 
 #: Mailman/Gui/General.py:162
 msgid ""
@@ -5139,6 +5140,70 @@ msgid ""
 "             action other than Accept, that action rather than this is\n"
 "             applied"
 msgstr ""
+"メールを書いた人のアドレス(つまり、From: ヘッダー・フィールド)の\n"
+"             ドメインの使用についての正当性を確認するためにいくつもの\n"
+"             プロトコルが今日では広く使われています. そうしたプロトコルの\n"
+"             中にはフッタ機能のようにメーリングリストによくあるような\n"
+"             機能と相容れないこともあり、リスト参加のためのサービスが\n"
+"             From: フィールドのためだけの理由で配送エラーを引き起こしたり\n"
+"             します. <b>その結果会員はメールを全く問題なく受け取ることが\n"
+"             できるにも関わらず、退会させられることになります.\n"
+"             することになります\n"
+"             <p>\n"
+"             以下の処理をここで選択した場合、それはリストの全ての\n"
+"             メッセージに適用されます. From: ヘッダのドメインがそうした\n"
+"             プロトコルを使用するようなドメインであるメッセージに対して\n"
+"             のみこれらの処理を適用するには、\n"
+"             「プライバシー・オプション... -&gt; 送信者フィルタ」の<a\n"
+"             href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
+"             dmarc_moderation_action</a> を参照してください.\n"
+"             <p>設定:<p>\n"
+"             <dl>\n"
+"             <dt>いいえ</dt>\n"
+"             <dd>何も特別なことはしません. これは匿名リストに向いています.\n"
+"             投稿権限を持つ投稿者の From: のアドレスのドメインが\n"
+"             DMARC やそれに類似のポリシーをとっていないような場合には、\n"
+"             アナウンス専用のリストにも向いています. また、このリストに\n"
+"             対して dmarc_moderation_action を「承認」以外に設定した\n"
+"             場合にも向いています.</dd>\n"
+"             <dt>From を書き換え</dt>\n"
+"             <dd>この機能は From: ヘッダの投稿者のアドレスをリストの\n"
+"             投稿用アドレスに置き換え、投稿者のアドレスを元の Reply-To: \n"
+"             ヘッダのアドレスに追加します. </dd>\n"
+"             <dt>メール内に添付</dt>\n"
+"             From: ヘッダーにリストの投稿用アドレスにし、投稿の From: \n"
+"             アドレスを元の Reply-To: ヘッダーに加えた外側のメッセージに\n"
+"             投稿されたメッセージを Content-Type: message/rfc822 として\n"
+"             投稿メッセージを添付します。 これは実質的には単一のメッセージ\n"
+"             からなるMIME形式のダイジェスト(まとめ読み)です.\n"
+"             </dl>\n"
+"             <p>anonymous_list に対する書き換えはこれらのいずれの処理の\n"
+"             前に適用されます. 匿名リストに対しては「いいえ」以外の処理を\n"
+"             適用するのは無益ですし、もしそれをしたら、その結果に\n"
+"             驚くことになるでしょう."
+"             <p>以下のReply-To: ヘッダの書き換えの処理は次のような\n"
+"             処理と相互に作用します:\n"
+"             <p> first_strip_reply_to = Yes (はい)の場合は届いた\n"
+"             メッセージの Reply-To: のアドレスをすべて取り除きますが、\n"
+"             reply_goes_to_list の設定が3つのうちのどれでも、\n"
+"             投稿者のアドレスのみ、投稿者のアドレスとリストの\n"
+"             投稿用アドレス、あるいは投稿者のアドレスと明示的な\n"
+"             reply_to_address という形でいずれも投稿者のアドレスを\n"
+"             配送するメッセージの Reply-To: に加えます.\n"
+"             first_strip_reply_to = No (いいえ)の場合で Reply-To: \n"
+"             ヘッダに投稿者の From: ヘッダのアドレスがすでに\n"
+"             含まれていない場合には Reply-To: ヘッダにあった全ての\n"
+"             アドレスに加えて投稿者のアドレスをそこに加えます.\n"
+"             <p>これらの処理は、ここで選択したにせよ<a\n"
+"             href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
+"             dmarc_moderation_action</a>で選択にしたにせよ\n"
+"             ダイジェスト(まとめ読み)や保存書庫、メール &lt;-&gt; \n"
+"             ニュース相互配送のメッセージには適用されません.\n"
+"             <p><a\n"
+"             href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
+"             dmarc_moderation_action</a>が「承認」以外が適用される\n"
+"             投稿メッセージについては、この処理ではなくそちらが\n"
+"             適用されます."
 
 #: Mailman/Gui/General.py:224
 msgid ""
@@ -5901,9 +5966,8 @@ msgid "Mass&nbsp;Removal"
 msgstr "まとめて退会処理"
 
 #: Mailman/Gui/Membership.py:33
-#, fuzzy
 msgid "Address&nbsp;Change"
-msgstr "アドレス/名前"
+msgstr "アドレス変更"
 
 #: Mailman/Gui/NonDigest.py:35
 msgid "Non-digest&nbsp;options"
@@ -6530,11 +6594,11 @@ msgstr ""
 "設定し直すことができます."
 
 #: Mailman/Gui/Privacy.py:233
-#, fuzzy
 msgid ""
 "Ceiling on acceptable number of member posts, per interval,\n"
 "               before automatic moderation."
-msgstr "投稿を認めるメールに含まれる受信者数の上限."
+msgstr ""
+"自動制限(モデレーション)をかけるまでの一定時間内の一会員の投稿数の上限."
 
 #: Mailman/Gui/Privacy.py:236
 msgid ""
@@ -6556,6 +6620,21 @@ msgid ""
 "               this can be triggered by a single post cross-posted to\n"
 "               multiple lists or by a single post to an umbrella list."
 msgstr ""
+"一定時間内に一会員の投稿数がこの数に達すると、その会員を自動的に制限\n"
+"               (モデレート)します. この機能を無効にするには0を指定します.\n"
+"               この「一定時間」については\n"
+"               <a href=\"?VARHELP=privacy/sender/member_verbosity_interval"
+"\"\n"
+"               >member_verbosity_interval</a>を参照してください.\n"
+"\n"
+"               <p>この機能は単一または複数のリストに登録してボットを\n"
+"               利用して短時間のうちに多数の spam を送りつけるような人を\n"
+"               抑止するためのものです.\n"
+"\n"
+"               <p>この機能を設定するときには十分に注意がしてください.\n"
+"               もしこの値を小さく設定しすぎると、一通の投稿を複数のリストに\n"
+"               またがって行ったり、一通の親リストへの投稿でこの制限に\n"
+"               引っかかります."
 
 #: Mailman/Gui/Privacy.py:249
 msgid ""
@@ -6563,6 +6642,8 @@ msgid ""
 "               member_verbosity_threshold for automatic moderation of a\n"
 "               member."
 msgstr ""
+"会員の自動制限(モデレーション)のための member_verbosity_threshold にて\n"
+"               このリストに会員からの投稿のあったことを記録しておく秒数."
 
 #: Mailman/Gui/Privacy.py:253
 msgid ""
@@ -6576,6 +6657,15 @@ msgid ""
 "               member_verbosity_threshold enabled that arrived within that\n"
 "               list's member_verbosity_interval."
 msgstr ""
+"この Mailman システム上で member_verbosity_threshold が有効になっている\n"
+"               リストすべてでの一会員による投稿数の合計が\n"
+"               このリストの member_verbosity_threshold の値に達すると、\n"
+"               その会員は自動的に制限(モデレーション)されます.\n"
+"\n"
+"               <p>このリストの member_verbosity_threshold と比較される\n"
+"               投稿数は、 member_verbosity_threshold が有効になっている\n"
+"               それぞれのリスト毎の member_verbosity_interval 以内に\n"
+"               届いた投稿すべてです."
 
 #: Mailman/Gui/Privacy.py:265
 msgid ""
@@ -6656,26 +6746,27 @@ msgid ""
 "             other than Accept."
 msgstr ""
 "<ul><li><b>From を書き換え</b> -- <a\n"
-"             href=\"?VARHELP=general/from_is_list\">from_is_list の「From を"
-"書き換え」</a>\n"
+"             href=\"?VARHELP=general/from_is_list\">from_is_list の\n"
+"            「From を書き換え」</a>\n"
 "             をメールに適用します。\n"
 "\n"
-"             <p><li><b>メール内に添付</b> --             <a href=\"?"
-"VARHELP=general/from_is_list\">from_is_list の             「メール内に添付」"
-"</a> をメールに適用します。\n"
+"             <p><li><b>メール内に添付</b> -- <a\n"
+"             href=\"?VARHELP=general/from_is_list\">from_is_list の\n"
+"             メール内に添付</a>\n"
+"             をメールに適用します。\n"
 "\n"
-"             <p><li><b>拒否</b> -- 自動的にメールを拒否して、             投"
-"稿者にメールで知らせます。拒否通知の文は             <a href=\"?"
-"VARHELP=privacy/sender/dmarc_moderation_notice\"             >設定することが"
-"できます</a>。\n"
+"             <p><li><b>拒否</b> -- 自動的にメールを拒否して、\n"
+"             投稿者にメールで知らせます。拒否通知の文は<a\n"
+"             href=\"?VARHELP=privacy/sender/dmarc_moderation_notice\"\n"
+"             >で設定することができます</a>。\n"
 "\n"
 "             <p><li><b>破棄</b> -- 投稿者に通知せずにメールを破棄します。\n"
 "             </ul>\n"
 "\n"
-"             <p>この設定を「許可」以外に設定すると、             メールの "
-"From: のドメインが DMARC ポリシーを持つ場合、             <a href=\"?"
-"VARHELP=general/from_is_list\">from_is_list</a>              の設定よりも優先"
-"して実行されます。\n"
+"             <p>この設定を「許可」以外に設定すると、\n"
+"             メールの From: のドメインが DMARC ポリシーを持つ場合、\n"
+"             <a href=\"?VARHELP=general/from_is_list\">from_is_list</a>\n"
+"             の設定よりも優先して実行されます。\n"
 
 #: Mailman/Gui/Privacy.py:317
 msgid ""
@@ -6701,31 +6792,31 @@ msgid ""
 "               the message will likely not bounce, but will be delivered to\n"
 "               recipients' spam folders or other hard to find places."
 msgstr ""
-"<ul><li><b>いいえ</b> -- 投稿の From: ドメインの DMARC が p=reject のときだ"
-"け               dmarc_moderation_action を適用します。\n"
-"               エラーメールに関心があるが、できるだけ少数のメールに対してだ"
-"け               dmarc_moderation_action を適用したいときに適していま"
-"す。               <p><li><b>はい</b> -- 投稿の From: ドメインの DMARC "
-"が               p=reject または p=quarantine ときに "
-"dmarc_moderation_action               を適用します。               </"
-"ul><p>               この設定が「いいえ」のとき、               メールの "
-"From: ドメインの DMARC が p=quarantine で               "
-"dmarc_moderation_action は適用されず、メールはエラーとなりませ"
-"ん。               しかし、会員のメールサーバーで spam 扱いされ、\t\t隔離用の"
-"フォルダーなどに配送される可能性があります。"
+"<ul><li><b>いいえ</b> -- 投稿の From: ドメインの DMARC が p=reject の\n"
+"               ときだけ dmarc_moderation_action を適用します。\n"
+"               エラーメールに関心があるが、できるだけ少数のメールに対して\n"
+"               だけ dmarc_moderation_action を適用したいときに適し"
+"て               います。\n"
+"               <p><li><b>はい</b> -- 投稿の From: ドメインの DMARC が\n"
+"               p=reject または p=quarantine ときに dmarc_moderation_action\n"
+"               を適用します。\n"
+"               </ul><p>この設定が「いいえ」のとき、メールの\n"
+"               From: ドメインの DMARC が p=quarantine で\n"
+"               dmarc_moderation_action は適用されず、メールはエラーと\n"
+"               なりません。しかし、会員のメールサーバーで spam 扱いされ、\n"
+"               隔離用のフォルダーなどに配送される可能性があります。"
 
 #: Mailman/Gui/Privacy.py:334
-#, fuzzy
 msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=none as well as p=quarantine and\n"
 "               p=reject"
 msgstr ""
-"From: ドメインの DMARC が p=quarantine のときも p=reject のときと同様に"
-"dmarc_moderation_action をメールに適用する"
+"From: ドメインの DMARC が p=none のときも p=quarantine のときと\n"
+"               p=reject のときと同様 dmarc_moderation_action を\n"
+"               メールに適用する"
 
 #: Mailman/Gui/Privacy.py:338
-#, fuzzy
 msgid ""
 "<ul><li><b>No</b> -- this applies dmarc_moderation_action to\n"
 "               only those posts From: a domain with DMARC p=reject and\n"
@@ -6742,18 +6833,19 @@ msgid ""
 "               the message transformations that would be applied if the\n"
 "               domain's DMARC policy were stronger."
 msgstr ""
-"<ul><li><b>いいえ</b> -- 投稿の From: ドメインの DMARC が p=reject のときだ"
-"け               dmarc_moderation_action を適用します。\n"
-"               エラーメールに関心があるが、できるだけ少数のメールに対してだ"
-"け               dmarc_moderation_action を適用したいときに適していま"
-"す。               <p><li><b>はい</b> -- 投稿の From: ドメインの DMARC "
-"が               p=reject または p=quarantine ときに "
-"dmarc_moderation_action               を適用します。               </"
-"ul><p>               この設定が「いいえ」のとき、               メールの "
-"From: ドメインの DMARC が p=quarantine で               "
-"dmarc_moderation_action は適用されず、メールはエラーとなりませ"
-"ん。               しかし、会員のメールサーバーで spam 扱いされ、\t\t隔離用の"
-"フォルダーなどに配送される可能性があります。"
+"<ul><li><b>いいえ</b> -- 投稿の From: ドメインの DMARC が p=reject または\n"
+"               dmarc_quarantine_moderation_action の設定に応じて\n"
+"               p=quarantine であるような投稿にだけ\n"
+"               dmarc_moderation_action を適用します。\n"
+"               <p><li><b>はい</b> -- dmarc_moderation_action が\n"
+"               「From を書き換え」または「メール内に添付」の場合で、\n"
+"               dmarc_quarantine_moderation_action が「はい」の場合に\n"
+"               投稿の From: ドメインの DMARC が p=none の投稿に対して\n"
+"               dmarc_moderation_action を適用します。\n"
+"               <p>この設定の意図は DMARC を p=none と表明している\n"
+"               ドメインついて、DMARCのポリシーがより強い場合かった場合に\n"
+"               適用される投稿メッセージの書き換えを行うことで配送失敗の\n"
+"               レポートをドメイン所有者へ送るのを避けることです。"
 
 #: Mailman/Gui/Privacy.py:352
 msgid ""
@@ -7832,9 +7924,8 @@ msgstr ""
 "認証に失敗しました. 添付のメールは, Mailmanが受け取った元のメールです. \n"
 
 #: Mailman/Handlers/CookHeaders.py:159
-#, fuzzy
 msgid "%(realname)s via %(lrn)s"
-msgstr "%(realname)s 管理 (%(label)s)"
+msgstr "%(realname)s (%(lrn)s 経由)"
 
 #: Mailman/Handlers/Emergency.py:29
 msgid "Emergency hold on all list traffic is in effect"
@@ -8649,9 +8740,9 @@ msgstr "-a/--admin-notify への引数が違います: %(arg)s"
 msgid "Cannot read both digest and normal members from standard input."
 msgstr "まとめ読みと普通の両方の会員を標準入力から読み込むことはできません."
 
-#: bin/add_members:220 bin/config_list:109 bin/export.py:271
-#: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:251
-#: bin/sync_members:222 cron/bumpdigests:86
+#: bin/add_members:220 bin/config_list:109 bin/export.py:271 bin/find_member:97
+#: bin/inject:91 bin/list_admins:90 bin/list_members:251 bin/sync_members:222
+#: cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "%(listname)s というリストはありません"
 
@@ -10094,7 +10185,6 @@ msgid "matching mailing lists found:"
 msgstr "適合するメーリングリストがありました:"
 
 #: bin/list_members:19
-#, fuzzy
 msgid ""
 "List all the members of a mailing list.\n"
 "\n"
@@ -10191,6 +10281,13 @@ msgstr ""
 "        メールアドレスを表示するときに, 会員が入力したときの大文字/小文字\n"
 "        をそのまま使う. 指定しないと小文字だけに変換される.\n"
 "\n"
+"    --moderated / -m\n"
+"        制限(モデレート)された会員のみを表示する. -r, -d, -n は無視する.\n"
+"\n"
+"    --non-moderated / -M\n"
+"        制限(モデレート)されていない会員のみを表示する. \n"
+"        -r, -d, -n は無視する.\n"
+"\n"
 "    --invalid / -i\n"
 "        無効なメールアドレスで登録されている会員だけを出力する.\n"
 "        -r, -d, -n は無視する.\n"
@@ -10204,7 +10301,7 @@ msgstr ""
 "\n"
 "    リスト名は使用するメーリングリストの名前.\n"
 "\n"
-"-r も -d も指定しないと, 最初に通常会員が, 次にまとめ読み会員が表示\n"
+"注意: -r も -d も指定しないと, 最初に通常会員が, 次にまとめ読み会員が表示\n"
 "されるが, 配送の状態については表示されない.\n"
 
 #: bin/list_members:198
@@ -10218,7 +10315,7 @@ msgstr "--digest オプションが違います: %(kind)s"
 #: bin/list_members:213 bin/list_members:217 bin/list_members:221
 #: bin/list_members:225
 msgid "Only one of -m, -M, -i or -u may be specified."
-msgstr ""
+msgstr "-m, -M, -i, または -u のうちの1つだけが指定できます."
 
 #: bin/list_members:243
 msgid "Could not open file for writing:"
@@ -12578,3 +12675,4 @@ msgstr ""
 "    --listname=リスト名\n"
 "        リスト名をあげたリストについてだけ, まとめ読みを送信する.\n"
 "        これが無い場合, すべてのリストの処理をする.\n"
+
