@@ -7115,10 +7115,10 @@ msgstr ""
 
 #: Mailman/Gui/NonDigest.py:163
 msgid ""
-"Ignore regular_exlude_lists of which the poster is not a\n"
+"Ignore regular_exclude_lists of which the poster is not a\n"
 "             member."
 msgstr ""
-"Ignorieren von regular_exlude_lists von welcher der Beitragsender\n"
+"Ignorieren von regular_exclude_lists von welcher der Beitragsender\n"
 "             kein Mitglied ist."
 
 #: Mailman/Gui/NonDigest.py:165
