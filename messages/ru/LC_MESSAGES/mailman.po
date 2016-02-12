@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1\n"
-"POT-Creation-Date: Tue Feb  2 17:09:05 2016\n"
+"POT-Creation-Date: Fri Feb 12 10:57:02 2016\n"
 "PO-Revision-Date: 2016-02-08 16:09+0300\n"
 "Last-Translator: Danil Smirnov <danil@smirnov.la>\n"
 "Language-Team: Russian <danil@smirnov.la>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.7.1\n"
 
 #: Mailman/Archiver/HyperArch.py:123
@@ -3937,159 +3937,159 @@ msgstr "Подписчики, получающие подписку обычны
 msgid "Digest members:"
 msgstr "Подписчики, получающие подписку в виде дайджеста:"
 
-#: Mailman/Defaults.py:1673
+#: Mailman/Defaults.py:1675
 msgid "Arabic"
 msgstr "Арабский"
 
-#: Mailman/Defaults.py:1674
+#: Mailman/Defaults.py:1676
 msgid "Asturian"
 msgstr "Астурийский"
 
-#: Mailman/Defaults.py:1675
+#: Mailman/Defaults.py:1677
 msgid "Catalan"
 msgstr "Каталанский"
 
-#: Mailman/Defaults.py:1676
+#: Mailman/Defaults.py:1678
 msgid "Czech"
 msgstr "Чешский"
 
-#: Mailman/Defaults.py:1677
+#: Mailman/Defaults.py:1679
 msgid "Danish"
 msgstr "Датский"
 
-#: Mailman/Defaults.py:1678
+#: Mailman/Defaults.py:1680
 msgid "German"
 msgstr "Немецкий"
 
-#: Mailman/Defaults.py:1679
+#: Mailman/Defaults.py:1681
 msgid "English (USA)"
 msgstr "Английский (США)"
 
-#: Mailman/Defaults.py:1680
+#: Mailman/Defaults.py:1682
 msgid "Spanish (Spain)"
 msgstr "Испанский (Испания)"
 
-#: Mailman/Defaults.py:1681
+#: Mailman/Defaults.py:1683
 msgid "Estonian"
 msgstr "Эстонский"
 
-#: Mailman/Defaults.py:1682
+#: Mailman/Defaults.py:1684
 msgid "Euskara"
 msgstr "Баскский"
 
-#: Mailman/Defaults.py:1683
+#: Mailman/Defaults.py:1685
 msgid "Persian"
 msgstr "Фарси"
 
-#: Mailman/Defaults.py:1684
+#: Mailman/Defaults.py:1686
 msgid "Finnish"
 msgstr "Финский"
 
-#: Mailman/Defaults.py:1685
+#: Mailman/Defaults.py:1687
 msgid "French"
 msgstr "Французский"
 
-#: Mailman/Defaults.py:1686
+#: Mailman/Defaults.py:1688
 msgid "Galician"
 msgstr "Галисийский"
 
-#: Mailman/Defaults.py:1687
+#: Mailman/Defaults.py:1689
 msgid "Greek"
 msgstr "Греческий"
 
-#: Mailman/Defaults.py:1688
+#: Mailman/Defaults.py:1690
 msgid "Hebrew"
 msgstr "Иврит"
 
-#: Mailman/Defaults.py:1689
+#: Mailman/Defaults.py:1691
 msgid "Croatian"
 msgstr "Хорватский"
 
-#: Mailman/Defaults.py:1690
+#: Mailman/Defaults.py:1692
 msgid "Hungarian"
 msgstr "Венгерский"
 
-#: Mailman/Defaults.py:1691
+#: Mailman/Defaults.py:1693
 msgid "Interlingua"
 msgstr "Интерлингва"
 
-#: Mailman/Defaults.py:1692
+#: Mailman/Defaults.py:1694
 msgid "Italian"
 msgstr "Итальянский"
 
-#: Mailman/Defaults.py:1693
+#: Mailman/Defaults.py:1695
 msgid "Japanese"
 msgstr "Японский"
 
-#: Mailman/Defaults.py:1694
+#: Mailman/Defaults.py:1696
 msgid "Korean"
 msgstr "Корейский"
 
-#: Mailman/Defaults.py:1695
+#: Mailman/Defaults.py:1697
 msgid "Lithuanian"
 msgstr "Литовский"
 
-#: Mailman/Defaults.py:1696
+#: Mailman/Defaults.py:1698
 msgid "Dutch"
 msgstr "Голландский"
 
-#: Mailman/Defaults.py:1697
+#: Mailman/Defaults.py:1699
 msgid "Norwegian"
 msgstr "Норвежский"
 
-#: Mailman/Defaults.py:1698
+#: Mailman/Defaults.py:1700
 msgid "Polish"
 msgstr "Польский"
 
-#: Mailman/Defaults.py:1699
+#: Mailman/Defaults.py:1701
 msgid "Portuguese"
 msgstr "Португальский"
 
-#: Mailman/Defaults.py:1700
+#: Mailman/Defaults.py:1702
 msgid "Portuguese (Brazil)"
 msgstr "Португальский (Бразилия)"
 
-#: Mailman/Defaults.py:1701
+#: Mailman/Defaults.py:1703
 msgid "Romanian"
 msgstr "Румынский"
 
-#: Mailman/Defaults.py:1702
+#: Mailman/Defaults.py:1704
 msgid "Russian"
 msgstr "Русский"
 
-#: Mailman/Defaults.py:1703
+#: Mailman/Defaults.py:1705
 msgid "Slovak"
 msgstr "Словацкий"
 
-#: Mailman/Defaults.py:1704
+#: Mailman/Defaults.py:1706
 msgid "Slovenian"
 msgstr "Словенский"
 
-#: Mailman/Defaults.py:1705
+#: Mailman/Defaults.py:1707
 msgid "Serbian"
 msgstr "Сербский"
 
-#: Mailman/Defaults.py:1706
+#: Mailman/Defaults.py:1708
 msgid "Swedish"
 msgstr "Шведский"
 
-#: Mailman/Defaults.py:1707
+#: Mailman/Defaults.py:1709
 msgid "Turkish"
 msgstr "Турецкий"
 
-#: Mailman/Defaults.py:1708
+#: Mailman/Defaults.py:1710
 msgid "Ukrainian"
 msgstr "Украинский"
 
-#: Mailman/Defaults.py:1709
+#: Mailman/Defaults.py:1711
 msgid "Vietnamese"
 msgstr "Вьетнамский"
 
-#: Mailman/Defaults.py:1710
+#: Mailman/Defaults.py:1712
 msgid "Chinese (China)"
 msgstr "Китайский (Китай)"
 
-#: Mailman/Defaults.py:1711
+#: Mailman/Defaults.py:1713
 msgid "Chinese (Taiwan)"
 msgstr "Китайский (Тайвань)"
 
@@ -6508,10 +6508,10 @@ msgstr ""
 
 #: Mailman/Gui/NonDigest.py:163
 msgid ""
-"Ignore regular_exlude_lists of which the poster is not a\n"
+"Ignore regular_exclude_lists of which the poster is not a\n"
 "             member."
 msgstr ""
-"Игнорировать списки рассылки из regular_exlude_lists, в которых отправитель "
+"Игнорировать списки рассылки из regular_exclude_lists, в которых отправитель "
 "сообщения\n"
 "не является подписчиком."
 
@@ -6986,8 +6986,8 @@ msgstr ""
 "указанный период времени,\n"
 "он автоматически переводится в режим модерации. Значение 0 отключает это "
 "поведение.\n"
-"См. параметр <a href=\"?VARHELP=privacy/sender/member_verbosity_interval\""
-">member_verbosity_interval</a> для задания временного интервала.\n"
+"См. параметр <a href=\"?VARHELP=privacy/sender/member_verbosity_interval"
+"\">member_verbosity_interval</a> для задания временного интервала.\n"
 "\n"
 "<p>Этот параметр предназначен для предотвращения множественных спам-"
 "сообщений от новых подписчиков в короткий период времени.\n"
@@ -7057,8 +7057,8 @@ msgstr ""
 "<ul><li><b>Задержать</b> -- задержать сообщение для проверки модератором.\n"
 "<p><li><b>Отклонять</b> -- автоматически отклонить сообщение и отослать\n"
 "извещение об этом отправителю исходного сообщения. Текст такого извещения\n"
-"может быть <a href=\"?VARHELP=privacy/sender/member_moderation_notice\">"
-"определен\n"
+"может быть <a href=\"?VARHELP=privacy/sender/member_moderation_notice"
+"\">определен\n"
 "вами</a>.\n"
 "<p><li><b>Удалить</b> -- просто удалить сообщение без уведомления\n"
 "отправителя.</ul>"
@@ -7215,8 +7215,8 @@ msgstr ""
 "</ul><p>Если домен отправителя сообщения имеет DMARC-политику p=quarantine\n"
 "и dmarc_moderation_action к нему не применяется (этот параметр установлен в "
 "\"Нет\"),\n"
-"то это сообщение скорее всего не будет отвергнуто, но попадет в папку \""
-"Спам\"\n"
+"то это сообщение скорее всего не будет отвергнуто, но попадет в папку \"Спам"
+"\"\n"
 "получателя или другие подобные места, где его будет трудно найти."
 
 #: Mailman/Gui/Privacy.py:352
@@ -8912,35 +8912,35 @@ msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr ""
 "Подтвердите запрос на удаление вашей подписки на список рассылки %(listname)s"
 
-#: Mailman/MailList.py:919 Mailman/MailList.py:1386
+#: Mailman/MailList.py:925 Mailman/MailList.py:1392
 msgid " from %(remote)s"
 msgstr " с адреса %(remote)s"
 
-#: Mailman/MailList.py:963
+#: Mailman/MailList.py:969
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "подписка на список %(realname)s требует подтверждения модератора"
 
-#: Mailman/MailList.py:1032 bin/add_members:252
+#: Mailman/MailList.py:1038 bin/add_members:252
 msgid "%(realname)s subscription notification"
 msgstr "уведомление о подписке на список %(realname)s"
 
-#: Mailman/MailList.py:1051
+#: Mailman/MailList.py:1057
 msgid "unsubscriptions require moderator approval"
 msgstr "удаление подписки требует подтверждения модератора"
 
-#: Mailman/MailList.py:1072
+#: Mailman/MailList.py:1078
 msgid "%(realname)s unsubscribe notification"
 msgstr "уведомление об удалении подписки на список %(realname)s"
 
-#: Mailman/MailList.py:1230
+#: Mailman/MailList.py:1236
 msgid "%(realname)s address change notification"
 msgstr "уведомление об изменении адреса подписчика %(realname)s"
 
-#: Mailman/MailList.py:1295
+#: Mailman/MailList.py:1301
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "подписка на %(name)s требует подтверждения администратора"
 
-#: Mailman/MailList.py:1560
+#: Mailman/MailList.py:1566
 msgid "Last autoresponse notification for today"
 msgstr "Последнее автоматическое уведомление на сегодня"
 

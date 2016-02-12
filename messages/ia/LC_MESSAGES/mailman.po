@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue Feb  2 17:09:05 2016\n"
+"POT-Creation-Date: Fri Feb 12 10:57:02 2016\n"
 "PO-Revision-Date: Wed Feb 18 19:50:26 2015\n"
 "Last-Translator: Martijn Dekker <vice-secretario@interlingua.com>\n"
 "Language-Team: Interlingua <TradSoft@interlingua.com>\n"
@@ -3923,159 +3923,159 @@ msgstr "Membros non-digesto (regular):"
 msgid "Digest members:"
 msgstr "Membros de digesto:"
 
-#: Mailman/Defaults.py:1673
+#: Mailman/Defaults.py:1675
 msgid "Arabic"
 msgstr "arabe"
 
-#: Mailman/Defaults.py:1674
+#: Mailman/Defaults.py:1676
 msgid "Asturian"
 msgstr "asturiano"
 
-#: Mailman/Defaults.py:1675
+#: Mailman/Defaults.py:1677
 msgid "Catalan"
 msgstr "catalano"
 
-#: Mailman/Defaults.py:1676
+#: Mailman/Defaults.py:1678
 msgid "Czech"
 msgstr "tcheco"
 
-#: Mailman/Defaults.py:1677
+#: Mailman/Defaults.py:1679
 msgid "Danish"
 msgstr "danese"
 
-#: Mailman/Defaults.py:1678
+#: Mailman/Defaults.py:1680
 msgid "German"
 msgstr "germano"
 
-#: Mailman/Defaults.py:1679
+#: Mailman/Defaults.py:1681
 msgid "English (USA)"
 msgstr "anglese (SUA)"
 
-#: Mailman/Defaults.py:1680
+#: Mailman/Defaults.py:1682
 msgid "Spanish (Spain)"
 msgstr "espaniol (Espania)"
 
-#: Mailman/Defaults.py:1681
+#: Mailman/Defaults.py:1683
 msgid "Estonian"
 msgstr "estoniano"
 
-#: Mailman/Defaults.py:1682
+#: Mailman/Defaults.py:1684
 msgid "Euskara"
 msgstr "basco"
 
-#: Mailman/Defaults.py:1683
+#: Mailman/Defaults.py:1685
 msgid "Persian"
 msgstr "persiano"
 
-#: Mailman/Defaults.py:1684
+#: Mailman/Defaults.py:1686
 msgid "Finnish"
 msgstr "finnese"
 
-#: Mailman/Defaults.py:1685
+#: Mailman/Defaults.py:1687
 msgid "French"
 msgstr "francese"
 
-#: Mailman/Defaults.py:1686
+#: Mailman/Defaults.py:1688
 msgid "Galician"
 msgstr "galiciano"
 
-#: Mailman/Defaults.py:1687
+#: Mailman/Defaults.py:1689
 msgid "Greek"
 msgstr "greco"
 
-#: Mailman/Defaults.py:1688
+#: Mailman/Defaults.py:1690
 msgid "Hebrew"
 msgstr "hebreo"
 
-#: Mailman/Defaults.py:1689
+#: Mailman/Defaults.py:1691
 msgid "Croatian"
 msgstr "croato"
 
-#: Mailman/Defaults.py:1690
+#: Mailman/Defaults.py:1692
 msgid "Hungarian"
 msgstr "hungaro"
 
-#: Mailman/Defaults.py:1691
+#: Mailman/Defaults.py:1693
 msgid "Interlingua"
 msgstr "interlingua"
 
-#: Mailman/Defaults.py:1692
+#: Mailman/Defaults.py:1694
 msgid "Italian"
 msgstr "italiano"
 
-#: Mailman/Defaults.py:1693
+#: Mailman/Defaults.py:1695
 msgid "Japanese"
 msgstr "japonese"
 
-#: Mailman/Defaults.py:1694
+#: Mailman/Defaults.py:1696
 msgid "Korean"
 msgstr "coreano"
 
-#: Mailman/Defaults.py:1695
+#: Mailman/Defaults.py:1697
 msgid "Lithuanian"
 msgstr "lituano"
 
-#: Mailman/Defaults.py:1696
+#: Mailman/Defaults.py:1698
 msgid "Dutch"
 msgstr "nederlandese"
 
-#: Mailman/Defaults.py:1697
+#: Mailman/Defaults.py:1699
 msgid "Norwegian"
 msgstr "norvegiano"
 
-#: Mailman/Defaults.py:1698
+#: Mailman/Defaults.py:1700
 msgid "Polish"
 msgstr "polonese"
 
-#: Mailman/Defaults.py:1699
+#: Mailman/Defaults.py:1701
 msgid "Portuguese"
 msgstr "portugese"
 
-#: Mailman/Defaults.py:1700
+#: Mailman/Defaults.py:1702
 msgid "Portuguese (Brazil)"
 msgstr "portugese (Brasil)"
 
-#: Mailman/Defaults.py:1701
+#: Mailman/Defaults.py:1703
 msgid "Romanian"
 msgstr "romaniano"
 
-#: Mailman/Defaults.py:1702
+#: Mailman/Defaults.py:1704
 msgid "Russian"
 msgstr "russo"
 
-#: Mailman/Defaults.py:1703
+#: Mailman/Defaults.py:1705
 msgid "Slovak"
 msgstr "slovaco"
 
-#: Mailman/Defaults.py:1704
+#: Mailman/Defaults.py:1706
 msgid "Slovenian"
 msgstr "sloveno"
 
-#: Mailman/Defaults.py:1705
+#: Mailman/Defaults.py:1707
 msgid "Serbian"
 msgstr "serbo"
 
-#: Mailman/Defaults.py:1706
+#: Mailman/Defaults.py:1708
 msgid "Swedish"
 msgstr "svedese"
 
-#: Mailman/Defaults.py:1707
+#: Mailman/Defaults.py:1709
 msgid "Turkish"
 msgstr "turco"
 
-#: Mailman/Defaults.py:1708
+#: Mailman/Defaults.py:1710
 msgid "Ukrainian"
 msgstr "ukrainiano"
 
-#: Mailman/Defaults.py:1709
+#: Mailman/Defaults.py:1711
 msgid "Vietnamese"
 msgstr "vietnamese"
 
-#: Mailman/Defaults.py:1710
+#: Mailman/Defaults.py:1712
 msgid "Chinese (China)"
 msgstr "chinese (China)"
 
-#: Mailman/Defaults.py:1711
+#: Mailman/Defaults.py:1713
 msgid "Chinese (Taiwan)"
 msgstr "chinese (Taiwan)"
 
@@ -6601,7 +6601,7 @@ msgstr ""
 
 #: Mailman/Gui/NonDigest.py:163
 msgid ""
-"Ignore regular_exlude_lists of which the poster is not a\n"
+"Ignore regular_exclude_lists of which the poster is not a\n"
 "             member."
 msgstr ""
 
@@ -8932,36 +8932,36 @@ msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr ""
 "Tu confirmation es requirite pro abandonar le lista de diffusion %(listname)s"
 
-#: Mailman/MailList.py:919 Mailman/MailList.py:1386
+#: Mailman/MailList.py:925 Mailman/MailList.py:1392
 msgid " from %(remote)s"
 msgstr " de %(remote)s"
 
-#: Mailman/MailList.py:963
+#: Mailman/MailList.py:969
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "abonamentos a %(realname)s require approbation del moderator"
 
-#: Mailman/MailList.py:1032 bin/add_members:252
+#: Mailman/MailList.py:1038 bin/add_members:252
 msgid "%(realname)s subscription notification"
 msgstr "notification de abonamento de %(realname)s"
 
-#: Mailman/MailList.py:1051
+#: Mailman/MailList.py:1057
 msgid "unsubscriptions require moderator approval"
 msgstr "disabonamento require approbation del moderator"
 
-#: Mailman/MailList.py:1072
+#: Mailman/MailList.py:1078
 msgid "%(realname)s unsubscribe notification"
 msgstr "notification de disabonamento de %(realname)s"
 
-#: Mailman/MailList.py:1230
+#: Mailman/MailList.py:1236
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "notification de disabonamento de %(realname)s"
 
-#: Mailman/MailList.py:1295
+#: Mailman/MailList.py:1301
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "abonamentos a %(name)s require approbation del administrator"
 
-#: Mailman/MailList.py:1560
+#: Mailman/MailList.py:1566
 msgid "Last autoresponse notification for today"
 msgstr "Ultime notification de auto-responsa pro hodie"
 
