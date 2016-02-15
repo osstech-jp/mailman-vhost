@@ -6190,6 +6190,7 @@ msgid ""
 "Ignore regular_exclude_lists of which the poster is not a\n"
 "             member."
 msgstr ""
+"投稿者が regular_exclude_lists の会員ではないようなときにはそれを無視します."
 
 #: Mailman/Gui/NonDigest.py:165
 msgid ""
@@ -6204,6 +6205,14 @@ msgid ""
 "the\n"
 "             poster is not a member."
 msgstr ""
+"このリストおよび除外リストに含まれる1つ以上のリストに同時に向けられた\n"
+"             投稿は除外リストの普通配送の会員にはこのリストからは\n"
+"             送られませんが、投稿者がその除外リストの会員でない場合には\n"
+"             当該除外リストの会員には投稿が送られないまま、その投稿が\n"
+"             その除外リストでされることがあります.\n"
+"             この設定を「はい」に設定すると、投稿者がその除外リストの\n"
+"             会員でないようないずれの除外リストについても、\n"
+"             その除外リストを無視します\n"
 
 #: Mailman/Gui/NonDigest.py:174
 msgid ""
@@ -6347,13 +6356,14 @@ msgid ""
 "             machine?"
 msgstr ""
 "このマシンでどんなリストがあるか聞かれた時に\n"
-"広告しますか?"
+"公表しますか?"
 
 #: Mailman/Gui/Privacy.py:117
 msgid ""
 "List of addresses (or regexps) whose subscriptions do not\n"
 "             require approval."
 msgstr ""
+"入会に承認が不要なアドレス(または正規表現)のリスト"
 
 #: Mailman/Gui/Privacy.py:120
 msgid ""
@@ -6363,16 +6373,17 @@ msgid ""
 "character\n"
 "             to designate a (case insensitive) regular expression match."
 msgstr ""
-"入会に承認が必要な設定であっても、これらのアドレスからの入会申請は管理者の承"
-"認なしに許可されます。1行につき1つ会員アドレスを記入します。\n"
-"正規表現を使うときは、行の最初を ^ で始めてください(大文字・小文字は無視され"
-"ます)。"
+"入会に承認が必要な設定であっても、これらのアドレスからの入会申請は\n"
+"             管理者の承認なしに許可されます. 1行につき1つ会員アドレスを\n"
+"             記入します. 正規表現を使うときは、行の最初を ^ で始めて\n"
+"             ください(大文字・小文字の区別はしません)."
 
 #: Mailman/Gui/Privacy.py:125
 msgid ""
 "You may also use the @listname notation to designate the\n"
 "             members of another list in this installation."
 msgstr ""
+"@リスト名 の表記でこのシステムの他のリストの会員を示すこともできます."
 
 #: Mailman/Gui/Privacy.py:129
 msgid ""
@@ -6857,7 +6868,7 @@ msgid ""
 msgstr ""
 "DMARC 拒否%(quarantine)sポリシーを持つドメインからの投稿に対して送られる\n"
 "<a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
-">拒否通知</a>に含める文。"
+">拒否通知</a>に含めるテキスト文。"
 
 #: Mailman/Gui/Privacy.py:359
 msgid ""
@@ -6866,6 +6877,9 @@ msgid ""
 "             separate text/plain MIME part preceding the original message\n"
 "             part in the wrapped message."
 msgstr ""
+"dmarc_moderation_action が適用され、それが「メール内に添付」であるときに、\n"
+"このテキスト文が設定されている場合には、元の投稿メッセージの前に\n"
+"このテキスト文を独立したMIMEパートとして挿入します.\n"
 
 #: Mailman/Gui/Privacy.py:364
 msgid ""
