@@ -34,12 +34,10 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
-    - The German translation has been updated by Mirian Margiani.
+    - The German translation has been updated by Mirian Margiani and
+      Bernhard Schmidt.
 
     - The Russian translation has been updated by Danil Smirnov.
-
-    - Merged a minor change from Bernhard Schmidt into the German newlist.txt
-      template.
 
     - Several Galician templates that were improperly encoded as iso-8859-1
       have been fixed.  (LP: #1532504)

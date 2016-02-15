@@ -7599,9 +7599,8 @@ msgstr ""
 msgid ""
 "Ceiling on acceptable number of member posts, per interval,\n"
 "               before automatic moderation."
-msgstr ""
-"Obergrenze der Veröffentlichungen eines Mitglieds, pro Intervall,\n"
-"               vor der automatischen Moderation."
+msgstr "Obergrenze für die Anzahl an Nachrichten (pro Intervall), ab der ein\n"
+"               Listenmitglied automatisch auf \"moderiert\" gesetzt wird."
 
 #: Mailman/Gui/Privacy.py:236
 msgid ""
@@ -7841,8 +7840,8 @@ msgid ""
 "               p=reject"
 msgstr ""
 "Soll die obige dmarc_moderation_action auf Nachrichten\n"
-"               von Domains mit DMARC p=none, p=quarantine und "
-"p=reject                angewendet werden?"
+"               von Domains mit DMARC-Regel p=none, p=quarantine und\n"
+"               p=reject angewendet werden"
 
 #: Mailman/Gui/Privacy.py:338
 msgid ""
@@ -9137,7 +9136,7 @@ msgstr "%(realname)s via %(lrn)s"
 
 #: Mailman/Handlers/Emergency.py:29
 msgid "Emergency hold on all list traffic is in effect"
-msgstr "Not-Moderation für alle Nachrichten ist aktiviert"
+msgstr "Not-Moderation für alle eingehenden Nachrichten ist aktiv"
 
 # Mailman/Handlers/Hold.py:57
 #: Mailman/Handlers/Emergency.py:30 Mailman/Handlers/Hold.py:58
