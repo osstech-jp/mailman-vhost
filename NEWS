@@ -44,12 +44,13 @@ Here is a history of user visible changes to Mailman.
     - Several Galician templates that were improperly encoded as iso-8859-1
       have been fixed.  (LP: #1532504)
 
-    - The German translation has been updated by Mirian Margiani.
-
     - The Brazilian Portugese translation has been updated by Emerson Ribeiro
       de Mello.
 
   Bug fixes and other patches
+
+    - Fixed a typo in the Non-digest options regular_exclude_ignore
+      description thanks to Yasuhito FUTATSUKI.
 
     - DEFAULT_PASS_MIME_TYPES has been changed to accept text/plain sub-parts
       from message/rfc822 parts and multipart parts other than mixed and
