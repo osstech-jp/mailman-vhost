@@ -49,6 +49,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - User's "Acknowledge" option will now be honored for posts to anonymous
+      lists.  (LP: #1546679)
+
     - Fixed a typo in the Non-digest options regular_exclude_ignore
       description thanks to Yasuhito FUTATSUKI.
 
