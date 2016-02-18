@@ -929,7 +929,7 @@ msgid ""
 msgstr ""
 "会員のアドレスを変更するには、現在のアドレスと新しいアドレスを\n"
 "以下に記入してください。変更の通知を新しいアドレスか古いアドレス、\n"
-"あるいは両方に送るにはチェックボックスにチェックを入れます"
+"あるいは両方に送るにはそれぞれ対応するチェックボックスにチェックを入れます。"
 
 #: Mailman/Cgi/admin.py:1273
 msgid "Member's current address"
@@ -1092,7 +1092,7 @@ msgstr "現在のアドレスと変更後のアドレスは異なっていなければなりません."
 
 #: Mailman/Cgi/admin.py:1533
 msgid "%(schange_to)s is already a list member."
-msgstr "%(schange_t)s は既に会員です"
+msgstr "%(schange_to)s は既に会員です"
 
 #: Mailman/Cgi/admin.py:1538
 msgid "%(schange_to)s is not a valid email address."
@@ -1104,7 +1104,7 @@ msgstr "%(schange_from)s は会員ではありません"
 
 #: Mailman/Cgi/admin.py:1548
 msgid "%(schange_to)s is already a member"
-msgstr "%(schange_t)s は既に会員です"
+msgstr "%(schange_to)s は既に会員です"
 
 #: Mailman/Cgi/admin.py:1551
 msgid "%(schange_to)s matches banned pattern %(spat)s"
@@ -5057,9 +5057,9 @@ msgid ""
 "             address to mitigate issues stemming from the original From:\n"
 "             domain's DMARC or similar policies."
 msgstr ""
-"From: ヘッダーのメールアドレスをリストの投稿アドレスに置き換え、\n"
+"From: ヘッダーのメールアドレスをリストの投稿アドレスに置き換え,\n"
 "             元の From: ドメインの DMARC あるいは類似のポリシーにより\n"
-"生じる問題を緩和する。"
+"             生じる問題を緩和します."
 
 #: Mailman/Gui/General.py:162
 msgid ""
@@ -5148,7 +5148,6 @@ msgstr ""
 "             From: フィールドのためだけの理由で配送エラーを引き起こしたり\n"
 "             します. <b>その結果会員はメールを全く問題なく受け取ることが\n"
 "             できるにも関わらず、退会させられることになります.\n"
-"             することになります\n"
 "             <p>\n"
 "             以下の処理をここで選択した場合、それはリストの全ての\n"
 "             メッセージに適用されます. From: ヘッダのドメインがそうした\n"
@@ -5171,11 +5170,11 @@ msgstr ""
 "             投稿用アドレスに置き換え、投稿者のアドレスを元の Reply-To: \n"
 "             ヘッダのアドレスに追加します. </dd>\n"
 "             <dt>メール内に添付</dt>\n"
-"             From: ヘッダーにリストの投稿用アドレスにし、投稿の From: \n"
+"             <dd>From: ヘッダーにリストの投稿用アドレスにし、投稿の From: \n"
 "             アドレスを元の Reply-To: ヘッダーに加えた外側のメッセージに\n"
 "             投稿されたメッセージを Content-Type: message/rfc822 として\n"
 "             投稿メッセージを添付します。 これは実質的には単一のメッセージ\n"
-"             からなるMIME形式のダイジェスト(まとめ読み)です.\n"
+"             からなるMIME形式のダイジェスト(まとめ読み)です.</dd>\n"
 "             </dl>\n"
 "             <p>anonymous_list に対する書き換えはこれらのいずれの処理の\n"
 "             前に適用されます. 匿名リストに対しては「いいえ」以外の処理を\n"
@@ -6355,7 +6354,7 @@ msgid ""
 "Advertise this list when people ask what lists are on this\n"
 "             machine?"
 msgstr ""
-"このマシンでどんなリストがあるか聞かれた時に\n"
+"このホストにどんなリストがあるか聞かれた時に\n"
 "公表しますか?"
 
 #: Mailman/Gui/Privacy.py:117
