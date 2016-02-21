@@ -51,6 +51,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Modified contrib/mmdsr to correctly report No such list names that
+      contain ".
+
     - User's "Acknowledge" option will now be honored for posts to anonymous
       lists.  (LP: #1546679)
 
