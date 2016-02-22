@@ -220,7 +220,7 @@ def checkarchives():
     # In addition, on a multiuser system you may want to hide the private
     # archives so other users can't read them.
     if mode & S_IXOTH:
-        print _("""\
+        print C_("""\
 Warning: Private archive directory is other-executable (o+x).
          This could allow other users on your system to read private archives.
          If you're on a shared multiuser system, you should consult the

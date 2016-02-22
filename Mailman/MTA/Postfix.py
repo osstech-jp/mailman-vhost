@@ -406,9 +406,9 @@ def checkperms(state):
         if stat and (stat[ST_MODE] & targetmode) <> targetmode:
             state.ERRORS += 1
             octmode = oct(stat[ST_MODE])
-            print _('%(dbfile)s permissions must be 066x (got %(octmode)s)'),
+            print C_('%(dbfile)s permissions must be 066x (got %(octmode)s)'),
             if state.FIX:
-                print _('(fixing)')
+                print C_('(fixing)')
                 os.chmod(dbfile, stat[ST_MODE] | targetmode)
             else:
                 print

@@ -142,11 +142,11 @@ def main():
 
     if args:
         strargs = SPACE.join(args)
-        usage(1, _('Bad arguments: %(strargs)s'))
+        usage(1, C_('Bad arguments: %(strargs)s'))
 
     if password is not None:
         if not password:
-            usage(1, _('Empty list passwords are not allowed'))
+            usage(1, C_('Empty list passwords are not allowed'))
         shapassword = Utils.sha_new(password).hexdigest()
 
     if domains:

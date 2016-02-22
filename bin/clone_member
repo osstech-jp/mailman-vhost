@@ -133,7 +133,7 @@ def dolist(mlist, options):
     pattern = mlist.GetBannedPattern(options.toaddr)
     if pattern:
         if not options.quiet:
-            print '   ', _('Banned address (matched %(pattern)s)')
+            print '   ', C_('Banned address (matched %(pattern)s)')
         return
 
     # Now change the membership address

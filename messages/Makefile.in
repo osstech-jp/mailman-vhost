@@ -138,7 +138,7 @@ docstring.files:
 
 potfile: marked.files docstring.files
 	@echo "Running pygettext on $@; this make take a while."
-	(cd ..; $(PROG) -p messages -d mailman -D -X messages/marked.files `cat messages/marked.files messages/docstring.files`)
+	(cd ..; $(PROG) -k C_ -p messages -d mailman -D -X messages/marked.files `cat messages/marked.files messages/docstring.files`)
 
 # Update the individual mailman.po files with the new changes to the
 # .pot file

@@ -81,7 +81,7 @@ def main():
 
     if not mm_cfg.MTA:
         mta = repr(mm_cfg.MTA)
-        usage(2, _(
+        usage(2, C_(
             "genaliases can't do anything useful with mm_cfg.MTA = %(mta)s."
              ))
 

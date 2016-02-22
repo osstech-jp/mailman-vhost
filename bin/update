@@ -452,7 +452,7 @@ def update_qfiles():
         except EnvironmentError, e:
             if e.errno <> errno.ENOTDIR:
                 raise
-            print _('Warning!  Not a directory: %(dirpath)s')
+            print C_('Warning!  Not a directory: %(dirpath)s')
 
 
 
@@ -541,7 +541,7 @@ def dequeue(filebase):
                 msg = data = None
         except EOFError:
             # For some reason the pckfile was empty.  Just delete it.
-            print _('Warning!  Deleting empty .pck file: %(pckfile)s')
+            print C_('Warning!  Deleting empty .pck file: %(pckfile)s')
             os.unlink(pckfile)
     finally:
         if msgfp:

@@ -72,7 +72,7 @@ def fix_url(mlist, *args):
     # Make sure list is locked.
     if not mlist.Locked():
         if verbose:
-            print _('Locking list')
+            print C_('Locking list')
         mlist.Lock()
     if urlhost:
         web_page_url = mm_cfg.DEFAULT_URL_PATTERN % urlhost
