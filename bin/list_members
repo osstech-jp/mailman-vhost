@@ -81,7 +81,7 @@ from Mailman import Utils
 from Mailman import MailList
 from Mailman import Errors
 from Mailman import MemberAdaptor
-from Mailman.i18n import _
+from Mailman.i18n import C_
 
 from email.Utils import formataddr
 
@@ -109,7 +109,7 @@ def usage(code, msg=''):
         fd = sys.stderr
     else:
         fd = sys.stdout
-    print >> fd, _(__doc__)
+    print >> fd, C_(__doc__)
     if msg:
         print >> fd, msg
     sys.exit(code)
@@ -195,7 +195,7 @@ def main():
             if i >= 0:
                 why = opt[i+1:]
                 if why not in WHYCHOICES.keys():
-                    usage(1, _('Bad --nomail option: %(why)s'))
+                    usage(1, C_('Bad --nomail option: %(why)s'))
         elif opt == '-d':
             digest = True
             if args and args[0] in ('mime', 'plain'):
@@ -206,23 +206,23 @@ def main():
             if i >= 0:
                 kind = opt[i+1:]
                 if kind not in ('mime', 'plain'):
-                    usage(1, _('Bad --digest option: %(kind)s'))
+                    usage(1, C_('Bad --digest option: %(kind)s'))
         elif opt in ('-m', '--moderated'):
             moderatedonly = True
             if nonmoderatedonly or invalidonly or unicodeonly:
-                usage(1, _('Only one of -m, -M, -i or -u may be specified.'))
+                usage(1, C_('Only one of -m, -M, -i or -u may be specified.'))
         elif opt in ('-M', '--non-moderated'):
             nonmoderatedonly = True
             if moderatedonly or invalidonly or unicodeonly:
-                usage(1, _('Only one of -m, -M, -i or -u may be specified.'))
+                usage(1, C_('Only one of -m, -M, -i or -u may be specified.'))
         elif opt in ('-i', '--invalid'):
             invalidonly = True
             if moderatedonly or nonmoderatedonly or unicodeonly:
-                usage(1, _('Only one of -m, -M, -i or -u may be specified.'))
+                usage(1, C_('Only one of -m, -M, -i or -u may be specified.'))
         elif opt in ('-u', '--unicode'):
             unicodeonly = True
             if moderatedonly or nonmoderatedonly or invalidonly:
-                usage(1, _('Only one of -m, -M, -i or -u may be specified.'))
+                usage(1, C_('Only one of -m, -M, -i or -u may be specified.'))
         else:
             # No more options left, push the last one back on the list
             args.insert(0, opt)
@@ -240,7 +240,7 @@ def main():
         try:
             fp = open(outfile, 'w')
         except IOError:
-            print >> sys.stderr, _('Could not open file for writing:'), outfile
+            print >> sys.stderr, C_('Could not open file for writing:'), outfile
             sys.exit(1)
     else:
         fp = sys.stdout
@@ -248,7 +248,7 @@ def main():
     try:
         mlist = MailList.MailList(listname, lock=False)
     except Errors.MMListError, e:
-        print >> sys.stderr, _('No such list: %(listname)s')
+        print >> sys.stderr, C_('No such list: %(listname)s')
         sys.exit(1)
 
     # Get the lowercased member addresses

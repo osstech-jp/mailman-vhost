@@ -36,7 +36,7 @@ import os
 import getopt
 
 import paths
-from Mailman.i18n import _
+from Mailman.i18n import C_
 
 program = sys.argv[0]
 
@@ -47,7 +47,7 @@ def usage(code, msg=''):
         fd = sys.stderr
     else:
         fd = sys.stdout
-    print >> fd, _(__doc__)
+    print >> fd, C_(__doc__)
     if msg:
         print >> fd, msg
     sys.exit(code)

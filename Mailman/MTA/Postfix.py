@@ -27,7 +27,7 @@ from stat import *
 from Mailman import mm_cfg
 from Mailman import Utils
 from Mailman import LockFile
-from Mailman.i18n import _
+from Mailman.i18n import C_
 from Mailman.MTA.Utils import makealiases
 from Mailman.Logging.Syslog import syslog
 
@@ -358,7 +358,7 @@ def checkperms(state):
     targetmode = S_IFREG | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
     for file in ALIASFILE, VIRTFILE:
         if state.VERBOSE:
-            print _('checking permissions on %(file)s')
+            print C_('checking permissions on %(file)s')
         stat = None
         try:
             stat = os.stat(file)
@@ -368,9 +368,9 @@ def checkperms(state):
         if stat and (stat[ST_MODE] & targetmode) <> targetmode:
             state.ERRORS += 1
             octmode = oct(stat[ST_MODE])
-            print _('%(file)s permissions must be 066x (got %(octmode)s)'),
+            print C_('%(file)s permissions must be 066x (got %(octmode)s)'),
             if state.FIX:
-                print _('(fixing)')
+                print C_('(fixing)')
                 os.chmod(file, stat[ST_MODE] | targetmode)
             else:
                 print
@@ -386,7 +386,7 @@ def checkperms(state):
                 raise
             continue
         if state.VERBOSE:
-            print _('checking ownership of %(dbfile)s')
+            print C_('checking ownership of %(dbfile)s')
         user = mm_cfg.MAILMAN_USER
         ownerok = stat[ST_UID] == pwd.getpwnam(user)[2]
         if not ownerok:
@@ -394,10 +394,10 @@ def checkperms(state):
                 owner = pwd.getpwuid(stat[ST_UID])[0]
             except KeyError:
                 owner = 'uid %d' % stat[ST_UID]
-            print _('%(dbfile)s owned by %(owner)s (must be owned by %(user)s'),
+            print C_('%(dbfile)s owned by %(owner)s (must be owned by %(user)s'),
             state.ERRORS += 1
             if state.FIX:
-                print _('(fixing)')
+                print C_('(fixing)')
                 uid = pwd.getpwnam(user)[2]
                 gid = grp.getgrnam(mm_cfg.MAILMAN_GROUP)[2]
                 os.chown(dbfile, uid, gid)

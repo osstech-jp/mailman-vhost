@@ -40,7 +40,7 @@ import paths                                      # path hacking
 from Mailman import mm_cfg
 from Mailman import Utils
 from Mailman import MailList
-from Mailman.i18n import _
+from Mailman.i18n import C_
 
 try:
     True, False
@@ -55,7 +55,7 @@ def usage(code, msg=''):
         fd = sys.stderr
     else:
         fd = sys.stdout
-    print >> fd, _(__doc__)
+    print >> fd, C_(__doc__)
     if msg:
         print >> fd, msg
     sys.exit(code)

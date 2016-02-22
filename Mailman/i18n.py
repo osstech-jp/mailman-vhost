@@ -15,6 +15,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
 # USA.
 
+import locale
 import sys
 import time
 import gettext
@@ -24,6 +25,15 @@ from Mailman import mm_cfg
 from Mailman.SafeDict import SafeDict
 
 _translation = None
+
+
+def _get_ctype_charset():
+    old = locale.setlocale(locale.LC_CTYPE, '')
+    charset = locale.nl_langinfo(locale.CODESET)
+    locale.setlocale(locale.LC_CTYPE, old)
+    return charset
+
+_ctype_charset = _get_ctype_charset()
 
 
 
@@ -54,7 +64,7 @@ if _translation is None:
 
 
 
-def _(s):
+def _(s, frame = 1):
     if s == '':
         return s
     assert s
@@ -70,7 +80,7 @@ def _(s):
     # original string is 1) locals dictionary, 2) globals dictionary.
     #
     # First, get the frame of the caller
-    frame = sys._getframe(1)
+    frame = sys._getframe(frame)
     # A `safe' dictionary is used so we won't get an exception if there's a
     # missing key in the dictionary.
     dict = SafeDict(frame.f_globals.copy())
@@ -94,6 +104,19 @@ def _(s):
         return tns
 
 
+
+def tolocale(s):
+    global _ctype_charset
+    if isinstance(s, UnicodeType):
+        return s
+    source = _translation.charset ()
+    if not source:
+        return s
+    return unicode(s, source, 'replace').encode(_ctype_charset, 'replace')
+
+def C_(s):
+    return tolocale(_(s, 2))
+    
 
 def ctime(date):
     # Don't make these module globals since we have to do runtime translation

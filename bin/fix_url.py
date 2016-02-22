@@ -43,12 +43,12 @@ import getopt
 
 import paths
 from Mailman import mm_cfg
-from Mailman.i18n import _
+from Mailman.i18n import C_
 
 
 
 def usage(code, msg=''):
-    print _(__doc__.replace('%', '%%'))
+    print C_(__doc__.replace('%', '%%'))
     if msg:
         print msg
     sys.exit(code)
@@ -82,12 +82,12 @@ def fix_url(mlist, *args):
         mailhost = mm_cfg.DEFAULT_EMAIL_HOST
 
     if verbose:
-        print _('Setting web_page_url to: %(web_page_url)s')
+        print C_('Setting web_page_url to: %(web_page_url)s')
     mlist.web_page_url = web_page_url
     if verbose:
-        print _('Setting host_name to: %(mailhost)s')
+        print C_('Setting host_name to: %(mailhost)s')
     mlist.host_name = mailhost
-    print _('Saving list')
+    print C_('Saving list')
     mlist.Save()
     mlist.Unlock()
 
