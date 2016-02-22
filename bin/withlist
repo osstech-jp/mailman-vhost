@@ -128,7 +128,7 @@ import paths
 from Mailman import Errors
 from Mailman import MailList
 from Mailman import Utils
-from Mailman.i18n import _
+from Mailman.i18n import C_
 
 try:
     True, False
