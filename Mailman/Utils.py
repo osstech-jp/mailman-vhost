@@ -1170,7 +1170,28 @@ def IsDMARCProhibited(mlist, email):
     at_sign = email.find('@')
     if at_sign < 1:
         return False
-    dmarc_domain = '_dmarc.' + email[at_sign+1:]
+    dparts = email[at_sign+1:].split('.')
+    # The following is a way of testing the "Organizational Domain" for DMARC
+    # policy if the From: domain doesn't publish a policy.  What we're doing
+    # is clearly wrong. I.e., if the From: domain is a.b.c.example.com, we
+    # should lookup _dmarc.a.b.c.example.com and if no DMARC policy there,
+    # we should look up only _dmarc.example.com.  The problem is not all
+    # Organizational Domains are two "words" and determining any particular
+    # Organizational Domain requires applying a non-trivial algorithm to a
+    # large, somewhat dynamic data set.  What we do is look up all the
+    # intermediate domains on the theory that if _dmarc.a.b.c.example.com has
+    # no valid DMARC policy then the intermediates won't either.  We will also
+    # err with a domain like x.y.x.co.uk. Here we will go to far and also look
+    # up _dmarc.co.uk which is also wrong but hopefully won't return a policy.
+    # This is clearly a flawed approach, but hopefully good enough.
+    while len(dparts) > 1:
+        x = _DMARCProhibited(mlist, email, '_dmarc.' + '.'.join(dparts))
+        if x != 'continue':
+            return x
+        dparts = dparts[1:]
+    return False
+
+def _DMARCProhibited(mlist, email, dmarc_domain):
 
     try:
         resolver = dns.resolver.Resolver()
@@ -1178,12 +1199,12 @@ def IsDMARCProhibited(mlist, email):
         resolver.lifetime = float(mm_cfg.DMARC_RESOLVER_LIFETIME)
         txt_recs = resolver.query(dmarc_domain, dns.rdatatype.TXT)
     except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
-        return False
+        return 'continue'
     except DNSException, e:
         syslog('error',
                'DNSException: Unable to query DMARC policy for %s (%s). %s',
               email, dmarc_domain, e.__class__)
-        return False
+        return 'continue'
     else:
 # people are already being dumb, don't trust them to provide honest DNS
 # where the answer section only contains what was asked for, nor to include
@@ -1223,7 +1244,7 @@ def IsDMARCProhibited(mlist, email):
             dmarcs = filter(lambda n: n.startswith('v=DMARC1;'),
                             results_by_name[name])
             if len(dmarcs) == 0:
-                return False
+                return 'continue'
             if len(dmarcs) > 1:
                 syslog('error',
                        """RRset of TXT records for %s has %d v=DMARC1 entries;

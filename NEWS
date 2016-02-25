@@ -51,6 +51,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - If DMARC lookup fails to find a policy, also try the Organizational
+      Domain.  (LP: #1549420)
+
     - Modified contrib/mmdsr to correctly report No such list names that
       contain ".
 
