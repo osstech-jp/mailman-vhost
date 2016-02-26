@@ -34,6 +34,7 @@ import time
 import errno
 import base64
 import random
+import urllib2
 import urlparse
 import htmlentitydefs
 import email.Header
@@ -1156,6 +1157,79 @@ def suspiciousHTML(html):
         return False
 
 
+# The next functions read data from
+# https://publicsuffix.org/list/public_suffix_list.dat and implement the
+# algorithm at https://publicsuffix.org/list/ to find the "Organizational
+# Domain corresponding to a From: domain.
+
+URL = 'https://publicsuffix.org/list/public_suffix_list.dat'
+s_dict = {}
+
+def get_suffixes(url):
+    """This loads the data from the url argument into s_dict for use by
+get_org_dom."""
+    global s_dict
+    if s_dict:
+        return
+    try:
+        d = urllib2.urlopen(url)
+    except urllib2.URLError, e:
+        syslog('error',
+               'Unable to retrieve data from %s: %s',
+               url, e)
+        return
+    for line in d.readlines():
+        if not line or line.startswith(' ') or line.startswith('//'):
+            continue
+        line = re.sub(' .*', '', line.strip())
+        if not line:
+            continue
+        parts = line.split('.')
+        if parts[0].startswith('!'):
+            exc = True
+            parts = [parts[0][1:]] + parts[1:]
+        else:
+            exc = False
+        parts.reverse()
+        k = '.'.join(parts)
+        s_dict[k] = exc
+
+def _get_dom(d, l):
+    """A helper to get a domain name consisting of the first l labels in d."""
+    dom = d[:min(l+1, len(d))]
+    dom.reverse()
+    return '.'.join(dom)
+
+def get_org_dom(domain):
+    """Given a domain name, this returns the corresponding Organizational
+Domain which may be the same as the input."""
+    global s_dict
+    if not s_dict:
+        get_suffixes(URL)
+    hits = []
+    d = domain.split('.')
+    d.reverse()
+    for k in s_dict.keys():
+        ks = k.split('.')
+        if len(d) >= len(ks):
+            for i in range(len(ks)-1):
+                if d[i] != ks[i] and ks[i] != '*':
+                    break
+            else:
+                if d[len(ks)-1] == ks[-1] or ks[-1] == '*':
+                    hits.append(k)
+    if not hits:
+        return _get_dom(d, 1)
+    l = 0
+    for k in hits:
+        if s_dict[k]:
+            # It's an exception
+            return _get_dom(d, len(k.split('.'))-1)
+        if len(k.split('.')) > l:
+            l = len(k.split('.'))
+    return _get_dom(d, l)
+
+
 # This takes an email address, and returns True if DMARC policy is p=reject
 # or possibly quarantine.
 def IsDMARCProhibited(mlist, email):
@@ -1170,25 +1244,15 @@ def IsDMARCProhibited(mlist, email):
     at_sign = email.find('@')
     if at_sign < 1:
         return False
-    dparts = email[at_sign+1:].split('.')
-    # The following is a way of testing the "Organizational Domain" for DMARC
-    # policy if the From: domain doesn't publish a policy.  What we're doing
-    # is clearly wrong. I.e., if the From: domain is a.b.c.example.com, we
-    # should lookup _dmarc.a.b.c.example.com and if no DMARC policy there,
-    # we should look up only _dmarc.example.com.  The problem is not all
-    # Organizational Domains are two "words" and determining any particular
-    # Organizational Domain requires applying a non-trivial algorithm to a
-    # large, somewhat dynamic data set.  What we do is look up all the
-    # intermediate domains on the theory that if _dmarc.a.b.c.example.com has
-    # no valid DMARC policy then the intermediates won't either.  We will also
-    # err with a domain like x.y.x.co.uk. Here we will go to far and also look
-    # up _dmarc.co.uk which is also wrong but hopefully won't return a policy.
-    # This is clearly a flawed approach, but hopefully good enough.
-    while len(dparts) > 1:
-        x = _DMARCProhibited(mlist, email, '_dmarc.' + '.'.join(dparts))
+    f_dom = email[at_sign+1:]
+    x = _DMARCProhibited(mlist, email, '_dmarc.' + f_dom)
+    if x != 'continue':
+        return x
+    o_dom = get_org_dom(f_dom)
+    if o_dom != f_dom:
+        x = _DMARCProhibited(mlist, email, '_dmarc.' + o_dom)
         if x != 'continue':
             return x
-        dparts = dparts[1:]
     return False
 
 def _DMARCProhibited(mlist, email, dmarc_domain):
