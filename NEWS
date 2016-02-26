@@ -52,7 +52,10 @@ Here is a history of user visible changes to Mailman.
   Bug fixes and other patches
 
     - If DMARC lookup fails to find a policy, also try the Organizational
-      Domain.  (LP: #1549420)
+      Domain.  Associated with this is a new mm_cfg.py setting
+      DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL which sets the URL used to
+      retrieve the data for the algorithm that computes the Organizational
+      Domain.  See https://publicsuffix.org/list/ for info.  (LP: #1549420)
 
     - Modified contrib/mmdsr to correctly report No such list names that
       contain ".

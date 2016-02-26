@@ -1162,7 +1162,6 @@ def suspiciousHTML(html):
 # algorithm at https://publicsuffix.org/list/ to find the "Organizational
 # Domain corresponding to a From: domain.
 
-URL = 'https://publicsuffix.org/list/public_suffix_list.dat'
 s_dict = {}
 
 def get_suffixes(url):
@@ -1205,7 +1204,7 @@ def get_org_dom(domain):
 Domain which may be the same as the input."""
     global s_dict
     if not s_dict:
-        get_suffixes(URL)
+        get_suffixes(mm_cfg.DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL)
     hits = []
     d = domain.split('.')
     d.reverse()
