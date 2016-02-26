@@ -136,7 +136,7 @@ SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 # in the installation.  This supplements the individual list's ban_list.
 # For example, to ban xxx@aol.com and any @gmail.com address beginning with
 # yyy, set
-# GLOBAL_BAN_LIST = ['xxx@aol.com', '^yyy.*@gmail\.com']
+# GLOBAL_BAN_LIST = ['xxx@aol.com', '^yyy.*@gmail\.com$']
 GLOBAL_BAN_LIST = []
 
 # Command that is used to convert text/html parts into plain text.  This

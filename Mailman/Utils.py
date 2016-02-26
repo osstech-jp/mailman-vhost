@@ -1165,8 +1165,8 @@ def suspiciousHTML(html):
 s_dict = {}
 
 def get_suffixes(url):
-    """This loads the data from the url argument into s_dict for use by
-get_org_dom."""
+    """This loads and parses the data from the url argument into s_dict for
+    use by get_org_dom."""
     global s_dict
     if s_dict:
         return
@@ -1194,14 +1194,15 @@ get_org_dom."""
         s_dict[k] = exc
 
 def _get_dom(d, l):
-    """A helper to get a domain name consisting of the first l labels in d."""
+    """A helper to get a domain name consisting of the first l+1 labels
+    in d."""
     dom = d[:min(l+1, len(d))]
     dom.reverse()
     return '.'.join(dom)
 
 def get_org_dom(domain):
     """Given a domain name, this returns the corresponding Organizational
-Domain which may be the same as the input."""
+    Domain which may be the same as the input."""
     global s_dict
     if not s_dict:
         get_suffixes(mm_cfg.DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL)
