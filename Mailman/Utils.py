@@ -1178,12 +1178,12 @@ get_org_dom."""
                url, e)
         return
     for line in d.readlines():
-        if not line or line.startswith(' ') or line.startswith('//'):
+        if not line.strip() or line.startswith(' ') or line.startswith('//'):
             continue
         line = re.sub(' .*', '', line.strip())
         if not line:
             continue
-        parts = line.split('.')
+        parts = line.lower().split('.')
         if parts[0].startswith('!'):
             exc = True
             parts = [parts[0][1:]] + parts[1:]
@@ -1206,7 +1206,7 @@ Domain which may be the same as the input."""
     if not s_dict:
         get_suffixes(mm_cfg.DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL)
     hits = []
-    d = domain.split('.')
+    d = domain.lower().split('.')
     d.reverse()
     for k in s_dict.keys():
         ks = k.split('.')
