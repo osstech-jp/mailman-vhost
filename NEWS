@@ -36,6 +36,11 @@ Here is a history of user visible changes to Mailman.
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
+    - Also thanks to Miloslav Trmac and Yasuhito FUTATSUKI, the l10n for
+      Mailman's bin/ commands has been fixed to display using the character
+      set of the user's work station even when Mailman's character set for
+      the language is different.  (LP: #558167)
+
     - The Polish translation has been updated by Stefan Plewako.
 
     - The German translation has been updated by Mirian Margiani and
