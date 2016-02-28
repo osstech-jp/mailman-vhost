@@ -39,7 +39,10 @@ Here is a history of user visible changes to Mailman.
     - Also thanks to Miloslav Trmac and Yasuhito FUTATSUKI, the l10n for
       Mailman's bin/ commands has been fixed to display using the character
       set of the user's work station even when Mailman's character set for
-      the language is different.  (LP: #558167)
+      the language is different.  Because this has not been tested over a
+      wide set of locales, there is an mm_cfg.py switch
+      DISABLE_COMMAND_LOCALE_CSET to disable it if it causes problems.
+      (LP: #558167)
 
     - The Polish translation has been updated by Stefan Plewako.
 

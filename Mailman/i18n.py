@@ -33,7 +33,8 @@ def _get_ctype_charset():
     locale.setlocale(locale.LC_CTYPE, old)
     return charset
 
-_ctype_charset = _get_ctype_charset()
+if not mm_cfg.DISABLE_COMMAND_LOCALE_CSET:
+    _ctype_charset = _get_ctype_charset()
 
 
 
@@ -114,8 +115,12 @@ def tolocale(s):
         return s
     return unicode(s, source, 'replace').encode(_ctype_charset, 'replace')
 
-def C_(s):
-    return tolocale(_(s, 2))
+if mm_cfg.DISABLE_COMMAND_LOCALE_CSET:
+    C_ = _
+else:
+    def C_(s):
+        return tolocale(_(s, 2))
+
     
 
 def ctime(date):

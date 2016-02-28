@@ -153,6 +153,13 @@ ACCEPTABLE_LISTNAME_CHARACTERS = '[-+_.=a-z0-9]'
 # in list rosters?  Defaults to No to preserve prior behavior.
 ROSTER_DISPLAY_REALNAME = No
 
+# Beginning in Mailman 2.1.21, localized help and some other output from
+# Mailman's bin/ commands is converted to the character set of the user's
+# workstation (LC_CTYPE) if different from the character set of the language.
+# This is not well tested over a wide range of locales, so if it causes
+# problems, it can be disabled by setting the following to Yes.
+DISABLE_COMMAND_LOCALE_CSET = No
+
 
 
 #####
