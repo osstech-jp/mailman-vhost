@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 2001-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -46,12 +46,12 @@ import getopt
 
 import paths
 from Mailman import mm_cfg
-from Mailman.i18n import _
+from Mailman.i18n import C_
 
 
 
 def usage(code, msg=''):
-    print _(__doc__.replace('%', '%%'))
+    print C_(__doc__.replace('%', '%%'))
     if msg:
         print msg
     sys.exit(code)
@@ -88,7 +88,7 @@ add_virtualhost(url_host, domain)
     # Make sure list is locked.
     if not mlist.Locked():
         if verbose:
-            print _('Locking list')
+            print C_('Locking list')
         mlist.Lock()
     if urlhost:
         web_page_url = mm_cfg.DEFAULT_URL_PATTERN % urlhost
@@ -98,20 +98,20 @@ add_virtualhost(url_host, domain)
         mailhost = mm_cfg.DEFAULT_EMAIL_HOST
 
     if verbose:
-        print _('Setting web_page_url to: %(web_page_url)s')
+        print C_('Setting web_page_url to: %(web_page_url)s')
     mlist.web_page_url = web_page_url
     if verbose:
-        print _('Setting host_name to: %(mailhost)s')
+        print C_('Setting host_name to: %(mailhost)s')
     mlist.host_name = mailhost
     if firstname:
         if verbose:
-            print _('Setting local_part to: %(firstname)s')
+            print C_('Setting local_part to: %(firstname)s')
         mlist.local_part = firstname
     if listname:
         if verbose:
-            print _('Setting list_address to %(listname)s')
+            print C_('Setting list_address to %(listname)s')
         list_address = listname
-    print _('Saving list')
+    print C_('Saving list')
     mlist.Save()
     mlist.Unlock()
 

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -34,6 +34,7 @@ import time
 import errno
 import base64
 import random
+import urllib2
 import urlparse
 import htmlentitydefs
 import email.Header
@@ -234,6 +235,14 @@ _valid_domain = re.compile('[-a-z0-9]', re.IGNORECASE)
 
 def ValidateEmail(s):
     """Verify that an email address isn't grossly evil."""
+    # If a user submits a form or URL with post data or query fragments
+    # with multiple occurrences of the same variable, we can get a list
+    # here.  Be as careful as possible.
+    if isinstance(s, list) or isinstance(s, tuple):
+        if len(s) == 0:
+            s = ''
+        else:
+            s = s[-1]
     # Pretty minimal, cheesy check.  We could do better...
     if not s or s.count(' ') > 0:
         raise Errors.MMBadEmailError
@@ -487,6 +496,14 @@ def check_global_password(response, siteadmin=True):
 
 _ampre = re.compile('&amp;((?:#[0-9]+|[a-z]+);)', re.IGNORECASE)
 def websafe(s):
+    # If a user submits a form or URL with post data or query fragments
+    # with multiple occurrences of the same variable, we can get a list
+    # here.  Be as careful as possible.
+    if isinstance(s, list) or isinstance(s, tuple):
+        if len(s) == 0:
+            s = ''
+        else:
+            s = s[-1]
     if mm_cfg.BROKEN_BROWSER_WORKAROUND:
         # Archiver can pass unicode here. Just skip them as the
         # archiver escapes non-ascii anyway.
@@ -1186,6 +1203,79 @@ def suspiciousHTML(html):
         return False
 
 
+# The next functions read data from
+# https://publicsuffix.org/list/public_suffix_list.dat and implement the
+# algorithm at https://publicsuffix.org/list/ to find the "Organizational
+# Domain corresponding to a From: domain.
+
+s_dict = {}
+
+def get_suffixes(url):
+    """This loads and parses the data from the url argument into s_dict for
+    use by get_org_dom."""
+    global s_dict
+    if s_dict:
+        return
+    try:
+        d = urllib2.urlopen(url)
+    except urllib2.URLError, e:
+        syslog('error',
+               'Unable to retrieve data from %s: %s',
+               url, e)
+        return
+    for line in d.readlines():
+        if not line.strip() or line.startswith(' ') or line.startswith('//'):
+            continue
+        line = re.sub(' .*', '', line.strip())
+        if not line:
+            continue
+        parts = line.lower().split('.')
+        if parts[0].startswith('!'):
+            exc = True
+            parts = [parts[0][1:]] + parts[1:]
+        else:
+            exc = False
+        parts.reverse()
+        k = '.'.join(parts)
+        s_dict[k] = exc
+
+def _get_dom(d, l):
+    """A helper to get a domain name consisting of the first l+1 labels
+    in d."""
+    dom = d[:min(l+1, len(d))]
+    dom.reverse()
+    return '.'.join(dom)
+
+def get_org_dom(domain):
+    """Given a domain name, this returns the corresponding Organizational
+    Domain which may be the same as the input."""
+    global s_dict
+    if not s_dict:
+        get_suffixes(mm_cfg.DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL)
+    hits = []
+    d = domain.lower().split('.')
+    d.reverse()
+    for k in s_dict.keys():
+        ks = k.split('.')
+        if len(d) >= len(ks):
+            for i in range(len(ks)-1):
+                if d[i] != ks[i] and ks[i] != '*':
+                    break
+            else:
+                if d[len(ks)-1] == ks[-1] or ks[-1] == '*':
+                    hits.append(k)
+    if not hits:
+        return _get_dom(d, 1)
+    l = 0
+    for k in hits:
+        if s_dict[k]:
+            # It's an exception
+            return _get_dom(d, len(k.split('.'))-1)
+        if len(k.split('.')) > l:
+            l = len(k.split('.'))
+    return _get_dom(d, l)
+
+
 # This takes an email address, and returns True if DMARC policy is p=reject
 # or possibly quarantine.
 def IsDMARCProhibited(mlist, email):
@@ -1200,7 +1290,18 @@ def IsDMARCProhibited(mlist, email):
     at_sign = email.find('@')
     if at_sign < 1:
         return False
-    dmarc_domain = '_dmarc.' + email[at_sign+1:]
+    f_dom = email[at_sign+1:]
+    x = _DMARCProhibited(mlist, email, '_dmarc.' + f_dom)
+    if x != 'continue':
+        return x
+    o_dom = get_org_dom(f_dom)
+    if o_dom != f_dom:
+        x = _DMARCProhibited(mlist, email, '_dmarc.' + o_dom)
+        if x != 'continue':
+            return x
+    return False
+
+def _DMARCProhibited(mlist, email, dmarc_domain):
 
     try:
         resolver = dns.resolver.Resolver()
@@ -1208,12 +1309,12 @@ def IsDMARCProhibited(mlist, email):
         resolver.lifetime = float(mm_cfg.DMARC_RESOLVER_LIFETIME)
         txt_recs = resolver.query(dmarc_domain, dns.rdatatype.TXT)
     except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
-        return False
+        return 'continue'
     except DNSException, e:
         syslog('error',
                'DNSException: Unable to query DMARC policy for %s (%s). %s',
               email, dmarc_domain, e.__class__)
-        return False
+        return 'continue'
     else:
 # people are already being dumb, don't trust them to provide honest DNS
 # where the answer section only contains what was asked for, nor to include
@@ -1253,7 +1354,7 @@ def IsDMARCProhibited(mlist, email):
             dmarcs = filter(lambda n: n.startswith('v=DMARC1;'),
                             results_by_name[name])
             if len(dmarcs) == 0:
-                return False
+                return 'continue'
             if len(dmarcs) > 1:
                 syslog('error',
                        """RRset of TXT records for %s has %d v=DMARC1 entries;
@@ -1273,7 +1374,63 @@ def IsDMARCProhibited(mlist, email):
                           mlist.real_name,  email, dmarc_domain, name, entry)
                     return True
 
+                if (mlist.dmarc_none_moderation_action and
+                    mlist.dmarc_quarantine_moderation_action and
+                    mlist.dmarc_moderation_action in (1, 2) and
+                    re.search(r'\bp=none\b', entry, re.IGNORECASE)):
+                    syslog('vette',
+                  '%s: DMARC lookup for %s (%s) found p=none in %s = %s',
+                          mlist.real_name,  email, dmarc_domain, name, entry)
+                    return True
+
     return False
+
+
+# Check a known list in order to auto-moderate verbose members
+# dictionary to remember recent posts.
+recentMemberPostings = {}
+# counter of times through
+clean_count = 0
+def IsVerboseMember(mlist, email):
+    """For lists that request it, we keep track of recent posts by address.
+A message from an address to a list, if the list requests it, is remembered
+for a specified time whether or not the address is a list member, and if the
+address is a member and the member is over the threshold for the list, that
+fact is returned."""
+
+    global clean_count
+
+    if mlist.member_verbosity_threshold == 0:
+        return False
+
+    email = email.lower()
+
+    now = time.time()
+    recentMemberPostings.setdefault(email,[]).append(now +
+                                       float(mlist.member_verbosity_interval)
+                                   )
+    x = range(len(recentMemberPostings[email]))
+    x.reverse()
+    for i in x:
+        if recentMemberPostings[email][i] < now:
+            del recentMemberPostings[email][i]
+
+    clean_count += 1
+    if clean_count >= mm_cfg.VERBOSE_CLEAN_LIMIT:
+        clean_count = 0
+        for addr in recentMemberPostings.keys():
+            x = range(len(recentMemberPostings[addr]))
+            x.reverse()
+            for i in x:
+                if recentMemberPostings[addr][i] < now:
+                    del recentMemberPostings[addr][i]
+            if not recentMemberPostings[addr]:
+                del recentMemberPostings[addr]
+    if not mlist.isMember(email):
+        return False
+    return (len(recentMemberPostings.get(email, [])) >=
+                mlist.member_verbosity_threshold
+           )
 
 
 def check_eq_domains(email, domains_list):
