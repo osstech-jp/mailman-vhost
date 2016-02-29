@@ -5,6 +5,13 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.22 (xx-xxx-xxxx)
+
+  Bug fixes and other patches
+
+    - Don't collapse multipart with a single sub-part inside multipart/signed
+      parts.  (LP: #1551075)
+
 2.1.21 (28-Feb-2016)
 
   New Features
