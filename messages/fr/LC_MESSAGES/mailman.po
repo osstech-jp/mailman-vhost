@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1b6\n"
-"POT-Creation-Date: Fri Feb 12 10:57:02 2016\n"
+"POT-Creation-Date: Sat Feb 27 14:41:07 2016\n"
 "PO-Revision-Date: 2003-01-22 12:50-0500\n"
 "Last-Translator: Pascal George <george@lyon.inserm.fr>\n"
 "Language-Team: fr <traduc@traduc.org>\n"
@@ -105,7 +105,7 @@ msgstr "Juillet"
 msgid "June"
 msgstr "Juin"
 
-#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:107
+#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:130
 msgid "May"
 msgstr "Mai"
 
@@ -227,7 +227,7 @@ msgid " The last bounce received from you was dated %(date)s"
 msgstr " Le dernier rejet en provenance de votre adresse date du %(date)s"
 
 #: Mailman/Bouncer.py:329 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:401
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:403
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:240
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
@@ -1071,7 +1071,7 @@ msgstr "Adresse courriel Mauvaise/Invalide"
 msgid "Hostile address (illegal characters)"
 msgstr "Adresse hostile (caractères illégaux)"
 
-#: Mailman/Cgi/admin.py:1463 bin/add_members:149 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1463 bin/add_members:150 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr ""
@@ -2110,15 +2110,15 @@ msgstr "Vous n'êtes pas autorisé à créer de nouvelles listes"
 msgid "Unknown virtual host: %(safehostname)s"
 msgstr "Hôte virtuel inconnu : %(safehostname)s"
 
-#: Mailman/Cgi/create.py:200 bin/newlist:218
+#: Mailman/Cgi/create.py:200 bin/newlist:219
 msgid "Bad owner email address: %(s)s"
 msgstr "Mauvaise adresse courriel du propriétaire : %(s)s"
 
-#: Mailman/Cgi/create.py:205 bin/newlist:181 bin/newlist:222
+#: Mailman/Cgi/create.py:205 bin/newlist:182 bin/newlist:223
 msgid "List already exists: %(listname)s"
 msgstr "La liste %(listname)s existe déjà"
 
-#: Mailman/Cgi/create.py:213 bin/newlist:216
+#: Mailman/Cgi/create.py:213 bin/newlist:217
 msgid "Illegal list name: %(s)s"
 msgstr "Option invalide : %(s)s"
 
@@ -2131,7 +2131,7 @@ msgstr ""
 "liste\n"
 "\tPour assistance veuillez contactez l'administrateur du site."
 
-#: Mailman/Cgi/create.py:255 bin/newlist:264
+#: Mailman/Cgi/create.py:255 bin/newlist:265
 msgid "Your new mailing list: %(listname)s"
 msgstr "Votre nouvelle liste de diffusion : %(listname)s"
 
@@ -3910,161 +3910,161 @@ msgstr "Abonnés en mode non-groupé (normaux) :"
 msgid "Digest members:"
 msgstr "Abonnés en remise groupée :"
 
-#: Mailman/Defaults.py:1675
+#: Mailman/Defaults.py:1682
 msgid "Arabic"
 msgstr "Arabe"
 
-#: Mailman/Defaults.py:1676
+#: Mailman/Defaults.py:1683
 #, fuzzy
 msgid "Asturian"
 msgstr "Estonien"
 
-#: Mailman/Defaults.py:1677
+#: Mailman/Defaults.py:1684
 msgid "Catalan"
 msgstr "Catalan"
 
-#: Mailman/Defaults.py:1678
+#: Mailman/Defaults.py:1685
 msgid "Czech"
 msgstr "Tchèque"
 
-#: Mailman/Defaults.py:1679
+#: Mailman/Defaults.py:1686
 msgid "Danish"
 msgstr "Danois"
 
-#: Mailman/Defaults.py:1680
+#: Mailman/Defaults.py:1687
 msgid "German"
 msgstr "Allemand"
 
-#: Mailman/Defaults.py:1681
+#: Mailman/Defaults.py:1688
 msgid "English (USA)"
 msgstr "Anglais (USA)"
 
-#: Mailman/Defaults.py:1682
+#: Mailman/Defaults.py:1689
 msgid "Spanish (Spain)"
 msgstr "Espagnol (Espagne)"
 
-#: Mailman/Defaults.py:1683
+#: Mailman/Defaults.py:1690
 msgid "Estonian"
 msgstr "Estonien"
 
-#: Mailman/Defaults.py:1684
+#: Mailman/Defaults.py:1691
 msgid "Euskara"
 msgstr "Basque"
 
-#: Mailman/Defaults.py:1685
+#: Mailman/Defaults.py:1692
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1686
+#: Mailman/Defaults.py:1693
 msgid "Finnish"
 msgstr "Finlandais"
 
-#: Mailman/Defaults.py:1687
+#: Mailman/Defaults.py:1694
 msgid "French"
 msgstr "Français"
 
-#: Mailman/Defaults.py:1688
+#: Mailman/Defaults.py:1695
 #, fuzzy
 msgid "Galician"
 msgstr "Italien"
 
-#: Mailman/Defaults.py:1689
+#: Mailman/Defaults.py:1696
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1690
+#: Mailman/Defaults.py:1697
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1691
+#: Mailman/Defaults.py:1698
 msgid "Croatian"
 msgstr "Croate"
 
-#: Mailman/Defaults.py:1692
+#: Mailman/Defaults.py:1699
 msgid "Hungarian"
 msgstr "Hongrois"
 
-#: Mailman/Defaults.py:1693
+#: Mailman/Defaults.py:1700
 msgid "Interlingua"
 msgstr "Interlangue"
 
-#: Mailman/Defaults.py:1694
+#: Mailman/Defaults.py:1701
 msgid "Italian"
 msgstr "Italien"
 
-#: Mailman/Defaults.py:1695
+#: Mailman/Defaults.py:1702
 msgid "Japanese"
 msgstr "Japonais"
 
-#: Mailman/Defaults.py:1696
+#: Mailman/Defaults.py:1703
 msgid "Korean"
 msgstr "Coréen"
 
-#: Mailman/Defaults.py:1697
+#: Mailman/Defaults.py:1704
 msgid "Lithuanian"
 msgstr "Lituanien"
 
-#: Mailman/Defaults.py:1698
+#: Mailman/Defaults.py:1705
 msgid "Dutch"
 msgstr "Hollandais"
 
-#: Mailman/Defaults.py:1699
+#: Mailman/Defaults.py:1706
 msgid "Norwegian"
 msgstr "Norvégien"
 
-#: Mailman/Defaults.py:1700
+#: Mailman/Defaults.py:1707
 msgid "Polish"
 msgstr "Polonais"
 
-#: Mailman/Defaults.py:1701
+#: Mailman/Defaults.py:1708
 msgid "Portuguese"
 msgstr "Portugais"
 
-#: Mailman/Defaults.py:1702
+#: Mailman/Defaults.py:1709
 msgid "Portuguese (Brazil)"
 msgstr "Portugais (Brésil)"
 
-#: Mailman/Defaults.py:1703
+#: Mailman/Defaults.py:1710
 msgid "Romanian"
 msgstr "Roumain"
 
-#: Mailman/Defaults.py:1704
+#: Mailman/Defaults.py:1711
 msgid "Russian"
 msgstr "Russe"
 
-#: Mailman/Defaults.py:1705
+#: Mailman/Defaults.py:1712
 msgid "Slovak"
 msgstr "Slovaque"
 
-#: Mailman/Defaults.py:1706
+#: Mailman/Defaults.py:1713
 msgid "Slovenian"
 msgstr "Slovène"
 
-#: Mailman/Defaults.py:1707
+#: Mailman/Defaults.py:1714
 msgid "Serbian"
 msgstr "Serbe"
 
-#: Mailman/Defaults.py:1708
+#: Mailman/Defaults.py:1715
 msgid "Swedish"
 msgstr "Suédois"
 
-#: Mailman/Defaults.py:1709
+#: Mailman/Defaults.py:1716
 msgid "Turkish"
 msgstr "Turque"
 
-#: Mailman/Defaults.py:1710
+#: Mailman/Defaults.py:1717
 msgid "Ukrainian"
 msgstr "Ukrainien"
 
-#: Mailman/Defaults.py:1711
+#: Mailman/Defaults.py:1718
 msgid "Vietnamese"
 msgstr "Vietnamien"
 
-#: Mailman/Defaults.py:1712
+#: Mailman/Defaults.py:1719
 msgid "Chinese (China)"
 msgstr "Chinois (Chine)"
 
-#: Mailman/Defaults.py:1713
+#: Mailman/Defaults.py:1720
 msgid "Chinese (Taiwan)"
 msgstr "Chinois (Taiwan)"
 
@@ -8479,7 +8479,7 @@ msgstr ""
 "par Mailman est attaché à celui-ci.\n"
 "\n"
 
-#: Mailman/Handlers/CookHeaders.py:159
+#: Mailman/Handlers/CookHeaders.py:161
 #, fuzzy
 msgid "%(realname)s via %(lrn)s"
 msgstr "Administration %(realname)s (%(label)s)"
@@ -8939,8 +8939,8 @@ msgstr "Vérification des permissions sur %(file)s"
 msgid "%(file)s permissions must be 066x (got %(octmode)s)"
 msgstr "les permissions de %(file)s doivent être 066x (reçu %(octmode)s)"
 
-#: Mailman/MTA/Postfix.py:373 Mailman/MTA/Postfix.py:400
-#: Mailman/MTA/Postfix.py:411 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:373 Mailman/MTA/Postfix.py:401
+#: Mailman/MTA/Postfix.py:412 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -8956,7 +8956,7 @@ msgstr "Vérification de la propriété de %(dbfile)s"
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "%(dbfile)s appartient à %(owner)s (doit appartenir à %(user)s)"
 
-#: Mailman/MTA/Postfix.py:409
+#: Mailman/MTA/Postfix.py:410
 msgid "%(dbfile)s permissions must be 066x (got %(octmode)s)"
 msgstr "les permissions de %(dbfile)s doivent être 066x (reçu %(octmode)s)"
 
@@ -8976,7 +8976,7 @@ msgstr " à partir de %(remote)s"
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "les abonnements à %(realname)s nécessitent l'approbation du modérateur"
 
-#: Mailman/MailList.py:1038 bin/add_members:252
+#: Mailman/MailList.py:1038 bin/add_members:253
 msgid "%(realname)s subscription notification"
 msgstr "notification d'abonnement de %(realname)s"
 
@@ -9103,83 +9103,83 @@ msgstr "Python Powered"
 msgid "Gnu's Not Unix"
 msgstr "Gnus's Not Unix"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Mon"
 msgstr "Lun"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Thu"
 msgstr "Jeu"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Tue"
 msgstr "Mar"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Wed"
 msgstr "Mer"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Fri"
 msgstr "Ven"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Sat"
 msgstr "Sam"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Sun"
 msgstr "Dim"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Apr"
 msgstr "Avr"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Feb"
 msgstr "Fév"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Jan"
 msgstr "Jan"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Jun"
 msgstr "Juin"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Mar"
 msgstr "Mar"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Aug"
 msgstr "Aou"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Dec"
 msgstr "Déc"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Jul"
 msgstr "Juil"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Nov"
 msgstr "Nov"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Oct"
 msgstr "Oct"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Sep"
 msgstr "Sep"
 
-#: Mailman/i18n.py:111
+#: Mailman/i18n.py:134
 msgid "Server Local Time"
 msgstr "Serveur de temps local"
 
-#: Mailman/i18n.py:150
+#: Mailman/i18n.py:173
 msgid ""
 "%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s %(year)04i"
 msgstr ""
@@ -9278,47 +9278,47 @@ msgstr ""
 "Vous devez spécifier au moins l'une des options -r ou -d. Un seul des\n"
 "fichiers peut être `-'.\n"
 
-#: bin/add_members:146
+#: bin/add_members:147
 msgid "Already a member: %(member)s"
 msgstr "Déjà abonné : %(member)s"
 
-#: bin/add_members:152
+#: bin/add_members:153
 msgid "Bad/Invalid email address: blank line"
 msgstr "Adresse courriel Mauvaise/Invalide : ligne vide"
 
-#: bin/add_members:154
+#: bin/add_members:155
 msgid "Bad/Invalid email address: %(member)s"
 msgstr "Adresse courriel Mauvaise/Invalide : %(member)s"
 
-#: bin/add_members:156
+#: bin/add_members:157
 msgid "Hostile address (illegal characters): %(member)s"
 msgstr "Adresse hostile (caractères illégaux) : %(member)s"
 
-#: bin/add_members:158
+#: bin/add_members:159
 msgid "Subscribed: %(member)s"
 msgstr "Abonné : %(member)s"
 
-#: bin/add_members:199
+#: bin/add_members:200
 msgid "Bad argument to -w/--welcome-msg: %(arg)s"
 msgstr "Mauvais argument fourni à -w/--welcome-msg : %(arg)s"
 
-#: bin/add_members:206
+#: bin/add_members:207
 msgid "Bad argument to -a/--admin-notify: %(arg)s"
 msgstr "Mauvais argument fourni à -a/--admin-notify : %(arg)s"
 
-#: bin/add_members:214
+#: bin/add_members:215
 msgid "Cannot read both digest and normal members from standard input."
 msgstr ""
 "Ne peut à la fois lire, à partir de l'entrée standard, les abonnés\n"
 "normaux et les abonnés de type digest."
 
-#: bin/add_members:220 bin/config_list:109 bin/export.py:271
-#: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:251
+#: bin/add_members:221 bin/config_list:110 bin/export.py:271
+#: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:252
 #: bin/sync_members:222 cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "Liste introuvable : %(listname)s"
 
-#: bin/add_members:240 bin/change_pw:158 bin/check_db:114 bin/discard:83
+#: bin/add_members:241 bin/change_pw:159 bin/check_db:114 bin/discard:83
 #: bin/sync_members:244 bin/update:302 bin/update:323 bin/update:577
 #: cron/bumpdigests:78
 msgid "Nothing to do."
@@ -9409,7 +9409,7 @@ msgstr ""
 msgid "listname is required"
 msgstr "Nom de liste requis"
 
-#: bin/arch:143 bin/change_pw:106 bin/config_list:256
+#: bin/arch:143 bin/change_pw:107 bin/config_list:257
 msgid ""
 "No such list \"%(listname)s\"\n"
 "%(e)s"
@@ -9566,23 +9566,23 @@ msgstr ""
 "    --help / -h\n"
 "        Afficher ce message d'aide puis quitter.\n"
 
-#: bin/change_pw:144
+#: bin/change_pw:145
 msgid "Bad arguments: %(strargs)s"
 msgstr "Mauvais arguments : %(strargs)s"
 
-#: bin/change_pw:148
+#: bin/change_pw:149
 msgid "Empty list passwords are not allowed"
 msgstr "Les mot de passe vide ne sont pas admis"
 
-#: bin/change_pw:180
+#: bin/change_pw:181
 msgid "New %(listname)s password: %(notifypassword)s"
 msgstr "Nouveau mot de passe de %(listname)s : %(notifypassword)s"
 
-#: bin/change_pw:189
+#: bin/change_pw:190
 msgid "Your new %(listname)s list password"
 msgstr "Votre nouveau mot de passe pour %(listname)s"
 
-#: bin/change_pw:190
+#: bin/change_pw:191
 msgid ""
 "The site administrator at %(hostname)s has changed the password for your\n"
 "mailing list %(listname)s.  It is now\n"
@@ -10157,7 +10157,7 @@ msgstr ""
 "\n"
 "Les options -o et -i s'excluent mutuellement\n"
 
-#: bin/config_list:117
+#: bin/config_list:118
 msgid ""
 "# -*- python -*-\n"
 "# -*- coding: %(charset)s -*-\n"
@@ -10169,43 +10169,43 @@ msgstr ""
 "## Paramètres de configuration de la liste \"%(listname)s\"\n"
 "## Capturé le %(when)s\n"
 
-#: bin/config_list:143
+#: bin/config_list:144
 msgid "options"
 msgstr "options"
 
-#: bin/config_list:202
+#: bin/config_list:203
 msgid "legal values are:"
 msgstr "Les valeurs admises sont :"
 
-#: bin/config_list:269
+#: bin/config_list:270
 msgid "attribute \"%(k)s\" ignored"
 msgstr "propriété \"%(k)s\" ignorée"
 
-#: bin/config_list:272
+#: bin/config_list:273
 msgid "attribute \"%(k)s\" changed"
 msgstr "propriété \"%(k)s\" modifiée"
 
-#: bin/config_list:278
+#: bin/config_list:279
 msgid "Non-standard property restored: %(k)s"
 msgstr "Propriété non-standard réactivée : %(k)s"
 
-#: bin/config_list:286
+#: bin/config_list:288
 msgid "Invalid value for property: %(k)s"
 msgstr "Valeur invalide pour la propriété : %(k)s"
 
-#: bin/config_list:288
+#: bin/config_list:291
 msgid "Bad email address for option %(k)s: %(v)s"
 msgstr "Adresse courriel invalide pour l'option %(k)s : %(v)s"
 
-#: bin/config_list:345
+#: bin/config_list:348
 msgid "Only one of -i or -o is allowed"
 msgstr "Une seule des options -i ou -o est autorisée"
 
-#: bin/config_list:347
+#: bin/config_list:350
 msgid "One of -i or -o is required"
 msgstr "Une des options -i ou -o est requise"
 
-#: bin/config_list:351
+#: bin/config_list:354
 msgid "List name is required"
 msgstr "Le nom de la liste est requis"
 
@@ -11571,33 +11571,33 @@ msgstr ""
 "\n"
 "Notez que les noms de liste sont ramenés en minuscule.\n"
 
-#: bin/newlist:161
+#: bin/newlist:162
 msgid "Unknown language: %(lang)s"
 msgstr "Langue inconnue : %(lang)s"
 
-#: bin/newlist:166
+#: bin/newlist:167
 msgid "Enter the name of the list: "
 msgstr "Donner le nom de la liste : "
 
-#: bin/newlist:187
+#: bin/newlist:188
 msgid "Enter the email of the person running the list: "
 msgstr "Entrez l'adresse courriel du gestionnaire de la liste : "
 
-#: bin/newlist:192
+#: bin/newlist:193
 msgid "Initial %(listname)s password: "
 msgstr "Mot de passe initial de la liste %(listname)s :"
 
-#: bin/newlist:196
+#: bin/newlist:197
 msgid "The list password cannot be empty"
 msgstr "Le mot de passe de la liste ne peut pas être vide"
 
-#: bin/newlist:219
+#: bin/newlist:220
 msgid ""
 " - owner addresses need to be fully-qualified names like \"owner@example.com"
 "\", not just \"owner\"."
 msgstr ""
 
-#: bin/newlist:243
+#: bin/newlist:244
 msgid "Hit enter to notify %(listname)s owner..."
 msgstr "Tapez sur Entrée pour aviser le propriétaire de %(listname)s..."
 
@@ -12003,35 +12003,35 @@ msgstr "%(msg)s %(listname)s non trouvé en tant que %(filename)s"
 msgid "No such list (or list already deleted): %(listname)s"
 msgstr "Liste introuvable (ou liste déjà supprimée) : %(listname)s"
 
-#: bin/rmlist:107
+#: bin/rmlist:108
 msgid "No such list: %(listname)s.  Removing its residual archives."
 msgstr ""
 "Liste introuvable : %(listname)s. Suppression de ses archives\n"
 "résiduelles."
 
-#: bin/rmlist:111
+#: bin/rmlist:112
 msgid "Not removing archives.  Reinvoke with -a to remove them."
 msgstr ""
 "Archives non supprimées. Réinvoquez avec l'option -a pour les supprimer."
 
-#: bin/rmlist:125
+#: bin/rmlist:126
 msgid "list info"
 msgstr "info liste"
 
-#: bin/rmlist:133
+#: bin/rmlist:134
 msgid "stale lock file"
 msgstr "vieux fichier verrou"
 
-#: bin/rmlist:141
+#: bin/rmlist:142
 #, fuzzy
 msgid "held message file"
 msgstr "tous les messages en attente."
 
-#: bin/rmlist:146 bin/rmlist:148
+#: bin/rmlist:147 bin/rmlist:149
 msgid "private archives"
 msgstr "archives privées"
 
-#: bin/rmlist:150 bin/rmlist:152
+#: bin/rmlist:151 bin/rmlist:153
 msgid "public archives"
 msgstr "archives publiques"
 
@@ -12246,7 +12246,7 @@ msgstr ""
 msgid "Added  : %(s)s"
 msgstr "Ajouté : %(s)s"
 
-#: bin/sync_members:288
+#: bin/sync_members:289
 msgid "Removed: %(s)s"
 msgstr "Suppression de : %(s)s"
 

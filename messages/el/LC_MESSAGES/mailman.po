@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxpaint-2.1pre\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Feb 12 10:57:02 2016\n"
+"POT-Creation-Date: Sat Feb 27 14:41:07 2016\n"
 "PO-Revision-Date: 2011-09-15 11:53+0800\n"
 "Last-Translator: Limperis Antonis <limperis@cti.gr>\n"
 "Language-Team: Greek <listmaster@sch.gr>\n"
@@ -108,7 +108,7 @@ msgstr "Ιούλιος"
 msgid "June"
 msgstr "Ιούνιος"
 
-#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:107
+#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:130
 msgid "May"
 msgstr "Μάϊος"
 
@@ -232,7 +232,7 @@ msgstr ""
 "%(date)s"
 
 #: Mailman/Bouncer.py:329 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:401
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:403
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:240
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
@@ -1112,7 +1112,7 @@ msgstr "Κακή/Όχι Έγκυρη διεύθυνση emai"
 msgid "Hostile address (illegal characters)"
 msgstr "Μη αποδεκτή διεύθυνση (μη αποδεκτοί χαρακτήρες)"
 
-#: Mailman/Cgi/admin.py:1463 bin/add_members:149 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1463 bin/add_members:150 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr "Απαγορευμένη διεύθυνση (matched %(pattern)s)"
@@ -2180,15 +2180,15 @@ msgstr ""
 msgid "Unknown virtual host: %(safehostname)s"
 msgstr "’γνωστος εικονικός εξυπηρετητής: %(safehostname)s"
 
-#: Mailman/Cgi/create.py:200 bin/newlist:218
+#: Mailman/Cgi/create.py:200 bin/newlist:219
 msgid "Bad owner email address: %(s)s"
 msgstr "Κακή ηλεκτρονική διεύθυνση ιδιοκτήτη: %(s)s"
 
-#: Mailman/Cgi/create.py:205 bin/newlist:181 bin/newlist:222
+#: Mailman/Cgi/create.py:205 bin/newlist:182 bin/newlist:223
 msgid "List already exists: %(listname)s"
 msgstr "Η λίστα υπάρχει ήδη: %(listname)s"
 
-#: Mailman/Cgi/create.py:213 bin/newlist:216
+#: Mailman/Cgi/create.py:213 bin/newlist:217
 msgid "Illegal list name: %(s)s"
 msgstr "Μη έγκυρο όνομα λίστας: %(s)s"
 
@@ -2200,7 +2200,7 @@ msgstr ""
 "Κάποιο άγνωστο λάθος συνέβει κατά τη δημιουργία της λίστας.\n"
 "                Παρακαλούμε επικοινωνήστε με το διαχειριστή για βοήθεια."
 
-#: Mailman/Cgi/create.py:255 bin/newlist:264
+#: Mailman/Cgi/create.py:255 bin/newlist:265
 msgid "Your new mailing list: %(listname)s"
 msgstr "Η νέα σας λίστα ηλεκτρονικού ταχυδρομείου: %(listname)s"
 
@@ -4078,159 +4078,159 @@ msgstr "Κανονικά (non-digest) μέλη:"
 msgid "Digest members:"
 msgstr "Μέλη τα οποία λαμβάνουν τα μηνύματα της λίστας συγκεντρωτικά:"
 
-#: Mailman/Defaults.py:1675
+#: Mailman/Defaults.py:1682
 msgid "Arabic"
 msgstr "Αραβικά"
 
-#: Mailman/Defaults.py:1676
+#: Mailman/Defaults.py:1683
 msgid "Asturian"
 msgstr "Εσθονικά"
 
-#: Mailman/Defaults.py:1677
+#: Mailman/Defaults.py:1684
 msgid "Catalan"
 msgstr "Καταλανικά"
 
-#: Mailman/Defaults.py:1678
+#: Mailman/Defaults.py:1685
 msgid "Czech"
 msgstr "Τσέχικα"
 
-#: Mailman/Defaults.py:1679
+#: Mailman/Defaults.py:1686
 msgid "Danish"
 msgstr "Δανέζικα"
 
-#: Mailman/Defaults.py:1680
+#: Mailman/Defaults.py:1687
 msgid "German"
 msgstr "Γερμανικά"
 
-#: Mailman/Defaults.py:1681
+#: Mailman/Defaults.py:1688
 msgid "English (USA)"
 msgstr "Αγγλικά (ΗΠΑ)"
 
-#: Mailman/Defaults.py:1682
+#: Mailman/Defaults.py:1689
 msgid "Spanish (Spain)"
 msgstr "Ισπανικά (Ισπανία)"
 
-#: Mailman/Defaults.py:1683
+#: Mailman/Defaults.py:1690
 msgid "Estonian"
 msgstr "Εσθονικά"
 
-#: Mailman/Defaults.py:1684
+#: Mailman/Defaults.py:1691
 msgid "Euskara"
 msgstr "Βάσκικα"
 
-#: Mailman/Defaults.py:1685
+#: Mailman/Defaults.py:1692
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1686
+#: Mailman/Defaults.py:1693
 msgid "Finnish"
 msgstr "Φιλανδικά"
 
-#: Mailman/Defaults.py:1687
+#: Mailman/Defaults.py:1694
 msgid "French"
 msgstr "Γαλλικά"
 
-#: Mailman/Defaults.py:1688
+#: Mailman/Defaults.py:1695
 msgid "Galician"
 msgstr "Γαλικίας"
 
-#: Mailman/Defaults.py:1689
+#: Mailman/Defaults.py:1696
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1690
+#: Mailman/Defaults.py:1697
 msgid "Hebrew"
 msgstr "Εβραϊκά"
 
-#: Mailman/Defaults.py:1691
+#: Mailman/Defaults.py:1698
 msgid "Croatian"
 msgstr "Κροατικά"
 
-#: Mailman/Defaults.py:1692
+#: Mailman/Defaults.py:1699
 msgid "Hungarian"
 msgstr "Ουγγαρικά"
 
-#: Mailman/Defaults.py:1693
+#: Mailman/Defaults.py:1700
 msgid "Interlingua"
 msgstr "Διαγλωσσικά"
 
-#: Mailman/Defaults.py:1694
+#: Mailman/Defaults.py:1701
 msgid "Italian"
 msgstr "Ιταλικά"
 
-#: Mailman/Defaults.py:1695
+#: Mailman/Defaults.py:1702
 msgid "Japanese"
 msgstr "Ιαπωνικά"
 
-#: Mailman/Defaults.py:1696
+#: Mailman/Defaults.py:1703
 msgid "Korean"
 msgstr "Κορεάτικα"
 
-#: Mailman/Defaults.py:1697
+#: Mailman/Defaults.py:1704
 msgid "Lithuanian"
 msgstr "Λιθουανικά"
 
-#: Mailman/Defaults.py:1698
+#: Mailman/Defaults.py:1705
 msgid "Dutch"
 msgstr "Ολλανδικά"
 
-#: Mailman/Defaults.py:1699
+#: Mailman/Defaults.py:1706
 msgid "Norwegian"
 msgstr "Νορβηγικά"
 
-#: Mailman/Defaults.py:1700
+#: Mailman/Defaults.py:1707
 msgid "Polish"
 msgstr "Πολωνικά"
 
-#: Mailman/Defaults.py:1701
+#: Mailman/Defaults.py:1708
 msgid "Portuguese"
 msgstr "Πορτογαλικά"
 
-#: Mailman/Defaults.py:1702
+#: Mailman/Defaults.py:1709
 msgid "Portuguese (Brazil)"
 msgstr "Πορτογαλικά (Βραζιλία)"
 
-#: Mailman/Defaults.py:1703
+#: Mailman/Defaults.py:1710
 msgid "Romanian"
 msgstr "Ρουμάνικα"
 
-#: Mailman/Defaults.py:1704
+#: Mailman/Defaults.py:1711
 msgid "Russian"
 msgstr "Ρώσικα"
 
-#: Mailman/Defaults.py:1705
+#: Mailman/Defaults.py:1712
 msgid "Slovak"
 msgstr "Σλοβακικά"
 
-#: Mailman/Defaults.py:1706
+#: Mailman/Defaults.py:1713
 msgid "Slovenian"
 msgstr "Σλοβένικα"
 
-#: Mailman/Defaults.py:1707
+#: Mailman/Defaults.py:1714
 msgid "Serbian"
 msgstr "Σέρβικα"
 
-#: Mailman/Defaults.py:1708
+#: Mailman/Defaults.py:1715
 msgid "Swedish"
 msgstr "Σουηδικά"
 
-#: Mailman/Defaults.py:1709
+#: Mailman/Defaults.py:1716
 msgid "Turkish"
 msgstr "Τουρκικά"
 
-#: Mailman/Defaults.py:1710
+#: Mailman/Defaults.py:1717
 msgid "Ukrainian"
 msgstr "Ουκρανικά"
 
-#: Mailman/Defaults.py:1711
+#: Mailman/Defaults.py:1718
 msgid "Vietnamese"
 msgstr "Βιετναμέζικα"
 
-#: Mailman/Defaults.py:1712
+#: Mailman/Defaults.py:1719
 msgid "Chinese (China)"
 msgstr "Κινέζικα (Κίνα)"
 
-#: Mailman/Defaults.py:1713
+#: Mailman/Defaults.py:1720
 msgid "Chinese (Taiwan)"
 msgstr "Κινέζικα (Ταϊβάν)"
 
@@ -8857,7 +8857,7 @@ msgstr ""
 "για διανομή.  Επισυνάπτεται το αρχικό  μήνυμα σας όπως παραλήφθηκε από το "
 "Mailman.\n"
 
-#: Mailman/Handlers/CookHeaders.py:159
+#: Mailman/Handlers/CookHeaders.py:161
 #, fuzzy
 msgid "%(realname)s via %(lrn)s"
 msgstr " (%(label)s) Διαχείριση %(realname)s"
@@ -9322,8 +9322,8 @@ msgid "%(file)s permissions must be 066x (got %(octmode)s)"
 msgstr ""
 " Τα δικαιώματα του %(file)s πρέπει να είναι 066x (ενώ είναι %(octmode)s)"
 
-#: Mailman/MTA/Postfix.py:373 Mailman/MTA/Postfix.py:400
-#: Mailman/MTA/Postfix.py:411 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:373 Mailman/MTA/Postfix.py:401
+#: Mailman/MTA/Postfix.py:412 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -9341,7 +9341,7 @@ msgstr ""
 "Το αρχείο %(dbfile)s έχει ιδιοκτήτη %(owner)s (πρέπει να έχει ιδιοκτήτη "
 "%(user)s"
 
-#: Mailman/MTA/Postfix.py:409
+#: Mailman/MTA/Postfix.py:410
 msgid "%(dbfile)s permissions must be 066x (got %(octmode)s)"
 msgstr ""
 " Τα δικαιώματα του %(dbfile)s πρέπει να είναι 066x (ενώ είναι %(octmode)s)"
@@ -9362,7 +9362,7 @@ msgstr " από την ip %(remote)s"
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "η εγγραφή στην %(realname)s απαιτεί την έγκριση του μεσολαβητή"
 
-#: Mailman/MailList.py:1038 bin/add_members:252
+#: Mailman/MailList.py:1038 bin/add_members:253
 msgid "%(realname)s subscription notification"
 msgstr "ειδοποίηση εγγραφής στην %(realname)s"
 
@@ -9490,83 +9490,83 @@ msgstr "Python Powered"
 msgid "Gnu's Not Unix"
 msgstr "Gnu's όχι Unix"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Mon"
 msgstr "Δευ"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Thu"
 msgstr "Πεμ"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Tue"
 msgstr "Τρί"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Wed"
 msgstr "Τετ"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Fri"
 msgstr "Παρ"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Sat"
 msgstr "Σαβ"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Sun"
 msgstr "Κυρ"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Apr"
 msgstr "Απρ"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Feb"
 msgstr "Φεβ"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Jan"
 msgstr "Ιαν"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Jun"
 msgstr "Ιουν"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Mar"
 msgstr "Μαρ"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Aug"
 msgstr "Αυγ"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Dec"
 msgstr "Δεκ"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Jul"
 msgstr "Ιουλ"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Nov"
 msgstr "Νοε"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Oct"
 msgstr "Οκτ"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Sep"
 msgstr "Σεπ"
 
-#: Mailman/i18n.py:111
+#: Mailman/i18n.py:134
 msgid "Server Local Time"
 msgstr "Τοπική Ώρα Εξυπηρετητή"
 
-#: Mailman/i18n.py:150
+#: Mailman/i18n.py:173
 msgid ""
 "%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s %(year)04i"
 msgstr ""
@@ -9668,47 +9668,47 @@ msgstr ""
 "ένα από\n"
 "αρχεία πρέπει να είναι `-'.\n"
 
-#: bin/add_members:146
+#: bin/add_members:147
 msgid "Already a member: %(member)s"
 msgstr "Είναι ήδη μέλος: %(member)s"
 
-#: bin/add_members:152
+#: bin/add_members:153
 msgid "Bad/Invalid email address: blank line"
 msgstr "Κακή/’κυρη διεύθυνση email: η κενή γραμμή "
 
-#: bin/add_members:154
+#: bin/add_members:155
 msgid "Bad/Invalid email address: %(member)s"
 msgstr "Κακή/’κυρη διεύθυνση email: %(member)s"
 
-#: bin/add_members:156
+#: bin/add_members:157
 msgid "Hostile address (illegal characters): %(member)s"
 msgstr "Εχθρική διεύθυνση (ανεπίτρεπτοι χαρακτήρες): %(member)s"
 
-#: bin/add_members:158
+#: bin/add_members:159
 msgid "Subscribed: %(member)s"
 msgstr "Εγγραφή στη λίστα %(member)s"
 
-#: bin/add_members:199
+#: bin/add_members:200
 msgid "Bad argument to -w/--welcome-msg: %(arg)s"
 msgstr "Εσφαλμένο όρισμα το  -w/--welcome-msg: %(arg)s"
 
-#: bin/add_members:206
+#: bin/add_members:207
 msgid "Bad argument to -a/--admin-notify: %(arg)s"
 msgstr "Εσφαλμένο όρισμα το -a/--admin-notify: %(arg)s"
 
-#: bin/add_members:214
+#: bin/add_members:215
 msgid "Cannot read both digest and normal members from standard input."
 msgstr ""
 "Δεν είναι δυνατόν να διαβαστούν συνοπτικά και κανονικά μέλη από την "
 "τυποποιημένη είσοδο"
 
-#: bin/add_members:220 bin/config_list:109 bin/export.py:271
-#: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:251
+#: bin/add_members:221 bin/config_list:110 bin/export.py:271
+#: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:252
 #: bin/sync_members:222 cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "Δεν υπάρχει τέτοια λίστα: %(listname)s"
 
-#: bin/add_members:240 bin/change_pw:158 bin/check_db:114 bin/discard:83
+#: bin/add_members:241 bin/change_pw:159 bin/check_db:114 bin/discard:83
 #: bin/sync_members:244 bin/update:302 bin/update:323 bin/update:577
 #: cron/bumpdigests:78
 msgid "Nothing to do."
@@ -9813,7 +9813,7 @@ msgstr ""
 msgid "listname is required"
 msgstr "απαιτείται το όνομα της λίστας"
 
-#: bin/arch:143 bin/change_pw:106 bin/config_list:256
+#: bin/arch:143 bin/change_pw:107 bin/config_list:257
 msgid ""
 "No such list \"%(listname)s\"\n"
 "%(e)s"
@@ -9980,23 +9980,23 @@ msgstr ""
 "    --help / -h\n"
 "        Εκτυπώνει το βοηθητικό μήνυμα και εξέρχεται.\n"
 
-#: bin/change_pw:144
+#: bin/change_pw:145
 msgid "Bad arguments: %(strargs)s"
 msgstr "Εσφαλμένα ορίσματα: %(strargs)s"
 
-#: bin/change_pw:148
+#: bin/change_pw:149
 msgid "Empty list passwords are not allowed"
 msgstr "Δεν επιτρέπεται κενή λίστα κωδικών πρόσβασης"
 
-#: bin/change_pw:180
+#: bin/change_pw:181
 msgid "New %(listname)s password: %(notifypassword)s"
 msgstr "Νέος %(listname)s κωδικός πρόσβασης: %(notifypassword)s"
 
-#: bin/change_pw:189
+#: bin/change_pw:190
 msgid "Your new %(listname)s list password"
 msgstr "Ο κωδικός πρόσβασης της νέας σας λίστας %(listname)s "
 
-#: bin/change_pw:190
+#: bin/change_pw:191
 msgid ""
 "The site administrator at %(hostname)s has changed the password for your\n"
 "mailing list %(listname)s.  It is now\n"
@@ -10610,7 +10610,7 @@ msgstr ""
 "Οι επιλογές -o και -i είναι αμοιβαία αποκλειστικές.\n"
 "\n"
 
-#: bin/config_list:117
+#: bin/config_list:118
 msgid ""
 "# -*- python -*-\n"
 "# -*- coding: %(charset)s -*-\n"
@@ -10622,43 +10622,43 @@ msgstr ""
 "##  ρυθμίσεις διαμόρφωσης της λίστας αλληλογραφίας \"%(listname)s\"\n"
 "## captured on %(when)s\n"
 
-#: bin/config_list:143
+#: bin/config_list:144
 msgid "options"
 msgstr "επιλογές"
 
-#: bin/config_list:202
+#: bin/config_list:203
 msgid "legal values are:"
 msgstr "επιτρεπτές τιμές είναι:"
 
-#: bin/config_list:269
+#: bin/config_list:270
 msgid "attribute \"%(k)s\" ignored"
 msgstr "ο χαρακτήρας \"%(k)s\" αγνοήθηκε"
 
-#: bin/config_list:272
+#: bin/config_list:273
 msgid "attribute \"%(k)s\" changed"
 msgstr "ο χαρακτήρας \"%(k)s\" άλλαξε"
 
-#: bin/config_list:278
+#: bin/config_list:279
 msgid "Non-standard property restored: %(k)s"
 msgstr "Μη αποδεκτή ιδιότητα επανορθώθηκε: %(k)s"
 
-#: bin/config_list:286
+#: bin/config_list:288
 msgid "Invalid value for property: %(k)s"
 msgstr "Ακυρη τιμή για την ιδιότητα: %(k)s"
 
-#: bin/config_list:288
+#: bin/config_list:291
 msgid "Bad email address for option %(k)s: %(v)s"
 msgstr "Κακή email διεύθυνση για την επιλογή %(k)s: %(v)s"
 
-#: bin/config_list:345
+#: bin/config_list:348
 msgid "Only one of -i or -o is allowed"
 msgstr "Μόνο μία από τις επιλογές -i ή -o επιτρέπονται"
 
-#: bin/config_list:347
+#: bin/config_list:350
 msgid "One of -i or -o is required"
 msgstr "Μόνο ένα από τις μεταβλητές -i ή -o απαιτούνται"
 
-#: bin/config_list:351
+#: bin/config_list:354
 msgid "List name is required"
 msgstr "Απαιτείται το όνομα της λίστας."
 
@@ -11930,33 +11930,33 @@ msgid ""
 "Note that listnames are forced to lowercase.\n"
 msgstr ""
 
-#: bin/newlist:161
+#: bin/newlist:162
 msgid "Unknown language: %(lang)s"
 msgstr ""
 
-#: bin/newlist:166
+#: bin/newlist:167
 msgid "Enter the name of the list: "
 msgstr ""
 
-#: bin/newlist:187
+#: bin/newlist:188
 msgid "Enter the email of the person running the list: "
 msgstr ""
 
-#: bin/newlist:192
+#: bin/newlist:193
 msgid "Initial %(listname)s password: "
 msgstr "Αρχικός κωδικός της %(listname)s :"
 
-#: bin/newlist:196
+#: bin/newlist:197
 msgid "The list password cannot be empty"
 msgstr "Ο κωδικός της λίστας δε μπορεί να είναι κενός"
 
-#: bin/newlist:219
+#: bin/newlist:220
 msgid ""
 " - owner addresses need to be fully-qualified names like \"owner@example.com"
 "\", not just \"owner\"."
 msgstr ""
 
-#: bin/newlist:243
+#: bin/newlist:244
 msgid "Hit enter to notify %(listname)s owner..."
 msgstr ""
 
@@ -12277,35 +12277,35 @@ msgstr "%(listname)s %(msg)s δεν υπάρχει σαν %(filename)s"
 msgid "No such list (or list already deleted): %(listname)s"
 msgstr "Δεν υπάρχει τέτοια λίστα (ή η λίστα έχει ήδη διαγραφεί): %(listname)s"
 
-#: bin/rmlist:107
+#: bin/rmlist:108
 msgid "No such list: %(listname)s.  Removing its residual archives."
 msgstr ""
 "Δεν υπάρχει τέτοια λίστα: %(listname)s. Διαγραφή των ιστορικών αρχείων που "
 "έχουν απομείνει"
 
-#: bin/rmlist:111
+#: bin/rmlist:112
 msgid "Not removing archives.  Reinvoke with -a to remove them."
 msgstr ""
 "Δεν διαγράφονται τα ιστορικά. Ξανακαλέστε την εντολή με -a για τη διαγραφή "
 "τους."
 
-#: bin/rmlist:125
+#: bin/rmlist:126
 msgid "list info"
 msgstr "πληροφορίες της λίστας"
 
-#: bin/rmlist:133
+#: bin/rmlist:134
 msgid "stale lock file"
 msgstr "παλιό αρχείο κλειδώματος"
 
-#: bin/rmlist:141
+#: bin/rmlist:142
 msgid "held message file"
 msgstr "αρχείο των μηνυμάτων που κρατούνται."
 
-#: bin/rmlist:146 bin/rmlist:148
+#: bin/rmlist:147 bin/rmlist:149
 msgid "private archives"
 msgstr "Λάθος στο Ιδιωτικό Ιστορικό Αρχείο"
 
-#: bin/rmlist:150 bin/rmlist:152
+#: bin/rmlist:151 bin/rmlist:153
 msgid "public archives"
 msgstr "Iστορικά αρχεία"
 
@@ -12456,7 +12456,7 @@ msgstr "Θα πρέπει να διορθώσετε την προηγούμενη άκυρη διεύθυνση πρώτα."
 msgid "Added  : %(s)s"
 msgstr "Προστέθηκε : %(s)s"
 
-#: bin/sync_members:288
+#: bin/sync_members:289
 msgid "Removed: %(s)s"
 msgstr "Διαγράφηκε: %(s)s"
 

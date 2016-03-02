@@ -5,7 +5,14 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.21rc2 (05-Feb-2016)
+2.1.22 (xx-xxx-xxxx)
+
+  Bug fixes and other patches
+
+    - Don't collapse multipart with a single sub-part inside multipart/signed
+      parts.  (LP: #1551075)
+
+2.1.21 (28-Feb-2016)
 
   New Features
 
@@ -34,6 +41,16 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Japanese translation has been updated by Yasuhito FUTATSUKI.
+
+    - Also thanks to Miloslav Trmac and Yasuhito FUTATSUKI, the l10n for
+      Mailman's bin/ commands has been fixed to display using the character
+      set of the user's work station even when Mailman's character set for
+      the language is different.  Because this has not been tested over a
+      wide set of locales, there is an mm_cfg.py switch
+      DISABLE_COMMAND_LOCALE_CSET to disable it if it causes problems.
+      (LP: #558167)
+
     - The Polish translation has been updated by Stefan Plewako.
 
     - The German translation has been updated by Mirian Margiani and
@@ -48,6 +65,18 @@ Here is a history of user visible changes to Mailman.
       de Mello.
 
   Bug fixes and other patches
+
+    - If DMARC lookup fails to find a policy, also try the Organizational
+      Domain.  Associated with this is a new mm_cfg.py setting
+      DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL which sets the URL used to
+      retrieve the data for the algorithm that computes the Organizational
+      Domain.  See https://publicsuffix.org/list/ for info.  (LP: #1549420)
+
+    - Modified contrib/mmdsr to correctly report No such list names that
+      contain ".
+
+    - User's "Acknowledge" option will now be honored for posts to anonymous
+      lists.  (LP: #1546679)
 
     - Fixed a typo in the Non-digest options regular_exclude_ignore
       description thanks to Yasuhito FUTATSUKI.

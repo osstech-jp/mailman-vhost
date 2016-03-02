@@ -198,6 +198,10 @@
 #               Updated on: Sun Jan 31 07:13:47 PST 2016
 #               Report vette log DMARC lookups as their own
 #               category instead of in other errors.
+#
+# 0.0.26        Update by Mark Sapiro <mark@msapiro.net>
+#               Updated on: Sat Feb 20 21:17:14 PST 2016
+#               Properly display No such list names that contain ".
 
 ###############################################################################
 # Set up locations of standard commands, directories, etc....
@@ -448,7 +452,7 @@ do
 	    echo "" >> $TMP
 	    echo "No Such List:" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $GREP 'No such list' $TMPLOG | $SED -e 's/^[^)]*) //' -e 's/No such list "//' -e 's/".*$//' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+	    $GREP 'No such list' $TMPLOG | $SED -e 's/^[^)]*) //' -e 's/No such list "//' -e 's/"[^"]*$//' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	    CNT=`$GREP -i 'shunting' $TMPLOG | $WC -l`
 	    if [ "${CNT}x" != "x" ] ; then

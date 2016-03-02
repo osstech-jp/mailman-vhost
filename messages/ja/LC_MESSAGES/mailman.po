@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.21rc2\n"
-"POT-Creation-Date: Tue Feb  2 17:09:05 2016\n"
+"POT-Creation-Date: Sat Feb 27 14:41:07 2016\n"
 "PO-Revision-Date: 2016-02-10 16:11+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
@@ -105,7 +105,7 @@ msgstr "7月"
 msgid "June"
 msgstr "6月"
 
-#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:107
+#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:130
 msgid "May"
 msgstr "5月"
 
@@ -205,7 +205,8 @@ msgstr "本人により"
 msgid "by the list administrator"
 msgstr "リスト管理者により"
 
-#: Mailman/Bouncer.py:48 Mailman/Bouncer.py:293 Mailman/Commands/cmd_set.py:182
+#: Mailman/Bouncer.py:48 Mailman/Bouncer.py:293
+#: Mailman/Commands/cmd_set.py:182
 msgid "for unknown reasons"
 msgstr "何らかの理由により"
 
@@ -226,7 +227,7 @@ msgid " The last bounce received from you was dated %(date)s"
 msgstr "最後にエラーメールを受信した日付は %(date)s です"
 
 #: Mailman/Bouncer.py:329 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:401
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:403
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:240
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
@@ -244,11 +245,11 @@ msgstr "司会者"
 msgid "Administrator"
 msgstr "管理者"
 
-#: Mailman/Cgi/admin.py:80 Mailman/Cgi/admindb.py:116 Mailman/Cgi/confirm.py:62
-#: Mailman/Cgi/edithtml.py:71 Mailman/Cgi/listinfo.py:55
-#: Mailman/Cgi/options.py:95 Mailman/Cgi/private.py:108
-#: Mailman/Cgi/rmlist.py:64 Mailman/Cgi/roster.py:59
-#: Mailman/Cgi/subscribe.py:63
+#: Mailman/Cgi/admin.py:80 Mailman/Cgi/admindb.py:116
+#: Mailman/Cgi/confirm.py:62 Mailman/Cgi/edithtml.py:71
+#: Mailman/Cgi/listinfo.py:55 Mailman/Cgi/options.py:95
+#: Mailman/Cgi/private.py:108 Mailman/Cgi/rmlist.py:64
+#: Mailman/Cgi/roster.py:59 Mailman/Cgi/subscribe.py:63
 msgid "No such list <em>%(safelistname)s</em>"
 msgstr "<em>%(safelistname)s</em>というリストはありません"
 
@@ -857,8 +858,8 @@ msgstr "新入会員に歓迎メールを出しますか?"
 #: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
 #: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:316
 #: Mailman/Gui/Privacy.py:333 Mailman/Gui/Privacy.py:473
-#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56
-#: Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52
+#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "No"
 msgstr "いいえ"
 
@@ -868,26 +869,26 @@ msgstr "いいえ"
 #: Mailman/Cgi/create.py:388 Mailman/Cgi/create.py:426
 #: Mailman/Cgi/rmlist.py:230 Mailman/Gui/Archive.py:33
 #: Mailman/Gui/Autoresponse.py:54 Mailman/Gui/Autoresponse.py:62
-#: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120 Mailman/Gui/Bounce.py:146
-#: Mailman/Gui/Bounce.py:155 Mailman/Gui/Bounce.py:164
-#: Mailman/Gui/ContentFilter.py:74 Mailman/Gui/ContentFilter.py:116
-#: Mailman/Gui/ContentFilter.py:120 Mailman/Gui/Digest.py:46
-#: Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84 Mailman/Gui/Digest.py:89
-#: Mailman/Gui/General.py:223 Mailman/Gui/General.py:229
-#: Mailman/Gui/General.py:307 Mailman/Gui/General.py:334
-#: Mailman/Gui/General.py:361 Mailman/Gui/General.py:372
-#: Mailman/Gui/General.py:375 Mailman/Gui/General.py:385
-#: Mailman/Gui/General.py:390 Mailman/Gui/General.py:396
-#: Mailman/Gui/General.py:416 Mailman/Gui/General.py:448
-#: Mailman/Gui/General.py:471 Mailman/Gui/General.py:488
-#: Mailman/Gui/NonDigest.py:45 Mailman/Gui/NonDigest.py:53
-#: Mailman/Gui/NonDigest.py:140 Mailman/Gui/NonDigest.py:162
-#: Mailman/Gui/Privacy.py:110 Mailman/Gui/Privacy.py:128
-#: Mailman/Gui/Privacy.py:161 Mailman/Gui/Privacy.py:214
-#: Mailman/Gui/Privacy.py:316 Mailman/Gui/Privacy.py:333
-#: Mailman/Gui/Privacy.py:473 Mailman/Gui/Privacy.py:492
-#: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
-#: Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120
+#: Mailman/Gui/Bounce.py:146 Mailman/Gui/Bounce.py:155
+#: Mailman/Gui/Bounce.py:164 Mailman/Gui/ContentFilter.py:74
+#: Mailman/Gui/ContentFilter.py:116 Mailman/Gui/ContentFilter.py:120
+#: Mailman/Gui/Digest.py:46 Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84
+#: Mailman/Gui/Digest.py:89 Mailman/Gui/General.py:223
+#: Mailman/Gui/General.py:229 Mailman/Gui/General.py:307
+#: Mailman/Gui/General.py:334 Mailman/Gui/General.py:361
+#: Mailman/Gui/General.py:372 Mailman/Gui/General.py:375
+#: Mailman/Gui/General.py:385 Mailman/Gui/General.py:390
+#: Mailman/Gui/General.py:396 Mailman/Gui/General.py:416
+#: Mailman/Gui/General.py:448 Mailman/Gui/General.py:471
+#: Mailman/Gui/General.py:488 Mailman/Gui/NonDigest.py:45
+#: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
+#: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
+#: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
+#: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:316
+#: Mailman/Gui/Privacy.py:333 Mailman/Gui/Privacy.py:473
+#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52
+#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "Yes"
 msgstr "はい"
 
@@ -929,7 +930,7 @@ msgid ""
 msgstr ""
 "会員のアドレスを変更するには、現在のアドレスと新しいアドレスを\n"
 "以下に記入してください。変更の通知を新しいアドレスか古いアドレス、\n"
-"あるいは両方に送るにはチェックボックスにチェックを入れます"
+"あるいは両方に送るにはそれぞれ対応するチェックボックスにチェックを入れます。"
 
 #: Mailman/Cgi/admin.py:1273
 msgid "Member's current address"
@@ -1053,7 +1054,7 @@ msgstr "誤りまたは無効なメールアドレス"
 msgid "Hostile address (illegal characters)"
 msgstr "危険なアドレス (規則外の文字)"
 
-#: Mailman/Cgi/admin.py:1463 bin/add_members:149 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1463 bin/add_members:150 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr "入会禁止アドレス (%(pattern)s に一致)"
@@ -1092,7 +1093,7 @@ msgstr "現在のアドレスと変更後のアドレスは異なっていなければなりません."
 
 #: Mailman/Cgi/admin.py:1533
 msgid "%(schange_to)s is already a list member."
-msgstr "%(schange_t)s は既に会員です"
+msgstr "%(schange_to)s は既に会員です"
 
 #: Mailman/Cgi/admin.py:1538
 msgid "%(schange_to)s is not a valid email address."
@@ -1104,7 +1105,7 @@ msgstr "%(schange_from)s は会員ではありません"
 
 #: Mailman/Cgi/admin.py:1548
 msgid "%(schange_to)s is already a member"
-msgstr "%(schange_t)s は既に会員です"
+msgstr "%(schange_to)s は既に会員です"
 
 #: Mailman/Cgi/admin.py:1551
 msgid "%(schange_to)s matches banned pattern %(spat)s"
@@ -2026,15 +2027,15 @@ msgstr "新しいメーリングリストを作成する権限がありません"
 msgid "Unknown virtual host: %(safehostname)s"
 msgstr "仮想ホストが不明です: %(safehostname)s"
 
-#: Mailman/Cgi/create.py:200 bin/newlist:218
+#: Mailman/Cgi/create.py:200 bin/newlist:219
 msgid "Bad owner email address: %(s)s"
 msgstr "管理者メールアドレスの誤り: %(s)s"
 
-#: Mailman/Cgi/create.py:205 bin/newlist:181 bin/newlist:222
+#: Mailman/Cgi/create.py:205 bin/newlist:182 bin/newlist:223
 msgid "List already exists: %(listname)s"
 msgstr "登録済みリストです: %(listname)s"
 
-#: Mailman/Cgi/create.py:213 bin/newlist:216
+#: Mailman/Cgi/create.py:213 bin/newlist:217
 msgid "Illegal list name: %(s)s"
 msgstr "使用できないリスト名: %(s)s"
 
@@ -2046,7 +2047,7 @@ msgstr ""
 "リスト作成中に理由不明のエラーが発生しました.\n"
 "サイト管理者に連絡してください."
 
-#: Mailman/Cgi/create.py:255 bin/newlist:264
+#: Mailman/Cgi/create.py:255 bin/newlist:265
 msgid "Your new mailing list: %(listname)s"
 msgstr "新しいメーリングリスト: %(listname)s"
 
@@ -3755,160 +3756,160 @@ msgstr "普通配送会員:"
 msgid "Digest members:"
 msgstr "まとめ読み会員:"
 
-#: Mailman/Defaults.py:1675
+#: Mailman/Defaults.py:1682
 msgid "Arabic"
 msgstr "アラビア語"
 
-#: Mailman/Defaults.py:1676
+#: Mailman/Defaults.py:1683
 msgid "Asturian"
 msgstr "アストゥリアス語"
 
-#: Mailman/Defaults.py:1677
+#: Mailman/Defaults.py:1684
 msgid "Catalan"
 msgstr "カタロニア語"
 
-#: Mailman/Defaults.py:1678
+#: Mailman/Defaults.py:1685
 msgid "Czech"
 msgstr "チェコ語"
 
-#: Mailman/Defaults.py:1679
+#: Mailman/Defaults.py:1686
 msgid "Danish"
 msgstr "デンマーク語"
 
-#: Mailman/Defaults.py:1680
+#: Mailman/Defaults.py:1687
 msgid "German"
 msgstr "ドイツ語"
 
 # mm_cfg.py
-#: Mailman/Defaults.py:1681
+#: Mailman/Defaults.py:1688
 msgid "English (USA)"
 msgstr "英語 (米国)"
 
-#: Mailman/Defaults.py:1682
+#: Mailman/Defaults.py:1689
 msgid "Spanish (Spain)"
 msgstr "スペイン語 (スペイン)"
 
-#: Mailman/Defaults.py:1683
+#: Mailman/Defaults.py:1690
 msgid "Estonian"
 msgstr "エストニア語"
 
-#: Mailman/Defaults.py:1684
+#: Mailman/Defaults.py:1691
 msgid "Euskara"
 msgstr "バスク語"
 
-#: Mailman/Defaults.py:1685
+#: Mailman/Defaults.py:1692
 msgid "Persian"
 msgstr "ペルシャ語"
 
-#: Mailman/Defaults.py:1686
+#: Mailman/Defaults.py:1693
 msgid "Finnish"
 msgstr "フィンランド語"
 
-#: Mailman/Defaults.py:1687
+#: Mailman/Defaults.py:1694
 msgid "French"
 msgstr "フランス語"
 
-#: Mailman/Defaults.py:1688
+#: Mailman/Defaults.py:1695
 msgid "Galician"
 msgstr "ガリシア語"
 
-#: Mailman/Defaults.py:1689
+#: Mailman/Defaults.py:1696
 msgid "Greek"
 msgstr "ギリシャ語"
 
-#: Mailman/Defaults.py:1690
+#: Mailman/Defaults.py:1697
 msgid "Hebrew"
 msgstr "ヘブライ語"
 
-#: Mailman/Defaults.py:1691
+#: Mailman/Defaults.py:1698
 msgid "Croatian"
 msgstr "クロアチア語"
 
-#: Mailman/Defaults.py:1692
+#: Mailman/Defaults.py:1699
 msgid "Hungarian"
 msgstr "ハンガリー語"
 
-#: Mailman/Defaults.py:1693
+#: Mailman/Defaults.py:1700
 msgid "Interlingua"
 msgstr "インターリンガ(国際語)"
 
-#: Mailman/Defaults.py:1694
+#: Mailman/Defaults.py:1701
 msgid "Italian"
 msgstr "イタリア語"
 
-#: Mailman/Defaults.py:1695
+#: Mailman/Defaults.py:1702
 msgid "Japanese"
 msgstr "日本語"
 
-#: Mailman/Defaults.py:1696
+#: Mailman/Defaults.py:1703
 msgid "Korean"
 msgstr "韓国語"
 
-#: Mailman/Defaults.py:1697
+#: Mailman/Defaults.py:1704
 msgid "Lithuanian"
 msgstr "リトアニア語"
 
-#: Mailman/Defaults.py:1698
+#: Mailman/Defaults.py:1705
 msgid "Dutch"
 msgstr "オランダ語"
 
-#: Mailman/Defaults.py:1699
+#: Mailman/Defaults.py:1706
 msgid "Norwegian"
 msgstr "ノルウェー語"
 
-#: Mailman/Defaults.py:1700
+#: Mailman/Defaults.py:1707
 msgid "Polish"
 msgstr "ポーランド語"
 
-#: Mailman/Defaults.py:1701
+#: Mailman/Defaults.py:1708
 msgid "Portuguese"
 msgstr "ポルトガル語"
 
-#: Mailman/Defaults.py:1702
+#: Mailman/Defaults.py:1709
 msgid "Portuguese (Brazil)"
 msgstr "ポルトガル語(ブラジル)"
 
-#: Mailman/Defaults.py:1703
+#: Mailman/Defaults.py:1710
 msgid "Romanian"
 msgstr "ルーマニア語"
 
-#: Mailman/Defaults.py:1704
+#: Mailman/Defaults.py:1711
 msgid "Russian"
 msgstr "ロシア語"
 
-#: Mailman/Defaults.py:1705
+#: Mailman/Defaults.py:1712
 msgid "Slovak"
 msgstr "スロバキア語"
 
-#: Mailman/Defaults.py:1706
+#: Mailman/Defaults.py:1713
 msgid "Slovenian"
 msgstr "スロベニア語"
 
-#: Mailman/Defaults.py:1707
+#: Mailman/Defaults.py:1714
 msgid "Serbian"
 msgstr "セルビア語"
 
-#: Mailman/Defaults.py:1708
+#: Mailman/Defaults.py:1715
 msgid "Swedish"
 msgstr "スウェーデン語"
 
-#: Mailman/Defaults.py:1709
+#: Mailman/Defaults.py:1716
 msgid "Turkish"
 msgstr "トルコ語"
 
-#: Mailman/Defaults.py:1710
+#: Mailman/Defaults.py:1717
 msgid "Ukrainian"
 msgstr "ウクライナ語"
 
-#: Mailman/Defaults.py:1711
+#: Mailman/Defaults.py:1718
 msgid "Vietnamese"
 msgstr "ベトナム語"
 
-#: Mailman/Defaults.py:1712
+#: Mailman/Defaults.py:1719
 msgid "Chinese (China)"
 msgstr "中国語(中国)"
 
-#: Mailman/Defaults.py:1713
+#: Mailman/Defaults.py:1720
 msgid "Chinese (Taiwan)"
 msgstr "中国語(台湾)"
 
@@ -5057,9 +5058,9 @@ msgid ""
 "             address to mitigate issues stemming from the original From:\n"
 "             domain's DMARC or similar policies."
 msgstr ""
-"From: ヘッダーのメールアドレスをリストの投稿アドレスに置き換え、\n"
+"From: ヘッダーのメールアドレスをリストの投稿アドレスに置き換え,\n"
 "             元の From: ドメインの DMARC あるいは類似のポリシーにより\n"
-"生じる問題を緩和する。"
+"             生じる問題を緩和します."
 
 #: Mailman/Gui/General.py:162
 msgid ""
@@ -5148,7 +5149,6 @@ msgstr ""
 "             From: フィールドのためだけの理由で配送エラーを引き起こしたり\n"
 "             します. <b>その結果会員はメールを全く問題なく受け取ることが\n"
 "             できるにも関わらず、退会させられることになります.\n"
-"             することになります\n"
 "             <p>\n"
 "             以下の処理をここで選択した場合、それはリストの全ての\n"
 "             メッセージに適用されます. From: ヘッダのドメインがそうした\n"
@@ -5171,11 +5171,11 @@ msgstr ""
 "             投稿用アドレスに置き換え、投稿者のアドレスを元の Reply-To: \n"
 "             ヘッダのアドレスに追加します. </dd>\n"
 "             <dt>メール内に添付</dt>\n"
-"             From: ヘッダーにリストの投稿用アドレスにし、投稿の From: \n"
+"             <dd>From: ヘッダーにリストの投稿用アドレスにし、投稿の From: \n"
 "             アドレスを元の Reply-To: ヘッダーに加えた外側のメッセージに\n"
 "             投稿されたメッセージを Content-Type: message/rfc822 として\n"
 "             投稿メッセージを添付します。 これは実質的には単一のメッセージ\n"
-"             からなるMIME形式のダイジェスト(まとめ読み)です.\n"
+"             からなるMIME形式のダイジェスト(まとめ読み)です.</dd>\n"
 "             </dl>\n"
 "             <p>anonymous_list に対する書き換えはこれらのいずれの処理の\n"
 "             前に適用されます. 匿名リストに対しては「いいえ」以外の処理を\n"
@@ -6355,15 +6355,14 @@ msgid ""
 "Advertise this list when people ask what lists are on this\n"
 "             machine?"
 msgstr ""
-"このマシンでどんなリストがあるか聞かれた時に\n"
+"このホストにどんなリストがあるか聞かれた時に\n"
 "公表しますか?"
 
 #: Mailman/Gui/Privacy.py:117
 msgid ""
 "List of addresses (or regexps) whose subscriptions do not\n"
 "             require approval."
-msgstr ""
-"入会に承認が不要なアドレス(または正規表現)のリスト"
+msgstr "入会に承認が不要なアドレス(または正規表現)のリスト"
 
 #: Mailman/Gui/Privacy.py:120
 msgid ""
@@ -6382,8 +6381,7 @@ msgstr ""
 msgid ""
 "You may also use the @listname notation to designate the\n"
 "             members of another list in this installation."
-msgstr ""
-"@リスト名 の表記でこのシステムの他のリストの会員を示すこともできます."
+msgstr "@リスト名 の表記でこのシステムの他のリストの会員を示すこともできます."
 
 #: Mailman/Gui/Privacy.py:129
 msgid ""
@@ -7975,7 +7973,7 @@ msgstr ""
 "%(realname)s メーリングリストに投稿された緊急メールは, 配送の\n"
 "認証に失敗しました. 添付のメールは, Mailmanが受け取った元のメールです. \n"
 
-#: Mailman/Handlers/CookHeaders.py:159
+#: Mailman/Handlers/CookHeaders.py:161
 msgid "%(realname)s via %(lrn)s"
 msgstr "%(realname)s (%(lrn)s 経由)"
 
@@ -8422,8 +8420,8 @@ msgstr ""
 "%(file)s のパーミッションは 066x でなければいけません (%(octmode)s になってい"
 "ます"
 
-#: Mailman/MTA/Postfix.py:373 Mailman/MTA/Postfix.py:400
-#: Mailman/MTA/Postfix.py:411 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:373 Mailman/MTA/Postfix.py:401
+#: Mailman/MTA/Postfix.py:412 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -8439,7 +8437,7 @@ msgstr "%(dbfile)s の所有者を調べています"
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "%(dbfile)s の所有者は %(owner)s です. (%(user)s でなければいけません)"
 
-#: Mailman/MTA/Postfix.py:409
+#: Mailman/MTA/Postfix.py:410
 msgid "%(dbfile)s permissions must be 066x (got %(octmode)s)"
 msgstr ""
 "%(dbfile)s のパーミッションは 066x でなければいけません (%(octmode)s になって"
@@ -8461,7 +8459,7 @@ msgstr " %(remote)s から"
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "%(realname)s への入会には管理者の承認が必要です"
 
-#: Mailman/MailList.py:1038 bin/add_members:252
+#: Mailman/MailList.py:1038 bin/add_members:253
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s 入会通知"
 
@@ -8586,83 +8584,83 @@ msgstr "Python Powered"
 msgid "Gnu's Not Unix"
 msgstr "Gnu's Not Unix"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Mon"
 msgstr "月"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Thu"
 msgstr "木"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Tue"
 msgstr "火"
 
-#: Mailman/i18n.py:102
+#: Mailman/i18n.py:125
 msgid "Wed"
 msgstr "水"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Fri"
 msgstr "金"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Sat"
 msgstr "土"
 
-#: Mailman/i18n.py:103
+#: Mailman/i18n.py:126
 msgid "Sun"
 msgstr "日"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Apr"
 msgstr "4月"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Feb"
 msgstr "2月"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Jan"
 msgstr "1月"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Jun"
 msgstr "6月"
 
-#: Mailman/i18n.py:107
+#: Mailman/i18n.py:130
 msgid "Mar"
 msgstr "3月"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Aug"
 msgstr "8月"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Dec"
 msgstr "12月"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Jul"
 msgstr "7月"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Nov"
 msgstr "11月"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Oct"
 msgstr "10月"
 
-#: Mailman/i18n.py:108
+#: Mailman/i18n.py:131
 msgid "Sep"
 msgstr "9月"
 
-#: Mailman/i18n.py:111
+#: Mailman/i18n.py:134
 msgid "Server Local Time"
 msgstr "サーバーの現地時刻"
 
-#: Mailman/i18n.py:150
+#: Mailman/i18n.py:173
 msgid ""
 "%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s %(year)04i"
 msgstr ""
@@ -8760,45 +8758,45 @@ msgstr ""
 "少なくとも -n か -d のどちらか1つの指定が必要です.\n"
 "両方指定する場合, `-' が使えるのはどちらか1つです.\n"
 
-#: bin/add_members:146
+#: bin/add_members:147
 msgid "Already a member: %(member)s"
 msgstr "入会済み: %(member)s"
 
-#: bin/add_members:152
+#: bin/add_members:153
 msgid "Bad/Invalid email address: blank line"
 msgstr "誤りまたは無効なメールアドレス: 空白行"
 
-#: bin/add_members:154
+#: bin/add_members:155
 msgid "Bad/Invalid email address: %(member)s"
 msgstr "誤りまたは無効なメールアドレス: %(member)s"
 
-#: bin/add_members:156
+#: bin/add_members:157
 msgid "Hostile address (illegal characters): %(member)s"
 msgstr "危険なアドレス (規則外の文字): %(member)s"
 
-#: bin/add_members:158
+#: bin/add_members:159
 msgid "Subscribed: %(member)s"
 msgstr "入会しました: %(member)s"
 
-#: bin/add_members:199
+#: bin/add_members:200
 msgid "Bad argument to -w/--welcome-msg: %(arg)s"
 msgstr "-w/--welcome-msg への引数が違います: %(arg)s"
 
-#: bin/add_members:206
+#: bin/add_members:207
 msgid "Bad argument to -a/--admin-notify: %(arg)s"
 msgstr "-a/--admin-notify への引数が違います: %(arg)s"
 
-#: bin/add_members:214
+#: bin/add_members:215
 msgid "Cannot read both digest and normal members from standard input."
 msgstr "まとめ読みと普通の両方の会員を標準入力から読み込むことはできません."
 
-#: bin/add_members:220 bin/config_list:109 bin/export.py:271 bin/find_member:97
-#: bin/inject:91 bin/list_admins:90 bin/list_members:251 bin/sync_members:222
-#: cron/bumpdigests:86
+#: bin/add_members:221 bin/config_list:110 bin/export.py:271
+#: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:252
+#: bin/sync_members:222 cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "%(listname)s というリストはありません"
 
-#: bin/add_members:240 bin/change_pw:158 bin/check_db:114 bin/discard:83
+#: bin/add_members:241 bin/change_pw:159 bin/check_db:114 bin/discard:83
 #: bin/sync_members:244 bin/update:302 bin/update:323 bin/update:577
 #: cron/bumpdigests:78
 msgid "Nothing to do."
@@ -8894,7 +8892,7 @@ msgstr ""
 msgid "listname is required"
 msgstr "リスト名が必要です."
 
-#: bin/arch:143 bin/change_pw:106 bin/config_list:256
+#: bin/arch:143 bin/change_pw:107 bin/config_list:257
 msgid ""
 "No such list \"%(listname)s\"\n"
 "%(e)s"
@@ -9042,23 +9040,23 @@ msgstr ""
 "    --help / h\n"
 "        このヘルプメッセージを出力して終了する.\n"
 
-#: bin/change_pw:144
+#: bin/change_pw:145
 msgid "Bad arguments: %(strargs)s"
 msgstr "引数が違います: %(strargs)s"
 
-#: bin/change_pw:148
+#: bin/change_pw:149
 msgid "Empty list passwords are not allowed"
 msgstr "リストのパスワードは空白にできません"
 
-#: bin/change_pw:180
+#: bin/change_pw:181
 msgid "New %(listname)s password: %(notifypassword)s"
 msgstr "%(listname)s の新パスワード: %(notifypassword)s"
 
-#: bin/change_pw:189
+#: bin/change_pw:190
 msgid "Your new %(listname)s list password"
 msgstr "%(listname)s の新しいリストパスワード"
 
-#: bin/change_pw:190
+#: bin/change_pw:191
 msgid ""
 "The site administrator at %(hostname)s has changed the password for your\n"
 "mailing list %(listname)s.  It is now\n"
@@ -9619,7 +9617,7 @@ msgstr ""
 "-o オプションと -i オプションは同時に使うことができない.\n"
 "\n"
 
-#: bin/config_list:117
+#: bin/config_list:118
 msgid ""
 "# -*- python -*-\n"
 "# -*- coding: %(charset)s -*-\n"
@@ -9631,43 +9629,43 @@ msgstr ""
 "## \"%(listname)s\" メーリングリスト設定\n"
 "## %(when)s に読み出し\n"
 
-#: bin/config_list:143
+#: bin/config_list:144
 msgid "options"
 msgstr "オプション"
 
-#: bin/config_list:202
+#: bin/config_list:203
 msgid "legal values are:"
 msgstr "有効な値は:"
 
-#: bin/config_list:269
+#: bin/config_list:270
 msgid "attribute \"%(k)s\" ignored"
 msgstr "属性 \"%(k)s\" を無視"
 
-#: bin/config_list:272
+#: bin/config_list:273
 msgid "attribute \"%(k)s\" changed"
 msgstr "属性 \"%(k)s\" を変更"
 
-#: bin/config_list:278
+#: bin/config_list:279
 msgid "Non-standard property restored: %(k)s"
 msgstr "標準でない値を修復: %(k)s"
 
-#: bin/config_list:286
+#: bin/config_list:288
 msgid "Invalid value for property: %(k)s"
 msgstr "プロパティ値が無効: %(k)s"
 
-#: bin/config_list:288
+#: bin/config_list:291
 msgid "Bad email address for option %(k)s: %(v)s"
 msgstr "%(k)s オプションのメールアドレスが間違っています: %(v)s"
 
-#: bin/config_list:345
+#: bin/config_list:348
 msgid "Only one of -i or -o is allowed"
 msgstr "-i または -o のどちらか1つだけを指定してください"
 
-#: bin/config_list:347
+#: bin/config_list:350
 msgid "One of -i or -o is required"
 msgstr "-i または -o のどちらかを指定してください"
 
-#: bin/config_list:351
+#: bin/config_list:354
 msgid "List name is required"
 msgstr "リスト名が必要です."
 
@@ -10986,27 +10984,27 @@ msgstr ""
 "\n"
 "リスト名は小文字に変換される.\n"
 
-#: bin/newlist:161
+#: bin/newlist:162
 msgid "Unknown language: %(lang)s"
 msgstr "言語が不明: %(lang)s"
 
-#: bin/newlist:166
+#: bin/newlist:167
 msgid "Enter the name of the list: "
 msgstr "リストの名前を入力してください: "
 
-#: bin/newlist:187
+#: bin/newlist:188
 msgid "Enter the email of the person running the list: "
 msgstr "リスト管理者のメールアドレスを入力してください: "
 
-#: bin/newlist:192
+#: bin/newlist:193
 msgid "Initial %(listname)s password: "
 msgstr "%(listname)s の初期パスワード: "
 
-#: bin/newlist:196
+#: bin/newlist:197
 msgid "The list password cannot be empty"
 msgstr "リストのパスワードを空白にすることはできません"
 
-#: bin/newlist:219
+#: bin/newlist:220
 msgid ""
 " - owner addresses need to be fully-qualified names like \"owner@example.com"
 "\", not just \"owner\"."
@@ -11014,7 +11012,7 @@ msgstr ""
 "- リスト管理者のアドレスは「owner@example.com」のように完全な形式である必要が"
 "あります。"
 
-#: bin/newlist:243
+#: bin/newlist:244
 msgid "Hit enter to notify %(listname)s owner..."
 msgstr "Enter を押して %(listname)s の管理者にメール通知する..."
 
@@ -11396,31 +11394,31 @@ msgstr "%(listname)s %(msg)s は %(filename)s に見つかりません"
 msgid "No such list (or list already deleted): %(listname)s"
 msgstr "%(listname)s というリストはありません (又は, 既に削除されています)."
 
-#: bin/rmlist:107
+#: bin/rmlist:108
 msgid "No such list: %(listname)s.  Removing its residual archives."
 msgstr "%(listname)s というリストはありません. 残された保存書庫を削除します."
 
-#: bin/rmlist:111
+#: bin/rmlist:112
 msgid "Not removing archives.  Reinvoke with -a to remove them."
 msgstr "保存書庫は削除しません. 削除するには -a をつけてもう一度"
 
-#: bin/rmlist:125
+#: bin/rmlist:126
 msgid "list info"
 msgstr "リストの案内"
 
-#: bin/rmlist:133
+#: bin/rmlist:134
 msgid "stale lock file"
 msgstr "古いロックファイル"
 
-#: bin/rmlist:141
+#: bin/rmlist:142
 msgid "held message file"
 msgstr "保留メールファイル"
 
-#: bin/rmlist:146 bin/rmlist:148
+#: bin/rmlist:147 bin/rmlist:149
 msgid "private archives"
 msgstr "限定公開保存書庫"
 
-#: bin/rmlist:150 bin/rmlist:152
+#: bin/rmlist:151 bin/rmlist:153
 msgid "public archives"
 msgstr "公開保存書庫"
 
@@ -11627,7 +11625,7 @@ msgstr "まず, 無効なアドレスを修正してください."
 msgid "Added  : %(s)s"
 msgstr "追加   : %(s)s"
 
-#: bin/sync_members:288
+#: bin/sync_members:289
 msgid "Removed: %(s)s"
 msgstr "削除   : %(s)s"
 
@@ -12727,4 +12725,3 @@ msgstr ""
 "    --listname=リスト名\n"
 "        リスト名をあげたリストについてだけ, まとめ読みを送信する.\n"
 "        これが無い場合, すべてのリストの処理をする.\n"
-
