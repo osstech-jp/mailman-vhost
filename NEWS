@@ -9,6 +9,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed an issue with CommandRunner shunting a malformed message with a
+      null byte in the body.  (LP: #1553888)
+
     - Don't collapse multipart with a single sub-part inside multipart/signed
       parts.  (LP: #1551075)
 

@@ -1313,7 +1313,7 @@ def _DMARCProhibited(mlist, email, dmarc_domain):
     except DNSException, e:
         syslog('error',
                'DNSException: Unable to query DMARC policy for %s (%s). %s',
-              email, dmarc_domain, e.__class__)
+              email, dmarc_domain, e.__doc__)
         return 'continue'
     else:
 # people are already being dumb, don't trust them to provide honest DNS
