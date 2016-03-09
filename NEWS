@@ -7,6 +7,11 @@ Here is a history of user visible changes to Mailman.
 
 2.1.22 (xx-xxx-xxxx)
 
+  i18n
+
+    - The Brazilian Portugese translation has been updated by Emerson Ribeiro
+      de Mello.
+
   Bug fixes and other patches
 
     - Fixed an issue with CommandRunner shunting a malformed message with a

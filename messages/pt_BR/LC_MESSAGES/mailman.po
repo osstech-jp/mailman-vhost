@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mailman\n"
 "POT-Creation-Date: Sat Feb 27 14:41:07 2016\n"
-"PO-Revision-Date: 2015-06-13 16:06-0300\n"
+"PO-Revision-Date: 2016-03-09 14:12+0000\n"
 "Last-Translator: Emerson Ribeiro de Mello <emerson_ml@yahoo.com.br>\n"
 "Language-Team: Portuguese <mailman-i18n@python.org>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #: Mailman/Archiver/HyperArch.py:123
 msgid "size not available"
@@ -206,8 +206,7 @@ msgstr "por você mesmo"
 msgid "by the list administrator"
 msgstr "pelo administrador da lista"
 
-#: Mailman/Bouncer.py:48 Mailman/Bouncer.py:293
-#: Mailman/Commands/cmd_set.py:182
+#: Mailman/Bouncer.py:48 Mailman/Bouncer.py:293 Mailman/Commands/cmd_set.py:182
 msgid "for unknown reasons"
 msgstr "por razões desconhecidas"
 
@@ -246,11 +245,11 @@ msgstr "Moderador"
 msgid "Administrator"
 msgstr "Administrador"
 
-#: Mailman/Cgi/admin.py:80 Mailman/Cgi/admindb.py:116
-#: Mailman/Cgi/confirm.py:62 Mailman/Cgi/edithtml.py:71
-#: Mailman/Cgi/listinfo.py:55 Mailman/Cgi/options.py:95
-#: Mailman/Cgi/private.py:108 Mailman/Cgi/rmlist.py:64
-#: Mailman/Cgi/roster.py:59 Mailman/Cgi/subscribe.py:63
+#: Mailman/Cgi/admin.py:80 Mailman/Cgi/admindb.py:116 Mailman/Cgi/confirm.py:62
+#: Mailman/Cgi/edithtml.py:71 Mailman/Cgi/listinfo.py:55
+#: Mailman/Cgi/options.py:95 Mailman/Cgi/private.py:108
+#: Mailman/Cgi/rmlist.py:64 Mailman/Cgi/roster.py:59
+#: Mailman/Cgi/subscribe.py:63
 msgid "No such list <em>%(safelistname)s</em>"
 msgstr "A lista <em>%(safelistname)s</em> não existe"
 
@@ -880,8 +879,8 @@ msgstr "Enviar mensagens de boas vindas para novos inscritos?"
 #: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
 #: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:316
 #: Mailman/Gui/Privacy.py:333 Mailman/Gui/Privacy.py:473
-#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52
-#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56
+#: Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "No"
 msgstr "Não"
 
@@ -891,26 +890,26 @@ msgstr "Não"
 #: Mailman/Cgi/create.py:388 Mailman/Cgi/create.py:426
 #: Mailman/Cgi/rmlist.py:230 Mailman/Gui/Archive.py:33
 #: Mailman/Gui/Autoresponse.py:54 Mailman/Gui/Autoresponse.py:62
-#: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120
-#: Mailman/Gui/Bounce.py:146 Mailman/Gui/Bounce.py:155
-#: Mailman/Gui/Bounce.py:164 Mailman/Gui/ContentFilter.py:74
-#: Mailman/Gui/ContentFilter.py:116 Mailman/Gui/ContentFilter.py:120
-#: Mailman/Gui/Digest.py:46 Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84
-#: Mailman/Gui/Digest.py:89 Mailman/Gui/General.py:223
-#: Mailman/Gui/General.py:229 Mailman/Gui/General.py:307
-#: Mailman/Gui/General.py:334 Mailman/Gui/General.py:361
-#: Mailman/Gui/General.py:372 Mailman/Gui/General.py:375
-#: Mailman/Gui/General.py:385 Mailman/Gui/General.py:390
-#: Mailman/Gui/General.py:396 Mailman/Gui/General.py:416
-#: Mailman/Gui/General.py:448 Mailman/Gui/General.py:471
-#: Mailman/Gui/General.py:488 Mailman/Gui/NonDigest.py:45
-#: Mailman/Gui/NonDigest.py:53 Mailman/Gui/NonDigest.py:140
-#: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:110
-#: Mailman/Gui/Privacy.py:128 Mailman/Gui/Privacy.py:161
-#: Mailman/Gui/Privacy.py:214 Mailman/Gui/Privacy.py:316
-#: Mailman/Gui/Privacy.py:333 Mailman/Gui/Privacy.py:473
-#: Mailman/Gui/Privacy.py:492 Mailman/Gui/Usenet.py:52
-#: Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
+#: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120 Mailman/Gui/Bounce.py:146
+#: Mailman/Gui/Bounce.py:155 Mailman/Gui/Bounce.py:164
+#: Mailman/Gui/ContentFilter.py:74 Mailman/Gui/ContentFilter.py:116
+#: Mailman/Gui/ContentFilter.py:120 Mailman/Gui/Digest.py:46
+#: Mailman/Gui/Digest.py:62 Mailman/Gui/Digest.py:84 Mailman/Gui/Digest.py:89
+#: Mailman/Gui/General.py:223 Mailman/Gui/General.py:229
+#: Mailman/Gui/General.py:307 Mailman/Gui/General.py:334
+#: Mailman/Gui/General.py:361 Mailman/Gui/General.py:372
+#: Mailman/Gui/General.py:375 Mailman/Gui/General.py:385
+#: Mailman/Gui/General.py:390 Mailman/Gui/General.py:396
+#: Mailman/Gui/General.py:416 Mailman/Gui/General.py:448
+#: Mailman/Gui/General.py:471 Mailman/Gui/General.py:488
+#: Mailman/Gui/NonDigest.py:45 Mailman/Gui/NonDigest.py:53
+#: Mailman/Gui/NonDigest.py:140 Mailman/Gui/NonDigest.py:162
+#: Mailman/Gui/Privacy.py:110 Mailman/Gui/Privacy.py:128
+#: Mailman/Gui/Privacy.py:161 Mailman/Gui/Privacy.py:214
+#: Mailman/Gui/Privacy.py:316 Mailman/Gui/Privacy.py:333
+#: Mailman/Gui/Privacy.py:473 Mailman/Gui/Privacy.py:492
+#: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
+#: Mailman/Gui/Usenet.py:105
 msgid "Yes"
 msgstr "Sim"
 
@@ -7071,12 +7070,12 @@ msgstr ""
 "        membros</a>"
 
 #: Mailman/Gui/Privacy.py:233
-#, fuzzy
 msgid ""
 "Ceiling on acceptable number of member posts, per interval,\n"
 "               before automatic moderation."
 msgstr ""
-"Impondo um limite aceitável no número de destinatários para uma mensagem."
+"Impondo um número aceitável de mensagens, por intervalo de tempo,\n"
+"          antes da moderação automática."
 
 #: Mailman/Gui/Privacy.py:236
 msgid ""
@@ -7098,6 +7097,25 @@ msgid ""
 "               this can be triggered by a single post cross-posted to\n"
 "               multiple lists or by a single post to an umbrella list."
 msgstr ""
+"Se um membro enviar muitas mensagens dentro de um período de tempo\n"
+"                este será automaticamente moderado. Use 0 para desativar. "
+"Veja\n"
+"                <a href=\"?VARHELP=privacy/sender/member_verbosity_interval"
+"\"\n"
+"               >member_verbosity_interval</a> para obter mais detalhes sobre "
+"esse tempo.\n"
+"\n"
+"              <p>Isso foi projetado para coibir pessoas que ingressam nas "
+"listas e então\n"
+"               fazem uso de robôs para enviar spam em um curto intervalo de "
+"tempo.\n"
+"\n"
+"              <p>Seja cuidadoso ao usar essa configuração. Se você definir "
+"um período muito curto,\n"
+"              essa configuração poderá ser ativada por uma simples mensagem "
+"enviada para múltiplas listas\n"
+"              ou mesmo, enviada para uma lista guarda-chuva (que agrupa "
+"diversas outras listas)."
 
 #: Mailman/Gui/Privacy.py:249
 msgid ""
@@ -7105,6 +7123,9 @@ msgid ""
 "               member_verbosity_threshold for automatic moderation of a\n"
 "               member."
 msgstr ""
+"Número de segundos para usado por essa lista para\n"
+"           determinar o member_verbosity_threshold para moderação automática "
+"de um membro."
 
 #: Mailman/Gui/Privacy.py:253
 msgid ""
@@ -7118,6 +7139,18 @@ msgid ""
 "               member_verbosity_threshold enabled that arrived within that\n"
 "               list's member_verbosity_interval."
 msgstr ""
+"Se o total de mensagens enviadas por um membro para todas as listas nessa\n"
+"             instalação for definido como member_verbosity_threshold e esse "
+"atingir\n"
+"             o limite da lista member_verbosity_threshold, então o membro "
+"será automaticamente\n"
+"             moderado nessa lista.\n"
+"\n"
+"            <p> Só serão contabilizadas as mensagens que forem enviadas para "
+"listas\n"
+"            que estiverem com o member_verbosity_threshold ativado e que "
+"chegarem\n"
+"             com member_verbosity_interval da lista."
 
 #: Mailman/Gui/Privacy.py:265
 msgid ""
@@ -7261,17 +7294,16 @@ msgstr ""
 "de spam dos destinatários."
 
 #: Mailman/Gui/Privacy.py:334
-#, fuzzy
 msgid ""
 "Shall the above dmarc_moderation_action apply to messages\n"
 "               From: domains with DMARC p=none as well as p=quarantine and\n"
 "               p=reject"
 msgstr ""
 "Deveria a dmarc_moderation_action acima ser aplicada para mensagens\n"
-"            De: domínios com DMARC p=quarentena assim como p=rejeitar"
+"            De: domínios com DMARC p=none assim como p=quarentena  e "
+"p=rejeitar"
 
 #: Mailman/Gui/Privacy.py:338
-#, fuzzy
 msgid ""
 "<ul><li><b>No</b> -- this applies dmarc_moderation_action to\n"
 "               only those posts From: a domain with DMARC p=reject and\n"
@@ -7288,21 +7320,24 @@ msgid ""
 "               the message transformations that would be applied if the\n"
 "               domain's DMARC policy were stronger."
 msgstr ""
-"<ul><li><b>Não</b> -- isso aplica dmarc_moderation_action para\n"
-"              somente mensagens enviadas De: um domínio DMARC p=rejeitar. "
-"Isso é\n"
-"              adequado se você se importa com mensagens de retorno, mas "
-"deseja\n"
-"              aplicar dmarc_moderation_action para o menor número possível "
-"de mensagens.\n"
+"<ul><li><b>Não</b> -- isso aplica dmarc_moderation_action \n"
+"              somente para mensagens enviadas De: um domínio DMARC "
+"p=rejeitar e\n"
+"              possivelmente p=quarantine dependendo da configuração do "
+"dmarc_quarantine_moderation_action\n"
 "              <p><li><b>Sim</b> -- isso aplica dmarc_moderation_action para "
 "mensagens\n"
-"              De: um domínio com DMARC p=rejeitar ou p=quarentena.\n"
-"              e dmarc_moderation_action não é aplicada (isso configura para "
-"Não)\n"
-" para mensagens\n"
-"              que não irão gerar retornos, mas que serão entregue nas pastas "
-"de spam dos destinatários."
+"              De: um domínio com DMARC p=none se  dmarc_moderation_action "
+"estiver como Munge From\n"
+"              ou Wrap Message e  dmarc_quarantine_moderation_action  como "
+"sim. \n"
+"              <p>O objetivo dessa configuração é eliminar relatórios de "
+"falhas\n"
+"              para o dono de um domínio que publicou DMARC p=none através da "
+"definição\n"
+"              da transformação da mensagem que poderia ser aplicada se a "
+"política do domínio DMARC\n"
+"              for rígida."
 
 #: Mailman/Gui/Privacy.py:352
 msgid ""
@@ -8542,9 +8577,8 @@ msgstr ""
 "pelo Mailman está em anexo.\n"
 
 #: Mailman/Handlers/CookHeaders.py:161
-#, fuzzy
 msgid "%(realname)s via %(lrn)s"
-msgstr "Administração da %(realname)s (%(label)s)"
+msgstr "%(realname)s por (%(lrn)s)"
 
 #: Mailman/Handlers/Emergency.py:29
 msgid "Emergency hold on all list traffic is in effect"
@@ -9370,9 +9404,9 @@ msgstr ""
 "Não é possível ler membros normais e digest a partir do dispositivo de "
 "entrada padrão."
 
-#: bin/add_members:221 bin/config_list:110 bin/export.py:271
-#: bin/find_member:97 bin/inject:91 bin/list_admins:90 bin/list_members:252
-#: bin/sync_members:222 cron/bumpdigests:86
+#: bin/add_members:221 bin/config_list:110 bin/export.py:271 bin/find_member:97
+#: bin/inject:91 bin/list_admins:90 bin/list_members:252 bin/sync_members:222
+#: cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "Lista inexistente: %(listname)s"
 
@@ -10850,7 +10884,6 @@ msgid "matching mailing lists found:"
 msgstr "listas de discussão encontradas:"
 
 #: bin/list_members:19
-#, fuzzy
 msgid ""
 "List all the members of a mailing list.\n"
 "\n"
@@ -10917,9 +10950,9 @@ msgid ""
 msgstr ""
 "Lista todos os membros de uma lista de discussão.\n"
 "\n"
-"Uso: %(PROGRAM)s [opções] nomedalista\n"
+"Uso: %(PROGRAM)s [opções] nome-da-lista\n"
 "\n"
-"Onde:\n"
+"Sendo:\n"
 "\n"
 "    --output arquivo\n"
 "    -o arquivo\n"
@@ -10947,9 +10980,9 @@ msgstr ""
 "        Inclui os nomes completos na saída.\n"
 "\n"
 "    --preserve/-p\n"
-"        Exibe endereços de membros em capitalização preservada da forma que "
+"        Exibe endereços de membros com capitalização preservada da forma que "
 "eles\n"
-"        são adicionados a lista. Caso contrário, os endereços são \n"
+"        foram adicionados a lista. Caso contrário, os endereços são \n"
 "        mostrados em minúsculas.\n"
 "\n"
 "    --invalid / -i\n"
@@ -10969,9 +11002,9 @@ msgstr ""
 "\n"
 "    listname é o nome da lista de discussão que utiliza.\n"
 "\n"
-"Note que se ambas -r ou -d forem fornecidas, membros regulares\n"
+"Note que se nenhum das opções -r ou -d forem fornecidas, membros regulares\n"
 "são exibidos primeiro, seguidos de membros digest, mas nenhuma indicação\n"
-"é mostrada sobre o status de endereço.\n"
+"é mostrada sobre a situação do endereço.\n"
 
 #: bin/list_members:198
 msgid "Bad --nomail option: %(why)s"
@@ -10984,7 +11017,7 @@ msgstr "Opção --digest incorreta: %(kind)s"
 #: bin/list_members:213 bin/list_members:217 bin/list_members:221
 #: bin/list_members:225
 msgid "Only one of -m, -M, -i or -u may be specified."
-msgstr ""
+msgstr "Somente um de -m, -M, -i ou -u pode ser especificado."
 
 #: bin/list_members:243
 msgid "Could not open file for writing:"
