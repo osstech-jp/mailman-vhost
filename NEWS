@@ -14,6 +14,15 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed the pipermail archiver to do a better job of figuring the date of
+      a post when its Date: header is missing, unparseable or has an obviously
+      out of range date.  This should only affect bin/arch as ArchRunner has
+      code to fix dates at least if ARCHIVER_CLOBBER_DATE_POLICY has not been
+      set to 0 in mm_cfg.py.  If posts have been added in the past to a list's
+      archive using bin/arch and an imported mbox, running bin/arch again could
+      result is some of those posts being archived with a different date.
+      (LP: #1555798)
+
     - Fixed an issue with CommandRunner shunting a malformed message with a
       null byte in the body.  (LP: #1553888)
 
