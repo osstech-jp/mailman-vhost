@@ -250,10 +250,10 @@ class Article:
             date = floatdate(message.get('x-list-received-date'))
         if date is None:
             date = floatdate(re.sub(r'^.*;\s*', '',
-                                    message.get('received'), flags=re.S))
+                                    message.get('received', ''), flags=re.S))
         if date is None:
             date = floatdate(re.sub(r'From \s*\S+\s+', '',
-                                    message.get_unixfrom()))
+                                    message.get_unixfrom() or '' ))
         if date is None:
             date = self._last_article_time + 1
         self._last_article_time = date
