@@ -16,6 +16,7 @@ __version__ = '0.09 (Mailman edition)'
 VERSION = __version__
 CACHESIZE = 100    # Number of slots in the cache
 
+from Mailman import mm_cfg
 from Mailman import Errors
 from Mailman.Mailbox import ArchiverMailbox
 from Mailman.Logging.Syslog import syslog
@@ -230,22 +231,46 @@ class Article:
         self.body = s.readlines()
 
     def _set_date(self, message):
-        def floatdate(header):
-            missing = []
-            datestr = message.get(header, missing)
-            if datestr is missing:
+        def floatdate(datestr):
+            if not datestr:
                 return None
             date = parsedate_tz(datestr)
             try:
                 return mktime_tz(date)
             except (TypeError, ValueError, OverflowError):
                 return None
-        date = floatdate('date')
+        def check_range(date):
+            """Checks for date in current Unix epoch and not further in the
+            future than mm_config.ARCHIVER_ALLOWABLE_SANE_DATE_SKEW.
+            """
+            if (date < 0 or
+                date - time.time() >
+                    mm_cfg.ARCHIVER_ALLOWABLE_SANE_DATE_SKEW
+               ):
+                return False
+            return True
+        def fix_date():
+            # We have a bad date.
+            # Try a Received: header first.
+            date = floatdate(re.sub(r'^.*;\s*', '',
+                                    message.get('received'), flags=re.S))
+            if date and check_range(date):
+                return date
+            # Try the Unix From date from the mbox.
+            date = floatdate(re.sub(r'From \s*\S+\s+', '',
+                                    message.get_unixfrom()))
+            if date and check_range(date):
+                return date
+            return self._last_article_time + 1
+        date = floatdate(message.get('date'))
         if date is None:
-            date = floatdate('x-list-received-date')
+            date = floatdate(message.get('x-list-received-date'))
         if date is None:
             # What's left to try?
-            date = self._last_article_time + 1
+            date = fix_date()
+        # Sanity check this date.
+        if not check_range(date):
+            date = fix_date()
         self._last_article_time = date
         self.date = '%011i' % date
         self.datestr = message.get('date') \
