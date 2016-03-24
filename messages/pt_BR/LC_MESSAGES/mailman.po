@@ -4181,7 +4181,7 @@ msgstr "Mensal"
 
 #: Mailman/Gui/Archive.py:40 Mailman/Gui/Digest.py:78
 msgid "Quarterly"
-msgstr "Quadrimestral"
+msgstr "Trimestralmente"
 
 #: Mailman/Gui/Archive.py:40 Mailman/Gui/Digest.py:78
 msgid "Yearly"
