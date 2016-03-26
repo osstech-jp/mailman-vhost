@@ -9,6 +9,8 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - Fixed a typo in the German options.html template.  (LP: #1562408)
+
     - An error in the Brazilian Portugese translation of Quarterly has been
       fixed thanks to Kleber A. Benatti.
 
