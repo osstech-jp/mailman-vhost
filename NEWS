@@ -19,6 +19,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Modified NewsRunner.py to ensure that messages gated to Usenet have a
+      non-blank Subject: header and when munging the Message-ID to add the
+      original to References: to help with threading.  (LP: #557955)
+
     - Fixed the pipermail archiver to do a better job of figuring the date of
       a post when its Date: header is missing, unparseable or has an obviously
       out of range date.  This should only affect bin/arch as ArchRunner has
