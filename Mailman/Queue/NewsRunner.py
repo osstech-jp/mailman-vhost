@@ -112,7 +112,7 @@ def prepare_message(mlist, msg, msgdata):
         del msg['subject']
         msg['Subject'] = stripped_subject
     # Make sure we have a non-blank subject.
-    if not msg.get('subject', '').strip():
+    if not msg.get('subject', ''):
         del msg['subject']
         msg['Subject'] = '(no subject)'
     # Add the appropriate Newsgroups: header
