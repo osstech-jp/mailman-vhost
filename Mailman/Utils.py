@@ -1250,12 +1250,12 @@ def IsDMARCProhibited(mlist, email):
         return x
     o_dom = get_org_dom(f_dom)
     if o_dom != f_dom:
-        x = _DMARCProhibited(mlist, email, '_dmarc.' + o_dom)
+        x = _DMARCProhibited(mlist, email, '_dmarc.' + o_dom, org=True)
         if x != 'continue':
             return x
     return False
 
-def _DMARCProhibited(mlist, email, dmarc_domain):
+def _DMARCProhibited(mlist, email, dmarc_domain, org=False):
 
     try:
         resolver = dns.resolver.Resolver()
@@ -1315,14 +1315,23 @@ def _DMARCProhibited(mlist, email, dmarc_domain):
                        testing them all""",
                         dmarc_domain, len(dmarc))
             for entry in dmarcs:
-                if re.search(r'\bp=reject\b', entry, re.IGNORECASE):
+                mo = re.search(r'\bsp=(\w*)\b', entry, re.IGNORECASE)
+                if org and mo:
+                    policy = mo.group(1).lower()
+                else:
+                    mo = re.search(r'\bp=(\w*)\b', entry, re.IGNORECASE)
+                    if mo:
+                        policy = mo.group(1).lower()
+                    else:
+                        continue
+                if policy == 'reject':
                     syslog('vette',
                       '%s: DMARC lookup for %s (%s) found p=reject in %s = %s',
                       mlist.real_name,  email, dmarc_domain, name, entry)
                     return True
 
                 if (mlist.dmarc_quarantine_moderation_action and
-                    re.search(r'\bp=quarantine\b', entry, re.IGNORECASE)):
+                    policy == 'quarantine'):
                     syslog('vette',
                   '%s: DMARC lookup for %s (%s) found p=quarantine in %s = %s',
                           mlist.real_name,  email, dmarc_domain, name, entry)
@@ -1331,7 +1340,7 @@ def _DMARCProhibited(mlist, email, dmarc_domain):
                 if (mlist.dmarc_none_moderation_action and
                     mlist.dmarc_quarantine_moderation_action and
                     mlist.dmarc_moderation_action in (1, 2) and
-                    re.search(r'\bp=none\b', entry, re.IGNORECASE)):
+                    policy == 'none'):
                     syslog('vette',
                   '%s: DMARC lookup for %s (%s) found p=none in %s = %s',
                           mlist.real_name,  email, dmarc_domain, name, entry)
