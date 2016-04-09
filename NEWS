@@ -19,6 +19,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - DMARC mitigations for a sub-domain of an organizational domain will now
+      use the organizational domain's sp= policy if any.  (LP: #1568398)
+
     - Modified NewsRunner.py to ensure that messages gated to Usenet have a
       non-blank Subject: header and when munging the Message-ID to add the
       original to References: to help with threading.  (LP: #557955)
