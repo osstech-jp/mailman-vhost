@@ -19,6 +19,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - DMARC mitigations will now find the From: domain to the right of the
+      rightmost '@' rather than the leftmost '@'.  (LP: #1568445)
+
     - DMARC mitigations for a sub-domain of an organizational domain will now
       use the organizational domain's sp= policy if any.  (LP: #1568398)
 
