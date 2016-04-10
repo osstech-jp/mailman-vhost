@@ -1287,7 +1287,8 @@ def IsDMARCProhibited(mlist, email):
         return False
 
     email = email.lower()
-    at_sign = email.find('@')
+    # Scan from the right in case quoted local part has an '@'.
+    at_sign = email.rfind('@')
     if at_sign < 1:
         return False
     f_dom = email[at_sign+1:]
