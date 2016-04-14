@@ -19,6 +19,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - All addresses in data/virtual-mailman are now properly appended with
+      VIRTUAL_MAILMAN_LOCAL_DOMAIN and duplicates are not generated if the
+      site list is in a virtual domain.  (LP: #1570630)
+
     - DMARC mitigations will now find the From: domain to the right of the
       rightmost '@' rather than the leftmost '@'.  (LP: #1568445)
 
