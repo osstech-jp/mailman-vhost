@@ -5,6 +5,15 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.2 (xx-xxx-xxxx)
+ 
+  New Features
+
+    - A list's nonmember_rejection_notice attribute will now be the default
+      rejection reason for a held non-member post in addition to it's prior
+      role as the reson for an automatically rejected non-member post.
+      (LP: #1572330)
+
 2.1.22 (17-Apr-2016)
 
   i18n

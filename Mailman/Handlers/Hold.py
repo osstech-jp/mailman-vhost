@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -28,6 +28,7 @@ Finally an exception is raised to let the pipeline machinery know that further
 message handling should stop.
 """
 
+import re
 import email
 from email.MIMEText import MIMEText
 from email.MIMEMessage import MIMEMessage
@@ -220,7 +221,14 @@ def hold_for_approval(mlist, msg, msgdata, exc):
     # We need to send both the reason and the rejection notice through the
     # translator again, because of the games we play above
     reason = Utils.wrap(exc.reason_notice())
-    msgdata['rejection_notice'] = Utils.wrap(exc.rejection_notice(mlist))
+    if isinstance(exc, NonMemberPost) and mlist.nonmember_rejection_notice:
+        msgdata['rejection_notice'] = Utils.wrap(re.sub(
+                                      '%(listowner)s',
+                                      mlist.GetOwnerEmail(),
+                                      mlist.nonmember_rejection_notice,
+                                      ))
+    else:
+        msgdata['rejection_notice'] = Utils.wrap(exc.rejection_notice(mlist))
     id = mlist.HoldMessage(msg, reason, msgdata)
     # Now we need to craft and send a message to the list admin so they can
     # deal with the held message.
