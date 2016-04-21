@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2011 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -61,6 +61,7 @@ class Connection:
 
     def __connect(self):
         self.__conn = smtplib.SMTP()
+        self.__conn.set_debuglevel(mm_cfg.SMTPLIB_DEBUG_LEVEL)
         self.__conn.connect(mm_cfg.SMTPHOST, mm_cfg.SMTPPORT)
         self.__numsessions = mm_cfg.SMTP_MAX_SESSIONS_PER_CONNECTION
 
