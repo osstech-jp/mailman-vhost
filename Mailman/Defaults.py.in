@@ -469,6 +469,12 @@ PUBLIC_MBOX = No
 #DELIVERY_MODULE = 'Sendmail'
 DELIVERY_MODULE = 'SMTPDirect'
 
+# Sometimes there are 'low level' smtplib failures that are difficult to
+# debug.  To enable very verbose debugging info from smtplib to Mailman's
+# error log, set the following to 1.  This will only work if
+# DELIVERY_MODULE = 'SMTPDirect' and Python is >= 2.4.
+SMTPLIB_DEBUG_LEVEL = 0
+
 # MTA should name a module in Mailman/MTA which provides the MTA specific
 # functionality for creating and removing lists.  Some MTAs like Exim can be
 # configured to automatically recognize new lists, in which case the MTA

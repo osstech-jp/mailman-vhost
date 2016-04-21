@@ -9,6 +9,10 @@ Here is a history of user visible changes to Mailman.
  
   New Features
 
+    - There is a new Defaults.py/mm_cfg.py setting SMTPLIB_DEBUG_LEVEL which
+      can be set to 1 to enable verbose smtplib debugging to Mailman's error
+      log to help with debugging 'low level smtp failures'.  (LP: # 1573074)
+
     - A list's nonmember_rejection_notice attribute will now be the default
       rejection reason for a held non-member post in addition to it's prior
       role as the reson for an automatically rejected non-member post.
