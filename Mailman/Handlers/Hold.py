@@ -28,7 +28,6 @@ Finally an exception is raised to let the pipeline machinery know that further
 message handling should stop.
 """
 
-import re
 import email
 from email.MIMEText import MIMEText
 from email.MIMEMessage import MIMEMessage
@@ -222,11 +221,9 @@ def hold_for_approval(mlist, msg, msgdata, exc):
     # translator again, because of the games we play above
     reason = Utils.wrap(exc.reason_notice())
     if isinstance(exc, NonMemberPost) and mlist.nonmember_rejection_notice:
-        msgdata['rejection_notice'] = Utils.wrap(re.sub(
-                                      '%(listowner)s',
-                                      mlist.GetOwnerEmail(),
-                                      mlist.nonmember_rejection_notice,
-                                      ))
+        msgdata['rejection_notice'] = Utils.wrap(
+                                  mlist.nonmember_rejection_notice.replace(
+                                      '%(listowner)s', owneraddr))
     else:
         msgdata['rejection_notice'] = Utils.wrap(exc.rejection_notice(mlist))
     id = mlist.HoldMessage(msg, reason, msgdata)
