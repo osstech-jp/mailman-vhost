@@ -18,6 +18,11 @@ Here is a history of user visible changes to Mailman.
       role as the reson for an automatically rejected non-member post.
       (LP: #1572330)
 
+  Bug fixes and other patches
+ 
+    - The white space to the left of the admindb Logout link is no longer
+      part of the link.  (LP: #1573623)
+
 2.1.22 (17-Apr-2016)
 
   i18n
