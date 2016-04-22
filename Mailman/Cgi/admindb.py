@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -213,9 +213,10 @@ def main():
             doc.AddItem(Link(admindburl,
                              _('Click here to reload this page.')))
             # Put 'Logout' link before the footer
+            doc.AddItem('\n<div align="right"><font size="+2">')
             doc.AddItem(Link('%s/logout' % admindburl,
-                '<div align="right"><font size="+2"><b>%s</b></font></div>' %
-                _('Logout')))
+                '<b>%s</b>' % _('Logout')))
+            doc.AddItem('</font></div>\n')
             doc.AddItem(mlist.GetMailmanFooter())
             print doc.Format()
             mlist.Save()
