@@ -1170,6 +1170,8 @@ def get_suffixes(url):
     global s_dict
     if s_dict:
         return
+    if not url:
+        return
     try:
         d = urllib2.urlopen(url)
     except urllib2.URLError, e:

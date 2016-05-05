@@ -19,6 +19,9 @@ Here is a history of user visible changes to Mailman.
       (LP: #1572330)
 
   Bug fixes and other patches
+
+    - A site can now set DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL to None or the
+      null string if it wants to avoid using this.  (LP: #1578450)
  
     - The white space to the left of the admindb Logout link is no longer
       part of the link.  (LP: #1573623)
