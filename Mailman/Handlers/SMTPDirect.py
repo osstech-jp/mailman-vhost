@@ -63,6 +63,36 @@ class Connection:
         self.__conn = smtplib.SMTP()
         self.__conn.set_debuglevel(mm_cfg.SMTPLIB_DEBUG_LEVEL)
         self.__conn.connect(mm_cfg.SMTPHOST, mm_cfg.SMTPPORT)
+        if mm_cfg.SMTP_AUTH:
+            if mm_cfg.SMTP_USE_TLS:
+                try:
+                    self.__conn.starttls()
+                except SMTPException, e:
+                    syslog('smtp-failure', 'SMTP TLS error: %s', e)
+                    self.quit()
+                    raise
+                try:
+                    self.__conn.ehlo(mm_cfg.SMTP_HELO_HOST)
+                except SMTPException, e:
+                    syslog('smtp-failure', 'SMTP EHLO error: %s', e)
+                    self.quit()
+                    raise
+            try:
+                self.__conn.login(mm_cfg.SMTP_USER, mm_cfg.SMTP_PASSWD)
+            except smtplib.SMTPHeloError, e:
+                syslog('smtp-failure', 'SMTP HELO error: %s', e)
+                self.quit()
+                raise
+            except smtplib.SMTPAuthenticationError, e:
+                syslog('smtp-failure', 'SMTP AUTH error: %s', e)
+                self.quit()
+                raise
+            except smtplib.SMTPException, e:
+                syslog('smtp-failure',
+                       'SMTP - no suitable authentication method found: %s', e)
+                self.quit()
+                raise
+
         self.__numsessions = mm_cfg.SMTP_MAX_SESSIONS_PER_CONNECTION
 
     def sendmail(self, envsender, recips, msgtext):

@@ -9,6 +9,11 @@ Here is a history of user visible changes to Mailman.
  
   New Features
 
+    - SMTPDirect.py can now do SASL authentication and STARTTLS security when
+      connecting to the outgoiung MTA. Associated with this are new
+      Defaults.py/mm_cfg.py settings SMTP_AUTH, SMTP_USER, SMTP_PASSWD and
+      SMTP_USE_TLS.  (LP: #558281)
+
     - There is a new Defaults.py/mm_cfg.py setting SMTPLIB_DEBUG_LEVEL which
       can be set to 1 to enable verbose smtplib debugging to Mailman's error
       log to help with debugging 'low level smtp failures'.  (LP: # 1573074)
