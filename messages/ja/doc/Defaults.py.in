@@ -530,10 +530,10 @@ PUBLIC_MBOX = No
 #DELIVERY_MODULE = 'Sendmail'
 DELIVERY_MODULE = 'SMTPDirect'
 
-# Sometimes there are 'low level' smtplib failures that are difficult to
-# debug.  To enable very verbose debugging info from smtplib to Mailman's
-# error log, set the following to 1.  This will only work if
-# DELIVERY_MODULE = 'SMTPDirect' and Python is >= 2.4.
+# 時折、デバグの難しい「低水準の」smtplib での失敗があります。smtplib から
+# Mailman のエラーログへのかなり詳細なデバグ情報を有効にするには
+# 次の変数を 1 にします。これは DELVERY_MODULE = 'SMTPDirect' かつ
+# Python のバージョンが 2.4 以上のときのみ機能するでしょう。
 SMTPLIB_DEBUG_LEVEL = 0
 
 # 「MTA」には、リストを作成したり削除したりするための機能をMTA毎に個別に
@@ -635,20 +635,23 @@ SMTPPORT = 0                                      # smtplib に初期値を任せます
 # sendmail 互換プログラムへと配送を行うコマンド。
 SENDMAIL_CMD = '/usr/lib/sendmail'
 
-# SMTP authentication for DELIVERY_MODULE = 'SMTPDirect'.  To enable SASL
-# authentication for SMTPDirect, set SMTP_AUTH = Yes and provide appropriate
-# settings for SMTP_USER and SMTP_PASSWD.
+# DELIVERY_MODULE = 'SMTPDirect' 用の SMTP 認証。SMTPDirect で SASL 認証を
+# 有効にするには SMTP_AUTH = Yes とセットし、SMTP_USER および SMTP_PASSWD に
+# 適切な値を与えて下さい。
+# (訳註: これを有効にする場合には Mailman 環境のサーバにアクセス可能な
+# 人/プログラムからの悪用を防ぐためには mm_cfg.py のアクセス権に注意を
+# 払う必要があるかと思われます)
 SMTP_AUTH = No
 SMTP_USER = ''
 SMTP_PASSWD = ''
 
-# If using SASL authentication (SMTP_AUTH = Yes), set the following to Yes
-# to also use TLS. This has no effect if SMTP_AUTH = No.
+# SASL 認証を利用する場合(SMTP_AUTH = Yes)、以下を Yes に設定することで
+# TLS も使用します。この設定は SMTP_AUTH = No の時には何の影響もありません。 
 SMTP_USE_TLS = No
 
-# When using TLS the following should be set to the hostname that should be
-# used in order to identify Mailman to the SMTP server.  By default, it
-# uses DEFAULT_URL_HOST. Normally, you should not change this.
+# TLS を使用する場合、以下で SMTP サーバが Mailman を識別するために
+# 用いるホスト名を設定すべきです。既定ではこれには DEFAULT_URL_HOST を 
+# 用います。通常、これは変更すべきではありません。
 SMTP_HELO_HOST = DEFAULT_URL_HOST
 
 # Usenet への投稿あるいは閲覧で NNTP サーバで認証が必要な場合にはこれらの
