@@ -20,7 +20,7 @@
 
 # [訳註] このファイルは、Mailman 2.1.22 配布物に含まれる
 #   Mailman/Defaults.py.in (launchpad.net での Bazaar リビジョンは
-#   1626) のコメント部分を日本語 (共通語) に翻訳したものです。
+#   1649) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
@@ -530,6 +530,12 @@ PUBLIC_MBOX = No
 #DELIVERY_MODULE = 'Sendmail'
 DELIVERY_MODULE = 'SMTPDirect'
 
+# Sometimes there are 'low level' smtplib failures that are difficult to
+# debug.  To enable very verbose debugging info from smtplib to Mailman's
+# error log, set the following to 1.  This will only work if
+# DELIVERY_MODULE = 'SMTPDirect' and Python is >= 2.4.
+SMTPLIB_DEBUG_LEVEL = 0
+
 # 「MTA」には、リストを作成したり削除したりするための機能をMTA毎に個別に
 # 実装した Mailman/MTA にあるモジュールを指定します。Exim のように
 # 新しいリストを自動的に認識するように設定することができるMTAもありますが、
@@ -628,6 +634,22 @@ SMTPPORT = 0                                      # smtplib に初期値を任せます
 # DELIVERY_MODULE が 'Sendmail' であるとき、コマンドパイプで直接
 # sendmail 互換プログラムへと配送を行うコマンド。
 SENDMAIL_CMD = '/usr/lib/sendmail'
+
+# SMTP authentication for DELIVERY_MODULE = 'SMTPDirect'.  To enable SASL
+# authentication for SMTPDirect, set SMTP_AUTH = Yes and provide appropriate
+# settings for SMTP_USER and SMTP_PASSWD.
+SMTP_AUTH = No
+SMTP_USER = ''
+SMTP_PASSWD = ''
+
+# If using SASL authentication (SMTP_AUTH = Yes), set the following to Yes
+# to also use TLS. This has no effect if SMTP_AUTH = No.
+SMTP_USE_TLS = No
+
+# When using TLS the following should be set to the hostname that should be
+# used in order to identify Mailman to the SMTP server.  By default, it
+# uses DEFAULT_URL_HOST. Normally, you should not change this.
+SMTP_HELO_HOST = DEFAULT_URL_HOST
 
 # Usenet への投稿あるいは閲覧で NNTP サーバで認証が必要な場合にはこれらの
 # 変数を設定してください。認証が不要ならば、「None」を両方の変数に
