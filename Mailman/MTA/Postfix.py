@@ -28,6 +28,7 @@ from Mailman import mm_cfg
 from Mailman import Utils
 from Mailman import LockFile
 from Mailman.i18n import C_
+from Mailman.MailList import MailList
 from Mailman.MTA.Utils import makealiases
 from Mailman.Logging.Syslog import syslog
 
@@ -132,6 +133,11 @@ def _addvirtual(mlist, fp):
     sitedest = Utils.ParseEmail(siteaddr)[0]
     if mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN:
         loopdest += '@' + mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN
+        sitedest += '@' + mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN
+    # If the site list's host_name is a virtual domain, adding it to the
+    # SITE ADDRESSES will duplicate the list posting entry, so comment it.
+    if _isvirtual(MailList(mm_cfg.MAILMAN_SITE_LIST, lock=False)):
+        siteaddr = '#' + siteaddr
     # Seek to the end of the text file, but if it's empty write the standard
     # disclaimer, and the loop catch address and site address.
     fp.seek(0, 2)
@@ -179,6 +185,9 @@ def _check_for_virtual_loopaddr(mlist, filename):
     loopdest = Utils.ParseEmail(loopaddr)[0]
     siteaddr = Utils.get_site_email(mlist.host_name)
     sitedest = Utils.ParseEmail(siteaddr)[0]
+    if mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN:
+        loopdest += '@' + mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN
+        sitedest += '@' + mm_cfg.VIRTUAL_MAILMAN_LOCAL_DOMAIN
     infp = open(filename)
     omask = os.umask(007)
     try:
@@ -230,7 +239,7 @@ def _check_for_virtual_loopaddr(mlist, filename):
                 print >> outfp, '%s\t%s' % (siteaddr, sitedest)
                 outfp.write(line)
                 break
-            elif line.startswith(siteaddr):
+            elif line.startswith(siteaddr) or line.startswith('#' + siteaddr):
                 # We just found it
                 outfp.write(line)
                 break

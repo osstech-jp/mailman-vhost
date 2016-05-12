@@ -5,9 +5,71 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.22 (xx-xxx-xxxx)
+2.1.2 (xx-xxx-xxxx)
+ 
+  New Features
+
+    - SMTPDirect.py can now do SASL authentication and STARTTLS security when
+      connecting to the outgoiung MTA. Associated with this are new
+      Defaults.py/mm_cfg.py settings SMTP_AUTH, SMTP_USER, SMTP_PASSWD and
+      SMTP_USE_TLS.  (LP: #558281)
+
+    - There is a new Defaults.py/mm_cfg.py setting SMTPLIB_DEBUG_LEVEL which
+      can be set to 1 to enable verbose smtplib debugging to Mailman's error
+      log to help with debugging 'low level smtp failures'.  (LP: # 1573074)
+
+    - A list's nonmember_rejection_notice attribute will now be the default
+      rejection reason for a held non-member post in addition to it's prior
+      role as the reson for an automatically rejected non-member post.
+      (LP: #1572330)
 
   Bug fixes and other patches
+
+    - A site can now set DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL to None or the
+      null string if it wants to avoid using this.  (LP: #1578450)
+ 
+    - The white space to the left of the admindb Logout link is no longer
+      part of the link.  (LP: #1573623)
+
+2.1.22 (17-Apr-2016)
+
+  i18n
+
+    - Fixed a typo in the German options.html template.  (LP: #1562408)
+
+    - An error in the Brazilian Portugese translation of Quarterly has been
+      fixed thanks to Kleber A. Benatti.
+
+    - The Brazilian Portugese translation has been updated by Emerson Ribeiro
+      de Mello.
+
+  Bug fixes and other patches
+
+    - All addresses in data/virtual-mailman are now properly appended with
+      VIRTUAL_MAILMAN_LOCAL_DOMAIN and duplicates are not generated if the
+      site list is in a virtual domain.  (LP: #1570630)
+
+    - DMARC mitigations will now find the From: domain to the right of the
+      rightmost '@' rather than the leftmost '@'.  (LP: #1568445)
+
+    - DMARC mitigations for a sub-domain of an organizational domain will now
+      use the organizational domain's sp= policy if any.  (LP: #1568398)
+
+    - Modified NewsRunner.py to ensure that messages gated to Usenet have a
+      non-blank Subject: header and when munging the Message-ID to add the
+      original to References: to help with threading.  (LP: #557955)
+
+    - Fixed the pipermail archiver to do a better job of figuring the date of
+      a post when its Date: header is missing, unparseable or has an obviously
+      out of range date.  This should only affect bin/arch as ArchRunner has
+      code to fix dates at least if ARCHIVER_CLOBBER_DATE_POLICY has not been
+      set to 0 in mm_cfg.py.  If posts have been added in the past to a list's
+      archive using bin/arch and an imported mbox, running bin/arch again could
+      result is some of those posts being archived with a different date.
+      (LP: #1555798)
+
+    - Fixed an issue with CommandRunner shunting a malformed message with a
+      null byte in the body.  (LP: #1553888)
 
     - Don't collapse multipart with a single sub-part inside multipart/signed
       parts.  (LP: #1551075)

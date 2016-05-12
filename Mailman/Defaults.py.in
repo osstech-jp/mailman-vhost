@@ -469,6 +469,12 @@ PUBLIC_MBOX = No
 #DELIVERY_MODULE = 'Sendmail'
 DELIVERY_MODULE = 'SMTPDirect'
 
+# Sometimes there are 'low level' smtplib failures that are difficult to
+# debug.  To enable very verbose debugging info from smtplib to Mailman's
+# error log, set the following to 1.  This will only work if
+# DELIVERY_MODULE = 'SMTPDirect' and Python is >= 2.4.
+SMTPLIB_DEBUG_LEVEL = 0
+
 # MTA should name a module in Mailman/MTA which provides the MTA specific
 # functionality for creating and removing lists.  Some MTAs like Exim can be
 # configured to automatically recognize new lists, in which case the MTA
@@ -555,6 +561,22 @@ SMTPPORT = 0                                      # default from smtplib
 # Command for direct command pipe delivery to sendmail compatible program,
 # when DELIVERY_MODULE is 'Sendmail'.
 SENDMAIL_CMD = '/usr/lib/sendmail'
+
+# SMTP authentication for DELIVERY_MODULE = 'SMTPDirect'.  To enable SASL
+# authentication for SMTPDirect, set SMTP_AUTH = Yes and provide appropriate
+# settings for SMTP_USER and SMTP_PASSWD.
+SMTP_AUTH = No
+SMTP_USER = ''
+SMTP_PASSWD = ''
+
+# If using SASL authentication (SMTP_AUTH = Yes), set the following to Yes
+# to also use TLS. This has no effect if SMTP_AUTH = No.
+SMTP_USE_TLS = No
+
+# When using TLS the following should be set to the hostname that should be
+# used in order to identify Mailman to the SMTP server.  By default, it
+# uses DEFAULT_URL_HOST. Normally, you should not change this.
+SMTP_HELO_HOST = DEFAULT_URL_HOST
 
 # Set these variables if you need to authenticate to your NNTP server for
 # Usenet posting or reading.  If no authentication is necessary, specify None
