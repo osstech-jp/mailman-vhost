@@ -16,7 +16,7 @@ Here is a history of user visible changes to Mailman.
 
     - There is a new Defaults.py/mm_cfg.py setting SMTPLIB_DEBUG_LEVEL which
       can be set to 1 to enable verbose smtplib debugging to Mailman's error
-      log to help with debugging 'low level smtp failures'.  (LP: # 1573074)
+      log to help with debugging 'low level smtp failures'.  (LP: #1573074)
 
     - A list's nonmember_rejection_notice attribute will now be the default
       rejection reason for a held non-member post in addition to it's prior
@@ -24,6 +24,9 @@ Here is a history of user visible changes to Mailman.
       (LP: #1572330)
 
   Bug fixes and other patches
+
+    - Set the Date: header in the wrapper message when from_is_list or
+      dmarc_moderation_action is Wrap Message.  (LP: #1581215)
 
     - A site can now set DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL to None or the
       null string if it wants to avoid using this.  (LP: #1578450)
@@ -195,7 +198,7 @@ Here is a history of user visible changes to Mailman.
     - Changed CookHeaders to default to using space rather than tab as
       continuation_ws when folding headers.  (LP: #1505878)
 
-    - Fixed the 'pidfile' path in the sample init.d script.  (LP: # 1503422)
+    - Fixed the 'pidfile' path in the sample init.d script.  (LP: #1503422)
 
     - Subject prefixing could fail to collapse multiple 'Re:' in an incomming
       message if they all came after the list's subject_prefix.  This is now
