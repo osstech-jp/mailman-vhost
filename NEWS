@@ -25,6 +25,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - In rare circumstances a list can be removed while the admin or listinfo
+      CGI or bin/list_lists is running causing an uncaught MMUnknownListError
+      to be thrown.  The exception is now caught and handled.  (LP: #1582532)
+
     - Set the Date: header in the wrapper message when from_is_list or
       dmarc_moderation_action is Wrap Message.  (LP: #1581215)
 

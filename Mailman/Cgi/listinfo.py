@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -88,7 +88,11 @@ def listinfo_overview(msg=''):
     listnames.sort()
 
     for name in listnames:
-        mlist = MailList.MailList(name, lock=0)
+        try:
+            mlist = MailList.MailList(name, lock=0)
+        except Errors.MMUnknownListError:
+            # The list could have been deleted by another process.
+            continue
         if mlist.advertised:
             if mm_cfg.VIRTUAL_HOST_OVERVIEW and (
                    mlist.web_page_url.find('/%s/' % hostname) == -1 and
