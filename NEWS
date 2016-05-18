@@ -25,6 +25,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Improved logging of banned subscription and address change attempts.
+      (LP: #1582856)
+
     - In rare circumstances a list can be removed while the admin or listinfo
       CGI or bin/list_lists is running causing an uncaught MMUnknownListError
       to be thrown.  The exception is now caught and handled.  (LP: #1582532)
