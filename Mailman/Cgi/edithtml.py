@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -47,6 +47,18 @@ def main():
         ('options.html',     _('User specific options page')),
         ('subscribeack.txt', _('Welcome email text file')),
         ('masthead.txt',     _('Digest masthead')),
+        ('postheld.txt',     _('User notice of held post')),
+        ('approve.txt',      _('User notice of held subscription')),
+        ('refuse.txt',       _('Notice of post refused by moderator')),
+        ('invite.txt',       _('Invitation to join list')),
+        ('verify.txt',       _('Request to confirm subscription')),
+        ('unsub.txt',        _('Request to confirm unsubscription')),
+        ('nomoretoday.txt',  _('User notice of autoresponse limit')),
+        ('postack.txt',      _('User post acknowledgement')),
+        ('disabled.txt',     _('Subscription disabled by bounce warning')),
+        ('admlogin.html',    _('Admin/moderator login page')),
+        ('private.html',     _('Private archive login page')),
+        ('userpass.txt',     _('On demand password reminder')),
         )
 
     _ = i18n._
