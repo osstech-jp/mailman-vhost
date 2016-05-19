@@ -5,9 +5,12 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.2 (xx-xxx-xxxx)
+2.1.23 (xx-xxx-xxxx)
  
   New Features
+
+    - Several additional templates have been added to those that can be edited
+      via the web admin GUI.  (LP: #1583387)
 
     - SMTPDirect.py can now do SASL authentication and STARTTLS security when
       connecting to the outgoiung MTA. Associated with this are new
