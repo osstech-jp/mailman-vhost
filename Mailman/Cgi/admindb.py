@@ -295,9 +295,10 @@ def main():
                     ))
             form.AddItem(Center(SubmitButton('submit', _('Submit All Data'))))
         # Put 'Logout' link before the footer
+        doc.AddItem('\n<div align="right"><font size="+2">')
         doc.AddItem(Link('%s/logout' % admindburl,
-            '<div align="right"><font size="+2"><b>%s</b></font></div>' %
-            _('Logout')))
+            '<b>%s</b>' % _('Logout')))
+        doc.AddItem('</font></div>\n')
         doc.AddItem(mlist.GetMailmanFooter())
         print doc.Format()
         # Commit all changes
