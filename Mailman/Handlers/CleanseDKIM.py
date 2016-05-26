@@ -43,6 +43,13 @@ def process(mlist, msg, msgdata):
            )
        ):
         return
+    if (mm_cfg.REMOVE_DKIM_HEADERS == 3):
+        if 'domainkey-signature' in msg:
+            msg['X-Mailman-Original-DomainKey-Signature'] = msg['domainkey-signature']
+        if 'dkim-signature' in msg:
+            msg['X-Mailman-Original-DKIM-Signature'] = msg['dkim-signature']
+        if 'authentication-results' in msg:
+            msg['X-Mailman-Original-Authentication-Results'] = msg['authentication-results']
     del msg['domainkey-signature']
     del msg['dkim-signature']
     del msg['authentication-results']

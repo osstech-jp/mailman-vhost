@@ -618,6 +618,7 @@ NNTP_REWRITE_DUPLICATE_HEADERS = [
 # No, 0, False -> do not remove headers.
 # Yes, 1, True -> remove headers only if the list's from_is_list setting is 1.
 # 2 -> always remove headers.
+# 3 -> rename and preserve original DKIM headers.
 REMOVE_DKIM_HEADERS = No
 
 # All `normal' messages which are delivered to the entire list membership go
