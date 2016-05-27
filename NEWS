@@ -9,6 +9,10 @@ Here is a history of user visible changes to Mailman.
  
   New Features
 
+    - Thanks to Jim Popovitch REMOVE_DKIM_HEADERS can now be set to 3 to
+      preserve the original headers as X-Mailman-Original-... before removing
+      them.
+
     - Several additional templates have been added to those that can be edited
       via the web admin GUI.  (LP: #1583387)
 
