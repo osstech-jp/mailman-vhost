@@ -32,6 +32,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Scrubber links in archives are now in the list's preferred_language
+      rather than the poster's language.  (LP: #1586505)
+
     - Improved logging of banned subscription and address change attempts.
       (LP: #1582856)
 
