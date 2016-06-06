@@ -131,7 +131,6 @@ ALLOW_SITE_ADMIN_COOKIES = No
 # 設定秒数後に期限切れになります。
 AUTHENTICATION_COOKIE_LIFETIME = 0
 
-# Form lifetime is set against Cross Site Request Forgery.
 # フォームの有効期限をクロスサイトリクエストフォージェリ(CSRF;リクエスト強要)
 # 対策のために設定します。
 FORM_LIFETIME = hours(1)
@@ -267,17 +266,17 @@ KNOWN_SPAMMERS = []
 # 色使いの初期設定値の上書きを簡単に行えるので、テンプレートの色使いは
 # 通常はここには含めないことを付記しておきます。
 
-WEB_BG_COLOR = 'white'                            # Page background
-WEB_HEADER_COLOR = '#99ccff'                      # Major section headers
-WEB_SUBHEADER_COLOR = '#fff0d0'                   # Minor section headers
-WEB_ADMINITEM_COLOR = '#dddddd'                   # Option field background
-WEB_ADMINPW_COLOR = '#99cccc'                     # Password box color
-WEB_ERROR_COLOR = 'red'                           # Error message foreground
-WEB_LINK_COLOR = ''                               # If true, forces LINK=
-WEB_ALINK_COLOR = ''                              # If true, forces ALINK=
-WEB_VLINK_COLOR = ''                              # If true, forces VLINK=
-WEB_HIGHLIGHT_COLOR = '#dddddd'                   # If true, alternating rows
-                                                  # in listinfo & admin display
+WEB_BG_COLOR = 'white'                            # ページ背景
+WEB_HEADER_COLOR = '#99ccff'                      # 大見出し
+WEB_SUBHEADER_COLOR = '#fff0d0'                   # 小見出し
+WEB_ADMINITEM_COLOR = '#dddddd'                   # オプション項目背景
+WEB_ADMINPW_COLOR = '#99cccc'                     # パスワードボックスの色
+WEB_ERROR_COLOR = 'red'                           # エラーメッセージの文字色
+WEB_LINK_COLOR = ''                               # 真ならば LINK= の値を強制
+WEB_ALINK_COLOR = ''                              # 真ならば ALINK= の値を強制
+WEB_VLINK_COLOR = ''                              # 真ならば VLINK= の値を強制
+WEB_HIGHLIGHT_COLOR = '#dddddd'                   # 真ならば、listinfo と admin
+                                                  # 画面の行の色を交互に変更
 
 # Mailman のウェブページの <HEAD> セクションに、たとえばスタイル情報や
 # スタイルシートへのリンクといった、追加の要素を置きたい場合には、
@@ -1315,7 +1314,6 @@ DEFAULT_MEMBER_VERBOSITY_THRESHOLD = 0
 # のでその回数です)
 VERBOSE_CLEAN_LIMIT = 1000
 
-# for posting/moderation.
 # 投稿あるいは投稿制限(モデレーション)の目的でリストの会員であるかを
 # 確認するの時に同一のドメインと看做したいドメイン群。
 # リストの会員であるかのテストの際に、同じローカルパートであるが異なる
@@ -1390,7 +1388,6 @@ DEFAULT_FROM_IS_LIST = 0
 # 送信しているように見せかけますか?
 DEFAULT_ANONYMOUS_LIST = No
 
-# {header-name: regexp} spam filtering - we include some for example sake.
 # (ヘッダ名: 正規表現) スパムフィルタ - いくつか例示します。
 DEFAULT_BOUNCE_MATCHING_HEADERS = """
 # 行頭が「#」の行はコメントです。
