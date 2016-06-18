@@ -30,6 +30,11 @@ Here is a history of user visible changes to Mailman.
       role as the reson for an automatically rejected non-member post.
       (LP: #1572330)
 
+  i18n
+
+    - Japanese documentation in messages/ja has been updated by
+      Yasuhito FUTATSUKI.
+
   Bug fixes and other patches
 
     - Scrubber links in archives are now in the list's preferred_language
