@@ -42,7 +42,7 @@ def minutes(m): return m * 60
 def hours(h): return h * 60 * 60
 def days(d): return d * 60 * 60 * 24
 
-# 便利に使うための定数
+# 便宜的定数
 try:
     True, False
 except NameError:
@@ -67,7 +67,7 @@ No = no = Off = off = False
 # 画像の名前はそこに埋め込んであります。
 IMAGE_LOGOS = '/icons/'
 
-# Mailman の favicon の名前
+# Mailman の favicon のファイル名
 SHORTCUT_ICON = 'mm-icon.png'
 
 # MAILMAN_URL は、ミラーサイトいずれかを指すようにしたい場合以外は変えては
