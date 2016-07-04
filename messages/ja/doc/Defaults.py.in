@@ -93,13 +93,13 @@ MAILMAN_URL = 'http://www.gnu.org/software/mailman/index.html'
 # (URLのFQDN を"urlfqdn"、電子メールのFQDNを"emailfqdn"とした場合)
 #
 # mm_cfg.py で DEFAULT_EMAIL_HOST と DEFAULT_URL_HOST を変更する必要が
-# ないのであれば、ほかにやることはなし; 既定のホスト名のマッピングは
+# ないのであれば、準備は終っています; 既定のホスト名のマッピングは
 # 自動的に追加されます。しかし、mm_cfg.py でいずれかの変数値を変えたので
-# あれば、以下の設定もそこに含めてあるのを確認してください。
+# あれば、以下の設定も mm_cfg.py に追加してあるのを確認してください。
 #
 #     add_virtualhost(DEFAULT_URL_HOST, DEFAULT_EMAIL_HOST)
 #
-# これがないと、既定のホスト名の対応(マッピング)は修正されません。
+# この設定がないと、既定のホスト名の対応(マッピング)は修正されません。
 DEFAULT_EMAIL_HOST = '@MAILHOST@'
 DEFAULT_URL_HOST = '@URLHOST@'
 DEFAULT_URL_PATTERN = 'http://%s/mailman/'
