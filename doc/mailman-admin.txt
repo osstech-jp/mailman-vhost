@@ -2,7 +2,7 @@
    document... About this document...
 
    Previous Page Up one Level Next Page GNU Mailman - List Administration
-                                                     Manual
+                                   Manual
      __________________________________________________________________
 
 GNU Mailman - List Administration Manual
@@ -10,7 +10,7 @@ GNU Mailman - List Administration Manual
    Barry A. Warsaw
 
    Release 2.1
-   November 28, 2015
+   November 21, 2015
 
                                   Front Matter
 
@@ -1344,13 +1344,13 @@ Just add another \section{}, but don't say \appendix again.
 
                             About this document ...
 
-   GNU Mailman - List Administration Manual, November 28, 2015, Release
+   GNU Mailman - List Administration Manual, November 21, 2015, Release
    2.1
 
    This document was generated using the LaTeX2HTML translator.
 
-   LaTeX2HTML is Copyright Â© 1993, 1994, 1995, 1996, 1997, Nikos Drakos,
-   Computer Based Learning Unit, University of Leeds, and Copyright Â©
+   LaTeX2HTML is Copyright © 1993, 1994, 1995, 1996, 1997, Nikos Drakos,
+   Computer Based Learning Unit, University of Leeds, and Copyright ©
    1997, 1998, Ross Moore, Mathematics Department, Macquarie University,
    Sydney.
 
@@ -1387,7 +1387,7 @@ Just add another \section{}, but don't say \appendix again.
      __________________________________________________________________
 
    Previous Page Up one Level Next Page GNU Mailman - List Administration
-                                                     Manual
+                                   Manual
      __________________________________________________________________
 
-   Release 2.1, documentation updated on November 28, 2015.
+   Release 2.1, documentation updated on November 21, 2015.
