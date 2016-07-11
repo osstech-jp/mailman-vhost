@@ -86,7 +86,7 @@ def getDecodedHeaders(msg, cset='utf-8'):
                 # unicode it as iso-8859-1 which may result in a garbled
                 # mess, but we have to do something.
                 uvalue += unicode(frag, 'iso-8859-1', 'replace')
-        headers += '%s: %s\n' % (h, uvalue.encode(cset, 'replace'))
+        headers += '%s: %s\n' % (h, uvalue.encode(cset, 'backslashreplace'))
     return headers
 
 
