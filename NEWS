@@ -11,11 +11,11 @@ Here is a history of user visible changes to Mailman.
 
     - RFC 2047 encoded headers are now decoded and re-encoded in the charset of
       the list's preferred language for matching by header_filter_rules using
-      errors='backslashreplace' instead of the former errors='replace'.  This
+      errors='xmlcharrefreplace' instead of the former errors='replace'.  This
       means that characters that can't be represented in the charset of the
-      list's preferred language will now be represented as '\uxxxx' escapes
-      rather than '?' enabling regexps to be constructed to match specific
-      characters or ranges.  (LP: #558155)
+      list's preferred language will now be represented as '&#nnnn;' XML
+      character references rather than '?' enabling regexps to be constructed
+      to match specific characters or ranges.  (LP: #558155)
 
     - Thanks to Jim Popovitch REMOVE_DKIM_HEADERS can now be set to 3 to
       preserve the original headers as X-Mailman-Original-... before removing
