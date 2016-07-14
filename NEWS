@@ -48,6 +48,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - We no longer throw an uncaught TypeError with certain defective crafted
+      POST requests to Mailman's CGIs.  (LP: #1602608)
+
     - Scrubber links in archives are now in the list's preferred_language
       rather than the poster's language.  (LP: #1586505)
 
