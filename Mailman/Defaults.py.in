@@ -218,6 +218,13 @@ add_virtualhost(DEFAULT_URL_HOST, DEFAULT_EMAIL_HOST)
 # -owners address, unless the message is explicitly approved.
 KNOWN_SPAMMERS = []
 
+# The header_filter_rules in Privacy options... -> Spam filters are matched as
+# normalized unicodes against normalized unicode headers.  This setting
+# determines the normalization form.  It is one of 'NFC', 'NFD', 'NFKC' or
+# 'NFKD'.  See
+# https://docs.python.org/2/library/unicodedata.html#unicodedata.normalize
+NORMALIZE_FORM = 'NFKC'
+
 
 
 #####

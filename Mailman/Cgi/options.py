@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -108,7 +108,17 @@ def main():
     # we might have a 'language' key in the cgi data.  That was an explicit
     # preference to view the page in, so we should honor that here.  If that's
     # not available, use the list's default language.
-    language = cgidata.getvalue('language')
+    try:
+        language = cgidata.getvalue('language')
+    except TypeError:
+        # Someone crafted a POST with a bad Content-Type:.
+        doc.AddItem(Header(2, _("Error")))
+        doc.AddItem(Bold(_('Invalid options to CGI script.')))
+        # Send this with a 400 status.
+        print 'Status: 400 Bad Request'
+        print doc.Format()
+        return
+
     if not Utils.IsLanguage(language):
         language = mlist.preferred_language
     i18n.set_language(language)

@@ -1478,3 +1478,34 @@ def check_eq_domains(email, domains_list):
             return [local + '@' + x for x in domains if x != domain]
     return []
 
+
+def _invert_xml(mo):
+    # This is used with re.sub below to convert XML char refs and textual \u
+    # escapes to unicodes.
+    try:
+        if mo.group(1)[:1] == '#':
+            return unichr(int(mo.group(1)[1:]))
+        elif mo.group(1)[:1].lower() == 'u':
+            return unichr(int(mo.group(1)[1:], 16))
+        else:
+            return(u'\ufffd')
+    except ValueError:
+        # Value is out of range.  Return the unicode replace character.
+        return(u'\ufffd')
+
+
+def xml_to_unicode(s, cset):
+    """This converts a string s, encoded in cset to a unicode with translation
+    of XML character references and textual \uxxxx escapes.  It is more or less
+    the inverse of unicode.decode(cset, errors='xmlcharrefreplace').  It is
+    similar to canonstr above except for replacing invalid refs with the
+    unicode replace character and recognizing \u escapes.
+    """
+    if isinstance(s, str):
+        us = s.decode(cset, 'replace')
+        us = re.sub(u'&(#[0-9]+);', _invert_xml, us)
+        us = re.sub(u'(?i)\\\\(u[a-f0-9]{4})', _invert_xml, us)
+        return us
+    else:
+        return s
+
