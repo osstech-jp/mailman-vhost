@@ -122,6 +122,18 @@ def main():
 
     # Make sure the user is authorized to see this page.
     cgidata = cgi.FieldStorage(keep_blank_values=1)
+    try:
+        cgidata.getvalue('adminpw', '')
+    except TypeError:
+        # Someone crafted a POST with a bad Content-Type:.
+        doc = Document()
+        doc.set_language(mm_cfg.DEFAULT_SERVER_LANGUAGE)
+        doc.AddItem(Header(2, _("Error")))
+        doc.AddItem(Bold(_('Invalid options to CGI script.')))
+        # Send this with a 400 status.
+        print 'Status: 400 Bad Request'
+        print doc.Format()
+        return
 
     if not mlist.WebAuthenticate((mm_cfg.AuthListAdmin,
                                   mm_cfg.AuthListModerator,

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -453,7 +453,7 @@ class InputObj:
         output.append('>')
         ret = SPACE.join(output)
         if self.type == 'TEXT' and isinstance(ret, unicode):
-            ret = ret.encode(charset, 'replace')
+            ret = ret.encode(charset, 'xmlcharrefreplace')
         return ret
 
 
@@ -504,7 +504,7 @@ class TextArea:
             output += ' READONLY'
         output += '>%s</TEXTAREA>' % self.text
         if isinstance(output, unicode):
-            output = output.encode(charset, 'replace')
+            output = output.encode(charset, 'xmlcharrefreplace')
         return output
 
 class FileUpload(InputObj):

@@ -9,13 +9,30 @@ Here is a history of user visible changes to Mailman.
  
   New Features
 
-    - RFC 2047 encoded headers are now decoded and re-encoded in the charset of
-      the list's preferred language for matching by header_filter_rules using
-      errors='xmlcharrefreplace' instead of the former errors='replace'.  This
-      means that characters that can't be represented in the charset of the
-      list's preferred language will now be represented as '&#nnnn;' XML
-      character references rather than '?' enabling regexps to be constructed
-      to match specific characters or ranges.  (LP: #558155)
+    - For header_filter_rules matching, both RFC 2047 encoded headers and
+      header_filter_rules patterns are now decoded to unicode as are.  Both
+      XML character references of the form &#nnnn; and unicode escapes of the
+      form \Uxxxx in patterns are converted to unicodes as well.  Both headers
+      and patterns are normalized to 'NFKC' normal form before matching, but
+      the normalization form can be set via a new NORMALIZE_FORM mm_cfg
+      setting.  Also, the web UI has been updated to encode characters in text
+      fields that are invalid in the character set of the page's language as
+      XML character references instead of '?'.  This should help with entering
+      header_filter_rules patterns to match 'odd' characters.  This feature is
+      experimental and is problematic for some cases where it is desired to
+      have a header_filter_rules pattern with characters not in the character
+      set of the list's preferred language.  For patterns without such
+      characters, the only change in behavior should be because of unicode
+      normalization which should improve matching.  For other situations such
+      as trying to match a Subject: with CJK characters (range U+4E00..U+9FFF)
+      on an English language (ascii) list, one can enter a pattern like
+      '^subject:.*[&#19968;-&#40959;]' or '^subject:.*[\u4e00;-\u9fff;]' to
+      match a Subject with any character in the range, and it will work, but
+      depending on the actual characters and the browser, submitting another,
+      even unrelated change can garble the original entry although this
+      usually occurs only with ascii pages and characters in the range
+      \u0080-\u00ff.  The \Uxxxx unicode escapes must have exactly 4 hex
+      digits, but they are case insensitive.  (LP: #558155)
 
     - Thanks to Jim Popovitch REMOVE_DKIM_HEADERS can now be set to 3 to
       preserve the original headers as X-Mailman-Original-... before removing
@@ -47,6 +64,9 @@ Here is a history of user visible changes to Mailman.
       Yasuhito FUTATSUKI.
 
   Bug fixes and other patches
+
+    - We no longer throw an uncaught TypeError with certain defective crafted
+      POST requests to Mailman's CGIs.  (LP: #1602608)
 
     - Scrubber links in archives are now in the list's preferred_language
       rather than the poster's language.  (LP: #1586505)
