@@ -1010,6 +1010,9 @@ def membership_options(mlist, subcat, cgidata, doc, form):
             if regexp:
                 findfrag = '&findmember=' + urllib.quote(regexp)
             url = adminurl + '/members?letter=' + letter + findfrag
+            if isinstance(url, unicode):
+                url = url.encode(Utils.GetCharSet(mlist.preferred_language),
+                                 errors='ignore')
             if letter == bucket:
                 show = Bold('[%s]' % letter.upper()).Format()
             else:
