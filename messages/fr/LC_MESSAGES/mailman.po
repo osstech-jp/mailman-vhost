@@ -4006,7 +4006,7 @@ msgstr "Lituanien"
 
 #: Mailman/Defaults.py:1705
 msgid "Dutch"
-msgstr "Hollandais"
+msgstr "Néerlandais"
 
 #: Mailman/Defaults.py:1706
 msgid "Norwegian"
