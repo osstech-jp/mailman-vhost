@@ -63,7 +63,7 @@ Here is a history of user visible changes to Mailman.
     - Some German language templates that were incorrectly utf-8 encoded have
       been recoded as iso-8859-1.  (LP: #1602779)
 
-    - Japanese documentation in messages/ja has been updated by
+    - Japanese translation and documentation in messages/ja has been updated by
       Yasuhito FUTATSUKI.
 
   Bug fixes and other patches
