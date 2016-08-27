@@ -33,6 +33,7 @@ from Mailman import MemberAdaptor
 from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
+from Mailman.CSRFcheck import csrf_check
 
 OR = '|'
 SLASH = '/'
@@ -51,6 +52,8 @@ except NameError:
     True = 1
     False = 0
 
+AUTH_CONTEXTS = (mm_cfg.AuthListAdmin, mm_cfg.AuthSiteAdmin,
+                 mm_cfg.AuthListModerator, mm_cfg.AuthUser)
 
 
 def main():
@@ -103,6 +106,19 @@ def main():
 
     # The total contents of the user's response
     cgidata = cgi.FieldStorage(keep_blank_values=1)
+
+    # CSRF check
+    safe_params = ['displang-button', 'language', 'email', 'password', 'login',
+                   'login-unsub', 'login-remind', 'VARHELP', 'UserOptions']
+    params = cgidata.keys()
+    if set(params) - set(safe_params):
+        csrf_checked = csrf_check(mlist, cgidata.getvalue('csrf_token'))
+    else:
+        csrf_checked = True
+    # if password is present, void cookie to force password authentication.
+    if cgidata.getvalue('password'):
+        os.environ['HTTP_COOKIE'] = ''
+        csrf_checked = True
 
     # Set the language for the page.  If we're coming from the listinfo cgi,
     # we might have a 'language' key in the cgi data.  That was an explicit
@@ -312,6 +328,15 @@ def main():
 
     if not mlist.isMember(user):
         loginpage(mlist, doc, user, language)
+        print doc.Format()
+        return
+
+    # Before going further, get the result of CSRF check and do nothing 
+    # if it has failed.
+    if csrf_checked == False:
+        doc.addError(
+            _('The form lifetime has expired. (request forgery check)'))
+        options_page(mlist, doc, user, cpuser, userlang)
         print doc.Format()
         return
 
@@ -832,7 +857,8 @@ def options_page(mlist, doc, user, cpuser, userlang, message=''):
         mlist.FormatButton('othersubs',
                            _('List my other subscriptions')))
     replacements['<mm-form-start>'] = (
-        mlist.FormatFormStart('options', user))
+        mlist.FormatFormStart('options', user, mlist=mlist, 
+            contexts=AUTH_CONTEXTS, user=user))
     replacements['<mm-user>'] = user
     replacements['<mm-presentable-user>'] = presentable_user
     replacements['<mm-email-my-pw>'] = mlist.FormatButton(
