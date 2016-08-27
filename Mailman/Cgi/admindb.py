@@ -39,6 +39,7 @@ from Mailman.ListAdmin import readMessage
 from Mailman.Cgi import Auth
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
+from Mailman.CSRFcheck import csrf_check
 
 EMPTYSTRING = ''
 NL = '\n'
@@ -57,6 +58,9 @@ if mm_cfg.DISPLAY_HELD_SUMMARY_SORT_BUTTONS in (SSENDERTIME, STIME):
     ssort = mm_cfg.DISPLAY_HELD_SUMMARY_SORT_BUTTONS
 else:
     ssort = SSENDER
+
+AUTH_CONTEXTS = (mm_cfg.AuthListAdmin, mm_cfg.AuthSiteAdmin,
+                 mm_cfg.AuthListModerator)
 
 
 
@@ -135,6 +139,18 @@ def main():
         print doc.Format()
         return
 
+    # CSRF check
+    safe_params = ['adminpw', 'admlogin', 'msgid', 'sender', 'details']
+    params = cgidata.keys()
+    if set(params) - set(safe_params):
+        csrf_checked = csrf_check(mlist, cgidata.getvalue('csrf_token'))
+    else:
+        csrf_checked = True
+    # if password is present, void cookie to force password authentication.
+    if cgidata.getvalue('adminpw'):
+        os.environ['HTTP_COOKIE'] = ''
+        csrf_checked = True
+
     if not mlist.WebAuthenticate((mm_cfg.AuthListAdmin,
                                   mm_cfg.AuthListModerator,
                                   mm_cfg.AuthSiteAdmin),
@@ -212,7 +228,11 @@ def main():
         elif not details:
             # This is a form submission
             doc.SetTitle(_('%(realname)s Administrative Database Results'))
-            process_form(mlist, doc, cgidata)
+            if csrf_checked:
+                process_form(mlist, doc, cgidata)
+            else:
+                doc.addError(
+                    _('The form lifetime has expired. (request forgery check)'))
         # Now print the results and we're done.  Short circuit for when there
         # are no pending requests, but be sure to save the results!
         admindburl = mlist.GetScriptURL('admindb', absolute=1)
@@ -234,7 +254,7 @@ def main():
             mlist.Save()
             return
 
-        form = Form(admindburl)
+        form = Form(admindburl, mlist=mlist, contexts=AUTH_CONTEXTS)
         # Add the instructions template
         if details == 'instructions':
             doc.AddItem(Header(
