@@ -5,6 +5,12 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.24 (xx-xxx-xxxx)
+
+  i18n
+
+    - The Japanese translation has been updated by Yasuhito FUTATSUKI.
+
 2.1.23 (27-Aug-2016)
 
   Security

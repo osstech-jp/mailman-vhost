@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mailman 2.1.21rc2\n"
+"Project-Id-Version: Mailman 2.1.23\n"
 "POT-Creation-Date: Fri Aug 26 20:49:40 2016\n"
-"PO-Revision-Date: 2016-07-17 07:13+09:00\n"
+"PO-Revision-Date: 2016-08-28 01:26+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -2232,57 +2232,51 @@ msgstr "まとめ読みのヘッダーテキスト"
 
 #: Mailman/Cgi/edithtml.py:53
 msgid "User notice of held post"
-msgstr ""
+msgstr "投稿保留の通知"
 
 #: Mailman/Cgi/edithtml.py:54
-#, fuzzy
 msgid "User notice of held subscription"
-msgstr "他のリストへの入会状況"
+msgstr "入会申請保留の通知"
 
 #: Mailman/Cgi/edithtml.py:55
 msgid "Notice of post refused by moderator"
-msgstr ""
+msgstr "司会者による投稿拒絶の通知"
 
 #: Mailman/Cgi/edithtml.py:56
 msgid "Invitation to join list"
-msgstr ""
+msgstr "リスト入会の招待"
 
 #: Mailman/Cgi/edithtml.py:57
-#, fuzzy
 msgid "Request to confirm subscription"
-msgstr "他のリストへの入会状況"
+msgstr "入会申請の確認の依頼"
 
 #: Mailman/Cgi/edithtml.py:58
-#, fuzzy
 msgid "Request to confirm unsubscription"
-msgstr "退会申請を確認"
+msgstr "退会申請の確認の依頼"
 
 #: Mailman/Cgi/edithtml.py:59
 msgid "User notice of autoresponse limit"
-msgstr ""
+msgstr "自動応答の制限到達の通知"
 
 #: Mailman/Cgi/edithtml.py:60
-#, fuzzy
 msgid "User post acknowledgement"
-msgstr "%(realname)s 投稿確認通知"
+msgstr "投稿確認通知"
 
 #: Mailman/Cgi/edithtml.py:61
 msgid "Subscription disabled by bounce warning"
-msgstr ""
+msgstr "配送失敗による会員権停止の通知"
 
 #: Mailman/Cgi/edithtml.py:62
 msgid "Admin/moderator login page"
-msgstr ""
+msgstr "管理者/司会者のログインページ"
 
 #: Mailman/Cgi/edithtml.py:63
-#, fuzzy
 msgid "Private archive login page"
-msgstr "限定公開保存書庫エラー"
+msgstr "限定公開保存書庫ログインページ"
 
 #: Mailman/Cgi/edithtml.py:64
-#, fuzzy
 msgid "On demand password reminder"
-msgstr "毎月パスワード備忘通知を送りますか?"
+msgstr "要求によるパスワード備忘通知"
 
 #: Mailman/Cgi/edithtml.py:76
 msgid "List name is required."
@@ -2612,7 +2606,7 @@ msgid ""
 "            receive notification once the list moderators have made their\n"
 "            decision."
 msgstr ""
-"退会申請を受け取り, リスト管理者に転送しました. \n"
+"退会申請を受け取り, リスト司会者に転送しました. \n"
 "申請に関する決定の後, 結果をメールで通知します."
 
 #: Mailman/Cgi/options.py:609
@@ -3052,7 +3046,7 @@ msgid ""
 "moderator's decision when they get to your request."
 msgstr ""
 "%(x)s の理由で入会処理が中断しています.\n"
-"申請をリスト管理者に転送しましたので, 管理者がメールを受け取った後, \n"
+"申請をリスト司会者に転送しましたので, 司会者がメールを受け取った後, \n"
 "申請に関する決定をメールで通知します."
 
 #: Mailman/Cgi/subscribe.py:264 Mailman/Commands/cmd_confirm.py:61
@@ -5614,7 +5608,7 @@ msgid ""
 "Should the list moderators get immediate notice of new\n"
 "             requests, as well as daily notices about collected ones?"
 msgstr ""
-"新しい申請が来たら, 1日1回まとめて知らせるだけでなく, すぐに管理者に知らせま"
+"新しい申請が来たら, 1日1回まとめて知らせるだけでなく, すぐに司会者に知らせま"
 "すか?"
 
 #: Mailman/Gui/General.py:379
@@ -7854,7 +7848,7 @@ msgid ""
 "            moderator's decision by email."
 msgstr ""
 "これは閉鎖リストです. 入会が承認されるまで申請は保留されます. \n"
-"管理者の決定はメールでお知らせします."
+"司会者の決定はメールでお知らせします."
 
 #: Mailman/HTMLFormatter.py:197 Mailman/HTMLFormatter.py:204
 msgid "also "
@@ -7871,8 +7865,8 @@ msgid ""
 msgstr ""
 "他人がおせっかいで入会手続きをすることを防ぐために, \n"
 "確認要求のメールを会員のアドレス宛に送ります. \n"
-"会員による確認後, 申請はリスト管理者の承認のため保留されます. \n"
-"管理者の決定はメールでお知らせします."
+"会員による確認後, 申請はリスト司会者の承認のため保留されます. \n"
+"司会者の決定はメールでお知らせします."
 
 #: Mailman/HTMLFormatter.py:208
 msgid ""
@@ -8522,7 +8516,7 @@ msgstr " %(remote)s から"
 
 #: Mailman/MailList.py:971
 msgid "subscriptions to %(realname)s require moderator approval"
-msgstr "%(realname)s への入会には管理者の承認が必要です"
+msgstr "%(realname)s への入会には司会者の承認が必要です"
 
 #: Mailman/MailList.py:1046 bin/add_members:253
 msgid "%(realname)s subscription notification"
@@ -8530,7 +8524,7 @@ msgstr "%(realname)s 入会通知"
 
 #: Mailman/MailList.py:1065
 msgid "unsubscriptions require moderator approval"
-msgstr "退会には管理者の承認が必要です"
+msgstr "退会には司会者の承認が必要です"
 
 #: Mailman/MailList.py:1086
 msgid "%(realname)s unsubscribe notification"
