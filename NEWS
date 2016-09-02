@@ -7,6 +7,11 @@ Here is a history of user visible changes to Mailman.
 
 2.1.24 (xx-xxx-xxxx)
 
+  New Features
+
+    - cron/senddigests has a new -e/--exceptlist option to send pending
+      digests for all but a named list.  (LP: #1619770)
+
   i18n
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
