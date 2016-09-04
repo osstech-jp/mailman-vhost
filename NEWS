@@ -16,6 +16,10 @@ Here is a history of user visible changes to Mailman.
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
+  Bug fixes and other patches
+
+    - INIT INFO has been added to the sample init.d script.  (LP: #1620121)
+
 2.1.23 (27-Aug-2016)
 
   Security
