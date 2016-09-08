@@ -18,6 +18,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - paths.py now adds dist-packages as well as site-packages to sys.path.
+      (LP: #1621172)
+
     - INIT INFO has been added to the sample init.d script.  (LP: #1620121)
 
 2.1.23 (27-Aug-2016)
