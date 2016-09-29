@@ -5,6 +5,30 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.24 (xx-xxx-xxxx)
+
+  New Features
+
+    - cron/senddigests has a new -e/--exceptlist option to send pending
+      digests for all but a named list.  (LP: #1619770)
+
+  i18n
+
+    - The German "details for personalize" page has been updated by
+      Christian F Buser.
+
+    - The Japanese translation has been updated by Yasuhito FUTATSUKI.
+
+  Bug fixes and other patches
+
+    - The 2.1.23 fix for LP: #1604544 only fixed the letter links at the top
+      of the Membership List.  The links at the bottom have now been fixed.
+
+    - paths.py now adds dist-packages as well as site-packages to sys.path.
+      (LP: #1621172)
+
+    - INIT INFO has been added to the sample init.d script.  (LP: #1620121)
+
 2.1.23 (27-Aug-2016)
 
   Security
