@@ -21,6 +21,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The 2.1.23 fix for LP: #1604544 only fixed the letter links at the top
+      of the Membership List.  The links at the bottom have now been fixed.
+
     - paths.py now adds dist-packages as well as site-packages to sys.path.
       (LP: #1621172)
 

@@ -1189,8 +1189,11 @@ def membership_options(mlist, subcat, cgidata, doc, form):
                 continue
             start = chunkmembers[i*chunksz]
             end = chunkmembers[min((i+1)*chunksz, last)-1]
-            link = Link(url + 'chunk=%d' % i + findfrag,
-                        _('from %(start)s to %(end)s'))
+            url = url + 'chunk=%d' % i + findfrag
+            if isinstance(url, unicode):
+                url = url.encode(Utils.GetCharSet(mlist.preferred_language),
+                                 errors='ignore')
+            link = Link(url, _('from %(start)s to %(end)s'))
             buttons.append(link)
         buttons = UnorderedList(*buttons)
         container.AddItem(footer + buttons.Format() + '<p>')
