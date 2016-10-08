@@ -224,7 +224,7 @@ class Bouncer:
         # it was of dubious value).  However, we'll provide empty, strange, or
         # meaningless strings for the unused %()s fields so that the language
         # translators don't have to provide new templates.
-        siteowner = Utils.get_site_email(self.host_name)
+        owneraddr = self.GetOwnerEmail()
         text = Utils.maketext(
             'bounce.txt',
             {'listname' : self.real_name,
@@ -233,11 +233,10 @@ class Bouncer:
              'did'      : _('disabled'),
              'but'      : '',
              'reenable' : '',
-             'owneraddr': siteowner,
+             'owneraddr': owneraddr,
              }, mlist=self)
         subject = _('Bounce action notification')
-        umsg = Message.UserNotification(self.GetOwnerEmail(),
-                                        siteowner, subject,
+        umsg = Message.UserNotification(owneraddr, owneraddr, subject,
                                         lang=self.preferred_language)
         # BAW: Be sure you set the type before trying to attach, or you'll get
         # a MultipartConversionError.
