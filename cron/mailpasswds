@@ -141,9 +141,9 @@ def main():
     for host in byhost.keys():
         # Site owner is `mailman@dom.ain'
         userinfo = {}
-         virtlist = {}
+        virtlist = {}
         for mlist in byhost[host]:
-             virtlist = mlist
+            virtlist = mlist
             listaddr = mlist.GetListEmail()
             for member in mlist.getMembers():
                 # The user may have disabled reminders for this list
