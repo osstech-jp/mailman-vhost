@@ -264,8 +264,7 @@ def hold_for_approval(mlist, msg, msgdata, exc):
             d['subject'] = usersubject
             # craft the admin notification message and deliver it
             subject = _('%(listname)s post from %(sender)s requires approval')
-            nmsg = Message.UserNotification(owneraddr, owneraddr, subject,
-                                            lang=lang)
+            nmsg = Message.OwnerNotification(mlist, subject, tomoderators=1)
             nmsg.set_type('multipart/mixed')
             text = MIMEText(
                 Utils.maketext('postauth.txt', d, raw=1, mlist=mlist),
