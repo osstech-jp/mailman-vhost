@@ -250,10 +250,9 @@ def process_request(doc, cgidata):
              'requestaddr' : mlist.GetRequestEmail(),
              'siteowner'   : siteowner,
              }, mlist=mlist)
-        msg = Message.UserNotification(
-            owner, siteowner,
+        msg = Message.OwnerNotification(mlist,
             _('Your new mailing list: %(listname)s'),
-            text, mlist.preferred_language)
+            text=text, tomoderators=0)
         msg.send(mlist)
 
     # Success!

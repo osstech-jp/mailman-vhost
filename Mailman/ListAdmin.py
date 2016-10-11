@@ -403,10 +403,8 @@ class ListAdmin:
                  }, mlist=self)
             # This message should appear to come from the <list>-owner so as
             # to avoid any useless bounce processing.
-            owneraddr = self.GetOwnerEmail()
-            msg = Message.UserNotification(owneraddr, owneraddr, subject, text,
-                                           self.preferred_language)
-            msg.send(self, **{'tomoderators': 1})
+            msg = Message.OwnerNotification(self, subject, text=text,
+                                           tomoderators=1)
             # Restore the user's preferred language.
             i18n.set_language(lang)
 
@@ -460,10 +458,8 @@ class ListAdmin:
                  }, mlist=self)
             # This message should appear to come from the <list>-owner so as
             # to avoid any useless bounce processing.
-            owneraddr = self.GetOwnerEmail()
-            msg = Message.UserNotification(owneraddr, owneraddr, subject, text,
-                                           self.preferred_language)
-            msg.send(self, **{'tomoderators': 1})
+            msg = Message.OwnerNotification(self, subject, text=text,
+                                           tomoderators=1)
 
     def __handleunsubscription(self, record, value, comment):
         addr = record

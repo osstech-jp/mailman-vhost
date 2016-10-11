@@ -94,10 +94,9 @@ equivalent) file by adding the following lines, and possibly running the
     # this request.
     siteowner = Utils.get_site_email(extra='owner')
     # Should this be sent in the site list's preferred language?
-    msg = Message.UserNotification(
-        siteowner, siteowner,
+    msg = Message.OwnerNotification(mlist,
         _('Mailing list creation request for list %(listname)s'),
-        sfp.getvalue(), mm_cfg.DEFAULT_SERVER_LANGUAGE)
+        sfp.getvalue())
     msg.send(mlist)
 
 
@@ -135,12 +134,9 @@ equivalent) file by removing the following lines, and possibly running the
     if not cgi:
         print >> outfp
         return
-    siteowner = Utils.get_site_email(extra='owner')
-    # Should this be sent in the site list's preferred language?
-    msg = Message.UserNotification(
-        siteowner, siteowner,
+    msg = Message.OwnerNotification(mlist,
         _('Mailing list removal request for list %(listname)s'),
-        sfp.getvalue(), mm_cfg.DEFAULT_SERVER_LANGUAGE)
+        sfp.getvalue())
     msg['Date'] = email.Utils.formatdate(localtime=1)
     outq = get_switchboard(mm_cfg.OUTQUEUE_DIR)
     outq.enqueue(msg, recips=[siteowner], nodecorate=1)

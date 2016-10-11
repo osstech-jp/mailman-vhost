@@ -174,10 +174,9 @@ def do_discard(mlist, msg):
         lang = mlist.preferred_language
         varhelp = '%s/?VARHELP=privacy/sender/discard_these_nonmembers' % \
                   mlist.GetScriptURL('admin', absolute=1)
-        nmsg = Message.UserNotification(mlist.GetOwnerEmail(),
-                                        mlist.GetBouncesEmail(),
+        nmsg = Message.OwnerNotification(mlist,
                                         _('Auto-discard notification'),
-                                        lang=lang)
+                                        lang=lang, tomoderators=0)
         nmsg.set_type('multipart/mixed')
         text = MIMEText(Utils.wrap(_(
             'The attached message has been automatically discarded.')),
