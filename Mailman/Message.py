@@ -318,6 +318,7 @@ class OwnerNotification(UserNotification):
         del self['to']
         self['To'] = mlist.GetOwnerEmail()
         self._sender = sender
+        self.envsender = sender
 
     def _enqueue(self, mlist, **_kws):
         # Not imported at module scope to avoid import loop
