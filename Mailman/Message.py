@@ -311,7 +311,7 @@ class OwnerNotification(UserNotification):
             recips.extend(mlist.moderator)
         # We have to set the owner to the site's -bounces address, otherwise
         # we'll get a mail loop if an owner's address bounces.
-        sender = Utils.get_site_email(mlist.host_name, 'bounces')
+        sender = mlist.getListAddress('bounces')
         lang = mlist.preferred_language
         UserNotification.__init__(self, recips, sender, subject, text, lang)
         # Hack the To header to look like it's going to the -owner address
