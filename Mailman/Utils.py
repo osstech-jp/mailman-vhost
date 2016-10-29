@@ -1319,10 +1319,7 @@ def _DMARCProhibited(mlist, email, dmarc_domain, org=False):
               email, dmarc_domain, e.__doc__)
         return 'continue'
     else:
-# people are already being dumb, don't trust them to provide honest DNS
-# where the answer section only contains what was asked for, nor to include
-# CNAMEs before the values they point to.
-        full_record = ""
+        # Be as robust as possible in parsing the result.
         results_by_name = {}
         cnames = {}
         want_names = set([dmarc_domain + '.'])
@@ -1362,7 +1359,7 @@ def _DMARCProhibited(mlist, email, dmarc_domain, org=False):
                 syslog('error',
                        """RRset of TXT records for %s has %d v=DMARC1 entries;
                        testing them all""",
-                        dmarc_domain, len(dmarc))
+                        dmarc_domain, len(dmarcs))
             for entry in dmarcs:
                 mo = re.search(r'\bsp=(\w*)\b', entry, re.IGNORECASE)
                 if org and mo:
