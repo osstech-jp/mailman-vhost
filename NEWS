@@ -14,12 +14,20 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Basque (Euskara) translation has been updated by Gari Araolaza.
+
     - The German "details for personalize" page has been updated by
       Christian F Buser.
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
   Bug fixes and other patches
+
+    - Fixed a typo in Utils.py that could have resulted in a NameError in
+      logging an unlikely occurrence.  (LP: #1637745)
+
+    - Fixed a bug which created incorrect "view more members" links at the
+      bottom of the admin Membership List pages.  (LP: #1637061)
 
     - The 2.1.23 fix for LP: #1604544 only fixed the letter links at the top
       of the Membership List.  The links at the bottom have now been fixed.
