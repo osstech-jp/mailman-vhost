@@ -23,6 +23,8 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Enhanced the fix for race conditions in MailList().Load().  (LP: #266464)
+
     - Fixed a typo in Utils.py that could have resulted in a NameError in
       logging an unlikely occurrence.  (LP: #1637745)
 
