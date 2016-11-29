@@ -666,7 +666,6 @@ GLOBAL_PIPELINE = [
 OWNER_PIPELINE = [
     'SpamDetect',
     'Replybot',
-    'CleanseDKIM',
     'OwnerRecips',
     'ToOutgoing',
     ]
