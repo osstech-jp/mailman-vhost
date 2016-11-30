@@ -23,6 +23,18 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The CleanseDKIM handler has been removed from OWNER_PIPELINE.  It isn't
+      needed there and has adverse DMARC implications for messages to -owner
+      of an anonymous list.  (LP: #1645901)
+
+    - Fixed an issue with properly RFC 2047 encoding the display name in the
+      From: header for messages with DMARC mitigations.  (LP: #1643210)
+
+    - Fixed an issue causing UnicodeError in sending digests following a
+      change of a list's preferred_language.  (LP: #1644356)
+
+    - Enhanced the fix for race conditions in MailList().Load().  (LP: #266464)
+
     - Fixed a typo in Utils.py that could have resulted in a NameError in
       logging an unlikely occurrence.  (LP: #1637745)
 
