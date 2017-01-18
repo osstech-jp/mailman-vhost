@@ -14,6 +14,9 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Polish html templates have been recoded to use html entities
+      instead of non-ascii characters.
+
     - The Basque (Euskara) translation has been updated by Gari Araolaza.
 
     - The German "details for personalize" page has been updated by
@@ -22,6 +25,9 @@ Here is a history of user visible changes to Mailman.
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
   Bug fixes and other patches
+
+    - Fixed a NameError issue in bin/add_members with
+      DISABLE_COMMAND_LOCALE_CSET = yes.  (LP: #1647450)
 
     - The CleanseDKIM handler has been removed from OWNER_PIPELINE.  It isn't
       needed there and has adverse DMARC implications for messages to -owner
