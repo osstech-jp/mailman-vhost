@@ -26,6 +26,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed a TypeError thrown in the roster CGI when called with a listname
+      containing a % character.  (LP: #1661810)
+
     - Fixed a NameError issue in bin/add_members with
       DISABLE_COMMAND_LOCALE_CSET = yes.  (LP: #1647450)
 
