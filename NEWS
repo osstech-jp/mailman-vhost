@@ -26,6 +26,14 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Added recognition for a newly seen mailEnable bounce.
+
+    - Fixed an uncaught NotAMemberError when a member is removed before a
+      probe bounce for the member is returned.  (LP: #1664729)
+
+    - Fixed a TypeError thrown in the roster CGI when called with a listname
+      containing a % character.  (LP: #1661810)
+
     - Fixed a NameError issue in bin/add_members with
       DISABLE_COMMAND_LOCALE_CSET = yes.  (LP: #1647450)
 
