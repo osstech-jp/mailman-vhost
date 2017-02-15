@@ -26,6 +26,8 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Added recognition for a newly seen mailEnable bounce.
+
     - Fixed an uncaught NotAMemberError when a member is removed before a
       probe bounce for the member is returned.  (LP: #1664729)
 
