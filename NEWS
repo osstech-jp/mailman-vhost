@@ -26,6 +26,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed an uncaught NotAMemberError when a member is removed before a
+      probe bounce for the member is returned.  (LP: #1664729)
+
     - Fixed a TypeError thrown in the roster CGI when called with a listname
       containing a % character.  (LP: #1661810)
 
