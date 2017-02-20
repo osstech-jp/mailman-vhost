@@ -17,31 +17,11 @@ X-MailFrom: <>
 MailEnable: Message could not be delivered to some recipients.
 The following recipient(s) could not be reached:
 
-	Recipient: [SMTP:jeff.chan@intercitytime.com]
+	Recipient: [SMTP:userx@example.com]
 	Reason: Remote SMTP Server Returned: 550 Requested action not taken: mailbox unavailable or not local.
 
 
 Message headers follow:
 
-Received: with MailEnable Postoffice Connector; Tue, 14 Feb 2017 17:29:09 +0800
-Received: from mail.mailman3.org ([104.239.228.201]) by intercitytime.com with MailEnable ESMTP; Tue, 14 Feb 2017 17:29:08 +0800
-Received: from mailman.iad1.psf.io (ip6-localhost [127.0.0.1])
-	by mail.mailman3.org (Postfix) with ESMTP id 468CC80267
-	for <free-trial@intercitytime.com>; Tue, 14 Feb 2017 09:29:08 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mailman3.org;
-	s=default; t=1487064548;
-	bh=aulHL7gMEucDw5WDL8d6/+CPIEzXORHWiObo1NS4HuE=;
-	h=Subject:From:To:Date;
-	b=uGQifVlhvVfe2PWe+A8qsiVzSXpFho30W6YE8OEIX5ql3vSxPQURW9rpD/GjVI0sR
-	 nt09YhHzwh0Df7NvwNMa6uHIZaGGOMSpWd2irIj+onwOi8di4yoFK4r/JQjBr4PZ7n
-	 v/X846uBX3c8rKnAg8h6qTSb6dI5xziORKlgh1B4=
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
-Subject: Your message to mailman-users@mailman3.org awaits moderator approval
-From: mailman-users-bounces@mailman3.org
-To: free-trial@intercitytime.com
-Message-ID: <20170214092907.10185.42474@mailman.iad1.psf.io>
-Date: Tue, 14 Feb 2017 09:29:07 +0000
-Precedence: bulk
-X-Mailman-Version: 3.1.0b4
+Message removed
+
