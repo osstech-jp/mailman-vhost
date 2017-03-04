@@ -240,4 +240,7 @@ def decorate(mlist, template, what, extradict=None):
     except (ValueError, TypeError), e:
         syslog('error', 'Exception while calculating %s:\n%s', what, e)
         text = template
+    # Ensure text ends with new-line
+    if not text.endswith('\n'):
+        text += '\n'
     return text
