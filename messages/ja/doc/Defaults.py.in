@@ -20,7 +20,7 @@
 
 # [訳註] このファイルは、Mailman 2.1.23 配布物に含まれる
 #   Mailman/Defaults.py.in (launchpad.net での Bazaar リビジョンは
-#   1686) のコメント部分を日本語 (共通語) に翻訳したものです。
+#   1696) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
@@ -219,7 +219,7 @@ VIRTUAL_HOST_OVERVIEW = On
 # 暗黙の値として用います。たとえば、
 #
 # add_virtualhost('www.example.org')
-# VIRTUAL_HOST['www.example.org']
+# VIRTUAL_HOSTS['www.example.org']
 # ==> 'example.org'
 #
 def add_virtualhost(urlhost, emailhost=None):
