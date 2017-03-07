@@ -26,6 +26,11 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Ensured that added message and digest headers and footers always have
+      a terminating new-line.  (LP: #1670033)
+
+    - Fixed an uncaught TypeError in the subscribe CGI.  (LP: #1667215)
+
     - Added recognition for a newly seen mailEnable bounce.
 
     - Fixed an uncaught NotAMemberError when a member is removed before a

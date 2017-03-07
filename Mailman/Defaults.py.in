@@ -1,6 +1,6 @@
 # -*- python -*-
 
-# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -185,7 +185,7 @@ VIRTUAL_HOST_OVERVIEW = On
 # omitted it defaults to urlhost with the first name stripped off, e.g.
 #
 # add_virtualhost('www.dom.ain')
-# VIRTUAL_HOST['www.dom.ain']
+# VIRTUAL_HOSTS['www.dom.ain']
 # ==> 'dom.ain'
 #
 def add_virtualhost(urlhost, emailhost=None):
