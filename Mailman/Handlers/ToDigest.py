@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -215,8 +215,8 @@ def send_i18n_digests(mlist, mboxfp):
     # RFC 1153
     print >> plainmsg, mastheadtxt
     print >> plainmsg
-    # Now add the optional digest header
-    if mlist.digest_header:
+    # Now add the optional digest header but only if more than whitespace.
+    if re.sub('\s', '', mlist.digest_header):
         headertxt = decorate(mlist, mlist.digest_header, _('digest header'))
         # MIME
         header = MIMEText(headertxt, _charset=lcset)
@@ -365,8 +365,8 @@ def send_i18n_digests(mlist, mboxfp):
         print >> plainmsg, payload
         if not payload.endswith('\n'):
             print >> plainmsg
-    # Now add the footer
-    if mlist.digest_footer:
+    # Now add the footer but only if more than whitespace.
+    if re.sub('\s', '', mlist.digest_footer):
         footertxt = decorate(mlist, mlist.digest_footer, _('digest footer'))
         # MIME
         footer = MIMEText(footertxt, _charset=lcset)

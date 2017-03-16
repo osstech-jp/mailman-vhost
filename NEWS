@@ -26,6 +26,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Treat message and digest headers and footers as empty if they contain
+      only whitespace.  (LP: #1673307)
+
     - Ensured that added message and digest headers and footers always have
       a terminating new-line.  (LP: #1670033)
 
