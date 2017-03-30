@@ -7,6 +7,12 @@ Here is a history of user visible changes to Mailman.
 
 2.1.24 (xx-xxx-xxxx)
 
+  Security
+
+    - A most likely unexploitable XSS attach that relies on the Mailman web
+      server passing a crafted Host: header to the CGI environment has been
+      fixed.  Apache for one is not vulnerable.  Thanks to Alqnas Eslam.
+
   New Features
 
     - cron/senddigests has a new -e/--exceptlist option to send pending

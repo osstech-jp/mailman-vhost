@@ -759,7 +759,7 @@ def get_domain():
     if port and host.endswith(':' + port):
         host = host[:-len(port)-1]
     if mm_cfg.VIRTUAL_HOST_OVERVIEW and host:
-        return host.lower()
+        return websafe(host.lower())
     else:
         # See the note in Defaults.py concerning DEFAULT_URL
         # vs. DEFAULT_URL_HOST.
