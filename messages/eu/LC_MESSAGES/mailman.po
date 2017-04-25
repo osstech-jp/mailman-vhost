@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Fri Aug 26 20:49:40 2016\n"
+"POT-Creation-Date: Tue Apr 25 14:46:23 2017\n"
 "PO-Revision-Date: 2016-10-10 16:24+0200\n"
 "Last-Translator: Gari Araolaza <garaolaza@codesyntax.com>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -107,7 +107,7 @@ msgstr "Uztaila"
 msgid "June"
 msgstr "Ekaina"
 
-#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:135
+#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:137
 msgid "May"
 msgstr "Maiatza"
 
@@ -228,8 +228,8 @@ msgid " The last bounce received from you was dated %(date)s"
 msgstr " Zugandik jasotako azken errebotea %(date)s-datakoa zen."
 
 #: Mailman/Bouncer.py:329 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:403
-#: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:240
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:433
+#: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:251
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
 msgstr "(gairik gabea)"
@@ -298,7 +298,7 @@ msgstr ""
 "                bidaliko."
 
 #: Mailman/Cgi/admin.py:222 Mailman/Cgi/admin.py:230 Mailman/Cgi/admin.py:237
-#: Mailman/Cgi/admin.py:1635 Mailman/Gui/GUIBase.py:208
+#: Mailman/Cgi/admin.py:1639 Mailman/Gui/GUIBase.py:208
 msgid "Warning: "
 msgstr "Kontuz: "
 
@@ -851,28 +851,28 @@ msgstr ""
 "<p><em>Zerrendakide gehiago ikusteko, klikatu beheko\n"
 "        zerrendan:</em>"
 
-#: Mailman/Cgi/admin.py:1192
+#: Mailman/Cgi/admin.py:1196
 msgid "from %(start)s to %(end)s"
 msgstr "%(start)s(e)tik %(end)s(e)ra"
 
-#: Mailman/Cgi/admin.py:1205
+#: Mailman/Cgi/admin.py:1209
 msgid "Subscribe these users now or invite them?"
 msgstr "Erabiltzaile hauek orain harpidetu edo gonbidatu?"
 
-#: Mailman/Cgi/admin.py:1207
+#: Mailman/Cgi/admin.py:1211
 msgid "Invite"
 msgstr "Gonbidatu"
 
-#: Mailman/Cgi/admin.py:1207 Mailman/Cgi/listinfo.py:199
+#: Mailman/Cgi/admin.py:1211 Mailman/Cgi/listinfo.py:199
 msgid "Subscribe"
 msgstr "Harpidetu"
 
-#: Mailman/Cgi/admin.py:1214
-msgid "Send welcome messages to new subscribees?"
+#: Mailman/Cgi/admin.py:1218
+msgid "Send welcome messages to new subscribers?"
 msgstr "Zerrendakide berriei ongietorri mezuak bidali?"
 
-#: Mailman/Cgi/admin.py:1216 Mailman/Cgi/admin.py:1225
-#: Mailman/Cgi/admin.py:1258 Mailman/Cgi/admin.py:1266
+#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/admin.py:1229
+#: Mailman/Cgi/admin.py:1262 Mailman/Cgi/admin.py:1270
 #: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
 #: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
 #: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
@@ -901,8 +901,8 @@ msgstr "Zerrendakide berriei ongietorri mezuak bidali?"
 msgid "No"
 msgstr "Ez"
 
-#: Mailman/Cgi/admin.py:1216 Mailman/Cgi/admin.py:1225
-#: Mailman/Cgi/admin.py:1258 Mailman/Cgi/admin.py:1266
+#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/admin.py:1229
+#: Mailman/Cgi/admin.py:1262 Mailman/Cgi/admin.py:1270
 #: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
 #: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
 #: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
@@ -930,19 +930,19 @@ msgstr "Ez"
 msgid "Yes"
 msgstr "Bai"
 
-#: Mailman/Cgi/admin.py:1223
+#: Mailman/Cgi/admin.py:1227
 msgid "Send notifications of new subscriptions to the list owner?"
 msgstr "Zerrenda jabeari harpidetza berriei buruzko jakinarazpenak bidali?"
 
-#: Mailman/Cgi/admin.py:1231 Mailman/Cgi/admin.py:1272
+#: Mailman/Cgi/admin.py:1235 Mailman/Cgi/admin.py:1276
 msgid "Enter one address per line below..."
 msgstr "Lerro bakoitzean helbide bat sartu..."
 
-#: Mailman/Cgi/admin.py:1236 Mailman/Cgi/admin.py:1277
+#: Mailman/Cgi/admin.py:1240 Mailman/Cgi/admin.py:1281
 msgid "...or specify a file to upload:"
 msgstr "...edo adierazi zein den kargatu beharreko fitxategia:"
 
-#: Mailman/Cgi/admin.py:1241
+#: Mailman/Cgi/admin.py:1245
 msgid ""
 "Below, enter additional text to be added to the\n"
 "    top of your invitation or the subscription notification.  Include at "
@@ -953,15 +953,15 @@ msgstr ""
 "    agertuko den testua idatzi.  Gutxienez\n"
 "    lerro huts bat laga amaieran..."
 
-#: Mailman/Cgi/admin.py:1256
+#: Mailman/Cgi/admin.py:1260
 msgid "Send unsubscription acknowledgement to the user?"
 msgstr "Erabiltzaileari mezua bidali, zerrenda utzi nahi duela berretsi dezan?"
 
-#: Mailman/Cgi/admin.py:1264
+#: Mailman/Cgi/admin.py:1268
 msgid "Send notifications to the list owner?"
 msgstr "Zerrenda jabeari jakinarazpena bidali?"
 
-#: Mailman/Cgi/admin.py:1287
+#: Mailman/Cgi/admin.py:1291
 msgid ""
 "To change a list member's address, enter the\n"
 "    member's current and new addresses below. Use the check boxes to send\n"
@@ -971,23 +971,23 @@ msgstr ""
 "    idatzi azpian helbide zahar eta berriak. Checkboxak erabili\n"
 "    helbide zahar eta/edo berrira aldaketaren abisua bidaltzeko."
 
-#: Mailman/Cgi/admin.py:1292
+#: Mailman/Cgi/admin.py:1296
 msgid "Member's current address"
 msgstr "Kidearen oraingo helbidea"
 
-#: Mailman/Cgi/admin.py:1296 Mailman/Cgi/admin.py:1306
+#: Mailman/Cgi/admin.py:1300 Mailman/Cgi/admin.py:1310
 msgid "Send notice"
 msgstr "Abisua bidali"
 
-#: Mailman/Cgi/admin.py:1302
+#: Mailman/Cgi/admin.py:1306
 msgid "Address to change to"
 msgstr "Helbide berria"
 
-#: Mailman/Cgi/admin.py:1318
+#: Mailman/Cgi/admin.py:1322
 msgid "Change list ownership passwords"
 msgstr "Zerrendako arduradunen pasahitzak aldatu"
 
-#: Mailman/Cgi/admin.py:1321
+#: Mailman/Cgi/admin.py:1325
 msgid ""
 "The <em>list administrators</em> are the people who have ultimate control "
 "over\n"
@@ -1025,23 +1025,23 @@ msgstr ""
 "Moderatzaileen helbideak ere sartu\n"
 "<a href=\"%(adminurl)s/general\">aukera orokorrak atalean</a>."
 
-#: Mailman/Cgi/admin.py:1340
+#: Mailman/Cgi/admin.py:1344
 msgid "Enter new administrator password:"
 msgstr "Kudeatzailearen pasahitz berria sartu:"
 
-#: Mailman/Cgi/admin.py:1342
+#: Mailman/Cgi/admin.py:1346
 msgid "Confirm administrator password:"
 msgstr "Baieztatu kudeatzailearen pasahitza:"
 
-#: Mailman/Cgi/admin.py:1347
+#: Mailman/Cgi/admin.py:1351
 msgid "Enter new moderator password:"
 msgstr "Moderatzailearen pasahitz berria sartu:"
 
-#: Mailman/Cgi/admin.py:1349
+#: Mailman/Cgi/admin.py:1353
 msgid "Confirm moderator password:"
 msgstr "Baieztatu moderatzailearen pasahitz berria:"
 
-#: Mailman/Cgi/admin.py:1353
+#: Mailman/Cgi/admin.py:1357
 msgid ""
 "In addition to the above passwords you may specify a password for\n"
 "pre-approving posts to the list. Either of the above two passwords can\n"
@@ -1057,110 +1057,110 @@ msgstr ""
 "blokeatuko da moderazio zai. Gainera, azpiko pasahitz hau ezartzen bada,\n"
 "helburu horretarako bakarrik erabili daiteke eta ez beste ezertarako."
 
-#: Mailman/Cgi/admin.py:1364
+#: Mailman/Cgi/admin.py:1368
 msgid "Enter new poster password:"
 msgstr "Editorearen pasahitz berria sartu:"
 
-#: Mailman/Cgi/admin.py:1366
+#: Mailman/Cgi/admin.py:1370
 msgid "Confirm poster password:"
 msgstr "Baieztatu moderatzailearen pasahitz berria:"
 
-#: Mailman/Cgi/admin.py:1375
+#: Mailman/Cgi/admin.py:1379
 msgid "Submit Your Changes"
 msgstr "Zure aldaketak bidali"
 
-#: Mailman/Cgi/admin.py:1398
+#: Mailman/Cgi/admin.py:1402
 msgid "Moderator passwords did not match"
 msgstr "Moderadore pasahitzak ez dira berdinak"
 
-#: Mailman/Cgi/admin.py:1409
+#: Mailman/Cgi/admin.py:1413
 msgid "Poster passwords did not match"
 msgstr "Editorearen pasahitzak ez datoz bat."
 
-#: Mailman/Cgi/admin.py:1419
+#: Mailman/Cgi/admin.py:1423
 msgid "Administrator passwords did not match"
 msgstr "Kudeatzailearen pasahitza ez da zuzena"
 
-#: Mailman/Cgi/admin.py:1469
+#: Mailman/Cgi/admin.py:1473
 msgid "Already a member"
 msgstr "Dagoeneko harpidetuta"
 
-#: Mailman/Cgi/admin.py:1472
+#: Mailman/Cgi/admin.py:1476
 msgid "&lt;blank line&gt;"
 msgstr "&lt;lerro zuria&gt;"
 
-#: Mailman/Cgi/admin.py:1473 Mailman/Cgi/admin.py:1476
+#: Mailman/Cgi/admin.py:1477 Mailman/Cgi/admin.py:1480
 #: Mailman/Cgi/admindb.py:970
 msgid "Bad/Invalid email address"
 msgstr "ePosta helbide okerra/baliogabea"
 
-#: Mailman/Cgi/admin.py:1479
+#: Mailman/Cgi/admin.py:1483
 msgid "Hostile address (illegal characters)"
 msgstr "Gaizkieratutako helbidea (karakterrak okerrak)"
 
-#: Mailman/Cgi/admin.py:1482 bin/add_members:150 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1486 bin/add_members:150 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr "Blokeatutako helbidea (matched %(pattern)s)"
 
-#: Mailman/Cgi/admin.py:1488
+#: Mailman/Cgi/admin.py:1492
 msgid "Successfully invited:"
 msgstr "Behar bezala gonbidatuta:"
 
-#: Mailman/Cgi/admin.py:1490
+#: Mailman/Cgi/admin.py:1494
 msgid "Successfully subscribed:"
 msgstr "Behar bezala harpidetuta:"
 
-#: Mailman/Cgi/admin.py:1495
+#: Mailman/Cgi/admin.py:1499
 msgid "Error inviting:"
 msgstr "Errorea gonbidapenean:"
 
-#: Mailman/Cgi/admin.py:1497
+#: Mailman/Cgi/admin.py:1501
 msgid "Error subscribing:"
 msgstr "Errorea harpidetzan:"
 
-#: Mailman/Cgi/admin.py:1528
+#: Mailman/Cgi/admin.py:1532
 msgid "Successfully Unsubscribed:"
 msgstr "Behar Bezala Ezabatuta:"
 
-#: Mailman/Cgi/admin.py:1533
+#: Mailman/Cgi/admin.py:1537
 msgid "Cannot unsubscribe non-members:"
 msgstr "Harpidedun ez direnak ezin dute zerrenda utzi:"
 
-#: Mailman/Cgi/admin.py:1546
+#: Mailman/Cgi/admin.py:1550
 msgid "You must provide both current and new addresses."
 msgstr "Helbide zaharra eta oraingoa, biak eman behar dituzu."
 
-#: Mailman/Cgi/admin.py:1548
+#: Mailman/Cgi/admin.py:1552
 msgid "Current and new addresses must be different."
 msgstr "Helbide zaharra eta oraingoa desberdinak izan behar dira"
 
-#: Mailman/Cgi/admin.py:1552
+#: Mailman/Cgi/admin.py:1556
 msgid "%(schange_to)s is already a list member."
 msgstr "%(schange_to)s dagoeneko harpideduna da."
 
-#: Mailman/Cgi/admin.py:1557
+#: Mailman/Cgi/admin.py:1561
 msgid "%(schange_to)s is not a valid email address."
 msgstr "%(schange_to)s ez da eposta helbide zuzena."
 
-#: Mailman/Cgi/admin.py:1565
+#: Mailman/Cgi/admin.py:1569
 msgid "%(schange_from)s is not a member"
 msgstr "%(schange_from)s ez da harpideduna"
 
-#: Mailman/Cgi/admin.py:1567
+#: Mailman/Cgi/admin.py:1571
 msgid "%(schange_to)s is already a member"
 msgstr "%(schange_to)s dagoeneko harpideduna da"
 
-#: Mailman/Cgi/admin.py:1570
+#: Mailman/Cgi/admin.py:1574
 msgid "%(schange_to)s matches banned pattern %(spat)s"
 msgstr ""
 "%(schange_to)s helbideak debekatutako  eredu honekin bat egiten du: %(spat)s"
 
-#: Mailman/Cgi/admin.py:1572
+#: Mailman/Cgi/admin.py:1576
 msgid "Address %(schange_from)s changed to %(schange_to)s"
 msgstr "Helbidea %(schange_from)s-tik %(schange_to)s-ra aldatuta."
 
-#: Mailman/Cgi/admin.py:1579
+#: Mailman/Cgi/admin.py:1583
 msgid ""
 "The member address %(change_from)s on the\n"
 "%(list_name)s list has been changed to %(change_to)s.\n"
@@ -1168,35 +1168,35 @@ msgstr ""
 "%(change_from)s erabiltzailearen helbidea\n"
 "%(list_name)s zerrendan aldatu da. Berria: %(change_to)s.\n"
 
-#: Mailman/Cgi/admin.py:1582
+#: Mailman/Cgi/admin.py:1586
 msgid "%(list_name)s address change notice."
 msgstr "%(list_name)s zerrendan helbidea aldatu izanaren jakinarazpena."
 
-#: Mailman/Cgi/admin.py:1593
+#: Mailman/Cgi/admin.py:1597
 msgid "Notification sent to %(schange_from)s."
 msgstr "%(schange_from)s-i jakinarazpena bidali zaio."
 
-#: Mailman/Cgi/admin.py:1603
+#: Mailman/Cgi/admin.py:1607
 msgid "Notification sent to %(schange_to)s."
 msgstr "Jakinarazpena bidali dugu hona: %(schange_to)s."
 
-#: Mailman/Cgi/admin.py:1609
+#: Mailman/Cgi/admin.py:1613
 msgid "Bad moderation flag value"
 msgstr "Moderazio ikurraren balio okerra"
 
-#: Mailman/Cgi/admin.py:1631
+#: Mailman/Cgi/admin.py:1635
 msgid "Not subscribed"
 msgstr "Harpidetu gabea"
 
-#: Mailman/Cgi/admin.py:1634
+#: Mailman/Cgi/admin.py:1638
 msgid "Ignoring changes to deleted member: %(user)s"
 msgstr "Ezabatutako harpidearen aldaketei jaramonik ez: %(user)s"
 
-#: Mailman/Cgi/admin.py:1674
+#: Mailman/Cgi/admin.py:1678
 msgid "Successfully Removed:"
 msgstr "Arrakastaz ezabatua"
 
-#: Mailman/Cgi/admin.py:1678
+#: Mailman/Cgi/admin.py:1682
 msgid "Error Unsubscribing:"
 msgstr "Zerrenda uztean errorea:"
 
@@ -3995,159 +3995,159 @@ msgstr "Mezuak banaka jasotzen dituzten harpidedunak:"
 msgid "Digest members:"
 msgstr "Mezuak bildumetan jasotzen dituzten harpidedunak:"
 
-#: Mailman/Defaults.py:1720
+#: Mailman/Defaults.py:1719
 msgid "Arabic"
 msgstr "Arabiera"
 
-#: Mailman/Defaults.py:1721
+#: Mailman/Defaults.py:1720
 msgid "Asturian"
 msgstr "Asturiera"
 
-#: Mailman/Defaults.py:1722
+#: Mailman/Defaults.py:1721
 msgid "Catalan"
 msgstr "Katalana"
 
-#: Mailman/Defaults.py:1723
+#: Mailman/Defaults.py:1722
 msgid "Czech"
 msgstr "Txekiera  "
 
-#: Mailman/Defaults.py:1724
+#: Mailman/Defaults.py:1723
 msgid "Danish"
 msgstr "Daniera"
 
-#: Mailman/Defaults.py:1725
+#: Mailman/Defaults.py:1724
 msgid "German"
 msgstr "Alemaniera"
 
-#: Mailman/Defaults.py:1726
+#: Mailman/Defaults.py:1725
 msgid "English (USA)"
 msgstr "Ingelesa (AEB)"
 
-#: Mailman/Defaults.py:1727
+#: Mailman/Defaults.py:1726
 msgid "Spanish (Spain)"
 msgstr "Gaztelania (Espainia)"
 
-#: Mailman/Defaults.py:1728
+#: Mailman/Defaults.py:1727
 msgid "Estonian"
 msgstr "Estoniera"
 
-#: Mailman/Defaults.py:1729
+#: Mailman/Defaults.py:1728
 msgid "Euskara"
 msgstr "Euskara"
 
-#: Mailman/Defaults.py:1730
+#: Mailman/Defaults.py:1729
 msgid "Persian"
 msgstr "Persiera"
 
-#: Mailman/Defaults.py:1731
+#: Mailman/Defaults.py:1730
 msgid "Finnish"
 msgstr "Finlandiera "
 
-#: Mailman/Defaults.py:1732
+#: Mailman/Defaults.py:1731
 msgid "French"
 msgstr "Frantsesa"
 
-#: Mailman/Defaults.py:1733
+#: Mailman/Defaults.py:1732
 msgid "Galician"
 msgstr "Galiziera"
 
-#: Mailman/Defaults.py:1734
+#: Mailman/Defaults.py:1733
 msgid "Greek"
 msgstr "Grekera"
 
-#: Mailman/Defaults.py:1735
+#: Mailman/Defaults.py:1734
 msgid "Hebrew"
 msgstr "Hebraiera"
 
-#: Mailman/Defaults.py:1736
+#: Mailman/Defaults.py:1735
 msgid "Croatian"
 msgstr "Kroaziera"
 
-#: Mailman/Defaults.py:1737
+#: Mailman/Defaults.py:1736
 msgid "Hungarian"
 msgstr "Hungariera "
 
-#: Mailman/Defaults.py:1738
+#: Mailman/Defaults.py:1737
 msgid "Interlingua"
 msgstr "Interlingua"
 
-#: Mailman/Defaults.py:1739
+#: Mailman/Defaults.py:1738
 msgid "Italian"
 msgstr "Italiera"
 
-#: Mailman/Defaults.py:1740
+#: Mailman/Defaults.py:1739
 msgid "Japanese"
 msgstr "Japoniera"
 
-#: Mailman/Defaults.py:1741
+#: Mailman/Defaults.py:1740
 msgid "Korean"
 msgstr "Koreera"
 
-#: Mailman/Defaults.py:1742
+#: Mailman/Defaults.py:1741
 msgid "Lithuanian"
 msgstr "Lituaniera"
 
-#: Mailman/Defaults.py:1743
+#: Mailman/Defaults.py:1742
 msgid "Dutch"
 msgstr "Almeaniera"
 
-#: Mailman/Defaults.py:1744
+#: Mailman/Defaults.py:1743
 msgid "Norwegian"
 msgstr "Norvegiera"
 
-#: Mailman/Defaults.py:1745
+#: Mailman/Defaults.py:1744
 msgid "Polish"
 msgstr "Poloniera"
 
-#: Mailman/Defaults.py:1746
+#: Mailman/Defaults.py:1745
 msgid "Portuguese"
 msgstr "Portugesa"
 
-#: Mailman/Defaults.py:1747
+#: Mailman/Defaults.py:1746
 msgid "Portuguese (Brazil)"
 msgstr "Brasileko Portugesa"
 
-#: Mailman/Defaults.py:1748
+#: Mailman/Defaults.py:1747
 msgid "Romanian"
 msgstr "Errumaniera"
 
-#: Mailman/Defaults.py:1749
+#: Mailman/Defaults.py:1748
 msgid "Russian"
 msgstr "Errusiera"
 
-#: Mailman/Defaults.py:1750
+#: Mailman/Defaults.py:1749
 msgid "Slovak"
 msgstr "Eslovakiera"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1750
 msgid "Slovenian"
 msgstr "Esloveniera"
 
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1751
 msgid "Serbian"
 msgstr "Serbiarra"
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1752
 msgid "Swedish"
 msgstr "Suediera"
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1753
 msgid "Turkish"
 msgstr "Turkiera"
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1754
 msgid "Ukrainian"
 msgstr "Ukrainera"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1755
 msgid "Vietnamese"
 msgstr "Vietnamera"
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1756
 msgid "Chinese (China)"
 msgstr "Txinera (Txina)"
 
-#: Mailman/Defaults.py:1758
+#: Mailman/Defaults.py:1757
 msgid "Chinese (Taiwan)"
 msgstr "Txinera (Taiwan)"
 
@@ -8413,7 +8413,7 @@ msgstr ""
 "%(realname)s posta zerrendara bidalitako presazko mezua ez da onartu.\n"
 "Jatorrizko mezua erantsita, Mailmanek jaso zuen moduan.\n"
 
-#: Mailman/Handlers/CookHeaders.py:161
+#: Mailman/Handlers/CookHeaders.py:180
 msgid "%(realname)s via %(lrn)s"
 msgstr "%(realname)s , %(lrn)s-en bidez"
 
@@ -8714,39 +8714,39 @@ msgstr ""
 msgid "Message rejected by filter rule match"
 msgstr "Iragazki erregela batekin bat egiteagatik atzera botatako mezua"
 
-#: Mailman/Handlers/ToDigest.py:163
+#: Mailman/Handlers/ToDigest.py:174
 msgid "%(realname)s Digest, Vol %(volume)d, Issue %(issue)d"
 msgstr "%(realname)s Mezu-Bilduma, %(volume)d bilduma, %(issue)d. zenbakia"
 
-#: Mailman/Handlers/ToDigest.py:209
+#: Mailman/Handlers/ToDigest.py:220
 msgid "digest header"
 msgstr "bilduma burua"
 
-#: Mailman/Handlers/ToDigest.py:212
+#: Mailman/Handlers/ToDigest.py:223
 msgid "Digest Header"
 msgstr "Bilduma burua"
 
-#: Mailman/Handlers/ToDigest.py:225
+#: Mailman/Handlers/ToDigest.py:236
 msgid "Today's Topics:\n"
 msgstr "Gaurko gaiak: \n"
 
-#: Mailman/Handlers/ToDigest.py:305
+#: Mailman/Handlers/ToDigest.py:316
 msgid "Today's Topics (%(msgcount)d messages)"
 msgstr "Gaurko gaiak (%(msgcount)d. mezua)"
 
-#: Mailman/Handlers/ToDigest.py:331
+#: Mailman/Handlers/ToDigest.py:342
 msgid "[Message discarded by content filter]"
 msgstr "[Eduki filtroak ezabatutako mezua]"
 
-#: Mailman/Handlers/ToDigest.py:359
+#: Mailman/Handlers/ToDigest.py:370
 msgid "digest footer"
 msgstr "bilduma oina"
 
-#: Mailman/Handlers/ToDigest.py:362 Mailman/Handlers/ToDigest.py:370
+#: Mailman/Handlers/ToDigest.py:373 Mailman/Handlers/ToDigest.py:381
 msgid "Digest Footer"
 msgstr "Bilduma oina"
 
-#: Mailman/Handlers/ToDigest.py:377
+#: Mailman/Handlers/ToDigest.py:388
 msgid "End of "
 msgstr "Bilduma honen bukaera: "
 
@@ -8893,39 +8893,39 @@ msgstr "%(listname)s : harpidetzeko zure konfirmazioa behar dugu"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "%(listname)s : harpidetza uzteko zure konfirmazioa behar dugu"
 
-#: Mailman/MailList.py:927 Mailman/MailList.py:1403
+#: Mailman/MailList.py:929 Mailman/MailList.py:1405
 msgid " from %(remote)s"
 msgstr " %(remote)s-(e)tik"
 
-#: Mailman/MailList.py:971
+#: Mailman/MailList.py:973
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "%(realname)s zerrendan harpidetzeko moderatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1046 bin/add_members:253
+#: Mailman/MailList.py:1048 bin/add_members:253
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s harpidetza jakinarazpena"
 
-#: Mailman/MailList.py:1065
+#: Mailman/MailList.py:1067
 msgid "unsubscriptions require moderator approval"
 msgstr "zerrenda uzteko moderatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1086
+#: Mailman/MailList.py:1088
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s zerrenda utzi izanaren jakinarazpena"
 
-#: Mailman/MailList.py:1247
+#: Mailman/MailList.py:1249
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s helbidea aldatu izanaren jakinarazpena"
 
-#: Mailman/MailList.py:1312
+#: Mailman/MailList.py:1314
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "%(name)s zerrendako kide izateko, kudeatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1577
+#: Mailman/MailList.py:1579
 msgid "Last autoresponse notification for today"
 msgstr "Gaurko azkenengo jakinarazpen automatikoa"
 
-#: Mailman/Queue/BounceRunner.py:352
+#: Mailman/Queue/BounceRunner.py:360
 msgid ""
 "The attached message was received as a bounce, but either the bounce format\n"
 "was not recognized, or no member addresses could be extracted from it.  "
@@ -8947,7 +8947,7 @@ msgstr ""
 "%(adminurl)s\n"
 "\n"
 
-#: Mailman/Queue/BounceRunner.py:362
+#: Mailman/Queue/BounceRunner.py:370
 msgid "Uncaught bounce notification"
 msgstr "Errebote jakinarazpena ez da jaso"
 
@@ -9025,83 +9025,83 @@ msgstr "Phyton-ek hornitua"
 msgid "Gnu's Not Unix"
 msgstr "Gnu ez da Unix"
 
-#: Mailman/i18n.py:130
+#: Mailman/i18n.py:132
 msgid "Mon"
 msgstr "Al"
 
-#: Mailman/i18n.py:130
+#: Mailman/i18n.py:132
 msgid "Thu"
 msgstr "Ast"
 
-#: Mailman/i18n.py:130
+#: Mailman/i18n.py:132
 msgid "Tue"
 msgstr "As"
 
-#: Mailman/i18n.py:130
+#: Mailman/i18n.py:132
 msgid "Wed"
 msgstr "Ost"
 
-#: Mailman/i18n.py:131
+#: Mailman/i18n.py:133
 msgid "Fri"
 msgstr "Or"
 
-#: Mailman/i18n.py:131
+#: Mailman/i18n.py:133
 msgid "Sat"
 msgstr "Lar"
 
-#: Mailman/i18n.py:131
+#: Mailman/i18n.py:133
 msgid "Sun"
 msgstr "Iga"
 
-#: Mailman/i18n.py:135
+#: Mailman/i18n.py:137
 msgid "Apr"
 msgstr "Api"
 
-#: Mailman/i18n.py:135
+#: Mailman/i18n.py:137
 msgid "Feb"
 msgstr "Ots"
 
-#: Mailman/i18n.py:135
+#: Mailman/i18n.py:137
 msgid "Jan"
 msgstr "Urt"
 
-#: Mailman/i18n.py:135
+#: Mailman/i18n.py:137
 msgid "Jun"
 msgstr "Eka"
 
-#: Mailman/i18n.py:135
+#: Mailman/i18n.py:137
 msgid "Mar"
 msgstr "Mar"
 
-#: Mailman/i18n.py:136
+#: Mailman/i18n.py:138
 msgid "Aug"
 msgstr "Abu"
 
-#: Mailman/i18n.py:136
+#: Mailman/i18n.py:138
 msgid "Dec"
 msgstr "Abe"
 
-#: Mailman/i18n.py:136
+#: Mailman/i18n.py:138
 msgid "Jul"
 msgstr "Uzt"
 
-#: Mailman/i18n.py:136
+#: Mailman/i18n.py:138
 msgid "Nov"
 msgstr "Aza"
 
-#: Mailman/i18n.py:136
+#: Mailman/i18n.py:138
 msgid "Oct"
 msgstr "Urr"
 
-#: Mailman/i18n.py:136
+#: Mailman/i18n.py:138
 msgid "Sep"
 msgstr "Ira"
 
-#: Mailman/i18n.py:139
+#: Mailman/i18n.py:141
 msgid "Server Local Time"
 msgstr "Zerbitzariaren Bertako Ordua"
 
-#: Mailman/i18n.py:178
+#: Mailman/i18n.py:180
 msgid ""
 "%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s %(year)04i"
 msgstr ""
@@ -12421,6 +12421,7 @@ msgstr ""
 "        Bestela, artxiba daitezkeen zerrenda guztiak prozesatuko dira.\n"
 
 #: cron/senddigests:20
+#, fuzzy
 msgid ""
 "Dispatch digests for lists w/pending messages and digest_send_periodic set.\n"
 "\n"
@@ -12434,7 +12435,12 @@ msgid ""
 "    --listname=listname\n"
 "        Send the digest for the given list only, otherwise the digests for "
 "all\n"
-"        lists are sent out.\n"
+"        lists are sent out.  May be repeated to do multiple lists.\n"
+"\n"
+"    -e listname\n"
+"    --exceptlist listname\n"
+"        Don't send the digest for the given list.  May be repeated to skip\n"
+"        multiple lists.\n"
 msgstr ""
 "Mezuak atxikita dituzten zerrendetara gogorarazpenak bidali eta "
 "digest_send_periodic aktibatu.\n"
