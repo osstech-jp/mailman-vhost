@@ -1215,7 +1215,7 @@ def mass_subscribe(mlist, container):
     table.AddCellInfo(table.GetCurrentRowIndex(), 0, bgcolor=GREY)
     table.AddCellInfo(table.GetCurrentRowIndex(), 1, bgcolor=GREY)
     table.AddRow([
-        Label(_('Send welcome messages to new subscribees?')),
+        Label(_('Send welcome messages to new subscribers?')),
         RadioButtonArray('send_welcome_msg_to_this_batch',
                          (_('No'), _('Yes')),
                          mlist.send_welcome_msg,
