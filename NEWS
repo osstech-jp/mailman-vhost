@@ -7,6 +7,12 @@ Here is a history of user visible changes to Mailman.
 
 2.1.24 (xx-xxx-xxxx)
 
+  Security
+
+    - A most likely unexploitable XSS attach that relies on the Mailman web
+      server passing a crafted Host: header to the CGI environment has been
+      fixed.  Apache for one is not vulnerable.  Thanks to Alqnas Eslam.
+
   New Features
 
     - cron/senddigests has a new -e/--exceptlist option to send pending
@@ -25,6 +31,9 @@ Here is a history of user visible changes to Mailman.
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
   Bug fixes and other patches
+
+    - Treat message and digest headers and footers as empty if they contain
+      only whitespace.  (LP: #1673307)
 
     - Ensured that added message and digest headers and footers always have
       a terminating new-line.  (LP: #1670033)
