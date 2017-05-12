@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -423,9 +423,11 @@ def prefix_subject(mlist, msg, msgdata):
         recolon = 'Re:'
     else:
         recolon = ''
+    # Strip leading and trailing whitespace from subject.
+    subject = subject.strip()
     # At this point, subject may become null if someone post mail with
-    # subject: [subject prefix]
-    if subject.strip() == '':
+    # Subject: [subject prefix]
+    if subject == '':
         # We want the i18n context to be the list's preferred_language.  It
         # could be the poster's.
         otrans = i18n.get_translation()
@@ -462,10 +464,10 @@ def prefix_subject(mlist, msg, msgdata):
             pass
     # Get the header as a Header instance, with proper unicode conversion
     # Because of rfc2047 encoding, spaces between encoded words can be
-    # insignificant, so we need to append a space to prefix but only when
-    # we have Re:.
+    # insignificant, so we need to append spaces to our encoded stuff.
+    prefix += ' '
     if recolon:
-        prefix += ' '
+        recolon += ' '
     if old_style:
         h = uheader(mlist, recolon, 'Subject', continuation_ws=ws)
         h.append(prefix)
