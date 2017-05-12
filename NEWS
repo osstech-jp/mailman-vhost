@@ -18,6 +18,11 @@ Here is a history of user visible changes to Mailman.
     - cron/senddigests has a new -e/--exceptlist option to send pending
       digests for all but a named list.  (LP: #1619770)
 
+    - The values for DEFAULT_DIGEST_FOOTER and DEFAULT_MSG_FOOTER have been
+      changed to use a standard signature separator for DEFAULT_MSG_FOOTER
+      and to remove the unneded line of underscores from DEFAULT_DIGEST_FOOTER.
+      (LP: #266269)
+
   i18n
 
     - The Polish html templates have been recoded to use html entities
