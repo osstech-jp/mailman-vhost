@@ -18,6 +18,11 @@ Here is a history of user visible changes to Mailman.
     - cron/senddigests has a new -e/--exceptlist option to send pending
       digests for all but a named list.  (LP: #1619770)
 
+    - The values for DEFAULT_DIGEST_FOOTER and DEFAULT_MSG_FOOTER have been
+      changed to use a standard signature separator for DEFAULT_MSG_FOOTER
+      and to remove the unneded line of underscores from DEFAULT_DIGEST_FOOTER.
+      (LP: #266269)
+
   i18n
 
     - The Polish html templates have been recoded to use html entities
@@ -31,6 +36,11 @@ Here is a history of user visible changes to Mailman.
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
   Bug fixes and other patches
+
+    - Subject prefixing has been improved to always have a space between
+      the prefix and the subject even with non-ascii in the prefix.  This
+      will sometimes result in two spaces when the prefix is non-ascii but
+      the subject is ascii, but this is the lesser evil.  (LP: #1525954)
 
     - Treat message and digest headers and footers as empty if they contain
       only whitespace.  (LP: #1673307)
