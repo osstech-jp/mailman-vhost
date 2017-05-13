@@ -20,7 +20,7 @@
 
 # [訳註] このファイルは、Mailman 2.1.23 配布物に含まれる
 #   Mailman/Defaults.py.in (launchpad.net での Bazaar リビジョンは
-#   1696) のコメント部分を日本語 (共通語) に翻訳したものです。
+#   1702) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
@@ -1207,7 +1207,7 @@ DEFAULT_MAX_MESSAGE_SIZE = 40           # KB
 DEFAULT_SUBJECT_PREFIX  = "[%(real_name)s] "
 # DEFAULT_SUBJECT_PREFIX = "[%(real_name)s %%d]" # 付番する場合
 DEFAULT_MSG_HEADER = ""
-DEFAULT_MSG_FOOTER = """_______________________________________________
+DEFAULT_MSG_FOOTER = """-- 
 %(real_name)s mailing list
 %(real_name)s@%(host_name)s
 %(web_page_url)slistinfo%(cgiext)s/%(_internal_name)s
@@ -1532,7 +1532,10 @@ DEFAULT_NONDIGESTABLE = Yes
 # リストをまとめ読みで利用できるようにしますか?
 DEFAULT_DIGESTABLE = Yes
 DEFAULT_DIGEST_HEADER = ""
-DEFAULT_DIGEST_FOOTER = DEFAULT_MSG_FOOTER
+DEFAULT_DIGEST_FOOTER = """%(real_name)s mailing list
+%(real_name)s@%(host_name)s
+%(web_page_url)slistinfo%(cgiext)s/%(_internal_name)s
+"""
 
 DEFAULT_DIGEST_IS_DEFAULT = No
 DEFAULT_MIME_IS_DEFAULT_DIGEST = No
