@@ -15,6 +15,13 @@ Here is a history of user visible changes to Mailman.
 
   New Features
 
+    - There is a new RCPT_BASE64_HEADER_NAME setting.  If this is set to a
+      non-empty string, that string is the name of a header that will be added
+      to personalized and VERPed deliveries with value equal to the base64
+      encoding of the recipient's email address.  This is intended to enable
+      identification of the recipient otherwise redacted from "spam report"
+      feedback loop messages.
+
     - cron/senddigests has a new -e/--exceptlist option to send pending
       digests for all but a named list.  (LP: #1619770)
 
