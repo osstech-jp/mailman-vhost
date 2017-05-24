@@ -713,6 +713,17 @@ NNTP_REWRITE_DUPLICATE_HEADERS = [
 #      保存します。
 REMOVE_DKIM_HEADERS = No
 
+# If the following is set to a non-empty string, that string is the name of a
+# header that will be added to personalized and VERPed deliveries with value
+# equal to the base64 encoding of the recipient's email address.  This is
+# intended to enable identification of the recipient otherwise redacted from
+# "spam report" feedback loop messages.  For example, if
+# RCPT_BASE64_HEADER_NAME = 'X-Mailman-R-Data'
+# a header like
+# X-Mailman-R-Data: dXNlckBleGFtcGxlLmNvbQo=
+# will be added to messages sent to user@@example.com.
+RCPT_BASE64_HEADER_NAME = ''
+
 # リストメンバー全体に配送される「通常の」メッセージはすべてこのハンドラ
 # モジュールのパイプラインを通って行きます。各リストはそれぞれ「pipeline」
 # 属性を定義することでこのグローバルパイプラインを上書きすることができます。
