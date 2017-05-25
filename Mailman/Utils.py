@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -1437,7 +1437,7 @@ fact is returned."""
                 del recentMemberPostings[addr]
     if not mlist.isMember(email):
         return False
-    return (len(recentMemberPostings.get(email, [])) >=
+    return (len(recentMemberPostings.get(email, [])) >
                 mlist.member_verbosity_threshold
            )
 
