@@ -44,6 +44,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The list-owner@virtual.domain addresses are now added to virtual-mailman
+      as they are exposed in 'list created' emails.  (LP: 1694384)
+
     - The 'list run by' addresses in web page footers are now just the
       list-owner address.  (LP: #1694384)
 
