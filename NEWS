@@ -5,6 +5,13 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.25 (xx-xxx-xxxx)
+
+  Bug fixes and other patches
+
+    - Fixed the -V option to bin/list_lists to not show lists whose host is a
+      subdomain of the given domain.  (LP: #1695610)
+
 2.1.24 (02-Jun-2017)
 
   Security
