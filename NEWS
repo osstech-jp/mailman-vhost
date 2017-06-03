@@ -5,7 +5,7 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.24 (xx-xxx-xxxx)
+2.1.24 (02-Jun-2017)
 
   Security
 
@@ -43,6 +43,16 @@ Here is a history of user visible changes to Mailman.
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
   Bug fixes and other patches
+
+    - The list-owner@virtual.domain addresses are now added to virtual-mailman
+      as they are exposed in 'list created' emails.  (LP: 1694384)
+
+    - The 'list run by' addresses in web page footers are now just the
+      list-owner address.  (LP: #1694384)
+
+    - Changed member_verbosity_threshold from a >= test to a strictly > test
+      to avoid the issue of moderating every post when the threshold = 1.
+      (LP: #1693366)
 
     - Subject prefixing has been improved to always have a space between
       the prefix and the subject even with non-ascii in the prefix.  This
