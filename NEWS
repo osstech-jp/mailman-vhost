@@ -9,6 +9,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The fix for LP: #1614841 caused a regression in the options CGI.  This
+      has been fixed.  (LP: #1602608)
+
     - Added a -a option to the (e)grep commands in contrib/mmdsr to account
       for logs that may have non-ascii and be seen as binary.
 

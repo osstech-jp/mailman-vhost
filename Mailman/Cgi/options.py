@@ -110,7 +110,17 @@ def main():
     # CSRF check
     safe_params = ['displang-button', 'language', 'email', 'password', 'login',
                    'login-unsub', 'login-remind', 'VARHELP', 'UserOptions']
-    params = cgidata.keys()
+    try:
+        params = cgidata.keys()
+    except TypeError:
+        # Someone crafted a POST with a bad Content-Type:.
+        doc.AddItem(Header(2, _("Error")))
+        doc.AddItem(Bold(_('Invalid options to CGI script.')))
+        # Send this with a 400 status.
+        print 'Status: 400 Bad Request'
+        print doc.Format()
+        return
+
     if set(params) - set(safe_params):
         csrf_checked = csrf_check(mlist, cgidata.getvalue('csrf_token'))
     else:
@@ -124,17 +134,7 @@ def main():
     # we might have a 'language' key in the cgi data.  That was an explicit
     # preference to view the page in, so we should honor that here.  If that's
     # not available, use the list's default language.
-    try:
-        language = cgidata.getvalue('language')
-    except TypeError:
-        # Someone crafted a POST with a bad Content-Type:.
-        doc.AddItem(Header(2, _("Error")))
-        doc.AddItem(Bold(_('Invalid options to CGI script.')))
-        # Send this with a 400 status.
-        print 'Status: 400 Bad Request'
-        print doc.Format()
-        return
-
+    language = cgidata.getvalue('language')
     if not Utils.IsLanguage(language):
         language = mlist.preferred_language
     i18n.set_language(language)
