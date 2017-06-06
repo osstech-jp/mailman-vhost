@@ -9,6 +9,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed MTA/Postfix.py to ensure that created aliases(.db) and
+      virtual-mailman(.db) files are readable by Postfix and the .db files are
+      owned by the Mailman user.  (LP: #1696066)
+
     - Defended against certain web attacks that cause exceptions and "we hit
       a bug" responses when POST data or query fragments contain multiple
       values for the same parameter.  (LP: #1695667)
