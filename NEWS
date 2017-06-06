@@ -9,6 +9,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Defended against certain web attacks that cause exceptions and "we hit
+      a bug" responses when POST data or query fragments contain multiple
+      values for the same parameter.  (LP: #1695667)
+
     - The fix for LP: #1614841 caused a regression in the options CGI.  This
       has been fixed.  (LP: #1602608)
 
