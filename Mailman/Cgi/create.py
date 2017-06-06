@@ -44,7 +44,7 @@ def main():
 
     cgidata = cgi.FieldStorage()
     try:
-        cgidata.getvalue('doit', '')
+        cgidata.getfirst('doit', '')
     except TypeError:
         # Someone crafted a POST with a bad Content-Type:.
         doc.AddItem(Header(2, _("Error")))
@@ -85,26 +85,26 @@ def main():
 
 def process_request(doc, cgidata):
     # Lowercase the listname since this is treated as the "internal" name.
-    listname = cgidata.getvalue('listname', '').strip().lower()
-    owner    = cgidata.getvalue('owner', '').strip()
+    listname = cgidata.getfirst('listname', '').strip().lower()
+    owner    = cgidata.getfirst('owner', '').strip()
     try:
-        autogen  = int(cgidata.getvalue('autogen', '0'))
+        autogen  = int(cgidata.getfirst('autogen', '0'))
     except ValueError:
         autogen = 0
     try:
-        notify  = int(cgidata.getvalue('notify', '0'))
+        notify  = int(cgidata.getfirst('notify', '0'))
     except ValueError:
         notify = 0
     try:
-        moderate = int(cgidata.getvalue('moderate',
+        moderate = int(cgidata.getfirst('moderate',
                        mm_cfg.DEFAULT_DEFAULT_MEMBER_MODERATION))
     except ValueError:
         moderate = mm_cfg.DEFAULT_DEFAULT_MEMBER_MODERATION
 
-    password = cgidata.getvalue('password', '').strip()
-    confirm  = cgidata.getvalue('confirm', '').strip()
-    auth     = cgidata.getvalue('auth', '').strip()
-    langs    = cgidata.getvalue('langs', [mm_cfg.DEFAULT_SERVER_LANGUAGE])
+    password = cgidata.getfirst('password', '').strip()
+    confirm  = cgidata.getfirst('confirm', '').strip()
+    auth     = cgidata.getfirst('auth', '').strip()
+    langs    = cgidata.getfirst('langs', [mm_cfg.DEFAULT_SERVER_LANGUAGE])
 
     if not isinstance(langs, ListType):
         langs = [langs]
@@ -346,14 +346,14 @@ def request_creation(doc, cgidata=dummy, errmsg=None):
     ftable.AddRow([Center(Italic(_('List Identity')))])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, colspan=2)
 
-    listname = cgidata.getvalue('listname', '')
+    listname = cgidata.getfirst('listname', '')
     # MAS: Don't websafe twice.  TextBox does it.
     ftable.AddRow([Label(_('Name of list:')),
                    TextBox('listname', listname)])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
-    owner = cgidata.getvalue('owner', '')
+    owner = cgidata.getfirst('owner', '')
     # MAS: Don't websafe twice.  TextBox does it.
     ftable.AddRow([Label(_('Initial list owner address:')),
                    TextBox('owner', owner)])
@@ -361,7 +361,7 @@ def request_creation(doc, cgidata=dummy, errmsg=None):
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
     try:
-        autogen = int(cgidata.getvalue('autogen', '0'))
+        autogen = int(cgidata.getfirst('autogen', '0'))
     except ValueError:
         autogen = 0
     ftable.AddRow([Label(_('Auto-generate initial list password?')),
@@ -371,24 +371,24 @@ def request_creation(doc, cgidata=dummy, errmsg=None):
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
-    safepasswd = Utils.websafe(cgidata.getvalue('password', ''))
+    safepasswd = Utils.websafe(cgidata.getfirst('password', ''))
     ftable.AddRow([Label(_('Initial list password:')),
                    PasswordBox('password', safepasswd)])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
-    safeconfirm = Utils.websafe(cgidata.getvalue('confirm', ''))
+    safeconfirm = Utils.websafe(cgidata.getfirst('confirm', ''))
     ftable.AddRow([Label(_('Confirm initial password:')),
                    PasswordBox('confirm', safeconfirm)])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
     try:
-        notify = int(cgidata.getvalue('notify', '1'))
+        notify = int(cgidata.getfirst('notify', '1'))
     except ValueError:
         notify = 1
     try:
-        moderate = int(cgidata.getvalue('moderate',
+        moderate = int(cgidata.getfirst('moderate',
                        mm_cfg.DEFAULT_DEFAULT_MEMBER_MODERATION))
     except ValueError:
         moderate = mm_cfg.DEFAULT_DEFAULT_MEMBER_MODERATION

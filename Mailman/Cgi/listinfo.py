@@ -59,7 +59,7 @@ def main():
     # See if the user want to see this page in other language
     cgidata = cgi.FieldStorage()
     try:
-        language = cgidata.getvalue('language')
+        language = cgidata.getfirst('language')
     except TypeError:
         # Someone crafted a POST with a bad Content-Type:.
         doc = Document()
