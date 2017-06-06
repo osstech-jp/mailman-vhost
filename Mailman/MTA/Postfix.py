@@ -36,6 +36,9 @@ LOCKFILE = os.path.join(mm_cfg.LOCK_DIR, 'creator')
 ALIASFILE = os.path.join(mm_cfg.DATA_DIR, 'aliases')
 VIRTFILE = os.path.join(mm_cfg.DATA_DIR, 'virtual-mailman')
 TRANSPORTFILE = os.path.join(mm_cfg.DATA_DIR, 'transport-mailman')
+# Desired mode for aliases(.db) and virtual-mailman(.db) for both creation
+# and check_perms.
+targetmode = S_IFREG | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH
 
 try:
     True, False
@@ -46,13 +49,31 @@ except NameError:
 
 
 def _update_map_file(mapfile, command=mm_cfg.POSTFIX_MAP_CMD):
-    msg = 'command failed: %s (status: %s, %s)'        
+    # Helper function to fix owner and mode.
+    def fixom(file):
+        # It's not necessary for the non-db file to be S_IROTH, but for
+        # simplicity and compatibility with check_perms, we set it.
+        stat = os.stat(file)
+        if (stat[ST_MODE] & targetmode) <> targetmode:
+            os.chmod(file, stat[ST_MODE] | targetmode)
+        dbfile = file + '.db'
+        stat = os.stat(dbfile)
+        if (stat[ST_MODE] & targetmode) <> targetmode:
+            os.chmod(dbfile, stat[ST_MODE] | targetmode)
+        user = mm_cfg.MAILMAN_USER
+        if stat[ST_UID] != pwd.getpwnam(user)[2]:
+            uid = pwd.getpwnam(user)[2]
+            gid = grp.getgrnam(mm_cfg.MAILMAN_GROUP)[2]
+            os.chown(dbfile, uid, gid)
+    msg = 'command failed: %s (status: %s, %s)'
     cmdline = command + ' ' + mapfile
-    status = os.spawnlp(os.P_WAIT, command, command, mapfile)
+    status = (os.system(cmdline) >> 8) & 0xff
     if status:
         errstr = os.strerror(status)
         syslog('error', msg, cmdline, status, errstr)
         raise RuntimeError, msg % (cmdline, status, errstr)
+    # Fix owner and mode of .db if needed.
+    fixom(mapfile)
 
 
 
@@ -155,6 +176,7 @@ def _isvirtual(mlist):
 
 def _addvirtual(mlist, fp):
     listname = mlist.internal_name()
+    hostname = mlist.host_name
     # Set up the mailman-loop address
     loopaddr = Utils.get_site_email(mlist.host_name, extra='loop')
     loopdest = Utils.ParseEmail(loopaddr)[0]
@@ -468,7 +490,6 @@ def remove(mlist, cgi=False):
 
 
 def checkperms(state):
-    targetmode = S_IFREG | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
     for file in ALIASFILE, VIRTFILE:
         if state.VERBOSE:
             print C_('checking permissions on %(file)s')
@@ -481,7 +502,7 @@ def checkperms(state):
         if stat and (stat[ST_MODE] & targetmode) <> targetmode:
             state.ERRORS += 1
             octmode = oct(stat[ST_MODE])
-            print C_('%(file)s permissions must be 066x (got %(octmode)s)'),
+            print C_('%(file)s permissions must be 0664 (got %(octmode)s)'),
             if state.FIX:
                 print C_('(fixing)')
                 os.chmod(file, stat[ST_MODE] | targetmode)
@@ -520,7 +541,7 @@ def checkperms(state):
         if stat and (stat[ST_MODE] & targetmode) <> targetmode:
             state.ERRORS += 1
             octmode = oct(stat[ST_MODE])
-            print C_('%(dbfile)s permissions must be 066x (got %(octmode)s)'),
+            print C_('%(dbfile)s permissions must be 0664 (got %(octmode)s)'),
             if state.FIX:
                 print C_('(fixing)')
                 os.chmod(dbfile, stat[ST_MODE] | targetmode)
