@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2016 by the Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -104,7 +104,7 @@ def process_request(doc, cgidata):
     password = cgidata.getfirst('password', '').strip()
     confirm  = cgidata.getfirst('confirm', '').strip()
     auth     = cgidata.getfirst('auth', '').strip()
-    langs    = cgidata.getfirst('langs', [mm_cfg.DEFAULT_SERVER_LANGUAGE])
+    langs    = cgidata.getvalue('langs', [mm_cfg.DEFAULT_SERVER_LANGUAGE])
 
     if not isinstance(langs, ListType):
         langs = [langs]
@@ -296,7 +296,7 @@ def process_request(doc, cgidata):
 
 # Because the cgi module blows
 class Dummy:
-    def getvalue(self, name, default):
+    def getfirst(self, name, default):
         return default
 dummy = Dummy()
 
