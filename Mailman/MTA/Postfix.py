@@ -490,7 +490,7 @@ def remove(mlist, cgi=False):
 
 
 def checkperms(state):
-    for file in ALIASFILE, VIRTFILE:
+    for file in ALIASFILE, VIRTFILE, TRANSPORTFILE:
         if state.VERBOSE:
             print C_('checking permissions on %(file)s')
         stat = None
