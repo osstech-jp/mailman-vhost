@@ -671,7 +671,7 @@ address.  Upon confirmation, any other mailing list containing the address
         # Process user selected topics, but don't make the changes to the
         # MailList object; we must do that down below when the list is
         # locked.
-        topicnames = cgidata.getfirst('usertopic')
+        topicnames = cgidata.getvalue('usertopic')
         if topicnames:
             # Some topics were selected.  topicnames can actually be a string
             # or a list of strings depending on whether more than one topic
