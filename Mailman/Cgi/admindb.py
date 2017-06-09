@@ -366,7 +366,7 @@ def show_pending_subs(mlist, form):
     form.AddItem('<hr>')
     form.AddItem(Center(Header(2, _('Subscription Requests'))))
     table = Table(border=2)
-    table.AddRow([Center(Bold(_('Address/name'))),
+    table.AddRow([Center(Bold(_('Address/name/time'))),
                   Center(Bold(_('Your decision'))),
                   Center(Bold(_('Reason for refusal')))
                   ])
@@ -379,12 +379,14 @@ def show_pending_subs(mlist, form):
     addrs.sort()
     num = 0
     for addr, ids in addrs:
-        # Eliminate duplicates
-        for id in ids[1:]:
+        # Eliminate duplicates.
+        # The list ws returned sorted ascending.  Keep the last.
+        for id in ids[:-1]:
             mlist.HandleRequest(id, mm_cfg.DISCARD)
-        id = ids[0]
-        time, addr, fullname, passwd, digest, lang = mlist.GetRecord(id)
+        id = ids[-1]
+        stime, addr, fullname, passwd, digest, lang = mlist.GetRecord(id)
         fullname = Utils.uncanonstr(fullname, mlist.preferred_language)
+        displaytime = time.ctime(stime)
         radio = RadioButtonArray(id, (_('Defer'),
                                       _('Approve'),
                                       _('Reject'),
@@ -401,7 +403,9 @@ def show_pending_subs(mlist, form):
                      '</label>')
         # While the address may be a unicode, it must be ascii
         paddr = addr.encode('us-ascii', 'replace')
-        table.AddRow(['%s<br><em>%s</em>' % (paddr, Utils.websafe(fullname)),
+        table.AddRow(['%s<br><em>%s</em><br>%s' % (paddr,
+                                                   Utils.websafe(fullname),
+                                                   displaytime),
                       radio,
                       TextBox('comment-%d' % id, size=40)
                       ])
@@ -433,6 +437,7 @@ def show_pending_unsubs(mlist, form):
     num = 0
     for addr, ids in addrs:
         # Eliminate duplicates
+        # Here the order doesn't matter as the data is just the address.
         for id in ids[1:]:
             mlist.HandleRequest(id, mm_cfg.DISCARD)
         id = ids[0]
