@@ -7,6 +7,11 @@ Here is a history of user visible changes to Mailman.
 
 2.1.25 (xx-xxx-xxxx)
 
+  New Features
+
+    - The admindb held subscriptions listing now includes the date of the
+      most recent request from the address.  (LP: #1697097)
+
   Bug fixes and other patches
 
     - Fixed MTA/Postfix.py to ensure that created aliases(.db) and
