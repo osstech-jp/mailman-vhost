@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: Tue Apr 25 14:46:23 2017\n"
+"POT-Creation-Date: Fri Jun  9 17:34:55 2017\n"
 "PO-Revision-Date: 2002-03-28 19:21+09:00\n"
 "Last-Translator: Hyejin Soang, Wongyo Jung<redcloak@igrus.inha.ac.kr, "
 "andsoon@igrus.inha.ac.kr>\n"
@@ -241,7 +241,7 @@ msgid " The last bounce received from you was dated %(date)s"
 msgstr ""
 
 #: Mailman/Bouncer.py:329 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:433
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:435
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:251
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
@@ -269,7 +269,7 @@ msgstr "<em>%(safelistname)s</em> 라는 메일링 리스트가 존재하지 않습니다."
 
 #: Mailman/Cgi/admin.py:95 Mailman/Cgi/admindb.py:135 Mailman/Cgi/confirm.py:80
 #: Mailman/Cgi/create.py:50 Mailman/Cgi/edithtml.py:103
-#: Mailman/Cgi/listinfo.py:67 Mailman/Cgi/options.py:131
+#: Mailman/Cgi/listinfo.py:67 Mailman/Cgi/options.py:117
 #: Mailman/Cgi/private.py:125 Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72
 #: Mailman/Cgi/roster.py:146 Mailman/Cgi/roster.py:147
 #: Mailman/Cgi/subscribe.py:51 Mailman/Cgi/subscribe.py:62
@@ -280,7 +280,7 @@ msgstr "에러"
 #: Mailman/Cgi/admin.py:96 Mailman/Cgi/admindb.py:136 Mailman/Cgi/confirm.py:81
 #: Mailman/Cgi/create.py:51 Mailman/Cgi/edithtml.py:104
 #: Mailman/Cgi/listinfo.py:68 Mailman/Cgi/options.py:81
-#: Mailman/Cgi/options.py:132 Mailman/Cgi/private.py:126
+#: Mailman/Cgi/options.py:118 Mailman/Cgi/private.py:126
 #: Mailman/Cgi/rmlist.py:49 Mailman/Cgi/roster.py:73
 #: Mailman/Cgi/subscribe.py:78
 msgid "Invalid options to CGI script."
@@ -403,7 +403,7 @@ msgstr "메일링 리스트"
 msgid "Description"
 msgstr "설명"
 
-#: Mailman/Cgi/admin.py:342 Mailman/Cgi/listinfo.py:163 bin/list_lists:128
+#: Mailman/Cgi/admin.py:342 Mailman/Cgi/listinfo.py:163 bin/list_lists:130
 msgid "[no description available]"
 msgstr "[설명이 없습니다.]"
 
@@ -582,15 +582,15 @@ msgstr ""
 msgid "Spam Filter Regexp:"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:388
-#: Mailman/Cgi/admindb.py:449 Mailman/Cgi/admindb.py:503
-#: Mailman/Cgi/admindb.py:751
+#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:390
+#: Mailman/Cgi/admindb.py:454 Mailman/Cgi/admindb.py:508
+#: Mailman/Cgi/admindb.py:756
 msgid "Defer"
 msgstr "연기하기"
 
-#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:390
-#: Mailman/Cgi/admindb.py:451 Mailman/Cgi/admindb.py:503
-#: Mailman/Cgi/admindb.py:751 Mailman/Gui/ContentFilter.py:37
+#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:392
+#: Mailman/Cgi/admindb.py:456 Mailman/Cgi/admindb.py:508
+#: Mailman/Cgi/admindb.py:756 Mailman/Gui/ContentFilter.py:37
 #: Mailman/Gui/Privacy.py:265 Mailman/Gui/Privacy.py:288
 #: Mailman/Gui/Privacy.py:459
 msgid "Reject"
@@ -601,20 +601,20 @@ msgstr "거절하기"
 msgid "Hold"
 msgstr "잡아두기"
 
-#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:391
-#: Mailman/Cgi/admindb.py:452 Mailman/Cgi/admindb.py:503
-#: Mailman/Cgi/admindb.py:751 Mailman/Commands/cmd_confirm.py:93
+#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:393
+#: Mailman/Cgi/admindb.py:457 Mailman/Cgi/admindb.py:508
+#: Mailman/Cgi/admindb.py:756 Mailman/Commands/cmd_confirm.py:93
 #: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:265
 #: Mailman/Gui/Privacy.py:289 Mailman/Gui/Privacy.py:459
 msgid "Discard"
 msgstr "버리기"
 
-#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:503
+#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:508
 #: Mailman/Gui/Privacy.py:288 Mailman/Gui/Privacy.py:459
 msgid "Accept"
 msgstr "받이들이기"
 
-#: Mailman/Cgi/admin.py:815 Mailman/Cgi/admindb.py:757
+#: Mailman/Cgi/admin.py:815 Mailman/Cgi/admindb.py:762
 msgid "Action:"
 msgstr "행동:"
 
@@ -1078,7 +1078,7 @@ msgid "&lt;blank line&gt;"
 msgstr "&lt;공백 줄&gt;"
 
 #: Mailman/Cgi/admin.py:1477 Mailman/Cgi/admin.py:1480
-#: Mailman/Cgi/admindb.py:970
+#: Mailman/Cgi/admindb.py:975
 msgid "Bad/Invalid email address"
 msgstr "잘못된/없는 E메일 주소"
 
@@ -1254,101 +1254,101 @@ msgid "Subscription Requests"
 msgstr "가입 결과"
 
 #: Mailman/Cgi/admindb.py:369
-msgid "Address/name"
-msgstr "주소/이름"
+msgid "Address/name/time"
+msgstr "주소/이름/시각"
 
-#: Mailman/Cgi/admindb.py:370 Mailman/Cgi/admindb.py:423
+#: Mailman/Cgi/admindb.py:370 Mailman/Cgi/admindb.py:427
 msgid "Your decision"
 msgstr "당신의 결정"
 
-#: Mailman/Cgi/admindb.py:371 Mailman/Cgi/admindb.py:424
+#: Mailman/Cgi/admindb.py:371 Mailman/Cgi/admindb.py:428
 msgid "Reason for refusal"
 msgstr "거절 이유"
 
-#: Mailman/Cgi/admindb.py:389 Mailman/Cgi/admindb.py:450
-#: Mailman/Cgi/admindb.py:751 Mailman/Commands/cmd_confirm.py:90
+#: Mailman/Cgi/admindb.py:391 Mailman/Cgi/admindb.py:455
+#: Mailman/Cgi/admindb.py:756 Mailman/Commands/cmd_confirm.py:90
 msgid "Approve"
 msgstr "승인하기"
 
-#: Mailman/Cgi/admindb.py:400
+#: Mailman/Cgi/admindb.py:402
 msgid "Permanently ban from this list"
 msgstr "이 메일링 리스트에서 영원하 추방하기"
 
-#: Mailman/Cgi/admindb.py:422
+#: Mailman/Cgi/admindb.py:426
 msgid "User address/name"
 msgstr "사용자 E메일주소/이름"
 
-#: Mailman/Cgi/admindb.py:462
+#: Mailman/Cgi/admindb.py:467
 msgid "Unsubscription Requests"
 msgstr "탈퇴 요청들"
 
-#: Mailman/Cgi/admindb.py:474
+#: Mailman/Cgi/admindb.py:479
 #, fuzzy
 msgid "Held Messages"
 msgstr "모든 메세지는 유지되었습니다."
 
-#: Mailman/Cgi/admindb.py:477
+#: Mailman/Cgi/admindb.py:482
 msgid "Show this list grouped/sorted by"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:480
+#: Mailman/Cgi/admindb.py:485
 msgid "sender/sender"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:480
+#: Mailman/Cgi/admindb.py:485
 msgid "sender/time"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:480
+#: Mailman/Cgi/admindb.py:485
 msgid "ungrouped/time"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:496 Mailman/Cgi/admindb.py:734
+#: Mailman/Cgi/admindb.py:501 Mailman/Cgi/admindb.py:739
 msgid "From:"
 msgstr "보낸이:"
 
-#: Mailman/Cgi/admindb.py:499
+#: Mailman/Cgi/admindb.py:504
 msgid "Action to take on all these held messages:"
 msgstr "다른 메세지에 적용할 행동:"
 
-#: Mailman/Cgi/admindb.py:512
+#: Mailman/Cgi/admindb.py:517
 msgid "Preserve messages for the site administrator"
 msgstr "이 사이트 관리자를 위해 메세지 보존하기"
 
-#: Mailman/Cgi/admindb.py:520
+#: Mailman/Cgi/admindb.py:525
 msgid "Forward messages (individually) to:"
 msgstr "(개인적으로) 메세지 전달:"
 
-#: Mailman/Cgi/admindb.py:540
+#: Mailman/Cgi/admindb.py:545
 msgid "Clear this member's <em>moderate</em> flag"
 msgstr "이 사용자의 <em>글관리</em> 기호 지우기"
 
-#: Mailman/Cgi/admindb.py:545
+#: Mailman/Cgi/admindb.py:550
 msgid "<em>The sender is now a member of this list</em>"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:555
+#: Mailman/Cgi/admindb.py:560
 #, fuzzy
 msgid "Add <b>%(esender)s</b> to one of these sender filters:"
 msgstr "보낸이 여과기에 <b>%(esender)s</b> 추가하기"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Accepts"
 msgstr "받아들임"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Discards"
 msgstr "버리기"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Holds"
 msgstr "유지하기"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Rejects"
 msgstr "거절하기"
 
-#: Mailman/Cgi/admindb.py:571
+#: Mailman/Cgi/admindb.py:576
 msgid ""
 "Ban <b>%(esender)s</b> from ever subscribing to this\n"
 "                    mailing list"
@@ -1356,92 +1356,92 @@ msgstr ""
 "<b>%(esender)s</b> 가 보낸 이 메일링 리스트 대한 모든 가입 요청을\n"
 "추방하기"
 
-#: Mailman/Cgi/admindb.py:576
+#: Mailman/Cgi/admindb.py:581
 msgid ""
 "Click on the message number to view the individual\n"
 "            message, or you can "
 msgstr "개인 메세지를 보기위해 메세지 번호를 클릭하세요."
 
-#: Mailman/Cgi/admindb.py:578
+#: Mailman/Cgi/admindb.py:583
 msgid "view all messages from %(esender)s"
 msgstr "%(esender)s 가 보낸 모든 메세지 보기"
 
-#: Mailman/Cgi/admindb.py:600 Mailman/Cgi/admindb.py:737
+#: Mailman/Cgi/admindb.py:605 Mailman/Cgi/admindb.py:742
 msgid "Subject:"
 msgstr "제목:"
 
-#: Mailman/Cgi/admindb.py:603
+#: Mailman/Cgi/admindb.py:608
 msgid " bytes"
 msgstr " 바이트"
 
-#: Mailman/Cgi/admindb.py:603
+#: Mailman/Cgi/admindb.py:608
 msgid "Size:"
 msgstr "크기:"
 
-#: Mailman/Cgi/admindb.py:607 Mailman/Handlers/Scrubber.py:203
+#: Mailman/Cgi/admindb.py:612 Mailman/Handlers/Scrubber.py:203
 #: Mailman/Handlers/Scrubber.py:301 Mailman/Handlers/Scrubber.py:303
 msgid "not available"
 msgstr "이용할 수 없숩니다."
 
-#: Mailman/Cgi/admindb.py:608 Mailman/Cgi/admindb.py:740
+#: Mailman/Cgi/admindb.py:613 Mailman/Cgi/admindb.py:745
 msgid "Reason:"
 msgstr "이유:"
 
-#: Mailman/Cgi/admindb.py:612 Mailman/Cgi/admindb.py:744
+#: Mailman/Cgi/admindb.py:617 Mailman/Cgi/admindb.py:749
 #, fuzzy
 msgid "Received:"
 msgstr "묶음배달(Digest) 로 받을까요?"
 
-#: Mailman/Cgi/admindb.py:668
+#: Mailman/Cgi/admindb.py:673
 msgid "Posting Held for Approval"
 msgstr "승인을 기다리는 글"
 
-#: Mailman/Cgi/admindb.py:670
+#: Mailman/Cgi/admindb.py:675
 msgid " (%(count)d of %(total)d)"
 msgstr " (%(total)d 의 %(count)d)"
 
-#: Mailman/Cgi/admindb.py:681
+#: Mailman/Cgi/admindb.py:686
 msgid "<em>Message with id #%(id)d was lost."
 msgstr "<em>ID #%(id)d 인 메세지를 읽어버렸습니다."
 
-#: Mailman/Cgi/admindb.py:690
+#: Mailman/Cgi/admindb.py:695
 msgid "<em>Message with id #%(id)d is corrupted."
 msgstr "<em>ID #%(id)d 인 메세지가 깨졌습니다."
 
-#: Mailman/Cgi/admindb.py:762
+#: Mailman/Cgi/admindb.py:767
 msgid "Preserve message for site administrator"
 msgstr "사이트 관리자를 위해 메세지 보존하기"
 
-#: Mailman/Cgi/admindb.py:768
+#: Mailman/Cgi/admindb.py:773
 msgid "Additionally, forward this message to: "
 msgstr "게다가, 이 메세지를 다음 사람에게 전달: "
 
-#: Mailman/Cgi/admindb.py:773 Mailman/Cgi/admindb.py:842
-#: Mailman/Cgi/admindb.py:919 Mailman/Cgi/admindb.py:921
+#: Mailman/Cgi/admindb.py:778 Mailman/Cgi/admindb.py:847
+#: Mailman/Cgi/admindb.py:924 Mailman/Cgi/admindb.py:926
 msgid "[No explanation given]"
 msgstr "[설명이 없습니다.]"
 
-#: Mailman/Cgi/admindb.py:775
+#: Mailman/Cgi/admindb.py:780
 msgid "If you reject this post,<br>please explain (optional):"
 msgstr "만약 이글을 거절한다면,<br>그 이유를 설명하세요.(선택사항):"
 
-#: Mailman/Cgi/admindb.py:781
+#: Mailman/Cgi/admindb.py:786
 msgid "Message Headers:"
 msgstr "메세지 헤더:"
 
-#: Mailman/Cgi/admindb.py:786
+#: Mailman/Cgi/admindb.py:791
 msgid "Message Excerpt:"
 msgstr "메세지 인용:"
 
-#: Mailman/Cgi/admindb.py:958
+#: Mailman/Cgi/admindb.py:963
 msgid "Database Updated..."
 msgstr "DB 가 업데이트되었습니다..."
 
-#: Mailman/Cgi/admindb.py:962
+#: Mailman/Cgi/admindb.py:967
 msgid " is already a member"
 msgstr " 는 이미 회원입니다."
 
-#: Mailman/Cgi/admindb.py:966
+#: Mailman/Cgi/admindb.py:971
 msgid "%(addr)s is banned (matched: %(patt)s)"
 msgstr ""
 
@@ -3740,166 +3740,166 @@ msgstr "개별배달(Non-Digest) 회원들:\n"
 msgid "Digest members:"
 msgstr "묶음배달(Digest) 회원들:\n"
 
-#: Mailman/Defaults.py:1719
+#: Mailman/Defaults.py:1733
 msgid "Arabic"
 msgstr ""
 
-#: Mailman/Defaults.py:1720
+#: Mailman/Defaults.py:1734
 msgid "Asturian"
 msgstr ""
 
-#: Mailman/Defaults.py:1721
+#: Mailman/Defaults.py:1735
 #, fuzzy
 msgid "Catalan"
 msgstr "이탈리아어"
 
-#: Mailman/Defaults.py:1722
+#: Mailman/Defaults.py:1736
 msgid "Czech"
 msgstr "체크어"
 
-#: Mailman/Defaults.py:1723
+#: Mailman/Defaults.py:1737
 #, fuzzy
 msgid "Danish"
 msgstr "핀란드어"
 
-#: Mailman/Defaults.py:1724
+#: Mailman/Defaults.py:1738
 msgid "German"
 msgstr "독일어"
 
-#: Mailman/Defaults.py:1725
+#: Mailman/Defaults.py:1739
 msgid "English (USA)"
 msgstr "영어 (USA)"
 
-#: Mailman/Defaults.py:1726
+#: Mailman/Defaults.py:1740
 msgid "Spanish (Spain)"
 msgstr "스페인어 (스페인)"
 
-#: Mailman/Defaults.py:1727
+#: Mailman/Defaults.py:1741
 msgid "Estonian"
 msgstr ""
 
-#: Mailman/Defaults.py:1728
+#: Mailman/Defaults.py:1742
 msgid "Euskara"
 msgstr ""
 
-#: Mailman/Defaults.py:1729
+#: Mailman/Defaults.py:1743
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1730
+#: Mailman/Defaults.py:1744
 msgid "Finnish"
 msgstr "핀란드어"
 
-#: Mailman/Defaults.py:1731
+#: Mailman/Defaults.py:1745
 msgid "French"
 msgstr "프랑스어"
 
-#: Mailman/Defaults.py:1732
+#: Mailman/Defaults.py:1746
 #, fuzzy
 msgid "Galician"
 msgstr "이탈리아어"
 
-#: Mailman/Defaults.py:1733
+#: Mailman/Defaults.py:1747
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1734
+#: Mailman/Defaults.py:1748
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1735
+#: Mailman/Defaults.py:1749
 msgid "Croatian"
 msgstr ""
 
-#: Mailman/Defaults.py:1736
+#: Mailman/Defaults.py:1750
 msgid "Hungarian"
 msgstr "헝가리어"
 
-#: Mailman/Defaults.py:1737
+#: Mailman/Defaults.py:1751
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1738
+#: Mailman/Defaults.py:1752
 msgid "Italian"
 msgstr "이탈리아어"
 
-#: Mailman/Defaults.py:1739
+#: Mailman/Defaults.py:1753
 msgid "Japanese"
 msgstr "일본어"
 
-#: Mailman/Defaults.py:1740
+#: Mailman/Defaults.py:1754
 #, fuzzy
 msgid "Korean"
 msgstr "노르웨이어"
 
-#: Mailman/Defaults.py:1741
+#: Mailman/Defaults.py:1755
 msgid "Lithuanian"
 msgstr ""
 
-#: Mailman/Defaults.py:1742
+#: Mailman/Defaults.py:1756
 msgid "Dutch"
 msgstr ""
 
-#: Mailman/Defaults.py:1743
+#: Mailman/Defaults.py:1757
 msgid "Norwegian"
 msgstr "노르웨이어"
 
-#: Mailman/Defaults.py:1744
+#: Mailman/Defaults.py:1758
 msgid "Polish"
 msgstr ""
 
-#: Mailman/Defaults.py:1745
+#: Mailman/Defaults.py:1759
 msgid "Portuguese"
 msgstr ""
 
-#: Mailman/Defaults.py:1746
+#: Mailman/Defaults.py:1760
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: Mailman/Defaults.py:1747
+#: Mailman/Defaults.py:1761
 msgid "Romanian"
 msgstr ""
 
-#: Mailman/Defaults.py:1748
+#: Mailman/Defaults.py:1762
 msgid "Russian"
 msgstr "러시아어"
 
-#: Mailman/Defaults.py:1749
+#: Mailman/Defaults.py:1763
 #, fuzzy
 msgid "Slovak"
 msgstr "독일어"
 
-#: Mailman/Defaults.py:1750
+#: Mailman/Defaults.py:1764
 #, fuzzy
 msgid "Slovenian"
 msgstr "독일어"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1765
 #, fuzzy
 msgid "Serbian"
 msgstr "독일어"
 
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1766
 msgid "Swedish"
 msgstr ""
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1767
 msgid "Turkish"
 msgstr ""
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1768
 msgid "Ukrainian"
 msgstr ""
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1769
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1770
 msgid "Chinese (China)"
 msgstr ""
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1771
 msgid "Chinese (Taiwan)"
 msgstr ""
 
@@ -7178,64 +7178,64 @@ msgid ""
 "                newsgroup</a> fields are filled in."
 msgstr ""
 
-#: Mailman/HTMLFormatter.py:50
+#: Mailman/HTMLFormatter.py:49
 msgid "%(listinfo_link)s list run by %(owner_link)s"
 msgstr "%(listinfo_link)s 는 %(owner_link)s 님이 관리합니다."
 
-#: Mailman/HTMLFormatter.py:58
+#: Mailman/HTMLFormatter.py:57
 msgid "%(realname)s administrative interface"
 msgstr "%(realname)s 관리하기"
 
-#: Mailman/HTMLFormatter.py:59
+#: Mailman/HTMLFormatter.py:58
 msgid " (requires authorization)"
 msgstr " (인증이 필요합니다.)"
 
-#: Mailman/HTMLFormatter.py:62
+#: Mailman/HTMLFormatter.py:61
 msgid "Overview of all %(hostname)s mailing lists"
 msgstr "%(hostname)s 상의 모든 메일링 리스트 소개"
 
-#: Mailman/HTMLFormatter.py:79
+#: Mailman/HTMLFormatter.py:78
 msgid "<em>(1 private member not shown)</em>"
 msgstr "<em>(1 명의 비공개 회원이 보여지지 않습니다.)</em>"
 
-#: Mailman/HTMLFormatter.py:81
+#: Mailman/HTMLFormatter.py:80
 msgid "<em>(%(num_concealed)d private members not shown)</em>"
 msgstr "<em>(%(num_concealed)d 명의 비공개 회원들이 보여지지 않습니다.)</em>"
 
-#: Mailman/HTMLFormatter.py:140
+#: Mailman/HTMLFormatter.py:139
 msgid "; it was disabled by you"
 msgstr "; 당신이 금지하였습니다."
 
-#: Mailman/HTMLFormatter.py:142
+#: Mailman/HTMLFormatter.py:141
 msgid "; it was disabled by the list administrator"
 msgstr "; 리스트 관리자가 금지하였습니다."
 
-#: Mailman/HTMLFormatter.py:146
+#: Mailman/HTMLFormatter.py:145
 #, fuzzy
 msgid ""
 "; it was disabled due to excessive bounces.  The\n"
 "            last bounce was received on %(date)s"
 msgstr "; 많은 바운스로 인해 금지되었습니다."
 
-#: Mailman/HTMLFormatter.py:149
+#: Mailman/HTMLFormatter.py:148
 msgid "; it was disabled for unknown reasons"
 msgstr "; 알 수 없는 이유로 금지되었습니다."
 
-#: Mailman/HTMLFormatter.py:151
+#: Mailman/HTMLFormatter.py:150
 #, fuzzy
 msgid "Note: your list delivery is currently disabled%(reason)s."
 msgstr ""
 "참고: 당신의 리스트 배달은 현재 %(reason)s 이유 때문에 금지되어 있습니다."
 
-#: Mailman/HTMLFormatter.py:154
+#: Mailman/HTMLFormatter.py:153
 msgid "Mail delivery"
 msgstr "E메일 배달"
 
-#: Mailman/HTMLFormatter.py:156 Mailman/HTMLFormatter.py:301
+#: Mailman/HTMLFormatter.py:155 Mailman/HTMLFormatter.py:300
 msgid "the list administrator"
 msgstr "리스트 관리자"
 
-#: Mailman/HTMLFormatter.py:157
+#: Mailman/HTMLFormatter.py:156
 msgid ""
 "<p>%(note)s\n"
 "\n"
@@ -7250,7 +7250,7 @@ msgstr ""
 "다. 그런 경우 배달 기능을 하도록 해야 하는데, %(link)s 설정을 바꾸시기 바랍니"
 "다.  만약 질문이 있다면 %(mailto)s 에게 연락하시기 바랍니다."
 
-#: Mailman/HTMLFormatter.py:169
+#: Mailman/HTMLFormatter.py:168
 msgid ""
 "<p>We have received some recent bounces from your\n"
 "            address.  Your current <em>bounce score</em> is %(score)s out of "
@@ -7266,7 +7266,7 @@ msgstr ""
 "입이 제대로 되었는지와 이 주소로 배달하는데 문제가 있지 않은지 꼭 검사하시기 "
 "바랍니다. 당신의 바운스 점수는 문제가 고쳐지면 자동으로 리셋됩니다."
 
-#: Mailman/HTMLFormatter.py:181
+#: Mailman/HTMLFormatter.py:180
 msgid ""
 "(Note - you are subscribing to a list of mailing lists, so the %(type)s "
 "notice will be sent to the admin address for your membership, %(addr)s.)<p>"
@@ -7275,7 +7275,7 @@ msgstr ""
 "고, 관리자의 주소로 %(type)s 공지가 보내지는 메일링리스트에 가입하고 있습니"
 "다.)<p>"
 
-#: Mailman/HTMLFormatter.py:191
+#: Mailman/HTMLFormatter.py:190
 msgid ""
 "You will be sent email requesting confirmation, to\n"
 "            prevent others from gratuitously subscribing you."
@@ -7283,7 +7283,7 @@ msgstr ""
 "당신 이름을 다른 사람이 도용하는 것을 막기 위해 확인 E-mail을 받게 될 것입니"
 "다."
 
-#: Mailman/HTMLFormatter.py:194
+#: Mailman/HTMLFormatter.py:193
 msgid ""
 "This is a closed list, which means your subscription\n"
 "            will be held for approval.  You will be notified of the list\n"
@@ -7292,11 +7292,11 @@ msgstr ""
 "이 메일링 리스트는 당신이 가입을 할 때 관리자의 승인이 있어야 하는 닫힌 메일"
 "링 리스트 입니다. E메일을 통해 관리자의 결정을 받아 보실 수 있습니다."
 
-#: Mailman/HTMLFormatter.py:197 Mailman/HTMLFormatter.py:204
+#: Mailman/HTMLFormatter.py:196 Mailman/HTMLFormatter.py:203
 msgid "also "
 msgstr "또한 "
 
-#: Mailman/HTMLFormatter.py:199
+#: Mailman/HTMLFormatter.py:198
 msgid ""
 "You will be sent email requesting confirmation, to\n"
 "            prevent others from gratuitously subscribing you.  Once\n"
@@ -7310,7 +7310,7 @@ msgstr ""
 "메일링 리스트의 관리자의 승인을 기다리는 대기 명단에 올라가게 됩니다. 관리자"
 "의 결정을 담은 내용이 관리자의 결정 후 당신의 E메일 주소로 보내집니다."
 
-#: Mailman/HTMLFormatter.py:208
+#: Mailman/HTMLFormatter.py:207
 msgid ""
 "This is %(also)sa private list, which means that the\n"
 "            list of members is not available to non-members."
@@ -7318,7 +7318,7 @@ msgstr ""
 "이것은 %(also)s 비공개 메일링 리스트입니다. 회원이 아닌 사람은 회원 목록을 "
 "볼 수 없습니다."
 
-#: Mailman/HTMLFormatter.py:211
+#: Mailman/HTMLFormatter.py:210
 msgid ""
 "This is %(also)sa hidden list, which means that the\n"
 "            list of members is available only to the list administrator."
@@ -7326,7 +7326,7 @@ msgstr ""
 "이것은 %(also)s 숨겨진 메일링 리스트입니다. 즉 회원 리스트는 관리자만 볼 수 "
 "있습니다. "
 
-#: Mailman/HTMLFormatter.py:214
+#: Mailman/HTMLFormatter.py:213
 msgid ""
 "This is %(also)sa public list, which means that the\n"
 "            list of members list is available to everyone."
@@ -7334,13 +7334,13 @@ msgstr ""
 "이것은 %(also)s 공용 목록입니다. 즉, 멤버 리스트가 공개적으로 가능하다는 뜻입"
 "니다. "
 
-#: Mailman/HTMLFormatter.py:217
+#: Mailman/HTMLFormatter.py:216
 msgid ""
 " (but we obscure the addresses so they are not\n"
 "                easily recognizable by spammers)."
 msgstr " (하지만 주소는 스패머들에게 쉽게 알려지지 않도록 숨겨집니다.) "
 
-#: Mailman/HTMLFormatter.py:222
+#: Mailman/HTMLFormatter.py:221
 msgid ""
 "<p>(Note that this is an umbrella list, intended to\n"
 "            have only other mailing lists as members.  Among other things,\n"
@@ -7351,11 +7351,11 @@ msgstr ""
 "다른 점은 당신의 확인 요청이 당신 주소의 `%(sfx)s' 계정으로 보내진다는 것입니"
 "다.)"
 
-#: Mailman/HTMLFormatter.py:251
+#: Mailman/HTMLFormatter.py:250
 msgid "<b><i>either</i></b> "
 msgstr " "
 
-#: Mailman/HTMLFormatter.py:256
+#: Mailman/HTMLFormatter.py:255
 msgid ""
 "To unsubscribe from %(realname)s, get a password reminder,\n"
 "        or change your subscription options %(either)senter your "
@@ -7366,11 +7366,11 @@ msgstr ""
 "%(realname)s 에서 가입신청 변경 (Disest 여부 배달방식, 패스워드 분실시, 탈퇴)"
 "을 원하신다면 %(either)s 아래에 Email 주소를 넣어 주세요.<p>"
 
-#: Mailman/HTMLFormatter.py:263
+#: Mailman/HTMLFormatter.py:262
 msgid "Unsubscribe or edit options"
 msgstr "탈퇴 및 설정 변경하기"
 
-#: Mailman/HTMLFormatter.py:267
+#: Mailman/HTMLFormatter.py:266
 msgid ""
 "<p>... <b><i>or</i></b> select your entry from\n"
 "                      the subscribers list (see above)."
@@ -7378,76 +7378,76 @@ msgstr ""
 "<p>... <b><i>혹은</i></b> 위에서 볼 수 있는  가입자 명단에서 해당하는 것을 선"
 "택하세요. "
 
-#: Mailman/HTMLFormatter.py:269
+#: Mailman/HTMLFormatter.py:268
 msgid ""
 " If you leave the field blank, you will be prompted for\n"
 "        your email address"
 msgstr "<br>빈칸으로 남겨 둔다면 당신의 E메일 주소를 사용할 것입니다."
 
-#: Mailman/HTMLFormatter.py:277
+#: Mailman/HTMLFormatter.py:276
 #, fuzzy
 msgid ""
 "(<i>%(which)s is only available to the list\n"
 "                members.</i>)"
 msgstr "%(which)s 은 회원만 이용가능합니다."
 
-#: Mailman/HTMLFormatter.py:281
+#: Mailman/HTMLFormatter.py:280
 #, fuzzy
 msgid ""
 "(<i>%(which)s is only available to the list\n"
 "            administrator.</i>)"
 msgstr "<i> %(which)s 는 메일링 리스트 관리자만 이용가능합니다.</i>"
 
-#: Mailman/HTMLFormatter.py:291
+#: Mailman/HTMLFormatter.py:290
 msgid "Click here for the list of "
 msgstr "다음과 같은 목록을 보실려면 클릭하세요. "
 
-#: Mailman/HTMLFormatter.py:293
+#: Mailman/HTMLFormatter.py:292
 msgid " subscribers: "
 msgstr " 가입자들: "
 
-#: Mailman/HTMLFormatter.py:295
+#: Mailman/HTMLFormatter.py:294
 msgid "Visit Subscriber list"
 msgstr "가입자 목록 보기"
 
-#: Mailman/HTMLFormatter.py:298
+#: Mailman/HTMLFormatter.py:297
 msgid "members"
 msgstr "회원"
 
-#: Mailman/HTMLFormatter.py:299
+#: Mailman/HTMLFormatter.py:298
 msgid "Address:"
 msgstr "E메일 주소:"
 
-#: Mailman/HTMLFormatter.py:302
+#: Mailman/HTMLFormatter.py:301
 msgid "Admin address:"
 msgstr "관리자 주소:"
 
-#: Mailman/HTMLFormatter.py:305
+#: Mailman/HTMLFormatter.py:304
 #, fuzzy
 msgid "The subscribers list"
 msgstr "가입자 목록"
 
-#: Mailman/HTMLFormatter.py:307
+#: Mailman/HTMLFormatter.py:306
 msgid " <p>Enter your "
 msgstr " <p>가입자 목록을 보기 위해 당신의 "
 
-#: Mailman/HTMLFormatter.py:309
+#: Mailman/HTMLFormatter.py:308
 msgid " and password to visit  the subscribers list: <p><center> "
 msgstr " 와 비밀 번호를 입력하십시오: <p><center>"
 
-#: Mailman/HTMLFormatter.py:314
+#: Mailman/HTMLFormatter.py:313
 msgid "Password: "
 msgstr "비밀번호: "
 
-#: Mailman/HTMLFormatter.py:318
+#: Mailman/HTMLFormatter.py:317
 msgid "Visit Subscriber List"
 msgstr "가입자 목록 보기"
 
-#: Mailman/HTMLFormatter.py:357
+#: Mailman/HTMLFormatter.py:356
 msgid "Once a month, your password will be emailed to you as a reminder."
 msgstr "한달에 한번 여러분의 패스워드를 Email로 보내드립니다."
 
-#: Mailman/HTMLFormatter.py:404
+#: Mailman/HTMLFormatter.py:403
 #, fuzzy
 msgid "The current archive"
 msgstr "현재 저장소"
@@ -7908,16 +7908,16 @@ msgstr ""
 msgid "Mailing list removal request for list %(listname)s"
 msgstr "%(listname)s 메일링 리스트 제거 요청"
 
-#: Mailman/MTA/Postfix.py:370
+#: Mailman/MTA/Postfix.py:415
 msgid "checking permissions on %(file)s"
 msgstr "%(file)s 파일에 대한 퍼미션 검사중"
 
-#: Mailman/MTA/Postfix.py:380
-msgid "%(file)s permissions must be 066x (got %(octmode)s)"
-msgstr "%(file)s 퍼미션은 066x ( %(octmode)s )여야 합니다."
+#: Mailman/MTA/Postfix.py:425
+msgid "%(file)s permissions must be 0664 (got %(octmode)s)"
+msgstr "%(file)s 퍼미션은 0664 ( %(octmode)s )여야 합니다."
 
-#: Mailman/MTA/Postfix.py:382 Mailman/MTA/Postfix.py:410
-#: Mailman/MTA/Postfix.py:421 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:427 Mailman/MTA/Postfix.py:455
+#: Mailman/MTA/Postfix.py:466 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -7925,21 +7925,20 @@ msgstr "%(file)s 퍼미션은 066x ( %(octmode)s )여야 합니다."
 msgid "(fixing)"
 msgstr "(수정중)"
 
-#: Mailman/MTA/Postfix.py:398
+#: Mailman/MTA/Postfix.py:443
 msgid "checking ownership of %(dbfile)s"
 msgstr "%(dbfile)s 의 소유주를 검사중"
 
-#: Mailman/MTA/Postfix.py:406
+#: Mailman/MTA/Postfix.py:451
 #, fuzzy
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr ""
 "%(dbfile)s 는 %(owner)s 에 의해 소유되어야 합니다. (Mailman 의 소유여야 합니"
 "다."
 
-#: Mailman/MTA/Postfix.py:419
-#, fuzzy
-msgid "%(dbfile)s permissions must be 066x (got %(octmode)s)"
-msgstr "%(dbfile)s 퍼미션은 066x ( %(octmode)s )여야 합니다."
+#: Mailman/MTA/Postfix.py:464
+msgid "%(dbfile)s permissions must be 0664 (got %(octmode)s)"
+msgstr "%(dbfile)s 퍼미션은 0664 ( %(octmode)s )여야 합니다."
 
 #: Mailman/MailList.py:217
 #, fuzzy
@@ -9207,11 +9206,11 @@ msgid ""
 "\n"
 msgstr ""
 
-#: bin/list_lists:117
+#: bin/list_lists:119
 msgid "No matching mailing lists found"
 msgstr ""
 
-#: bin/list_lists:121
+#: bin/list_lists:123
 msgid "matching mailing lists found:"
 msgstr ""
 

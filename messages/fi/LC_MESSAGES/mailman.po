@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.15\n"
-"POT-Creation-Date: Tue Apr 25 14:46:23 2017\n"
+"POT-Creation-Date: Fri Jun  9 17:34:55 2017\n"
 "PO-Revision-Date: 2010-07-26 10:25+0300\n"
 "Last-Translator: Joni Töyrylä <joni.toyryla@stonelake.fi>\n"
 "Language-Team: Finnish Language Team\n"
@@ -233,7 +233,7 @@ msgid " The last bounce received from you was dated %(date)s"
 msgstr " Viimeisin palautus osoitteestasi oli päivätty  %(date)s"
 
 #: Mailman/Bouncer.py:329 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:433
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:435
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:251
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
@@ -262,7 +262,7 @@ msgstr "Listaa <em>%(safelistname)s</em> ei ole olemassa."
 
 #: Mailman/Cgi/admin.py:95 Mailman/Cgi/admindb.py:135 Mailman/Cgi/confirm.py:80
 #: Mailman/Cgi/create.py:50 Mailman/Cgi/edithtml.py:103
-#: Mailman/Cgi/listinfo.py:67 Mailman/Cgi/options.py:131
+#: Mailman/Cgi/listinfo.py:67 Mailman/Cgi/options.py:117
 #: Mailman/Cgi/private.py:125 Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72
 #: Mailman/Cgi/roster.py:146 Mailman/Cgi/roster.py:147
 #: Mailman/Cgi/subscribe.py:51 Mailman/Cgi/subscribe.py:62
@@ -273,7 +273,7 @@ msgstr "Virhe"
 #: Mailman/Cgi/admin.py:96 Mailman/Cgi/admindb.py:136 Mailman/Cgi/confirm.py:81
 #: Mailman/Cgi/create.py:51 Mailman/Cgi/edithtml.py:104
 #: Mailman/Cgi/listinfo.py:68 Mailman/Cgi/options.py:81
-#: Mailman/Cgi/options.py:132 Mailman/Cgi/private.py:126
+#: Mailman/Cgi/options.py:118 Mailman/Cgi/private.py:126
 #: Mailman/Cgi/rmlist.py:49 Mailman/Cgi/roster.py:73
 #: Mailman/Cgi/subscribe.py:78
 msgid "Invalid options to CGI script."
@@ -400,7 +400,7 @@ msgstr "Lista"
 msgid "Description"
 msgstr "Kuvaus"
 
-#: Mailman/Cgi/admin.py:342 Mailman/Cgi/listinfo.py:163 bin/list_lists:128
+#: Mailman/Cgi/admin.py:342 Mailman/Cgi/listinfo.py:163 bin/list_lists:130
 msgid "[no description available]"
 msgstr "[ei kuvausta saatavilla]"
 
@@ -580,15 +580,15 @@ msgstr "Roskapostisuodatus sääntä %(i)d"
 msgid "Spam Filter Regexp:"
 msgstr "Roskapostisuodatus Regexp:"
 
-#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:388
-#: Mailman/Cgi/admindb.py:449 Mailman/Cgi/admindb.py:503
-#: Mailman/Cgi/admindb.py:751
+#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:390
+#: Mailman/Cgi/admindb.py:454 Mailman/Cgi/admindb.py:508
+#: Mailman/Cgi/admindb.py:756
 msgid "Defer"
 msgstr "Lykkää"
 
-#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:390
-#: Mailman/Cgi/admindb.py:451 Mailman/Cgi/admindb.py:503
-#: Mailman/Cgi/admindb.py:751 Mailman/Gui/ContentFilter.py:37
+#: Mailman/Cgi/admin.py:811 Mailman/Cgi/admindb.py:392
+#: Mailman/Cgi/admindb.py:456 Mailman/Cgi/admindb.py:508
+#: Mailman/Cgi/admindb.py:756 Mailman/Gui/ContentFilter.py:37
 #: Mailman/Gui/Privacy.py:265 Mailman/Gui/Privacy.py:288
 #: Mailman/Gui/Privacy.py:459
 msgid "Reject"
@@ -599,20 +599,20 @@ msgstr "Torju"
 msgid "Hold"
 msgstr "Pidätä"
 
-#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:391
-#: Mailman/Cgi/admindb.py:452 Mailman/Cgi/admindb.py:503
-#: Mailman/Cgi/admindb.py:751 Mailman/Commands/cmd_confirm.py:93
+#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:393
+#: Mailman/Cgi/admindb.py:457 Mailman/Cgi/admindb.py:508
+#: Mailman/Cgi/admindb.py:756 Mailman/Commands/cmd_confirm.py:93
 #: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:265
 #: Mailman/Gui/Privacy.py:289 Mailman/Gui/Privacy.py:459
 msgid "Discard"
 msgstr "Hylkää"
 
-#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:503
+#: Mailman/Cgi/admin.py:812 Mailman/Cgi/admindb.py:508
 #: Mailman/Gui/Privacy.py:288 Mailman/Gui/Privacy.py:459
 msgid "Accept"
 msgstr "Hyväksy"
 
-#: Mailman/Cgi/admin.py:815 Mailman/Cgi/admindb.py:757
+#: Mailman/Cgi/admin.py:815 Mailman/Cgi/admindb.py:762
 msgid "Action:"
 msgstr "Toiminto:"
 
@@ -1086,7 +1086,7 @@ msgid "&lt;blank line&gt;"
 msgstr "&lt;tyhjä rivi&gt;"
 
 #: Mailman/Cgi/admin.py:1477 Mailman/Cgi/admin.py:1480
-#: Mailman/Cgi/admindb.py:970
+#: Mailman/Cgi/admindb.py:975
 msgid "Bad/Invalid email address"
 msgstr "Väärä/Virheellinen sähköpostiosoite"
 
@@ -1264,99 +1264,99 @@ msgid "Subscription Requests"
 msgstr "Liittymispyyntöjä"
 
 #: Mailman/Cgi/admindb.py:369
-msgid "Address/name"
-msgstr "Osoite/nimi"
+msgid "Address/name/time"
+msgstr "Osoite/nimi/aika"
 
-#: Mailman/Cgi/admindb.py:370 Mailman/Cgi/admindb.py:423
+#: Mailman/Cgi/admindb.py:370 Mailman/Cgi/admindb.py:427
 msgid "Your decision"
 msgstr "Valintasi"
 
-#: Mailman/Cgi/admindb.py:371 Mailman/Cgi/admindb.py:424
+#: Mailman/Cgi/admindb.py:371 Mailman/Cgi/admindb.py:428
 msgid "Reason for refusal"
 msgstr "Hylkäämisen syy"
 
-#: Mailman/Cgi/admindb.py:389 Mailman/Cgi/admindb.py:450
-#: Mailman/Cgi/admindb.py:751 Mailman/Commands/cmd_confirm.py:90
+#: Mailman/Cgi/admindb.py:391 Mailman/Cgi/admindb.py:455
+#: Mailman/Cgi/admindb.py:756 Mailman/Commands/cmd_confirm.py:90
 msgid "Approve"
 msgstr "Hyväksy"
 
-#: Mailman/Cgi/admindb.py:400
+#: Mailman/Cgi/admindb.py:402
 msgid "Permanently ban from this list"
 msgstr "Estä pääsy pysyvästi tältä listalta"
 
-#: Mailman/Cgi/admindb.py:422
+#: Mailman/Cgi/admindb.py:426
 msgid "User address/name"
 msgstr "Käyttäjän osoite/nimi"
 
-#: Mailman/Cgi/admindb.py:462
+#: Mailman/Cgi/admindb.py:467
 msgid "Unsubscription Requests"
 msgstr "Eroamispyyntöjä"
 
-#: Mailman/Cgi/admindb.py:474
+#: Mailman/Cgi/admindb.py:479
 msgid "Held Messages"
 msgstr "Odottavat viestit."
 
-#: Mailman/Cgi/admindb.py:477
+#: Mailman/Cgi/admindb.py:482
 msgid "Show this list grouped/sorted by"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:480
+#: Mailman/Cgi/admindb.py:485
 msgid "sender/sender"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:480
+#: Mailman/Cgi/admindb.py:485
 msgid "sender/time"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:480
+#: Mailman/Cgi/admindb.py:485
 msgid "ungrouped/time"
 msgstr ""
 
-#: Mailman/Cgi/admindb.py:496 Mailman/Cgi/admindb.py:734
+#: Mailman/Cgi/admindb.py:501 Mailman/Cgi/admindb.py:739
 msgid "From:"
 msgstr "Lähettäjä:"
 
-#: Mailman/Cgi/admindb.py:499
+#: Mailman/Cgi/admindb.py:504
 msgid "Action to take on all these held messages:"
 msgstr "Toimenpide kaikkiin näihin odottaviin viesteihin:"
 
-#: Mailman/Cgi/admindb.py:512
+#: Mailman/Cgi/admindb.py:517
 msgid "Preserve messages for the site administrator"
 msgstr "Säilytä viestit järjestelmän ylläpitäjälle"
 
-#: Mailman/Cgi/admindb.py:520
+#: Mailman/Cgi/admindb.py:525
 msgid "Forward messages (individually) to:"
 msgstr "Edelleenohjaa viestit (yksitellen) osoitteella:"
 
-#: Mailman/Cgi/admindb.py:540
+#: Mailman/Cgi/admindb.py:545
 msgid "Clear this member's <em>moderate</em> flag"
 msgstr "Tyhjennä tämän jäsenen <em>ylläpito</em> asetus"
 
-#: Mailman/Cgi/admindb.py:545
+#: Mailman/Cgi/admindb.py:550
 msgid "<em>The sender is now a member of this list</em>"
 msgstr "<em>Lähettäjä on nyt postituslistan käyttäjä</em>"
 
-#: Mailman/Cgi/admindb.py:555
+#: Mailman/Cgi/admindb.py:560
 msgid "Add <b>%(esender)s</b> to one of these sender filters:"
 msgstr "Lisää <b>%(esender)s</b> lähettäjän suodatukseen"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Accepts"
 msgstr "Hyväksytyt"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Discards"
 msgstr "Hylätyt"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Holds"
 msgstr "Odottavat"
 
-#: Mailman/Cgi/admindb.py:561
+#: Mailman/Cgi/admindb.py:566
 msgid "Rejects"
 msgstr "Torjutut"
 
-#: Mailman/Cgi/admindb.py:571
+#: Mailman/Cgi/admindb.py:576
 msgid ""
 "Ban <b>%(esender)s</b> from ever subscribing to this\n"
 "                    mailing list"
@@ -1364,7 +1364,7 @@ msgstr ""
 "Estä <b>%(esender)s</b> koskaan liittymästä tähän\n"
 "                    postituslistaan"
 
-#: Mailman/Cgi/admindb.py:576
+#: Mailman/Cgi/admindb.py:581
 msgid ""
 "Click on the message number to view the individual\n"
 "            message, or you can "
@@ -1372,85 +1372,85 @@ msgstr ""
 "Klikkaa viestin numeroa nähdäksesi yksittäinen\n"
 "            viesti, tai voit "
 
-#: Mailman/Cgi/admindb.py:578
+#: Mailman/Cgi/admindb.py:583
 msgid "view all messages from %(esender)s"
 msgstr "näytä kaikki %(esender)s viestit"
 
-#: Mailman/Cgi/admindb.py:600 Mailman/Cgi/admindb.py:737
+#: Mailman/Cgi/admindb.py:605 Mailman/Cgi/admindb.py:742
 msgid "Subject:"
 msgstr "Aihe:"
 
-#: Mailman/Cgi/admindb.py:603
+#: Mailman/Cgi/admindb.py:608
 msgid " bytes"
 msgstr " tavua"
 
-#: Mailman/Cgi/admindb.py:603
+#: Mailman/Cgi/admindb.py:608
 msgid "Size:"
 msgstr "Koko:"
 
-#: Mailman/Cgi/admindb.py:607 Mailman/Handlers/Scrubber.py:203
+#: Mailman/Cgi/admindb.py:612 Mailman/Handlers/Scrubber.py:203
 #: Mailman/Handlers/Scrubber.py:301 Mailman/Handlers/Scrubber.py:303
 msgid "not available"
 msgstr "ei saatavilla"
 
-#: Mailman/Cgi/admindb.py:608 Mailman/Cgi/admindb.py:740
+#: Mailman/Cgi/admindb.py:613 Mailman/Cgi/admindb.py:745
 msgid "Reason:"
 msgstr "Syy:"
 
-#: Mailman/Cgi/admindb.py:612 Mailman/Cgi/admindb.py:744
+#: Mailman/Cgi/admindb.py:617 Mailman/Cgi/admindb.py:749
 msgid "Received:"
 msgstr "Vastaanotettu:"
 
-#: Mailman/Cgi/admindb.py:668
+#: Mailman/Cgi/admindb.py:673
 msgid "Posting Held for Approval"
 msgstr "Postitus odottaa hyväksyntää"
 
-#: Mailman/Cgi/admindb.py:670
+#: Mailman/Cgi/admindb.py:675
 msgid " (%(count)d of %(total)d)"
 msgstr " (%(count)d / %(total)d)"
 
-#: Mailman/Cgi/admindb.py:681
+#: Mailman/Cgi/admindb.py:686
 msgid "<em>Message with id #%(id)d was lost."
 msgstr "<em>Viesti tunnuksella #%(id)d oli kadonnut."
 
-#: Mailman/Cgi/admindb.py:690
+#: Mailman/Cgi/admindb.py:695
 msgid "<em>Message with id #%(id)d is corrupted."
 msgstr "<em>Viesti tunnuksella #%(id)d on vioittunut."
 
-#: Mailman/Cgi/admindb.py:762
+#: Mailman/Cgi/admindb.py:767
 msgid "Preserve message for site administrator"
 msgstr "Säilytä viesti järjestelmän ylläpitäjälle"
 
-#: Mailman/Cgi/admindb.py:768
+#: Mailman/Cgi/admindb.py:773
 msgid "Additionally, forward this message to: "
 msgstr "Lisäksi, edelleenohjaa tämä viesti:"
 
-#: Mailman/Cgi/admindb.py:773 Mailman/Cgi/admindb.py:842
-#: Mailman/Cgi/admindb.py:919 Mailman/Cgi/admindb.py:921
+#: Mailman/Cgi/admindb.py:778 Mailman/Cgi/admindb.py:847
+#: Mailman/Cgi/admindb.py:924 Mailman/Cgi/admindb.py:926
 msgid "[No explanation given]"
 msgstr "[Selvitystä ei annettu]"
 
-#: Mailman/Cgi/admindb.py:775
+#: Mailman/Cgi/admindb.py:780
 msgid "If you reject this post,<br>please explain (optional):"
 msgstr "Jos hylkäät tämän viestin, <br> selitä miksi (vapaaehtoinen):"
 
-#: Mailman/Cgi/admindb.py:781
+#: Mailman/Cgi/admindb.py:786
 msgid "Message Headers:"
 msgstr "Viestin otsikot:"
 
-#: Mailman/Cgi/admindb.py:786
+#: Mailman/Cgi/admindb.py:791
 msgid "Message Excerpt:"
 msgstr "Ote viestistä:"
 
-#: Mailman/Cgi/admindb.py:958
+#: Mailman/Cgi/admindb.py:963
 msgid "Database Updated..."
 msgstr "Tietokanta päivitetty..."
 
-#: Mailman/Cgi/admindb.py:962
+#: Mailman/Cgi/admindb.py:967
 msgid " is already a member"
 msgstr " on jo jäsen"
 
-#: Mailman/Cgi/admindb.py:966
+#: Mailman/Cgi/admindb.py:971
 msgid "%(addr)s is banned (matched: %(patt)s)"
 msgstr "%(addr)s on kielletty (banned) (täsmäsi kaavaan: %(patt)s)"
 
@@ -3977,169 +3977,169 @@ msgstr "Ei-kooste (tavanomaiset) jäsenet (Non-digest (regular) members):"
 msgid "Digest members:"
 msgstr "Koostejäsenet (Digest members):"
 
-#: Mailman/Defaults.py:1719
+#: Mailman/Defaults.py:1733
 msgid "Arabic"
 msgstr "Arabia"
 
 # #######
-#: Mailman/Defaults.py:1720
+#: Mailman/Defaults.py:1734
 #, fuzzy
 msgid "Asturian"
 msgstr "Viro"
 
-#: Mailman/Defaults.py:1721
+#: Mailman/Defaults.py:1735
 msgid "Catalan"
 msgstr "Katalonia"
 
-#: Mailman/Defaults.py:1722
+#: Mailman/Defaults.py:1736
 msgid "Czech"
 msgstr "Tsekki"
 
 # #######
-#: Mailman/Defaults.py:1723
+#: Mailman/Defaults.py:1737
 msgid "Danish"
 msgstr "Tanska"
 
-#: Mailman/Defaults.py:1724
+#: Mailman/Defaults.py:1738
 msgid "German"
 msgstr "Saksa"
 
-#: Mailman/Defaults.py:1725
+#: Mailman/Defaults.py:1739
 msgid "English (USA)"
 msgstr "Englanti (amerikan-)"
 
-#: Mailman/Defaults.py:1726
+#: Mailman/Defaults.py:1740
 msgid "Spanish (Spain)"
 msgstr "Espanja (Espanja)"
 
 # #######
-#: Mailman/Defaults.py:1727
+#: Mailman/Defaults.py:1741
 msgid "Estonian"
 msgstr "Viro"
 
-#: Mailman/Defaults.py:1728
+#: Mailman/Defaults.py:1742
 msgid "Euskara"
 msgstr "Euskara"
 
-#: Mailman/Defaults.py:1729
+#: Mailman/Defaults.py:1743
 msgid "Persian"
 msgstr ""
 
 # #######
-#: Mailman/Defaults.py:1730
+#: Mailman/Defaults.py:1744
 msgid "Finnish"
 msgstr "Suomi"
 
-#: Mailman/Defaults.py:1731
+#: Mailman/Defaults.py:1745
 msgid "French"
 msgstr "Ranska"
 
-#: Mailman/Defaults.py:1732
+#: Mailman/Defaults.py:1746
 msgid "Galician"
 msgstr "Galicia"
 
-#: Mailman/Defaults.py:1733
+#: Mailman/Defaults.py:1747
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1734
+#: Mailman/Defaults.py:1748
 msgid "Hebrew"
 msgstr "Heprea"
 
-#: Mailman/Defaults.py:1735
+#: Mailman/Defaults.py:1749
 msgid "Croatian"
 msgstr "Kroatia"
 
-#: Mailman/Defaults.py:1736
+#: Mailman/Defaults.py:1750
 msgid "Hungarian"
 msgstr "Unkari"
 
-#: Mailman/Defaults.py:1737
+#: Mailman/Defaults.py:1751
 msgid "Interlingua"
 msgstr "Interlingua"
 
-#: Mailman/Defaults.py:1738
+#: Mailman/Defaults.py:1752
 msgid "Italian"
 msgstr "Italia"
 
-#: Mailman/Defaults.py:1739
+#: Mailman/Defaults.py:1753
 msgid "Japanese"
 msgstr "Japani"
 
-#: Mailman/Defaults.py:1740
+#: Mailman/Defaults.py:1754
 msgid "Korean"
 msgstr "Korea"
 
-#: Mailman/Defaults.py:1741
+#: Mailman/Defaults.py:1755
 msgid "Lithuanian"
 msgstr "Liettua"
 
 # #######
-#: Mailman/Defaults.py:1742
+#: Mailman/Defaults.py:1756
 msgid "Dutch"
 msgstr "Flaami"
 
-#: Mailman/Defaults.py:1743
+#: Mailman/Defaults.py:1757
 msgid "Norwegian"
 msgstr "Norja"
 
-#: Mailman/Defaults.py:1744
+#: Mailman/Defaults.py:1758
 msgid "Polish"
 msgstr "Puola"
 
 # #######
-#: Mailman/Defaults.py:1745
+#: Mailman/Defaults.py:1759
 msgid "Portuguese"
 msgstr "Portugali"
 
 # #######
-#: Mailman/Defaults.py:1746
+#: Mailman/Defaults.py:1760
 msgid "Portuguese (Brazil)"
 msgstr "Portugali (Brasilia)"
 
 # #######
-#: Mailman/Defaults.py:1747
+#: Mailman/Defaults.py:1761
 msgid "Romanian"
 msgstr "Romania"
 
-#: Mailman/Defaults.py:1748
+#: Mailman/Defaults.py:1762
 msgid "Russian"
 msgstr "Venäjä"
 
-#: Mailman/Defaults.py:1749
+#: Mailman/Defaults.py:1763
 msgid "Slovak"
 msgstr "Slovakki"
 
-#: Mailman/Defaults.py:1750
+#: Mailman/Defaults.py:1764
 msgid "Slovenian"
 msgstr "Sloveeni"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1765
 msgid "Serbian"
 msgstr "Serbia"
 
 # #######
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1766
 msgid "Swedish"
 msgstr "Ruotsi"
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1767
 msgid "Turkish"
 msgstr "Turkki"
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1768
 msgid "Ukrainian"
 msgstr "Ukraina"
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1769
 msgid "Vietnamese"
 msgstr "Vietnam"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1770
 msgid "Chinese (China)"
 msgstr "Kiina (Kiina)"
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1771
 msgid "Chinese (Taiwan)"
 msgstr "Kiina (Taiwan)"
 
@@ -8126,39 +8126,39 @@ msgstr ""
 "               <a href=\"?VARHELP=gateway/linked_newsgroup\">linkitetyn "
 "uutisryhmän kenttää</a> (linked newsgroup fields) ole täytetty."
 
-#: Mailman/HTMLFormatter.py:50
+#: Mailman/HTMLFormatter.py:49
 msgid "%(listinfo_link)s list run by %(owner_link)s"
 msgstr "%(listinfo_link)s lista %(owner_link)s ylläpitäjänä"
 
-#: Mailman/HTMLFormatter.py:58
+#: Mailman/HTMLFormatter.py:57
 msgid "%(realname)s administrative interface"
 msgstr "%(realname)s ylläpito käyttöliittymä"
 
-#: Mailman/HTMLFormatter.py:59
+#: Mailman/HTMLFormatter.py:58
 msgid " (requires authorization)"
 msgstr " (vaatii valtuutuksen)"
 
-#: Mailman/HTMLFormatter.py:62
+#: Mailman/HTMLFormatter.py:61
 msgid "Overview of all %(hostname)s mailing lists"
 msgstr "Yleiskuva kaikista %(hostname)s postituslistoista"
 
-#: Mailman/HTMLFormatter.py:79
+#: Mailman/HTMLFormatter.py:78
 msgid "<em>(1 private member not shown)</em>"
 msgstr "<em>(1 yksityistä jäsentä ei näytetä)</em>"
 
-#: Mailman/HTMLFormatter.py:81
+#: Mailman/HTMLFormatter.py:80
 msgid "<em>(%(num_concealed)d private members not shown)</em>"
 msgstr "<em>(%(num_concealed)d yksityistä jäsentä ei näytetä)</em>"
 
-#: Mailman/HTMLFormatter.py:140
+#: Mailman/HTMLFormatter.py:139
 msgid "; it was disabled by you"
 msgstr "; olet ottanut sen pois käytöstä"
 
-#: Mailman/HTMLFormatter.py:142
+#: Mailman/HTMLFormatter.py:141
 msgid "; it was disabled by the list administrator"
 msgstr "; listan ylläpitäjä on ottanut sen pois käytöstä"
 
-#: Mailman/HTMLFormatter.py:146
+#: Mailman/HTMLFormatter.py:145
 msgid ""
 "; it was disabled due to excessive bounces.  The\n"
 "            last bounce was received on %(date)s"
@@ -8167,23 +8167,23 @@ msgstr ""
 ".            Viimeisin kimmoke on vastaanotettu %(date)s"
 
 # Mikon osuus päättyy tähän
-#: Mailman/HTMLFormatter.py:149
+#: Mailman/HTMLFormatter.py:148
 msgid "; it was disabled for unknown reasons"
 msgstr "; se on otettu pois käytöstä tuntemattomasta syystä"
 
-#: Mailman/HTMLFormatter.py:151
+#: Mailman/HTMLFormatter.py:150
 msgid "Note: your list delivery is currently disabled%(reason)s."
 msgstr "Huomaa: jakelu sinulle on otettu pois käytöstä: %(reason)s."
 
-#: Mailman/HTMLFormatter.py:154
+#: Mailman/HTMLFormatter.py:153
 msgid "Mail delivery"
 msgstr "Viestin toimitus"
 
-#: Mailman/HTMLFormatter.py:156 Mailman/HTMLFormatter.py:301
+#: Mailman/HTMLFormatter.py:155 Mailman/HTMLFormatter.py:300
 msgid "the list administrator"
 msgstr "listan ylläpitäjä"
 
-#: Mailman/HTMLFormatter.py:157
+#: Mailman/HTMLFormatter.py:156
 msgid ""
 "<p>%(note)s\n"
 "\n"
@@ -8203,7 +8203,7 @@ msgstr ""
 "            muuta %(link)s valinta alla.  Ota yhteys %(mailto)s jos sinulla\n"
 "            kysyttävää tai tarvitset apua."
 
-#: Mailman/HTMLFormatter.py:169
+#: Mailman/HTMLFormatter.py:168
 msgid ""
 "<p>We have received some recent bounces from your\n"
 "            address.  Your current <em>bounce score</em> is %(score)s out of "
@@ -8222,7 +8222,7 @@ msgstr ""
 "            ongelmia.  Palautusarvosi nollataan automaattisesti, jos\n"
 "            ongelmat korjataan pian."
 
-#: Mailman/HTMLFormatter.py:181
+#: Mailman/HTMLFormatter.py:180
 msgid ""
 "(Note - you are subscribing to a list of mailing lists, so the %(type)s "
 "notice will be sent to the admin address for your membership, %(addr)s.)<p>"
@@ -8230,7 +8230,7 @@ msgstr ""
 "(Huomaa - olet liittymässä postituslistojen listalle, joten %(type)s "
 "ilmoitus jäsenyydestäsi lähetettään ylläpitäjän osoitteeseen, %(addr)s.)<p>"
 
-#: Mailman/HTMLFormatter.py:191
+#: Mailman/HTMLFormatter.py:190
 msgid ""
 "You will be sent email requesting confirmation, to\n"
 "            prevent others from gratuitously subscribing you."
@@ -8238,7 +8238,7 @@ msgstr ""
 "Sinulle lähetetään viesti, joka vaatii vahvistuksen, näin\n"
 "            estetään muita tarpeettomasti liittämästä sinua listalle."
 
-#: Mailman/HTMLFormatter.py:194
+#: Mailman/HTMLFormatter.py:193
 msgid ""
 "This is a closed list, which means your subscription\n"
 "            will be held for approval.  You will be notified of the list\n"
@@ -8248,11 +8248,11 @@ msgstr ""
 "            odottaa hyväksymistä.  Sinulle ilmoitetaan listan pää-\n"
 "            käyttäjän päätös sähköpostitse."
 
-#: Mailman/HTMLFormatter.py:197 Mailman/HTMLFormatter.py:204
+#: Mailman/HTMLFormatter.py:196 Mailman/HTMLFormatter.py:203
 msgid "also "
 msgstr "myös"
 
-#: Mailman/HTMLFormatter.py:199
+#: Mailman/HTMLFormatter.py:198
 msgid ""
 "You will be sent email requesting confirmation, to\n"
 "            prevent others from gratuitously subscribing you.  Once\n"
@@ -8268,7 +8268,7 @@ msgstr ""
 "            hyväksymistä.  Sinulle ilmoitetaan pääkäyttäjän päätös\n"
 "            sähköpostitse."
 
-#: Mailman/HTMLFormatter.py:208
+#: Mailman/HTMLFormatter.py:207
 msgid ""
 "This is %(also)sa private list, which means that the\n"
 "            list of members is not available to non-members."
@@ -8276,7 +8276,7 @@ msgstr ""
 "Tämä on %(also)s yksityinen lista, joka tarkoittaa, että\n"
 "            listan jäsentiedot eivät ole tarjolla ei-jäsenille."
 
-#: Mailman/HTMLFormatter.py:211
+#: Mailman/HTMLFormatter.py:210
 msgid ""
 "This is %(also)sa hidden list, which means that the\n"
 "            list of members is available only to the list administrator."
@@ -8284,7 +8284,7 @@ msgstr ""
 "Tämä on %(also)s piilotettu, joka tarkoittaa, että\n"
 "            listan jäsentiedot ovat tarjolla vain listan ylläpitäjälle."
 
-#: Mailman/HTMLFormatter.py:214
+#: Mailman/HTMLFormatter.py:213
 msgid ""
 "This is %(also)sa public list, which means that the\n"
 "            list of members list is available to everyone."
@@ -8292,7 +8292,7 @@ msgstr ""
 "Tämä on %(also)s julkinen lista, joka tarkoittaa, että\n"
 "            listan jäsentiedot ovat kaikkien saatavilla."
 
-#: Mailman/HTMLFormatter.py:217
+#: Mailman/HTMLFormatter.py:216
 msgid ""
 " (but we obscure the addresses so they are not\n"
 "                easily recognizable by spammers)."
@@ -8300,7 +8300,7 @@ msgstr ""
 " (mutta peitämme osoitteet, niin että ne eivät ole helposti\n"
 "                yleisten roskapostilähettäjien tunnistettavissa)."
 
-#: Mailman/HTMLFormatter.py:222
+#: Mailman/HTMLFormatter.py:221
 msgid ""
 "<p>(Note that this is an umbrella list, intended to\n"
 "            have only other mailing lists as members.  Among other things,\n"
@@ -8312,11 +8312,11 @@ msgstr ""
 "            sitä, että vahvistuspyyntöstä lähetetään\n"
 "            %(sfx)s' osoitteeseesi.)"
 
-#: Mailman/HTMLFormatter.py:251
+#: Mailman/HTMLFormatter.py:250
 msgid "<b><i>either</i></b> "
 msgstr "<b><i>jompikumpi</i></b> "
 
-#: Mailman/HTMLFormatter.py:256
+#: Mailman/HTMLFormatter.py:255
 msgid ""
 "To unsubscribe from %(realname)s, get a password reminder,\n"
 "        or change your subscription options %(either)senter your "
@@ -8330,11 +8330,11 @@ msgstr ""
 "liittymissähköpostiosoiteesi:\n"
 "        <p><center> "
 
-#: Mailman/HTMLFormatter.py:263
+#: Mailman/HTMLFormatter.py:262
 msgid "Unsubscribe or edit options"
 msgstr "Irtisanomis tai muokkausvalinnat"
 
-#: Mailman/HTMLFormatter.py:267
+#: Mailman/HTMLFormatter.py:266
 msgid ""
 "<p>... <b><i>or</i></b> select your entry from\n"
 "                      the subscribers list (see above)."
@@ -8342,7 +8342,7 @@ msgstr ""
 "<p>... <b><i>tai</i></b> valitse tietosi\n"
 "                      liittyneiden listalta (katso alla)."
 
-#: Mailman/HTMLFormatter.py:269
+#: Mailman/HTMLFormatter.py:268
 msgid ""
 " If you leave the field blank, you will be prompted for\n"
 "        your email address"
@@ -8350,7 +8350,7 @@ msgstr ""
 " Jos jätät kentä tyhjäksi, sinulta kysytään\n"
 "        sähköpostiosoitteesi"
 
-#: Mailman/HTMLFormatter.py:277
+#: Mailman/HTMLFormatter.py:276
 msgid ""
 "(<i>%(which)s is only available to the list\n"
 "                members.</i>)"
@@ -8358,7 +8358,7 @@ msgstr ""
 "(<i>%(which)s on vain listan jäsenten\n"
 "                saatavilla.</i>)"
 
-#: Mailman/HTMLFormatter.py:281
+#: Mailman/HTMLFormatter.py:280
 msgid ""
 "(<i>%(which)s is only available to the list\n"
 "            administrator.</i>)"
@@ -8366,55 +8366,55 @@ msgstr ""
 "(<i>%(which)s on vain listan ylläpitäjän\n"
 "            saatavilla.</i>)"
 
-#: Mailman/HTMLFormatter.py:291
+#: Mailman/HTMLFormatter.py:290
 msgid "Click here for the list of "
 msgstr "Klikkaa täältä listan "
 
-#: Mailman/HTMLFormatter.py:293
+#: Mailman/HTMLFormatter.py:292
 msgid " subscribers: "
 msgstr " liittyneet: "
 
-#: Mailman/HTMLFormatter.py:295
+#: Mailman/HTMLFormatter.py:294
 msgid "Visit Subscriber list"
 msgstr "Vieraile liittyjän listalla"
 
-#: Mailman/HTMLFormatter.py:298
+#: Mailman/HTMLFormatter.py:297
 msgid "members"
 msgstr "jäsenet"
 
-#: Mailman/HTMLFormatter.py:299
+#: Mailman/HTMLFormatter.py:298
 msgid "Address:"
 msgstr "Osoite:"
 
-#: Mailman/HTMLFormatter.py:302
+#: Mailman/HTMLFormatter.py:301
 msgid "Admin address:"
 msgstr "Ylläpitäjän osoite:"
 
-#: Mailman/HTMLFormatter.py:305
+#: Mailman/HTMLFormatter.py:304
 msgid "The subscribers list"
 msgstr "Liittyneiden lista"
 
-#: Mailman/HTMLFormatter.py:307
+#: Mailman/HTMLFormatter.py:306
 msgid " <p>Enter your "
 msgstr " <p>Syötä  "
 
-#: Mailman/HTMLFormatter.py:309
+#: Mailman/HTMLFormatter.py:308
 msgid " and password to visit  the subscribers list: <p><center> "
 msgstr " ja salasana siirtyäksesi listalle: <p><center> "
 
-#: Mailman/HTMLFormatter.py:314
+#: Mailman/HTMLFormatter.py:313
 msgid "Password: "
 msgstr "Salasana: "
 
-#: Mailman/HTMLFormatter.py:318
+#: Mailman/HTMLFormatter.py:317
 msgid "Visit Subscriber List"
 msgstr "Vieraile liittyjän listalla"
 
-#: Mailman/HTMLFormatter.py:357
+#: Mailman/HTMLFormatter.py:356
 msgid "Once a month, your password will be emailed to you as a reminder."
 msgstr "Kerran kuussa, salasananmuistuttaja lähettää sinulle salasanasi"
 
-#: Mailman/HTMLFormatter.py:404
+#: Mailman/HTMLFormatter.py:403
 msgid "The current archive"
 msgstr "Nykyinen arkisto"
 
@@ -8878,16 +8878,16 @@ msgstr ""
 msgid "Mailing list removal request for list %(listname)s"
 msgstr "Postituslistan poistopyyntö listalle %(listname)s"
 
-#: Mailman/MTA/Postfix.py:370
+#: Mailman/MTA/Postfix.py:415
 msgid "checking permissions on %(file)s"
 msgstr "tarkistetaan tiedoston %(file)s oikeudet"
 
-#: Mailman/MTA/Postfix.py:380
-msgid "%(file)s permissions must be 066x (got %(octmode)s)"
-msgstr "tiedoston %(file)s oikeudet pitää olla 066x (sain %(octmode)s)"
+#: Mailman/MTA/Postfix.py:425
+msgid "%(file)s permissions must be 0664 (got %(octmode)s)"
+msgstr "tiedoston %(file)s oikeudet pitää olla 0664 (sain %(octmode)s)"
 
-#: Mailman/MTA/Postfix.py:382 Mailman/MTA/Postfix.py:410
-#: Mailman/MTA/Postfix.py:421 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:427 Mailman/MTA/Postfix.py:455
+#: Mailman/MTA/Postfix.py:466 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -8895,18 +8895,18 @@ msgstr "tiedoston %(file)s oikeudet pitää olla 066x (sain %(octmode)s)"
 msgid "(fixing)"
 msgstr "(korjaan)"
 
-#: Mailman/MTA/Postfix.py:398
+#: Mailman/MTA/Postfix.py:443
 msgid "checking ownership of %(dbfile)s"
 msgstr "tarkistetaan tiedoston %(dbfile)s omistusoikeudet"
 
-#: Mailman/MTA/Postfix.py:406
+#: Mailman/MTA/Postfix.py:451
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr ""
 "%(dbfile)s on käyttäjän %(owner)s omistama (pitäisi olla käyttäjän %(user)s"
 
-#: Mailman/MTA/Postfix.py:419
-msgid "%(dbfile)s permissions must be 066x (got %(octmode)s)"
-msgstr "tiedoston %(dbfile)s oikeudet pitää olla 066x (sain %(octmode)s)"
+#: Mailman/MTA/Postfix.py:464
+msgid "%(dbfile)s permissions must be 0664 (got %(octmode)s)"
+msgstr "tiedoston %(dbfile)s oikeudet pitää olla 0664 (sain %(octmode)s)"
 
 #: Mailman/MailList.py:217
 msgid "Your confirmation is required to join the %(listname)s mailing list"
@@ -10741,11 +10741,11 @@ msgstr ""
 "        Print this text and exit.\n"
 "\n"
 
-#: bin/list_lists:117
+#: bin/list_lists:119
 msgid "No matching mailing lists found"
 msgstr "Vastaavia postituslistoja ei löydetty"
 
-#: bin/list_lists:121
+#: bin/list_lists:123
 msgid "matching mailing lists found:"
 msgstr "vastaavia postituslistoja löydetty:"
 

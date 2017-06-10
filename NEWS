@@ -5,6 +5,32 @@ Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.25 (xx-xxx-xxxx)
+
+  New Features
+
+    - The admindb held subscriptions listing now includes the date of the
+      most recent request from the address.  (LP: #1697097)
+
+  Bug fixes and other patches
+
+    - Fixed MTA/Postfix.py to ensure that created aliases(.db) and
+      virtual-mailman(.db) files are readable by Postfix and the .db files are
+      owned by the Mailman user.  (LP: #1696066)
+
+    - Defended against certain web attacks that cause exceptions and "we hit
+      a bug" responses when POST data or query fragments contain multiple
+      values for the same parameter.  (LP: #1695667)
+
+    - The fix for LP: #1614841 caused a regression in the options CGI.  This
+      has been fixed.  (LP: #1602608)
+
+    - Added a -a option to the (e)grep commands in contrib/mmdsr to account
+      for logs that may have non-ascii and be seen as binary.
+
+    - Fixed the -V option to bin/list_lists to not show lists whose host is a
+      subdomain of the given domain.  (LP: #1695610)
+
 2.1.24 (02-Jun-2017)
 
   Security
