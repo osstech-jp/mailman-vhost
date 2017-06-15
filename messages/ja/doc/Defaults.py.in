@@ -1473,7 +1473,7 @@ DEFAULT_OBSCURE_ADDRESSES = Yes
 # 使用しないリストでは(関係するヘッダは)抑止されます)
 ALLOW_RFC2369_OVERRIDES = Yes
 
-# RFC 2822 では Mailman が実際の点層に責任を持つエージェントであるときに
+# RFC 2822 では Mailman が実際の転送に責任を持つエージェントであるときに
 # Sender ヘッダを付与しないのは RFC に違反することを示唆しています。
 # しかし、MUA の中には From ヘッダの詳細の代わりに Sender ヘッダを表示
 # しようとするものがあり(有名なものは Outlookです)、これがユーザを混乱させ、
