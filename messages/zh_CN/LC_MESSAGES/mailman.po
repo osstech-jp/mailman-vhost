@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Fri Jun  9 17:34:55 2017\n"
+"POT-Creation-Date: Tue Jun 20 20:02:15 2017\n"
 "PO-Revision-Date: 2005-05-14 12:07+0800\n"
 "Last-Translator: Dai Xiaoguang <leona@cs.hit.edu.cn>\n"
 "Language-Team:  <mailman-cn@mail.cs.hit.edu.cn>\n"
@@ -290,7 +290,7 @@ msgstr ""
 "不然你的邮件列表基本是无法使用的。"
 
 #: Mailman/Cgi/admin.py:222 Mailman/Cgi/admin.py:230 Mailman/Cgi/admin.py:237
-#: Mailman/Cgi/admin.py:1639 Mailman/Gui/GUIBase.py:208
+#: Mailman/Cgi/admin.py:1648 Mailman/Gui/GUIBase.py:208
 msgid "Warning: "
 msgstr "警告："
 
@@ -663,7 +663,7 @@ msgstr "成员总数 %(allcnt)s, 显示了 %(membercnt)s "
 msgid "%(allcnt)s members total"
 msgstr "成员总数 %(allcnt)s"
 
-#: Mailman/Cgi/admin.py:1027
+#: Mailman/Cgi/admin.py:1027 Mailman/Cgi/admin.py:1059
 msgid "unsub"
 msgstr "取消订阅"
 
@@ -671,37 +671,38 @@ msgstr "取消订阅"
 msgid "member address<br>member name"
 msgstr "成员地址<br>成员姓名"
 
-#: Mailman/Cgi/admin.py:1029
-msgid "hide"
-msgstr "隐藏"
-
-#: Mailman/Cgi/admin.py:1029
+#: Mailman/Cgi/admin.py:1029 Mailman/Cgi/admin.py:1073
 msgid "mod"
 msgstr "修改"
+
+#: Mailman/Cgi/admin.py:1029 Mailman/Cgi/admin.py:1075
+msgid "hide"
+msgstr "隐藏"
 
 #: Mailman/Cgi/admin.py:1030
 msgid "nomail<br>[reason]"
 msgstr "没有邮件<br>[原因]"
 
 #: Mailman/Cgi/admin.py:1031
-msgid "ack"
-msgstr "承认"
-
-#: Mailman/Cgi/admin.py:1031
 msgid "not metoo"
 msgstr "除了我"
 
-#: Mailman/Cgi/admin.py:1032
+#: Mailman/Cgi/admin.py:1031 Mailman/Cgi/admin.py:1075
+msgid "ack"
+msgstr "承认"
+
+#: Mailman/Cgi/admin.py:1032 Mailman/Cgi/admin.py:1075
 msgid "nodupes"
 msgstr "无副本"
 
-#: Mailman/Cgi/admin.py:1033
-msgid "plain"
-msgstr "纯文本"
-
-#: Mailman/Cgi/admin.py:1033 Mailman/Cgi/options.py:382
+#: Mailman/Cgi/admin.py:1033 Mailman/Cgi/admin.py:1099
+#: Mailman/Cgi/options.py:382
 msgid "digest"
 msgstr "摘要"
+
+#: Mailman/Cgi/admin.py:1033 Mailman/Cgi/admin.py:1114
+msgid "plain"
+msgstr "纯文本"
 
 #: Mailman/Cgi/admin.py:1034
 msgid "language"
@@ -723,11 +724,19 @@ msgstr "A"
 msgid "B"
 msgstr "B"
 
-#: Mailman/Cgi/admin.py:1120
+#: Mailman/Cgi/admin.py:1075
+msgid "notmetoo"
+msgstr "除了我"
+
+#: Mailman/Cgi/admin.py:1075 Mailman/Cgi/options.py:380
+msgid "nomail"
+msgstr "没有邮件"
+
+#: Mailman/Cgi/admin.py:1129
 msgid "<b>unsub</b> -- Click on this to unsubscribe the member."
 msgstr "<b>取消订阅</b> -- 点击此处退出成员列表."
 
-#: Mailman/Cgi/admin.py:1122
+#: Mailman/Cgi/admin.py:1131
 msgid ""
 "<b>mod</b> -- The user's personal moderation flag.  If this is\n"
 "        set, postings from them will be moderated, otherwise they will be\n"
@@ -736,13 +745,13 @@ msgstr ""
 "<b>mod</b> -- 用户的个人节制标志.  如果设置该值,\n"
 "        用户发出的信件将被缓存, 否则将被发送。"
 
-#: Mailman/Cgi/admin.py:1126
+#: Mailman/Cgi/admin.py:1135
 msgid ""
 "<b>hide</b> -- Is the member's address concealed on\n"
 "        the list of subscribers?"
 msgstr "<b>隐藏</b> -- 用户的地址在订阅者列表中是隐藏的吗?"
 
-#: Mailman/Cgi/admin.py:1128
+#: Mailman/Cgi/admin.py:1137
 msgid ""
 "<b>nomail</b> -- Is delivery to the member disabled?  If so, an\n"
 "        abbreviation will be given describing the reason for the disabled\n"
@@ -770,25 +779,25 @@ msgstr ""
 "情况.\n"
 "            </ul>"
 
-#: Mailman/Cgi/admin.py:1143
+#: Mailman/Cgi/admin.py:1152
 msgid ""
 "<b>ack</b> -- Does the member get acknowledgements of their\n"
 "        posts?"
 msgstr "<b>确认</b> -- 用户收到对他们邮件的确认信了吗?"
 
-#: Mailman/Cgi/admin.py:1146
+#: Mailman/Cgi/admin.py:1155
 msgid ""
 "<b>not metoo</b> -- Does the member want to avoid copies of their\n"
 "        own postings?"
 msgstr "<b>除了我</b> -- 用户是否想避免收到自己信件的副本?"
 
-#: Mailman/Cgi/admin.py:1149
+#: Mailman/Cgi/admin.py:1158
 msgid ""
 "<b>nodupes</b> -- Does the member want to avoid duplicates of the\n"
 "        same message?"
 msgstr "<b>无副本</b> -- 用户是否想避免收到同一信件的副本?"
 
-#: Mailman/Cgi/admin.py:1152
+#: Mailman/Cgi/admin.py:1161
 msgid ""
 "<b>digest</b> -- Does the member get messages in digests?\n"
 "        (otherwise, individual messages)"
@@ -796,7 +805,7 @@ msgstr ""
 "<b>摘要</b> -- 用户是否要以摘要的形式接受信件?\n"
 "        (否则, 单个的信件)"
 
-#: Mailman/Cgi/admin.py:1155
+#: Mailman/Cgi/admin.py:1164
 msgid ""
 "<b>plain</b> -- If getting digests, does the member get plain\n"
 "        text digests?  (otherwise, MIME)"
@@ -804,19 +813,19 @@ msgstr ""
 "<b>纯文本</b> -- 如果接收摘要,是纯文本形式的摘要么?\n"
 "        (否则, 使用多用途的网际邮件扩充协议MIME)"
 
-#: Mailman/Cgi/admin.py:1157
+#: Mailman/Cgi/admin.py:1166
 msgid "<b>language</b> -- Language preferred by the user"
 msgstr "<b>语言</b> -- 用户偏好的语言"
 
-#: Mailman/Cgi/admin.py:1171
+#: Mailman/Cgi/admin.py:1180
 msgid "Click here to hide the legend for this table."
 msgstr "点击这里隐藏图表的图例."
 
-#: Mailman/Cgi/admin.py:1175
+#: Mailman/Cgi/admin.py:1184
 msgid "Click here to include the legend for this table."
 msgstr "点击这里包含图表的图例."
 
-#: Mailman/Cgi/admin.py:1182
+#: Mailman/Cgi/admin.py:1191
 msgid ""
 "<p><em>To view more members, click on the appropriate\n"
 "        range listed below:</em>"
@@ -824,28 +833,28 @@ msgstr ""
 "<p><em>想要查看更多的成员, 点击下面列出来的合适的区间:\n"
 "        </em>"
 
-#: Mailman/Cgi/admin.py:1196
+#: Mailman/Cgi/admin.py:1205
 msgid "from %(start)s to %(end)s"
 msgstr "从 %(start)s 到 %(end)s"
 
-#: Mailman/Cgi/admin.py:1209
+#: Mailman/Cgi/admin.py:1218
 msgid "Subscribe these users now or invite them?"
 msgstr "替这些用户订阅或者邀请他们"
 
-#: Mailman/Cgi/admin.py:1211
+#: Mailman/Cgi/admin.py:1220
 msgid "Invite"
 msgstr "邀请"
 
-#: Mailman/Cgi/admin.py:1211 Mailman/Cgi/listinfo.py:199
+#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/listinfo.py:199
 msgid "Subscribe"
 msgstr "订阅"
 
-#: Mailman/Cgi/admin.py:1218
+#: Mailman/Cgi/admin.py:1227
 msgid "Send welcome messages to new subscribers?"
 msgstr "向新的订阅者发送欢迎信件么?"
 
-#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/admin.py:1229
-#: Mailman/Cgi/admin.py:1262 Mailman/Cgi/admin.py:1270
+#: Mailman/Cgi/admin.py:1229 Mailman/Cgi/admin.py:1238
+#: Mailman/Cgi/admin.py:1271 Mailman/Cgi/admin.py:1279
 #: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
 #: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
 #: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
@@ -874,8 +883,8 @@ msgstr "向新的订阅者发送欢迎信件么?"
 msgid "No"
 msgstr "不"
 
-#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/admin.py:1229
-#: Mailman/Cgi/admin.py:1262 Mailman/Cgi/admin.py:1270
+#: Mailman/Cgi/admin.py:1229 Mailman/Cgi/admin.py:1238
+#: Mailman/Cgi/admin.py:1271 Mailman/Cgi/admin.py:1279
 #: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
 #: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
 #: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
@@ -903,19 +912,19 @@ msgstr "不"
 msgid "Yes"
 msgstr "是"
 
-#: Mailman/Cgi/admin.py:1227
+#: Mailman/Cgi/admin.py:1236
 msgid "Send notifications of new subscriptions to the list owner?"
 msgstr "向列表管理员发送出现新订阅的通知?"
 
-#: Mailman/Cgi/admin.py:1235 Mailman/Cgi/admin.py:1276
+#: Mailman/Cgi/admin.py:1244 Mailman/Cgi/admin.py:1285
 msgid "Enter one address per line below..."
 msgstr "在下面的每一行填写地址..."
 
-#: Mailman/Cgi/admin.py:1240 Mailman/Cgi/admin.py:1281
+#: Mailman/Cgi/admin.py:1249 Mailman/Cgi/admin.py:1290
 msgid "...or specify a file to upload:"
 msgstr "...指定一个上传的文件:"
 
-#: Mailman/Cgi/admin.py:1245
+#: Mailman/Cgi/admin.py:1254
 msgid ""
 "Below, enter additional text to be added to the\n"
 "    top of your invitation or the subscription notification.  Include at "
@@ -925,39 +934,39 @@ msgstr ""
 "下面, 在您的邀请或者订阅通知的头部中添加附加文字.\n"
 "    结尾至少包含一个空白行..."
 
-#: Mailman/Cgi/admin.py:1260
+#: Mailman/Cgi/admin.py:1269
 msgid "Send unsubscription acknowledgement to the user?"
 msgstr "向用户发送取消订阅的确认"
 
-#: Mailman/Cgi/admin.py:1268
+#: Mailman/Cgi/admin.py:1277
 msgid "Send notifications to the list owner?"
 msgstr "向列表拥有者发送通知"
 
-#: Mailman/Cgi/admin.py:1291
+#: Mailman/Cgi/admin.py:1300
 msgid ""
 "To change a list member's address, enter the\n"
 "    member's current and new addresses below. Use the check boxes to send\n"
 "    notice of the change to the old and/or new address(es)."
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1296
+#: Mailman/Cgi/admin.py:1305
 #, fuzzy
 msgid "Member's current address"
 msgstr "当前归档"
 
-#: Mailman/Cgi/admin.py:1300 Mailman/Cgi/admin.py:1310
+#: Mailman/Cgi/admin.py:1309 Mailman/Cgi/admin.py:1319
 msgid "Send notice"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1306
+#: Mailman/Cgi/admin.py:1315
 msgid "Address to change to"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1322
+#: Mailman/Cgi/admin.py:1331
 msgid "Change list ownership passwords"
 msgstr "更改列表拥有者的密码"
 
-#: Mailman/Cgi/admin.py:1325
+#: Mailman/Cgi/admin.py:1334
 msgid ""
 "The <em>list administrators</em> are the people who have ultimate control "
 "over\n"
@@ -989,23 +998,23 @@ msgstr ""
 "并在<a href=\"%(adminurl)s/general\">常规选项部分</a>中提供列表主持者的邮件地"
 "址."
 
-#: Mailman/Cgi/admin.py:1344
+#: Mailman/Cgi/admin.py:1353
 msgid "Enter new administrator password:"
 msgstr "输入新的管理员密码:"
 
-#: Mailman/Cgi/admin.py:1346
+#: Mailman/Cgi/admin.py:1355
 msgid "Confirm administrator password:"
 msgstr "确认管理员密码:"
 
-#: Mailman/Cgi/admin.py:1351
+#: Mailman/Cgi/admin.py:1360
 msgid "Enter new moderator password:"
 msgstr "输入新的列表主持者密码:"
 
-#: Mailman/Cgi/admin.py:1353
+#: Mailman/Cgi/admin.py:1362
 msgid "Confirm moderator password:"
 msgstr "确认主持者密码:"
 
-#: Mailman/Cgi/admin.py:1357
+#: Mailman/Cgi/admin.py:1366
 msgid ""
 "In addition to the above passwords you may specify a password for\n"
 "pre-approving posts to the list. Either of the above two passwords can\n"
@@ -1015,153 +1024,153 @@ msgid ""
 "no other."
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1368
+#: Mailman/Cgi/admin.py:1377
 #, fuzzy
 msgid "Enter new poster password:"
 msgstr "输入新的列表主持者密码:"
 
-#: Mailman/Cgi/admin.py:1370
+#: Mailman/Cgi/admin.py:1379
 #, fuzzy
 msgid "Confirm poster password:"
 msgstr "确认主持者密码:"
 
-#: Mailman/Cgi/admin.py:1379
+#: Mailman/Cgi/admin.py:1388
 msgid "Submit Your Changes"
 msgstr "提交您的修改"
 
-#: Mailman/Cgi/admin.py:1402
+#: Mailman/Cgi/admin.py:1411
 msgid "Moderator passwords did not match"
 msgstr "主持者密码不匹配"
 
-#: Mailman/Cgi/admin.py:1413
+#: Mailman/Cgi/admin.py:1422
 #, fuzzy
 msgid "Poster passwords did not match"
 msgstr "您的口令不匹配。"
 
-#: Mailman/Cgi/admin.py:1423
+#: Mailman/Cgi/admin.py:1432
 msgid "Administrator passwords did not match"
 msgstr "管理员密码不匹配"
 
-#: Mailman/Cgi/admin.py:1473
+#: Mailman/Cgi/admin.py:1482
 msgid "Already a member"
 msgstr "已经是成员了"
 
-#: Mailman/Cgi/admin.py:1476
+#: Mailman/Cgi/admin.py:1485
 msgid "&lt;blank line&gt;"
 msgstr "&lt;空行&gt;"
 
-#: Mailman/Cgi/admin.py:1477 Mailman/Cgi/admin.py:1480
+#: Mailman/Cgi/admin.py:1486 Mailman/Cgi/admin.py:1489
 #: Mailman/Cgi/admindb.py:975
 msgid "Bad/Invalid email address"
 msgstr "错误/无效的邮件地址"
 
-#: Mailman/Cgi/admin.py:1483
+#: Mailman/Cgi/admin.py:1492
 msgid "Hostile address (illegal characters)"
 msgstr "不合法的地址(含有非法的字符)"
 
-#: Mailman/Cgi/admin.py:1486 bin/add_members:150 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1495 bin/add_members:150 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1492
+#: Mailman/Cgi/admin.py:1501
 msgid "Successfully invited:"
 msgstr "成功邀请:"
 
-#: Mailman/Cgi/admin.py:1494
+#: Mailman/Cgi/admin.py:1503
 msgid "Successfully subscribed:"
 msgstr "成功订阅:"
 
-#: Mailman/Cgi/admin.py:1499
+#: Mailman/Cgi/admin.py:1508
 msgid "Error inviting:"
 msgstr "错误邀请:"
 
-#: Mailman/Cgi/admin.py:1501
+#: Mailman/Cgi/admin.py:1510
 msgid "Error subscribing:"
 msgstr "错误订阅:"
 
-#: Mailman/Cgi/admin.py:1532
+#: Mailman/Cgi/admin.py:1541
 msgid "Successfully Unsubscribed:"
 msgstr "成功取消订阅:"
 
-#: Mailman/Cgi/admin.py:1537
+#: Mailman/Cgi/admin.py:1546
 msgid "Cannot unsubscribe non-members:"
 msgstr "不能取消非成员的订阅:"
 
-#: Mailman/Cgi/admin.py:1550
+#: Mailman/Cgi/admin.py:1559
 #, fuzzy
 msgid "You must provide both current and new addresses."
 msgstr "您必须先修正上述的无效地址."
 
-#: Mailman/Cgi/admin.py:1552
+#: Mailman/Cgi/admin.py:1561
 msgid "Current and new addresses must be different."
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1556
+#: Mailman/Cgi/admin.py:1565
 #, fuzzy
 msgid "%(schange_to)s is already a list member."
 msgstr "已经是成员了"
 
-#: Mailman/Cgi/admin.py:1561
+#: Mailman/Cgi/admin.py:1570
 #, fuzzy
 msgid "%(schange_to)s is not a valid email address."
 msgstr "您必须提供一个有效的电子邮件地址。"
 
-#: Mailman/Cgi/admin.py:1569
+#: Mailman/Cgi/admin.py:1578
 msgid "%(schange_from)s is not a member"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1571
+#: Mailman/Cgi/admin.py:1580
 #, fuzzy
 msgid "%(schange_to)s is already a member"
 msgstr "已经是成员了"
 
-#: Mailman/Cgi/admin.py:1574
+#: Mailman/Cgi/admin.py:1583
 msgid "%(schange_to)s matches banned pattern %(spat)s"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1576
+#: Mailman/Cgi/admin.py:1585
 msgid "Address %(schange_from)s changed to %(schange_to)s"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1583
+#: Mailman/Cgi/admin.py:1592
 msgid ""
 "The member address %(change_from)s on the\n"
 "%(list_name)s list has been changed to %(change_to)s.\n"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1586
+#: Mailman/Cgi/admin.py:1595
 #, fuzzy
 msgid "%(list_name)s address change notice."
 msgstr "%(realname)s 退订通知"
 
-#: Mailman/Cgi/admin.py:1597
+#: Mailman/Cgi/admin.py:1606
 #, fuzzy
 msgid "Notification sent to %(schange_from)s."
 msgstr "通告"
 
-#: Mailman/Cgi/admin.py:1607
+#: Mailman/Cgi/admin.py:1616
 #, fuzzy
 msgid "Notification sent to %(schange_to)s."
 msgstr "通告"
 
-#: Mailman/Cgi/admin.py:1613
+#: Mailman/Cgi/admin.py:1622
 msgid "Bad moderation flag value"
 msgstr "错误的节制标记变量"
 
-#: Mailman/Cgi/admin.py:1635
+#: Mailman/Cgi/admin.py:1644
 msgid "Not subscribed"
 msgstr "没有订阅"
 
-#: Mailman/Cgi/admin.py:1638
+#: Mailman/Cgi/admin.py:1647
 msgid "Ignoring changes to deleted member: %(user)s"
 msgstr "忽略对已删除用户的更改: %(user)s"
 
-#: Mailman/Cgi/admin.py:1678
+#: Mailman/Cgi/admin.py:1687
 msgid "Successfully Removed:"
 msgstr "成功删除:"
 
-#: Mailman/Cgi/admin.py:1682
+#: Mailman/Cgi/admin.py:1691
 msgid "Error Unsubscribing:"
 msgstr "错误取消订阅:"
 
@@ -2098,7 +2107,7 @@ msgid "Create a %(hostname)s Mailing List"
 msgstr "创建一个 %(hostname)s 邮件列表"
 
 #: Mailman/Cgi/create.py:314 Mailman/Cgi/rmlist.py:212
-#: Mailman/Gui/Bounce.py:196 Mailman/htmlformat.py:347
+#: Mailman/Gui/Bounce.py:196 Mailman/htmlformat.py:366
 msgid "Error: "
 msgstr "错误:"
 
@@ -2484,10 +2493,6 @@ msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
 msgstr "点击连接以访问您请求的邮件列表的选项页面"
-
-#: Mailman/Cgi/options.py:380
-msgid "nomail"
-msgstr ""
 
 #: Mailman/Cgi/options.py:407
 msgid ""
@@ -8378,15 +8383,15 @@ msgstr ""
 msgid "Original message suppressed by Mailman site configuration\n"
 msgstr ""
 
-#: Mailman/htmlformat.py:660
+#: Mailman/htmlformat.py:679
 msgid "Delivered by Mailman<br>version %(version)s"
 msgstr "由 Mailman<br> %(version)s 投递"
 
-#: Mailman/htmlformat.py:661
+#: Mailman/htmlformat.py:680
 msgid "Python Powered"
 msgstr "Python Powered"
 
-#: Mailman/htmlformat.py:662
+#: Mailman/htmlformat.py:681
 msgid "Gnu's Not Unix"
 msgstr "Gnu's Not Unix"
 

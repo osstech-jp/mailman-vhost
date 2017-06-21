@@ -12,6 +12,12 @@ Here is a history of user visible changes to Mailman.
     - The admindb held subscriptions listing now includes the date of the
       most recent request from the address.  (LP: #1697097)
 
+  Accessibility
+
+    - The admin Membership List now includes text for screen readers which
+      identifies the function of each checkbox.  CSS is added to the page to
+      visually hide the text but still allow screan readers to read it.
+
   Bug fixes and other patches
 
     - Fixed MTA/Postfix.py to ensure that created aliases(.db) and
