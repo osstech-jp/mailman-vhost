@@ -1055,7 +1055,8 @@ def membership_options(mlist, subcat, cgidata, doc, form):
         fullname = Utils.uncanonstr(mlist.getMemberName(addr),
                                     mlist.preferred_language)
         name = TextBox(qaddr + '_realname', fullname, size=longest).Format()
-        cells = [Center(CheckBox(qaddr + '_unsub', 'off', 0).Format()),
+        cells = [Center(CheckBox(qaddr + '_unsub', 'off', 0).Format()
+                        + '<div class="hidden">' + _('unsub') + '</div>'),
                  link.Format() + '<br>' +
                  name +
                  Hidden('user', qaddr).Format(),
@@ -1068,9 +1069,12 @@ def membership_options(mlist, subcat, cgidata, doc, form):
             value = 'off'
             checked = 0
         box = CheckBox('%s_mod' % qaddr, value, checked)
-        cells.append(Center(box).Format())
+        cells.append(Center(box.Format()
+            + '<div class="hidden">' + _('mod') + '</div>'))
+        # Kluge, get these translated.
+        (_('hide'), _('nomail'), _('ack'), _('notmetoo'), _('nodupes'))
         for opt in ('hide', 'nomail', 'ack', 'notmetoo', 'nodupes'):
-            extra = ''
+            extra = '<div class="hidden">' + _(opt) + '</div>'
             if opt == 'nomail':
                 status = mlist.getDeliveryStatus(addr)
                 if status == MemberAdaptor.ENABLED:
@@ -1079,7 +1083,7 @@ def membership_options(mlist, subcat, cgidata, doc, form):
                 else:
                     value = 'on'
                     checked = 1
-                    extra = '[%s]' % ds_abbrevs[status]
+                    extra = '[%s]' % ds_abbrevs[status] + extra
             elif mlist.getMemberOption(addr, mm_cfg.OPTINFO[opt]):
                 value = 'on'
                 checked = 1
@@ -1092,17 +1096,22 @@ def membership_options(mlist, subcat, cgidata, doc, form):
         # the underlying dictionary attribute.  This version is slower and
         # less memory efficient.  It points to a new MemberAdaptor interface
         # method.
+        extra = '<div class="hidden">' + _('digest') + '</div>'
         if addr in mlist.getRegularMemberKeys():
-            cells.append(Center(CheckBox(qaddr + '_digest', 'off', 0).Format()))
+            cells.append(Center(CheckBox(qaddr + '_digest', 'off', 0).Format()
+                                + extra))
         else:
-            cells.append(Center(CheckBox(qaddr + '_digest', 'on', 1).Format()))
+            cells.append(Center(CheckBox(qaddr + '_digest', 'on', 1).Format()
+                                + extra))
         if mlist.getMemberOption(addr, mm_cfg.OPTINFO['plain']):
             value = 'on'
             checked = 1
         else:
             value = 'off'
             checked = 0
-        cells.append(Center(CheckBox('%s_plain' % qaddr, value, checked)))
+        cells.append(Center(CheckBox(
+                            '%s_plain' % qaddr, value, checked).Format()
+                            + '<div class="hidden">' + _('plain') + '</div>'))
         # User's preferred language
         langpref = mlist.getMemberLanguage(addr)
         langs = mlist.GetAvailableLanguages()
