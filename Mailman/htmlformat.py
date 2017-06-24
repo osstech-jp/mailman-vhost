@@ -318,15 +318,9 @@ class Document(Container):
                           'content="text/html; charset=%s">' % charset)
             if self.title:
                 output.append('%s<TITLE>%s</TITLE>' % (tab, self.title))
-            # This is a kluge to only add this style to the page that needs it.
-            parts = Utils.GetPathPieces()
-            if parts:
-                if len(parts) > 2 and parts[-1] not in ('add', 'remove',
-                                                       'change'):
-                    parts[2] = 'list'
-                if (len(parts) == 2 and parts[1] == 'members' or
-                    len(parts) > 2 and parts[1:3] == ['members', 'list']):
-                    output.append("""\
+            # Add CSS to visually hide some labeling text but allow screen
+            # readers to read it.
+            output.append("""\
 <style type="text/css">
     div.hidden
         {position:absolute;
