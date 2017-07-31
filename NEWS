@@ -21,6 +21,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The web roster page now shows case preserved email addresses.
+      (LP: #1707447)
+
     - Changed the SETGID wrappers to only pass those items in the environment
       that are needed by the called scripts.  (LP: #1705736)
 
