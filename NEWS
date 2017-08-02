@@ -19,6 +19,11 @@ Here is a history of user visible changes to Mailman.
       visually hide the text but still allow screan readers to read it.
       Similar text has been added to some radio buttons on the admindb pages.
 
+  i18n
+
+    - The Russian translation has been updated by Sergey Matveev.
+      (LP:#1708016)
+
   Bug fixes and other patches
 
     - The web roster page now shows case preserved email addresses.
