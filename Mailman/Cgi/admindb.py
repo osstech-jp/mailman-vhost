@@ -95,8 +95,9 @@ def hacky_radio_buttons(btnname, labels, values, defaults, spacing=3):
     space = '&nbsp;' * spacing
     btns = Table(cellspacing='5', cellpadding='0')
     btns.AddRow([space + text + space for text in labels])
-    btns.AddRow([Center(RadioButton(btnname, value, default))
-                 for value, default in zip(values, defaults)])
+    btns.AddRow([Center(RadioButton(btnname, value, default).Format()
+                     + '<div class=hidden>' + label + '</div>')
+                 for label, value, default in zip(labels, values, defaults)])
     return btns
 
 
@@ -747,20 +748,14 @@ def show_post_requests(mlist, id, info, total, count, form):
     when = msgdata.get('received_time')
     if when:
         t.AddRow([Bold(_('Received:')), time.ctime(when)])
-        t.AddCellInfo(row+2, col-1, align='right')
-    # We can't use a RadioButtonArray here because horizontal placement can be
-    # confusing to the user and vertical placement takes up too much
-    # real-estate.  This is a hack!
-    buttons = Table(cellspacing="5", cellpadding="0")
-    buttons.AddRow(map(lambda x, s='&nbsp;'*5: s+x+s,
-                       (_('Defer'), _('Approve'), _('Reject'), _('Discard'))))
-    buttons.AddRow([Center(RadioButton(id, mm_cfg.DEFER, 1)),
-                    Center(RadioButton(id, mm_cfg.APPROVE, 0)),
-                    Center(RadioButton(id, mm_cfg.REJECT, 0)),
-                    Center(RadioButton(id, mm_cfg.DISCARD, 0)),
-                    ])
+        t.AddCellInfo(row+3, col-1, align='right')
+    buttons = hacky_radio_buttons(id,
+                (_('Defer'), _('Approve'), _('Reject'), _('Discard')),
+                (mm_cfg.DEFER, mm_cfg.APPROVE, mm_cfg.REJECT, mm_cfg.DISCARD),
+                (1, 0, 0, 0),
+                spacing=5)
     t.AddRow([Bold(_('Action:')), buttons])
-    t.AddCellInfo(row+3, col-1, align='right')
+    t.AddCellInfo(t.GetCurrentRowIndex(), col-1, align='right')
     t.AddRow(['&nbsp;',
               '<label>' +
               CheckBox('preserve-%d' % id, 'on', 0).Format() +
