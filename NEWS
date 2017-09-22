@@ -26,6 +26,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The default DMARC reject reason now properly replaces %(listowner)s.
+      (LP: #1718962)
+
     - The web roster page now shows case preserved email addresses.
       (LP: #1707447)
 
