@@ -16,7 +16,7 @@ Here is a history of user visible changes to Mailman.
 
     - The admin Membership List now includes text for screen readers which
       identifies the function of each checkbox.  CSS is added to the page to
-      visually hide the text but still allow screan readers to read it.
+      visually hide the text but still allow screen readers to read it.
       Similar text has been added to some radio buttons on the admindb pages.
 
   i18n
@@ -25,6 +25,9 @@ Here is a history of user visible changes to Mailman.
       (LP:#1708016)
 
   Bug fixes and other patches
+
+    - Thanks to Jim Popovitch, certain failures in DNS lookups of DMARC policy
+      will now result in mitigations being applied.  (LP: #1722013)
 
     - The default DMARC reject reason now properly replaces %(listowner)s.
       (LP: #1718962)
