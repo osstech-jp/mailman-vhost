@@ -1,11 +1,11 @@
 -*- coding: iso-8859-1 -*-
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
 
-2.1.25 (xx-xxx-xxxx)
+2.1.25 (26-Oct-2017)
 
   New Features
 
