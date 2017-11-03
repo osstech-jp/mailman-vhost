@@ -5,6 +5,12 @@ Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.26 (xx-xxx-xxxx)
+
+  Bug fixes and other patches
+
+    - The DELIVERY_RETRY_WAIT setting is now effective.  (LP: #1729472)
+
 2.1.25 (26-Oct-2017)
 
   New Features

@@ -1522,6 +1522,9 @@ PENDING_REQUEST_LIFE = days(3)
 DELIVERY_RETRY_PERIOD = days(5)
 
 # How long should we wait before we retry a temporary delivery failure?
+# Because RetryRunner sleeps for 15 minutes between processes of its queue,
+# whatever is put here is effectively rounded up to the next integer multiple
+# of 15 minutes.
 DELIVERY_RETRY_WAIT = hours(1)
 
 
