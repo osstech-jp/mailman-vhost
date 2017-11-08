@@ -7,6 +7,11 @@ Here is a history of user visible changes to Mailman.
 
 2.1.26 (xx-xxx-xxxx)
 
+  i18n
+
+    - The Japanese translation of Defaults.py.in has been updated by
+      Yasuhito FUTATSUKI.
+
   Bug fixes and other patches
 
     - The DELIVERY_RETRY_WAIT setting is now effective.  (LP: #1729472)
