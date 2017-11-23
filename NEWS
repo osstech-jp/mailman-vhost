@@ -14,6 +14,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - When updating the group and mode of a .db file with Mailman's Postfix
+      integration, a missing file is ignored.  (LP: #1734162)
+
     - The DELIVERY_RETRY_WAIT setting is now effective.  (LP: #1729472)
 
 2.1.25 (26-Oct-2017)
