@@ -57,7 +57,12 @@ def _update_map_file(mapfile, command=mm_cfg.POSTFIX_MAP_CMD):
         if (stat[ST_MODE] & targetmode) <> targetmode:
             os.chmod(file, stat[ST_MODE] | targetmode)
         dbfile = file + '.db'
-        stat = os.stat(dbfile)
+        try:
+            stat = os.stat(dbfile)
+        except OSError, e:
+            if e.errno <> errno.ENOENT:
+                raise
+            return
         if (stat[ST_MODE] & targetmode) <> targetmode:
             os.chmod(dbfile, stat[ST_MODE] | targetmode)
         user = mm_cfg.MAILMAN_USER
