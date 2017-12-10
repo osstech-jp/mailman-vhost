@@ -14,6 +14,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Messages held for header_filter_rules now show the matched regexp in
+      the hold reason.  (LP: #1737371)
+
     - When updating the group and mode of a .db file with Mailman's Postfix
       integration, a missing file is ignored.  (LP: #1734162)
 
