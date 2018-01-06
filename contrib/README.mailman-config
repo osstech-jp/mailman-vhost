@@ -1,0 +1,7 @@
+The mailman-config.py script simply displays a few build-time option choices, 
+along with the option string provided to the configure script on the command 
+line. The latter is convenient when updating to a new version of Mailman 2, or 
+when trying to synchronize a manual Mailman installation with a the FHS of a 
+distribution.
+
+Currently the script requires python 2.x.
