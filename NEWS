@@ -9,6 +9,9 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The German translation of a couple of templates has been updated by
+      Thomas Hochstein.
+
     - The Japanese translation of Defaults.py.in has been updated by
       Yasuhito FUTATSUKI.
 
