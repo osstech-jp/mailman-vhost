@@ -651,8 +651,11 @@ INSTALL_PROGRAM
 KOCODECSPKG
 JACODECSPKG
 EMAILPKG
+MM_VERSION
 PYTHON
 with_python
+BUILD_DATE
+CONFIGURE_OPTS
 target_alias
 host_alias
 build_alias
@@ -2127,6 +2130,10 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 # /usr/local/mailman is the default installation directory
 
 
+CONFIGURE_OPTS=`echo $@`
+
+BUILD_DATE=`date`
+
 
 # Check for Python!  Better be found on $PATH
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for --with-python" >&5
@@ -2291,6 +2298,17 @@ EOF
 $PYTHON conftest.py
 needemailpkg=`cat conftest.out`
 rm -f conftest.out conftest.py
+
+cat > getver.py <<EOF
+from Mailman.Version import VERSION
+fp = open("getver.out", "w")
+fp.write("%s\n" % VERSION)
+fp.close()
+EOF
+$PYTHON getver.py
+MM_VERSION=`cat getver.out`
+rm -f getver.out getver.py
+
 
 # Should we rely on Python's own email package or use the pre-packaged version?
 
@@ -4548,6 +4566,7 @@ build/contrib/check_perms_grsecurity.py:contrib/check_perms_grsecurity.py \
 build/contrib/qmail-to-mailman.py:contrib/qmail-to-mailman.py \
 build/contrib/courier-to-mailman.py:contrib/courier-to-mailman.py \
 build/contrib/rotatelogs.py:contrib/rotatelogs.py \
+build/contrib/mailman-config.py:contrib/mailman-config.py \
 build/cron/bumpdigests:cron/bumpdigests \
 build/cron/checkdbs:cron/checkdbs \
 build/cron/cull_bad_shunt:cron/cull_bad_shunt \

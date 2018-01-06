@@ -23,6 +23,10 @@ AC_INIT(src/common.h)
 # /usr/local/mailman is the default installation directory
 AC_PREFIX_DEFAULT(/usr/local/mailman)
 
+CONFIGURE_OPTS=`echo $@`
+AC_SUBST(CONFIGURE_OPTS)
+BUILD_DATE=`date`
+AC_SUBST(BUILD_DATE)
 
 # Check for Python!  Better be found on $PATH
 AC_MSG_CHECKING(for --with-python)
@@ -134,6 +138,17 @@ changequote([, ])
 $PYTHON conftest.py
 needemailpkg=`cat conftest.out`
 rm -f conftest.out conftest.py
+
+cat > getver.py <<EOF
+from Mailman.Version import VERSION
+fp = open("getver.out", "w")
+fp.write("%s\n" % VERSION)
+fp.close()
+EOF
+$PYTHON getver.py
+MM_VERSION=`cat getver.out`
+rm -f getver.out getver.py
+AC_SUBST(MM_VERSION)
 
 # Should we rely on Python's own email package or use the pre-packaged version?
 AC_SUBST(EMAILPKG)
@@ -711,6 +726,7 @@ contrib/check_perms_grsecurity.py \
 contrib/qmail-to-mailman.py \
 contrib/courier-to-mailman.py \
 contrib/rotatelogs.py \
+contrib/mailman-config.py \
 cron/bumpdigests \
 cron/checkdbs \
 cron/cull_bad_shunt \
