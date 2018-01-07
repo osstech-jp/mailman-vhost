@@ -720,13 +720,13 @@ bin/unshunt \
 bin/update \
 bin/version \
 bin/withlist \
+bin/mailman-config \
 bin/b4b5-archfix \
 bin/rb-archfix \
 contrib/check_perms_grsecurity.py \
 contrib/qmail-to-mailman.py \
 contrib/courier-to-mailman.py \
 contrib/rotatelogs.py \
-contrib/mailman-config.py \
 cron/bumpdigests \
 cron/checkdbs \
 cron/cull_bad_shunt \
