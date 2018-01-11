@@ -7,6 +7,12 @@ Here is a history of user visible changes to Mailman.
 
 2.1.26 (xx-xxx-xxxx)
 
+  New Features
+
+    - Thanks to Lindsay Haisley, there is a new bin/mailman-config command
+      to display various information about this Mailman version and how it
+      was configured.
+
   i18n
 
     - The German translation of a couple of templates has been updated by
