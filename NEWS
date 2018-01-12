@@ -7,7 +7,31 @@ Here is a history of user visible changes to Mailman.
 
 2.1.26 (xx-xxx-xxxx)
 
+  New Features
+
+    - Thanks to Lindsay Haisley, there is a new bin/mailman-config command
+      to display various information about this Mailman version and how it
+      was configured.
+
+  i18n
+
+    - The German translation of a couple of templates has been updated by
+      Thomas Hochstein.
+
+    - The Japanese translation of Defaults.py.in has been updated by
+      Yasuhito FUTATSUKI.
+
   Bug fixes and other patches
+
+    - Mailman 2.1.22 introduced a Python 2.7 dependency that could affect
+      bin/arch processing a message without a valid Date: header.  The
+      dependency has been removed.  (LP: #1740543)
+
+    - Messages held for header_filter_rules now show the matched regexp in
+      the hold reason.  (LP: #1737371)
+
+    - When updating the group and mode of a .db file with Mailman's Postfix
+      integration, a missing file is ignored.  (LP: #1734162)
 
     - The DELIVERY_RETRY_WAIT setting is now effective.  (LP: #1729472)
 
