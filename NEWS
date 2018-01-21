@@ -15,6 +15,9 @@ Here is a history of user visible changes to Mailman.
 
   i18n
 
+    - The Japanese message catalog has been updated for added strings by
+      Yasuhito FUTATSUKI.
+
     - The German translation of a couple of templates has been updated by
       Thomas Hochstein.
 
