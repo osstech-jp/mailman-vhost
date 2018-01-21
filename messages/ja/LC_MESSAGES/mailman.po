@@ -8311,9 +8311,8 @@ msgid "-------------- next part --------------\n"
 msgstr "-------------- next part --------------\n"
 
 #: Mailman/Handlers/SpamDetect.py:64
-#, fuzzy
 msgid "Header matched regexp: %(pattern)s"
-msgstr "入会禁止アドレス (%(pattern)s に一致)"
+msgstr "メールヘッダーが次の正規表現に合致しました: %(pattern)s"
 
 #: Mailman/Handlers/SpamDetect.py:126
 msgid ""
@@ -10486,6 +10485,8 @@ msgid ""
 "Show basic statistics about, and build options for this\n"
 "installation of Mailman. Requires python 2."
 msgstr ""
+"本インストール環境の Mailman についての基本情報および\n"
+"ビルドオプションを表示する. 要 Python 2."
 
 #: bin/mailmanctl:20
 msgid ""
