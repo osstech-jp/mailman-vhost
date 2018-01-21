@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Thu Oct 26 13:25:53 2017\n"
+"POT-Creation-Date: Sun Jan 21 09:23:53 2018\n"
 "PO-Revision-Date: 2005-04-14 10:45+0300\n"
 "Last-Translator: Anti Veeranna <duke@linux.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -3876,162 +3876,162 @@ msgstr "Üksikkirjade tellijad:"
 msgid "Digest members:"
 msgstr "Kokkuvõtete tellijad:"
 
-#: Mailman/Defaults.py:1733
+#: Mailman/Defaults.py:1736
 msgid "Arabic"
 msgstr ""
 
-#: Mailman/Defaults.py:1734
+#: Mailman/Defaults.py:1737
 #, fuzzy
 msgid "Asturian"
 msgstr "Eesti"
 
-#: Mailman/Defaults.py:1735
+#: Mailman/Defaults.py:1738
 msgid "Catalan"
 msgstr "Katalaani"
 
-#: Mailman/Defaults.py:1736
+#: Mailman/Defaults.py:1739
 msgid "Czech"
 msgstr "T&scaron;ehhi"
 
-#: Mailman/Defaults.py:1737
+#: Mailman/Defaults.py:1740
 msgid "Danish"
 msgstr "Taani"
 
-#: Mailman/Defaults.py:1738
+#: Mailman/Defaults.py:1741
 msgid "German"
 msgstr "Saksa"
 
-#: Mailman/Defaults.py:1739
+#: Mailman/Defaults.py:1742
 msgid "English (USA)"
 msgstr "Inglise (USA)"
 
-#: Mailman/Defaults.py:1740
+#: Mailman/Defaults.py:1743
 msgid "Spanish (Spain)"
 msgstr "Hispaania"
 
-#: Mailman/Defaults.py:1741
+#: Mailman/Defaults.py:1744
 msgid "Estonian"
 msgstr "Eesti"
 
-#: Mailman/Defaults.py:1742
+#: Mailman/Defaults.py:1745
 msgid "Euskara"
 msgstr "Baski"
 
-#: Mailman/Defaults.py:1743
+#: Mailman/Defaults.py:1746
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1744
+#: Mailman/Defaults.py:1747
 msgid "Finnish"
 msgstr "Soome"
 
-#: Mailman/Defaults.py:1745
+#: Mailman/Defaults.py:1748
 msgid "French"
 msgstr "Prantsuse"
 
-#: Mailman/Defaults.py:1746
+#: Mailman/Defaults.py:1749
 #, fuzzy
 msgid "Galician"
 msgstr "Itaalia"
 
-#: Mailman/Defaults.py:1747
+#: Mailman/Defaults.py:1750
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1748
+#: Mailman/Defaults.py:1751
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1749
+#: Mailman/Defaults.py:1752
 msgid "Croatian"
 msgstr "Horvaadi"
 
-#: Mailman/Defaults.py:1750
+#: Mailman/Defaults.py:1753
 msgid "Hungarian"
 msgstr "Ungari"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1754
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1755
 msgid "Italian"
 msgstr "Itaalia"
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1756
 msgid "Japanese"
 msgstr "Jaapani"
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1757
 msgid "Korean"
 msgstr "Korea"
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1758
 msgid "Lithuanian"
 msgstr "Leedu"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1759
 msgid "Dutch"
 msgstr "Taani"
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1760
 msgid "Norwegian"
 msgstr "Norra"
 
-#: Mailman/Defaults.py:1758
+#: Mailman/Defaults.py:1761
 msgid "Polish"
 msgstr "Poola"
 
-#: Mailman/Defaults.py:1759
+#: Mailman/Defaults.py:1762
 msgid "Portuguese"
 msgstr "Portugali "
 
-#: Mailman/Defaults.py:1760
+#: Mailman/Defaults.py:1763
 msgid "Portuguese (Brazil)"
 msgstr "Portugali (Brasiilia)"
 
-#: Mailman/Defaults.py:1761
+#: Mailman/Defaults.py:1764
 msgid "Romanian"
 msgstr "Rumeenia"
 
-#: Mailman/Defaults.py:1762
+#: Mailman/Defaults.py:1765
 msgid "Russian"
 msgstr "Vene"
 
-#: Mailman/Defaults.py:1763
+#: Mailman/Defaults.py:1766
 #, fuzzy
 msgid "Slovak"
 msgstr "Sloveenia"
 
-#: Mailman/Defaults.py:1764
+#: Mailman/Defaults.py:1767
 msgid "Slovenian"
 msgstr "Sloveenia"
 
-#: Mailman/Defaults.py:1765
+#: Mailman/Defaults.py:1768
 msgid "Serbian"
 msgstr "Serbia"
 
-#: Mailman/Defaults.py:1766
+#: Mailman/Defaults.py:1769
 msgid "Swedish"
 msgstr "Rootsi"
 
-#: Mailman/Defaults.py:1767
+#: Mailman/Defaults.py:1770
 msgid "Turkish"
 msgstr "Türgi"
 
-#: Mailman/Defaults.py:1768
+#: Mailman/Defaults.py:1771
 msgid "Ukrainian"
 msgstr "Ukraina"
 
-#: Mailman/Defaults.py:1769
+#: Mailman/Defaults.py:1772
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1770
+#: Mailman/Defaults.py:1773
 msgid "Chinese (China)"
 msgstr "Hiina"
 
-#: Mailman/Defaults.py:1771
+#: Mailman/Defaults.py:1774
 msgid "Chinese (Taiwan)"
 msgstr "Hiina (Taivan)"
 
@@ -8152,11 +8152,11 @@ msgstr "Kirja osa tüübiga %(partctype)s eirati\n"
 msgid "-------------- next part --------------\n"
 msgstr "-------------- next part --------------\n"
 
-#: Mailman/Handlers/SpamDetect.py:59
-msgid "The message headers matched a filter rule"
-msgstr "Kirja päised vastasid defineeritud filtrile"
+#: Mailman/Handlers/SpamDetect.py:64
+msgid "Header matched regexp: %(pattern)s"
+msgstr ""
 
-#: Mailman/Handlers/SpamDetect.py:121
+#: Mailman/Handlers/SpamDetect.py:126
 #, fuzzy
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
@@ -8169,7 +8169,7 @@ msgstr ""
 "kustutati automaatselt. Kui sul on põhjust arvata, et see on ekslik\n"
 "siis võta ühendust listi omanikuga aadressil %(listowner)s."
 
-#: Mailman/Handlers/SpamDetect.py:191
+#: Mailman/Handlers/SpamDetect.py:196
 msgid "Message rejected by filter rule match"
 msgstr "Filter pidas kirja kinni"
 
@@ -8316,16 +8316,16 @@ msgstr ""
 msgid "Mailing list removal request for list %(listname)s"
 msgstr "Listi %(listname)s kustutamise taotlus"
 
-#: Mailman/MTA/Postfix.py:415
+#: Mailman/MTA/Postfix.py:420
 msgid "checking permissions on %(file)s"
 msgstr "%(file)s ligipääsuõiguste kontroll"
 
-#: Mailman/MTA/Postfix.py:425
+#: Mailman/MTA/Postfix.py:430
 msgid "%(file)s permissions must be 0664 (got %(octmode)s)"
 msgstr "faili %(file)s ligipääsuõigused peavad olema 0664 (aga on %(octmode)s)"
 
-#: Mailman/MTA/Postfix.py:427 Mailman/MTA/Postfix.py:455
-#: Mailman/MTA/Postfix.py:466 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:432 Mailman/MTA/Postfix.py:460
+#: Mailman/MTA/Postfix.py:471 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -8333,15 +8333,15 @@ msgstr "faili %(file)s ligipääsuõigused peavad olema 0664 (aga on %(octmode)s)"
 msgid "(fixing)"
 msgstr "(parandan)"
 
-#: Mailman/MTA/Postfix.py:443
+#: Mailman/MTA/Postfix.py:448
 msgid "checking ownership of %(dbfile)s"
 msgstr "kontrollin %(dbfile)s ligipääsuõigusi"
 
-#: Mailman/MTA/Postfix.py:451
+#: Mailman/MTA/Postfix.py:456
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "Faili %(dbfile)s omanik on %(owner)s (aga peab olema %(user)s)"
 
-#: Mailman/MTA/Postfix.py:464
+#: Mailman/MTA/Postfix.py:469
 msgid "%(dbfile)s permissions must be 0664 (got %(octmode)s)"
 msgstr ""
 "faili %(dbfile)s ligipääsuõigused peavad olema 0664 (aga on %(octmode)s)"
@@ -10266,6 +10266,12 @@ msgstr ""
 "        enam kui ühe listi kohta. Kui ühegi listi nime pole määratud, siis "
 "kuvatakse \n"
 "        kõigi listide omanikud.\n"
+
+#: bin/mailman-config:22
+msgid ""
+"Show basic statistics about, and build options for this\n"
+"installation of Mailman. Requires python 2."
+msgstr ""
 
 #: bin/mailmanctl:20
 msgid ""
@@ -12458,6 +12464,9 @@ msgstr ""
 "        Saada ainult nimetatud listi kokkuvõtte, kui see valik ära jätta "
 "siis\n"
 "        saadetakse kõigi listide kokkuvõtted.\n"
+
+#~ msgid "The message headers matched a filter rule"
+#~ msgstr "Kirja päised vastasid defineeritud filtrile"
 
 #, fuzzy
 #~ msgid ""

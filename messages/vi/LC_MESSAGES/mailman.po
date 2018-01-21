@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman-2.1.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Oct 26 13:25:53 2017\n"
+"POT-Creation-Date: Sun Jan 21 09:23:53 2018\n"
 "PO-Revision-Date: 2008-01-03 22:05+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -3960,161 +3960,161 @@ msgstr "Thành viên nhận mỗi thư :"
 msgid "Digest members:"
 msgstr "Thành viên nhận bó thư :"
 
-#: Mailman/Defaults.py:1733
+#: Mailman/Defaults.py:1736
 msgid "Arabic"
 msgstr "A Rập"
 
-#: Mailman/Defaults.py:1734
+#: Mailman/Defaults.py:1737
 #, fuzzy
 msgid "Asturian"
 msgstr "Et-tô-ni-a"
 
-#: Mailman/Defaults.py:1735
+#: Mailman/Defaults.py:1738
 msgid "Catalan"
 msgstr "Ca-ta-lan"
 
-#: Mailman/Defaults.py:1736
+#: Mailman/Defaults.py:1739
 msgid "Czech"
 msgstr "Séc"
 
-#: Mailman/Defaults.py:1737
+#: Mailman/Defaults.py:1740
 msgid "Danish"
 msgstr "Đan-mạch"
 
-#: Mailman/Defaults.py:1738
+#: Mailman/Defaults.py:1741
 msgid "German"
 msgstr "Đức"
 
-#: Mailman/Defaults.py:1739
+#: Mailman/Defaults.py:1742
 msgid "English (USA)"
 msgstr "Anh (Mỹ)"
 
-#: Mailman/Defaults.py:1740
+#: Mailman/Defaults.py:1743
 msgid "Spanish (Spain)"
 msgstr "Tây-ban-nha (Tây-ban-nha)"
 
-#: Mailman/Defaults.py:1741
+#: Mailman/Defaults.py:1744
 msgid "Estonian"
 msgstr "Et-tô-ni-a"
 
-#: Mailman/Defaults.py:1742
+#: Mailman/Defaults.py:1745
 msgid "Euskara"
 msgstr "Yêu-x-ca-ra"
 
-#: Mailman/Defaults.py:1743
+#: Mailman/Defaults.py:1746
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1744
+#: Mailman/Defaults.py:1747
 msgid "Finnish"
 msgstr "Phần-lan"
 
-#: Mailman/Defaults.py:1745
+#: Mailman/Defaults.py:1748
 msgid "French"
 msgstr "Pháp"
 
-#: Mailman/Defaults.py:1746
+#: Mailman/Defaults.py:1749
 #, fuzzy
 msgid "Galician"
 msgstr "Ý"
 
-#: Mailman/Defaults.py:1747
+#: Mailman/Defaults.py:1750
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1748
+#: Mailman/Defaults.py:1751
 msgid "Hebrew"
 msgstr "Do Thái"
 
-#: Mailman/Defaults.py:1749
+#: Mailman/Defaults.py:1752
 msgid "Croatian"
 msgstr "Cợ-rô-a-ti-a"
 
-#: Mailman/Defaults.py:1750
+#: Mailman/Defaults.py:1753
 msgid "Hungarian"
 msgstr "Hung-gia-lợi"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1754
 msgid "Interlingua"
 msgstr "In-ter-lin-gu-a"
 
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1755
 msgid "Italian"
 msgstr "Ý"
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1756
 msgid "Japanese"
 msgstr "Nhật"
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1757
 msgid "Korean"
 msgstr "Triều-tiên"
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1758
 msgid "Lithuanian"
 msgstr "Li-tu-a-ni"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1759
 msgid "Dutch"
 msgstr "Hoà-lan"
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1760
 msgid "Norwegian"
 msgstr "Na-uy"
 
-#: Mailman/Defaults.py:1758
+#: Mailman/Defaults.py:1761
 msgid "Polish"
 msgstr "Ba-lan"
 
-#: Mailman/Defaults.py:1759
+#: Mailman/Defaults.py:1762
 msgid "Portuguese"
 msgstr "Bồ-đào-nha"
 
-#: Mailman/Defaults.py:1760
+#: Mailman/Defaults.py:1763
 msgid "Portuguese (Brazil)"
 msgstr "Bồ-đào-nha (Bra-xin)"
 
-#: Mailman/Defaults.py:1761
+#: Mailman/Defaults.py:1764
 msgid "Romanian"
 msgstr "Lỗ-má-ni"
 
-#: Mailman/Defaults.py:1762
+#: Mailman/Defaults.py:1765
 msgid "Russian"
 msgstr "Nga"
 
-#: Mailman/Defaults.py:1763
+#: Mailman/Defaults.py:1766
 msgid "Slovak"
 msgstr "Xlô-vác"
 
-#: Mailman/Defaults.py:1764
+#: Mailman/Defaults.py:1767
 msgid "Slovenian"
 msgstr "Xlô-ven"
 
-#: Mailman/Defaults.py:1765
+#: Mailman/Defaults.py:1768
 msgid "Serbian"
 msgstr "Xéc-bi"
 
-#: Mailman/Defaults.py:1766
+#: Mailman/Defaults.py:1769
 msgid "Swedish"
 msgstr "Thuỵ-điển"
 
-#: Mailman/Defaults.py:1767
+#: Mailman/Defaults.py:1770
 msgid "Turkish"
 msgstr "Thổ-nhĩ-kỳ"
 
-#: Mailman/Defaults.py:1768
+#: Mailman/Defaults.py:1771
 msgid "Ukrainian"
 msgstr "U-cợ-rainh"
 
-#: Mailman/Defaults.py:1769
+#: Mailman/Defaults.py:1772
 msgid "Vietnamese"
 msgstr "Việt"
 
-#: Mailman/Defaults.py:1770
+#: Mailman/Defaults.py:1773
 msgid "Chinese (China)"
 msgstr "Trung-quốc (quốc)"
 
-#: Mailman/Defaults.py:1771
+#: Mailman/Defaults.py:1774
 msgid "Chinese (Taiwan)"
 msgstr "Trung-hoa (Đài-loan)"
 
@@ -8502,11 +8502,12 @@ msgstr "Đã bỏ qua nội dụng kiểu %(partctype)s\n"
 msgid "-------------- next part --------------\n"
 msgstr "━━━━━━phần kế tiếp━━━━━━\n"
 
-#: Mailman/Handlers/SpamDetect.py:59
-msgid "The message headers matched a filter rule"
-msgstr "Những dòng đầu của thư này đã khớp một quy tắc lọc"
+#: Mailman/Handlers/SpamDetect.py:64
+#, fuzzy
+msgid "Header matched regexp: %(pattern)s"
+msgstr "Địa chỉ cấm (khớp mẫu %(pattern)s)"
 
-#: Mailman/Handlers/SpamDetect.py:121
+#: Mailman/Handlers/SpamDetect.py:126
 #, fuzzy
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
@@ -8520,7 +8521,7 @@ msgstr ""
 "hạn chế này không đúng, vui lòng liên lạc với người sở hữu\n"
 "hộp thư tại %(listowner)s."
 
-#: Mailman/Handlers/SpamDetect.py:191
+#: Mailman/Handlers/SpamDetect.py:196
 msgid "Message rejected by filter rule match"
 msgstr "Thư bị từ chối vì khớp với quy tắc lọc"
 
@@ -8667,16 +8668,16 @@ msgstr ""
 msgid "Mailing list removal request for list %(listname)s"
 msgstr "Yêu cầu gỡ bỏ hộp thư chung cho hộp thư %(listname)s"
 
-#: Mailman/MTA/Postfix.py:415
+#: Mailman/MTA/Postfix.py:420
 msgid "checking permissions on %(file)s"
 msgstr "đang kiểm tra quyền truy cập tập tin %(file)s"
 
-#: Mailman/MTA/Postfix.py:425
+#: Mailman/MTA/Postfix.py:430
 msgid "%(file)s permissions must be 0664 (got %(octmode)s)"
 msgstr "quyền truy cập tập tin %(file)s phải là « 0664 » (còn gặp %(octmode)s)"
 
-#: Mailman/MTA/Postfix.py:427 Mailman/MTA/Postfix.py:455
-#: Mailman/MTA/Postfix.py:466 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:432 Mailman/MTA/Postfix.py:460
+#: Mailman/MTA/Postfix.py:471 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -8684,15 +8685,15 @@ msgstr "quyền truy cập tập tin %(file)s phải là « 0664 » (còn gặp 
 msgid "(fixing)"
 msgstr "(đang sửa)"
 
-#: Mailman/MTA/Postfix.py:443
+#: Mailman/MTA/Postfix.py:448
 msgid "checking ownership of %(dbfile)s"
 msgstr "đang kiểm tra quyền sở hữu tập tin %(dbfile)s"
 
-#: Mailman/MTA/Postfix.py:451
+#: Mailman/MTA/Postfix.py:456
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "Tập tin %(dbfile)s do %(owner)s sở hữu (phải do %(user)s sở hữu)"
 
-#: Mailman/MTA/Postfix.py:464
+#: Mailman/MTA/Postfix.py:469
 msgid "%(dbfile)s permissions must be 0664 (got %(octmode)s)"
 msgstr ""
 "quyền truy cập tập tin %(dbfile)s phải là « 0664 » (còn gặp %(octmode)s)"
@@ -10709,6 +10710,12 @@ msgstr ""
 "Có thể ghi rõ nhiều hộp thư chung, nằm sau những tùy chọn.\n"
 "Nếu không ghi rõ tên hộp thư, lệnh này sẽ hiển thị các người sở hữu\n"
 "mọi hộp thư chung.\n"
+
+#: bin/mailman-config:22
+msgid ""
+"Show basic statistics about, and build options for this\n"
+"installation of Mailman. Requires python 2."
+msgstr ""
 
 #: bin/mailmanctl:20
 msgid ""
@@ -13084,6 +13091,9 @@ msgstr ""
 "    --listname=hộp_thư_chung\n"
 "\tGởi bó thư chỉ cho hộp thư chung này, nếu không ghi rõ hộp này,\n"
 "gởi bó thư cho mọi hộp thư chung.\n"
+
+#~ msgid "The message headers matched a filter rule"
+#~ msgstr "Những dòng đầu của thư này đã khớp một quy tắc lọc"
 
 #, fuzzy
 #~ msgid ""

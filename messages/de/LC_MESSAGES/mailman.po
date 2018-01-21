@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Thu Oct 26 13:25:53 2017\n"
+"POT-Creation-Date: Sun Jan 21 09:23:53 2018\n"
 "PO-Revision-Date: 2016-09-15 14:32-0700\n"
 "Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
 "Language-Team: German <mailman-i18n@python.org>\n"
@@ -4486,169 +4486,169 @@ msgstr "Normale Mitglieder (sofortiger Bezug, keine digests):"
 msgid "Digest members:"
 msgstr "Mitglieder, die Nachrichtensammlungen erhalten:"
 
-#: Mailman/Defaults.py:1733
+#: Mailman/Defaults.py:1736
 msgid "Arabic"
 msgstr "Arabisch"
 
-#: Mailman/Defaults.py:1734
+#: Mailman/Defaults.py:1737
 msgid "Asturian"
 msgstr "Asturisch"
 
 # Mailman/Defaults.py:777
-#: Mailman/Defaults.py:1735
+#: Mailman/Defaults.py:1738
 msgid "Catalan"
 msgstr "Katalanisch"
 
-#: Mailman/Defaults.py:1736
+#: Mailman/Defaults.py:1739
 msgid "Czech"
 msgstr "Tschechisch"
 
-#: Mailman/Defaults.py:1737
+#: Mailman/Defaults.py:1740
 msgid "Danish"
 msgstr "Dänisch"
 
-#: Mailman/Defaults.py:1738
+#: Mailman/Defaults.py:1741
 msgid "German"
 msgstr "Deutsch"
 
 # Mailman/Defaults.py:772
-#: Mailman/Defaults.py:1739
+#: Mailman/Defaults.py:1742
 msgid "English (USA)"
 msgstr "Englisch (USA)"
 
 # Mailman/Defaults.py:773
-#: Mailman/Defaults.py:1740
+#: Mailman/Defaults.py:1743
 msgid "Spanish (Spain)"
 msgstr "Spanisch (Spanien)"
 
-#: Mailman/Defaults.py:1741
+#: Mailman/Defaults.py:1744
 msgid "Estonian"
 msgstr "Estnisch"
 
-#: Mailman/Defaults.py:1742
+#: Mailman/Defaults.py:1745
 msgid "Euskara"
 msgstr "Euskarisch"
 
-#: Mailman/Defaults.py:1743
+#: Mailman/Defaults.py:1746
 msgid "Persian"
 msgstr "Farsi"
 
-#: Mailman/Defaults.py:1744
+#: Mailman/Defaults.py:1747
 msgid "Finnish"
 msgstr "Finnisch"
 
 # Mailman/Defaults.py:774
-#: Mailman/Defaults.py:1745
+#: Mailman/Defaults.py:1748
 msgid "French"
 msgstr "Französisch"
 
 # Mailman/Defaults.py:777
-#: Mailman/Defaults.py:1746
+#: Mailman/Defaults.py:1749
 msgid "Galician"
 msgstr "Galizisch"
 
-#: Mailman/Defaults.py:1747
+#: Mailman/Defaults.py:1750
 msgid "Greek"
 msgstr "Griechisch"
 
-#: Mailman/Defaults.py:1748
+#: Mailman/Defaults.py:1751
 msgid "Hebrew"
 msgstr "Hebräisch"
 
-#: Mailman/Defaults.py:1749
+#: Mailman/Defaults.py:1752
 msgid "Croatian"
 msgstr "Kroatisch"
 
 # Mailman/Defaults.py:776
-#: Mailman/Defaults.py:1750
+#: Mailman/Defaults.py:1753
 msgid "Hungarian"
 msgstr "Ungarisch"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1754
 msgid "Interlingua"
 msgstr "Interlingua"
 
 # Mailman/Defaults.py:777
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1755
 msgid "Italian"
 msgstr "Italienisch"
 
 # Mailman/Defaults.py:778
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1756
 msgid "Japanese"
 msgstr "Japanisch"
 
 # Mailman/Defaults.py:779
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1757
 msgid "Korean"
 msgstr "Koreanisch"
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1758
 msgid "Lithuanian"
 msgstr "Litauisch"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1759
 msgid "Dutch"
 msgstr "Holländisch"
 
 # Mailman/Defaults.py:779
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1760
 msgid "Norwegian"
 msgstr "Norwegisch"
 
-#: Mailman/Defaults.py:1758
+#: Mailman/Defaults.py:1761
 msgid "Polish"
 msgstr "Polnisch"
 
-#: Mailman/Defaults.py:1759
+#: Mailman/Defaults.py:1762
 msgid "Portuguese"
 msgstr "Portugiesisch"
 
-#: Mailman/Defaults.py:1760
+#: Mailman/Defaults.py:1763
 msgid "Portuguese (Brazil)"
 msgstr "Brasilianisches Portugiesisch"
 
-#: Mailman/Defaults.py:1761
+#: Mailman/Defaults.py:1764
 msgid "Romanian"
 msgstr "Rumänisch"
 
-#: Mailman/Defaults.py:1762
+#: Mailman/Defaults.py:1765
 msgid "Russian"
 msgstr "Russisch"
 
-#: Mailman/Defaults.py:1763
+#: Mailman/Defaults.py:1766
 msgid "Slovak"
 msgstr "Slovakisch"
 
-#: Mailman/Defaults.py:1764
+#: Mailman/Defaults.py:1767
 msgid "Slovenian"
 msgstr "Slowenisch"
 
-#: Mailman/Defaults.py:1765
+#: Mailman/Defaults.py:1768
 msgid "Serbian"
 msgstr "Serbisch"
 
-#: Mailman/Defaults.py:1766
+#: Mailman/Defaults.py:1769
 msgid "Swedish"
 msgstr "Schwedisch"
 
-#: Mailman/Defaults.py:1767
+#: Mailman/Defaults.py:1770
 msgid "Turkish"
 msgstr "Türkisch"
 
-#: Mailman/Defaults.py:1768
+#: Mailman/Defaults.py:1771
 msgid "Ukrainian"
 msgstr "Ukrainisch"
 
-#: Mailman/Defaults.py:1769
+#: Mailman/Defaults.py:1772
 msgid "Vietnamese"
 msgstr "Vietnamesisch"
 
-#: Mailman/Defaults.py:1770
+#: Mailman/Defaults.py:1773
 msgid "Chinese (China)"
 msgstr "Chinesisch (China)"
 
-#: Mailman/Defaults.py:1771
+#: Mailman/Defaults.py:1774
 msgid "Chinese (Taiwan)"
 msgstr "Chinesisch (Taiwan)"
 
@@ -9533,11 +9533,12 @@ msgstr "Weggelassener Inhalt vom Typ %(partctype)s\n"
 msgid "-------------- next part --------------\n"
 msgstr "-------------- nächster Teil --------------\n"
 
-#: Mailman/Handlers/SpamDetect.py:59
-msgid "The message headers matched a filter rule"
-msgstr "Der Nachrichten-Header traf auf eine Filter-Regel zu"
+#: Mailman/Handlers/SpamDetect.py:64
+#, fuzzy
+msgid "Header matched regexp: %(pattern)s"
+msgstr "Blockierte Adresse (passte auf %(pattern)s)"
 
-#: Mailman/Handlers/SpamDetect.py:121
+#: Mailman/Handlers/SpamDetect.py:126
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
 "publishes a DMARC policy of reject or quarantine, and your message has been\n"
@@ -9551,7 +9552,7 @@ msgstr ""
 "auf einem Fehler beruht, setzen Sie sich bitte mit dem Eigentümer der\n"
 "Mailingliste, %(listowner)s, in Verbindung."
 
-#: Mailman/Handlers/SpamDetect.py:191
+#: Mailman/Handlers/SpamDetect.py:196
 msgid "Message rejected by filter rule match"
 msgstr "Nachricht wurde durch Filter-Regeln blockiert"
 
@@ -9730,12 +9731,12 @@ msgstr ""
 msgid "Mailing list removal request for list %(listname)s"
 msgstr "Löschanforderung für Liste  %(listname)s"
 
-#: Mailman/MTA/Postfix.py:415
+#: Mailman/MTA/Postfix.py:420
 msgid "checking permissions on %(file)s"
 msgstr "überprüfe Zugriffsrechte von %(file)s"
 
 # Mailman/MTA/Postfix.py:232
-#: Mailman/MTA/Postfix.py:425
+#: Mailman/MTA/Postfix.py:430
 msgid "%(file)s permissions must be 0664 (got %(octmode)s)"
 msgstr "%(file)s Zugriffsrechte sollten 0664 sein (ist aber %(octmode)s)"
 
@@ -9743,8 +9744,8 @@ msgstr "%(file)s Zugriffsrechte sollten 0664 sein (ist aber %(octmode)s)"
 # bin/check_perms:123 bin/check_perms:142 bin/check_perms:160
 # bin/check_perms:180 bin/check_perms:204 bin/check_perms:224
 # bin/check_perms:238 bin/check_perms:258 bin/check_perms:292
-#: Mailman/MTA/Postfix.py:427 Mailman/MTA/Postfix.py:455
-#: Mailman/MTA/Postfix.py:466 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:432 Mailman/MTA/Postfix.py:460
+#: Mailman/MTA/Postfix.py:471 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -9753,17 +9754,17 @@ msgid "(fixing)"
 msgstr "(korrigiere)"
 
 # Mailman/MTA/Postfix.py:241
-#: Mailman/MTA/Postfix.py:443
+#: Mailman/MTA/Postfix.py:448
 msgid "checking ownership of %(dbfile)s"
 msgstr "überprüfe Eigentümer von %(dbfile)s"
 
 # Mailman/MTA/Postfix.py:249
-#: Mailman/MTA/Postfix.py:451
+#: Mailman/MTA/Postfix.py:456
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "%(dbfile)s ist Eigentum von %(owner)s (sollte aber %(user)s gehören)"
 
 # Mailman/MTA/Postfix.py:232
-#: Mailman/MTA/Postfix.py:464
+#: Mailman/MTA/Postfix.py:469
 msgid "%(dbfile)s permissions must be 0664 (got %(octmode)s)"
 msgstr "%(dbfile)s Zugriffsrechte sollten 0664 sein (sind aber %(octmode)s) "
 
@@ -11865,6 +11866,12 @@ msgstr ""
 "        Gibt nur die Informationen über die angegebene(n) Liste(n) aus.\n"
 "        Ist keine Liste angegeben, werden die Besitzer aller Mailinglisten\n"
 "        ausgegeben.\n"
+
+#: bin/mailman-config:22
+msgid ""
+"Show basic statistics about, and build options for this\n"
+"installation of Mailman. Requires python 2."
+msgstr ""
 
 #: bin/mailmanctl:20
 msgid ""
@@ -14296,6 +14303,9 @@ msgstr ""
 "    --listname=listname\n"
 "        Sendet den digest nur für die angegebene Liste aus. Fehlt diese\n"
 "        Option, werden die digests aller Listen rausgeschickt!\n"
+
+#~ msgid "The message headers matched a filter rule"
+#~ msgstr "Der Nachrichten-Header traf auf eine Filter-Regel zu"
 
 #~ msgid ""
 #~ "Replace the sender with the list address to conform with\n"
