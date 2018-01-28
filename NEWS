@@ -26,6 +26,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Added a few more environment variables to the list of those passed
+      to CGIs to support an nginx/uwsgi configuration.  (LP #1744739)
+
     - Mailman 2.1.22 introduced a Python 2.7 dependency that could affect
       bin/arch processing a message without a valid Date: header.  The
       dependency has been removed.  (LP: #1740543)
