@@ -22,6 +22,9 @@ import os
 import cgi
 import time
 import signal
+import urllib
+import urllib2
+import json
 
 from Mailman import mm_cfg
 from Mailman import Utils
@@ -131,6 +134,25 @@ def process_form(mlist, doc, cgidata, lang):
              os.environ.get('HTTP_X_FORWARDED_FOR',
              os.environ.get('REMOTE_ADDR',
                             'unidentified origin')))
+
+    # Check reCAPTCHA submission, if enabled
+    if mm_cfg.RECAPTCHA_SECRET_KEY:
+        request = urllib2.Request(
+            url = 'https://www.google.com/recaptcha/api/siteverify',
+            data = urllib.urlencode({
+                'secret': mm_cfg.RECAPTCHA_SECRET_KEY,
+                'response': cgidata.getvalue('g-recaptcha-response', ''),
+                'remoteip': remote}))
+        try:
+            httpresp = urllib2.urlopen(request)
+            captcha_response = json.load(httpresp)
+            httpresp.close()
+            if not captcha_response['success']:
+                results.append(_('reCAPTCHA validation failed: %s' %
+                    ', '.join(captcha_response['error-codes'])))
+        except urllib2.URLError as e:
+            results.append(_('reCAPTCHA could not be validated: %s' % e.reason))
+
     # Are we checking the hidden data?
     if mm_cfg.SUBSCRIBE_FORM_SECRET:
         now = int(time.time())

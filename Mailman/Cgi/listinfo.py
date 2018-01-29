@@ -243,6 +243,16 @@ def list_listinfo(mlist, lang):
     replacements['<mm-displang-box>'] = displang
     replacements['<mm-lang-form-start>'] = mlist.FormatFormStart('listinfo')
     replacements['<mm-fullname-box>'] = mlist.FormatBox('fullname', size=30)
+    # If reCAPTCHA is enabled, display its user interface
+    if mm_cfg.RECAPTCHA_SITE_KEY:
+        replacements['<mm-recaptcha-ui>'] = (
+            """<tr><td>&nbsp;</td><td>
+            <script src="https://www.google.com/recaptcha/api.js"></script>
+            <div class="g-recaptcha" data-sitekey="%s"></div>
+            </td></tr>"""
+            % mm_cfg.RECAPTCHA_SITE_KEY)
+    else:
+        replacements['<mm-recaptcha-ui>'] = ''
 
     # Do the expansion.
     doc.AddItem(mlist.ParseTags('listinfo.html', replacements, lang))

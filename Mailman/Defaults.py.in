@@ -131,6 +131,12 @@ SUBSCRIBE_FORM_SECRET = None
 # test.
 SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 
+# Use Google reCAPTCHA to protect the subscription form from spam bots.  The
+# following must be set to a pair of keys issued by the reCAPTCHA service at
+# https://www.google.com/recaptcha/
+RECAPTCHA_SITE_KEY = None
+RECAPTCHA_SECRET_KEY = None
+
 # Installation wide ban list.  This is a list of email addresses and regexp
 # patterns (beginning with ^) which are not allowed to subscribe to any lists
 # in the installation.  This supplements the individual list's ban_list.
