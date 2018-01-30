@@ -2961,11 +2961,11 @@ msgstr "有効なメールアドレスを入力してください."
 
 #: Mailman/Cgi/subscribe.py:153
 msgid "reCAPTCHA validation failed: %(e_codes)s"
-msgstr ""
+msgstr "reCAPTCHA による検証に失敗しました: %(e_codes)s"
 
 #: Mailman/Cgi/subscribe.py:156
 msgid "reCAPTCHA could not be validated: %(e_reason)s"
-msgstr ""
+msgstr "reCAPTCHA による検証動作を行えませんでした: %(e_reason)s"
 
 #: Mailman/Cgi/subscribe.py:181
 msgid "The form is too old.  Please GET it again."
