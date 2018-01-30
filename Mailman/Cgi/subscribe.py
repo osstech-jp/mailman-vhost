@@ -148,10 +148,10 @@ def process_form(mlist, doc, cgidata, lang):
             captcha_response = json.load(httpresp)
             httpresp.close()
             if not captcha_response['success']:
-                results.append(_('reCAPTCHA validation failed: %s' %
-                    ', '.join(captcha_response['error-codes'])))
+                results.append(_('reCAPTCHA validation failed: %s') %
+                    ', '.join(captcha_response['error-codes']))
         except urllib2.URLError as e:
-            results.append(_('reCAPTCHA could not be validated: %s' % e.reason))
+            results.append(_('reCAPTCHA could not be validated: %s') % e.reason)
 
     # Are we checking the hidden data?
     if mm_cfg.SUBSCRIBE_FORM_SECRET:
