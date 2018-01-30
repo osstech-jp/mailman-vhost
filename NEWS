@@ -1,6 +1,6 @@
 -*- coding: iso-8859-1 -*-
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
@@ -8,6 +8,13 @@ Here is a history of user visible changes to Mailman.
 2.1.26 (xx-xxx-xxxx)
 
   New Features
+
+    - Thanks to David Siebörger who adapted an existing patch by Andrea
+      Veri to use Google reCAPTCHA v2 there is now the ability to add
+      reCAPTCHA to the listinfo subscribe form.  There are two new mm_cfg.py
+      settings for RECAPTCHA_SITE_KEY and RECAPTCHA_SECRET_KEY, the values
+      for which you obtain for your domain(s) from Google at
+      <https://www.google.com/recaptcha/admin>.
 
     - Thanks to Lindsay Haisley, there is a new bin/mailman-config command
       to display various information about this Mailman version and how it
