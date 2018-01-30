@@ -33,6 +33,8 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Fixed an i18n bug in the reCAPTCHA feature.  (LP: #1746189)
+
     - Added a few more environment variables to the list of those passed
       to CGIs to support an nginx/uwsgi configuration.  (LP #1744739)
 

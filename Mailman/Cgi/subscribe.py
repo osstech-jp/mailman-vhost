@@ -38,6 +38,7 @@ from Mailman.Logging.Syslog import syslog
 
 SLASH = '/'
 ERRORSEP = '\n\n<p>'
+COMMASPACE = ', '
 
 # Set up i18n
 _ = i18n._
@@ -148,10 +149,11 @@ def process_form(mlist, doc, cgidata, lang):
             captcha_response = json.load(httpresp)
             httpresp.close()
             if not captcha_response['success']:
-                results.append(_('reCAPTCHA validation failed: %s' %
-                    ', '.join(captcha_response['error-codes'])))
+                e_codes = COMMASPACE.join(captcha_response['error-codes'])
+                results.append(_('reCAPTCHA validation failed: %(e_codes)s'))
         except urllib2.URLError as e:
-            results.append(_('reCAPTCHA could not be validated: %s' % e.reason))
+            e_reason = e.reason
+            results.append(_('reCAPTCHA could not be validated: %(e_reason)s'))
 
     # Are we checking the hidden data?
     if mm_cfg.SUBSCRIBE_FORM_SECRET:
