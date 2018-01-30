@@ -1,7 +1,7 @@
 # -*- python -*-
 # -*- coding: euc-jp -*-
 
-# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@
 
 # [訳註] このファイルは、Mailman 2.1.25 配布物に含まれる
 #   Mailman/Defaults.py.in (launchpad.net での Bazaar リビジョンは
-#   1727) のコメント部分を日本語 (共通語) に翻訳したものです。
+#   1738) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
@@ -158,6 +158,12 @@ SUBSCRIBE_FORM_SECRET = None
 # 取得してから内容を送信してくるまで経過していなければいけない時間の
 # 最小値になります。0 を設定するとこのテストは行いません。
 SUBSCRIBE_FORM_MIN_TIME = seconds(5)
+
+# 購読用フォームをスパムボットから守るために Google reCAPTCHA を使用します。
+# 以下には https://www.google.com/recaptcha/admin で発行される reCAPTHA
+# サービス用の鍵ペアを設定する必要があります。
+RECAPTCHA_SITE_KEY = None
+RECAPTCHA_SECRET_KEY = None
 
 # インストール環境全体でのBANリスト。このインストール環境全体のすべての
 # リストで購読を禁止する電子メールアドレスおよび正規表現パターン(先頭文字
