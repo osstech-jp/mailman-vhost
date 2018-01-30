@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.23\n"
-"POT-Creation-Date: Tue Jan 30 17:13:37 2018\n"
+"POT-Creation-Date: Tue Jan 30 08:13:26 2018\n"
 "PO-Revision-Date: 2016-08-28 01:26+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
@@ -248,7 +248,7 @@ msgstr "管理者"
 #: Mailman/Cgi/edithtml.py:86 Mailman/Cgi/listinfo.py:56
 #: Mailman/Cgi/options.py:98 Mailman/Cgi/private.py:108
 #: Mailman/Cgi/rmlist.py:75 Mailman/Cgi/roster.py:59
-#: Mailman/Cgi/subscribe.py:66
+#: Mailman/Cgi/subscribe.py:67
 msgid "No such list <em>%(safelistname)s</em>"
 msgstr "<em>%(safelistname)s</em>というリストはありません"
 
@@ -257,8 +257,8 @@ msgstr "<em>%(safelistname)s</em>というリストはありません"
 #: Mailman/Cgi/listinfo.py:68 Mailman/Cgi/options.py:117
 #: Mailman/Cgi/private.py:125 Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72
 #: Mailman/Cgi/roster.py:146 Mailman/Cgi/roster.py:147
-#: Mailman/Cgi/subscribe.py:54 Mailman/Cgi/subscribe.py:65
-#: Mailman/Cgi/subscribe.py:80
+#: Mailman/Cgi/subscribe.py:55 Mailman/Cgi/subscribe.py:66
+#: Mailman/Cgi/subscribe.py:81
 msgid "Error"
 msgstr "エラー"
 
@@ -267,7 +267,7 @@ msgstr "エラー"
 #: Mailman/Cgi/listinfo.py:69 Mailman/Cgi/options.py:81
 #: Mailman/Cgi/options.py:118 Mailman/Cgi/private.py:126
 #: Mailman/Cgi/rmlist.py:49 Mailman/Cgi/roster.py:73
-#: Mailman/Cgi/subscribe.py:81
+#: Mailman/Cgi/subscribe.py:82
 msgid "Invalid options to CGI script."
 msgstr "CGI のオプションが無効です."
 
@@ -2947,7 +2947,7 @@ msgstr "<b>取り消し</b>てリスト管理へ戻る"
 msgid "Delete this list"
 msgstr "このリストを削除"
 
-#: Mailman/Cgi/roster.py:48 Mailman/Cgi/subscribe.py:55
+#: Mailman/Cgi/roster.py:48 Mailman/Cgi/subscribe.py:56
 msgid "Invalid options to CGI script"
 msgstr "CGIスクリプトのオプションが無効です"
 
@@ -2955,51 +2955,51 @@ msgstr "CGIスクリプトのオプションが無効です"
 msgid "%(realname)s roster authentication failed."
 msgstr "%(realname)s 会員名簿 認証に失敗"
 
-#: Mailman/Cgi/subscribe.py:127
+#: Mailman/Cgi/subscribe.py:128
 msgid "You must supply a valid email address."
 msgstr "有効なメールアドレスを入力してください."
 
-#: Mailman/Cgi/subscribe.py:151
-msgid "reCAPTCHA validation failed: %s"
-msgstr "reCAPTCHA による検証に失敗しました: %s"
+#: Mailman/Cgi/subscribe.py:153
+msgid "reCAPTCHA validation failed: %(e_codes)s"
+msgstr "reCAPTCHA による検証に失敗しました: %(e_codes)s"
 
-#: Mailman/Cgi/subscribe.py:154
-msgid "reCAPTCHA could not be validated: %s"
-msgstr "reCAPTCHAによる検証動作を行えませんでした: %s"
+#: Mailman/Cgi/subscribe.py:156
+msgid "reCAPTCHA could not be validated: %(e_reason)s"
+msgstr "reCAPTCHA による検証動作を行えませんでした: %(e_reason)s"
 
-#: Mailman/Cgi/subscribe.py:179
+#: Mailman/Cgi/subscribe.py:181
 msgid "The form is too old.  Please GET it again."
 msgstr "フォームが古すぎます。再取得してください。"
 
-#: Mailman/Cgi/subscribe.py:182
+#: Mailman/Cgi/subscribe.py:184
 msgid "Please take a few seconds to fill out the form before submitting it."
 msgstr "もう少し時間をかけてフォームを入力してから送信してください。"
 
-#: Mailman/Cgi/subscribe.py:185
+#: Mailman/Cgi/subscribe.py:187
 msgid "The hidden token didn't match.  Did your IP change?"
 msgstr "隠しトークンが一致しません。IPアドレスが変わっていませんか?"
 
-#: Mailman/Cgi/subscribe.py:188
+#: Mailman/Cgi/subscribe.py:190
 msgid "There was no hidden token in your submission or it was corrupted."
 msgstr "フォーム入力に隠しトークンがないかあるいは壊れています。"
 
-#: Mailman/Cgi/subscribe.py:189
+#: Mailman/Cgi/subscribe.py:191
 msgid "You must GET the form before submitting it."
 msgstr "フォームを送信する前にページを取得する必要があります。"
 
-#: Mailman/Cgi/subscribe.py:193
+#: Mailman/Cgi/subscribe.py:195
 msgid "You may not subscribe a list to itself!"
 msgstr "リストの投稿アドレスをそのリストに入会させてはいけません!"
 
-#: Mailman/Cgi/subscribe.py:201
+#: Mailman/Cgi/subscribe.py:203
 msgid "If you supply a password, you must confirm it."
 msgstr "パスワードを入力する場合は, 確認入力が必要です."
 
-#: Mailman/Cgi/subscribe.py:203
+#: Mailman/Cgi/subscribe.py:205
 msgid "Your passwords did not match."
 msgstr "パスワードが一致しません."
 
-#: Mailman/Cgi/subscribe.py:237
+#: Mailman/Cgi/subscribe.py:239
 msgid ""
 "Your subscription request has been received, and will soon be acted upon.\n"
 "Depending on the configuration of this mailing list, your subscription "
@@ -3013,7 +3013,7 @@ msgstr ""
 "申請内容確認のメールをお送りするか, あるいはリスト司会者が申請を承認します.\n"
 "確認が必要なときは, 操作方法を書いた確認メールをお送りします."
 
-#: Mailman/Cgi/subscribe.py:251
+#: Mailman/Cgi/subscribe.py:253
 msgid ""
 "The email address you supplied is banned from this\n"
 "        mailing list.  If you think this restriction is erroneous, please\n"
@@ -3023,14 +3023,14 @@ msgstr ""
 "この入会制限が誤登録によるものと思われる場合は\n"
 "次のリスト管理者宛にご連絡ください: %(listowner)s"
 
-#: Mailman/Cgi/subscribe.py:255
+#: Mailman/Cgi/subscribe.py:257
 msgid ""
 "The email address you supplied is not valid.  (E.g. it must contain an\n"
 "`@'.)"
 msgstr ""
 "入力されたメールアドレスの形式が正しくありません. (たとえば `@' がないなど.)"
 
-#: Mailman/Cgi/subscribe.py:259
+#: Mailman/Cgi/subscribe.py:261
 msgid ""
 "Your subscription is not allowed because the email address you gave is\n"
 "insecure."
@@ -3038,7 +3038,7 @@ msgstr ""
 "入力されたメールアドレスにはセキュリティ上の問題があるため, \n"
 "入会申請は受け付けられませんでした."
 
-#: Mailman/Cgi/subscribe.py:267
+#: Mailman/Cgi/subscribe.py:269
 msgid ""
 "Confirmation from your email address is required, to prevent anyone from\n"
 "subscribing you without permission.  Instructions are being sent to you at\n"
@@ -3050,7 +3050,7 @@ msgstr ""
 "%(email)s 宛に送信するメールの指示に従ってください.\n"
 "本人による入会申請の確認がなければ入会できませんのでご注意ください."
 
-#: Mailman/Cgi/subscribe.py:279
+#: Mailman/Cgi/subscribe.py:281
 msgid ""
 "Your subscription request was deferred because %(x)s.  Your request has "
 "been\n"
@@ -3062,15 +3062,15 @@ msgstr ""
 "申請をリスト司会者に転送しましたので, 司会者がメールを受け取った後, \n"
 "申請に関する決定をメールで通知します."
 
-#: Mailman/Cgi/subscribe.py:286 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:288 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "既に会員になっています."
 
-#: Mailman/Cgi/subscribe.py:300
+#: Mailman/Cgi/subscribe.py:302
 msgid "Mailman privacy alert"
 msgstr "Mailmanからのプライバシー警告"
 
-#: Mailman/Cgi/subscribe.py:301
+#: Mailman/Cgi/subscribe.py:303
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3101,15 +3101,15 @@ msgstr ""
 "シーについての懸念があれば\n"
 "%(listowner)s 宛のメールでリスト管理者にご相談ください.\n"
 
-#: Mailman/Cgi/subscribe.py:320
+#: Mailman/Cgi/subscribe.py:322
 msgid "This list does not support digest delivery."
 msgstr "このリストでは「まとめ読み」はできません."
 
-#: Mailman/Cgi/subscribe.py:322
+#: Mailman/Cgi/subscribe.py:324
 msgid "This list only supports digest delivery."
 msgstr "まとめ読み専用リストです."
 
-#: Mailman/Cgi/subscribe.py:329
+#: Mailman/Cgi/subscribe.py:331
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "%(realname)s への入会手続きが完了しました."
 
