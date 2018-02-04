@@ -21,7 +21,6 @@
 # No lock needed in this script, because we don't change data.
 
 import os
-import re
 import cgi
 import time
 
@@ -246,14 +245,13 @@ def list_listinfo(mlist, lang):
     replacements['<mm-fullname-box>'] = mlist.FormatBox('fullname', size=30)
     # If reCAPTCHA is enabled, display its user interface
     if mm_cfg.RECAPTCHA_SITE_KEY:
-        rlang = re.sub('_', '-', lang)
         replacements['<mm-recaptcha-ui>'] = (
             """<tr><td>&nbsp;</td><td>
             <script src="https://www.google.com/recaptcha/api.js?hl=%s">
             </script>
             <div class="g-recaptcha" data-sitekey="%s"></div>
             </td></tr>"""
-            % (rlang, mm_cfg.RECAPTCHA_SITE_KEY))
+            % (lang, mm_cfg.RECAPTCHA_SITE_KEY))
     else:
         replacements['<mm-recaptcha-ui>'] = ''
 
