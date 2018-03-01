@@ -5,6 +5,13 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.27 (xx-xxx-xxxx)
+
+  Bug fixes and other patches
+
+    - A Python 2.7 dependency introduced with the reCAPTCHA feature in 2.1.26
+      has been removed.  (LP: #1752658)
+
 2.1.26 (04-Feb-2018)
 
   Security

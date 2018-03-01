@@ -151,7 +151,7 @@ def process_form(mlist, doc, cgidata, lang):
             if not captcha_response['success']:
                 e_codes = COMMASPACE.join(captcha_response['error-codes'])
                 results.append(_('reCAPTCHA validation failed: %(e_codes)s'))
-        except urllib2.URLError as e:
+        except urllib2.URLError, e:
             e_reason = e.reason
             results.append(_('reCAPTCHA could not be validated: %(e_reason)s'))
 
