@@ -7,6 +7,11 @@ Here is a history of user visible changes to Mailman.
 
 2.1.27 (xx-xxx-xxxx)
 
+  Security
+
+    - Existing protections against malicious listowners injecting evil
+      scripts into listinfo pages have had a few more checks added.
+
   Bug fixes and other patches
 
     - Bad values in a list's topics will no longer break everything that
