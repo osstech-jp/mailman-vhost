@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -803,8 +803,16 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             self.reply_to_address = ''
             self.reply_goes_to_list = 0
         # Legacy topics may have bad regular expressions in their patterns
+        # Also, someone may have broken topics with, e.g., config_list.
         goodtopics = []
-        for name, pattern, desc, emptyflag in self.topics:
+        for value in self.topics:
+            try:
+                name, pattern, desc, emptyflag = value
+            except ValueError:
+                # This value is not a 4-tuple. Just log and drop it.
+                syslog('error', 'Bad topic "%s" for list: %s',
+                       value, self.internal_name())
+                continue
             try:
                 orpattern = OR.join(pattern.splitlines())
                 re.compile(orpattern)
