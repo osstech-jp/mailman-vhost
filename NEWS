@@ -9,6 +9,9 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Bad values in a list's topics will no longer break everything that
+      might instantiate the list.  (LP: #1754516)
+
     - A Python 2.7 dependency introduced with the reCAPTCHA feature in 2.1.26
       has been removed.  (LP: #1752658)
 
