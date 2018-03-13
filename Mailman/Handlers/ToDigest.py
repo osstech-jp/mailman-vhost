@@ -72,10 +72,9 @@ def to_cset_out(text, lcset):
     # Convert text from unicode or lcset to output cset.
     ocset = Charset(lcset).get_output_charset() or lcset
     if isinstance(text, unicode):
-        return text.encode(ocset, errors='replace')
+        return text.encode(ocset, 'replace')
     else:
-        return text.decode(lcset, errors='replace').encode(ocset,
-                                                           errors='replace')
+        return text.decode(lcset, 'replace').encode(ocset, 'replace')
 
 
 
