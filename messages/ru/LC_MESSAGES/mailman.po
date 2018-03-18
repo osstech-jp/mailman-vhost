@@ -4,12 +4,12 @@
 # Dmitri I GOULIAEV <dmitri.gouliaev@telkel.net>, 2002-2005
 # Valia V. Vaneeva <fattie@altlinux.ru>, 2004
 # Andrew Martynov <andrewm@inventa.ru> 2004
-# Danil Smirnov <danil@smirnov.la>, 2015, 2016.
+# Danil Smirnov <danil@smirnov.la>, 2015-2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1\n"
 "POT-Creation-Date: Tue Jan 30 08:13:26 2018\n"
-"PO-Revision-Date: 2016-02-08 16:09+0300\n"
+"PO-Revision-Date: 2018-03-18 13:49+0200\n"
 "Last-Translator: Danil Smirnov <danil@smirnov.la>\n"
 "Language-Team: Russian <danil@smirnov.la>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: Mailman/Archiver/HyperArch.py:123
 msgid "size not available"
@@ -1197,7 +1197,7 @@ msgid ""
 "%(list_name)s list has been changed to %(change_to)s.\n"
 msgstr ""
 "Адрес подписчика списка рассылки %(list_name)s\n"
-"был изменен с %(change_from)s на %(change_to)s."
+"был изменен с %(change_from)s на %(change_to)s.\n"
 
 #: Mailman/Cgi/admin.py:1595
 msgid "%(list_name)s address change notice."
@@ -2348,55 +2348,49 @@ msgstr "Шапка дайджеста"
 
 #: Mailman/Cgi/edithtml.py:53
 msgid "User notice of held post"
-msgstr ""
+msgstr "Уведомление пользователя о задержанном сообщении"
 
 #: Mailman/Cgi/edithtml.py:54
-#, fuzzy
 msgid "User notice of held subscription"
-msgstr "Список моих подписок"
+msgstr "Уведомление пользователя о подписке на рассмотрении модератора"
 
 #: Mailman/Cgi/edithtml.py:55
 msgid "Notice of post refused by moderator"
-msgstr ""
+msgstr "Уведомление пользователя о сообщении, отклоненном модератором"
 
 #: Mailman/Cgi/edithtml.py:56
 msgid "Invitation to join list"
-msgstr ""
+msgstr "Приглашение к подписке на лист рассылки"
 
 #: Mailman/Cgi/edithtml.py:57
-#, fuzzy
 msgid "Request to confirm subscription"
-msgstr "Список моих подписок"
+msgstr "Запрос о подтверждении подписки"
 
 #: Mailman/Cgi/edithtml.py:58
-#, fuzzy
 msgid "Request to confirm unsubscription"
-msgstr "Подтвердите запрос на удаление подписки"
+msgstr "Звпрос о подтверждении отписки"
 
 #: Mailman/Cgi/edithtml.py:59
 msgid "User notice of autoresponse limit"
-msgstr ""
+msgstr "Уведомление пользователя о достижении лимита сообщений автоответчику"
 
 #: Mailman/Cgi/edithtml.py:60
-#, fuzzy
 msgid "User post acknowledgement"
-msgstr "Подтверждение доставки в список рассылки %(realname)s"
+msgstr "Уведомление о доставке сообщения в список рассылки"
 
 #: Mailman/Cgi/edithtml.py:61
 msgid "Subscription disabled by bounce warning"
-msgstr ""
+msgstr "Подписка приостановлена из-за ошибок доставки "
 
 #: Mailman/Cgi/edithtml.py:62
 msgid "Admin/moderator login page"
-msgstr ""
+msgstr "Страница входа администратора/модератора"
 
 #: Mailman/Cgi/edithtml.py:63
-#, fuzzy
 msgid "Private archive login page"
-msgstr "Ошибка доступа к закрытому архиву"
+msgstr "Страница входа в приватный архив сообщений"
 
 #: Mailman/Cgi/edithtml.py:64
-#, fuzzy
 msgid "On demand password reminder"
 msgstr "Отправлять ежемесячные напоминания паролей?"
 
@@ -3110,11 +3104,11 @@ msgstr "Укажите корректный адрес электронной п
 
 #: Mailman/Cgi/subscribe.py:153
 msgid "reCAPTCHA validation failed: %(e_codes)s"
-msgstr ""
+msgstr "Ошибка проверки reCAPTCHA: %(e_codes)s"
 
 #: Mailman/Cgi/subscribe.py:156
 msgid "reCAPTCHA could not be validated: %(e_reason)s"
-msgstr ""
+msgstr "Проверка reCAPTCHA не удалась: %(e_reason)s"
 
 #: Mailman/Cgi/subscribe.py:181
 msgid "The form is too old.  Please GET it again."
@@ -8779,9 +8773,8 @@ msgid "-------------- next part --------------\n"
 msgstr "----------- следующая часть -----------\n"
 
 #: Mailman/Handlers/SpamDetect.py:64
-#, fuzzy
 msgid "Header matched regexp: %(pattern)s"
-msgstr "Заблокированный адрес (подходит под шаблон %(pattern)s)"
+msgstr "Заголовок подходит под шаблон: %(pattern)s"
 
 #: Mailman/Handlers/SpamDetect.py:126
 msgid ""
@@ -11018,6 +11011,8 @@ msgid ""
 "Show basic statistics about, and build options for this\n"
 "installation of Mailman. Requires python 2."
 msgstr ""
+"Вывод общей статистики и параметров сборки\n"
+"для этой установки Mailman. Требуется python 2."
 
 #: bin/mailmanctl:20
 msgid ""
@@ -13390,7 +13385,6 @@ msgstr ""
 "        указанные списки рассылки.\n"
 
 #: cron/senddigests:20
-#, fuzzy
 msgid ""
 "Dispatch digests for lists w/pending messages and digest_send_periodic set.\n"
 "\n"
@@ -13411,23 +13405,27 @@ msgid ""
 "        Don't send the digest for the given list.  May be repeated to skip\n"
 "        multiple lists.\n"
 msgstr ""
-"Разослать дайджесты для списков рассылки, у которых есть сообщения в очереди "
-"и\n"
-"установлен параметр digest_send_periodic.\n"
+"Разослать дайджесты для списков рассылки, у которых есть сообщения в "
+"очереди\n"
+"и установлен параметр digest_send_periodic.\n"
 "\n"
 "Запуск: %(PROGRAM)s [параметры]\n"
 "\n"
 "Параметры:\n"
-"\n"
-"    --help\n"
-"    -h\n"
+"    -h / --help\n"
 "        Вывести подсказку и завершить работу.\n"
-"    -l listname\n"
+"\n"
+"    -l имя_списка_рассылки\n"
 "    --listname=имя_списка_рассылки\n"
 "        Разослать дайджесты только для указанного списка рассылки, если ни\n"
 "        одного списка рассылки не указано, разослать дайджесты для всех "
 "списков\n"
-"        рассылки на сервере.\n"
+"        рассылки на сервере. Параметр можно указывать несколько раз.\n"
+"\n"
+"    -e имя_списка_рассылки\n"
+"    --exceptlist имя_списка_рассылки\n"
+"        Не отправлять дайджесты в указанный список рассылки.\n"
+"        Параметр можно указывать несколько раз.\n"
 
 #~ msgid "The message headers matched a filter rule"
 #~ msgstr "Заголовки сообщения совпали с правилами фильтра"

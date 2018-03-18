@@ -12,6 +12,10 @@ Here is a history of user visible changes to Mailman.
     - Existing protections against malicious listowners injecting evil
       scripts into listinfo pages have had a few more checks added.
 
+  i18n
+
+    - The Russian translation has been updated by Danil Smirnov.
+
   Bug fixes and other patches
 
     - A Python 2.7 dependency introduced in the ToDigests handler in Mailman
