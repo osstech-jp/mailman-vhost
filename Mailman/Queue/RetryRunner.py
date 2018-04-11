@@ -1,4 +1,4 @@
-# Copyright (C) 2003 by the Free Software Foundation, Inc.
+# Copyright (C) 2003-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -37,7 +37,10 @@ class RetryRunner(Runner):
         self.__outq = Switchboard(mm_cfg.OUTQUEUE_DIR)
 
     def _dispose(self, mlist, msg, msgdata):
-        # Move it to the out queue for another retry
+        # Move it to the out queue for another retry if it's time.
+        deliver_after = msgdata.get('deliver_after', 0)
+        if time.time() < deliver_after:
+            return True
         self.__outq.enqueue(msg, msgdata)
         return False
 
