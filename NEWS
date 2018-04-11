@@ -18,6 +18,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - The reimplementation of DELIVERY_RETRY_WAIT in 2.1.26 could cause extra
+      dequeueing and requeueing in the out queue by OutgoingRunner.  This is
+      fixed.  (LP: #1762871)
+
     - A Python 2.7 dependency introduced in the ToDigests handler in Mailman
       2.1.24 has been removed.  (LP: #1755317)
 
