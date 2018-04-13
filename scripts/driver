@@ -1,6 +1,6 @@
 # -*- python -*-
 
-# Copyright (C) 1998-2013 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -143,7 +143,8 @@ def print_traceback(logfp=None):
         traceback = None
     try:
         from Mailman.mm_cfg import VERSION
-    except ImportError:
+    except:
+        # There could be any exception if mm_cfg.py is not valid python.
         VERSION = '&lt;undetermined&gt;'
 
     # Write to the log file first.
@@ -182,7 +183,7 @@ a description of what happened.  Thanks!
         print '''<p>Please inform the webmaster for this site of this
 problem.  Printing of traceback and other system information has been
 explicitly inhibited, but the webmaster can find this information in the
-Mailman error logs.'''
+Mailman error logs or the web server logs.'''
 
 
 
