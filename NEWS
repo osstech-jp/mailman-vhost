@@ -18,6 +18,10 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Some messages from bin/arch were not issued in the charset of the system
+      locale when DISABLE_COMMAND_LOCALE_CSET is No.  Thanks to Yasuhito
+      FUTATSUKI this is now fixed.  (LP: #1768892)
+
     - The message displayed in the browser when accessing a Mailman CGI when
       mm_cfg.py can't be imported due to some exception other than ImportError
       has been improved.  (LP: #1760506)
