@@ -20,7 +20,7 @@ from Mailman import mm_cfg
 from Mailman import Errors
 from Mailman.Mailbox import ArchiverMailbox
 from Mailman.Logging.Syslog import syslog
-from Mailman.i18n import _
+from Mailman.i18n import _, C_
 
 # True/False
 try:
@@ -295,7 +295,7 @@ class T:
             if errno != 2:
                 raise os.error, errdata
             else:
-                self.message(_('Creating archive directory ') + self.basedir)
+                self.message(C_('Creating archive directory ') + self.basedir)
                 omask = os.umask(0)
                 try:
                     os.mkdir(self.basedir, self.DIRMODE)
@@ -307,7 +307,7 @@ class T:
             if not reload:
                 raise IOError
             f = open(os.path.join(self.basedir, 'pipermail.pck'), 'r')
-            self.message(_('Reloading pickled archive state'))
+            self.message(C_('Reloading pickled archive state'))
             d = pickle.load(f)
             f.close()
             for key, value in d.items():
@@ -334,7 +334,7 @@ class T:
         self.update_TOC = 0
         self.write_TOC()
         # Save the collective state
-        self.message(_('Pickling archive state into ')
+        self.message(C_('Pickling archive state into ')
                      + os.path.join(self.basedir, 'pipermail.pck'))
         self.database.close()
         del self.database
@@ -446,7 +446,7 @@ class T:
     # dirtied or not.
     def update_archive(self, archive):
         self.archive = archive
-        self.message(_("Updating index files for archive [%(archive)s]"))
+        self.message(C_("Updating index files for archive [%(archive)s]"))
         arcdir = os.path.join(self.basedir, archive)
         self.__set_parameters(archive)
 
@@ -479,7 +479,7 @@ class T:
         self._restore_stdout()
 
     def _update_thread_index(self, archive, arcdir):
-        self.message(_("  Thread"))
+        self.message(C_("  Thread"))
         self._open_index_file_as_stdout(arcdir, "thread")
         self.type = 'Thread'
         self.write_index_header()
@@ -590,7 +590,7 @@ class T:
                 # It was an unparseable message
                 continue
             msgid = m.get('message-id', 'n/a')
-            self.message(_('#%(counter)05d %(msgid)s'))
+            self.message(C_('#%(counter)05d %(msgid)s'))
             a = self._makeArticle(m, self.sequence)
             self.sequence += 1
             self.add_article(a)

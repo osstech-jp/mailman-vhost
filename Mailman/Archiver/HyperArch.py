@@ -57,6 +57,7 @@ from Mailman import Site
 
 # Set up i18n.  Assume the current language has already been set in the caller.
 _ = i18n._
+C_ = i18n.C_
 
 gzip = None
 if mm_cfg.GZIP_ARCHIVE_TXT_FILES:
@@ -914,7 +915,7 @@ class HyperArchive(pipermail.T):
         A string can be returned if the list only contains one entry,
         and the empty list is legal."""
         res = self.dateToVolName(float(article.date))
-        self.message(_("figuring article archives\n"))
+        self.message(C_("figuring article archives\n"))
         self.message(res + "\n")
         return res
 
@@ -1052,7 +1053,7 @@ class HyperArchive(pipermail.T):
         self.depth=0
         print self.html_head()
         if not self.THREADLAZY and self.type=='Thread':
-            self.message(_("Computing threaded index\n"))
+            self.message(C_("Computing threaded index\n"))
             self.updateThreadedIndex()
 
     def write_index_footer(self):
@@ -1317,14 +1318,14 @@ class HyperArchive(pipermail.T):
     def update_article(self, arcdir, article, prev, next):
         seq = article.sequence
         filename = os.path.join(arcdir, article.filename)
-        self.message(_('Updating HTML for article %(seq)s'))
+        self.message(C_('Updating HTML for article %(seq)s'))
         try:
             f = open(filename)
             article.loadbody_fromHTML(f)
             f.close()
         except IOError, e:
             if e.errno <> errno.ENOENT: raise
-            self.message(_('article file %(filename)s is missing!'))
+            self.message(C_('article file %(filename)s is missing!'))
         article.prev = prev
         article.next = next
         omask = os.umask(002)
