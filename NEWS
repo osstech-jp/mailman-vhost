@@ -39,6 +39,10 @@ Here is a history of user visible changes to Mailman.
     - A Python 2.7 dependency introduced with the reCAPTCHA feature in 2.1.26
       has been removed.  (LP: #1752658)
 
+    - The reCAPTCHA feature requires JavaScript.  If JavaScript is not enabled,
+      a message will be displayed on the subscribe form that JavaScript is
+      required.  (LP: #1769374)
+
 2.1.26 (04-Feb-2018)
 
   Security
