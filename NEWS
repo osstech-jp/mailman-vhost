@@ -18,6 +18,14 @@ Here is a history of user visible changes to Mailman.
 
   Bug fixes and other patches
 
+    - Some messages from bin/arch were not issued in the charset of the system
+      locale when DISABLE_COMMAND_LOCALE_CSET is No.  Thanks to Yasuhito
+      FUTATSUKI this is now fixed.  (LP: #1768892)
+
+    - The message displayed in the browser when accessing a Mailman CGI when
+      mm_cfg.py can't be imported due to some exception other than ImportError
+      has been improved.  (LP: #1760506)
+
     - The reimplementation of DELIVERY_RETRY_WAIT in 2.1.26 could cause extra
       dequeueing and requeueing in the out queue by OutgoingRunner.  This is
       fixed.  (LP: #1762871)
@@ -30,6 +38,10 @@ Here is a history of user visible changes to Mailman.
 
     - A Python 2.7 dependency introduced with the reCAPTCHA feature in 2.1.26
       has been removed.  (LP: #1752658)
+
+    - The reCAPTCHA feature requires JavaScript.  If JavaScript is not enabled,
+      a message will be displayed on the subscribe form that JavaScript is
+      required.  (LP: #1769374)
 
 2.1.26 (04-Feb-2018)
 
