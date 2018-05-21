@@ -1,4 +1,4 @@
-# Copyright (C) 2002-2015 by the Free Software Foundation, Inc.
+# Copyright (C) 2002-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -173,6 +173,7 @@ class GUIBase:
                 doc.addError(_('Invalid value for variable: %(property)s'))
             # This is the parent of MMBadEmailError and MMHostileAddress
             except Errors.EmailAddressError, error:
+                error = Utils.websafe(str(error))
                 doc.addError(
                     _('Bad email address for option %(property)s: %(error)s'))
             else:
