@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue Jan 30 08:13:26 2018\n"
+"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
 "PO-Revision-Date: 2005-04-14 10:45+0300\n"
 "Last-Translator: Anti Veeranna <duke@linux.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -13,157 +13,157 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: Mailman/Archiver/HyperArch.py:123
+#: Mailman/Archiver/HyperArch.py:124
 msgid "size not available"
 msgstr "suurus pole teada"
 
-#: Mailman/Archiver/HyperArch.py:129
+#: Mailman/Archiver/HyperArch.py:130
 msgid " %(size)i bytes "
 msgstr " %(size)i baiti "
 
-#: Mailman/Archiver/HyperArch.py:275 Mailman/Archiver/pipermail.py:181
+#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:181
 #: Mailman/Archiver/pipermail.py:182
 msgid "No subject"
 msgstr "teemat pole"
 
-#: Mailman/Archiver/HyperArch.py:291 Mailman/Archiver/HyperArch.py:294
-#: Mailman/Archiver/HyperArch.py:425 Mailman/Archiver/HyperArch.py:483
-#: Mailman/Archiver/HyperArch.py:592 Mailman/Archiver/HyperArch.py:1066
-#: Mailman/Archiver/HyperArch.py:1195
+#: Mailman/Archiver/HyperArch.py:292 Mailman/Archiver/HyperArch.py:295
+#: Mailman/Archiver/HyperArch.py:426 Mailman/Archiver/HyperArch.py:484
+#: Mailman/Archiver/HyperArch.py:593 Mailman/Archiver/HyperArch.py:1067
+#: Mailman/Archiver/HyperArch.py:1196
 msgid " at "
 msgstr " at"
 
-#: Mailman/Archiver/HyperArch.py:512
+#: Mailman/Archiver/HyperArch.py:513
 #, fuzzy
 msgid "Previous message (by thread):"
 msgstr "Eelmine kiri:"
 
-#: Mailman/Archiver/HyperArch.py:534
+#: Mailman/Archiver/HyperArch.py:535
 #, fuzzy
 msgid "Next message (by thread):"
 msgstr "Järgmine kiri:"
 
-#: Mailman/Archiver/HyperArch.py:707 Mailman/Archiver/HyperArch.py:743
+#: Mailman/Archiver/HyperArch.py:708 Mailman/Archiver/HyperArch.py:744
 msgid "thread"
 msgstr "lõim"
 
-#: Mailman/Archiver/HyperArch.py:708 Mailman/Archiver/HyperArch.py:744
+#: Mailman/Archiver/HyperArch.py:709 Mailman/Archiver/HyperArch.py:745
 msgid "subject"
 msgstr "teema"
 
-#: Mailman/Archiver/HyperArch.py:709 Mailman/Archiver/HyperArch.py:745
+#: Mailman/Archiver/HyperArch.py:710 Mailman/Archiver/HyperArch.py:746
 msgid "author"
 msgstr "autor"
 
-#: Mailman/Archiver/HyperArch.py:710 Mailman/Archiver/HyperArch.py:746
+#: Mailman/Archiver/HyperArch.py:711 Mailman/Archiver/HyperArch.py:747
 msgid "date"
 msgstr "kuupäev"
 
-#: Mailman/Archiver/HyperArch.py:782
+#: Mailman/Archiver/HyperArch.py:783
 msgid "<P>Currently, there are no archives. </P>"
 msgstr "<P>Arhiiv on tühi. </P>"
 
-#: Mailman/Archiver/HyperArch.py:820
+#: Mailman/Archiver/HyperArch.py:821
 msgid "Gzip'd Text%(sz)s"
 msgstr "Gzip pakitud tekst %(sz)s"
 
-#: Mailman/Archiver/HyperArch.py:825
+#: Mailman/Archiver/HyperArch.py:826
 msgid "Text%(sz)s"
 msgstr "Tekst%(sz)s"
 
-#: Mailman/Archiver/HyperArch.py:915
+#: Mailman/Archiver/HyperArch.py:916
 msgid "figuring article archives\n"
 msgstr "sõnumi lisamine arhiivi\n"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "April"
 msgstr "Aprill"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "February"
 msgstr "Veebruar"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "January"
 msgstr "Jaanuar"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "March"
 msgstr "Märts"
 
-#: Mailman/Archiver/HyperArch.py:926
+#: Mailman/Archiver/HyperArch.py:927
 msgid "August"
 msgstr "August"
 
-#: Mailman/Archiver/HyperArch.py:926
+#: Mailman/Archiver/HyperArch.py:927
 msgid "July"
 msgstr "Juuli"
 
-#: Mailman/Archiver/HyperArch.py:926
+#: Mailman/Archiver/HyperArch.py:927
 msgid "June"
 msgstr "Juuni"
 
-#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:137
+#: Mailman/Archiver/HyperArch.py:927 Mailman/i18n.py:137
 msgid "May"
 msgstr "Mai"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "December"
 msgstr "Detsember"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "November"
 msgstr "November"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "October"
 msgstr "Oktoober"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "September"
 msgstr "September"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "First"
 msgstr "Esimene"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "Fourth"
 msgstr "Neljas"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "Second"
 msgstr "Teine"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "Third"
 msgstr "Kolmas"
 
-#: Mailman/Archiver/HyperArch.py:937
+#: Mailman/Archiver/HyperArch.py:938
 msgid "%(ord)s quarter %(year)i"
 msgstr "%(year)i %(ord)s kvartal"
 
-#: Mailman/Archiver/HyperArch.py:944
+#: Mailman/Archiver/HyperArch.py:945
 msgid "%(month)s %(year)i"
 msgstr "%(month)s %(year)i"
 
-#: Mailman/Archiver/HyperArch.py:949
+#: Mailman/Archiver/HyperArch.py:950
 msgid "The Week Of Monday %(day)i %(month)s %(year)i"
 msgstr "Nädal, mis algab esmaspäeval %(day)i %(month)s %(year)i "
 
-#: Mailman/Archiver/HyperArch.py:953
+#: Mailman/Archiver/HyperArch.py:954
 msgid "%(day)i %(month)s %(year)i"
 msgstr "%(day)i %(month)s %(year)i"
 
-#: Mailman/Archiver/HyperArch.py:1053
+#: Mailman/Archiver/HyperArch.py:1054
 msgid "Computing threaded index\n"
 msgstr "Lõimede indeksi tekitamine\n"
 
-#: Mailman/Archiver/HyperArch.py:1318
+#: Mailman/Archiver/HyperArch.py:1319
 msgid "Updating HTML for article %(seq)s"
 msgstr "Kirja %(seq)s HTMLi uuendamine"
 
-#: Mailman/Archiver/HyperArch.py:1325
+#: Mailman/Archiver/HyperArch.py:1326
 msgid "article file %(filename)s is missing!"
 msgstr "artiklifail %(filename)s on puudu!"
 
@@ -225,7 +225,7 @@ msgstr " Viimase tagastuse kuupäevs %(date)s"
 
 #: Mailman/Bouncer.py:329 Mailman/Deliverer.py:146
 #: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:435
-#: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:251
+#: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:250
 #: Mailman/ListAdmin.py:223
 msgid "(no subject)"
 msgstr "(teemat pole)"
@@ -243,7 +243,7 @@ msgid "Administrator"
 msgstr "omaniku"
 
 #: Mailman/Cgi/admin.py:80 Mailman/Cgi/admindb.py:121 Mailman/Cgi/confirm.py:62
-#: Mailman/Cgi/edithtml.py:86 Mailman/Cgi/listinfo.py:56
+#: Mailman/Cgi/edithtml.py:86 Mailman/Cgi/listinfo.py:55
 #: Mailman/Cgi/options.py:98 Mailman/Cgi/private.py:108
 #: Mailman/Cgi/rmlist.py:75 Mailman/Cgi/roster.py:59
 #: Mailman/Cgi/subscribe.py:67
@@ -252,7 +252,7 @@ msgstr "Sellist listi pole: <em>%(safelistname)s</em>"
 
 #: Mailman/Cgi/admin.py:95 Mailman/Cgi/admindb.py:136 Mailman/Cgi/confirm.py:80
 #: Mailman/Cgi/create.py:50 Mailman/Cgi/edithtml.py:103
-#: Mailman/Cgi/listinfo.py:68 Mailman/Cgi/options.py:117
+#: Mailman/Cgi/listinfo.py:67 Mailman/Cgi/options.py:117
 #: Mailman/Cgi/private.py:125 Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72
 #: Mailman/Cgi/roster.py:146 Mailman/Cgi/roster.py:147
 #: Mailman/Cgi/subscribe.py:55 Mailman/Cgi/subscribe.py:66
@@ -262,7 +262,7 @@ msgstr "Viga"
 
 #: Mailman/Cgi/admin.py:96 Mailman/Cgi/admindb.py:137 Mailman/Cgi/confirm.py:81
 #: Mailman/Cgi/create.py:51 Mailman/Cgi/edithtml.py:104
-#: Mailman/Cgi/listinfo.py:69 Mailman/Cgi/options.py:81
+#: Mailman/Cgi/listinfo.py:68 Mailman/Cgi/options.py:81
 #: Mailman/Cgi/options.py:118 Mailman/Cgi/private.py:126
 #: Mailman/Cgi/rmlist.py:49 Mailman/Cgi/roster.py:73
 #: Mailman/Cgi/subscribe.py:82
@@ -275,7 +275,7 @@ msgid "Authorization failed."
 msgstr "Autoriseerimine ebaõnnestus."
 
 #: Mailman/Cgi/admin.py:212 Mailman/Cgi/admindb.py:236
-#: Mailman/Cgi/edithtml.py:170 Mailman/Cgi/options.py:338
+#: Mailman/Cgi/edithtml.py:170 Mailman/Cgi/options.py:324
 msgid "The form lifetime has expired. (request forgery check)"
 msgstr ""
 
@@ -292,7 +292,7 @@ msgstr ""
 "kasutada siis lülitage vähemalt üks neist valikutest sisse."
 
 #: Mailman/Cgi/admin.py:222 Mailman/Cgi/admin.py:230 Mailman/Cgi/admin.py:237
-#: Mailman/Cgi/admin.py:1648 Mailman/Gui/GUIBase.py:208
+#: Mailman/Cgi/admin.py:1648 Mailman/Gui/GUIBase.py:209
 msgid "Warning: "
 msgstr "Hoiatus: "
 
@@ -321,11 +321,11 @@ msgstr ""
 msgid "%(hostname)s mailing lists - Admin Links"
 msgstr "%(hostname)s listid - Administreerimine"
 
-#: Mailman/Cgi/admin.py:294 Mailman/Cgi/listinfo.py:122
+#: Mailman/Cgi/admin.py:294 Mailman/Cgi/listinfo.py:121
 msgid "Welcome!"
 msgstr "Tere tulemast!"
 
-#: Mailman/Cgi/admin.py:297 Mailman/Cgi/listinfo.py:125
+#: Mailman/Cgi/admin.py:297 Mailman/Cgi/listinfo.py:124
 msgid "Mailman"
 msgstr "Mailman"
 
@@ -379,16 +379,16 @@ msgstr "listi infoleht"
 msgid "<p>(Send questions and comments to "
 msgstr "<p>(Küsimused ja kommentaarid saada "
 
-#: Mailman/Cgi/admin.py:335 Mailman/Cgi/listinfo.py:157 cron/mailpasswds:216
+#: Mailman/Cgi/admin.py:335 Mailman/Cgi/listinfo.py:156 cron/mailpasswds:216
 msgid "List"
 msgstr "List"
 
 #: Mailman/Cgi/admin.py:336 Mailman/Cgi/admin.py:604
-#: Mailman/Cgi/listinfo.py:158
+#: Mailman/Cgi/listinfo.py:157
 msgid "Description"
 msgstr "Kirjeldus"
 
-#: Mailman/Cgi/admin.py:342 Mailman/Cgi/listinfo.py:164 bin/list_lists:130
+#: Mailman/Cgi/admin.py:342 Mailman/Cgi/listinfo.py:163 bin/list_lists:130
 msgid "[no description available]"
 msgstr "[kirjeldus puudub]"
 
@@ -538,7 +538,7 @@ msgstr "Teema nimetus:"
 msgid "Regexp:"
 msgstr "Regulaaravaldis:"
 
-#: Mailman/Cgi/admin.py:755 Mailman/Cgi/options.py:1139
+#: Mailman/Cgi/admin.py:755 Mailman/Cgi/options.py:1141
 msgid "Description:"
 msgstr "Kirjeldus:"
 
@@ -699,7 +699,7 @@ msgid "nodupes"
 msgstr "väldi koopiat"
 
 #: Mailman/Cgi/admin.py:1033 Mailman/Cgi/admin.py:1099
-#: Mailman/Cgi/options.py:382
+#: Mailman/Cgi/options.py:384
 msgid "digest"
 msgstr "kokkuvõte"
 
@@ -731,7 +731,7 @@ msgstr "T"
 msgid "notmetoo"
 msgstr "v.a. autor"
 
-#: Mailman/Cgi/admin.py:1075 Mailman/Cgi/options.py:380
+#: Mailman/Cgi/admin.py:1075 Mailman/Cgi/options.py:382
 msgid "nomail"
 msgstr "peatatud"
 
@@ -852,7 +852,7 @@ msgstr "Lisada aadressid kohe liikmete nimekirja või saata kõigepealt kutsed?"
 msgid "Invite"
 msgstr "Saata kutsed"
 
-#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/listinfo.py:200
+#: Mailman/Cgi/admin.py:1220 Mailman/Cgi/listinfo.py:199
 msgid "Subscribe"
 msgstr "Lisada kohe"
 
@@ -1079,7 +1079,7 @@ msgstr "Vigane meiliaadress"
 msgid "Hostile address (illegal characters)"
 msgstr "Keelatud märke sisaldav meiliaadress"
 
-#: Mailman/Cgi/admin.py:1495 bin/add_members:150 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1495 bin/add_members:175 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr ""
@@ -1743,8 +1743,8 @@ msgstr ""
 "\n"
 "<p>Või kliki<em>Tühista</em> kui ümber mõtlesid."
 
-#: Mailman/Cgi/confirm.py:503 Mailman/Cgi/options.py:849
-#: Mailman/Cgi/options.py:996 Mailman/Cgi/options.py:1006
+#: Mailman/Cgi/confirm.py:503 Mailman/Cgi/options.py:851
+#: Mailman/Cgi/options.py:998 Mailman/Cgi/options.py:1008
 msgid "Unsubscribe"
 msgstr "Lahku listist"
 
@@ -2390,11 +2390,11 @@ msgstr "HTML muutmata."
 msgid "HTML successfully updated."
 msgstr "HTML salvestatud."
 
-#: Mailman/Cgi/listinfo.py:90
+#: Mailman/Cgi/listinfo.py:89
 msgid "%(hostname)s Mailing Lists"
 msgstr "Listid serveris %(hostname)s"
 
-#: Mailman/Cgi/listinfo.py:128
+#: Mailman/Cgi/listinfo.py:127
 msgid ""
 "<p>There currently are no publicly-advertised\n"
 "            %(mailmanlink)s mailing lists on %(hostname)s."
@@ -2402,7 +2402,7 @@ msgstr ""
 "<p>Serveris %(hostname)s ei ole ühtegi avalikku\n"
 "            %(mailmanlink)s listi."
 
-#: Mailman/Cgi/listinfo.py:132
+#: Mailman/Cgi/listinfo.py:131
 msgid ""
 "<p>Below is a listing of all the public mailing lists on\n"
 "            %(hostname)s.  Click on a list name to get more information "
@@ -2416,11 +2416,11 @@ msgstr ""
 "tellimiseks,\n"
 "     tellimuse katkestamiseks või tellimuse omaduste muutmiseks."
 
-#: Mailman/Cgi/listinfo.py:138
+#: Mailman/Cgi/listinfo.py:137
 msgid "right"
 msgstr "right"
 
-#: Mailman/Cgi/listinfo.py:141
+#: Mailman/Cgi/listinfo.py:140
 msgid ""
 " To visit the general information page for an unadvertised list,\n"
 "        open a URL similar to this one, but with a '/' and the %(adj)s\n"
@@ -2430,11 +2430,11 @@ msgstr ""
 "Nimekirjast puuduva listi üldinfo lehe vaatamiseks lisage URLi lõppu '/' ja "
 "%(adj)s listi nimi. <p>Listi omanikud pääsevad "
 
-#: Mailman/Cgi/listinfo.py:146
+#: Mailman/Cgi/listinfo.py:145
 msgid "the list admin overview page"
 msgstr "selle lingi kaudu "
 
-#: Mailman/Cgi/listinfo.py:147
+#: Mailman/Cgi/listinfo.py:146
 msgid ""
 " to find the management interface for your list.\n"
 "         <p>If you are having trouble using the lists, please contact "
@@ -2442,11 +2442,11 @@ msgstr ""
 "oma listi seadistama.\n"
 "<p>Küsimuste ja kommentaaridega pöörduge "
 
-#: Mailman/Cgi/listinfo.py:236
+#: Mailman/Cgi/listinfo.py:235
 msgid "Edit Options"
 msgstr "Muuda seadeid"
 
-#: Mailman/Cgi/listinfo.py:243 Mailman/Cgi/options.py:961
+#: Mailman/Cgi/listinfo.py:242 Mailman/Cgi/options.py:963
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "Vali keel"
@@ -2468,17 +2468,17 @@ msgstr "Aadress puudub"
 msgid "Illegal Email Address: %(safeuser)s"
 msgstr "Viga aadressis: %(safeuser)s"
 
-#: Mailman/Cgi/options.py:179 Mailman/Cgi/options.py:247
-#: Mailman/Cgi/options.py:271 Mailman/Cgi/private.py:163
+#: Mailman/Cgi/options.py:179 Mailman/Cgi/options.py:233
+#: Mailman/Cgi/options.py:257 Mailman/Cgi/private.py:163
 msgid "No such member: %(safeuser)s."
 msgstr "Sellist liiget pole: %(safeuser)s."
 
-#: Mailman/Cgi/options.py:218
+#: Mailman/Cgi/options.py:204
 #, fuzzy
 msgid "If you are a list member, a confirmation email has been sent."
 msgstr "Kinnitusmeil on saadetud."
 
-#: Mailman/Cgi/options.py:219
+#: Mailman/Cgi/options.py:205
 #, fuzzy
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
@@ -2487,58 +2487,58 @@ msgstr ""
 "Teie tellimuse lõpetamise soovd edastatati listi omanikule\n"
 "läbivaatuseks."
 
-#: Mailman/Cgi/options.py:261
+#: Mailman/Cgi/options.py:247
 #, fuzzy
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
 msgstr "Sinu parool saadeti sulle meiliga."
 
-#: Mailman/Cgi/options.py:304
+#: Mailman/Cgi/options.py:290
 msgid "Authentication failed."
 msgstr "Autoriseerimine ebaõnnestus."
 
-#: Mailman/Cgi/options.py:353
+#: Mailman/Cgi/options.py:355
 msgid "A reminder of your password has been emailed to you."
 msgstr "Sinu parool saadeti sulle meiliga."
 
-#: Mailman/Cgi/options.py:360
+#: Mailman/Cgi/options.py:362
 msgid ""
 "The list administrator may not view the other\n"
 "            subscriptions for this user."
 msgstr ""
 
-#: Mailman/Cgi/options.py:361 Mailman/Cgi/options.py:410
-#: Mailman/Cgi/options.py:538 Mailman/Cgi/options.py:761
+#: Mailman/Cgi/options.py:363 Mailman/Cgi/options.py:412
+#: Mailman/Cgi/options.py:540 Mailman/Cgi/options.py:763
 msgid "Note: "
 msgstr ""
 
-#: Mailman/Cgi/options.py:366
+#: Mailman/Cgi/options.py:368
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
 msgstr "%(safeuser)s listide tellimused serveris %(hostname)s"
 
-#: Mailman/Cgi/options.py:369
+#: Mailman/Cgi/options.py:371
 msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
 msgstr "Kliki mõnel lingil, et muuta oma listi tellimuse seadistusi."
 
-#: Mailman/Cgi/options.py:407
+#: Mailman/Cgi/options.py:409
 msgid ""
 "The list administrator may not change the names\n"
 "            or addresses for this user's other subscriptions.  However, the\n"
 "            subscription for this mailing list has been changed."
 msgstr ""
 
-#: Mailman/Cgi/options.py:430
+#: Mailman/Cgi/options.py:432
 msgid "Addresses did not match!"
 msgstr "Aadressid ei olnud ühesugused!"
 
-#: Mailman/Cgi/options.py:435
+#: Mailman/Cgi/options.py:437
 msgid "You are already using that email address"
 msgstr "Sa ju kasutad juba seda aadressi"
 
-#: Mailman/Cgi/options.py:447
+#: Mailman/Cgi/options.py:449
 msgid ""
 "The new address you requested %(newaddr)s is already a member of the\n"
 "%(listname)s mailing list, however you have also requested a global change "
@@ -2551,31 +2551,31 @@ msgstr ""
 "igal pool, siis peale sinu kinnitust, vahetatakse aadress\n"
 "ära kõigis listides mille liige %(safeuser)s preagu on."
 
-#: Mailman/Cgi/options.py:456
+#: Mailman/Cgi/options.py:458
 msgid "The new address is already a member: %(newaddr)s"
 msgstr "%(newaddr)s on juba selle listi tellja."
 
-#: Mailman/Cgi/options.py:462
+#: Mailman/Cgi/options.py:464
 msgid "Addresses may not be blank"
 msgstr "Aadressid ei tohi olla tühjad"
 
-#: Mailman/Cgi/options.py:476
+#: Mailman/Cgi/options.py:478
 msgid "A confirmation message has been sent to %(newaddr)s. "
 msgstr "Kinnitus saadeti aadressile %(newaddr)s."
 
-#: Mailman/Cgi/options.py:485
+#: Mailman/Cgi/options.py:487
 msgid "Bad email address provided"
 msgstr "Vigane meiliaadress"
 
-#: Mailman/Cgi/options.py:487
+#: Mailman/Cgi/options.py:489
 msgid "Illegal email address provided"
 msgstr "Vigane meiliaadress"
 
-#: Mailman/Cgi/options.py:489
+#: Mailman/Cgi/options.py:491
 msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s on juba selle listi tellinud."
 
-#: Mailman/Cgi/options.py:492
+#: Mailman/Cgi/options.py:494
 #, fuzzy
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
@@ -2586,11 +2586,11 @@ msgstr ""
 "see on eksitus, siis võtke palun ühendust listi omanikuga aadressil \n"
 "%(owneraddr)s."
 
-#: Mailman/Cgi/options.py:503
+#: Mailman/Cgi/options.py:505
 msgid "Member name successfully changed. "
 msgstr "Liikme nimi on vahetatud. "
 
-#: Mailman/Cgi/options.py:513
+#: Mailman/Cgi/options.py:515
 #, fuzzy
 msgid ""
 "The list administrator may not change the\n"
@@ -2599,15 +2599,15 @@ msgstr ""
 "Listi administraator on üksikkirjade saatmise keelanud ja seetõttu\n"
 "ei saa sa neid tellida. Kõik teised sinu tehtud valikud aga salvestati."
 
-#: Mailman/Cgi/options.py:522
+#: Mailman/Cgi/options.py:524
 msgid "Passwords may not be blank"
 msgstr "Paroolid ei tohi olla tühjad"
 
-#: Mailman/Cgi/options.py:527
+#: Mailman/Cgi/options.py:529
 msgid "Passwords did not match!"
 msgstr "Paroolid ei olnud ühesugused!"
 
-#: Mailman/Cgi/options.py:535
+#: Mailman/Cgi/options.py:537
 #, fuzzy
 msgid ""
 "The list administrator may not change the\n"
@@ -2617,12 +2617,12 @@ msgstr ""
 "Listi administraator on üksikkirjade saatmise keelanud ja seetõttu\n"
 "ei saa sa neid tellida. Kõik teised sinu tehtud valikud aga salvestati."
 
-#: Mailman/Cgi/options.py:552 Mailman/Commands/cmd_password.py:83
+#: Mailman/Cgi/options.py:554 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
 msgid "Password successfully changed."
 msgstr "Parool on edukalt vahetatud."
 
-#: Mailman/Cgi/options.py:561
+#: Mailman/Cgi/options.py:563
 msgid ""
 "You must confirm your unsubscription request by turning\n"
 "                on the checkbox below the <em>Unsubscribe</em> button.  You\n"
@@ -2632,11 +2632,11 @@ msgstr ""
 "<em>Lõpeta tellimus</em> nupu all. Tellimus ei ole veel\n"
 "lõpetatud!"
 
-#: Mailman/Cgi/options.py:600
+#: Mailman/Cgi/options.py:602
 msgid "Unsubscription results"
 msgstr "Tellimuse lõpetamine"
 
-#: Mailman/Cgi/options.py:604
+#: Mailman/Cgi/options.py:606
 msgid ""
 "Your unsubscription request has been received and\n"
 "            forwarded on to the list moderators for approval.  You will\n"
@@ -2647,7 +2647,7 @@ msgstr ""
 "läbivaatuseks. Niipea kui ta on oma otsuse teinud,teatatakse\n"
 "sellest sulle."
 
-#: Mailman/Cgi/options.py:609
+#: Mailman/Cgi/options.py:611
 msgid ""
 "You have been successfully unsubscribed from the\n"
 "            mailing list %(fqdn_listname)s.  If you were receiving digest\n"
@@ -2661,7 +2661,7 @@ msgstr ""
 "Küsimustega pöördu listi omaniku poole aadressil\n"
 "%(owneraddr)s"
 
-#: Mailman/Cgi/options.py:758
+#: Mailman/Cgi/options.py:760
 msgid ""
 "The list administrator may not change the\n"
 "                options for this user's other subscriptions.  However the\n"
@@ -2669,7 +2669,7 @@ msgid ""
 "                changed."
 msgstr ""
 
-#: Mailman/Cgi/options.py:768
+#: Mailman/Cgi/options.py:770
 msgid ""
 "The list administrator has disabled digest delivery for\n"
 "            this list, so your delivery option has not been set.  However "
@@ -2679,7 +2679,7 @@ msgstr ""
 "Listi omanik on kokkuvõtete koostamise keelanud ja seetõttu\n"
 "ei saa sa neid tellida. Kõik teised valikud aga salvestati."
 
-#: Mailman/Cgi/options.py:772
+#: Mailman/Cgi/options.py:774
 msgid ""
 "The list administrator has disabled non-digest delivery\n"
 "            for this list, so your delivery option has not been set.  "
@@ -2689,63 +2689,63 @@ msgstr ""
 "Listi administraator on üksikkirjade saatmise keelanud ja seetõttu\n"
 "ei saa sa neid tellida. Kõik teised sinu tehtud valikud aga salvestati."
 
-#: Mailman/Cgi/options.py:776
+#: Mailman/Cgi/options.py:778
 msgid "You have successfully set your options."
 msgstr "Sinu seadistused on salvestatud."
 
-#: Mailman/Cgi/options.py:779
+#: Mailman/Cgi/options.py:781
 msgid "You may get one last digest."
 msgstr "Võimalik, et saate veel ühe viimase kokkuvõtte."
 
-#: Mailman/Cgi/options.py:851
+#: Mailman/Cgi/options.py:853
 msgid "<em>Yes, I really want to unsubscribe</em>"
 msgstr "<em>Jah, ma tahan tellimust katkestada</em>"
 
-#: Mailman/Cgi/options.py:855
+#: Mailman/Cgi/options.py:857
 msgid "Change My Password"
 msgstr "Vaheta parooli"
 
-#: Mailman/Cgi/options.py:858
+#: Mailman/Cgi/options.py:860
 msgid "List my other subscriptions"
 msgstr "Näita mulle mu teisi tellimusi"
 
-#: Mailman/Cgi/options.py:865
+#: Mailman/Cgi/options.py:867
 msgid "Email My Password To Me"
 msgstr "Meili mulle mu parool"
 
-#: Mailman/Cgi/options.py:867
+#: Mailman/Cgi/options.py:869
 msgid "password"
 msgstr "parool"
 
-#: Mailman/Cgi/options.py:869
+#: Mailman/Cgi/options.py:871
 msgid "Log out"
 msgstr "Logi välja"
 
-#: Mailman/Cgi/options.py:871
+#: Mailman/Cgi/options.py:873
 msgid "Submit My Changes"
 msgstr "Salvesta"
 
-#: Mailman/Cgi/options.py:883
+#: Mailman/Cgi/options.py:885
 msgid "days"
 msgstr "päeva"
 
-#: Mailman/Cgi/options.py:885
+#: Mailman/Cgi/options.py:887
 msgid "day"
 msgstr "päev"
 
-#: Mailman/Cgi/options.py:886
+#: Mailman/Cgi/options.py:888
 msgid "%(days)d %(units)s"
 msgstr "%(days)d %(units)s"
 
-#: Mailman/Cgi/options.py:892
+#: Mailman/Cgi/options.py:894
 msgid "Change My Address and Name"
 msgstr "Muuda minu aadressi ja nime"
 
-#: Mailman/Cgi/options.py:918
+#: Mailman/Cgi/options.py:920
 msgid "<em>No topics defined</em>"
 msgstr "<em>Ühtegi teemat pole määratud</em>"
 
-#: Mailman/Cgi/options.py:926
+#: Mailman/Cgi/options.py:928
 msgid ""
 "\n"
 "You are subscribed to this list with the case-preserved address\n"
@@ -2755,19 +2755,19 @@ msgstr ""
 "See list on teil tellitud järgmise tõstutundliku (??) aadressiga\n"
 "<em>%(cpuser)s</em>."
 
-#: Mailman/Cgi/options.py:942
+#: Mailman/Cgi/options.py:944
 msgid "%(realname)s list: member options login page"
 msgstr "List %(realname)s: Logi sisse"
 
-#: Mailman/Cgi/options.py:943
+#: Mailman/Cgi/options.py:945
 msgid "email address and "
 msgstr "meiliaadress ja "
 
-#: Mailman/Cgi/options.py:946
+#: Mailman/Cgi/options.py:948
 msgid "%(realname)s list: member options for user %(safeuser)s"
 msgstr "Listi %(realname)s seadistused liikmele %(safeuser)s"
 
-#: Mailman/Cgi/options.py:972
+#: Mailman/Cgi/options.py:974
 msgid ""
 "In order to change your membership option, you must\n"
 "    first log in by giving your %(extra)smembership password in the section\n"
@@ -2795,19 +2795,19 @@ msgstr ""
 "brauseril lubama sellest saidist küpsiseid vastu võtta. Vastasel korral\n"
 "muudatusi ei salvestata."
 
-#: Mailman/Cgi/options.py:986
+#: Mailman/Cgi/options.py:988
 msgid "Email address:"
 msgstr "E-posti aadress:"
 
-#: Mailman/Cgi/options.py:990
+#: Mailman/Cgi/options.py:992
 msgid "Password:"
 msgstr "Parool:"
 
-#: Mailman/Cgi/options.py:992
+#: Mailman/Cgi/options.py:994
 msgid "Log in"
 msgstr "Logi sisse"
 
-#: Mailman/Cgi/options.py:1000
+#: Mailman/Cgi/options.py:1002
 msgid ""
 "By clicking on the <em>Unsubscribe</em> button, a\n"
 "    confirmation message will be emailed to you.  This message will have a\n"
@@ -2820,11 +2820,11 @@ msgstr ""
 "kklikkima (kinnitada saab ka meili teel, vastav juhend sisaldub samuti\n"
 "selles kirjas)."
 
-#: Mailman/Cgi/options.py:1008
+#: Mailman/Cgi/options.py:1010
 msgid "Password reminder"
 msgstr "Parooli meeldetuletus"
 
-#: Mailman/Cgi/options.py:1012
+#: Mailman/Cgi/options.py:1014
 msgid ""
 "By clicking on the <em>Remind</em> button, your\n"
 "    password will be emailed to you."
@@ -2832,27 +2832,27 @@ msgstr ""
 "Kui klikid nupul <em>Tuleta meelde</em>, saadetakse sinu\n"
 "parool su lle meiliga."
 
-#: Mailman/Cgi/options.py:1015
+#: Mailman/Cgi/options.py:1017
 msgid "Remind"
 msgstr "Tuleta meelde"
 
-#: Mailman/Cgi/options.py:1115 Mailman/ListAdmin.py:225
+#: Mailman/Cgi/options.py:1117 Mailman/ListAdmin.py:225
 msgid "<missing>"
 msgstr "<puudub>"
 
-#: Mailman/Cgi/options.py:1126
+#: Mailman/Cgi/options.py:1128
 msgid "Requested topic is not valid: %(topicname)s"
 msgstr "Soovitud teema on vigane: %(topicname)s"
 
-#: Mailman/Cgi/options.py:1131
+#: Mailman/Cgi/options.py:1133
 msgid "Topic filter details"
 msgstr "Teemafiltri info"
 
-#: Mailman/Cgi/options.py:1134
+#: Mailman/Cgi/options.py:1136
 msgid "Name:"
 msgstr "Nimi:"
 
-#: Mailman/Cgi/options.py:1136
+#: Mailman/Cgi/options.py:1138
 msgid "Pattern (as regexp):"
 msgstr "Mall (regulaaravaldis):"
 
@@ -4931,11 +4931,11 @@ msgstr "Kokkuvõtet polnud võimalik saata."
 msgid "Invalid value for variable: %(property)s"
 msgstr "Vigane väärtus muutujale: %(property)s"
 
-#: Mailman/Gui/GUIBase.py:177
+#: Mailman/Gui/GUIBase.py:178
 msgid "Bad email address for option %(property)s: %(error)s"
 msgstr "Vigane meiliaadress seades %(property)s: %(error)s"
 
-#: Mailman/Gui/GUIBase.py:203
+#: Mailman/Gui/GUIBase.py:204
 msgid ""
 "The following illegal substitution variables were\n"
 "                found in the <code>%(property)s</code> string:\n"
@@ -4949,7 +4949,7 @@ msgstr ""
 "<code>%(bad)s</code>\n"
 "<p>Listi töö võib olla häiritud kuni probleemi kõrvaldamiseni."
 
-#: Mailman/Gui/GUIBase.py:217
+#: Mailman/Gui/GUIBase.py:218
 msgid ""
 "Your <code>%(property)s</code> string appeared to\n"
 "                    have some correctable problems in its new value.\n"
@@ -5884,7 +5884,18 @@ msgstr ""
 "suuri ja väikesi\n"
 "            tähti. "
 
-#: Mailman/Gui/General.py:570
+#: Mailman/Gui/General.py:566
+#, fuzzy
+msgid ""
+"<b>host_name</b> attribute not changed!\n"
+"                It must be a valid domain name."
+msgstr ""
+"<b>real_name</b> muutust ei salvestatud!\n"
+"            See peab olema identne listi nimega, varieerida tohib ainult "
+"suuri ja väikesi\n"
+"            tähti. "
+
+#: Mailman/Gui/General.py:578
 msgid ""
 "You cannot add a Reply-To: to an explicit\n"
 "            address if that address is blank.  Resetting these values."
@@ -8181,39 +8192,39 @@ msgstr ""
 msgid "Message rejected by filter rule match"
 msgstr "Filter pidas kirja kinni"
 
-#: Mailman/Handlers/ToDigest.py:174
+#: Mailman/Handlers/ToDigest.py:173
 msgid "%(realname)s Digest, Vol %(volume)d, Issue %(issue)d"
 msgstr "%(realname)s kokkuvõte, köide %(volume)d, number %(issue)d"
 
-#: Mailman/Handlers/ToDigest.py:220
+#: Mailman/Handlers/ToDigest.py:219
 msgid "digest header"
 msgstr "kokkuvõtte päis"
 
-#: Mailman/Handlers/ToDigest.py:223
+#: Mailman/Handlers/ToDigest.py:222
 msgid "Digest Header"
 msgstr "Kokkuvõtte päis"
 
-#: Mailman/Handlers/ToDigest.py:236
+#: Mailman/Handlers/ToDigest.py:235
 msgid "Today's Topics:\n"
 msgstr "Tänased teemad:\n"
 
-#: Mailman/Handlers/ToDigest.py:316
+#: Mailman/Handlers/ToDigest.py:315
 msgid "Today's Topics (%(msgcount)d messages)"
 msgstr "Tänased teemad (%(msgcount)d kirja)"
 
-#: Mailman/Handlers/ToDigest.py:342
+#: Mailman/Handlers/ToDigest.py:341
 msgid "[Message discarded by content filter]"
 msgstr "[Sisufilter kustutas kirja]"
 
-#: Mailman/Handlers/ToDigest.py:370
+#: Mailman/Handlers/ToDigest.py:369
 msgid "digest footer"
 msgstr "kokkuvõtte jalus"
 
-#: Mailman/Handlers/ToDigest.py:373 Mailman/Handlers/ToDigest.py:381
+#: Mailman/Handlers/ToDigest.py:372 Mailman/Handlers/ToDigest.py:380
 msgid "Digest Footer"
 msgstr "Kokkuvõtte jalus"
 
-#: Mailman/Handlers/ToDigest.py:388
+#: Mailman/Handlers/ToDigest.py:387
 msgid "End of "
 msgstr "Lõpp"
 
@@ -8362,36 +8373,36 @@ msgstr "%(listname)s listi tellimiseks on tarvis sinu kinnitust"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr " %(listname)s listist lahkumiseks on tarvis sinu kinnitust"
 
-#: Mailman/MailList.py:929 Mailman/MailList.py:1405
+#: Mailman/MailList.py:937 Mailman/MailList.py:1413
 msgid " from %(remote)s"
 msgstr " from %(remote)s"
 
-#: Mailman/MailList.py:973
+#: Mailman/MailList.py:981
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "Listi %(realname)s tellimiseks on vaja toimetaja nõusolekut."
 
-#: Mailman/MailList.py:1048 bin/add_members:253
+#: Mailman/MailList.py:1056 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s tellimuse teavitus"
 
-#: Mailman/MailList.py:1067
+#: Mailman/MailList.py:1075
 msgid "unsubscriptions require moderator approval"
 msgstr "tellimuse lõpetamiseks on vaja omaniku nõusolekut."
 
-#: Mailman/MailList.py:1088
+#: Mailman/MailList.py:1096
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s tellimuse lõpetamise teavitus"
 
-#: Mailman/MailList.py:1249
+#: Mailman/MailList.py:1257
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s tellimuse lõpetamise teavitus"
 
-#: Mailman/MailList.py:1314
+#: Mailman/MailList.py:1322
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "Listi %(name)s tellimiseks on vaja listi omaniku nõusolekut."
 
-#: Mailman/MailList.py:1579
+#: Mailman/MailList.py:1587
 msgid "Last autoresponse notification for today"
 msgstr "Viimane automaatvastus tänaseks"
 
@@ -8577,7 +8588,7 @@ msgid ""
 msgstr ""
 "%(wday)s %(mon)s %(day)2i %(hh)02i:%(mm)02i:%(ss)02i %(tzname)s%(year)04i"
 
-#: bin/add_members:26
+#: bin/add_members:22
 #, fuzzy
 msgid ""
 "Add members to a list from the command line.\n"
@@ -8591,29 +8602,43 @@ msgid ""
 "    -r file\n"
 "        A file containing addresses of the members to be added, one\n"
 "        address per line.  This list of people become non-digest\n"
-"        members.  If file is `-', read addresses from stdin.  Note that\n"
-"        -n/--non-digest-members-file are deprecated synonyms for this "
-"option.\n"
+"        members.  If file is `-', read addresses from stdin.\n"
 "\n"
 "    --digest-members-file=file\n"
 "    -d file\n"
 "        Similar to above, but these people become digest members.\n"
 "\n"
+"    --invite\n"
+"    -i\n"
+"        Specify this if you only want to invite the users to a list\n"
+"        instead of subscribing them.\n"
+"\n"
+"    --invite-msg-file=file\n"
+"    -m file\n"
+"        This will prepend the message in the file to the invite email that\n"
+"        gets generated when --invite is set.\n"
+"\n"
 "    --welcome-msg=<y|n>\n"
 "    -w <y|n>\n"
 "        Set whether or not to send the list members a welcome message,\n"
-"        overriding whatever the list's `send_welcome_msg' setting is.\n"
+"        overriding whatever the list's `send_welcome_msg' setting is.  This\n"
+"        is ignored and the list's setting at the time of acceptance is used\n"
+"        if --invite is set.\n"
 "\n"
 "    --admin-notify=<y|n>\n"
 "    -a <y|n>\n"
 "        Set whether or not to send the list administrators a notification "
 "on\n"
 "        the success/failure of these subscriptions, overriding whatever the\n"
-"        list's `admin_notify_mchanges' setting is.\n"
+"        list's `admin_notify_mchanges' setting is.  This is ignored and the\n"
+"        list's setting at the time of acceptance is used if --invite is "
+"set.\n"
 "\n"
 "    --nomail\n"
 "    -n\n"
-"        Set the newly added members mail delivery to disabled by admin.\n"
+"        Set the newly added members mail delivery to disabled by admin.  "
+"This\n"
+"        is ignored if --invite is set.\n"
 "\n"
 "    --help\n"
 "    -h\n"
@@ -8673,45 +8698,54 @@ msgstr ""
 "tohib \n"
 "olla `-'.\n"
 
-#: bin/add_members:147
+#: bin/add_members:162 bin/add_members:172
 msgid "Already a member: %(member)s"
 msgstr "%(member)s on juba liige"
 
-#: bin/add_members:153
+#: bin/add_members:178
 msgid "Bad/Invalid email address: blank line"
 msgstr "Vigane meiliaadress: tühi rida"
 
-#: bin/add_members:155
+#: bin/add_members:180
 msgid "Bad/Invalid email address: %(member)s"
 msgstr "Vigane meiliaadress: %(member)s"
 
-#: bin/add_members:157
+#: bin/add_members:182
 msgid "Hostile address (illegal characters): %(member)s"
 msgstr "Aadress sisaldab keelatud märke: %(member)s"
 
-#: bin/add_members:159
+#: bin/add_members:185
+#, fuzzy
+msgid "Invited: %(member)s"
+msgstr "Liidetud: %(member)s"
+
+#: bin/add_members:187
 msgid "Subscribed: %(member)s"
 msgstr "Liidetud: %(member)s"
 
-#: bin/add_members:200
+#: bin/add_members:237
 msgid "Bad argument to -w/--welcome-msg: %(arg)s"
 msgstr "Vigane -w/--welcome-msg argument: %(arg)s"
 
-#: bin/add_members:207
+#: bin/add_members:244
 msgid "Bad argument to -a/--admin-notify: %(arg)s"
 msgstr "Vigane -a/--admin-notify argument: %(arg)s"
 
-#: bin/add_members:215
+#: bin/add_members:252
 msgid "Cannot read both digest and normal members from standard input."
 msgstr "Üksikirjade ja kokkuvõtete tellijaid ei saa korraga sisestada."
 
-#: bin/add_members:221 bin/config_list:110 bin/export.py:271 bin/find_member:97
+#: bin/add_members:256
+msgid "Setting invite-msg-file requires --invite."
+msgstr ""
+
+#: bin/add_members:261 bin/config_list:110 bin/export.py:271 bin/find_member:97
 #: bin/inject:91 bin/list_admins:90 bin/list_members:252 bin/sync_members:222
 #: cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "Selle nimega listi pole: %(listname)s"
 
-#: bin/add_members:241 bin/change_pw:159 bin/check_db:114 bin/discard:83
+#: bin/add_members:285 bin/change_pw:159 bin/check_db:114 bin/discard:83
 #: bin/sync_members:244 bin/update:302 bin/update:323 bin/update:577
 #: cron/bumpdigests:78
 msgid "Nothing to do."
