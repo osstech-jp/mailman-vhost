@@ -12,6 +12,13 @@ Here is a history of user visible changes to Mailman.
     - Existing protections against malicious listowners injecting evil
       scripts into listinfo pages have had a few more checks added.
 
+    - A few more error messages have had their values HTML escaped.
+
+  New Features
+
+    - An option has been added to bin/add_members to issue invitations
+      instead of immediately adding members.  (LP: #1773064)
+
   i18n
 
     - The Russian translation has been updated by Danil Smirnov.

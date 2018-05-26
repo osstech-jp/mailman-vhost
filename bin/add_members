@@ -1,6 +1,6 @@
 #! @PYTHON@
 #
-# Copyright (C) 1998-2016 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -15,10 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
-#
-# argv[1] should be the name of the list.
-# argv[2] should be the list of non-digested users.
-# argv[3] should be the list of digested users.
 
 # Make sure that the list of email addresses doesn't contain any comments,
 # like majordomo may throw in.  For now, you just have to remove them manually.
@@ -34,27 +30,40 @@ Options:
     -r file
         A file containing addresses of the members to be added, one
         address per line.  This list of people become non-digest
-        members.  If file is `-', read addresses from stdin.  Note that
-        -n/--non-digest-members-file are deprecated synonyms for this option.
+        members.  If file is `-', read addresses from stdin.
 
     --digest-members-file=file
     -d file
         Similar to above, but these people become digest members.
 
+    --invite
+    -i
+        Specify this if you only want to invite the users to a list
+        instead of subscribing them.
+
+    --invite-msg-file=file
+    -m file
+        This will prepend the message in the file to the invite email that
+        gets generated when --invite is set.
+
     --welcome-msg=<y|n>
     -w <y|n>
         Set whether or not to send the list members a welcome message,
-        overriding whatever the list's `send_welcome_msg' setting is.
+        overriding whatever the list's `send_welcome_msg' setting is.  This
+        is ignored and the list's setting at the time of acceptance is used
+        if --invite is set.
 
     --admin-notify=<y|n>
     -a <y|n>
         Set whether or not to send the list administrators a notification on
         the success/failure of these subscriptions, overriding whatever the
-        list's `admin_notify_mchanges' setting is.
+        list's `admin_notify_mchanges' setting is.  This is ignored and the
+        list's setting at the time of acceptance is used if --invite is set.
 
     --nomail
     -n
-        Set the newly added members mail delivery to disabled by admin.
+        Set the newly added members mail delivery to disabled by admin.  This
+        is ignored if --invite is set.
 
     --help
     -h
@@ -84,6 +93,7 @@ from Mailman import Errors
 from Mailman import Message
 from Mailman import MailList
 from Mailman import MemberAdaptor
+from Mailman.UserDesc import UserDesc
 
 _ = i18n._
 C_ = i18n.C_
@@ -117,6 +127,12 @@ def readfile(filename):
 
 
 
+def readmsgfile(filename):
+    lines = open(filename).read()
+    return lines
+
+
+
 class Tee:
     def __init__(self, outfp):
         self.__outfp = outfp
@@ -126,11 +142,8 @@ class Tee:
         self.__outfp.write(msg)
 
 
-class UserDesc: pass
-
-
 
-def addall(mlist, members, digest, ack, outfp, nomail):
+def addall(mlist, members, digest, ack, outfp, nomail, invite, invite_msg):
     tee = Tee(outfp)
     for member in members:
         userdesc = UserDesc()
@@ -138,11 +151,23 @@ def addall(mlist, members, digest, ack, outfp, nomail):
         userdesc.digest = digest
 
         try:
-            mlist.ApprovedAddMember(userdesc,
-                                    ack=ack,
-                                    admin_notif=False,
-                                    whence='bin/add_members',
-                                   )
+            if invite:
+                # These are needed for an invitation.
+                userdesc.password = Utils.MakeRandomPassword()
+                userdesc.language = mlist.preferred_language
+                # Don't forget the special invite hack.
+                userdesc.invitation = mlist.internal_name()
+                # InviteNewMember doesn't throw Errors.MMAlreadyAMember.
+                if mlist.isMember(userdesc.address):
+                    print >> tee, _('Already a member: %(member)s')
+                    continue
+                mlist.InviteNewMember(userdesc, invite_msg)
+            else:
+                mlist.ApprovedAddMember(userdesc,
+                                        ack=ack,
+                                        admin_notif=False,
+                                        whence='bin/add_members',
+                                       )
         except Errors.MMAlreadyAMember:
             print >> tee, _('Already a member: %(member)s')
         except Errors.MembershipIsBanned, pattern:
@@ -156,22 +181,28 @@ def addall(mlist, members, digest, ack, outfp, nomail):
         except Errors.MMHostileAddress:
             print >> tee, _('Hostile address (illegal characters): %(member)s')
         else:
-            print >> tee, _('Subscribed: %(member)s')
-            if nomail:
-                mlist.setDeliveryStatus(member, MemberAdaptor.BYADMIN)
+            if invite:
+                print >> tee, _('Invited: %(member)s')
+            else:
+                print >> tee, _('Subscribed: %(member)s')
+                if nomail:
+                    mlist.setDeliveryStatus(
+                        userdesc.address.lower(), MemberAdaptor.BYADMIN)
 
 
 
 def main():
     try:
         opts, args = getopt.getopt(sys.argv[1:],
-                                   'a:r:d:w:nh',
+                                   'a:r:d:w:im:nh',
                                    ['admin-notify=',
                                     'regular-members-file=',
                                     'digest-members-file=',
                                     'welcome-msg=',
+                                    'invite',
+                                    'invite-msg-file=',
                                     'nomail',
-                                    'help'])
+                                    'help',])
     except getopt.error, msg:
         usage(1, msg)
 
@@ -183,6 +214,8 @@ def main():
     dfile = None
     send_welcome_msg = None
     admin_notif = None
+    invite = False
+    invite_msg_file = None
     nomail = False
     for opt, arg in opts:
         if opt in ('-h', '--help'):
@@ -191,6 +224,10 @@ def main():
             dfile = arg
         elif opt in ('-r', '--regular-members-file'):
             nfile = arg
+        elif opt in ('-m', '--invite-msg-file'):
+            invite_msg_file = arg
+        elif opt in ('-i', '--invite'):
+            invite = True
         elif opt in ('-w', '--welcome-msg'):
             if arg.lower()[0] == 'y':
                 send_welcome_msg = 1
@@ -215,6 +252,9 @@ def main():
         usage(1, C_('Cannot read both digest and normal members '
                     'from standard input.'))
 
+    if not invite and invite_msg_file <> None:
+        usage(1, C_('Setting invite-msg-file requires --invite.'))
+
     try:
         mlist = MailList.MailList(listname)
     except Errors.MMUnknownListError:
@@ -237,16 +277,22 @@ def main():
         if nfile:
             nmembers = readfile(nfile)
 
+        invite_msg = ''
+        if invite_msg_file:
+            invite_msg = readmsgfile(invite_msg_file)
+
         if not dmembers and not nmembers:
             usage(0, C_('Nothing to do.'))
 
         s = StringIO()
         i18n.set_language(mlist.preferred_language)
         if nmembers:
-            addall(mlist, nmembers, 0, send_welcome_msg, s, nomail)
+            addall(mlist, nmembers, 0, send_welcome_msg, s, nomail, invite,
+                   invite_msg)
 
         if dmembers:
-            addall(mlist, dmembers, 1, send_welcome_msg, s, nomail)
+            addall(mlist, dmembers, 1, send_welcome_msg, s, nomail, invite,
+                   invite_msg)
 
         if admin_notif:
             realname = mlist.real_name

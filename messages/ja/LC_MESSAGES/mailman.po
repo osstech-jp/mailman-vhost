@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.23\n"
-"POT-Creation-Date: Wed Apr 11 18:40:25 2018\n"
+"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
 "PO-Revision-Date: 2016-08-28 01:26+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
@@ -17,155 +17,155 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.4\n"
 
-#: Mailman/Archiver/HyperArch.py:123
+#: Mailman/Archiver/HyperArch.py:124
 msgid "size not available"
 msgstr "サイズ情報なし"
 
-#: Mailman/Archiver/HyperArch.py:129
+#: Mailman/Archiver/HyperArch.py:130
 msgid " %(size)i bytes "
 msgstr " %(size)i バイト "
 
-#: Mailman/Archiver/HyperArch.py:275 Mailman/Archiver/pipermail.py:181
+#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:181
 #: Mailman/Archiver/pipermail.py:182
 msgid "No subject"
 msgstr "無題"
 
-#: Mailman/Archiver/HyperArch.py:291 Mailman/Archiver/HyperArch.py:294
-#: Mailman/Archiver/HyperArch.py:425 Mailman/Archiver/HyperArch.py:483
-#: Mailman/Archiver/HyperArch.py:592 Mailman/Archiver/HyperArch.py:1066
-#: Mailman/Archiver/HyperArch.py:1195
+#: Mailman/Archiver/HyperArch.py:292 Mailman/Archiver/HyperArch.py:295
+#: Mailman/Archiver/HyperArch.py:426 Mailman/Archiver/HyperArch.py:484
+#: Mailman/Archiver/HyperArch.py:593 Mailman/Archiver/HyperArch.py:1067
+#: Mailman/Archiver/HyperArch.py:1196
 msgid " at "
 msgstr " ＠ "
 
-#: Mailman/Archiver/HyperArch.py:512
+#: Mailman/Archiver/HyperArch.py:513
 msgid "Previous message (by thread):"
 msgstr "前の記事 (スレッド)"
 
-#: Mailman/Archiver/HyperArch.py:534
+#: Mailman/Archiver/HyperArch.py:535
 msgid "Next message (by thread):"
 msgstr "次の記事 (スレッド)"
 
-#: Mailman/Archiver/HyperArch.py:707 Mailman/Archiver/HyperArch.py:743
+#: Mailman/Archiver/HyperArch.py:708 Mailman/Archiver/HyperArch.py:744
 msgid "thread"
 msgstr "スレッド"
 
-#: Mailman/Archiver/HyperArch.py:708 Mailman/Archiver/HyperArch.py:744
+#: Mailman/Archiver/HyperArch.py:709 Mailman/Archiver/HyperArch.py:745
 msgid "subject"
 msgstr "件名"
 
-#: Mailman/Archiver/HyperArch.py:709 Mailman/Archiver/HyperArch.py:745
+#: Mailman/Archiver/HyperArch.py:710 Mailman/Archiver/HyperArch.py:746
 msgid "author"
 msgstr "発信者"
 
-#: Mailman/Archiver/HyperArch.py:710 Mailman/Archiver/HyperArch.py:746
+#: Mailman/Archiver/HyperArch.py:711 Mailman/Archiver/HyperArch.py:747
 msgid "date"
 msgstr "日付"
 
-#: Mailman/Archiver/HyperArch.py:782
+#: Mailman/Archiver/HyperArch.py:783
 msgid "<P>Currently, there are no archives. </P>"
 msgstr "<p>現在, 保存書庫はありません."
 
-#: Mailman/Archiver/HyperArch.py:820
+#: Mailman/Archiver/HyperArch.py:821
 msgid "Gzip'd Text%(sz)s"
 msgstr "Gzip圧縮テキスト %(sz)s"
 
-#: Mailman/Archiver/HyperArch.py:825
+#: Mailman/Archiver/HyperArch.py:826
 msgid "Text%(sz)s"
 msgstr "テキスト %(sz)s"
 
-#: Mailman/Archiver/HyperArch.py:915
+#: Mailman/Archiver/HyperArch.py:916
 msgid "figuring article archives\n"
 msgstr "保存書庫作成準備中\n"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "April"
 msgstr "4月"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "February"
 msgstr "2月"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "January"
 msgstr "1月"
 
-#: Mailman/Archiver/HyperArch.py:925
+#: Mailman/Archiver/HyperArch.py:926
 msgid "March"
 msgstr "3月"
 
-#: Mailman/Archiver/HyperArch.py:926
+#: Mailman/Archiver/HyperArch.py:927
 msgid "August"
 msgstr "8月"
 
-#: Mailman/Archiver/HyperArch.py:926
+#: Mailman/Archiver/HyperArch.py:927
 msgid "July"
 msgstr "7月"
 
-#: Mailman/Archiver/HyperArch.py:926
+#: Mailman/Archiver/HyperArch.py:927
 msgid "June"
 msgstr "6月"
 
-#: Mailman/Archiver/HyperArch.py:926 Mailman/i18n.py:137
+#: Mailman/Archiver/HyperArch.py:927 Mailman/i18n.py:137
 msgid "May"
 msgstr "5月"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "December"
 msgstr "12月"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "November"
 msgstr "11月"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "October"
 msgstr "10月"
 
-#: Mailman/Archiver/HyperArch.py:927
+#: Mailman/Archiver/HyperArch.py:928
 msgid "September"
 msgstr "9月"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "First"
 msgstr "第1"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "Fourth"
 msgstr "第4"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "Second"
 msgstr "第2"
 
-#: Mailman/Archiver/HyperArch.py:935
+#: Mailman/Archiver/HyperArch.py:936
 msgid "Third"
 msgstr "第3"
 
-#: Mailman/Archiver/HyperArch.py:937
+#: Mailman/Archiver/HyperArch.py:938
 msgid "%(ord)s quarter %(year)i"
 msgstr "%(year)i年%(ord)s四半期"
 
-#: Mailman/Archiver/HyperArch.py:944
+#: Mailman/Archiver/HyperArch.py:945
 msgid "%(month)s %(year)i"
 msgstr "%(year)i年%(month)s"
 
-#: Mailman/Archiver/HyperArch.py:949
+#: Mailman/Archiver/HyperArch.py:950
 msgid "The Week Of Monday %(day)i %(month)s %(year)i"
 msgstr "%(year)i年%(month)s%(day)i日(月曜日)の週"
 
-#: Mailman/Archiver/HyperArch.py:953
+#: Mailman/Archiver/HyperArch.py:954
 msgid "%(day)i %(month)s %(year)i"
 msgstr "%(year)i年%(month)s%(day)i日"
 
-#: Mailman/Archiver/HyperArch.py:1053
+#: Mailman/Archiver/HyperArch.py:1054
 msgid "Computing threaded index\n"
 msgstr "スレッド化索引を作成中\n"
 
-#: Mailman/Archiver/HyperArch.py:1318
+#: Mailman/Archiver/HyperArch.py:1319
 msgid "Updating HTML for article %(seq)s"
 msgstr "記事 %(seq)s 番のHTMLを更新中"
 
-#: Mailman/Archiver/HyperArch.py:1325
+#: Mailman/Archiver/HyperArch.py:1326
 msgid "article file %(filename)s is missing!"
 msgstr "記事ファイル %(filename)s がありません."
 
@@ -295,7 +295,7 @@ msgstr ""
 "メーリングリストは機能しません. "
 
 #: Mailman/Cgi/admin.py:222 Mailman/Cgi/admin.py:230 Mailman/Cgi/admin.py:237
-#: Mailman/Cgi/admin.py:1648 Mailman/Gui/GUIBase.py:208
+#: Mailman/Cgi/admin.py:1648 Mailman/Gui/GUIBase.py:209
 msgid "Warning: "
 msgstr "警告: "
 
@@ -1082,7 +1082,7 @@ msgstr "誤りまたは無効なメールアドレス"
 msgid "Hostile address (illegal characters)"
 msgstr "危険なアドレス (規則外の文字)"
 
-#: Mailman/Cgi/admin.py:1495 bin/add_members:150 bin/clone_member:136
+#: Mailman/Cgi/admin.py:1495 bin/add_members:175 bin/clone_member:136
 #: bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr "入会禁止アドレス (%(pattern)s に一致)"
@@ -4852,11 +4852,11 @@ msgstr "発送すべき, まとめ読みがありません."
 msgid "Invalid value for variable: %(property)s"
 msgstr "変数値が無効: %(property)s"
 
-#: Mailman/Gui/GUIBase.py:177
+#: Mailman/Gui/GUIBase.py:178
 msgid "Bad email address for option %(property)s: %(error)s"
 msgstr "%(property)s オプションのメールアドレスが間違っています: %(error)s"
 
-#: Mailman/Gui/GUIBase.py:203
+#: Mailman/Gui/GUIBase.py:204
 msgid ""
 "The following illegal substitution variables were\n"
 "                found in the <code>%(property)s</code> string:\n"
@@ -4869,7 +4869,7 @@ msgstr ""
 " <code>%(bad)s</code>\n"
 "<p>問題を修正するまでは, メーリングリストは正常に機能しません."
 
-#: Mailman/Gui/GUIBase.py:217
+#: Mailman/Gui/GUIBase.py:218
 msgid ""
 "Your <code>%(property)s</code> string appeared to\n"
 "                    have some correctable problems in its new value.\n"
@@ -8539,7 +8539,7 @@ msgstr " %(remote)s から"
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "%(realname)s への入会には司会者の承認が必要です"
 
-#: Mailman/MailList.py:1056 bin/add_members:253
+#: Mailman/MailList.py:1056 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s 入会通知"
 
@@ -8747,7 +8747,8 @@ msgstr ""
 "%(year)04i年 %(mon)s %(day)2i日 (%(wday)s) %(hh)02i:%(mm)02i:%(ss)02i "
 "%(tzname)s"
 
-#: bin/add_members:26
+#: bin/add_members:22
+#, fuzzy
 msgid ""
 "Add members to a list from the command line.\n"
 "\n"
@@ -8760,29 +8761,43 @@ msgid ""
 "    -r file\n"
 "        A file containing addresses of the members to be added, one\n"
 "        address per line.  This list of people become non-digest\n"
-"        members.  If file is `-', read addresses from stdin.  Note that\n"
-"        -n/--non-digest-members-file are deprecated synonyms for this "
-"option.\n"
+"        members.  If file is `-', read addresses from stdin.\n"
 "\n"
 "    --digest-members-file=file\n"
 "    -d file\n"
 "        Similar to above, but these people become digest members.\n"
 "\n"
+"    --invite\n"
+"    -i\n"
+"        Specify this if you only want to invite the users to a list\n"
+"        instead of subscribing them.\n"
+"\n"
+"    --invite-msg-file=file\n"
+"    -m file\n"
+"        This will prepend the message in the file to the invite email that\n"
+"        gets generated when --invite is set.\n"
+"\n"
 "    --welcome-msg=<y|n>\n"
 "    -w <y|n>\n"
 "        Set whether or not to send the list members a welcome message,\n"
-"        overriding whatever the list's `send_welcome_msg' setting is.\n"
+"        overriding whatever the list's `send_welcome_msg' setting is.  This\n"
+"        is ignored and the list's setting at the time of acceptance is used\n"
+"        if --invite is set.\n"
 "\n"
 "    --admin-notify=<y|n>\n"
 "    -a <y|n>\n"
 "        Set whether or not to send the list administrators a notification "
 "on\n"
 "        the success/failure of these subscriptions, overriding whatever the\n"
-"        list's `admin_notify_mchanges' setting is.\n"
+"        list's `admin_notify_mchanges' setting is.  This is ignored and the\n"
+"        list's setting at the time of acceptance is used if --invite is "
+"set.\n"
 "\n"
 "    --nomail\n"
 "    -n\n"
-"        Set the newly added members mail delivery to disabled by admin.\n"
+"        Set the newly added members mail delivery to disabled by admin.  "
+"This\n"
+"        is ignored if --invite is set.\n"
 "\n"
 "    --help\n"
 "    -h\n"
@@ -8838,45 +8853,54 @@ msgstr ""
 "少なくとも -r か -d のどちらか1つの指定が必要です.\n"
 "両方指定する場合, `-' が使えるのはどちらか1つです.\n"
 
-#: bin/add_members:147
+#: bin/add_members:162 bin/add_members:172
 msgid "Already a member: %(member)s"
 msgstr "入会済み: %(member)s"
 
-#: bin/add_members:153
+#: bin/add_members:178
 msgid "Bad/Invalid email address: blank line"
 msgstr "誤りまたは無効なメールアドレス: 空白行"
 
-#: bin/add_members:155
+#: bin/add_members:180
 msgid "Bad/Invalid email address: %(member)s"
 msgstr "誤りまたは無効なメールアドレス: %(member)s"
 
-#: bin/add_members:157
+#: bin/add_members:182
 msgid "Hostile address (illegal characters): %(member)s"
 msgstr "危険なアドレス (規則外の文字): %(member)s"
 
-#: bin/add_members:159
+#: bin/add_members:185
+#, fuzzy
+msgid "Invited: %(member)s"
+msgstr "入会しました: %(member)s"
+
+#: bin/add_members:187
 msgid "Subscribed: %(member)s"
 msgstr "入会しました: %(member)s"
 
-#: bin/add_members:200
+#: bin/add_members:237
 msgid "Bad argument to -w/--welcome-msg: %(arg)s"
 msgstr "-w/--welcome-msg への引数が違います: %(arg)s"
 
-#: bin/add_members:207
+#: bin/add_members:244
 msgid "Bad argument to -a/--admin-notify: %(arg)s"
 msgstr "-a/--admin-notify への引数が違います: %(arg)s"
 
-#: bin/add_members:215
+#: bin/add_members:252
 msgid "Cannot read both digest and normal members from standard input."
 msgstr "まとめ読みと普通の両方の会員を標準入力から読み込むことはできません."
 
-#: bin/add_members:221 bin/config_list:110 bin/export.py:271 bin/find_member:97
+#: bin/add_members:256
+msgid "Setting invite-msg-file requires --invite."
+msgstr ""
+
+#: bin/add_members:261 bin/config_list:110 bin/export.py:271 bin/find_member:97
 #: bin/inject:91 bin/list_admins:90 bin/list_members:252 bin/sync_members:222
 #: cron/bumpdigests:86
 msgid "No such list: %(listname)s"
 msgstr "%(listname)s というリストはありません"
 
-#: bin/add_members:241 bin/change_pw:159 bin/check_db:114 bin/discard:83
+#: bin/add_members:285 bin/change_pw:159 bin/check_db:114 bin/discard:83
 #: bin/sync_members:244 bin/update:302 bin/update:323 bin/update:577
 #: cron/bumpdigests:78
 msgid "Nothing to do."
