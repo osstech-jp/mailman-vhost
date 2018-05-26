@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman-2.0\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: Tue Jan 16 10:00:00 2001\n"
 "Last-Translator: Yuan-Chen Cheng <ycheng@slat.org>\n"
 "Language-Team: Chinese (traditional) <zh-L10n@linux.org.tw>\n"
@@ -2372,6 +2372,10 @@ msgstr "修改設定"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "選擇本頁所用的語文："
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78
 #: Mailman/Cgi/options.py:95

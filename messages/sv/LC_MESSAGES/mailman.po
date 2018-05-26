@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1b1\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: 2002-12-24 14:35+0100\n"
 "Last-Translator: Eva Österlind <eva.osterlind@arvika.se>\n"
 "Language-Team: Swedish <information@arvika.se>\n"
@@ -3443,6 +3443,10 @@ msgstr "Ändra inställningar"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "Se denna sida på"
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 # Mailman/Cgi/options.py:50 Mailman/Cgi/options.py:67
 # Mailman/Cgi/options.py:50 Mailman/Cgi/options.py:67

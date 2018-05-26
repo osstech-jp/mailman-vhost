@@ -245,14 +245,15 @@ def list_listinfo(mlist, lang):
     replacements['<mm-fullname-box>'] = mlist.FormatBox('fullname', size=30)
     # If reCAPTCHA is enabled, display its user interface
     if mm_cfg.RECAPTCHA_SITE_KEY:
+        noscript = _('This form requires JavaScript.')
         replacements['<mm-recaptcha-ui>'] = (
             """<tr><td>&nbsp;</td><td>
-            <noscript>This form requires JavaScript.</noscript>
+            <noscript>%s</noscript>
             <script src="https://www.google.com/recaptcha/api.js?hl=%s">
             </script>
             <div class="g-recaptcha" data-sitekey="%s"></div>
             </td></tr>"""
-            % (lang, mm_cfg.RECAPTCHA_SITE_KEY))
+            % (noscript, lang, mm_cfg.RECAPTCHA_SITE_KEY))
     else:
         replacements['<mm-recaptcha-ui>'] = ''
 

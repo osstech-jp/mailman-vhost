@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: 2006-02-15 12:02+0100\n"
 "Last-Translator: David Martínez Moreno <ender@rediris.es>\n"
 "Language-Team: Español <es@li.org>\n"
@@ -2554,6 +2554,10 @@ msgstr "Editar opciones"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "Ver esta página en "
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78
 #: Mailman/Cgi/options.py:95
