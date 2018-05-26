@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.14\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: 2013-07-20 13:40+0330\n"
 "Last-Translator: \n"
 "Language-Team: fa <translate@ifsug.org>\n"
@@ -2439,6 +2439,10 @@ msgstr "گزینه‌های ویرایش"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "این صفحه را ببینید در "
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78
 #: Mailman/Cgi/options.py:95
