@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: 2003-07-02 14:50+0100\n"
 "Last-Translator: Bojan Suzic <bojans@teol.net>\n"
 "Language-Team: Trust-b [Serbian] <kontakt@trust-b.com>\n"
@@ -2322,6 +2322,10 @@ msgstr "Уређивање опција"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "Читајте ову страницу на:"
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78
 #: Mailman/Cgi/options.py:95

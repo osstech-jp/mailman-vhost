@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: 2007-11-26 12:21+0100\n"
 "Last-Translator: Martin Matuška <martin@matuska.org>\n"
 "Language-Team: Slovak\n"
@@ -2489,6 +2489,10 @@ msgstr "Úprava vlastností"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "Zobraziť túto stránku po"
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78
 #: Mailman/Cgi/options.py:95

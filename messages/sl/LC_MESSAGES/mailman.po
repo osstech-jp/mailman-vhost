@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman_new_popr\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: 2003-09-30 11:18+0200\n"
 "Last-Translator: Urska Colner <urska.colner@agenda.si>\n"
 "Language-Team: Sloven¹èina <sl@li.org>\n"
@@ -2866,6 +2866,10 @@ msgstr "Uredi mo¾nosti"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "Poka¾i to stran v"
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 # Mailman/Cgi/options.py:49 Mailman/Cgi/options.py:64
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78

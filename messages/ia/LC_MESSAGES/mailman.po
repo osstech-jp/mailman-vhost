@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Fri May 25 15:13:52 2018\n"
+"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
 "PO-Revision-Date: Wed Feb 18 19:50:26 2015\n"
 "Last-Translator: Martijn Dekker <vice-secretario@interlingua.com>\n"
 "Language-Team: Interlingua <TradSoft@interlingua.com>\n"
@@ -2527,6 +2527,10 @@ msgstr "Modifica optiones"
 #: Mailman/Cgi/roster.py:130
 msgid "View this page in"
 msgstr "Vide iste pagina in"
+
+#: Mailman/Cgi/listinfo.py:248
+msgid "This form requires JavaScript."
+msgstr ""
 
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78
 #: Mailman/Cgi/options.py:95
