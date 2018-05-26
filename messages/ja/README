@@ -32,21 +32,21 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
     にあり，そのミラーは
 
-        http://www.gnu.org/software/mailman
+        https://www.gnu.org/software/mailman/
         http://mailman.sf.net
 
     にあります．
 
     Mailman 2.1 は Python 2.4 または以降のバージョンを必要とします。
-    (訳注: Python 3 以降には対応していないと思われます)
+    (訳注: Python 3 以降には対応していません)
     これは次のサイトからダウンロードできます:
 
-        http://www.python.org
+        https://www.python.org
 
     これを書いている時点(2015年2月10日)での最新の 2.7 系パッチリリース
     であるPython 2.7.9 を使うことを推奨します。
-    (訳注: この訳を作っている2016年3月2日現在 2.7.10 が出ており、
-    これを使うことを推奨します)
+    (訳注: この訳を作っている2017年2月23日現在 2.7.14 が出ており、
+    これを使うことを推奨します。)
 
     Mailman 2.1 は Python 2.2 以前のバージョンでは動かず、また、
     Python 2.3 では機能のうちの一部は動作しないと思われます。

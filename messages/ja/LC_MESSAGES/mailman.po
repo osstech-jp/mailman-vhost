@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mailman 2.1.23\n"
+"Project-Id-Version: Mailman 2.1.26\n"
 "POT-Creation-Date: Sat May 26 09:19:45 2018\n"
-"PO-Revision-Date: 2016-08-28 01:26+09:00\n"
+"PO-Revision-Date: 2018-05-27 02:02+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -2423,7 +2423,7 @@ msgstr "表示言語"
 
 #: Mailman/Cgi/listinfo.py:248
 msgid "This form requires JavaScript."
-msgstr ""
+msgstr "このフォームではJavaScriptを有効にする必要があります."
 
 #: Mailman/Cgi/options.py:65 Mailman/Cgi/options.py:78
 #: Mailman/Cgi/options.py:95
@@ -5901,17 +5901,16 @@ msgid ""
 "<b>admin_member_chunksize</b> attribute not\n"
 "            changed!  It must be an integer > 0."
 msgstr ""
-"<b>admin_member_chunksize</b>属性は変更されません!\n"
-"正の整数でなければいけません."
+"<b>admin_member_chunksize</b>属性を変更できません!\n"
+"<b>admin_member_chunksize</b>は正の整数でなければなりません."
 
 #: Mailman/Gui/General.py:566
-#, fuzzy
 msgid ""
 "<b>host_name</b> attribute not changed!\n"
 "                It must be a valid domain name."
 msgstr ""
-"<b>admin_member_chunksize</b>属性は変更されません!\n"
-"正の整数でなければいけません."
+"<b>host_name</b>属性を変更できません!\n"
+"<b>host_name</b>属性には正当なドメイン名を指定してください."
 
 #: Mailman/Gui/General.py:578
 msgid ""
@@ -8753,7 +8752,6 @@ msgstr ""
 "%(tzname)s"
 
 #: bin/add_members:22
-#, fuzzy
 msgid ""
 "Add members to a list from the command line.\n"
 "\n"
@@ -8827,25 +8825,40 @@ msgstr ""
 "        登録する会員のアドレスが入ったファイル. 1 行に 1 アドレス.\n"
 "        この会員は通常配送会員になります. ファイルに `-' が指定されると,\n"
 "        標準入力からメールアドレスを読み込みます.\n"
-"        -n/--non-digest-members-file は同じ意味ですが, 古い形式です.\n"
 "\n"
 "    --digest-members-file=ファイル\n"
 "    -d=ファイル\n"
 "        上と同様. ただし, この会員はまとめ読み会員になります.\n"
 "\n"
+"    --invite\n"
+"    -i\n"
+"        会員の登録するのではなく, 招待のみ行いたい時にこのオプションを\n"
+"        指定します.\n"
+"\n"
+"    --invite-msg-file=file\n"
+"    -m file\n"
+"        --invite を指定した際に生成する招待メールの冒頭にこのオプションで\n"
+"        指定したファイル内容のメッセージを挿入します．\n"
+"\n"
 "    --welcome-msg=<y|n>\n"
 "    -w <y|n>\n"
-"        リスト会員に, 歓迎メールを出すかどうか. これは `send_selcome_msg'\n"
-"        の設定より優先します.\n"
+"        リスト会員に, 歓迎メールを出すかどうか. これはリスト設定の\n"
+"        `send_welcome_msg' よりも優先します. \n"
+"        このオプションは --invite を指定した時には無効になり, 入会受理\n"
+"        時点でのリストの設定に従います.\n"
 "\n"
 "    --admin-notify=<y|n>\n"
 "    -a <y|n>\n"
-"        リスト管理者に登録の成功/失敗を通知するかどうか.\n"
-"        これは `admin_notify_mchanges' の設定より優先します.\n"
+"        リスト管理者に登録の成功/失敗を通知するかどうか. これはリスト設定の\n"
+"        `admin_notify_mchanges' よりも優先します. \n"
+"        このオプションは --invite を指定した時には無効になり, 入会受理\n"
+"        時点でのリストの設定に従います.\n"
 "\n"
 "    --nomail\n"
 "    -n\n"
 "        登録した会員のメール配送オプションを無効に設定します.\n"
+"        このオプションは --invite を指定した時には無効になり, 入会受理\n"
+"        時点でのリストの設定に従います.\n"
 "\n"
 "    --help\n"
 "    -h\n"
@@ -8875,9 +8888,8 @@ msgid "Hostile address (illegal characters): %(member)s"
 msgstr "危険なアドレス (規則外の文字): %(member)s"
 
 #: bin/add_members:185
-#, fuzzy
 msgid "Invited: %(member)s"
-msgstr "入会しました: %(member)s"
+msgstr "招待しました: %(member)s"
 
 #: bin/add_members:187
 msgid "Subscribed: %(member)s"
@@ -8897,7 +8909,7 @@ msgstr "まとめ読みと普通の両方の会員を標準入力から読み込むことはできません."
 
 #: bin/add_members:256
 msgid "Setting invite-msg-file requires --invite."
-msgstr ""
+msgstr "invite-msg-fileの指定には --invite オプション指定が必要です."
 
 #: bin/add_members:261 bin/config_list:110 bin/export.py:271 bin/find_member:97
 #: bin/inject:91 bin/list_admins:90 bin/list_members:252 bin/sync_members:222
