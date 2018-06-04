@@ -173,9 +173,9 @@ def process_form(mlist, doc, cgidata, lang):
         except ValueError:
             ftime = fhash = ''
             then = 0
-        token = Utils.sha_new(mm_cfg.SUBSCRIBE_FORM_SECRET +
-                              ftime +
-                              mlist.internal_name() +
+        token = Utils.sha_new(mm_cfg.SUBSCRIBE_FORM_SECRET + ":" +
+                              ftime + ":" +
+                              mlist.internal_name() + ":" +
                               remote1).hexdigest()
         if ftime and now - then > mm_cfg.FORM_LIFETIME:
             results.append(_('The form is too old.  Please GET it again.'))

@@ -14,6 +14,11 @@ Here is a history of user visible changes to Mailman.
 
     - A few more error messages have had their values HTML escaped.
 
+    - The hash generated when SUBSCRIBE_FORM_SECRET is set could have been
+      the same as one generated at the same time for a different list and
+      IP address.  While this is not thought to be exploitable in any way,
+      the generation has been changed to avoid this.  Thanks to Ralf Jung.
+
   New Features
 
     - An option has been added to bin/add_members to issue invitations
@@ -24,6 +29,9 @@ Here is a history of user visible changes to Mailman.
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
     - The Russian translation has been updated by Danil Smirnov.
+
+    - A partial Esperanto translation has been added.  Thanks to
+      Rubén Fernández Asensio.
 
   Bug fixes and other patches
 

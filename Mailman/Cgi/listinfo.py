@@ -218,9 +218,9 @@ def list_listinfo(mlist, lang):
             remote = remote.rsplit(':', 1)[0]
         replacements['<mm-subscribe-form-start>'] += (
                 '<input type="hidden" name="sub_form_token" value="%s:%s">\n'
-                % (now, Utils.sha_new(mm_cfg.SUBSCRIBE_FORM_SECRET +
-                          now +
-                          mlist.internal_name() +
+                % (now, Utils.sha_new(mm_cfg.SUBSCRIBE_FORM_SECRET + ":" +
+                          now + ":" +
+                          mlist.internal_name() + ":" +
                           remote
                           ).hexdigest()
                     )
