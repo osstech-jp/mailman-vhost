@@ -30,6 +30,9 @@ Here is a history of user visible changes to Mailman.
 
     - The Russian translation has been updated by Danil Smirnov.
 
+    - A partial Esperanto translation has been added.  Thanks to
+      Rubén Fernández Asensio.
+
   Bug fixes and other patches
 
     - Some messages from bin/arch were not issued in the charset of the system

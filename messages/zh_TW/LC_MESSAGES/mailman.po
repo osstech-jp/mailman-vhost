@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman-2.0\n"
-"POT-Creation-Date: Sat May 26 09:19:45 2018\n"
+"POT-Creation-Date: Sun Jun  3 17:52:55 2018\n"
 "PO-Revision-Date: Tue Jan 16 10:00:00 2001\n"
 "Last-Translator: Yuan-Chen Cheng <ycheng@slat.org>\n"
 "Language-Team: Chinese (traditional) <zh-L10n@linux.org.tw>\n"
@@ -3717,132 +3717,136 @@ msgid "English (USA)"
 msgstr "英語 (USA)"
 
 #: Mailman/Defaults.py:1749
+msgid "Esperanto"
+msgstr ""
+
+#: Mailman/Defaults.py:1750
 msgid "Spanish (Spain)"
 msgstr "西班牙語 (西班牙)"
 
-#: Mailman/Defaults.py:1750
+#: Mailman/Defaults.py:1751
 msgid "Estonian"
 msgstr "愛沙尼亞語"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1752
 msgid "Euskara"
 msgstr "巴斯克語"
 
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1753
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1754
 msgid "Finnish"
 msgstr "芬蘭語"
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1755
 msgid "French"
 msgstr "法語"
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1756
 #, fuzzy
 msgid "Galician"
 msgstr "義大利語"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1757
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1758
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1758
+#: Mailman/Defaults.py:1759
 msgid "Croatian"
 msgstr "克羅埃西亞語"
 
-#: Mailman/Defaults.py:1759
+#: Mailman/Defaults.py:1760
 msgid "Hungarian"
 msgstr "匈牙利語"
 
-#: Mailman/Defaults.py:1760
+#: Mailman/Defaults.py:1761
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1761
+#: Mailman/Defaults.py:1762
 msgid "Italian"
 msgstr "義大利語"
 
-#: Mailman/Defaults.py:1762
+#: Mailman/Defaults.py:1763
 msgid "Japanese"
 msgstr "日語"
 
-#: Mailman/Defaults.py:1763
+#: Mailman/Defaults.py:1764
 msgid "Korean"
 msgstr "韓文"
 
-#: Mailman/Defaults.py:1764
+#: Mailman/Defaults.py:1765
 msgid "Lithuanian"
 msgstr "立陶宛文"
 
-#: Mailman/Defaults.py:1765
+#: Mailman/Defaults.py:1766
 msgid "Dutch"
 msgstr "荷蘭文"
 
-#: Mailman/Defaults.py:1766
+#: Mailman/Defaults.py:1767
 msgid "Norwegian"
 msgstr "挪威文"
 
-#: Mailman/Defaults.py:1767
+#: Mailman/Defaults.py:1768
 msgid "Polish"
 msgstr "波蘭文"
 
-#: Mailman/Defaults.py:1768
+#: Mailman/Defaults.py:1769
 msgid "Portuguese"
 msgstr "葡萄牙文"
 
-#: Mailman/Defaults.py:1769
+#: Mailman/Defaults.py:1770
 msgid "Portuguese (Brazil)"
 msgstr "葡萄牙文(巴西)"
 
-#: Mailman/Defaults.py:1770
+#: Mailman/Defaults.py:1771
 msgid "Romanian"
 msgstr "羅馬尼亞文"
 
-#: Mailman/Defaults.py:1771
+#: Mailman/Defaults.py:1772
 msgid "Russian"
 msgstr "俄羅斯文"
 
-#: Mailman/Defaults.py:1772
+#: Mailman/Defaults.py:1773
 #, fuzzy
 msgid "Slovak"
 msgstr "斯洛法尼亞文"
 
-#: Mailman/Defaults.py:1773
+#: Mailman/Defaults.py:1774
 msgid "Slovenian"
 msgstr "斯洛法尼亞文"
 
-#: Mailman/Defaults.py:1774
+#: Mailman/Defaults.py:1775
 msgid "Serbian"
 msgstr "賽爾維亞文"
 
-#: Mailman/Defaults.py:1775
+#: Mailman/Defaults.py:1776
 msgid "Swedish"
 msgstr "瑞典文"
 
-#: Mailman/Defaults.py:1776
+#: Mailman/Defaults.py:1777
 msgid "Turkish"
 msgstr "土耳其文"
 
-#: Mailman/Defaults.py:1777
+#: Mailman/Defaults.py:1778
 msgid "Ukrainian"
 msgstr "烏克蘭文"
 
-#: Mailman/Defaults.py:1778
+#: Mailman/Defaults.py:1779
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1779
+#: Mailman/Defaults.py:1780
 msgid "Chinese (China)"
 msgstr "簡體中文(china)"
 
-#: Mailman/Defaults.py:1780
+#: Mailman/Defaults.py:1781
 msgid "Chinese (Taiwan)"
 msgstr "繁體中文(Taiwan)"
 
