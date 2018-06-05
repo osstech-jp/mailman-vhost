@@ -942,7 +942,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 whence = ' from %s' % remote
                 syslog('vette', '%s banned subscription: %s%s (Spamhaus IP)',
                        realname, email, whence)
-                raise Errors.MembershipIsBanned, pattern
+                raise Errors.MembershipIsBanned, 'Spamhaus IP'
         # Sanity check the digest flag
         if digest and not self.digestable:
             raise Errors.MMCantDigestError
