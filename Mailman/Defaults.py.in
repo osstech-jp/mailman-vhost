@@ -142,8 +142,13 @@ RECAPTCHA_SECRET_KEY = None
 # in the installation.  This supplements the individual list's ban_list.
 # For example, to ban xxx@aol.com and any @gmail.com address beginning with
 # yyy, set
-# GLOBAL_BAN_LIST = ['xxx@aol.com', '^yyy.*@gmail\.com$']
+# GLOBAL_BAN_LIST = ['xxx@aol\.com', '^yyy.*@gmail\.com$']
 GLOBAL_BAN_LIST = []
+
+# IF the following is set to Yes, and a web subscribe comes from an IPv4
+# address and the IP is listed in Spamhaus SBL, CSS or XBL, the subscription
+# will be blocked.
+BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE = No
 
 # Command that is used to convert text/html parts into plain text.  This
 # should output results to standard output.  %(filename)s will contain the
@@ -1746,6 +1751,7 @@ add_language('cs',    _('Czech'),               'iso-8859-2',  'ltr')
 add_language('da',    _('Danish'),              'iso-8859-1',  'ltr')
 add_language('de',    _('German'),              'iso-8859-1',  'ltr')
 add_language('en',    _('English (USA)'),       'us-ascii',    'ltr')
+add_language('eo',    _('Esperanto'),           'utf-8',       'ltr')
 add_language('es',    _('Spanish (Spain)'),     'iso-8859-1',  'ltr')
 add_language('et',    _('Estonian'),            'iso-8859-15', 'ltr')
 add_language('eu',    _('Euskara'),             'iso-8859-15', 'ltr') # Basque
