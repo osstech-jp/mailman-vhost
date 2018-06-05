@@ -937,7 +937,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                    realname, email, whence, pattern)
             raise Errors.MembershipIsBanned, pattern
         # See if this is from a spamhaus listed IP.
-        if remote and BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE:
+        if remote and mm_cfg.BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE:
             if Utils.banned_ip(remote):
                 whence = ' from %s' % remote
                 syslog('vette', '%s banned subscription: %s%s (Spamhaus IP)',
