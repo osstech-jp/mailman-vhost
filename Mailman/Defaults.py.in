@@ -146,8 +146,8 @@ RECAPTCHA_SECRET_KEY = None
 GLOBAL_BAN_LIST = []
 
 # IF the following is set to Yes, and a web subscribe comes from an IPv4
-# address and the IP is listed in Spamhaus ZEN, the subscription will be
-# blocked.
+# address and the IP is listed in Spamhaus SBL, CSS or XBL, the subscription
+# will be blocked.
 BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE = No
 
 # Command that is used to convert text/html parts into plain text.  This

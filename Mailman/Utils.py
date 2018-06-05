@@ -1513,6 +1513,6 @@ def banned_ip(ip):
     if not ans:
         return False
     text = ans.rrset.to_text()
-    if re.search(r'127\.0\.0\.\d{1,2}$', text, re.MULTILINE):
+    if re.search(r'127\.0\.0\.[2-7]$', text, re.MULTILINE):
         return True
     return False
