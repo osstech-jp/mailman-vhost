@@ -79,6 +79,12 @@ try:
 except ImportError:
     dns_resolver = False
 
+try:
+    import ipaddress
+    have_ipaddress = True
+except ImportError:
+    have_ipaddress = False
+
 EMPTYSTRING = ''
 UEMPTYSTRING = u''
 CR = '\r'
@@ -1498,13 +1504,21 @@ def xml_to_unicode(s, cset):
 def banned_ip(ip):
     if not dns_resolver:
         return False
-    parts = ip.split('.')
-    if len(parts) != 4:
-        return False
-    lookup = '{}.{}.{}.{}.zen.spamhaus.org'.format(parts[3],
-                                                   parts[2],
-                                                   parts[1],
-                                                   parts[0])
+    if have_ipaddress:
+        try:
+            uip = unicode(ip, encoding='us-ascii', errors='replace')
+            ptr = ipaddress.ip_address(uip).reverse_pointer
+        except ValueError:
+            return False
+	lookup = '{0}.zen.spamhaus.org'.format('.'.join(ptr.split('.')[:-2]))
+    else:
+        parts = ip.split('.')
+        if len(parts) != 4:
+            return False
+        lookup = '{0}.{1}.{2}.{3}.zen.spamhaus.org'.format(parts[3],
+                                                           parts[2],
+                                                           parts[1],
+                                                           parts[0])
     resolver = dns.resolver.Resolver()
     try:
         ans = resolver.query(lookup, dns.rdatatype.A)
