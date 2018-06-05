@@ -1495,3 +1495,24 @@ def xml_to_unicode(s, cset):
     else:
         return s
 
+def banned_ip(ip):
+    if not dns_resolver:
+        return False
+    parts = ip.split('.')
+    if len(parts) != 4:
+        return False
+    lookup = '{}.{}.{}.{}.zen.spamhaus.org'.format(parts[3],
+                                                   parts[2],
+                                                   parts[1],
+                                                   parts[0])
+    resolver = dns.resolver.Resolver()
+    try:
+        ans = resolver.query(lookup, dns.rdatatype.A)
+    except DNSException:
+        return False
+    if not ans:
+        return False
+    text = ans.rrset.to_text()
+    if re.search(r'127\.0\.0\.\d{1,2}$', text, re.MULTILINE):
+        return True
+    return False

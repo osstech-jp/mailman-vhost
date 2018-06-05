@@ -24,6 +24,10 @@ Here is a history of user visible changes to Mailman.
     - An option has been added to bin/add_members to issue invitations
       instead of immediately adding members.  (LP: #1773064)
 
+    - A new BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE setting has been added to
+      enable blocking web subscribes from IPv4 addresses listed in Spamhaus
+      ZEN.
+
   i18n
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
