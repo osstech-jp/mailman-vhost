@@ -142,6 +142,11 @@ def main():
         if cgidata.has_key('submit'):
             # This is a re-authorization attempt
             message = Bold(FontSize('+1', _('Authorization failed.'))).Format()
+            remote = os.environ.get('HTTP_FORWARDED_FOR',
+                     os.environ.get('HTTP_X_FORWARDED_FOR',
+                     os.environ.get('REMOTE_ADDR',
+                                    'unidentified origin')))
+            syslog('security', 'Authorization failed (private): list=%s: remote=%s', listname, remote)
             # give an HTTP 401 for authentication failure
             print 'Status: 401 Unauthorized'
         # Are we processing a password reminder from the login screen?

@@ -118,6 +118,11 @@ def main():
         error_page_doc(doc, _('%(realname)s roster authentication failed.'))
         doc.AddItem(mlist.GetMailmanFooter())
         print doc.Format()
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'unidentified origin')))
+        syslog('security', 'Authorization failed (roster): list=%s: remote=%s', listname, remote)
         return
 
     # The document and its language
