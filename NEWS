@@ -26,7 +26,9 @@ Here is a history of user visible changes to Mailman.
 
     - A new BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE setting has been added to
       enable blocking web subscribes from IPv4 addresses listed in Spamhaus
-      SBL, CSS or XBL.
+      SBL, CSS or XBL.  It will work with IPv6 addresses if Python's
+      py2-ipaddress module is installed.  The module can be installed via pip
+      if not included in your Python.
 
   i18n
 
