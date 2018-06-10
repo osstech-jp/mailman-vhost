@@ -1070,8 +1070,6 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 {"listname" : realname,
                  "member"   : formataddr((name, email)),
                  }, mlist=self)
-            if whence:
-                text = "%s\nReason: %s" % (text, whence)
             msg = Message.OwnerNotification(self, subject, text)
             msg.send(self)
 
@@ -1108,8 +1106,6 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 {'member'  : name,
                  'listname': self.real_name,
                  }, mlist=self)
-            if whence:
-                text = "%s\nReason: %s" % (text, whence)
             msg = Message.OwnerNotification(self, subject, text)
             msg.send(self)
         if whence:
