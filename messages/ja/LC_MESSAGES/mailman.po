@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.26\n"
 "POT-Creation-Date: Sun Jun  3 17:52:55 2018\n"
-"PO-Revision-Date: 2018-05-27 02:02+09:00\n"
+"PO-Revision-Date: 2018-06-06 03:29+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -3862,7 +3862,7 @@ msgstr "英語 (米国)"
 
 #: Mailman/Defaults.py:1749
 msgid "Esperanto"
-msgstr ""
+msgstr "エスペラント"
 
 #: Mailman/Defaults.py:1750
 msgid "Spanish (Spain)"
