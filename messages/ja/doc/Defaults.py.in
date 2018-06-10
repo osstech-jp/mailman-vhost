@@ -20,7 +20,7 @@
 
 # [訳註] このファイルは、Mailman 2.1.26 配布物に含まれる
 #   Mailman/Defaults.py.in (launchpad.net での Bazaar リビジョンは
-#   1738) のコメント部分を日本語 (共通語) に翻訳したものです。
+#   1763) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
@@ -166,13 +166,21 @@ RECAPTCHA_SITE_KEY = None
 RECAPTCHA_SECRET_KEY = None
 
 # インストール環境全体でのBANリスト。このインストール環境全体のすべての
-# リストで購読を禁止する電子メールアドレスおよび正規表現パターン(先頭文字
+# リストで入会を禁止する電子メールアドレスおよび正規表現パターン(先頭文字
 # が「^」)のリストです。これはリスト個別の ban_list を補完します。
 # 例として、 xxx@example.net と @example.com の yyy から始まる任意の
-# アドレスを購読禁止にするには
-# GLOBAL_BAN_LIST = ['xxx@example.net', '^yyy.*@example\.com$']
+# アドレスを入会禁止にするには
+# GLOBAL_BAN_LIST = ['xxx@example\.net', '^yyy.*@example\.com$']
 # のように設定します。
 GLOBAL_BAN_LIST = []
+
+# 以下を Yes にセットすると、Web からの入会依頼で Spamhaus の SBL, CSS,
+# XBL に登録されている IP アドレスからのものをブロックします。
+# py2-ipaddress がインストールされている場合には IPv6 アドレスにも
+# 対応しますが、なければ IPv4 アドレスにのみ対応します。
+# py2-ipaddress モジュールが Python 環境にインストールされていなければ
+# pip を使用してインストールすることができます。
+BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE = No
 
 # text/html パートをプレーンテキストに変換するコマンド。このコマンドは
 # 結果を標準出力に出力しなければなりません。 %(filename)s はプログラムが
@@ -1897,6 +1905,7 @@ add_language('cs',    _('Czech'),               'iso-8859-2',  'ltr')
 add_language('da',    _('Danish'),              'iso-8859-1',  'ltr')
 add_language('de',    _('German'),              'iso-8859-1',  'ltr')
 add_language('en',    _('English (USA)'),       'us-ascii',    'ltr')
+add_language('eo',    _('Esperanto'),           'utf-8',       'ltr')
 add_language('es',    _('Spanish (Spain)'),     'iso-8859-1',  'ltr')
 add_language('et',    _('Estonian'),            'iso-8859-15', 'ltr')
 add_language('eu',    _('Euskara'),             'iso-8859-15', 'ltr') # Basque
