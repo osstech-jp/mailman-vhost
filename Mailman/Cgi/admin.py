@@ -120,6 +120,13 @@ def main():
         if cgidata.has_key('adminpw'):
             # This is a re-authorization attempt
             msg = Bold(FontSize('+1', _('Authorization failed.'))).Format()
+            remote = os.environ.get('HTTP_FORWARDED_FOR',
+                     os.environ.get('HTTP_X_FORWARDED_FOR',
+                     os.environ.get('REMOTE_ADDR',
+                                    'unidentified origin')))
+            syslog('security',
+                   'Authorization failed (admin): list=%s: remote=%s',
+                   listname, remote)
         else:
             msg = ''
         Auth.loginpage(mlist, 'admin', msg=msg)

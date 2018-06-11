@@ -288,13 +288,16 @@ def main():
         # message.
         if cgidata.has_key('password'):
             doc.addError(_('Authentication failed.'))
+            remote = os.environ.get('HTTP_FORWARDED_FOR',
+                     os.environ.get('HTTP_X_FORWARDED_FOR',
+                     os.environ.get('REMOTE_ADDR',
+                                    'unidentified origin')))
+            syslog('security',
+                 'Authorization failed (private): user=%s: list=%s: remote=%s',
+                   user, listname, remote)
             # So as not to allow membership leakage, prompt for the email
             # address and the password here.
             if mlist.private_roster <> 0:
-                remote = os.environ.get('HTTP_FORWARDED_FOR',
-                         os.environ.get('HTTP_X_FORWARDED_FOR',
-                         os.environ.get('REMOTE_ADDR',
-                                        'unidentified origin')))
                 syslog('mischief',
                        'Login failure with private rosters: %s from %s',
                        user, remote)

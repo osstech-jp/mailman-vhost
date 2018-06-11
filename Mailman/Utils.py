@@ -111,7 +111,12 @@ def list_exists(listname):
     # But first ensure the list name doesn't contain a path traversal
     # attack.
     if len(re.sub(mm_cfg.ACCEPTABLE_LISTNAME_CHARACTERS, '', listname)) > 0:
-        syslog('mischief', 'Hostile listname: %s', listname)
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'unidentified origin')))
+        syslog('mischief',
+               'Hostile listname: listname=%s: remote=%s', listname, remote)
         return False
     basepath = Site.get_listpath(listname)
     for ext in ('.pck', '.pck.last', '.db', '.db.last'):
