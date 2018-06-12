@@ -39,6 +39,11 @@ Here is a history of user visible changes to Mailman.
       'mischief' log entries for 'hostile listname' noe include the remote IP
       if available.
 
+    - Thanks to Jim Popovitch, admin notices of (un)subscribes now may give
+      the source of the action.  This consists of a %(whence)s replacement
+      that can be added to the admin(un)subscribeack.txt templates.  This
+      has been done for the 'en' templates, but not for most others.
+
   i18n
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
