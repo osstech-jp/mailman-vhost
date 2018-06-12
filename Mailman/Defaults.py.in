@@ -150,6 +150,10 @@ GLOBAL_BAN_LIST = []
 # will be blocked.
 BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE = No
 
+# IF the following is set to Yes, and a subscriper uses a domain that is
+# listed in the Spamhaus DBL, the subscription will be blocked.
+BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE = No
+
 # Command that is used to convert text/html parts into plain text.  This
 # should output results to standard output.  %(filename)s will contain the
 # name of the temporary file that the program should operate on.

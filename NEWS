@@ -44,6 +44,10 @@ Here is a history of user visible changes to Mailman.
       that can be added to the admin(un)subscribeack.txt templates.  This
       has been done for the 'en' templates, but not for most others.
 
+    - Thanks to Jim Popovitch, there is a new
+      BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE setting to enable blocking web
+      subscribes for addresses in domains listed in the Spamhaus DBL.
+
   i18n
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.

@@ -943,6 +943,12 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 syslog('vette', '%s banned subscription: %s%s (Spamhaus IP)',
                        realname, email, whence)
                 raise Errors.MembershipIsBanned, 'Spamhaus IP'
+        # See if this is from a spamhaus listed domain.
+        if email and mm_cfg.BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE:
+            if Utils.banned_domain(email):
+                syslog('vette', '%s banned subscription: %s (Spamhaus DBL)',
+                       realname, email)
+                raise Errors.MembershipIsBanned, 'Spamhaus DBL'
         # Sanity check the digest flag
         if digest and not self.digestable:
             raise Errors.MMCantDigestError

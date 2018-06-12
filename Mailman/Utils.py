@@ -1581,3 +1581,25 @@ def banned_ip(ip):
     if re.search(r'127\.0\.0\.[2-7]$', text, re.MULTILINE):
         return True
     return False
+
+def banned_domain(email):
+    if not dns_resolver:
+        return False
+
+    email = email.lower()
+    user, domain = ParseEmail(email)
+
+    lookup = '%s.zen.spamhaus.org' % (domain)
+
+    resolver = dns.resolver.Resolver()
+    try:
+        ans = resolver.query(lookup, dns.rdatatype.A)
+    except DNSException:
+        return False
+    if not ans:
+        return False
+    text = ans.rrset.to_text()
+    if re.search(r'127\.0\.1\.\d{1,3}$', text, re.MULTILINE):
+        if not re.search(r'127\.0\.1\.255$', text, re.MULTILINE):
+            return True
+    return False
