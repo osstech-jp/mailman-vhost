@@ -1097,6 +1097,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 "adminsubscribeack.txt",
                 {"listname" : realname,
                  "member"   : formataddr((name, email)),
+                 "whence"   : "" if whence is None else "(" + whence + ")"
                  }, mlist=self)
             msg = Message.OwnerNotification(self, subject, text)
             msg.send(self)
@@ -1133,6 +1134,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 'adminunsubscribeack.txt',
                 {'member'  : name,
                  'listname': self.real_name,
+                 "whence"   : "" if whence is None else "(" + whence + ")"
                  }, mlist=self)
             msg = Message.OwnerNotification(self, subject, text)
             msg.send(self)
