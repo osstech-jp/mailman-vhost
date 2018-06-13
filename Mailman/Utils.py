@@ -111,7 +111,12 @@ def list_exists(listname):
     # But first ensure the list name doesn't contain a path traversal
     # attack.
     if len(re.sub(mm_cfg.ACCEPTABLE_LISTNAME_CHARACTERS, '', listname)) > 0:
-        syslog('mischief', 'Hostile listname: %s', listname)
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'unidentified origin')))
+        syslog('mischief',
+               'Hostile listname: listname=%s: remote=%s', listname, remote)
         return False
     basepath = Site.get_listpath(listname)
     for ext in ('.pck', '.pck.last', '.db', '.db.last'):
@@ -1529,4 +1534,26 @@ def banned_ip(ip):
     text = ans.rrset.to_text()
     if re.search(r'127\.0\.0\.[2-7]$', text, re.MULTILINE):
         return True
+    return False
+
+def banned_domain(email):
+    if not dns_resolver:
+        return False
+
+    email = email.lower()
+    user, domain = ParseEmail(email)
+
+    lookup = '%s.zen.spamhaus.org' % (domain)
+
+    resolver = dns.resolver.Resolver()
+    try:
+        ans = resolver.query(lookup, dns.rdatatype.A)
+    except DNSException:
+        return False
+    if not ans:
+        return False
+    text = ans.rrset.to_text()
+    if re.search(r'127\.0\.1\.\d{1,3}$', text, re.MULTILINE):
+        if not re.search(r'127\.0\.1\.255$', text, re.MULTILINE):
+            return True
     return False

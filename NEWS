@@ -30,6 +30,24 @@ Here is a history of user visible changes to Mailman.
       py2-ipaddress module is installed.  The module can be installed via pip
       if not included in your Python.
 
+    - Thanks to Jim Popovitch, Mailman has a new 'security' log and logs
+      authentication failures to the various web CGI functions.  The logged
+      data include the remote IP and can be used to automate blocking of IPs
+      with something like fail2ban.  Since Mailman 2.1.14, these have returned
+      an http 401 status and the information should be logged by the web
+      server, but this new log makes that more convenient.  Also, the
+      'mischief' log entries for 'hostile listname' noe include the remote IP
+      if available.
+
+    - Thanks to Jim Popovitch, admin notices of (un)subscribes now may give
+      the source of the action.  This consists of a %(whence)s replacement
+      that can be added to the admin(un)subscribeack.txt templates.  This
+      has been done for the 'en' templates, but not for most others.
+
+    - Thanks to Jim Popovitch, there is a new
+      BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE setting to enable blocking web
+      subscribes for addresses in domains listed in the Spamhaus DBL.
+
   i18n
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
