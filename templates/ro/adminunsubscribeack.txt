@@ -1,1 +1,2 @@
 %(member)s a fost şters din lista %(listname)s.
+%(whence)s
