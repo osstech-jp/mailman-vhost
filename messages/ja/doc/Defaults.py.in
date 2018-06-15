@@ -20,7 +20,7 @@
 
 # [訳註] このファイルは、Mailman 2.1.26 配布物に含まれる
 #   Mailman/Defaults.py.in (launchpad.net での Bazaar リビジョンは
-#   1763) のコメント部分を日本語 (共通語) に翻訳したものです。
+#   1770) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
@@ -181,6 +181,10 @@ GLOBAL_BAN_LIST = []
 # py2-ipaddress モジュールが Python 環境にインストールされていなければ
 # pip を使用してインストールすることができます。
 BLOCK_SPAMHAUS_LISTED_IP_SUBSCRIBE = No
+
+# 以下を Yes にセットすると、SpamhausのDBLに登録されているドメインの
+# メールアドレスでの入会をブロックします。
+BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE = No
 
 # text/html パートをプレーンテキストに変換するコマンド。このコマンドは
 # 結果を標準出力に出力しなければなりません。 %(filename)s はプログラムが
