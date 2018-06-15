@@ -123,7 +123,10 @@ else:
     def C_(s):
         return tolocale(_(s, 2))
 
-    
+# marking for pygettext
+def D_(s):
+    return s
+
 
 def ctime(date):
     # Don't make these module globals since we have to do runtime translation

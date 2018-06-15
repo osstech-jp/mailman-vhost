@@ -49,6 +49,7 @@ REASONS = {MemberAdaptor.BYBOUNCE: _('due to excessive bounces'),
            }
 
 _ = i18n._
+D_ = i18n.D_
 
 
 
@@ -265,7 +266,7 @@ class Bouncer:
         if info.noticesleft <= 0:
             # BAW: Remove them now, with a notification message
             self.ApprovedDeleteMember(
-                member, 'disabled address',
+                member, D_('disabled address'),
                 admin_notif=self.bounce_notify_owner_on_removal,
                 userack=1)
             # Expunge the pending cookie for the user.  We throw away the

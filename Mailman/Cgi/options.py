@@ -45,6 +45,7 @@ DIGRE = re.compile(
 # Set up i18n
 _ = i18n._
 i18n.set_language(mm_cfg.DEFAULT_SERVER_LANGUAGE)
+D_ = i18n.D_
 
 try:
     True, False
@@ -583,7 +584,7 @@ address.  Upon confirmation, any other mailing list containing the address
         try:
             try:
                 mlist.DeleteMember(
-                    user, 'via the member options page', userack=1)
+                    user, D_('via the member options page'), userack=1)
             except Errors.MMNeedApproval:
                 needapproval = True
             except Errors.NotAMemberError:
