@@ -1065,6 +1065,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             otrans = i18n.get_translation()
             i18n.set_language(lang)
             try:
+                whence = "" if whence is None else "(" + _(whence) + ")"
                 realname = self.real_name
                 subject = _('%(realname)s subscription notification')
             finally:
@@ -1075,7 +1076,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 "adminsubscribeack.txt",
                 {"listname" : realname,
                  "member"   : formataddr((name, email)),
-                 "whence"   : "" if whence is None else "(" + _(whence) + ")"
+                 "whence"   : whence
                  }, mlist=self)
             msg = Message.OwnerNotification(self, subject, text)
             msg.send(self)
