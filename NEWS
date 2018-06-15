@@ -41,8 +41,8 @@ Here is a history of user visible changes to Mailman.
 
     - Thanks to Jim Popovitch, admin notices of (un)subscribes now may give
       the source of the action.  This consists of a %(whence)s replacement
-      that can be added to the admin(un)subscribeack.txt templates.  This
-      has been done for the 'en' templates, but not for most others.
+      that has been added to the admin(un)subscribeack.txt templates.  Thanks
+      to Yasuhito FUTATSUKI for updating the non-English templates.
 
     - Thanks to Jim Popovitch, there is a new
       BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE setting to enable blocking web
@@ -86,6 +86,11 @@ Here is a history of user visible changes to Mailman.
 
     - Quoting in the mailman-config command has been changed from double to
       single quotes to allow double-quoted parameters.  (LP:1774986)
+
+  Miscellaneous
+
+    - Added to the contrib directory, a script from Jim Popovitch to generate
+      Sitemap files for a list's archive.
 
 2.1.26 (04-Feb-2018)
 
