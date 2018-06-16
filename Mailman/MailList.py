@@ -1058,8 +1058,14 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         syslog('subscribe', '%s: new%s %s, %s', self.internal_name(),
                kind, formataddr((name, email)), whence)
         if ack:
-            self.SendSubscribeAck(email, self.getMemberPassword(email),
-                                  digest, text)
+            lang = self.preferred_language
+            otrans = i18n.get_translation()
+            i18n.set_language(lang)
+            try:
+                self.SendSubscribeAck(email, self.getMemberPassword(email),
+                                      digest, text)
+            finally:
+                i18n.set_translation(otrans)
         if admin_notif:
             lang = self.preferred_language
             otrans = i18n.get_translation()
