@@ -85,7 +85,10 @@ Here is a history of user visible changes to Mailman.
       required.  (LP: #1769374)
 
     - Quoting in the mailman-config command has been changed from double to
-      single quotes to allow double-quoted parameters.  (LP:1774986)
+      single quotes to allow double-quoted parameters.  (LP: #1774986)
+
+    - Approving a held subscription for a user with a 'different' preferred
+      language no longer corrupts the results page.  (LP: #1777222)
 
   Miscellaneous
 
@@ -162,7 +165,7 @@ Here is a history of user visible changes to Mailman.
   i18n
 
     - The Russian translation has been updated by Sergey Matveev.
-      (LP:#1708016)
+      (LP: #1708016)
 
   Bug fixes and other patches
 
@@ -235,7 +238,7 @@ Here is a history of user visible changes to Mailman.
   Bug fixes and other patches
 
     - The list-owner@virtual.domain addresses are now added to virtual-mailman
-      as they are exposed in 'list created' emails.  (LP: 1694384)
+      as they are exposed in 'list created' emails.  (LP: #1694384)
 
     - The 'list run by' addresses in web page footers are now just the
       list-owner address.  (LP: #1694384)
@@ -821,7 +824,7 @@ Here is a history of user visible changes to Mailman.
 
     - Fixed a bug in bin/rmlist that would throw an exception or just fail to
       remove held message files for a list with regexp special characters in
-      its name.  (LP:#1414864)
+      its name.  (LP: #1414864)
 
     - When applying DMARC mitigations, CookHeaders now adds the original From:
       to Cc: rather than Reply-To: in some cases to make MUA 'reply' and
@@ -970,10 +973,10 @@ Here is a history of user visible changes to Mailman.
       names that look like email addresses.  (LP: #1304511)
 
     - Added the list name to the vette log "held message approved" entry.
-      (LP: 1295875)
+      (LP: #1295875)
 
     - Added the CGI module name to various "No such list" error log entries.
-      (LP: 1295875)
+      (LP: #1295875)
 
     - Modified contrib/mmdsr to report module name if present in "No such list
       error log entries.
