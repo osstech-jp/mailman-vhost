@@ -506,7 +506,6 @@ do
 
 	elif [ "${LOG}" = "security" ] ; then
 
-	    echo "" >> $TMP
 	    $GREP 'Authorization failed' $TMPLOG | $SED 's/^.* ([0-9]*) //' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	elif [ "${LOG}" = "post" ] ; then
