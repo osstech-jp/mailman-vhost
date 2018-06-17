@@ -58,6 +58,9 @@ Here is a history of user visible changes to Mailman.
     - A partial Esperanto translation has been added.  Thanks to
       Rubén Fernández Asensio.
 
+    - Fixed a '# -*- coding:' line in the Russian message catalog that was
+      mistakenly translated to Russian.  (LP: #1777342)
+
   Bug fixes and other patches
 
     - Some messages from bin/arch were not issued in the charset of the system

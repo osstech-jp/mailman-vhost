@@ -10282,7 +10282,7 @@ msgid ""
 "## captured on %(when)s\n"
 msgstr ""
 "# -*- python -*-\n"
-"# -*- кодировка: %(charset)s -*-\n"
+"# -*- coding: %(charset)s -*-\n"
 "## параметры списка рассылки \"%(listname)s\"\n"
 "## данные собраны %(when)s\n"
 
