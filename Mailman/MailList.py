@@ -72,6 +72,8 @@ from Mailman import i18n
 from Mailman.Logging.Syslog import syslog
 
 _ = i18n._
+def D_(s):
+    return s
 
 EMPTYSTRING = ''
 OR = '|'
@@ -1058,13 +1060,20 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         syslog('subscribe', '%s: new%s %s, %s', self.internal_name(),
                kind, formataddr((name, email)), whence)
         if ack:
-            self.SendSubscribeAck(email, self.getMemberPassword(email),
-                                  digest, text)
+            lang = self.preferred_language
+            otrans = i18n.get_translation()
+            i18n.set_language(lang)
+            try:
+                self.SendSubscribeAck(email, self.getMemberPassword(email),
+                                      digest, text)
+            finally:
+                i18n.set_translation(otrans)
         if admin_notif:
             lang = self.preferred_language
             otrans = i18n.get_translation()
             i18n.set_language(lang)
             try:
+                whence = "" if whence is None else "(" + _(whence) + ")"
                 realname = self.real_name
                 subject = _('%(realname)s subscription notification')
             finally:
@@ -1075,7 +1084,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 "adminsubscribeack.txt",
                 {"listname" : realname,
                  "member"   : formataddr((name, email)),
-                 "whence"   : "" if whence is None else "(" + whence + ")"
+                 "whence"   : whence
                  }, mlist=self)
             msg = Message.OwnerNotification(self, subject, text)
             msg.send(self)
@@ -1112,7 +1121,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 'adminunsubscribeack.txt',
                 {'member'  : name,
                  'listname': self.real_name,
-                 "whence"   : "" if whence is None else "(" + whence + ")"
+                 "whence"   : "" if whence is None else "(" + _(whence) + ")"
                  }, mlist=self)
             msg = Message.OwnerNotification(self, subject, text)
             msg.send(self)
@@ -1301,7 +1310,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         except ValueError:
             raise Errors.MMBadConfirmation, 'op-less data %s' % (rec,)
         if op == Pending.SUBSCRIPTION:
-            whence = 'via email confirmation'
+            _ = D_
+            whence = _('via email confirmation')
             try:
                 userdesc = data[0]
                 # If confirmation comes from the web, context should be a
@@ -1310,7 +1320,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 # context is a Message and isn't relevant, so ignore it.
                 if isinstance(context, UserDesc):
                     userdesc += context
-                    whence = 'via web confirmation'
+                    whence = _('via web confirmation')
                 addr = userdesc.address
                 fullname = userdesc.fullname
                 password = userdesc.password
@@ -1318,6 +1328,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 lang = userdesc.language
             except ValueError:
                 raise Errors.MMBadConfirmation, 'bad subscr data %s' % (data,)
+            _ = i18n._
             # Hack alert!  Was this a confirmation of an invitation?
             invitation = getattr(userdesc, 'invitation', False)
             # We check for both 2 (approval required) and 3 (confirm +
@@ -1340,11 +1351,14 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             return op, addr, password, digest, lang
         elif op == Pending.UNSUBSCRIPTION:
             addr = data[0]
-            # Log file messages don't need to be i18n'd
+            # Log file messages don't need to be i18n'd, but this is now in a
+            # notice.
+            _ = D_
             if isinstance(context, Message.Message):
-                whence = 'email confirmation'
+                whence = _('email confirmation')
             else:
-                whence = 'web confirmation'
+                whence = _('web confirmation')
+            _ = i18n._
             # Can raise NotAMemberError if they unsub'd via other means
             self.ApprovedDeleteMember(addr, whence=whence)
             return op, addr

@@ -207,6 +207,11 @@
 #		Updated on: Sun Jun  4 17:12:54 PDT 2017
 #		Added -a to default (e)grep to account for logs that may
 #		have non-ascii and be seen as binary.
+#
+# 0.0.28	Update by Mark Sapiro <mark@msapiro.net>
+#		Updated on: Fri Jun 15 20:20:36 PDT 2018
+#		Added report of new security log.
+#		Augmented 0.0.24 to do <letters> as well as <digits>.
 
 ###############################################################################
 # Set up locations of standard commands, directories, etc....
@@ -275,7 +280,7 @@ MAX_DATA_LINES=100
 # Mailman Log files to check for errors.
 # No need to specify path, only log file name.
 ###############################################################################
-ERR_LOGS="error fromusenet locks mischief post qrunner smtp-failure vette"
+ERR_LOGS="error fromusenet locks mischief security post qrunner smtp-failure vette"
 
 ###############################################################################
 # Mailman Log files to summarize.
@@ -499,6 +504,10 @@ do
 	    echo "------------------------------" >> $TMP
 	    $EGREP -vi '(Login failure with private rosters|Unsub attempt of non-member|Reminder attempt of non-member)' $TMPLOG | $SED 's/^.* ([0-9]*) //' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
+	elif [ "${LOG}" = "security" ] ; then
+
+	    $GREP 'Authorization failed' $TMPLOG | $SED 's/^.* ([0-9]*) //' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+
 	elif [ "${LOG}" = "post" ] ; then
 
 	    $GREP -vi 'success' $TMPLOG | $SED 's/^.* ([0-9]*) //' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
@@ -548,7 +557,7 @@ do
 	    echo "" >> $TMP
 	    echo "Banned Subscriptions" >> $TMP
 	    echo "------------------------------" >> $TMP
-	    $GREP -i 'banned subscription' $TMPLOG | $AWK '{ print $6 " " $9 }' | $SED -e 's/\+[0-9][0-9]*@/+<digits>@/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
+	    $GREP -i 'banned subscription' $TMPLOG | $AWK '{ print $6 " " $9 }' | $SED -e 's/\+[0-9][0-9]*@/+<digits>@/' -e 's/\+[a-z][a-z]*@/+<letters>@/' | $SORT | $UNIQ -c | $SORT -nr >> $TMP
 
 	    echo "" >> $TMP
 	    echo "DMARC lookups" >> $TMP

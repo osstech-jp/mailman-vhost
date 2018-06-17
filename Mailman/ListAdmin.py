@@ -45,6 +45,8 @@ from Mailman.Logging.Syslog import syslog
 from Mailman import i18n
 
 _ = i18n._
+def D_(s):
+    return s
 
 # Request types requiring admin approval
 IGN = 0
@@ -435,8 +437,11 @@ class ListAdmin:
             # subscribe
             assert value == mm_cfg.SUBSCRIBE
             try:
+                _ = D_
+                whence = _('via admin approval')
+                _ = i18n._
                 userdesc = UserDesc(addr, fullname, password, digest, lang)
-                self.ApprovedAddMember(userdesc, whence='via admin approval')
+                self.ApprovedAddMember(userdesc, whence=whence)
             except Errors.MMAlreadyAMember:
                 # User has already been subscribed, after sending the request
                 pass
