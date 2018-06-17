@@ -1,5 +1,5 @@
 # Mailman Japanese Translation
-# Copyright (C) 2002-2014
+# Copyright (C) 2002-2018
 # SATOH Fumiyasu <fumiyas@osstech.co.jp>, 2013
 # Tokio Kikuchi <tokio.kikuchi@gmail.com>, 2002-2011
 # Yukihiro Yasuda <yukihiro@poem.co.jp>, 2004
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.26\n"
 "POT-Creation-Date: Sun Jun 17 12:22:07 2018\n"
-"PO-Revision-Date: 2018-06-06 03:29+09:00\n"
+"PO-Revision-Date: 2018-06-18 06:13+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -222,9 +222,8 @@ msgid "Bounce action notification"
 msgstr "配送エラー処理通知"
 
 #: Mailman/Bouncer.py:270
-#, fuzzy
 msgid "disabled address"
-msgstr "配送停止"
+msgstr "配送停止されたアドレス"
 
 #: Mailman/Bouncer.py:303
 msgid " The last bounce received from you was dated %(date)s"
@@ -1072,7 +1071,7 @@ msgstr "管理者のパスワードが一致しません"
 
 #: Mailman/Cgi/admin.py:1488
 msgid "admin mass sub"
-msgstr ""
+msgstr "管理者による一括入会"
 
 #: Mailman/Cgi/admin.py:1494
 msgid "Already a member"
@@ -1114,7 +1113,7 @@ msgstr "入会手続きのエラー:"
 
 #: Mailman/Cgi/admin.py:1546
 msgid "admin mass unsub"
-msgstr ""
+msgstr "管理者による一括退会"
 
 #: Mailman/Cgi/admin.py:1556
 msgid "Successfully Unsubscribed:"
@@ -1182,7 +1181,7 @@ msgstr "制限フラグの値が間違っています"
 
 #: Mailman/Cgi/admin.py:1657
 msgid "member mgt page"
-msgstr ""
+msgstr "会員管理のページより"
 
 #: Mailman/Cgi/admin.py:1662
 msgid "Not subscribed"
@@ -2622,9 +2621,8 @@ msgstr ""
 "チェックしてください. 現時点では退会処理は完了していません!"
 
 #: Mailman/Cgi/options.py:589
-#, fuzzy
 msgid "via the member options page"
-msgstr "%(realname)s リスト: 会員オプションログインページ"
+msgstr "会員オプションのページより"
 
 #: Mailman/Cgi/options.py:609
 msgid "Unsubscription results"
@@ -8434,9 +8432,8 @@ msgid "Subscription request"
 msgstr "入会申請"
 
 #: Mailman/ListAdmin.py:441
-#, fuzzy
 msgid "via admin approval"
-msgstr "承認を待つ"
+msgstr "管理者の承認により"
 
 #: Mailman/ListAdmin.py:465
 msgid "New unsubscription request from %(realname)s by %(addr)s"
@@ -8591,28 +8588,24 @@ msgid "%(realname)s address change notification"
 msgstr "%(realname)s アドレス変更通知"
 
 #: Mailman/MailList.py:1314
-#, fuzzy
 msgid "via email confirmation"
-msgstr "確認文字列が間違っています"
+msgstr "メールでの確認により"
 
 #: Mailman/MailList.py:1323
-#, fuzzy
 msgid "via web confirmation"
-msgstr "確認文字列が間違っています"
+msgstr "Webでの確認により"
 
 #: Mailman/MailList.py:1348
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "%(name)s への入会には管理者の承認が必要です"
 
 #: Mailman/MailList.py:1358
-#, fuzzy
 msgid "email confirmation"
-msgstr "確認文字列が間違っています"
+msgstr "メールでの確認により"
 
 #: Mailman/MailList.py:1360
-#, fuzzy
 msgid "web confirmation"
-msgstr "確認文字列を入力してください"
+msgstr "Webでの確認により"
 
 #: Mailman/MailList.py:1616
 msgid "Last autoresponse notification for today"
@@ -12731,8 +12724,8 @@ msgstr ""
 "        会員自身によって停止されている会員にも通知を送る\n"
 "\n"
 "    -u / --unknown\n"
-"        理由不明の停止会員にも通知を送る\n"
-"        (旧バージョン時代の遺産の停止会員と思われる)\n"
+"        理由不明で停止された会員にも通知を送る\n"
+"        (ほとんどの場合は古いバージョンから引き継がれた停止会員)\n"
 "\n"
 "    -b / --notbybounce\n"
 "        配送エラーで停止している会員には通知を送らない\n"
