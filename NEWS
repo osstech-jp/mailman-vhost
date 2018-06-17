@@ -42,7 +42,8 @@ Here is a history of user visible changes to Mailman.
     - Thanks to Jim Popovitch, admin notices of (un)subscribes now may give
       the source of the action.  This consists of a %(whence)s replacement
       that has been added to the admin(un)subscribeack.txt templates.  Thanks
-      to Yasuhito FUTATSUKI for updating the non-English templates.
+      to Yasuhito FUTATSUKI for updating the non-English templates and help
+      with internationalizing the reasons.
 
     - Thanks to Jim Popovitch, there is a new
       BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE setting to enable blocking web
@@ -56,6 +57,9 @@ Here is a history of user visible changes to Mailman.
 
     - A partial Esperanto translation has been added.  Thanks to
       Rubén Fernández Asensio.
+
+    - Fixed a '# -*- coding:' line in the Russian message catalog that was
+      mistakenly translated to Russian.  (LP: #1777342)
 
   Bug fixes and other patches
 

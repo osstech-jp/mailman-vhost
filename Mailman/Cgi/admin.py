@@ -47,6 +47,8 @@ from Mailman.CSRFcheck import csrf_check
 # Set up i18n
 _ = i18n._
 i18n.set_language(mm_cfg.DEFAULT_SERVER_LANGUAGE)
+def D_(s):
+    return s
 
 NL = '\n'
 OPTCOLUMNS = 11
@@ -1483,9 +1485,12 @@ def change_options(mlist, category, subcat, cgidata, doc):
                     else:
                         mlist.InviteNewMember(userdesc, invitation)
                 else:
+                    _ = D_
+                    whence = _('admin mass sub')
+                    _ = i18n._
                     mlist.ApprovedAddMember(userdesc, send_welcome_msg,
                                             send_admin_notif, invitation,
-                                            whence='admin mass sub')
+                                            whence=whence)
             except Errors.MMAlreadyAMember:
                 subscribe_errors.append((safeentry, _('Already a member')))
             except Errors.MMBadEmailError:
@@ -1538,8 +1543,11 @@ def change_options(mlist, category, subcat, cgidata, doc):
         unsubscribe_success = []
         for addr in names:
             try:
+                _ = D_
+                whence = _('admin mass unsub')
+                _ = i18n._
                 mlist.ApprovedDeleteMember(
-                    addr, whence='admin mass unsub',
+                    addr, whence=whence,
                     admin_notif=send_unsub_notifications,
                     userack=userack)
                 unsubscribe_success.append(Utils.websafe(addr))
@@ -1646,7 +1654,10 @@ def change_options(mlist, category, subcat, cgidata, doc):
             quser = urllib.quote(user)
             if cgidata.has_key('%s_unsub' % quser):
                 try:
-                    mlist.ApprovedDeleteMember(user, whence='member mgt page')
+                    _ = D_
+                    whence=_('member mgt page')
+                    _ = i18n._
+                    mlist.ApprovedDeleteMember(user, whence=whence)
                     removes.append(user)
                 except Errors.NotAMemberError:
                     errors.append((user, _('Not subscribed')))

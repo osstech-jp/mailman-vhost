@@ -40,7 +40,8 @@ EMPTYSTRING = ''
 # for time.mktime().
 ZEROHOUR_PLUSONEDAY = time.localtime(mm_cfg.days(1))[:3]
 
-def _(s): return s
+def D_(s): return s
+_ = D_
 
 REASONS = {MemberAdaptor.BYBOUNCE: _('due to excessive bounces'),
            MemberAdaptor.BYUSER: _('by yourself'),
@@ -264,10 +265,12 @@ class Bouncer:
         reason = self.getDeliveryStatus(member)
         if info.noticesleft <= 0:
             # BAW: Remove them now, with a notification message
+            _ = D_
             self.ApprovedDeleteMember(
-                member, 'disabled address',
+                member, _('disabled address'),
                 admin_notif=self.bounce_notify_owner_on_removal,
                 userack=1)
+            _ = i18n._
             # Expunge the pending cookie for the user.  We throw away the
             # returned data.
             self.pend_confirm(info.cookie)

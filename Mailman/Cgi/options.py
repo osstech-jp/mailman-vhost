@@ -45,6 +45,8 @@ DIGRE = re.compile(
 # Set up i18n
 _ = i18n._
 i18n.set_language(mm_cfg.DEFAULT_SERVER_LANGUAGE)
+def D_(s):
+    return s
 
 try:
     True, False
@@ -581,9 +583,10 @@ address.  Upon confirmation, any other mailing list containing the address
         mlist.Lock()
         needapproval = False
         try:
+            _ = D_
             try:
                 mlist.DeleteMember(
-                    user, 'via the member options page', userack=1)
+                    user, _('via the member options page'), userack=1)
             except Errors.MMNeedApproval:
                 needapproval = True
             except Errors.NotAMemberError:
@@ -595,6 +598,7 @@ address.  Upon confirmation, any other mailing list containing the address
                 pass
             mlist.Save()
         finally:
+            _ = i18n._
             mlist.Unlock()
         # Now throw up some results page, with appropriate links.  We can't
         # drop them back into their options page, because that's gone now!
