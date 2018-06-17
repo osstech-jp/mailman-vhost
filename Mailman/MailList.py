@@ -72,6 +72,7 @@ from Mailman import i18n
 from Mailman.Logging.Syslog import syslog
 
 _ = i18n._
+D_ = i18n.D_
 
 EMPTYSTRING = ''
 OR = '|'
@@ -1302,7 +1303,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         except ValueError:
             raise Errors.MMBadConfirmation, 'op-less data %s' % (rec,)
         if op == Pending.SUBSCRIPTION:
-            whence = 'via email confirmation'
+            whence = D_('via email confirmation')
             try:
                 userdesc = data[0]
                 # If confirmation comes from the web, context should be a
@@ -1311,7 +1312,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
                 # context is a Message and isn't relevant, so ignore it.
                 if isinstance(context, UserDesc):
                     userdesc += context
-                    whence = 'via web confirmation'
+                    whence = D_('via web confirmation')
                 addr = userdesc.address
                 fullname = userdesc.fullname
                 password = userdesc.password
@@ -1343,9 +1344,9 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             addr = data[0]
             # Log file messages don't need to be i18n'd
             if isinstance(context, Message.Message):
-                whence = 'email confirmation'
+                whence = D_('email confirmation')
             else:
-                whence = 'web confirmation'
+                whence = D_('web confirmation')
             # Can raise NotAMemberError if they unsub'd via other means
             self.ApprovedDeleteMember(addr, whence=whence)
             return op, addr
