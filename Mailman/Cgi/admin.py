@@ -1401,6 +1401,7 @@ def submit_button(name='submit'):
 
 
 def change_options(mlist, category, subcat, cgidata, doc):
+    global _
     def safeint(formvar, defaultval=None):
         try:
             return int(cgidata.getfirst(formvar))

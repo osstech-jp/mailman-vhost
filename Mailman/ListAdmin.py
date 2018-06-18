@@ -421,6 +421,7 @@ class ListAdmin:
             i18n.set_language(lang)
 
     def __handlesubscription(self, record, value, comment):
+        global _
         stime, addr, fullname, password, digest, lang = record
         if value == mm_cfg.DEFER:
             return DEFER

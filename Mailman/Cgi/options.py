@@ -59,6 +59,7 @@ AUTH_CONTEXTS = (mm_cfg.AuthListAdmin, mm_cfg.AuthSiteAdmin,
 
 
 def main():
+    global _
     doc = Document()
     doc.set_language(mm_cfg.DEFAULT_SERVER_LANGUAGE)
 
