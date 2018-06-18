@@ -259,6 +259,7 @@ class Bouncer:
         umsg.send(self)
 
     def sendNextNotification(self, member):
+        global _
         info = self.getBounceInfo(member)
         if info is None:
             return
