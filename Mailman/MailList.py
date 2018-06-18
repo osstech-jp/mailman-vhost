@@ -1329,6 +1329,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
     # Confirmation processing
     #
     def ProcessConfirmation(self, cookie, context=None):
+        global _
         rec = self.pend_confirm(cookie)
         if rec is None:
             raise Errors.MMBadConfirmation, 'No cookie record for %s' % cookie
