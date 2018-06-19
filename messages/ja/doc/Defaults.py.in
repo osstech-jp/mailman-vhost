@@ -275,7 +275,8 @@ KNOWN_SPAMMERS = []
 
 # プライバシー・オプション... -> 迷惑メールフィルタ の header_filter_rules と
 # ヘッダのマッチングは、それぞれをUnicodeに変換し、正規化した後に行います。
-# この設定はこの正規化における正規形を指定します。
+# この設定はこの正規化における正規形を指定します。 'NFC', 'NFD', 'NFKC',
+# 'NFKD' のいずれかを指定します。
 # http://docs.python.jp/2/library/unicodedata.html#unicodedata.normalize
 # を参照してください。
 NORMALIZE_FORM = 'NFKC'
