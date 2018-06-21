@@ -138,6 +138,14 @@ class GUIBase:
     def _setValue(self, mlist, property, val, doc):
         # Set the value, or override to take special action on the property
         if not property.startswith('_') and getattr(mlist, property) <> val:
+            if property == 'preferred_language':
+                ocs = Utils.GetCharSet(getattr(mlist, property)) or 'us-ascii'
+                ncs = Utils.GetCharSet(val) or 'us-ascii'
+                odesc = getattr(mlist, 'description')
+                if ocs != ncs and not isinstance(odesc, unicode):
+                    setattr(mlist, 'description',
+                            Utils.xml_to_unicode(odesc, ocs).encode(
+                                                    ncs, 'xmlcharrefreplace'))
             setattr(mlist, property, val)
 
     def _postValidate(self, mlist, doc):
