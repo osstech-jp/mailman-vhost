@@ -5,14 +5,16 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.27 (xx-xxx-xxxx)
+2.1.27 (22-Jun-2018)
 
   Security
 
     - Existing protections against malicious listowners injecting evil
       scripts into listinfo pages have had a few more checks added.
+      JVN#00846677/JPCERT#97432283
 
     - A few more error messages have had their values HTML escaped.
+      JVN#00846677/JPCERT#97432283
 
     - The hash generated when SUBSCRIBE_FORM_SECRET is set could have been
       the same as one generated at the same time for a different list and
@@ -93,6 +95,10 @@ Here is a history of user visible changes to Mailman.
 
     - Approving a held subscription for a user with a 'different' preferred
       language no longer corrupts the results page.  (LP: #1777222)
+
+    - An issue with garbled descriptions on listinfo and admin overview pages
+      and the heading of a list's listinfo page due to incompatible character
+      sets has been fixed thanks to Yasuhito FUTATSUKI.
 
   Miscellaneous
 

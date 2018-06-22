@@ -389,12 +389,17 @@ class HTMLFormatter:
             listlangs = _(Utils.GetLanguageDescr(self.preferred_language))
         else:
             listlangs = self.GetLangSelectBox(lang).Format()
+        if lang:
+            cset = Utils.GetCharSet(lang) or 'us-ascii'
+        else:
+            cset = Utils.GetCharSet(self.preferred_language) or 'us-ascii'
         d = {
             '<mm-mailman-footer>' : self.GetMailmanFooter(),
             '<mm-list-name>' : self.real_name,
             '<mm-email-user>' : self.local_part,
             '<mm-complete-name>' : self.internal_name(),
-            '<mm-list-description>' : Utils.websafe(self.description),
+            '<mm-list-description>' :
+                Utils.websafe(self.GetDescription(cset)),
             '<mm-list-info>' : 
                 '<!---->' + BR.join(self.info.split(NL)) + '<!---->',
             '<mm-form-end>'  : self.FormatFormEnd(),
