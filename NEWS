@@ -94,6 +94,10 @@ Here is a history of user visible changes to Mailman.
     - Approving a held subscription for a user with a 'different' preferred
       language no longer corrupts the results page.  (LP: #1777222)
 
+    - An issue with garbled descriptions on listinfo and admin overview pages
+      and the heading of a list's listinfo page due to incompatible character
+      sets has been fixed thanks to Yasuhito FUTATSUKI.
+
   Miscellaneous
 
     - Added to the contrib directory, a script from Jim Popovitch to generate

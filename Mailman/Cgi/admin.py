@@ -295,7 +295,7 @@ def admin_overview(msg=''):
             else:
                 advertised.append((mlist.GetScriptURL('admin'),
                                    mlist.real_name,
-                                   mlist.description))
+                                   Utils.websafe(mlist.GetDescription())))
     # Greeting depends on whether there was an error or not
     if msg:
         greeting = FontAttr(msg, color="ff5060", size="+1")
