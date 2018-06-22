@@ -262,6 +262,27 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             user = Utils.ObscureEmail(user)
         return '%s/%s' % (url, urllib.quote(user.lower()))
 
+    def GetDescription(self, cset=None, errors='xmlcharrefreplace'):
+        # Get list's description in charset specified by cset.
+        # If cset is None, it uses charset of context language.
+        mcset = Utils.GetCharSet(self.preferred_language)
+        if cset is None:
+            # translation context may not be initialized
+            trns = i18n.get_translation()
+            if trns is None:
+                ccset = 'us-ascii'
+            else:
+                ccset = i18n.get_translation().charset() or 'us-ascii'
+        else:
+            ccset = cset
+        if isinstance(self.description, unicode):
+            return self.description.encode(ccset, errors)
+        if mcset == ccset:
+            return self.description
+        return Utils.xml_to_unicode(self.description, mcset).encode(ccset,
+                                                                    errors)
+
+
 
     #
     # Instance and subcomponent initialization
@@ -1301,6 +1322,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
     # Confirmation processing
     #
     def ProcessConfirmation(self, cookie, context=None):
+        global _
         rec = self.pend_confirm(cookie)
         if rec is None:
             raise Errors.MMBadConfirmation, 'No cookie record for %s' % cookie

@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -259,6 +259,7 @@ class Bouncer:
         umsg.send(self)
 
     def sendNextNotification(self, member):
+        global _
         info = self.getBounceInfo(member)
         if info is None:
             return

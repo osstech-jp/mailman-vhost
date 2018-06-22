@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2014 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -421,6 +421,7 @@ class ListAdmin:
             i18n.set_language(lang)
 
     def __handlesubscription(self, record, value, comment):
+        global _
         stime, addr, fullname, password, digest, lang = record
         if value == mm_cfg.DEFER:
             return DEFER

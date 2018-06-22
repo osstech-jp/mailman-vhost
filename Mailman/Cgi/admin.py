@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -295,7 +295,7 @@ def admin_overview(msg=''):
             else:
                 advertised.append((mlist.GetScriptURL('admin'),
                                    mlist.real_name,
-                                   mlist.description))
+                                   Utils.websafe(mlist.GetDescription())))
     # Greeting depends on whether there was an error or not
     if msg:
         greeting = FontAttr(msg, color="ff5060", size="+1")
@@ -1401,6 +1401,7 @@ def submit_button(name='submit'):
 
 
 def change_options(mlist, category, subcat, cgidata, doc):
+    global _
     def safeint(formvar, defaultval=None):
         try:
             return int(cgidata.getfirst(formvar))
