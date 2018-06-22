@@ -18,15 +18,15 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
 # USA.
 
-# [訳註] このファイルは、Mailman 2.1.26 配布物に含まれる
-#   Mailman/Defaults.py.in (launchpad.net での Bazaar リビジョンは
-#   1770) のコメント部分を日本語 (共通語) に翻訳したものです。
+# [訳註] このファイルは、Mailman 2.1.27 配布物に含まれる
+#   Mailman/Defaults.py.in (launchpad.net でのファイルの Bazaar
+#  リビジョンは 1770) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
 #   お勧めします。
 #   訳者: IKEDA Soji <hatuka@nezumi.nu>
-#   (2.1.22 での再訳: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>)
+#   (2.1.22 以降の再訳: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>)
 
 
 """配布時点の Mailman の主要な設定変数の初期設定値。"""
