@@ -11,10 +11,10 @@ Here is a history of user visible changes to Mailman.
 
     - Existing protections against malicious listowners injecting evil
       scripts into listinfo pages have had a few more checks added.
-      JVN#00846677/JPCERT#97432283
+      JVN#00846677/JPCERT#97432283/CVE-2018-0618
 
     - A few more error messages have had their values HTML escaped.
-      JVN#00846677/JPCERT#97432283
+      JVN#00846677/JPCERT#97432283/CVE-2018-0618
 
     - The hash generated when SUBSCRIBE_FORM_SECRET is set could have been
       the same as one generated at the same time for a different list and
