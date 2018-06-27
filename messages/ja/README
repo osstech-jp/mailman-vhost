@@ -44,7 +44,7 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
         https://www.python.org
 
     これを書いている時点(2015年2月10日)での最新の 2.7 系パッチリリース
-    であるPython 2.7.9 を使うことを推奨します。
+    であるPython 2.7.9 を使うことを強く推奨します。
     (訳注: この訳を作っている2018年6月23日現在 2.7.15 が出ており、
     これを使うことを強く推奨します。)
 
@@ -55,7 +55,7 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
     gcc (GNU C コンパイラ)はその目的に適合しています。 Mailman は
     現在のところ GNU/Linux とその他の UNIX 風のオペレーティングシステム
     (例えば Solaris、*BSD、MacOSX、等) でのみ作動します．Windows では
-    動きませんが、ェブとメールのクライアントソフトは Mailman との
+    動きませんが、ウェブとメールのクライアントソフトは Mailman との
     接続には十分機能します。
 
     インストールには INSTALL ファイルを見てください。もし、以前のバー
@@ -102,7 +102,7 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
     - 拡張性のあるメール配送パイプライン
 
-    - 仮想ドメインをサポート 
+    - 仮想ドメインをサポート
 
 必要事項
 
