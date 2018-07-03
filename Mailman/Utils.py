@@ -1543,7 +1543,7 @@ def banned_domain(email):
     email = email.lower()
     user, domain = ParseEmail(email)
 
-    lookup = '%s.zen.spamhaus.org' % (domain)
+    lookup = '%s.dbl.spamhaus.org' % (domain)
 
     resolver = dns.resolver.Resolver()
     try:
