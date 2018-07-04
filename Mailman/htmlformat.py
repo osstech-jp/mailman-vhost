@@ -495,7 +495,9 @@ class TextArea:
     def __init__(self, name, text='', rows=None, cols=None, wrap='soft',
                  readonly=0):
         if isinstance(text, str):
-            safetext = Utils.websafe(text)
+            # Double escape HTML entities in non-readonly areas.
+            doubleescape = not readonly
+            safetext = Utils.websafe(text, doubleescape)
         else:
             safetext = text
         self.name = name
