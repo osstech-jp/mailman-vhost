@@ -506,7 +506,7 @@ def check_global_password(response, siteadmin=True):
 
 
 _ampre = re.compile('&amp;((?:#[0-9]+|[a-z]+);)', re.IGNORECASE)
-def websafe(s):
+def websafe(s, doubleescape=False):
     # If a user submits a form or URL with post data or query fragments
     # with multiple occurrences of the same variable, we can get a list
     # here.  Be as careful as possible.
@@ -521,8 +521,11 @@ def websafe(s):
         if isinstance(s, str):
             for k in mm_cfg.BROKEN_BROWSER_REPLACEMENTS:
                 s = s.replace(k, mm_cfg.BROKEN_BROWSER_REPLACEMENTS[k])
-    # Don't double escape html entities
-    return _ampre.sub(r'&\1', cgi.escape(s, quote=True))
+    if doubleescape:
+        return cgi.escape(s, quote=True)
+    else:
+        # Don't double escape html entities
+        return _ampre.sub(r'&\1', cgi.escape(s, quote=True))
 
 
 def nntpsplit(s):
