@@ -138,6 +138,13 @@ def main():
         Auth.loginpage(mlist, 'admin', msg=msg)
         return
 
+    # See if the user want to see this page in other language
+    language = cgidata.getfirst('language', '')
+    if language not in mlist.GetAvailableLanguages():
+        language = mlist.preferred_language
+    i18n.set_language(language)
+    doc.set_language(language)
+
     realname = mlist.real_name
     if len(parts) > 1:
         template_name = parts[1]
@@ -169,42 +176,62 @@ def main():
         return
 
     try:
-        if cgidata.keys():
+        if cgidata.keys() and not cgidata.has_key('langform'):
             if csrf_checked:
-                ChangeHTML(mlist, cgidata, template_name, doc)
+                ChangeHTML(mlist, cgidata, template_name, doc, lang=language)
             else:
                 doc.addError(
                   _('The form lifetime has expired. (request forgery check)'))
-        FormatHTML(mlist, doc, template_name, template_info)
+        FormatHTML(mlist, doc, template_name, template_info, lang=language)
     finally:
         doc.AddItem(mlist.GetMailmanFooter())
         print doc.Format()
 
 
 
-def FormatHTML(mlist, doc, template_name, template_info):
+def FormatHTML(mlist, doc, template_name, template_info, lang=None):
+    if lang not in mlist.GetAvailableLanguages():
+        lang = mlist.preferred_language
+    lcset = Utils.GetCharSet(lang)
     doc.AddItem(Header(1,'%s:' % mlist.real_name))
     doc.AddItem(Header(1, template_info))
     doc.AddItem('<hr>')
 
     link = Link(mlist.GetScriptURL('admin'),
                 _('View or edit the list configuration information.'))
+    backlink = Link(mlist.GetScriptURL('edithtml'),
+                    _('Edit the public HTML pages and text files'))
 
     doc.AddItem(FontSize("+1", link))
+    doc.AddItem(FontSize("+1", backlink))
     doc.AddItem('<p>')
     doc.AddItem('<hr>')
+    if len(mlist.GetAvailableLanguages()) > 1:
+        langform = Form(mlist.GetScriptURL('edithtml') + '/' + template_name,
+                        mlist=mlist, contexts=AUTH_CONTEXTS)
+        langform.AddItem(
+                    mlist.FormatButton('editlang-button',
+                                       text = _("Edit this template for")))
+        langform.AddItem(mlist.GetLangSelectBox(lang))
+        langform.AddItem(Hidden('langform', 'True'))
+        doc.AddItem(langform)
+        doc.AddItem('<hr>')
     form = Form(mlist.GetScriptURL('edithtml') + '/' + template_name,
                mlist=mlist, contexts=AUTH_CONTEXTS)
-    text = Utils.maketext(template_name, raw=1, mlist=mlist)
+    text = Utils.maketext(template_name, raw=1, lang=lang, mlist=mlist)
     # MAS: Don't websafe twice.  TextArea does it.
     form.AddItem(TextArea('html_code', text, rows=40, cols=75))
     form.AddItem('<p>' + _('When you are done making changes...'))
+    if lang != mlist.preferred_language:
+        form.AddItem(Hidden('language', lang))
     form.AddItem(SubmitButton('submit', _('Submit Changes')))
     doc.AddItem(form)
 
 
 
-def ChangeHTML(mlist, cgi_info, template_name, doc):
+def ChangeHTML(mlist, cgi_info, template_name, doc, lang=None):
+    if lang not in mlist.GetAvailableLanguages():
+        lang = mlist.preferred_language
     if not cgi_info.has_key('html_code'):
         doc.AddItem(Header(3,_("Can't have empty html page.")))
         doc.AddItem(Header(3,_("HTML Unchanged.")))
@@ -225,7 +252,7 @@ must have shell access to your Mailman server.
         doc.AddItem(Header(3,_("Page Unchanged.")))
         doc.AddItem('<hr>')
         return
-    langdir = os.path.join(mlist.fullpath(), mlist.preferred_language)
+    langdir = os.path.join(mlist.fullpath(), lang)
     # Make sure the directory exists
     omask = os.umask(0)
     try:
