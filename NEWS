@@ -7,6 +7,12 @@ Here is a history of user visible changes to Mailman.
 
 2.1.28 (xx-xxx-xxxx)
 
+  New Features
+
+    - It is now possible to edit HTML and text templates via the web admin
+      UI in a supported language other than the list's preferred_language.
+      Thanks to Yasuhito FUTATSUKI.
+
   Bug fixes and other patches
 
     - The BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE feature added in 2.1.27 was
