@@ -13,6 +13,10 @@ Here is a history of user visible changes to Mailman.
       UI in a supported language other than the list's preferred_language.
       Thanks to Yasuhito FUTATSUKI.
 
+  i18n
+
+    - The Esperanto translation has been updated by Rubén Fernández Asensio.
+
   Bug fixes and other patches
 
     - The BLOCK_SPAMHAUS_LISTED_DBL_SUBSCRIBE feature added in 2.1.27 was
