@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mailman 2.1.26\n"
+"Project-Id-Version: Mailman 2.1.28\n"
 "POT-Creation-Date: Tue Jul 10 21:21:09 2018\n"
-"PO-Revision-Date: 2018-06-18 06:13+09:00\n"
+"PO-Revision-Date: 2018-07-11 14:57+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -2333,7 +2333,7 @@ msgstr "リスト設定情報の閲覧・編集"
 
 #: Mailman/Cgi/edithtml.py:215
 msgid "Edit this template for"
-msgstr ""
+msgstr "編集するテンプレートの言語を選択"
 
 #: Mailman/Cgi/edithtml.py:225
 msgid "When you are done making changes..."
