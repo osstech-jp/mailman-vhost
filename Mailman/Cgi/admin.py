@@ -917,7 +917,7 @@ def membership_options(mlist, subcat, cgidata, doc, form):
     container.AddItem(header)
     # Add a "search for member" button
     table = Table(width='100%')
-    link = Link('http://docs.python.org/library/re.html'
+    link = Link('https://docs.python.org/2/library/re.html'
                 '#regular-expression-syntax',
                 _('(help)')).Format()
     table.AddRow([Label(_('Find member %(link)s:')),
