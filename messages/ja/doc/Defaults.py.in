@@ -277,8 +277,10 @@ KNOWN_SPAMMERS = []
 # ヘッダのマッチングは、それぞれをUnicodeに変換し、正規化した後に行います。
 # この設定はこの正規化における正規形を指定します。 'NFC', 'NFD', 'NFKC',
 # 'NFKD' のいずれかを指定します。
-# http://docs.python.jp/2/library/unicodedata.html#unicodedata.normalize
-# を参照してください。
+# https://docs.python.org/2/library/unicodedata.html#unicodedata.normalize
+# (訳注: 日本語ドキュメント
+# https://docs.python.org/ja/2.7/library/unicodedata.html#unicodedata.normalize
+# )を参照してください。
 NORMALIZE_FORM = 'NFKC'
 
 
@@ -330,7 +332,7 @@ WEB_HEAD_ADD = None
 # 次の2つの設定は、追加でエスケープ処理を行うかどうか、どの文字を
 # 何に置き換えるかを指定します。注意: ある文字を複数バイトのシーケンスで
 # 表すようなエンコーディングでは(訳註:原文はcharacter sets...文字集合と
-# なっているが character set と encoding を混同していると想われる)、
+# なっているが character set と encoding を混同していると思われる)、
 # 追加のエスケープ処理を有効にすると、複数バイトの並びの一部を HTML の
 # 実体参照に置き換えてしまい、無害であったはずの文字を壊してしまうことが
 # あるかもしれません。
@@ -389,7 +391,6 @@ DEFAULT_ARCHIVE = On
 
 # 既定でアーカイブは公開するか限定にするか。
 # 0=公開、1=限定
-# 0=public, 1=private
 DEFAULT_ARCHIVE_PRIVATE = 0
 
 # ARCHIVE_TO_MBOX
@@ -849,7 +850,7 @@ SMTP_LOG_EACH_FAILURE = (
 # コントロールします。VERP とは Variable Envelope Return Path (可変
 # エンベロープ Return PATH) のことで、以下に定義があります:
 #
-# http://cr.yp.to/proto/verp.txt
+# https://cr.yp.to/proto/verp.txt
 #
 # これは、enverope 送信者アドレス(つまり、SMTP の 「MAIL FROM:」のアドレス)
 # の中に我々(Mailman)がわかるように受信者のアドレスを符号化して含ませる
@@ -887,16 +888,14 @@ VERP_FORMAT = '%(bounces)s+%(mailbox)s=%(host)s'
 # 2番目は バウンスが発生したMTAからのバウンスメールの To: ヘッダにセットされる
 # こうしたアドレスを一意に復号化するための正規表現を記述します。これを
 # 正しく記述するのは大変重要ですが、厄介です。使用している Python の正規表現を
-#調べてください。上で定義しているのと同じ「bounces」、「mailbox」、「host」の
+# 調べてください。上で定義しているのと同じ「bounces」、「mailbox」、「host」の
 # 3 つの名前つきのグループを定義しなければなりません。この正規表現は
 # 大文字小文字を区別せずにコンパイルされます。
 VERP_REGEXP = r'^(?P<bounces>[^+]+?)\+(?P<mailbox>[^=]+)=(?P<host>[^@]+)@.*$'
 
-# VERP format and regexp for probe messages
 # メッセージの検査のための VERP の書式と正規表現 
 VERP_PROBE_FORMAT = '%(bounces)s+%(token)s'
 VERP_PROBE_REGEXP = r'^(?P<bounces>[^+]+?)\+(?P<token>[^@]+)@.*$'
-# Set this Yes to activate VERP probe for disabling by bounce
 # これを「Yes」に設定するとバウンスによる配送停止のための VERP 検査が
 # 有効になります。
 VERP_PROBES = No
@@ -1163,9 +1162,9 @@ HOLD_MESSAGES_AS_PICKLES = Yes
 # この変数は admin CGI のページでリスト個別の設定分類を表示する順番を
 # コントロールします。
 ADMIN_CATEGORIES = [
-    # First column
+    # 一列目
     'general', 'passwords', 'language', 'members', 'nondigest', 'digest',
-    # Second column
+    # 二列目
     'privacy', 'bounce', 'archive', 'gateway', 'autoreply',
     'contentfilter', 'topics',
     ]
@@ -1255,7 +1254,6 @@ DEFAULT_MSG_FOOTER = """--
 # 望むことでしょう。
 OLD_STYLE_PREFIXING = Yes
 
-# Scrub regular delivery
 # 普通配送メールで添付ファイルを削除します
 DEFAULT_SCRUB_NONDIGEST = False
 
@@ -1594,7 +1592,7 @@ MIME_DIGEST_KEEP_HEADERS = [
 # そのヘッダが複数回出力されることがあります。
 PLAIN_DIGEST_KEEP_HEADERS = [
     'Message',
-    # RFC 1153 headers in order
+    # RFC 1153 ヘッダ、順に
     'Date', 'From', 'To', 'Cc', 'Subject', 'Message-ID', 'Keywords',
     'Content-Type',
     ]
@@ -1606,7 +1604,6 @@ PLAIN_DIGEST_KEEP_HEADERS = [
 # 初期値であることに注意。
 #####
 
-# Should we do any bounced mail response at all?
 # どんなバウンスメールに対してもとにかく処理をしますか?
 DEFAULT_BOUNCE_PROCESSING = Yes
 
@@ -1795,11 +1792,11 @@ TEXTFIELDWIDTH = 40
 
 # ユーザ設定項目のためのビットフィールド。新規作成のリストの初期値については
 # 前述の DEFAULT_NEW_MEMBER_OPTIONS を参照して下さい。
-Digests             = 0 # handled by other mechanism, doesn't need a flag.
-DisableDelivery     = 1 # Obsolete; use set/getDeliveryStatus()
-DontReceiveOwnPosts = 2 # Non-digesters only
+Digests             = 0 # 他の仕組みで制御するのでフラグとしては不要
+DisableDelivery     = 1 # 廃止; set/getDeliveryStatus() を使用する
+DontReceiveOwnPosts = 2 # 普通配送のユーザのみ
 AcknowledgePosts    = 4
-DisableMime         = 8 # Digesters only
+DisableMime         = 8 # ダイジェスト(まとめ読み)のユーザのみ
 ConcealSubscription = 16
 SuppressPasswordReminder = 32
 ReceiveNonmatchingTopics = 64
@@ -1837,10 +1834,10 @@ OPTINFO = {'hide'    : ConcealSubscription,
 #   メッセージなどのリクエスト(申請)の処理を行うことのできる者
 # - List administrator(リスト管理者), リストの全体をコントロールすることの
 #   できる者で、リストの設定、リストの会員のユーザオプションの変更、
-#   会員の入会処理、退会処理などを行うことができます。 
+#   会員の入会処理、退会処理などを行うことができます。
 # - Site administrator(サイト管理者), サイトに関わる全体をコントロールする
 #   ことのできる者で、上で述べた全てのタスクを行うことができます。
-#   この人物は通常コマンドラインでのアクセスも可能です。 
+#   この人物は通常コマンドラインでのアクセスも可能です。
 
 UnAuthorized = 0
 AuthUser = 1          # ユーザの誰か
