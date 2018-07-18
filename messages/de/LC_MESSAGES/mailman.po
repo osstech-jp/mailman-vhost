@@ -5233,8 +5233,8 @@ msgid ""
 "Should Mailman notify you, the list owner, when bounces\n"
 "             cause a member's bounce score to be incremented?"
 msgstr ""
-"Soll Mailman den Listeninhaber benachrichtigen, wenn ein\n"
-"             Nutzer wegen permanenter Bounces deaktiviert wird?"
+"Soll Mailman den Listeninhaber benachrichtigen, wenn sich\n"
+"             die Bounce-Zahl eines Mitglieds erh&ouml;ht?"
 
 #: Mailman/Gui/Bounce.py:149
 msgid ""
@@ -7779,7 +7779,7 @@ msgstr ""
 "               <p>Seien Sie vorsichtig. Ist der Wert zu tief, kann es schon "
 "durch eine\n"
 "               einzelne Nachricht, die an mehrere Listen geschrieben wird, "
-"ausgelöst werden.\n"
+"ausgelöst werden."
 
 #: Mailman/Gui/Privacy.py:250
 msgid ""
@@ -8071,7 +8071,7 @@ msgstr ""
 "rfc822\", welche nur\n"
 "             die Originalnachricht enthält, wenn keiner der obigen Teile "
 "eingefügt\n"
-"             werden kann.\n"
+"             werden kann."
 
 #: Mailman/Gui/Privacy.py:374
 msgid ""
@@ -8135,7 +8135,7 @@ msgstr ""
 "auch\n"
 "               für Domains gelten, die hier als gleichwertig angegeben "
 "werden. Andere\n"
-"               Optionen wie 'ack' oder 'not&nbsp;metoo' allerdings nicht.\n"
+"               Optionen wie 'ack' oder 'not&nbsp;metoo' allerdings nicht."
 
 #: Mailman/Gui/Privacy.py:400
 msgid "Non-member filters"
@@ -8482,7 +8482,7 @@ msgstr ""
 "(ausser\n"
 "             für administrative E-Mails von Mailman). So können Sie "
 "effektiv\n"
-"             Nachrichten mit böswilligen Dateien etc. aussortieren.\n"
+"             Nachrichten mit böswilligen Dateien etc. aussortieren."
 
 #: Mailman/Gui/Privacy.py:570
 msgid "Legacy anti-spam filters"
@@ -8845,7 +8845,7 @@ msgstr ""
 "zu verwenden,\n"
 "             aber es fügt allen Nachrichten, die ans Usenet weitergeleitet "
 "werden, einen\n"
-"             <tt>Approved</tt>-Header hinzu.\n"
+"             <tt>Approved</tt>-Header hinzu."
 
 #: Mailman/Gui/Usenet.py:94
 msgid "Prefix <tt>Subject:</tt> headers on postings gated to news?"
