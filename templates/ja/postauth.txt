@@ -5,6 +5,6 @@
     件名:    %(subject)s
     理由:    %(reason)s
 
-適当な時に以下の URL で承認作業をしてください．
+適当な時に以下の URL で承認作業をしてください。
 
     %(admindb_url)s
