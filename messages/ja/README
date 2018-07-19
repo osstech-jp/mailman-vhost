@@ -1,5 +1,5 @@
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 これは Mailman 2.1 の README を故・菊地時夫氏が和訳したものを元に
@@ -8,34 +8,34 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
 はじめに
 
-    これは GNU Mailman すなわち GNU 公開使用許諾(GPL) のもとで配布される 
-    メーリングリスト管理システムです。このプロジェクトの名前は "Mailman" 
+    これは GNU Mailman すなわち GNU 公開使用許諾(GPL) のもとで配布される
+    メーリングリスト管理システムです。このプロジェクトの名前は "Mailman"
     と綴ります。但し、最初の 'M' は大文字で，２つ目の 'm' は 小文字で
     書きます。この他のどんな綴りも間違いです。
 
-    Mailman は主に Python つまりフリーのオブジェクト指向スクリプト言語で 
+    Mailman は主に Python つまりフリーのオブジェクト指向スクリプト言語で
     書かれています。セキュリティの目的でいくらかは ANSI C のコードも
     含まれます。
 
     Mailman は最初 John Viega によって開発されました。その後、
-    (Version 1.0b3 まで) Ken Manheimer が開発に携わりました。さらに 
+    (Version 1.0b3 まで) Ken Manheimer が開発に携わりました。さらに
     1.0 最終版までの作業はグループの力で、主要な貢献者は Barry Warsaw、
     Ken Manheimer、Scott Cotton、Harald Meland、John Viega です。
     Version 1.0 から先は主に Barry Warsaw が保守にあたり、 多くの人たち
     からの貢献を受けました。詳しくは ACKNOWLEDGMENTS ファイルを読んで
-    ください。Jeremy Hylton は Mailman 2.0 の Pipermailコードに 
+    ください。Jeremy Hylton は Mailman 2.0 の Pipermailコードに
     貢献しました。
 
     Mailman のホームページは
 
         http://www.list.org
 
-    にあり，そのミラーは
+    にあり、そのミラーは
 
         https://www.gnu.org/software/mailman/
         http://mailman.sf.net
 
-    にあります．
+    にあります。
 
     Mailman 2.1 は Python 2.4 または以降のバージョンを必要とします。
     (訳注: Python 3 以降には対応していません)
@@ -44,22 +44,24 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
         https://www.python.org
 
     これを書いている時点(2015年2月10日)での最新の 2.7 系パッチリリース
-    であるPython 2.7.9 を使うことを推奨します。
-    (訳注: この訳を作っている2017年2月23日現在 2.7.14 が出ており、
-    これを使うことを推奨します。)
+    であるPython 2.7.9 を使うことを強く推奨します。
+    (訳注: この訳を作っている2018年7月16日現在 2.7.15 が出ており、
+    これを使うことを強く推奨します。)
 
     Mailman 2.1 は Python 2.2 以前のバージョンでは動かず、また、
     Python 2.3 では機能のうちの一部は動作しないと思われます。
+    (訳注: Mailman 2.1.27 以降では Python 2.5 より前のバージョンの
+    サポートはなくなりました．)
 
     また Python と Mailman を入れるには ANSI C コンパイラも必要です。
     gcc (GNU C コンパイラ)はその目的に適合しています。 Mailman は
     現在のところ GNU/Linux とその他の UNIX 風のオペレーティングシステム
     (例えば Solaris、*BSD、MacOSX、等) でのみ作動します．Windows では
-    動きませんが、ェブとメールのクライアントソフトは Mailman との
+    動きませんが、ウェブとメールのクライアントソフトは Mailman との
     接続には十分機能します。
 
     インストールには INSTALL ファイルを見てください。もし、以前のバー
-    ジョン からバージョンアップしようとしているのであれば、UPGRADING 
+    ジョン からバージョンアップしようとしているのであれば、UPGRADING
     ファイルに 重要な情報が入っていますので必ず読んでください。
 
 特徴
@@ -68,14 +70,14 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
     (膨大な)要望リストについては TODO ファイルを読んでください。
     Mailman の動作しているところは、
 
-        http://mail.python.org/mailman/listinfo
+        https://mail.python.org/mailman/listinfo
 
     で見ることができます。
 
-    Mailman はメーリングリスト管理プログラムに期待される標準的な 
+    Mailman はメーリングリスト管理プログラムに期待される標準的な
     特徴をほとんど備えています。さらに：
 
-    - リスト管理のほとんど全ての作業が Web ベースです．Webベースの 
+    - リスト管理のほとんど全ての作業が Web ベースです．Webベースの
       登録とユーザ設定管理ができます。それぞれのメーリングリストの
       "ホームページ" はカスタマイズできます。
 
@@ -102,17 +104,17 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
     - 拡張性のあるメール配送パイプライン
 
-    - 仮想ドメインをサポート 
+    - 仮想ドメインをサポート
 
 必要事項
 
     デフォルトのメール配送機構は直接 SMTP 接続を使っており、ポート
     番号25で動いているどんなメール配送システム(MTA) であっても構い
-    ません．ですから，どんな MTA でも Mailman を使うことができます
+    ません。ですから、どんな MTA でも Mailman を使うことができます
     が、特定の MTA (Exim と Postfix) を使うと、ウェブを通したリスト
     の作成と削除もサポートできます。
 
-    Mailman は CGI/1.1 をサポートするどんな web サーバでも使えます． 
+    Mailman は CGI/1.1 をサポートするどんな web サーバでも使えます。
     生成される HTMLはとても平凡で画像をケチっていますので、ほとんどの
     ブラウザにとってフレンドリーのはずです。
 
@@ -125,80 +127,80 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
     やその他のカッコいいプラグインは必要ありません。
 
 はじめてリストを作成する
-    (訳注: こののセクションは現在のREADMEにはなく、この内容は doc 
+    (訳注: このセクションは現在のREADMEにはなく、この内容は doc
     ディレクトリ以下にあるインストールマニュアル(installation manual)の
     セクション12 および 13 でカバーされていますが、2016年3月2日現在でも
     この手順で問題はないように思われますし、せっかくの訳なので残して
-     おきます。)
+    おきます。)
 
-    以下の手順は, あなたが既に INSTALL ファイルに従って Mailman を
-    インストールし, 設定済みであると仮定しています. テストのリスト
-    を作成するには, 以下のようにしてください:
+    以下の手順は、あなたが既に INSTALL ファイルに従って Mailman を
+    インストールし、設定済みであると仮定しています。テストのリスト
+    を作成するには、以下のようにしてください:
 
-    - 最初に, サイト管理者のパスワードを設定します. インストール
+    - 最初に、サイト管理者のパスワードを設定します。インストール
       したディレクトリ(デフォルトでは /usr/local/mailman) に cd して
-      次のようにします.
+      次のようにします。
 
       % bin/mmsitepass
       New site password: [yourpassword]
       Again to confirm password: [yourpassword]
       Password changed.
 
-      訳注: もし, あなたが環境変数 LANG を ja に設定したら
-        以下のようなプロンプトが出てくるかもしれません.
+      訳注: もし、あなたが環境変数 LANG を ja に設定したら
+        以下のようなプロンプトが出てくるかもしれません。
 
         % bin/mmsitepass
         新しい サイト のパスワード:
         パスワード確認:
         パスワードを変更しました.
 
-    - 次のような URL に接続します.
+    - 次のような URL に接続します。
 
         http://my.dom.ain/mailman/create
 
-      画面に出てくる指示に従ってフォームに記入します. そして, 
+      画面に出てくる指示に従ってフォームに記入します。そして、
       "リスト作成者の認証パスワード: " のところに先ほどのパスワード
-      を入れます. 自分のメールアドレスを"最初のリスト管理者アドレス"
-      に入れて, 「リスト作成完了」をメールで管理者に知らせるように,
-      "はい" を選びます.
+      を入れます。自分のメールアドレスを"最初のリスト管理者アドレス"
+      に入れて、「リスト作成完了」をメールで管理者に知らせるように、
+      "はい" を選びます。
 
-    - 「リストを作成する」をクリックします.
+    - 「リストを作成する」をクリックします。
 
-    - メールをチェックして, 新しいメーリングリストが作成されたことを
-      知らせるメールを読みます.
+    - メールをチェックして、新しいメーリングリストが作成されたことを
+      知らせるメールを読みます。
 
-    - 注意: もし, Exim か Postfix 以外の MTA を使っている場合には,
-      (例えば, Sendmail や qmail) メーリングリストの alias を手で
-      設定するという, 一手間が必要です. あなたが受け取ったメールに
-      書かれた指示に従ってください. (あなたの MTA についてどのように
-      したらよいのか知っている必要があります. 詳しくは, あなたの
-      MTA についての README を読んでください.)
+    - 注意: もし、Exim か Postfix 以外の MTA を使っている場合には、
+      (例えば、Sendmail や qmail) メーリングリストの alias を手で
+      設定するという、一手間が必要です。あなたが受け取ったメールに
+      書かれた指示に従ってください。(あなたの MTA についてどのように
+      したらよいのか知っている必要があります。詳しくは、あなたの
+      MTA についての README を読んでください。)
 
-    - リストの管理ページへ行ってください. (ウェブページのリンクか
+    - リストの管理ページへ行ってください。(ウェブページのリンクか
       メールに書かれたリンクをたどります) 典型的な URL は次のように
-      なっているはずです.
+      なっているはずです。
 
         http://my.dom.ain/mailman/admin/mysitelist
 
       リストのパスワードを入れて「ログイン...」をクリックします
 
-    - 「会員管理」をクリックし, 続いて「まとめて入会登録」へ行きます.
+    - 「会員管理」をクリックし、続いて「まとめて入会登録」へ行きます。
 
     - 自分のメールアドレスを大きなテキストフィールドに入れて
-      「変更を送信する」をクリックします.
+      「変更を送信する」をクリックします。
 
-    - 自分のメールソフトを使って, yourlist@my.dom.ain 宛てにメールを
-      出して見てください. Mailman を経由して配送されるメールが
-      1,2 分のうちに届くでしょう.
+    - 自分のメールソフトを使って、yourlist@my.dom.ain 宛てにメールを
+      出して見てください。Mailman を経由して配送されるメールが
+      1,2 分のうちに届くでしょう。
 
-    おめでとう！初めてのメーリングリスト作成とテストが完了しました.
-    もし, つまづくようなことがあれば, 次のセクションのその他の情報を
-    見てください.
+    おめでとう！初めてのメーリングリスト作成とテストが完了しました。
+    もし, つまづくようなことがあれば、次のセクションのその他の情報を
+    見てください。
 
 
 その他の情報
 
-    オンライン文書は, あなたが Mailman を開いたディレクトリの下の
+    オンライン文書は、あなたが Mailman を開いたディレクトリの下の
 
         file:doc/
 
@@ -206,16 +208,16 @@ Copyright (C) 1998-2015 by the Free Software Foundation, Inc.
 
     コミュニティ手動でまとめられた情報のための wiki は以下にあります。
 
-        http://wiki.list.org
+        https://wiki.list.org
 
    wiki には Mailman コミュニティが保守しているオンラインFAQが含まれて
    おり、そこには膨大な情報があります。
 
-        http://wiki.list.org/display/DOC/Frequently+Asked+Questions
+        https://wiki.list.org/display/DOC/Frequently+Asked+Questions
 
    また、さらなる文書にへのリンクは以下の通りです。
 
-        http://wiki.list.org/display/DOC/
+        https://wiki.list.org/display/DOC/
 
 
 (その他の英語の情報については英語版のREADMEを見てください)
