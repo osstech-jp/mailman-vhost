@@ -280,17 +280,28 @@ CRNLpat = re.compile(r'[^\x21-\x7e]')
 def GetPathPieces(envar='PATH_INFO'):
     path = os.environ.get(envar)
     if path:
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'unidentified origin')))
         if CRNLpat.search(path):
             path = CRNLpat.split(path)[0]
-            remote = os.environ.get('HTTP_FORWARDED_FOR',
-                     os.environ.get('HTTP_X_FORWARDED_FOR',
-                     os.environ.get('REMOTE_ADDR',
-                                    'unidentified origin')))
             syslog('error',
                 'Warning: Possible malformed path attack domain=%s remote=%s',
                    get_domain(),
                    remote)
-        return [p for p in path.split('/') if p]
+        # Check for listname injections that won't be websafed.
+        pieces = [p for p in path.split('/') if p]
+        # Get the longest listname or 20 if none.
+        if list_names():
+            longest = max([len(x) for x in list_names()])
+        else:
+            longest = 20
+        if len(pieces[0]) > longest:
+            syslog('mischief',
+               'Hostile listname: listname=%s: remote=%s', pieces[0], remote)
+            pieces[0] = pieces[0][:longest] + '...'
+        return pieces
     return None
 
 
