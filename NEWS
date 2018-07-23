@@ -5,7 +5,12 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.28 (xx-xxx-xxxx)
+2.1.28 (23-Jul-2018)
+
+  Security
+ 
+    - A content spoofing vulnerability with invalid list name messages in
+      the web UI has been fixed.  CVE-2018-13796  (LP: #1780874)
 
   New Features
 
