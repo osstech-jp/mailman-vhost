@@ -297,7 +297,7 @@ def GetPathPieces(envar='PATH_INFO'):
             longest = max([len(x) for x in list_names()])
         else:
             longest = 20
-        if len(pieces[0]) > longest:
+        if pieces and len(pieces[0]) > longest:
             syslog('mischief',
                'Hostile listname: listname=%s: remote=%s', pieces[0], remote)
             pieces[0] = pieces[0][:longest] + '...'
