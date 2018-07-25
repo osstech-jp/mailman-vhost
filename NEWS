@@ -5,6 +5,13 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.29 (24-Jul-2018)
+
+  Bug Fixes
+
+    - Fixed the listinfo and admin overview pages that were broken by
+      LP: #1780874.  (LP: #1783417)
+
 2.1.28 (23-Jul-2018)
 
   Security
