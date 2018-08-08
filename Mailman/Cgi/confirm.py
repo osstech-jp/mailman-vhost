@@ -327,6 +327,12 @@ def subscription_cancel(mlist, doc, cookie):
     try:
         # Discard this cookie
         userdesc = mlist.pend_confirm(cookie)[1]
+    except TypeError:
+        # See comment about TypeError in subscription_confirm.
+        # Give a generic message.  It doesn't much matter what since it's a
+        # bot anyway.
+        doc.AddItem(_('Error'))
+        return
     finally:
         mlist.Unlock()
     lang = userdesc.language
@@ -362,6 +368,10 @@ def subscription_confirm(mlist, doc, cookie, cgidata):
             else:
                 digest = None
             userdesc = mlist.pend_confirm(cookie, expunge=False)[1]
+            # There is a potential race condition if two (robotic?) clients try
+            # to confirm the same token simultaneously.  If they both succeed in
+            # retrieving the data above, when the second gets here, the cookie
+            # is gone and TypeError is thrown.  Catch it below.
             fullname = cgidata.getfirst('realname', None)
             if fullname is not None:
                 fullname = Utils.canonstr(fullname, lang)
@@ -379,7 +389,7 @@ def subscription_confirm(mlist, doc, cookie, cgidata):
             the list moderator before you will be subscribed.  Your request
             has been forwarded to the list moderator, and you will be notified
             of the moderator's decision."""))
-        except Errors.NotAMemberError:
+        except (Errors.NotAMemberError, TypeError):
             bad_confirmation(doc, _('''Invalid confirmation string.  It is
             possible that you are attempting to confirm a request for an
             address that has already been unsubscribed.'''))
@@ -444,7 +454,8 @@ def unsubscription_confirm(mlist, doc, cookie):
             i18n.set_language(lang)
             doc.set_language(lang)
             op, addr = mlist.ProcessConfirmation(cookie)
-        except Errors.NotAMemberError:
+        # See comment about TypeError in subscription_confirm.
+        except (Errors.NotAMemberError, TypeError):
             bad_confirmation(doc, _('''Invalid confirmation string.  It is
             possible that you are attempting to confirm a request for an
             address that has already been unsubscribed.'''))
@@ -533,7 +544,8 @@ def addrchange_confirm(mlist, doc, cookie):
             i18n.set_language(lang)
             doc.set_language(lang)
             op, oldaddr, newaddr = mlist.ProcessConfirmation(cookie)
-        except Errors.NotAMemberError:
+        # See comment about TypeError in subscription_confirm.
+        except (Errors.NotAMemberError, TypeError):
             bad_confirmation(doc, _('''Invalid confirmation string.  It is
             possible that you are attempting to confirm a request for an
             address that has already been unsubscribed.'''))
@@ -657,7 +669,8 @@ def heldmsg_confirm(mlist, doc, cookie):
             # Discard the message
             mlist.HandleRequest(id, mm_cfg.DISCARD,
                                 _('Sender discarded message via web.'))
-        except (Errors.LostHeldMessage, KeyError):
+        # See comment about TypeError in subscription_confirm.
+        except (Errors.LostHeldMessage, KeyError, TypeError):
             bad_confirmation(doc, _('''The held message with the Subject:
             header <em>%(subject)s</em> could not be found.  The most likely
             reason for this is that the list moderator has already approved or
@@ -770,7 +783,8 @@ def reenable_confirm(mlist, doc, cookie):
             i18n.set_language(lang)
             doc.set_language(lang)
             op, addr = mlist.ProcessConfirmation(cookie)
-        except Errors.NotAMemberError:
+        # See comment about TypeError in subscription_confirm.
+        except (Errors.NotAMemberError, TypeError):
             bad_confirmation(doc, _('''Invalid confirmation string.  It is
             possible that you are attempting to confirm a request for an
             address that has already been unsubscribed.'''))
