@@ -5,6 +5,13 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.30 (xx-xxx.xxxx)
+  
+  Bug Fixes
+  
+    - Fixed the confirm CGI to catch a rare TypeError on simultaneous
+      confirmations of the same token.  (LP: #1785854)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
