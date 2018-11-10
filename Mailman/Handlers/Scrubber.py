@@ -87,6 +87,9 @@ def guess_extension(ctype, ext):
     all = guess_all_extensions(ctype, strict=False)
     if ext in all:
         return ext
+    if ctype.lower == 'application/octet-stream':
+        # For this type, all[0] is '.obj'. '.bin' is better.
+        return '.bin'
     return all and all[0]
 
 
