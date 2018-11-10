@@ -7,10 +7,13 @@ Here is a history of user visible changes to Mailman.
 
 2.1.30 (xx-xxx.xxxx)
   
-  Bug Fixes
+  Bug Fixes and other patches
   
     - Fixed the confirm CGI to catch a rare TypeError on simultaneous
       confirmations of the same token.  (LP: #1785854)
+
+    - Scrubbed application/octet-stream MIME parts will now be given a
+      .bin extension instead of .obj.
 
 2.1.29 (24-Jul-2018)
 
