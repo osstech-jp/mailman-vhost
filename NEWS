@@ -15,6 +15,9 @@ Here is a history of user visible changes to Mailman.
     - Scrubbed application/octet-stream MIME parts will now be given a
       .bin extension instead of .obj.
 
+    - Added bounce recognition for a non-compliant opensmtpd DSN with
+      Action: error.  (LP: #1805137)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes

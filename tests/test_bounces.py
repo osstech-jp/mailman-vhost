@@ -122,6 +122,7 @@ class BounceTest(unittest.TestCase):
         ('DSN', 'dsn_15.txt', ['userx@example.com']),
         ('DSN', 'dsn_16.txt', ['userx@example.com']),
         ('DSN', 'dsn_17.txt', Stop),
+        ('DSN', 'dsn_18.txt', ['email@replaced.net']),
         # Microsoft Exchange
         ('Exchange', 'microsoft_01.txt', ['userx@example.COM']),
         ('Exchange', 'microsoft_02.txt', ['userx@example.COM']),
