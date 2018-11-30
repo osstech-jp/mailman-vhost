@@ -356,6 +356,18 @@ class Privacy(GUIBase):
              be sent to anyone who posts to this list from a domain
              with a DMARC Reject%(quarantine)s Policy.""")),
              
+            ('dmarc_moderation_addresses', mm_cfg.EmailListEx, (10, WIDTH), 1,
+             _("""List of addresses (or regexps) whose posts should always apply
+             <a href="?VARHELP=privacy/sender/dmarc_moderation_action"
+             >dmarc_moderation_action</a> 
+             regardless of any domain specific DMARC Policy."""),
+
+             _("""Postings from any of these members will automatically
+             apply DMARC action mitigation.
+
+             <p>Add member addresses one per line; start the line with a ^
+             character to designate a regular expression match.""")),
+             
             ('dmarc_wrapped_message_text', mm_cfg.Text, (10, WIDTH), 1,
              _("""If dmarc_moderation_action applies and is Wrap Message,
              and this text is provided, the text will be placed in a

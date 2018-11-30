@@ -497,6 +497,7 @@ def NewVars(l):
     add_only_if_missing('dmarc_none_moderation_action',
                        mm_cfg.DEFAULT_DMARC_NONE_MODERATION_ACTION)
     add_only_if_missing('dmarc_moderation_notice', '')
+    add_only_if_missing('dmarc_moderation_addresses', [])
     add_only_if_missing('dmarc_wrapped_message_text',
                        mm_cfg.DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT)
     add_only_if_missing('member_verbosity_threshold', 
