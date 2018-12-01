@@ -362,8 +362,10 @@ class Privacy(GUIBase):
              >dmarc_moderation_action</a> 
              regardless of any domain specific DMARC Policy."""),
 
-             _("""Postings from any of these members will automatically
-             apply DMARC action mitigation.
+             _("""Postings from any of these addresses will automatically
+             apply any DMARC action mitigation.  This can be utilized to
+             automatically wrap or munge postings from known addresses or
+             domains such as internal domains.
 
              <p>Add member addresses one per line; start the line with a ^
              character to designate a regular expression match.""")),
