@@ -158,6 +158,13 @@ def process_request(doc, cgidata):
         if not ok:
             ok = Utils.check_global_password(auth)
     if not ok:
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'unidentified origin')))
+        syslog('security',
+               'Authorization failed (create): list=%s: remote=%s',
+               listname, remote)
         request_creation(
             doc, cgidata,
             _('You are not authorized to create new mailing lists'))

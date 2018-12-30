@@ -26,6 +26,8 @@ Here is a history of user visible changes to Mailman.
     - Added bounce recognition for a non-compliant opensmtpd DSN with
       Action: error.  (LP: #1805137)
 
+    - Corrected and augmented some security log messages.  (LP: #1810098)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes

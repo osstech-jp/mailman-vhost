@@ -127,6 +127,13 @@ def process_request(doc, cgidata, mlist):
                            mm_cfg.AuthListAdmin,
                            mm_cfg.AuthSiteAdmin),
                           password) == mm_cfg.UnAuthorized:
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'unidentified origin')))
+        syslog('security',
+               'Authorization failed (rmlist): list=%s: remote=%s',
+               mlist.internal_name(), remote)
         request_deletion(
             doc, mlist,
             _('You are not authorized to delete this mailing list'))
