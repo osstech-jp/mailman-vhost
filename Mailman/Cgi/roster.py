@@ -123,8 +123,8 @@ def main():
                  os.environ.get('REMOTE_ADDR',
                                 'unidentified origin')))
         syslog('security',
-               'Authorization failed (roster): list=%s: remote=%s',
-               listname, remote)
+               'Authorization failed (roster): user=%s: list=%s: remote=%s',
+               addr, listname, remote)
         return
 
     # The document and its language
