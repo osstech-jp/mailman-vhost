@@ -296,7 +296,7 @@ def main():
                      os.environ.get('REMOTE_ADDR',
                                     'unidentified origin')))
             syslog('security',
-                 'Authorization failed (private): user=%s: list=%s: remote=%s',
+                 'Authorization failed (options): user=%s: list=%s: remote=%s',
                    user, listname, remote)
             # So as not to allow membership leakage, prompt for the email
             # address and the password here.

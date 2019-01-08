@@ -56,7 +56,8 @@ def check(msg):
             # Some MTAs have been observed that put comments on the action.
             if action.startswith('delayed'):
                 return Stop
-            if not action.startswith('fail'):
+            # opensmtpd uses non-compliant Action: error.
+            if not (action.startswith('fail') or action.startswith('error')):
                 # Some non-permanent failure, so ignore this block
                 continue
             params = []

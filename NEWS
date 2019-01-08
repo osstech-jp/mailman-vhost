@@ -5,6 +5,29 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.30 (xx-xxx.xxxx)
+
+  New Features
+
+    - Thanks to Jim Popovitch, there is now a dmarc_moderation_addresses
+      list setting that can be used to apply dmarc_moderation_action to mail
+      From: addresses listed or matching listed regexps.  This can be used
+      to modify mail to addresses that don't accept external mail From:
+      themselves.
+  
+  Bug Fixes and other patches
+  
+    - Fixed the confirm CGI to catch a rare TypeError on simultaneous
+      confirmations of the same token.  (LP: #1785854)
+
+    - Scrubbed application/octet-stream MIME parts will now be given a
+      .bin extension instead of .obj.
+
+    - Added bounce recognition for a non-compliant opensmtpd DSN with
+      Action: error.  (LP: #1805137)
+
+    - Corrected and augmented some security log messages.  (LP: #1810098)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
