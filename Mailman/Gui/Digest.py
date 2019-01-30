@@ -41,37 +41,37 @@ class Digest(GUIBase):
             return None
         WIDTH = mm_cfg.TEXTFIELDWIDTH
 
-	info = [
+        info = [
             _("Batched-delivery digest characteristics."),
 
-	    ('digestable', mm_cfg.Toggle, (_('No'), _('Yes')), 1,
-	     _('Can list members choose to receive list traffic '
-	       'bunched in digests?')),
+            ('digestable', mm_cfg.Toggle, (_('No'), _('Yes')), 1,
+             _('Can list members choose to receive list traffic '
+               'bunched in digests?')),
 
-	    ('digest_is_default', mm_cfg.Radio, 
-	     (_('Regular'), _('Digest')), 0,
-	     _('Which delivery mode is the default for new users?')),
+            ('digest_is_default', mm_cfg.Radio, 
+             (_('Regular'), _('Digest')), 0,
+             _('Which delivery mode is the default for new users?')),
 
-	    ('mime_is_default_digest', mm_cfg.Radio, 
-	     (_('Plain'), _('MIME')), 0,
-	     _('When receiving digests, which format is default?')),
+            ('mime_is_default_digest', mm_cfg.Radio, 
+             (_('Plain'), _('MIME')), 0,
+             _('When receiving digests, which format is default?')),
 
-	    ('digest_size_threshhold', mm_cfg.Number, 3, 0,
-	     _('How big in Kb should a digest be before it gets sent out?'
+            ('digest_size_threshhold', mm_cfg.Number, 3, 0,
+             _('How big in Kb should a digest be before it gets sent out?'
                '  0 implies no maximum size.')),
 
- 	    ('digest_send_periodic', mm_cfg.Radio, (_('No'), _('Yes')), 1,
-	     _('Should a digest be dispatched daily when the size threshold '
-	       "isn't reached?")),
+            ('digest_send_periodic', mm_cfg.Radio, (_('No'), _('Yes')), 1,
+             _('Should a digest be dispatched daily when the size threshold '
+               "isn't reached?")),
 
             ('digest_header', mm_cfg.Text, (4, WIDTH), 0,
-	     _('Header added to every digest'),
+             _('Header added to every digest'),
              _("Text attached (as an initial message, before the table"
                " of contents) to the top of digests. ")
              + Utils.maketext('headfoot.html', raw=1, mlist=mlist)),
 
-	    ('digest_footer', mm_cfg.Text, (4, WIDTH), 0,
-	     _('Footer added to every digest'),
+            ('digest_footer', mm_cfg.Text, (4, WIDTH), 0,
+             _('Footer added to every digest'),
              _("Text attached (as a final message) to the bottom of digests. ")
              + Utils.maketext('headfoot.html', raw=1, mlist=mlist)),
 
@@ -90,7 +90,7 @@ class Digest(GUIBase):
             ('_send_digest_now', mm_cfg.Toggle, (_('No'), _('Yes')), 0,
              _('''Should Mailman send the next digest right now, if it is not
              empty?''')),
-	    ]
+            ]
 
 ##        if mm_cfg.OWNERS_CAN_ENABLE_PERSONALIZATION:
 ##            info.extend([

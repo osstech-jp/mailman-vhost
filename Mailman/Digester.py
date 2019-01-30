@@ -31,20 +31,20 @@ from Mailman.i18n import _
 
 class Digester:
     def InitVars(self):
-	# Configurable
-	self.digestable = mm_cfg.DEFAULT_DIGESTABLE
-	self.digest_is_default = mm_cfg.DEFAULT_DIGEST_IS_DEFAULT
-	self.mime_is_default_digest = mm_cfg.DEFAULT_MIME_IS_DEFAULT_DIGEST
-	self.digest_size_threshhold = mm_cfg.DEFAULT_DIGEST_SIZE_THRESHHOLD
-	self.digest_send_periodic = mm_cfg.DEFAULT_DIGEST_SEND_PERIODIC
-	self.next_post_number = 1
-	self.digest_header = mm_cfg.DEFAULT_DIGEST_HEADER
-	self.digest_footer = mm_cfg.DEFAULT_DIGEST_FOOTER
+        # Configurable
+        self.digestable = mm_cfg.DEFAULT_DIGESTABLE
+        self.digest_is_default = mm_cfg.DEFAULT_DIGEST_IS_DEFAULT
+        self.mime_is_default_digest = mm_cfg.DEFAULT_MIME_IS_DEFAULT_DIGEST
+        self.digest_size_threshhold = mm_cfg.DEFAULT_DIGEST_SIZE_THRESHHOLD
+        self.digest_send_periodic = mm_cfg.DEFAULT_DIGEST_SEND_PERIODIC
+        self.next_post_number = 1
+        self.digest_header = mm_cfg.DEFAULT_DIGEST_HEADER
+        self.digest_footer = mm_cfg.DEFAULT_DIGEST_FOOTER
         self.digest_volume_frequency = mm_cfg.DEFAULT_DIGEST_VOLUME_FREQUENCY
-	# Non-configurable.
+        # Non-configurable.
         self.one_last_digest = {}
-	self.digest_members = {}
-	self.next_digest_number = 1
+        self.digest_members = {}
+        self.next_digest_number = 1
         self.digest_last_sent_at = 0
 
     def send_digest_now(self):

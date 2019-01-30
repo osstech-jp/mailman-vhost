@@ -1575,7 +1575,7 @@ def banned_ip(ip):
             ptr = ipaddress.ip_address(uip).reverse_pointer
         except ValueError:
             return False
-	lookup = '{0}.zen.spamhaus.org'.format('.'.join(ptr.split('.')[:-2]))
+        lookup = '{0}.zen.spamhaus.org'.format('.'.join(ptr.split('.')[:-2]))
     else:
         parts = ip.split('.')
         if len(parts) != 4:

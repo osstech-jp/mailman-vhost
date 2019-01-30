@@ -37,7 +37,7 @@ and the logs are rotated.
 #  Please direct questions on this to the above address.
 #
 
-showLines = 100		#  lines of log messages to display before truncating
+showLines = 100         #  lines of log messages to display before truncating
 
 import sys, os, string, time, errno
 import paths
@@ -59,45 +59,45 @@ text.append('')
 logDate = time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))
 textSend = 0
 for log in ( 'error', 'smtp-failures' ):
-	fileName = os.path.join(mm_cfg.LOG_DIR, log)
+        fileName = os.path.join(mm_cfg.LOG_DIR, log)
 
-	#  rotate file if it contains any data
-	stats = os.stat(fileName)
-	if stats[stat.ST_SIZE] < 1: continue
-	fileNameNew = '%s.%s' % ( fileName, logDate )
-	newLogfiles.append(fileNameNew)
-	os.rename(fileName, fileNameNew)
-	open(fileName, 'w')
-	os.chmod(fileName, stat.S_IMODE(stats[stat.ST_MODE]))
-	try: os.chown(fileName, stats[stat.ST_UID], stats[stat.ST_GID])
-	except OSError: pass    #  permission denied, DOH!
+        #  rotate file if it contains any data
+        stats = os.stat(fileName)
+        if stats[stat.ST_SIZE] < 1: continue
+        fileNameNew = '%s.%s' % ( fileName, logDate )
+        newLogfiles.append(fileNameNew)
+        os.rename(fileName, fileNameNew)
+        open(fileName, 'w')
+        os.chmod(fileName, stat.S_IMODE(stats[stat.ST_MODE]))
+        try: os.chown(fileName, stats[stat.ST_UID], stats[stat.ST_GID])
+        except OSError: pass    #  permission denied, DOH!
 
-	textSend = 1
-	tmp = '#  FILE: %s  #' % fileNameNew
-	text.append('#' * len(tmp))
-	text.append(tmp)
-	text.append('#' * len(tmp))
-	text.append('')
+        textSend = 1
+        tmp = '#  FILE: %s  #' % fileNameNew
+        text.append('#' * len(tmp))
+        text.append(tmp)
+        text.append('#' * len(tmp))
+        text.append('')
 
-	linesLeft = showLines	#  e-mail first linesLeft of log files
-	for line in fileinput.input(fileNameNew):
-		if linesLeft == 0:
-			text.append('[... truncated ...]')
-			break
-		linesLeft = linesLeft - 1
-		line = string.rstrip(line)
-		text.append(line)
-	text.append('')
+        linesLeft = showLines   #  e-mail first linesLeft of log files
+        for line in fileinput.input(fileNameNew):
+                if linesLeft == 0:
+                        text.append('[... truncated ...]')
+                        break
+                linesLeft = linesLeft - 1
+                line = string.rstrip(line)
+                text.append(line)
+        text.append('')
 
 #  send message if we've actually found anything
 if textSend:
-	text = string.join(text, '\n') + '\n'
-	siteowner = Utils.get_site_email()
-	Utils.SendTextToUser(
-		'Mailman Log Report -- %s' % time.ctime(time.time()),
-		text, siteowner, siteowner)
+        text = string.join(text, '\n') + '\n'
+        siteowner = Utils.get_site_email()
+        Utils.SendTextToUser(
+                'Mailman Log Report -- %s' % time.ctime(time.time()),
+                text, siteowner, siteowner)
 
 #  compress any log-files we made
 if hasattr(mm_cfg, 'COMPRESS_LOGFILES_WITH') and mm_cfg.COMPRESS_LOGFILES_WITH:
-	for file in newLogfiles:
-		os.system(mm_cfg.COMPRESS_LOGFILES_WITH % file)
+        for file in newLogfiles:
+                os.system(mm_cfg.COMPRESS_LOGFILES_WITH % file)
