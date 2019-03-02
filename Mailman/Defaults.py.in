@@ -166,6 +166,15 @@ HTML_TO_PLAIN_TEXT_COMMAND = '/usr/bin/lynx -dump %(filename)s'
 # character that doesn't match this class.  Do not include '/' in this list.
 ACCEPTABLE_LISTNAME_CHARACTERS = '[-+_.=a-z0-9@]'
 
+# The number of characters in the longest listname in the installation.  The
+# fix for LP: #1780874 truncates list names in web URLs to this length to avoid
+# a content spoofing vulnerability.  If this is left at its default value of
+# 0, the length of the longest listname is calculated on every web access.
+# This can have performance implications in installations with a very large
+# number of lists.  To use this feature to avoid the calculation, set this to
+# a number equal to the length of the longest expected valid list name.
+MAX_LISTNAME_LENGTH = 0
+
 # Shall the user's real names be displayed along with their email addresses
 # in list rosters?  Defaults to No to preserve prior behavior.
 ROSTER_DISPLAY_REALNAME = No
