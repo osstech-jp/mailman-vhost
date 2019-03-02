@@ -27,18 +27,18 @@ class Archive(GUIBase):
     def GetConfigInfo(self, mlist, category, subcat=None):
         if category <> 'archive':
             return None
-	return [
+        return [
             _("List traffic archival policies."),
 
-	    ('archive', mm_cfg.Toggle, (_('No'), _('Yes')), 0, 
-	     _('Archive messages?')),
+            ('archive', mm_cfg.Toggle, (_('No'), _('Yes')), 0, 
+             _('Archive messages?')),
 
-	    ('archive_private', mm_cfg.Radio, (_('public'), _('private')), 0,
+            ('archive_private', mm_cfg.Radio, (_('public'), _('private')), 0,
              _('Is archive file source for public or private archival?')),
 
- 	    ('archive_volume_frequency', mm_cfg.Radio, 
+            ('archive_volume_frequency', mm_cfg.Radio, 
              (_('Yearly'), _('Monthly'), _('Quarterly'),
               _('Weekly'), _('Daily')),
              0,
- 	     _('How often should a new archive volume be started?')),
-	    ]
+             _('How often should a new archive volume be started?')),
+            ]

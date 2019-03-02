@@ -236,7 +236,7 @@ class Message(email.Message.Message):
         Mailman.Message.Generator.
 
         Operates like email.Message.Message.as_string, only
-	using Mailman's Message.Generator class. Only the top headers will
+        using Mailman's Message.Generator class. Only the top headers will
         get folded.
         """
         fp = StringIO()

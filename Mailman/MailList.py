@@ -424,7 +424,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         self.dmarc_none_moderation_action = (
             mm_cfg.DEFAULT_DMARC_NONE_MODERATION_ACTION)
         self.dmarc_moderation_notice = ''
-	self.dmarc_moderation_addresses = []
+        self.dmarc_moderation_addresses = []
         self.dmarc_wrapped_message_text = (
             mm_cfg.DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT)
         self.equivalent_domains = (

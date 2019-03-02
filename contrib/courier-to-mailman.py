@@ -57,69 +57,69 @@ MailmanOwner = "postmaster@localhost"; # Postmaster and abuse mail recepient.
 import sys, os, re, string
 
 def main():
-	os.nice(5)  # Handle mailing lists at non-interactive priority.
+        os.nice(5)  # Handle mailing lists at non-interactive priority.
 
-	os.chdir(MailmanVar + "/lists")
+        os.chdir(MailmanVar + "/lists")
 
-	try:
-		local = string.lower(os.environ["LOCAL"])
-	except:
-		# This might happen if we're not using qmail.
-		sys.stderr.write("LOCAL not set in environment?\n")
-		sys.exit(112)
+        try:
+                local = string.lower(os.environ["LOCAL"])
+        except:
+                # This might happen if we're not using qmail.
+                sys.stderr.write("LOCAL not set in environment?\n")
+                sys.exit(112)
 
-	names = ("root", "postmaster", "mailer-daemon", "mailman-owner", "owner",
-			 "abuse")
-	for i in names:
-		if i == local:
-			os.execv("/usr/bin/sendmail",
-					 ("/usr/bin/sendmail", MailmanOwner))
-			sys.exit(0)
+        names = ("root", "postmaster", "mailer-daemon", "mailman-owner", "owner",
+                         "abuse")
+        for i in names:
+                if i == local:
+                        os.execv("/usr/bin/sendmail",
+                                         ("/usr/bin/sendmail", MailmanOwner))
+                        sys.exit(0)
 
-	type = "post"
-	listname = string.lower(local)
-	types = (("-admin$", "admin"),
-			 ("-bounces$", "bounces"),
-			 ("-bounces\+.*$", "bounces"),		# for VERP
-			 ("-confirm$", "confirm"),
-			 ("-confirm\+.*$", "confirm"),
-			 ("-join$", "join"),
-			 ("-leave$", "leave"),
-			 ("-owner$", "owner"),
-			 ("-request$", "request"),
-			 ("-subscribe$", "subscribe"),
-			 ("-unsubscribe$", "unsubscribe"))
+        type = "post"
+        listname = string.lower(local)
+        types = (("-admin$", "admin"),
+                         ("-bounces$", "bounces"),
+                         ("-bounces\+.*$", "bounces"),          # for VERP
+                         ("-confirm$", "confirm"),
+                         ("-confirm\+.*$", "confirm"),
+                         ("-join$", "join"),
+                         ("-leave$", "leave"),
+                         ("-owner$", "owner"),
+                         ("-request$", "request"),
+                         ("-subscribe$", "subscribe"),
+                         ("-unsubscribe$", "unsubscribe"))
 
-	for i in types:
-		if re.search(i[0],local):
-			type = i[1]
-			listname = re.sub(i[0],"",local)
+        for i in types:
+                if re.search(i[0],local):
+                        type = i[1]
+                        listname = re.sub(i[0],"",local)
 
-	if os.path.exists(listname):
-		os.execv(MailmanHome + "/mail/mailman",
-				 (MailmanHome + "/mail/mailman", type, listname))
-	else:
-		bounce()
+        if os.path.exists(listname):
+                os.execv(MailmanHome + "/mail/mailman",
+                                 (MailmanHome + "/mail/mailman", type, listname))
+        else:
+                bounce()
 
-	sys.exit(111)
+        sys.exit(111)
 
 def bounce():
-	bounce_message = """\
+        bounce_message = """\
 TO ACCESS THE MAILING LIST SYSTEM: Start your web browser on
 http://%s/
 That web page will help you subscribe or unsubscribe, and will
 give you directions on how to post to each mailing list.\n"""
-	sys.stderr.write(bounce_message % (os.environ["HOST"]))
-	sys.exit(100)
+        sys.stderr.write(bounce_message % (os.environ["HOST"]))
+        sys.exit(100)
 
 try:
-	sys.exit(main())
+        sys.exit(main())
 except SystemExit, argument:
-	sys.exit(argument)
+        sys.exit(argument)
 
 except Exception, argument:
-	info = sys.exc_info()
-	trace = info[2]
-	sys.stderr.write("%s %s\n" % (sys.exc_type, argument))
-	sys.stderr.write("LINE %d\n" % (trace.tb_lineno))
-	sys.exit(111) # Soft failure, try again later.
+        info = sys.exc_info()
+        trace = info[2]
+        sys.stderr.write("%s %s\n" % (sys.exc_type, argument))
+        sys.stderr.write("LINE %d\n" % (trace.tb_lineno))
+        sys.exit(111) # Soft failure, try again later.

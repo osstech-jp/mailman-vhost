@@ -195,7 +195,7 @@ class LockFile:
         self.__logprefix = os.path.split(self.__lockfile)[1]
         # For transferring ownership across a fork.
         self.__owned = True
-	
+
     def __repr__(self):
         return '<LockFile %s: %s [%s: %ssec] pid=%s>' % (
             id(self), self.__lockfile,

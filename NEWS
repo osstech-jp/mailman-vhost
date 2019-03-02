@@ -14,6 +14,13 @@ Here is a history of user visible changes to Mailman.
       From: addresses listed or matching listed regexps.  This can be used
       to modify mail to addresses that don't accept external mail From:
       themselves.
+
+    - There is a new MAX_LISTNAME_LENGTH setting.  The fix for LP: #1780874
+      obtains a list of the names of all the all the lists in the installation
+      in order to determine the maximum length of a legitimate list name.  It
+      does this on every web access and on sites with a very large number of
+      lists, this can have performance implications.  See the description in
+      Defaults.py for more information.
   
   Bug Fixes and other patches
   
@@ -27,6 +34,9 @@ Here is a history of user visible changes to Mailman.
       Action: error.  (LP: #1805137)
 
     - Corrected and augmented some security log messages.  (LP: #1810098)
+
+    - Implemented use of QRUNNER_SLEEP_TIME for bin/qrunner --runner=All.
+      (LP: #1818205)
 
 2.1.29 (24-Jul-2018)
 
