@@ -292,11 +292,16 @@ def GetPathPieces(envar='PATH_INFO'):
                    remote)
         # Check for listname injections that won't be websafed.
         pieces = [p for p in path.split('/') if p]
-        # Get the longest listname or 20 if none.
-        if list_names():
-            longest = max([len(x) for x in list_names()])
+        # Get the longest listname or 20 if none or use MAX_LISTNAME_LENGTH if
+        # provided > 0.
+        if mm_cfg.MAX_LISTNAME_LENGTH > 0:
+            longest = mm_cfg.MAX_LISTNAME_LENGTH
         else:
-            longest = 20
+            lst_names = list_names()
+            if lst_names:
+                longest = max([len(x) for x in lst_names])
+            else:
+                longest = 20
         if pieces and len(pieces[0]) > longest:
             syslog('mischief',
                'Hostile listname: listname=%s: remote=%s', pieces[0], remote)
