@@ -35,6 +35,9 @@ Here is a history of user visible changes to Mailman.
 
     - Corrected and augmented some security log messages.  (LP: #1810098)
 
+    - Implemented use of QRUNNER_SLEEP_TIME for bin/qrunner --runner=All.
+      (LP: #1818205)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
