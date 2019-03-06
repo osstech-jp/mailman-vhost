@@ -144,7 +144,7 @@ def main():
     doc.set_language(language)
 
     if lenparts < 2:
-        user = cgidata.getfirst('email')
+        user = cgidata.getfirst('email', '').strip()
         if not user:
             # If we're coming from the listinfo page and we left the email
             # address field blank, it's not an error.  Likewise if we're
@@ -161,11 +161,12 @@ def main():
     # If a user submits a form or URL with post data or query fragments
     # with multiple occurrences of the same variable, we can get a list
     # here.  Be as careful as possible.
+    # This is no longer required because of getfirst() above, but leave it.
     if isinstance(user, list) or isinstance(user, tuple):
         if len(user) == 0:
             user = ''
         else:
-            user = user[-1]
+            user = user[-1].strip()
 
     # Avoid cross-site scripting attacks
     safeuser = Utils.websafe(user)
