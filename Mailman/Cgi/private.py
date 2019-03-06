@@ -122,7 +122,7 @@ def main():
 
     cgidata = cgi.FieldStorage()
     try:
-        username = cgidata.getfirst('username', '')
+        username = cgidata.getfirst('username', '').strip()
     except TypeError:
         # Someone crafted a POST with a bad Content-Type:.
         doc.AddItem(Header(2, _("Error")))
