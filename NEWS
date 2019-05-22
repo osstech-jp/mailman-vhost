@@ -41,6 +41,8 @@ Here is a history of user visible changes to Mailman.
     - Leading/trailing spaces in provided email addresses for login to private
       archives and the user options page are now ignored.  (LP: #1818872)
 
+    - Fixed the spelling of the --no-restart option for mailmanctl.
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
