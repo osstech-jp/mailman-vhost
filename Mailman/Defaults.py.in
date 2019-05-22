@@ -1171,7 +1171,9 @@ DEFAULT_DMARC_QUARANTINE_MODERATION_ACTION = Yes
 
 # Default action for posts whose From: address domain has a DMARC policy of
 # reject or quarantine.  See DEFAULT_FROM_IS_LIST below.  Whatever is set as
-# the default here precludes the list owner from setting a lower value.
+# the default here precludes the list owner from setting a lower value, however
+# an existing list won't be changed until the first time "Submit Your Changes"
+# is pressed on the list's Privacy options... -> Sender filters page.
 # 0 = Accept
 # 1 = Munge From
 # 2 = Wrap Message
