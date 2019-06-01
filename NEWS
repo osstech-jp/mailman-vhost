@@ -43,6 +43,10 @@ Here is a history of user visible changes to Mailman.
 
     - Fixed the spelling of the --no-restart option for mailmanctl.
 
+    - Fixed an issue where certain combinations of charset and invalid
+      characters in a list's description could produce a List-ID header
+      without angle brackets.  (LP: #1831321)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
