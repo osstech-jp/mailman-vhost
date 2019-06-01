@@ -328,6 +328,12 @@ def process(mlist, msg, msgdata):
         # 2047 encoded.
         i18ndesc = uheader(mlist, mlist.description, 'List-Id', maxlinelen=998)
         listid_h = formataddr((str(i18ndesc), listid))
+        # With some charsets (utf-8?) and some invalid chars, str(18ndesc) can
+        # be empty.
+        if str(i18ndesc):
+            listid_h = formataddr((str(i18ndesc), listid))
+        else:
+            listid_h = '<%s>' % listid
     else:
         # without desc we need to ensure the MUST brackets
         listid_h = '<%s>' % listid
