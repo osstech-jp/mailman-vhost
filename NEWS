@@ -47,6 +47,10 @@ Here is a history of user visible changes to Mailman.
       characters in a list's description could produce a List-ID header
       without angle brackets.  (LP: #1831321)
 
+    - With the Postfix MTA and virtual domains, mappings for the site list
+      -bounces and -request addresses in each virtual domain are now added
+      to data/virtual-mailman (-owner was done in 2.1.24).  (LP: #1831777)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
