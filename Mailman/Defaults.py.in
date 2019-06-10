@@ -138,6 +138,7 @@ SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 # CAPTCHAS = {
 #   'en': [
 #     ('What is two times six?', '(12|twelve)'),
+#     ('What is this mailing list software called?', '[Mm]ailman'),
 #   ],
 #   'de': [
 #     ('Was ist 3 mal 6?', '(18|achtzehn)'),
@@ -145,6 +146,8 @@ SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 # }
 # The regular expression must match the full string, i.e., it is implicitly
 # acting as if it had "^" in the beginning and "$" at the end.
+# An 'en' key must be present and is used as fall-back if there are no questions
+# for the currently set language.
 CAPTCHAS = None
 
 # Use Google reCAPTCHA to protect the subscription form from spam bots.  The
