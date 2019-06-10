@@ -131,6 +131,22 @@ SUBSCRIBE_FORM_SECRET = None
 # test.
 SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 
+# Use a custom question-answer CAPTCHA to protect against subscription spam.
+# Has no effect unless SUBSCRIBE_FORM_SECRET is set.
+# Should be set to a dict mapping language keys to a list of pairs
+# of questions and regexes for the answers, e.g.
+# CAPTCHAS = {
+#   'en': [
+#     ('What is two times six?', '(12|twelve)'),
+#   ],
+#   'de': [
+#     ('Was ist 3 mal 6?', '(18|achtzehn)'),
+#   ],
+# }
+# The regular expression must match the full string, i.e., it is implicitly
+# acting as if it had "^" in the beginning and "$" at the end.
+CAPTCHAS = None
+
 # Use Google reCAPTCHA to protect the subscription form from spam bots.  The
 # following must be set to a pair of keys issued by the reCAPTCHA service at
 # https://www.google.com/recaptcha/admin

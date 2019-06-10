@@ -216,10 +216,25 @@ def list_listinfo(mlist, lang):
             #        drop one : resulting in an invalid format, but it's only
             #        for our hash so it doesn't matter.
             remote = remote.rsplit(':', 1)[0]
+        # render CAPTCHA, if configured
+        if isinstance(mm_cfg.CAPTCHAS, dict):
+            (captcha_question, captcha_box, captcha_idx) = \
+                Utils.captcha_display(mlist, lang, mm_cfg.CAPTCHAS)
+            pre_question = _(
+                    '''Please answer the following question to prove that
+                    you are not a bot:'''
+                )
+            replacements['<mm-captcha-ui>'] = (
+                """<tr><td BGCOLOR="#dddddd">%s<br>%s</td><td>%s</td></tr>"""
+                % (pre_question, captcha_question, captcha_box))
+        else:
+            captcha_idx = 0 # just to have something to include in the hash below
+        # fill form
         replacements['<mm-subscribe-form-start>'] += (
-                '<input type="hidden" name="sub_form_token" value="%s:%s">\n'
-                % (now, Utils.sha_new(mm_cfg.SUBSCRIBE_FORM_SECRET + ":" +
+                '<input type="hidden" name="sub_form_token" value="%s:%s:%s">\n'
+                % (now, captcha_idx, Utils.sha_new(mm_cfg.SUBSCRIBE_FORM_SECRET + ":" +
                           now + ":" +
+                          captcha_idx + ":" +
                           mlist.internal_name() + ":" +
                           remote
                           ).hexdigest()

@@ -168,13 +168,14 @@ def process_form(mlist, doc, cgidata, lang):
             #        for our hash so it doesn't matter.
             remote1 = remote.rsplit(':', 1)[0]
         try:
-            ftime, fhash = cgidata.getfirst('sub_form_token', '').split(':')
+            ftime, fcaptcha_idx, fhash = cgidata.getfirst('sub_form_token', '').split(':')
             then = int(ftime)
         except ValueError:
-            ftime = fhash = ''
+            ftime = fcaptcha_idx = fhash = ''
             then = 0
         token = Utils.sha_new(mm_cfg.SUBSCRIBE_FORM_SECRET + ":" +
                               ftime + ":" +
+                              fcaptcha_idx + ":" +
                               mlist.internal_name() + ":" +
                               remote1).hexdigest()
         if ftime and now - then > mm_cfg.FORM_LIFETIME:
@@ -189,6 +190,11 @@ def process_form(mlist, doc, cgidata, lang):
             results.append(
     _('There was no hidden token in your submission or it was corrupted.'))
             results.append(_('You must GET the form before submitting it.'))
+        # Check captcha
+        if isinstance(mm_cfg.CAPTCHAS, dict):
+            captcha_answer = cgidata.getvalue('captcha_answer', '')
+            if not Utils.captcha_verify(fcaptcha_idx, captcha_answer, mm_cfg.CAPTCHAS):
+                results.append(_('This was not the right answer to the CAPTCHA question.'))
     # Was an attempt made to subscribe the list to itself?
     if email == mlist.GetListEmail():
         syslog('mischief', 'Attempt to self subscribe %s: %s', email, remote)
