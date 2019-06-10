@@ -217,7 +217,7 @@ def list_listinfo(mlist, lang):
             #        for our hash so it doesn't matter.
             remote = remote.rsplit(':', 1)[0]
         # render CAPTCHA, if configured
-        if isinstance(mm_cfg.CAPTCHAS, dict):
+        if isinstance(mm_cfg.CAPTCHAS, dict) and 'en' in mm_cfg.CAPTCHAS:
             (captcha_question, captcha_box, captcha_idx) = \
                 Utils.captcha_display(mlist, lang, mm_cfg.CAPTCHAS)
             pre_question = _(
