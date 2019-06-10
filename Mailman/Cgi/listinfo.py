@@ -228,7 +228,7 @@ def list_listinfo(mlist, lang):
                 """<tr><td BGCOLOR="#dddddd">%s<br>%s</td><td>%s</td></tr>"""
                 % (pre_question, captcha_question, captcha_box))
         else:
-            captcha_idx = 0 # just to have something to include in the hash below
+            captcha_idx = "" # just to have something to include in the hash below
         # fill form
         replacements['<mm-subscribe-form-start>'] += (
                 '<input type="hidden" name="sub_form_token" value="%s:%s:%s">\n'
