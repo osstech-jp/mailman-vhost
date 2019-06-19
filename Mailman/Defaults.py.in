@@ -131,6 +131,25 @@ SUBSCRIBE_FORM_SECRET = None
 # test.
 SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 
+# Use a custom question-answer CAPTCHA to protect against subscription spam.
+# Has no effect unless SUBSCRIBE_FORM_SECRET is set.
+# Should be set to a dict mapping language keys to a list of pairs
+# of questions and regexes for the answers, e.g.
+# CAPTCHAS = {
+#   'en': [
+#     ('What is two times six?', '(12|twelve)'),
+#     ('What is this mailing list software called?', '[Mm]ailman'),
+#   ],
+#   'de': [
+#     ('Was ist 3 mal 6?', '(18|achtzehn)'),
+#   ],
+# }
+# The regular expression must match the full string, i.e., it is implicitly
+# acting as if it had "^" in the beginning and "$" at the end.
+# An 'en' key must be present and is used as fall-back if there are no
+# questions for the currently set language.
+CAPTCHAS = None
+
 # Use Google reCAPTCHA to protect the subscription form from spam bots.  The
 # following must be set to a pair of keys issued by the reCAPTCHA service at
 # https://www.google.com/recaptcha/admin
@@ -1188,7 +1207,7 @@ DEFAULT_DMARC_MODERATION_ACTION = 0
 # with a stronger DMARC policy if such a policy would result in message
 # modification because dmarc_moderation_action is 1 or 2.  Thus, there is
 # a list setting to apply dmarc_moderaction_action of 1 or 2 to messages
-# From: domains with DMARC p=none.  Setting this to Yes is only effective if 
+# From: domains with DMARC p=none.  Setting this to Yes is only effective if
 # dmarc_quarantine_moderaction_action is also Yes.  The following is the
 # default for this setting for new lists.
 DEFAULT_DMARC_NONE_MODERATION_ACTION = No
@@ -1224,7 +1243,7 @@ DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL = \
 #                                     (0 to disable).
 DEFAULT_MEMBER_VERBOSITY_INTERVAL = 300
 DEFAULT_MEMBER_VERBOSITY_THRESHOLD = 0
- 
+
 # This controls how often to clean old post time entries from the dictionary
 # used to implement the member verbosity feature. This is a compromise between
 # using resources for cleaning and allowing the dictionary to grow very large.
