@@ -1576,3 +1576,33 @@ def banned_domain(email):
         if not re.search(r'127\.0\.1\.255$', text, re.MULTILINE):
             return True
     return False
+
+
+def captcha_display(mlist, lang, captchas):
+    """Returns a CAPTCHA question, the HTML for the answer box, and
+    the data to be put into the CSRF token"""
+    if not lang in captchas:
+        lang = 'en'
+    captchas = captchas[lang]
+    idx = random.randrange(len(captchas))
+    question = captchas[idx][0]
+    box_html = mlist.FormatBox('captcha_answer', size=30)
+    # Remember to encode the language in the index so that we can get it out
+    # again!
+    return (websafe(question), box_html, lang + "-" + str(idx))
+
+def captcha_verify(idx, given_answer, captchas):
+    try:
+        (lang, idx) = idx.split("-")
+        idx = int(idx)
+    except ValueError:
+        return False
+    if not lang in captchas:
+        return False
+    captchas = captchas[lang]
+    if not idx in range(len(captchas)):
+        return False
+    # Check the given answer.
+    # We append a `$` to emulate `re.fullmatch`.
+    correct_answer_pattern = captchas[idx][1] + "$"
+    return re.match(correct_answer_pattern, given_answer)
