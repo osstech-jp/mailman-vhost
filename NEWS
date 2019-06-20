@@ -22,7 +22,7 @@ Here is a history of user visible changes to Mailman.
       lists, this can have performance implications.  See the description in
       Defaults.py for more information.
 
-    - Thanks to Ralph Jung there is now the ability to add text based captchas
+    - Thanks to Ralf Jung there is now the ability to add text based captchas
       (aka textchas) to the listinfo subscribe form.  See the documentation
       for the new CAPTCHA setting in Defaults.py for how to enable this.  Also
       note that if you have custom listinfo.html templates, you will have to
