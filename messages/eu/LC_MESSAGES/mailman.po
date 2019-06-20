@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue Jul 10 21:21:09 2018\n"
+"POT-Creation-Date: Thu Jun 20 15:03:40 2019\n"
 "PO-Revision-Date: 2016-10-10 16:24+0200\n"
 "Last-Translator: Gari Araolaza <garaolaza@codesyntax.com>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -233,7 +233,7 @@ msgid " The last bounce received from you was dated %(date)s"
 msgstr " Zugandik jasotako azken errebotea %(date)s-datakoa zen."
 
 #: Mailman/Bouncer.py:333 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:435
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:441
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:250
 #: Mailman/ListAdmin.py:225
 msgid "(no subject)"
@@ -260,12 +260,12 @@ msgid "No such list <em>%(safelistname)s</em>"
 msgstr "<em>%(safelistname)s</em> zerrendarik ez dago"
 
 #: Mailman/Cgi/admin.py:97 Mailman/Cgi/admindb.py:136 Mailman/Cgi/confirm.py:80
-#: Mailman/Cgi/create.py:50 Mailman/Cgi/edithtml.py:103
-#: Mailman/Cgi/listinfo.py:67 Mailman/Cgi/options.py:120
-#: Mailman/Cgi/private.py:125 Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72
-#: Mailman/Cgi/roster.py:153 Mailman/Cgi/roster.py:154
-#: Mailman/Cgi/subscribe.py:55 Mailman/Cgi/subscribe.py:66
-#: Mailman/Cgi/subscribe.py:81
+#: Mailman/Cgi/confirm.py:334 Mailman/Cgi/create.py:50
+#: Mailman/Cgi/edithtml.py:103 Mailman/Cgi/listinfo.py:67
+#: Mailman/Cgi/options.py:120 Mailman/Cgi/private.py:125
+#: Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72 Mailman/Cgi/roster.py:153
+#: Mailman/Cgi/roster.py:154 Mailman/Cgi/subscribe.py:55
+#: Mailman/Cgi/subscribe.py:66 Mailman/Cgi/subscribe.py:81
 msgid "Error"
 msgstr "Errorea"
 
@@ -284,7 +284,7 @@ msgid "Authorization failed."
 msgstr "Baimentzerakoan hutsa."
 
 #: Mailman/Cgi/admin.py:221 Mailman/Cgi/admindb.py:243
-#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:330
+#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:331
 msgid "The form lifetime has expired. (request forgery check)"
 msgstr "Formularioa iraungi da. (eskaeraren ziurtasun froga)"
 
@@ -554,7 +554,7 @@ msgstr "Gaiaren izena:"
 msgid "Regexp:"
 msgstr "Espresio erregularra:"
 
-#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1149
+#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1150
 msgid "Description:"
 msgstr "Deskribapena:"
 
@@ -588,12 +588,12 @@ msgstr "Atzeratu"
 #: Mailman/Cgi/admindb.py:464 Mailman/Cgi/admindb.py:516
 #: Mailman/Cgi/admindb.py:760 Mailman/Gui/ContentFilter.py:37
 #: Mailman/Gui/Privacy.py:265 Mailman/Gui/Privacy.py:288
-#: Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:474
 msgid "Reject"
 msgstr "Ezetsi"
 
 #: Mailman/Cgi/admin.py:820 Mailman/Gui/Privacy.py:265
-#: Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:474
 msgid "Hold"
 msgstr "Atxiki"
 
@@ -601,12 +601,12 @@ msgstr "Atxiki"
 #: Mailman/Cgi/admindb.py:465 Mailman/Cgi/admindb.py:516
 #: Mailman/Cgi/admindb.py:760 Mailman/Commands/cmd_confirm.py:93
 #: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:265
-#: Mailman/Gui/Privacy.py:289 Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:289 Mailman/Gui/Privacy.py:474
 msgid "Discard"
 msgstr "Baztertu"
 
 #: Mailman/Cgi/admin.py:821 Mailman/Cgi/admindb.py:516
-#: Mailman/Gui/Privacy.py:288 Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:288 Mailman/Gui/Privacy.py:474
 msgid "Accept"
 msgstr "Onartu"
 
@@ -713,7 +713,7 @@ msgid "nodupes"
 msgstr "bikoitzik ez"
 
 #: Mailman/Cgi/admin.py:1042 Mailman/Cgi/admin.py:1108
-#: Mailman/Cgi/options.py:390
+#: Mailman/Cgi/options.py:391
 msgid "digest"
 msgstr "bilduma"
 
@@ -745,7 +745,7 @@ msgstr "B"
 msgid "notmetoo"
 msgstr "niri ez"
 
-#: Mailman/Cgi/admin.py:1084 Mailman/Cgi/options.py:388
+#: Mailman/Cgi/admin.py:1084 Mailman/Cgi/options.py:389
 msgid "nomail"
 msgstr "postagabea"
 
@@ -887,9 +887,9 @@ msgstr "Zerrendakide berriei ongietorri mezuak bidali?"
 
 #: Mailman/Cgi/admin.py:1238 Mailman/Cgi/admin.py:1247
 #: Mailman/Cgi/admin.py:1280 Mailman/Cgi/admin.py:1288
-#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
-#: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
-#: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
+#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:371
+#: Mailman/Cgi/create.py:406 Mailman/Cgi/create.py:444
+#: Mailman/Cgi/rmlist.py:248 Mailman/Gui/Archive.py:33
 #: Mailman/Gui/Autoresponse.py:54 Mailman/Gui/Autoresponse.py:62
 #: Mailman/Gui/Autoresponse.py:71 Mailman/Gui/Bounce.py:77
 #: Mailman/Gui/Bounce.py:120 Mailman/Gui/Bounce.py:146
@@ -909,17 +909,17 @@ msgstr "Zerrendakide berriei ongietorri mezuak bidali?"
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:111
 #: Mailman/Gui/Privacy.py:129 Mailman/Gui/Privacy.py:162
 #: Mailman/Gui/Privacy.py:215 Mailman/Gui/Privacy.py:317
-#: Mailman/Gui/Privacy.py:334 Mailman/Gui/Privacy.py:474
-#: Mailman/Gui/Privacy.py:493 Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56
+#: Mailman/Gui/Privacy.py:334 Mailman/Gui/Privacy.py:489
+#: Mailman/Gui/Privacy.py:508 Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56
 #: Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "No"
 msgstr "Ez"
 
 #: Mailman/Cgi/admin.py:1238 Mailman/Cgi/admin.py:1247
 #: Mailman/Cgi/admin.py:1280 Mailman/Cgi/admin.py:1288
-#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
-#: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
-#: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
+#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:371
+#: Mailman/Cgi/create.py:406 Mailman/Cgi/create.py:444
+#: Mailman/Cgi/rmlist.py:248 Mailman/Gui/Archive.py:33
 #: Mailman/Gui/Autoresponse.py:54 Mailman/Gui/Autoresponse.py:62
 #: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120 Mailman/Gui/Bounce.py:146
 #: Mailman/Gui/Bounce.py:155 Mailman/Gui/Bounce.py:164
@@ -938,7 +938,7 @@ msgstr "Ez"
 #: Mailman/Gui/Privacy.py:111 Mailman/Gui/Privacy.py:129
 #: Mailman/Gui/Privacy.py:162 Mailman/Gui/Privacy.py:215
 #: Mailman/Gui/Privacy.py:317 Mailman/Gui/Privacy.py:334
-#: Mailman/Gui/Privacy.py:474 Mailman/Gui/Privacy.py:493
+#: Mailman/Gui/Privacy.py:489 Mailman/Gui/Privacy.py:508
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "Yes"
@@ -1412,8 +1412,8 @@ msgstr "byte"
 msgid "Size:"
 msgstr "Tamaina:"
 
-#: Mailman/Cgi/admindb.py:620 Mailman/Handlers/Scrubber.py:203
-#: Mailman/Handlers/Scrubber.py:301 Mailman/Handlers/Scrubber.py:303
+#: Mailman/Cgi/admindb.py:620 Mailman/Handlers/Scrubber.py:206
+#: Mailman/Handlers/Scrubber.py:304 Mailman/Handlers/Scrubber.py:306
 msgid "not available"
 msgstr "ez dago erabilgarri"
 
@@ -1653,15 +1653,15 @@ msgstr "%(listname)s zerrendara harpidetza egin."
 msgid "Cancel my subscription request"
 msgstr "Nire harpidetza eskaera ezereztatu"
 
-#: Mailman/Cgi/confirm.py:335
+#: Mailman/Cgi/confirm.py:341
 msgid "You have canceled your subscription request."
 msgstr "Zure harpidetza-eskaera ezereztatu egin duzu."
 
-#: Mailman/Cgi/confirm.py:373
+#: Mailman/Cgi/confirm.py:383
 msgid "Awaiting moderator approval"
 msgstr "Moderatzailearen onespenaren zai."
 
-#: Mailman/Cgi/confirm.py:376
+#: Mailman/Cgi/confirm.py:386
 msgid ""
 "            You have successfully confirmed your subscription request to "
 "the\n"
@@ -1677,8 +1677,8 @@ msgstr ""
 "            zerrendakide izateko. Zure eskaera moderatzaileari bidali zaio,\n"
 "            eta berak jakinaraziko dizu azken erabakia."
 
-#: Mailman/Cgi/confirm.py:383 Mailman/Cgi/confirm.py:448
-#: Mailman/Cgi/confirm.py:537 Mailman/Cgi/confirm.py:774
+#: Mailman/Cgi/confirm.py:393 Mailman/Cgi/confirm.py:459
+#: Mailman/Cgi/confirm.py:549 Mailman/Cgi/confirm.py:788
 msgid ""
 "Invalid confirmation string.  It is\n"
 "            possible that you are attempting to confirm a request for an\n"
@@ -1688,11 +1688,11 @@ msgstr ""
 "            posible da jada ezabaturik dagoen hebide baten egiaztapena\n"
 "            lortzen saiatzen egotea."
 
-#: Mailman/Cgi/confirm.py:387
+#: Mailman/Cgi/confirm.py:397
 msgid "You are already a member of this mailing list!"
 msgstr "Dagoeneko bazara zerrenda honetako harpidedun!"
 
-#: Mailman/Cgi/confirm.py:390
+#: Mailman/Cgi/confirm.py:400
 msgid ""
 "You are currently banned from subscribing to\n"
 "            this list.  If you think this restriction is erroneous, please\n"
@@ -1702,7 +1702,7 @@ msgstr ""
 "        honetan parte hartzea.  Debeku horrentzat arrazoirik ez dagoela\n"
 "        uste baduzu, idatzi zerrenda jabeari %(owneraddr)s helbidera."
 
-#: Mailman/Cgi/confirm.py:394
+#: Mailman/Cgi/confirm.py:404
 msgid ""
 "            You were not invited to this mailing list.  The invitation has\n"
 "            been discarded, and both list administrators have been\n"
@@ -1712,11 +1712,11 @@ msgstr ""
 "            ezeztatu egin da eta zerrenda administratzailearo honen berri\n"
 "            eman zaio."
 
-#: Mailman/Cgi/confirm.py:404
+#: Mailman/Cgi/confirm.py:414
 msgid "Subscription request confirmed"
 msgstr "Harpidetza-eskaera baieztatuta"
 
-#: Mailman/Cgi/confirm.py:408
+#: Mailman/Cgi/confirm.py:418
 msgid ""
 "            You have successfully confirmed your subscription request for\n"
 "            \"%(addr)s\" to the %(listname)s mailing list.  A separate\n"
@@ -1736,15 +1736,15 @@ msgstr ""
 "            <p>Nahi baduzu zure harpide-orrialdera sar zaitezke\n"
 "            <a href=\"%(optionsurl)s\"></a>."
 
-#: Mailman/Cgi/confirm.py:426
+#: Mailman/Cgi/confirm.py:436
 msgid "You have canceled your unsubscription request."
 msgstr "Zerrenda uzteko eskaera ezereztatu egin duzu."
 
-#: Mailman/Cgi/confirm.py:454
+#: Mailman/Cgi/confirm.py:465
 msgid "Unsubscription request confirmed"
 msgstr "Zerrenda uzteko eskaera baieztatu egin duzu"
 
-#: Mailman/Cgi/confirm.py:458
+#: Mailman/Cgi/confirm.py:469
 msgid ""
 "            You have successfully unsubscribed from the %(listname)s "
 "mailing\n"
@@ -1757,15 +1757,15 @@ msgstr ""
 "nagusira\n"
 "            sar zaitezke</a>."
 
-#: Mailman/Cgi/confirm.py:469
+#: Mailman/Cgi/confirm.py:480
 msgid "Confirm unsubscription request"
 msgstr "Baieztatu zerrenda uzteko eskaera"
 
-#: Mailman/Cgi/confirm.py:484 Mailman/Cgi/confirm.py:586
+#: Mailman/Cgi/confirm.py:495 Mailman/Cgi/confirm.py:598
 msgid "<em>Not available</em>"
 msgstr "<em>Ez dago eskuragarri</em>"
 
-#: Mailman/Cgi/confirm.py:487
+#: Mailman/Cgi/confirm.py:498
 msgid ""
 "Your confirmation is required in order to complete the\n"
 "    unsubscription request from the mailing list <em>%(listname)s</em>.  "
@@ -1796,20 +1796,20 @@ msgstr ""
 "    <p>Edo sakatu <em>Bertan Behera Utzi</em> botoia\n"
 "    eskaera ezereztatzeko."
 
-#: Mailman/Cgi/confirm.py:503 Mailman/Cgi/options.py:859
-#: Mailman/Cgi/options.py:1006 Mailman/Cgi/options.py:1016
+#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:860
+#: Mailman/Cgi/options.py:1007 Mailman/Cgi/options.py:1017
 msgid "Unsubscribe"
 msgstr "Zerrenda utzi"
 
-#: Mailman/Cgi/confirm.py:504 Mailman/Cgi/confirm.py:615
+#: Mailman/Cgi/confirm.py:515 Mailman/Cgi/confirm.py:627
 msgid "Cancel and discard"
 msgstr "Bertan Behera Utzi"
 
-#: Mailman/Cgi/confirm.py:514
+#: Mailman/Cgi/confirm.py:525
 msgid "You have canceled your change of address request."
 msgstr "Helbidea aldatzeko eskaera ezereztatu egin duzu."
 
-#: Mailman/Cgi/confirm.py:543
+#: Mailman/Cgi/confirm.py:555
 msgid ""
 "%(newaddr)s is banned from subscribing to the\n"
 "            %(realname)s list.  If you think this restriction is erroneous,\n"
@@ -1819,7 +1819,7 @@ msgstr ""
 "        parte hartzea.  Debeku horrentzat arrazoirik ez dagoela\n"
 "        uste baduzu, idatzi zerrenda jabeari %(owneraddr)s helbidera."
 
-#: Mailman/Cgi/confirm.py:548
+#: Mailman/Cgi/confirm.py:560
 msgid ""
 "%(newaddr)s is already a member of\n"
 "            the %(realname)s list.  It is possible that you are attempting\n"
@@ -1830,11 +1830,11 @@ msgstr ""
 "            Baliteke jada ezabaturik dagoen hebide baten egiaztapena\n"
 "            lortzen saiatzen egotea."
 
-#: Mailman/Cgi/confirm.py:555
+#: Mailman/Cgi/confirm.py:567
 msgid "Change of address request confirmed"
 msgstr "Helbidea aldatzeko eskaera baieztaturik"
 
-#: Mailman/Cgi/confirm.py:559
+#: Mailman/Cgi/confirm.py:571
 msgid ""
 "            You have successfully changed your address on the %(listname)s\n"
 "            mailing list from <b>%(oldaddr)s</b> to <b>%(newaddr)s</b>.  "
@@ -1848,15 +1848,15 @@ msgstr ""
 "            Orain, nahi baduzu, zure zerrendakide orrialdera sar\n"
 "            zaitezke: <a href=\"%(optionsurl)s\"></a>."
 
-#: Mailman/Cgi/confirm.py:571
+#: Mailman/Cgi/confirm.py:583
 msgid "Confirm change of address request"
 msgstr "Berretsi helbide aldaketa eskakizuna"
 
-#: Mailman/Cgi/confirm.py:590
+#: Mailman/Cgi/confirm.py:602
 msgid "globally"
 msgstr "orokorrean"
 
-#: Mailman/Cgi/confirm.py:593
+#: Mailman/Cgi/confirm.py:605
 msgid ""
 "Your confirmation is required in order to complete the\n"
 "    change of address request for the mailing list <em>%(listname)s</em>.  "
@@ -1897,15 +1897,15 @@ msgstr ""
 "\n"
 "    <p>Edo sakatu <em>Bertan Behera Utzi</em> aldaketa hori ahazteko  "
 
-#: Mailman/Cgi/confirm.py:614
+#: Mailman/Cgi/confirm.py:626
 msgid "Change address"
 msgstr "Helbidea Aldatu"
 
-#: Mailman/Cgi/confirm.py:623 Mailman/Cgi/confirm.py:739
+#: Mailman/Cgi/confirm.py:635 Mailman/Cgi/confirm.py:752
 msgid "Continue awaiting approval"
 msgstr "Onespenaren zai jarraitu"
 
-#: Mailman/Cgi/confirm.py:631
+#: Mailman/Cgi/confirm.py:643
 msgid ""
 "Okay, the list moderator will still have the\n"
 "    opportunity to approve or reject this message."
@@ -1913,11 +1913,11 @@ msgstr ""
 "Ados. Moderatzaileak oraindik mezu hau onartu edo\n"
 "      baztertzeko aukera izango du."
 
-#: Mailman/Cgi/confirm.py:659
+#: Mailman/Cgi/confirm.py:671
 msgid "Sender discarded message via web."
 msgstr "Bidaltzaileak web gunearen bidez mezua ezereztatu egin du."
 
-#: Mailman/Cgi/confirm.py:661
+#: Mailman/Cgi/confirm.py:674
 msgid ""
 "The held message with the Subject:\n"
 "            header <em>%(subject)s</em> could not be found.  The most "
@@ -1932,11 +1932,11 @@ msgstr ""
 "            baztertu egingo zuen. Ez zara ezereztatzera iritsi.\n"
 "            "
 
-#: Mailman/Cgi/confirm.py:669
+#: Mailman/Cgi/confirm.py:682
 msgid "Posted message canceled"
 msgstr "Mezua ezereztatu egin da"
 
-#: Mailman/Cgi/confirm.py:672
+#: Mailman/Cgi/confirm.py:685
 msgid ""
 "            You have successfully canceled the posting of your message with\n"
 "            the Subject: header <em>%(subject)s</em> to the mailing list\n"
@@ -1946,11 +1946,11 @@ msgstr ""
 "            gaitzat: <em>%(subject)s</em>\n"
 "            zuen mezua, ezereztatu egin duzu."
 
-#: Mailman/Cgi/confirm.py:683
+#: Mailman/Cgi/confirm.py:696
 msgid "Cancel held message posting"
 msgstr "Atxikitako mezua bidaltzea ezereztatu"
 
-#: Mailman/Cgi/confirm.py:708
+#: Mailman/Cgi/confirm.py:721
 msgid ""
 "The held message you were referred to has\n"
 "        already been handled by the list administrator."
@@ -1958,7 +1958,7 @@ msgstr ""
 "Aipatu duzun aitxikitako mezua dagoeneko kudeatzailearen\n"
 "        esku dago."
 
-#: Mailman/Cgi/confirm.py:722
+#: Mailman/Cgi/confirm.py:735
 msgid ""
 "Your confirmation is required in order to cancel the\n"
 "    posting of your message to the mailing list <em>%(listname)s</em>:\n"
@@ -1988,11 +1988,11 @@ msgstr ""
 "sakatu;\n"
 "    mezua moderatzaileak jasoko du, eta berak erabakiko du onartu ala ez."
 
-#: Mailman/Cgi/confirm.py:738
+#: Mailman/Cgi/confirm.py:751
 msgid "Cancel posting"
 msgstr "Mezua Ezereztatuta"
 
-#: Mailman/Cgi/confirm.py:750
+#: Mailman/Cgi/confirm.py:763
 msgid ""
 "You have canceled the re-enabling of your membership.  If\n"
 "    we continue to receive bounces from your address, it could be deleted "
@@ -2003,11 +2003,11 @@ msgstr ""
 "    Zure helbidetik erreboteak jasotzen jarraitzen badugu, zerrendatik\n"
 "    bota egin beharko zaitugu."
 
-#: Mailman/Cgi/confirm.py:780
+#: Mailman/Cgi/confirm.py:794
 msgid "Membership re-enabled."
 msgstr "Harpidetza gaitu egin dugu berriro."
 
-#: Mailman/Cgi/confirm.py:784
+#: Mailman/Cgi/confirm.py:798
 msgid ""
 "            You have successfully re-enabled your membership in the\n"
 "            %(listname)s mailing list.  You can now <a\n"
@@ -2019,11 +2019,11 @@ msgstr ""
 "            bisita dezakezu: <ahref=\"%(optionsurl)s\"></a>.\n"
 "            "
 
-#: Mailman/Cgi/confirm.py:796
+#: Mailman/Cgi/confirm.py:810
 msgid "Re-enable mailing list membership"
 msgstr "Posta zerrendako harpidetza berriro gaitu"
 
-#: Mailman/Cgi/confirm.py:813
+#: Mailman/Cgi/confirm.py:827
 msgid ""
 "We're sorry, but you have already been unsubscribed\n"
 "        from this mailing list.  To re-subscribe, please visit the\n"
@@ -2033,11 +2033,11 @@ msgstr ""
 "        honetako kide. Izena berriro emateko, mesedez\n"
 "        <a href=\"%(listinfourl)s\">informazio orrialdera joan</a>."
 
-#: Mailman/Cgi/confirm.py:828
+#: Mailman/Cgi/confirm.py:842
 msgid "<em>not available</em>"
 msgstr "<em>ez dago eskuragarri</em>"
 
-#: Mailman/Cgi/confirm.py:832
+#: Mailman/Cgi/confirm.py:846
 msgid ""
 "Your membership in the %(realname)s mailing list is\n"
 "    currently disabled due to excessive bounces.  Your confirmation is\n"
@@ -2076,11 +2076,11 @@ msgstr ""
 "    atzeratu egin nahi baduzu.\n"
 "    "
 
-#: Mailman/Cgi/confirm.py:852
+#: Mailman/Cgi/confirm.py:866
 msgid "Re-enable membership"
 msgstr "Harpidetza berriz gaitu"
 
-#: Mailman/Cgi/confirm.py:853
+#: Mailman/Cgi/confirm.py:867
 msgid "Cancel"
 msgstr "Utzi"
 
@@ -2088,19 +2088,19 @@ msgstr "Utzi"
 msgid "Bad URL specification"
 msgstr "URL okerra"
 
-#: Mailman/Cgi/create.py:75 Mailman/Cgi/rmlist.py:189
+#: Mailman/Cgi/create.py:75 Mailman/Cgi/rmlist.py:196
 msgid "Return to the "
 msgstr "Itzuli hona: "
 
-#: Mailman/Cgi/create.py:77 Mailman/Cgi/rmlist.py:191
+#: Mailman/Cgi/create.py:77 Mailman/Cgi/rmlist.py:198
 msgid "general list overview"
 msgstr "zerrenden indizeen orri nagusia"
 
-#: Mailman/Cgi/create.py:78 Mailman/Cgi/rmlist.py:192
+#: Mailman/Cgi/create.py:78 Mailman/Cgi/rmlist.py:199
 msgid "<br>Return to the "
 msgstr "<br>Itzuli hona: "
 
-#: Mailman/Cgi/create.py:80 Mailman/Cgi/rmlist.py:194
+#: Mailman/Cgi/create.py:80 Mailman/Cgi/rmlist.py:201
 msgid "administrative list overview"
 msgstr "kudeaketarako zerrenda orokorra"
 
@@ -2138,27 +2138,27 @@ msgstr "Zerrendaren hasierako pasahitzak ez datoz bat"
 msgid "The list password cannot be empty<!-- ignore -->"
 msgstr "Zerrendaren pasahitza ezin da hutsik egon<!-- ignore -->"
 
-#: Mailman/Cgi/create.py:167
+#: Mailman/Cgi/create.py:174
 msgid "You are not authorized to create new mailing lists"
 msgstr "Ez duzu zerrenda berriak sortzeko baimenik"
 
-#: Mailman/Cgi/create.py:175
+#: Mailman/Cgi/create.py:182
 msgid "Unknown virtual host: %(safehostname)s"
 msgstr "Zerbitzari birtual ezezaguna: %(safehostname)s"
 
-#: Mailman/Cgi/create.py:211 bin/newlist:219
+#: Mailman/Cgi/create.py:218 bin/newlist:219
 msgid "Bad owner email address: %(s)s"
 msgstr "Jabearen ePosta helbidea okerra da: %(s)s"
 
-#: Mailman/Cgi/create.py:216 bin/newlist:182 bin/newlist:223
+#: Mailman/Cgi/create.py:223 bin/newlist:182 bin/newlist:223
 msgid "List already exists: %(listname)s"
 msgstr "Zerrenda hori dagoeneko badago: %(listname)s"
 
-#: Mailman/Cgi/create.py:224 bin/newlist:217
+#: Mailman/Cgi/create.py:231 bin/newlist:217
 msgid "Illegal list name: %(s)s"
 msgstr "Zerrenda izen okerra: %(s)s"
 
-#: Mailman/Cgi/create.py:229
+#: Mailman/Cgi/create.py:236
 msgid ""
 "Some unknown error occurred while creating the list.\n"
 "                Please contact the site administrator for assistance."
@@ -2166,15 +2166,15 @@ msgstr ""
 "Zerrenda sortzeko orduan zenbait errore ezezagun izan dira.\n"
 "                Mesedez, jarri harremanetan gunearen kudeatzailearekin."
 
-#: Mailman/Cgi/create.py:266 bin/newlist:265
+#: Mailman/Cgi/create.py:273 bin/newlist:265
 msgid "Your new mailing list: %(listname)s"
 msgstr "Zure posta zerrenda berria: %(listname)s"
 
-#: Mailman/Cgi/create.py:275
+#: Mailman/Cgi/create.py:282
 msgid "Mailing list creation results"
 msgstr "Posta zerrendaren sormenaren emaitza"
 
-#: Mailman/Cgi/create.py:281
+#: Mailman/Cgi/create.py:288
 msgid ""
 "You have successfully created the mailing list\n"
 "    <b>%(listname)s</b> and notification has been sent to the list owner\n"
@@ -2184,28 +2184,28 @@ msgstr ""
 "    posta zerrenda, eta mezua bidali zaio zerrenda\n"
 "    jabeari (<b>%(owner)s</b>).  Orain, nahi baduzu:"
 
-#: Mailman/Cgi/create.py:285
+#: Mailman/Cgi/create.py:292
 msgid "Visit the list's info page"
 msgstr "Ikusi zerrendaren informazio orria"
 
-#: Mailman/Cgi/create.py:286
+#: Mailman/Cgi/create.py:293
 msgid "Visit the list's admin page"
 msgstr "Ikusi zerrenda kudeatzeko orria"
 
-#: Mailman/Cgi/create.py:287
+#: Mailman/Cgi/create.py:294
 msgid "Create another list"
 msgstr "Beste zerrenda bat sortu"
 
-#: Mailman/Cgi/create.py:305
+#: Mailman/Cgi/create.py:312
 msgid "Create a %(hostname)s Mailing List"
 msgstr "%(hostname)s Zerbitzarian Posta Zerrenda Bat Sortu"
 
-#: Mailman/Cgi/create.py:314 Mailman/Cgi/rmlist.py:212
+#: Mailman/Cgi/create.py:321 Mailman/Cgi/rmlist.py:219
 #: Mailman/Gui/Bounce.py:196 Mailman/htmlformat.py:360
 msgid "Error: "
 msgstr "Errorea: "
 
-#: Mailman/Cgi/create.py:316
+#: Mailman/Cgi/create.py:323
 msgid ""
 "You can create a new mailing list by entering the\n"
 "    relevant information into the form below.  The name of the mailing list\n"
@@ -2254,35 +2254,35 @@ msgstr ""
 "    Azpiko eremuan idatzi behar da. Kontuan izan kudeatzailearen\n"
 "    pasahitza egiaztapenak egiteko ere erabili daitekeela."
 
-#: Mailman/Cgi/create.py:342
+#: Mailman/Cgi/create.py:349
 msgid "List Identity"
 msgstr "Zerrendaren Identitatea"
 
-#: Mailman/Cgi/create.py:347
+#: Mailman/Cgi/create.py:354
 msgid "Name of list:"
 msgstr "Zerrendaren izena:"
 
-#: Mailman/Cgi/create.py:354
+#: Mailman/Cgi/create.py:361
 msgid "Initial list owner address:"
 msgstr "Hasierako zerrenda arduradunaren helbidea:"
 
-#: Mailman/Cgi/create.py:363
+#: Mailman/Cgi/create.py:370
 msgid "Auto-generate initial list password?"
 msgstr "Zerrendaren hasierako pasahitza berez sortu?"
 
-#: Mailman/Cgi/create.py:371
+#: Mailman/Cgi/create.py:378
 msgid "Initial list password:"
 msgstr "Zerrendaren hasierako pasahitza:"
 
-#: Mailman/Cgi/create.py:377
+#: Mailman/Cgi/create.py:384
 msgid "Confirm initial password:"
 msgstr "Hasierako pasahitza berretsi:"
 
-#: Mailman/Cgi/create.py:392
+#: Mailman/Cgi/create.py:399
 msgid "List Characteristics"
 msgstr "Zerrendaren Ezaugarriak"
 
-#: Mailman/Cgi/create.py:396
+#: Mailman/Cgi/create.py:403
 msgid ""
 "Should new members be quarantined before they\n"
 "    are allowed to post unmoderated to this list?  Answer <em>Yes</em> to "
@@ -2294,7 +2294,7 @@ msgstr ""
 "kide\n"
 "    berrien mezuak moderatzaileak gainbegiratzea nahi baduzu."
 
-#: Mailman/Cgi/create.py:425
+#: Mailman/Cgi/create.py:432
 msgid ""
 "Initial list of supported languages.  <p>Note that if you do not\n"
 "        select at least one initial language, the list will use the server\n"
@@ -2304,19 +2304,19 @@ msgstr ""
 "        hizkuntzarik aukeratzen, zerrendak %(deflang)s serbitzarian\n"
 "        ezarritako hizkuntza erabiliko duela "
 
-#: Mailman/Cgi/create.py:436
+#: Mailman/Cgi/create.py:443
 msgid "Send \"list created\" email to list owner?"
 msgstr "\"zerrenda sortua\" mezurik bidaliko zerrenda jabeari?"
 
-#: Mailman/Cgi/create.py:445
+#: Mailman/Cgi/create.py:452
 msgid "List creator's (authentication) password:"
 msgstr "Zerrenda sortzailearen pasahitza (egiaztatzeko):"
 
-#: Mailman/Cgi/create.py:450
+#: Mailman/Cgi/create.py:457
 msgid "Create List"
 msgstr "Zerrenda sortu"
 
-#: Mailman/Cgi/create.py:451
+#: Mailman/Cgi/create.py:458
 msgid "Clear Form"
 msgstr "imprimakia hustu"
 
@@ -2523,16 +2523,22 @@ msgstr ""
 "      <p>Eposta zerrenda erabilpenarekin arazorik izaten ari bazara "
 "arremanetan jarri"
 
-#: Mailman/Cgi/listinfo.py:235
+#: Mailman/Cgi/listinfo.py:223
+msgid ""
+"Please answer the following question to prove that\n"
+"                    you are not a bot:"
+msgstr ""
+
+#: Mailman/Cgi/listinfo.py:253
 msgid "Edit Options"
 msgstr "Aukerak Editatu"
 
-#: Mailman/Cgi/listinfo.py:242 Mailman/Cgi/options.py:971
+#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:972
 #: Mailman/Cgi/roster.py:137
 msgid "View this page in"
 msgstr "Orrialde hau hemen ikusi:"
 
-#: Mailman/Cgi/listinfo.py:248
+#: Mailman/Cgi/listinfo.py:266
 msgid "This form requires JavaScript."
 msgstr ""
 
@@ -2549,20 +2555,20 @@ msgstr "Eskaera metodo okerra: %(method)s"
 msgid "No address given"
 msgstr "Ez duzu helbiderik adierazi!"
 
-#: Mailman/Cgi/options.py:175
+#: Mailman/Cgi/options.py:176
 msgid "Illegal Email Address: %(safeuser)s"
 msgstr "ePosta helbide okerra: %(safeuser)s"
 
-#: Mailman/Cgi/options.py:182 Mailman/Cgi/options.py:236
-#: Mailman/Cgi/options.py:260 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
+#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
 msgid "No such member: %(safeuser)s."
 msgstr "Harpidedun ezezaguna: %(safeuser)s."
 
-#: Mailman/Cgi/options.py:207
+#: Mailman/Cgi/options.py:208
 msgid "If you are a list member, a confirmation email has been sent."
 msgstr "Zerrendako harpideduna bazara, konfirmazio mezua bidali dugu."
 
-#: Mailman/Cgi/options.py:208
+#: Mailman/Cgi/options.py:209
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
 "             forwarded to the list administrator for approval."
@@ -2570,7 +2576,7 @@ msgstr ""
 "Zerrenda uzteko egindako eskaera kudeatzaileari bidali zaio gainbegira\n"
 "dezan."
 
-#: Mailman/Cgi/options.py:250
+#: Mailman/Cgi/options.py:251
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
@@ -2578,15 +2584,15 @@ msgstr ""
 "Zerrendako harpideduna bazara,\n"
 "        pasahitza bidali dizugu epostaz."
 
-#: Mailman/Cgi/options.py:293
+#: Mailman/Cgi/options.py:294
 msgid "Authentication failed."
 msgstr "Egiaztapenak huts egin du."
 
-#: Mailman/Cgi/options.py:361
+#: Mailman/Cgi/options.py:362
 msgid "A reminder of your password has been emailed to you."
 msgstr "Zure pasahitzaren gogorazle bat epostaz bidalia izan zaizu."
 
-#: Mailman/Cgi/options.py:368
+#: Mailman/Cgi/options.py:369
 msgid ""
 "The list administrator may not view the other\n"
 "            subscriptions for this user."
@@ -2594,17 +2600,17 @@ msgstr ""
 "Baliteke zerrendaren administratzaileak erabiltzaile honen\n"
 "            beste harpidetzak ezin ikustea."
 
-#: Mailman/Cgi/options.py:369 Mailman/Cgi/options.py:418
-#: Mailman/Cgi/options.py:546 Mailman/Cgi/options.py:771
+#: Mailman/Cgi/options.py:370 Mailman/Cgi/options.py:419
+#: Mailman/Cgi/options.py:547 Mailman/Cgi/options.py:772
 msgid "Note: "
 msgstr "Oharra: "
 
-#: Mailman/Cgi/options.py:374
+#: Mailman/Cgi/options.py:375
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
 msgstr ""
 "%(hostname)s zerbitzariko posta zerrendetako %(safeuser)s-ren hapidetza "
 
-#: Mailman/Cgi/options.py:377
+#: Mailman/Cgi/options.py:378
 msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
@@ -2612,7 +2618,7 @@ msgstr ""
 "Klikatu loturetako bat, hautatutako posta\n"
 "        zerrendaren aukeren orrialdera joateko."
 
-#: Mailman/Cgi/options.py:415
+#: Mailman/Cgi/options.py:416
 msgid ""
 "The list administrator may not change the names\n"
 "            or addresses for this user's other subscriptions.  However, the\n"
@@ -2623,15 +2629,15 @@ msgstr ""
 "ere,\n"
 "            zerrenda honetako harpidetza aldatu da."
 
-#: Mailman/Cgi/options.py:438
+#: Mailman/Cgi/options.py:439
 msgid "Addresses did not match!"
 msgstr "Helbideak ez datoz bat!"
 
-#: Mailman/Cgi/options.py:443
+#: Mailman/Cgi/options.py:444
 msgid "You are already using that email address"
 msgstr "Dagoeneko ePosta helbide hori darabizu"
 
-#: Mailman/Cgi/options.py:455
+#: Mailman/Cgi/options.py:456
 msgid ""
 "The new address you requested %(newaddr)s is already a member of the\n"
 "%(listname)s mailing list, however you have also requested a global change "
@@ -2644,31 +2650,31 @@ msgstr ""
 "ere eskatu duzu. Baieztatu ondoren, %(safeuser)s helbidea duten beste\n"
 "zerrenda guztiak ere aldatu egingo dira."
 
-#: Mailman/Cgi/options.py:464
+#: Mailman/Cgi/options.py:465
 msgid "The new address is already a member: %(newaddr)s"
 msgstr "Helbide berria zerrendakide da dagoeneko: %(newaddr)s"
 
-#: Mailman/Cgi/options.py:470
+#: Mailman/Cgi/options.py:471
 msgid "Addresses may not be blank"
 msgstr "Helbideak ezin dira hutsik egon"
 
-#: Mailman/Cgi/options.py:484
+#: Mailman/Cgi/options.py:485
 msgid "A confirmation message has been sent to %(newaddr)s. "
 msgstr "Egiaztapen mezu bat bidali da %(newaddr)s helbidera. "
 
-#: Mailman/Cgi/options.py:493
+#: Mailman/Cgi/options.py:494
 msgid "Bad email address provided"
 msgstr "Emandako ePosta helbidea okerra da"
 
-#: Mailman/Cgi/options.py:495
+#: Mailman/Cgi/options.py:496
 msgid "Illegal email address provided"
 msgstr "Emandako ePosta helbidea okerra da."
 
-#: Mailman/Cgi/options.py:497
+#: Mailman/Cgi/options.py:498
 msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s dagoeneko zerrendako partaide da."
 
-#: Mailman/Cgi/options.py:500
+#: Mailman/Cgi/options.py:501
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
 "                      think this restriction is erroneous, please contact\n"
@@ -2679,11 +2685,11 @@ msgstr ""
 "jabeari\n"
 "%(owneraddr)s helbidera."
 
-#: Mailman/Cgi/options.py:511
+#: Mailman/Cgi/options.py:512
 msgid "Member name successfully changed. "
 msgstr "Zerrendakidearen izen-abizenak behar bezala aldatu dira."
 
-#: Mailman/Cgi/options.py:521
+#: Mailman/Cgi/options.py:522
 msgid ""
 "The list administrator may not change the\n"
 "                    password for a user."
@@ -2691,15 +2697,15 @@ msgstr ""
 "Zerrendaren kudeatzaileak ezin du erabiltzaile baten\n"
 "                   pasahitza aldatu."
 
-#: Mailman/Cgi/options.py:530
+#: Mailman/Cgi/options.py:531
 msgid "Passwords may not be blank"
 msgstr "Pasahitzak ezin dira hutsik egon"
 
-#: Mailman/Cgi/options.py:535
+#: Mailman/Cgi/options.py:536
 msgid "Passwords did not match!"
 msgstr "Pasahitzak ez datoz bat!"
 
-#: Mailman/Cgi/options.py:543
+#: Mailman/Cgi/options.py:544
 msgid ""
 "The list administrator may not change the\n"
 "            password for this user's other subscriptions.  However, the\n"
@@ -2709,12 +2715,12 @@ msgstr ""
 "            beste zerrendetako pasahitza aldatu. Aldiz, zerrenda\n"
 "            honetako pasahitza aldatu du."
 
-#: Mailman/Cgi/options.py:560 Mailman/Commands/cmd_password.py:83
+#: Mailman/Cgi/options.py:561 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
 msgid "Password successfully changed."
 msgstr "Pasahitza zuzen aldatu da."
 
-#: Mailman/Cgi/options.py:569
+#: Mailman/Cgi/options.py:570
 msgid ""
 "You must confirm your unsubscription request by turning\n"
 "                on the checkbox below the <em>Unsubscribe</em> button.  You\n"
@@ -2724,16 +2730,16 @@ msgstr ""
 "               egiaztapen eremua aktibatu egin behar duzu.\n"
 "               Oraindik ez duzu zerrenda utzi!"
 
-#: Mailman/Cgi/options.py:590
+#: Mailman/Cgi/options.py:591
 #, fuzzy
 msgid "via the member options page"
 msgstr "%(realname)s zerrenda: erabiltzailearen aukeren sarrera orria"
 
-#: Mailman/Cgi/options.py:610
+#: Mailman/Cgi/options.py:611
 msgid "Unsubscription results"
 msgstr "Harpidetza uztearen emaitzak"
 
-#: Mailman/Cgi/options.py:614
+#: Mailman/Cgi/options.py:615
 msgid ""
 "Your unsubscription request has been received and\n"
 "            forwarded on to the list moderators for approval.  You will\n"
@@ -2745,7 +2751,7 @@ msgstr ""
 "           Berak jakinaraziko dizu azkenengo erabakia\n"
 "           zein den."
 
-#: Mailman/Cgi/options.py:619
+#: Mailman/Cgi/options.py:620
 msgid ""
 "You have been successfully unsubscribed from the\n"
 "            mailing list %(fqdn_listname)s.  If you were receiving digest\n"
@@ -2760,7 +2766,7 @@ msgstr ""
 "            idatzi, mesedez, zerrenda jabeari helbide honetara:\n"
 "            %(owneraddr)s."
 
-#: Mailman/Cgi/options.py:768
+#: Mailman/Cgi/options.py:769
 msgid ""
 "The list administrator may not change the\n"
 "                options for this user's other subscriptions.  However the\n"
@@ -2771,7 +2777,7 @@ msgstr ""
 "            beste harpidetzen aukerak aldatu ezin izatea. Hala ere,\n"
 "            zerrenda honetako aukerak aldatu dira."
 
-#: Mailman/Cgi/options.py:778
+#: Mailman/Cgi/options.py:779
 msgid ""
 "The list administrator has disabled digest delivery for\n"
 "            this list, so your delivery option has not been set.  However "
@@ -2782,7 +2788,7 @@ msgstr ""
 "            egin du; zure hautaketa beraz, ez da onartu.  Dena dela, \n"
 "            gainontzeko aukerak behar bezala zehaztu dira."
 
-#: Mailman/Cgi/options.py:782
+#: Mailman/Cgi/options.py:783
 msgid ""
 "The list administrator has disabled non-digest delivery\n"
 "            for this list, so your delivery option has not been set.  "
@@ -2794,63 +2800,63 @@ msgstr ""
 "konfiguratu.\n"
 "            Dena dela, gainontzeko aukerak behar bezala daude."
 
-#: Mailman/Cgi/options.py:786
+#: Mailman/Cgi/options.py:787
 msgid "You have successfully set your options."
 msgstr "Zure erabiltzaile-aukerak behar bezala egokitu dituzu."
 
-#: Mailman/Cgi/options.py:789
+#: Mailman/Cgi/options.py:790
 msgid "You may get one last digest."
 msgstr "Baliteke azken mezu-bilduma bat jasotzea."
 
-#: Mailman/Cgi/options.py:861
+#: Mailman/Cgi/options.py:862
 msgid "<em>Yes, I really want to unsubscribe</em>"
 msgstr "<em>Bai, zerrenda utzi nahi dut</em>"
 
-#: Mailman/Cgi/options.py:865
+#: Mailman/Cgi/options.py:866
 msgid "Change My Password"
 msgstr "Nire Pasahitza Aldatu"
 
-#: Mailman/Cgi/options.py:868
+#: Mailman/Cgi/options.py:869
 msgid "List my other subscriptions"
 msgstr "Nire beste haridetzen zerrenda"
 
-#: Mailman/Cgi/options.py:875
+#: Mailman/Cgi/options.py:876
 msgid "Email My Password To Me"
 msgstr "Bidali Pasahitza Nire ePosta Helbidera"
 
-#: Mailman/Cgi/options.py:877
+#: Mailman/Cgi/options.py:878
 msgid "password"
 msgstr "pasahitza"
 
-#: Mailman/Cgi/options.py:879
+#: Mailman/Cgi/options.py:880
 msgid "Log out"
 msgstr "Saioa amaitu"
 
-#: Mailman/Cgi/options.py:881
+#: Mailman/Cgi/options.py:882
 msgid "Submit My Changes"
 msgstr "Nire Aldaketak bidali"
 
-#: Mailman/Cgi/options.py:893
+#: Mailman/Cgi/options.py:894
 msgid "days"
 msgstr "egun"
 
-#: Mailman/Cgi/options.py:895
+#: Mailman/Cgi/options.py:896
 msgid "day"
 msgstr "egun"
 
-#: Mailman/Cgi/options.py:896
+#: Mailman/Cgi/options.py:897
 msgid "%(days)d %(units)s"
 msgstr "%(days)d %(units)s"
 
-#: Mailman/Cgi/options.py:902
+#: Mailman/Cgi/options.py:903
 msgid "Change My Address and Name"
 msgstr "Aldatu Nire Helbidea eta Izena"
 
-#: Mailman/Cgi/options.py:928
+#: Mailman/Cgi/options.py:929
 msgid "<em>No topics defined</em>"
 msgstr "<em>Gaiak ez dira zehaztu</em>"
 
-#: Mailman/Cgi/options.py:936
+#: Mailman/Cgi/options.py:937
 msgid ""
 "\n"
 "You are subscribed to this list with the case-preserved address\n"
@@ -2860,19 +2866,19 @@ msgstr ""
 "Zerrenda honetara ondorengo helbidearekin harpidetuta zaude: (letra larri "
 "eta txikiak errespetatuta) <em>%(cpuser)s</em>"
 
-#: Mailman/Cgi/options.py:952
+#: Mailman/Cgi/options.py:953
 msgid "%(realname)s list: member options login page"
 msgstr "%(realname)s zerrenda: erabiltzailearen aukeren sarrera orria"
 
-#: Mailman/Cgi/options.py:953
+#: Mailman/Cgi/options.py:954
 msgid "email address and "
 msgstr "ePosta helbidea eta "
 
-#: Mailman/Cgi/options.py:956
+#: Mailman/Cgi/options.py:957
 msgid "%(realname)s list: member options for user %(safeuser)s"
 msgstr "%(realname)s zerrenda: %(safeuser)s erabiltzailearen aukerak"
 
-#: Mailman/Cgi/options.py:982
+#: Mailman/Cgi/options.py:983
 msgid ""
 "In order to change your membership option, you must\n"
 "    first log in by giving your %(extra)smembership password in the section\n"
@@ -2903,19 +2909,19 @@ msgstr ""
 "    dira gauzatuko.\n"
 "    "
 
-#: Mailman/Cgi/options.py:996
+#: Mailman/Cgi/options.py:997
 msgid "Email address:"
 msgstr "ePosta helbidea:"
 
-#: Mailman/Cgi/options.py:1000
+#: Mailman/Cgi/options.py:1001
 msgid "Password:"
 msgstr "Pasahitza:"
 
-#: Mailman/Cgi/options.py:1002
+#: Mailman/Cgi/options.py:1003
 msgid "Log in"
 msgstr "Saioa hasi"
 
-#: Mailman/Cgi/options.py:1010
+#: Mailman/Cgi/options.py:1011
 msgid ""
 "By clicking on the <em>Unsubscribe</em> button, a\n"
 "    confirmation message will be emailed to you.  This message will have a\n"
@@ -2930,11 +2936,11 @@ msgstr ""
 "    berretsi dezakezu zerrenda uzteko asmoa; irakurri\n"
 "    konfirmazio mezuan emango zaizkizun argibideak)."
 
-#: Mailman/Cgi/options.py:1018
+#: Mailman/Cgi/options.py:1019
 msgid "Password reminder"
 msgstr "Pasahitz gogorarazlea"
 
-#: Mailman/Cgi/options.py:1022
+#: Mailman/Cgi/options.py:1023
 msgid ""
 "By clicking on the <em>Remind</em> button, your\n"
 "    password will be emailed to you."
@@ -2942,27 +2948,27 @@ msgstr ""
 "<em>Gogoratu<em> botoia klikatuz, zure \n"
 "    pasahitza ePostaz bidaliko zaizu."
 
-#: Mailman/Cgi/options.py:1025
+#: Mailman/Cgi/options.py:1026
 msgid "Remind"
 msgstr "Gogoratu"
 
-#: Mailman/Cgi/options.py:1125 Mailman/ListAdmin.py:227
+#: Mailman/Cgi/options.py:1126 Mailman/ListAdmin.py:227
 msgid "<missing>"
 msgstr "<galduta>"
 
-#: Mailman/Cgi/options.py:1136
+#: Mailman/Cgi/options.py:1137
 msgid "Requested topic is not valid: %(topicname)s"
 msgstr "Eskatuta gaia ez da zuzena: %(topicname)s"
 
-#: Mailman/Cgi/options.py:1141
+#: Mailman/Cgi/options.py:1142
 msgid "Topic filter details"
 msgstr "Gaien iragazkiaren xehetasunak"
 
-#: Mailman/Cgi/options.py:1144
+#: Mailman/Cgi/options.py:1145
 msgid "Name:"
 msgstr "Izena:"
 
-#: Mailman/Cgi/options.py:1146
+#: Mailman/Cgi/options.py:1147
 msgid "Pattern (as regexp):"
 msgstr "Patroia (adierazpen erregularra):"
 
@@ -3006,15 +3012,15 @@ msgstr "Zerrenda hau ez dago: %(safelistname)s"
 msgid "You're being a sneaky list owner!"
 msgstr "Zerrenda-jabe iheskorra zara benetan!"
 
-#: Mailman/Cgi/rmlist.py:132
+#: Mailman/Cgi/rmlist.py:139
 msgid "You are not authorized to delete this mailing list"
 msgstr "Ez zaude zerrenda hau ezabatzeko baimendurik"
 
-#: Mailman/Cgi/rmlist.py:173
+#: Mailman/Cgi/rmlist.py:180
 msgid "Mailing list deletion results"
 msgstr "Eposta zerrenda ezabatze emaitzak"
 
-#: Mailman/Cgi/rmlist.py:180
+#: Mailman/Cgi/rmlist.py:187
 msgid ""
 "You have successfully deleted the mailing list\n"
 "    <b>%(listname)s</b>."
@@ -3022,7 +3028,7 @@ msgstr ""
 "<b>%(listname)s</b> posta zerrenda behar bezala\n"
 "    ezabatu duzu."
 
-#: Mailman/Cgi/rmlist.py:184
+#: Mailman/Cgi/rmlist.py:191
 msgid ""
 "There were some problems deleting the mailing list\n"
 "        <b>%(listname)s</b>.  Contact your site administrator at "
@@ -3033,15 +3039,15 @@ msgstr ""
 "        arazoak izan dira.  Idatzi zerrenda kudeatzaileari helbide \n"
 "        honetara: %(sitelist)s."
 
-#: Mailman/Cgi/rmlist.py:201
+#: Mailman/Cgi/rmlist.py:208
 msgid "Permanently remove mailing list <em>%(realname)s</em>"
 msgstr "<em>%(realname)s</em> Eposta zerrenda betirako ezabatu"
 
-#: Mailman/Cgi/rmlist.py:202
+#: Mailman/Cgi/rmlist.py:209
 msgid "Permanently remove mailing list %(realname)s"
 msgstr "%(realname)s posta zerrenda betirako ezabatu"
 
-#: Mailman/Cgi/rmlist.py:215
+#: Mailman/Cgi/rmlist.py:222
 msgid ""
 "This page allows you as the list owner, to permanently\n"
 "    remove this mailing list from the system.  <strong>This action is not\n"
@@ -3083,19 +3089,19 @@ msgstr ""
 "dizugu.\n"
 "    "
 
-#: Mailman/Cgi/rmlist.py:236
+#: Mailman/Cgi/rmlist.py:243
 msgid "List password:"
 msgstr "Zerrenda pasahitza:"
 
-#: Mailman/Cgi/rmlist.py:240
+#: Mailman/Cgi/rmlist.py:247
 msgid "Also delete archives?"
 msgstr "Fitxategiak ere ezabatu?"
 
-#: Mailman/Cgi/rmlist.py:248
+#: Mailman/Cgi/rmlist.py:255
 msgid "<b>Cancel</b> and return to list administration"
 msgstr "<b>Ezeztatu</b> eta itzuli zerrenda kudeaketa orrialdera"
 
-#: Mailman/Cgi/rmlist.py:251
+#: Mailman/Cgi/rmlist.py:258
 msgid "Delete this list"
 msgstr "Zerrenda hau ezabatu"
 
@@ -3119,40 +3125,44 @@ msgstr ""
 msgid "reCAPTCHA could not be validated: %(e_reason)s"
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:181
+#: Mailman/Cgi/subscribe.py:183
 msgid "The form is too old.  Please GET it again."
 msgstr "Datu-orria iraungi da. Mesedez, eskuratu berriz ere."
 
-#: Mailman/Cgi/subscribe.py:184
+#: Mailman/Cgi/subscribe.py:186
 msgid "Please take a few seconds to fill out the form before submitting it."
 msgstr "Mesedez, bidali aurretik hartu denbora apur bat datu-orria betetzen."
 
-#: Mailman/Cgi/subscribe.py:187
+#: Mailman/Cgi/subscribe.py:189
 msgid "The hidden token didn't match.  Did your IP change?"
 msgstr "Ezkutuko tokena ez dator bat. Zure IPa aldatu da?"
 
-#: Mailman/Cgi/subscribe.py:190
+#: Mailman/Cgi/subscribe.py:192
 msgid "There was no hidden token in your submission or it was corrupted."
 msgstr ""
 "Zure bidalketan ez da ezkutuko tokenik iritsi edo baliteke okerra izatea."
 
-#: Mailman/Cgi/subscribe.py:191
+#: Mailman/Cgi/subscribe.py:193
 msgid "You must GET the form before submitting it."
 msgstr "Datu orria eskuratu behar duzu bidali aurretik."
 
-#: Mailman/Cgi/subscribe.py:195
+#: Mailman/Cgi/subscribe.py:199
+msgid "This was not the right answer to the CAPTCHA question."
+msgstr ""
+
+#: Mailman/Cgi/subscribe.py:204
 msgid "You may not subscribe a list to itself!"
 msgstr "Ezin duzu zerrenda bat bere buruaren harpidedun egin"
 
-#: Mailman/Cgi/subscribe.py:203
+#: Mailman/Cgi/subscribe.py:212
 msgid "If you supply a password, you must confirm it."
 msgstr "Pasahitza eman ondoren, berretsi egin behar duzu."
 
-#: Mailman/Cgi/subscribe.py:205
+#: Mailman/Cgi/subscribe.py:214
 msgid "Your passwords did not match."
 msgstr "Zure pasahitzak ez datoz bat."
 
-#: Mailman/Cgi/subscribe.py:239
+#: Mailman/Cgi/subscribe.py:248
 msgid ""
 "Your subscription request has been received, and will soon be acted upon.\n"
 "Depending on the configuration of this mailing list, your subscription "
@@ -3170,7 +3180,7 @@ msgstr ""
 "jasoko duzu laster\n"
 "."
 
-#: Mailman/Cgi/subscribe.py:253
+#: Mailman/Cgi/subscribe.py:262
 msgid ""
 "The email address you supplied is banned from this\n"
 "        mailing list.  If you think this restriction is erroneous, please\n"
@@ -3180,7 +3190,7 @@ msgstr ""
 "        honetan parte hartzea.  Debeku horrentzat arrazoirik ez dagoela\n"
 "        uste baduzu, idatzi zerrenda jabeari %(listowner)s helbidera."
 
-#: Mailman/Cgi/subscribe.py:257
+#: Mailman/Cgi/subscribe.py:266
 msgid ""
 "The email address you supplied is not valid.  (E.g. it must contain an\n"
 "`@'.)"
@@ -3188,7 +3198,7 @@ msgstr ""
 "Zuk idatzitako helbidea ez da zuzena.  (adibidez, `@' ikurra behar\n"
 "du.)"
 
-#: Mailman/Cgi/subscribe.py:261
+#: Mailman/Cgi/subscribe.py:270
 msgid ""
 "Your subscription is not allowed because the email address you gave is\n"
 "insecure."
@@ -3196,7 +3206,7 @@ msgstr ""
 "Ezin da zure harpidetza eskaera onartu, zure ePosta helbidea ez\n"
 "delako ziurra."
 
-#: Mailman/Cgi/subscribe.py:269
+#: Mailman/Cgi/subscribe.py:278
 msgid ""
 "Confirmation from your email address is required, to prevent anyone from\n"
 "subscribing you without permission.  Instructions are being sent to you at\n"
@@ -3209,7 +3219,7 @@ msgstr ""
 "Gogoan izan harpidetza ez dela onartuko zuk mezu baten bidez\n"
 "berretsi arte."
 
-#: Mailman/Cgi/subscribe.py:281
+#: Mailman/Cgi/subscribe.py:290
 msgid ""
 "Your subscription request was deferred because %(x)s.  Your request has "
 "been\n"
@@ -3222,15 +3232,15 @@ msgstr ""
 "eta berak onartu beharko du.  Erabakia hartu bezain azkar jakinaraziko\n"
 "zaizu."
 
-#: Mailman/Cgi/subscribe.py:288 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Dagoeneko harpidedun zara."
 
-#: Mailman/Cgi/subscribe.py:302
+#: Mailman/Cgi/subscribe.py:311
 msgid "Mailman privacy alert"
 msgstr "Mailmanen Pribazitate Abisua"
 
-#: Mailman/Cgi/subscribe.py:303
+#: Mailman/Cgi/subscribe.py:312
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3267,15 +3277,15 @@ msgstr ""
 "idatzi mezu bat zerrendako administratzaileari helbide honetara: "
 "%(listowner)s\n"
 
-#: Mailman/Cgi/subscribe.py:322
+#: Mailman/Cgi/subscribe.py:331
 msgid "This list does not support digest delivery."
 msgstr "Zerrendak ez du onartzen mezuak bildumetan jasotzea."
 
-#: Mailman/Cgi/subscribe.py:324
+#: Mailman/Cgi/subscribe.py:333
 msgid "This list only supports digest delivery."
 msgstr "Zerrendak mezuak bildumetan jasotzeko aukera bakarrik ematen du."
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:340
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "%(realname)s posta zerrendako harpidedun egin zara."
 
@@ -4038,163 +4048,163 @@ msgstr "Mezuak banaka jasotzen dituzten harpidedunak:"
 msgid "Digest members:"
 msgstr "Mezuak bildumetan jasotzen dituzten harpidedunak:"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1783
 msgid "Arabic"
 msgstr "Arabiera"
 
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1784
 msgid "Asturian"
 msgstr "Asturiera"
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1785
 msgid "Catalan"
 msgstr "Katalana"
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1786
 msgid "Czech"
 msgstr "Txekiera  "
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1787
 msgid "Danish"
 msgstr "Daniera"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1788
 msgid "German"
 msgstr "Alemaniera"
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1789
 msgid "English (USA)"
 msgstr "Ingelesa (AEB)"
 
-#: Mailman/Defaults.py:1758
+#: Mailman/Defaults.py:1790
 msgid "Esperanto"
 msgstr ""
 
-#: Mailman/Defaults.py:1759
+#: Mailman/Defaults.py:1791
 msgid "Spanish (Spain)"
 msgstr "Gaztelania (Espainia)"
 
-#: Mailman/Defaults.py:1760
+#: Mailman/Defaults.py:1792
 msgid "Estonian"
 msgstr "Estoniera"
 
-#: Mailman/Defaults.py:1761
+#: Mailman/Defaults.py:1793
 msgid "Euskara"
 msgstr "Euskara"
 
-#: Mailman/Defaults.py:1762
+#: Mailman/Defaults.py:1794
 msgid "Persian"
 msgstr "Persiera"
 
-#: Mailman/Defaults.py:1763
+#: Mailman/Defaults.py:1795
 msgid "Finnish"
 msgstr "Finlandiera "
 
-#: Mailman/Defaults.py:1764
+#: Mailman/Defaults.py:1796
 msgid "French"
 msgstr "Frantsesa"
 
-#: Mailman/Defaults.py:1765
+#: Mailman/Defaults.py:1797
 msgid "Galician"
 msgstr "Galiziera"
 
-#: Mailman/Defaults.py:1766
+#: Mailman/Defaults.py:1798
 msgid "Greek"
 msgstr "Grekera"
 
-#: Mailman/Defaults.py:1767
+#: Mailman/Defaults.py:1799
 msgid "Hebrew"
 msgstr "Hebraiera"
 
-#: Mailman/Defaults.py:1768
+#: Mailman/Defaults.py:1800
 msgid "Croatian"
 msgstr "Kroaziera"
 
-#: Mailman/Defaults.py:1769
+#: Mailman/Defaults.py:1801
 msgid "Hungarian"
 msgstr "Hungariera "
 
-#: Mailman/Defaults.py:1770
+#: Mailman/Defaults.py:1802
 msgid "Interlingua"
 msgstr "Interlingua"
 
-#: Mailman/Defaults.py:1771
+#: Mailman/Defaults.py:1803
 msgid "Italian"
 msgstr "Italiera"
 
-#: Mailman/Defaults.py:1772
+#: Mailman/Defaults.py:1804
 msgid "Japanese"
 msgstr "Japoniera"
 
-#: Mailman/Defaults.py:1773
+#: Mailman/Defaults.py:1805
 msgid "Korean"
 msgstr "Koreera"
 
-#: Mailman/Defaults.py:1774
+#: Mailman/Defaults.py:1806
 msgid "Lithuanian"
 msgstr "Lituaniera"
 
-#: Mailman/Defaults.py:1775
+#: Mailman/Defaults.py:1807
 msgid "Dutch"
 msgstr "Almeaniera"
 
-#: Mailman/Defaults.py:1776
+#: Mailman/Defaults.py:1808
 msgid "Norwegian"
 msgstr "Norvegiera"
 
-#: Mailman/Defaults.py:1777
+#: Mailman/Defaults.py:1809
 msgid "Polish"
 msgstr "Poloniera"
 
-#: Mailman/Defaults.py:1778
+#: Mailman/Defaults.py:1810
 msgid "Portuguese"
 msgstr "Portugesa"
 
-#: Mailman/Defaults.py:1779
+#: Mailman/Defaults.py:1811
 msgid "Portuguese (Brazil)"
 msgstr "Brasileko Portugesa"
 
-#: Mailman/Defaults.py:1780
+#: Mailman/Defaults.py:1812
 msgid "Romanian"
 msgstr "Errumaniera"
 
-#: Mailman/Defaults.py:1781
+#: Mailman/Defaults.py:1813
 msgid "Russian"
 msgstr "Errusiera"
 
-#: Mailman/Defaults.py:1782
+#: Mailman/Defaults.py:1814
 msgid "Slovak"
 msgstr "Eslovakiera"
 
-#: Mailman/Defaults.py:1783
+#: Mailman/Defaults.py:1815
 msgid "Slovenian"
 msgstr "Esloveniera"
 
-#: Mailman/Defaults.py:1784
+#: Mailman/Defaults.py:1816
 msgid "Serbian"
 msgstr "Serbiarra"
 
-#: Mailman/Defaults.py:1785
+#: Mailman/Defaults.py:1817
 msgid "Swedish"
 msgstr "Suediera"
 
-#: Mailman/Defaults.py:1786
+#: Mailman/Defaults.py:1818
 msgid "Turkish"
 msgstr "Turkiera"
 
-#: Mailman/Defaults.py:1787
+#: Mailman/Defaults.py:1819
 msgid "Ukrainian"
 msgstr "Ukrainera"
 
-#: Mailman/Defaults.py:1788
+#: Mailman/Defaults.py:1820
 msgid "Vietnamese"
 msgstr "Vietnamera"
 
-#: Mailman/Defaults.py:1789
+#: Mailman/Defaults.py:1821
 msgid "Chinese (China)"
 msgstr "Txinera (Txina)"
 
-#: Mailman/Defaults.py:1790
+#: Mailman/Defaults.py:1822
 msgid "Chinese (Taiwan)"
 msgstr "Txinera (Taiwan)"
 
@@ -7332,6 +7342,43 @@ msgstr ""
 "            betetzen badu."
 
 #: Mailman/Gui/Privacy.py:360
+#, fuzzy
+msgid ""
+"List of addresses (or regexps) whose posts should always apply\n"
+"             <a href=\"?VARHELP=privacy/sender/dmarc_moderation_action\"\n"
+"             >dmarc_moderation_action</a> \n"
+"             regardless of any domain specific DMARC Policy."
+msgstr ""
+"Ezesten den mezu baten erantzunean sartuko den\n"
+"             <a href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
+"            ezespen testua</a>, DMARC Reject%(quarantine)s erregela\n"
+"            betetzen badu."
+
+#: Mailman/Gui/Privacy.py:365
+#, fuzzy
+msgid ""
+"Postings from any of these addresses will automatically\n"
+"             apply any DMARC action mitigation.  This can be utilized to\n"
+"             automatically wrap or munge postings from known addresses or\n"
+"             domains that might have policies rejecting external mail From:\n"
+"             themselves.\n"
+"\n"
+"             <p>Add member addresses one per line; start the line with a ^\n"
+"             character to designate a regular expression match."
+msgstr ""
+"Zerrenda honetan agertzen diren helbideetatik iristen diren mezuak\n"
+"             automatikoki baztertuko dira, inongo galderarik gabe.\n"
+"             Bidaltzaileak ez du jakinarazpenik edo erreboterik jasoko. Hala "
+"ere, moderatzaileak\n"
+"             <a href=\"?VARHELP=privacy/sender/forward_auto_discards\"\n"
+"             >automatikoki baztertu eta ezabatutako mezuen kopiak</a> "
+"jasotzeko aukera du.\n"
+"\n"
+"             <p>Lerro bakoitzeko helbide bat gehitu; adierazpen erregularren "
+"kasuan\n"
+"             lerroa ^ karakterearekin hasi."
+
+#: Mailman/Gui/Privacy.py:375
 msgid ""
 "If dmarc_moderation_action applies and is Wrap Message,\n"
 "             and this text is provided, the text will be placed in a\n"
@@ -7339,7 +7386,7 @@ msgid ""
 "             part in the wrapped message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:365
+#: Mailman/Gui/Privacy.py:380
 msgid ""
 "A wrapped message will either be a multipart/mixed message\n"
 "             with up to four sub-parts; a text/plain part containing\n"
@@ -7353,7 +7400,7 @@ msgid ""
 "             none of the other parts are applicable."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:374
+#: Mailman/Gui/Privacy.py:389
 msgid ""
 "A 'two dimensional' list of email address domains which are\n"
 "               considered equivalent when checking if a post is from a list\n"
@@ -7364,7 +7411,7 @@ msgstr ""
 "harpidedun\n"
 "               batena ote den aztertzerakoan."
 
-#: Mailman/Gui/Privacy.py:378
+#: Mailman/Gui/Privacy.py:393
 msgid ""
 "If two poster addresses with the same local part but\n"
 "               different domains are to be considered equivalents for list\n"
@@ -7393,11 +7440,11 @@ msgid ""
 "               'not&nbsp;metoo' will not."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:400
+#: Mailman/Gui/Privacy.py:415
 msgid "Non-member filters"
 msgstr "Harpidedun ez direnen iragazkia"
 
-#: Mailman/Gui/Privacy.py:403
+#: Mailman/Gui/Privacy.py:418
 msgid ""
 "List of non-member addresses whose postings should be\n"
 "             automatically accepted."
@@ -7405,7 +7452,7 @@ msgstr ""
 "Harpidedun izan ez arren, mezuak automatikoki onartuko zaizkien\n"
 "             helbideen zerrenda."
 
-#: Mailman/Gui/Privacy.py:410
+#: Mailman/Gui/Privacy.py:425
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             accepted with no further moderation applied.  Add member\n"
@@ -7422,7 +7469,7 @@ msgstr ""
 "             karakterra gehi zerrenda baten izena jartzean, beste zerrenda\n"
 "             horretako edonoren bidalketak onartuko ditu"
 
-#: Mailman/Gui/Privacy.py:419
+#: Mailman/Gui/Privacy.py:434
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             immediately held for moderation."
@@ -7430,7 +7477,7 @@ msgstr ""
 "Zerrenda honetako helbideetatik datozen mezuak\n"
 "automatikoki moderatuko dira"
 
-#: Mailman/Gui/Privacy.py:422
+#: Mailman/Gui/Privacy.py:437
 msgid ""
 "Postings from any of these non-members will be immediately\n"
 "             and automatically held for moderation by the list moderators.\n"
@@ -7451,7 +7498,7 @@ msgstr ""
 "kasuan,\n"
 "             ^  karakterearekin hasi lerroa."
 
-#: Mailman/Gui/Privacy.py:430
+#: Mailman/Gui/Privacy.py:445
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically rejected."
@@ -7459,7 +7506,7 @@ msgstr ""
 "Zerrenda honetako helbideetatik datozen mezuak ez dira\n"
 "             onartuko."
 
-#: Mailman/Gui/Privacy.py:433
+#: Mailman/Gui/Privacy.py:448
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             rejected.  In other words, their messages will be bounced back "
@@ -7486,7 +7533,7 @@ msgstr ""
 "kasuan\n"
 "             lerroa ^ karakterearekin hasi."
 
-#: Mailman/Gui/Privacy.py:445
+#: Mailman/Gui/Privacy.py:460
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically discarded."
@@ -7494,7 +7541,7 @@ msgstr ""
 "Automatikoki mezu bidalketa atzera botako zaien harpidedun ez diren\n"
 "             helbideen zerrenda."
 
-#: Mailman/Gui/Privacy.py:448
+#: Mailman/Gui/Privacy.py:463
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             discarded.  That is, the message will be thrown away with no\n"
@@ -7520,7 +7567,7 @@ msgstr ""
 "kasuan\n"
 "             lerroa ^ karakterearekin hasi."
 
-#: Mailman/Gui/Privacy.py:460
+#: Mailman/Gui/Privacy.py:475
 msgid ""
 "Action to take for postings from non-members for which no\n"
 "             explicit action is defined."
@@ -7528,7 +7575,7 @@ msgstr ""
 "Euren mezuekin zer egin zehaztuta ez duten gainontzeko helbideekin\n"
 "             egin beharrekoa."
 
-#: Mailman/Gui/Privacy.py:463
+#: Mailman/Gui/Privacy.py:478
 msgid ""
 "When a post from a non-member is received, the message's\n"
 "             sender is matched against the list of explicitly\n"
@@ -7555,7 +7602,7 @@ msgstr ""
 "horko zerrenda\n"
 "              batean ere agertzen, ondokoa egingo da."
 
-#: Mailman/Gui/Privacy.py:475
+#: Mailman/Gui/Privacy.py:490
 msgid ""
 "Should messages from non-members, which are automatically\n"
 "             discarded, be forwarded to the list moderator?"
@@ -7563,7 +7610,7 @@ msgstr ""
 "Automatikoki baztertzen diren zerrendakide ez diren bidaltzaileen mezuen\n"
 "             kopiak moderatzaileari bidali?"
 
-#: Mailman/Gui/Privacy.py:479
+#: Mailman/Gui/Privacy.py:494
 msgid ""
 "Text to include in any rejection notice to be sent to\n"
 "             non-members who post to this list. This notice can include\n"
@@ -7571,7 +7618,7 @@ msgid ""
 "             internally crafted default message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:487
+#: Mailman/Gui/Privacy.py:502
 msgid ""
 "This section allows you to configure various filters based on\n"
 "            the recipient of the message."
@@ -7579,11 +7626,11 @@ msgstr ""
 "Atal honen bitartez, mezuaren hartzailearen araberako zenbait\n"
 "            iragazki konfiguratzeko aukera duzu."
 
-#: Mailman/Gui/Privacy.py:490
+#: Mailman/Gui/Privacy.py:505
 msgid "Recipient filters"
 msgstr "Hartzaileen iragazkia"
 
-#: Mailman/Gui/Privacy.py:494
+#: Mailman/Gui/Privacy.py:509
 msgid ""
 "Must posts have list named in destination (to, cc) field\n"
 "             (or be among the acceptable alias names, specified below)?"
@@ -7593,7 +7640,7 @@ msgstr ""
 "             (edo behekaldean ezarritako alias izenetan dagoeenetako "
 "batenbat)?"
 
-#: Mailman/Gui/Privacy.py:497
+#: Mailman/Gui/Privacy.py:512
 msgid ""
 "Many (in fact, most) spams do not explicitly name their\n"
 "             myriad destinations in the explicit destination addresses - in\n"
@@ -7633,7 +7680,7 @@ msgstr ""
 "\n"
 "             </ol>"
 
-#: Mailman/Gui/Privacy.py:515
+#: Mailman/Gui/Privacy.py:530
 msgid ""
 "Alias names (regexps) which qualify as explicit to or cc\n"
 "             destination names for this list."
@@ -7641,7 +7688,7 @@ msgstr ""
 "Zerrenda hau helburutzat duten mezuek erabili ditzazketen alias\n"
 "             (expresio erregularra) zehatza."
 
-#: Mailman/Gui/Privacy.py:518
+#: Mailman/Gui/Privacy.py:533
 msgid ""
 "Alternate addresses that are acceptable when\n"
 "             `require_explicit_destination' is enabled.  This option takes "
@@ -7687,11 +7734,11 @@ msgstr ""
 "osoarekin\n"
 "             erkatuko da."
 
-#: Mailman/Gui/Privacy.py:536
+#: Mailman/Gui/Privacy.py:551
 msgid "Ceiling on acceptable number of recipients for a posting."
 msgstr "Banaketa batean onar daitekeen gehienezko hartzaile kopurua."
 
-#: Mailman/Gui/Privacy.py:538
+#: Mailman/Gui/Privacy.py:553
 msgid ""
 "If a posting has this number, or more, of recipients, it is\n"
 "             held for admin approval.  Use 0 for no ceiling."
@@ -7700,7 +7747,7 @@ msgstr ""
 "             eta kudeatzailearen onespena jaso arte atxikirik geratuko da.\n"
 "             Ez baduzu mugarik nahi 0 ipini."
 
-#: Mailman/Gui/Privacy.py:543
+#: Mailman/Gui/Privacy.py:558
 msgid ""
 "This section allows you to configure various anti-spam\n"
 "            filters posting filters, which can help reduce the amount of "
@@ -7713,15 +7760,15 @@ msgstr ""
 "             zabor posta kopurua gutxitzen lagunduko zaitu.\n"
 "             "
 
-#: Mailman/Gui/Privacy.py:548
+#: Mailman/Gui/Privacy.py:563
 msgid "Header filters"
 msgstr "Goiburu iragazkiak"
 
-#: Mailman/Gui/Privacy.py:551
+#: Mailman/Gui/Privacy.py:566
 msgid "Filter rules to match against the headers of a message."
 msgstr "Mezuen goiburuarekin konparatu behar diren filtro erregelak."
 
-#: Mailman/Gui/Privacy.py:553
+#: Mailman/Gui/Privacy.py:568
 msgid ""
 "Each header filter rule has two parts, a list of regular\n"
 "             expressions, one per line, and an action to take.  Mailman\n"
@@ -7744,15 +7791,15 @@ msgid ""
 "             types or file name extensions."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:570
+#: Mailman/Gui/Privacy.py:585
 msgid "Legacy anti-spam filters"
 msgstr "Zabor posta aurkako iragazki zaharrak"
 
-#: Mailman/Gui/Privacy.py:573
+#: Mailman/Gui/Privacy.py:588
 msgid "Hold posts with header value matching a specified regexp."
 msgstr "Adierazpen erregular baten pareko goiburua duten mezuak atxiki."
 
-#: Mailman/Gui/Privacy.py:574
+#: Mailman/Gui/Privacy.py:589
 msgid ""
 "Use this option to prohibit posts according to specific\n"
 "             header values.  The target value is a regular-expression for\n"
@@ -7787,7 +7834,7 @@ msgstr ""
 "              ezabatu egiten direla. Hori sahiesteko, hutsuneak\n"
 "              parentesi artean sartu."
 
-#: Mailman/Gui/Privacy.py:609
+#: Mailman/Gui/Privacy.py:624
 msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
@@ -7795,7 +7842,7 @@ msgstr ""
 "dmarc_moderation_action , konfiguratutako defektuzko balioa\n"
 "                           baino >= izan behar da."
 
-#: Mailman/Gui/Privacy.py:659
+#: Mailman/Gui/Privacy.py:674
 msgid ""
 "Header filter rules require a pattern.\n"
 "                Incomplete filter rules will be ignored."
@@ -7803,7 +7850,7 @@ msgstr ""
 "Goiburu iragazki erregelek patro bat behar dute.\n"
 "                Zerbait falta zaien definizioak ez dira onartuko."
 
-#: Mailman/Gui/Privacy.py:678
+#: Mailman/Gui/Privacy.py:693
 msgid ""
 "The header filter rule pattern\n"
 "                '%(safepattern)s' is not a legal regular expression.  This\n"
@@ -7859,8 +7906,8 @@ msgid ""
 "             configuration variable."
 msgstr ""
 "Gaien iragazkiak, heltzen diren mezu guztiak sailkatu egiten ditu\n"
-"             behean adierazitako <a href=\"https://docs.python.org/2/library/re."
-"html\">adierazpen\n"
+"             behean adierazitako <a href=\"https://docs.python.org/2/library/"
+"re.html\">adierazpen\n"
 "             erregularren iragazkiaren</a> arabera.\n"
 "             <code>Subject:</code> (gaia) edo <code>Keywords</code> (gako-"
 "hitzak)\n"
@@ -8675,7 +8722,7 @@ msgstr "Zure \"%(realname)s\"-rabidalitako mezuaren auto-erantzuna"
 msgid "The Mailman Replybot"
 msgstr "Mailmanen Erantzun-Robota"
 
-#: Mailman/Handlers/Scrubber.py:205
+#: Mailman/Handlers/Scrubber.py:208
 msgid ""
 "An embedded and charset-unspecified text was scrubbed...\n"
 "Name: %(filename)s\n"
@@ -8685,11 +8732,11 @@ msgstr ""
 "Izena: %(filename)s\n"
 "URL-a: %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:215
+#: Mailman/Handlers/Scrubber.py:218
 msgid "HTML attachment scrubbed and removed"
 msgstr "Erantsitako HTML dokumentua ezabatuta"
 
-#: Mailman/Handlers/Scrubber.py:231 Mailman/Handlers/Scrubber.py:256
+#: Mailman/Handlers/Scrubber.py:234 Mailman/Handlers/Scrubber.py:259
 msgid ""
 "An HTML attachment was scrubbed...\n"
 "URL: %(url)s\n"
@@ -8697,19 +8744,19 @@ msgstr ""
 "Erantsitako HTML dokumentu bat ezabatu egin da...\n"
 "URL: %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:268
+#: Mailman/Handlers/Scrubber.py:271
 msgid "no subject"
 msgstr "ez du gairik"
 
-#: Mailman/Handlers/Scrubber.py:270
+#: Mailman/Handlers/Scrubber.py:273
 msgid "no date"
 msgstr "ez du datarik"
 
-#: Mailman/Handlers/Scrubber.py:271
+#: Mailman/Handlers/Scrubber.py:274
 msgid "unknown sender"
 msgstr "bidaltzaile ezezaguna"
 
-#: Mailman/Handlers/Scrubber.py:273
+#: Mailman/Handlers/Scrubber.py:276
 msgid ""
 "An embedded message was scrubbed...\n"
 "From: %(who)s\n"
@@ -8725,7 +8772,7 @@ msgstr ""
 "Tamaina: %(size)s\n"
 "URL: %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:305
+#: Mailman/Handlers/Scrubber.py:308
 msgid ""
 "A non-text attachment was scrubbed...\n"
 "Name: %(filename)s\n"
@@ -8741,11 +8788,11 @@ msgstr ""
 "Azalpena: %(desc)s\n"
 "URL : %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:344
+#: Mailman/Handlers/Scrubber.py:347
 msgid "Skipped content of type %(partctype)s\n"
 msgstr "%(partctype)s eduki mota ez da eraldatu\n"
 
-#: Mailman/Handlers/Scrubber.py:385
+#: Mailman/Handlers/Scrubber.py:388
 msgid "-------------- next part --------------\n"
 msgstr "-------------- hurrengo zatia --------------\n"
 
@@ -8754,7 +8801,7 @@ msgstr "-------------- hurrengo zatia --------------\n"
 msgid "Header matched regexp: %(pattern)s"
 msgstr "Blokeatutako helbidea (matched %(pattern)s)"
 
-#: Mailman/Handlers/SpamDetect.py:126
+#: Mailman/Handlers/SpamDetect.py:127
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
 "publishes a DMARC policy of reject or quarantine, and your message has been\n"
@@ -8767,7 +8814,7 @@ msgstr ""
 "automatikoki ezetsia izan da. Gure huts bat izan dela uste\n"
 "baduzu, idatzi zerrenda jabeari: %(listowner)s."
 
-#: Mailman/Handlers/SpamDetect.py:196
+#: Mailman/Handlers/SpamDetect.py:197
 msgid "Message rejected by filter rule match"
 msgstr "Iragazki erregela batekin bat egiteagatik atzera botatako mezua"
 
@@ -8918,16 +8965,16 @@ msgstr ""
 msgid "Mailing list removal request for list %(listname)s"
 msgstr "%(listname)s izenez posta zerrenda ezabatze eskakizuna"
 
-#: Mailman/MTA/Postfix.py:420
+#: Mailman/MTA/Postfix.py:442
 msgid "checking permissions on %(file)s"
 msgstr "%(file)s-etako baimenak aztertzen"
 
-#: Mailman/MTA/Postfix.py:430
+#: Mailman/MTA/Postfix.py:452
 msgid "%(file)s permissions must be 0664 (got %(octmode)s)"
 msgstr "%(file)s baimena 0664 izan behar du (got %(octmode)s)"
 
-#: Mailman/MTA/Postfix.py:432 Mailman/MTA/Postfix.py:460
-#: Mailman/MTA/Postfix.py:471 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:454 Mailman/MTA/Postfix.py:482
+#: Mailman/MTA/Postfix.py:493 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -8935,15 +8982,15 @@ msgstr "%(file)s baimena 0664 izan behar du (got %(octmode)s)"
 msgid "(fixing)"
 msgstr "(zuzentzen)"
 
-#: Mailman/MTA/Postfix.py:448
+#: Mailman/MTA/Postfix.py:470
 msgid "checking ownership of %(dbfile)s"
 msgstr "%(dbfile)s fitxategiaren jabetza egiaztatzen"
 
-#: Mailman/MTA/Postfix.py:456
+#: Mailman/MTA/Postfix.py:478
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "%(dbfile)s jabea %(owner)s da, ( %(user)s izan beharko litzateke)"
 
-#: Mailman/MTA/Postfix.py:469
+#: Mailman/MTA/Postfix.py:491
 msgid "%(dbfile)s permissions must be 0664 (got %(octmode)s)"
 msgstr "%(dbfile)s baimena 0664 izan behar du (got %(octmode)s)"
 
@@ -8955,55 +9002,55 @@ msgstr "%(listname)s : harpidetzeko zure konfirmazioa behar dugu"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "%(listname)s : harpidetza uzteko zure konfirmazioa behar dugu"
 
-#: Mailman/MailList.py:973 Mailman/MailList.py:1464
+#: Mailman/MailList.py:974 Mailman/MailList.py:1465
 msgid " from %(remote)s"
 msgstr " %(remote)s-(e)tik"
 
-#: Mailman/MailList.py:1017
+#: Mailman/MailList.py:1018
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "%(realname)s zerrendan harpidetzeko moderatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1099 bin/add_members:299
+#: Mailman/MailList.py:1100 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s harpidetza jakinarazpena"
 
-#: Mailman/MailList.py:1119
+#: Mailman/MailList.py:1120
 msgid "unsubscriptions require moderator approval"
 msgstr "zerrenda uzteko moderatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1140
+#: Mailman/MailList.py:1141
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s zerrenda utzi izanaren jakinarazpena"
 
-#: Mailman/MailList.py:1302
+#: Mailman/MailList.py:1303
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s helbidea aldatu izanaren jakinarazpena"
 
-#: Mailman/MailList.py:1336
+#: Mailman/MailList.py:1337
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Berrespen kate okerra"
 
-#: Mailman/MailList.py:1345
+#: Mailman/MailList.py:1346
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Berrespen kate okerra"
 
-#: Mailman/MailList.py:1370
+#: Mailman/MailList.py:1371
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "%(name)s zerrendako kide izateko, kudeatzailearen onespena behar da"
 
-#: Mailman/MailList.py:1380
+#: Mailman/MailList.py:1381
 #, fuzzy
 msgid "email confirmation"
 msgstr "Berrespen kate okerra"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1383
 #, fuzzy
 msgid "web confirmation"
 msgstr "Sar ezazu berrespen cookie-a."
 
-#: Mailman/MailList.py:1638
+#: Mailman/MailList.py:1639
 msgid "Last autoresponse notification for today"
 msgstr "Gaurko azkenengo jakinarazpen automatikoa"
 
@@ -11221,15 +11268,15 @@ msgid ""
 "operation.  It is only useful for debugging if it is run separately.\n"
 msgstr ""
 
-#: bin/qrunner:178
+#: bin/qrunner:179
 msgid "%(name)s runs the %(runnername)s qrunner"
 msgstr "%(name)s-ek %(runnername)s qrunner-a exekutatzen du"
 
-#: bin/qrunner:179
+#: bin/qrunner:180
 msgid "All runs all the above qrunners"
 msgstr "Edozerk abiarazten ditu goiko grunnerrak"
 
-#: bin/qrunner:215
+#: bin/qrunner:216
 msgid "No runner name given."
 msgstr "Ez da runner izenik idatzi."
 
