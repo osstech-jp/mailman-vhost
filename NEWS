@@ -21,9 +21,17 @@ Here is a history of user visible changes to Mailman.
       does this on every web access and on sites with a very large number of
       lists, this can have performance implications.  See the description in
       Defaults.py for more information.
-  
+
+    - Thanks to Ralf Jung there is now the ability to add text based captchas
+      (aka textchas) to the listinfo subscribe form.  See the documentation
+      for the new CAPTCHA setting in Defaults.py for how to enable this.  Also
+      note that if you have custom listinfo.html templates, you will have to
+      add a <mm-captcha-ui> tag to those templates to make this work.  This
+      feature can be used in combination with or instead of the Google
+      reCAPTCHA feature added in 2.1.26.
+
   Bug Fixes and other patches
-  
+
     - Fixed the confirm CGI to catch a rare TypeError on simultaneous
       confirmations of the same token.  (LP: #1785854)
 
@@ -43,6 +51,14 @@ Here is a history of user visible changes to Mailman.
 
     - Fixed the spelling of the --no-restart option for mailmanctl.
 
+    - Fixed an issue where certain combinations of charset and invalid
+      characters in a list's description could produce a List-ID header
+      without angle brackets.  (LP: #1831321)
+
+    - With the Postfix MTA and virtual domains, mappings for the site list
+      -bounces and -request addresses in each virtual domain are now added
+      to data/virtual-mailman (-owner was done in 2.1.24).  (LP: #1831777)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
@@ -53,7 +69,7 @@ Here is a history of user visible changes to Mailman.
 2.1.28 (23-Jul-2018)
 
   Security
- 
+
     - A content spoofing vulnerability with invalid list name messages in
       the web UI has been fixed.  CVE-2018-13796  (LP: #1780874)
 
@@ -392,7 +408,7 @@ Here is a history of user visible changes to Mailman.
       well as the user options page and the previously fixed admin pages.
       Thanks to Nishant Agarwala for reporting the issue.  CVE-2016-6893
       (LP: #1614841)
- 
+
   New Features
 
     - For header_filter_rules matching, RFC 2047 encoded headers, non-encoded
@@ -475,7 +491,7 @@ Here is a history of user visible changes to Mailman.
 
     - A site can now set DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL to None or the
       null string if it wants to avoid using this.  (LP: #1578450)
- 
+
     - The white space to the left of the admindb Logout link is no longer
       part of the link.  (LP: #1573623)
 
@@ -703,11 +719,11 @@ Here is a history of user visible changes to Mailman.
       and deleting the old address.  (LP: #266809)
 
   i18n
- 
+
     - The Russian translation has been updated by Danil Smirnov.
 
     - The Polish translation has been updated by Stefan Plewako.
- 
+
   Bug fixes and other patches
 
     - A LookupError in SpamDetect on a message with RFC 2047 encoded headers
@@ -946,7 +962,7 @@ Here is a history of user visible changes to Mailman.
 
     - If checking DNS for dmarc_moderation_action and DNS lookup is not
       available, log it.  (LP: #1324541)
- 
+
     - Handle missing From: header addresses for DMARC mitigation actions.
       (LP: #1318025)
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue Jul 10 21:21:09 2018\n"
+"POT-Creation-Date: Thu Jun 20 15:03:40 2019\n"
 "PO-Revision-Date: 2005-05-14 12:07+0800\n"
 "Last-Translator: Dai Xiaoguang <leona@cs.hit.edu.cn>\n"
 "Language-Team:  <mailman-cn@mail.cs.hit.edu.cn>\n"
@@ -227,7 +227,7 @@ msgid " The last bounce received from you was dated %(date)s"
 msgstr "您最后的退信日期为 %(date)s"
 
 #: Mailman/Bouncer.py:333 Mailman/Deliverer.py:146
-#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:435
+#: Mailman/Handlers/Acknowledge.py:44 Mailman/Handlers/CookHeaders.py:441
 #: Mailman/Handlers/Hold.py:215 Mailman/Handlers/ToDigest.py:250
 #: Mailman/ListAdmin.py:225
 msgid "(no subject)"
@@ -254,12 +254,12 @@ msgid "No such list <em>%(safelistname)s</em>"
 msgstr "没有类似的列表 <em>%(safelistname)s</em>"
 
 #: Mailman/Cgi/admin.py:97 Mailman/Cgi/admindb.py:136 Mailman/Cgi/confirm.py:80
-#: Mailman/Cgi/create.py:50 Mailman/Cgi/edithtml.py:103
-#: Mailman/Cgi/listinfo.py:67 Mailman/Cgi/options.py:120
-#: Mailman/Cgi/private.py:125 Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72
-#: Mailman/Cgi/roster.py:153 Mailman/Cgi/roster.py:154
-#: Mailman/Cgi/subscribe.py:55 Mailman/Cgi/subscribe.py:66
-#: Mailman/Cgi/subscribe.py:81
+#: Mailman/Cgi/confirm.py:334 Mailman/Cgi/create.py:50
+#: Mailman/Cgi/edithtml.py:103 Mailman/Cgi/listinfo.py:67
+#: Mailman/Cgi/options.py:120 Mailman/Cgi/private.py:125
+#: Mailman/Cgi/rmlist.py:48 Mailman/Cgi/roster.py:72 Mailman/Cgi/roster.py:153
+#: Mailman/Cgi/roster.py:154 Mailman/Cgi/subscribe.py:55
+#: Mailman/Cgi/subscribe.py:66 Mailman/Cgi/subscribe.py:81
 msgid "Error"
 msgstr "错误"
 
@@ -278,7 +278,7 @@ msgid "Authorization failed."
 msgstr "认证失败"
 
 #: Mailman/Cgi/admin.py:221 Mailman/Cgi/admindb.py:243
-#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:330
+#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:331
 msgid "The form lifetime has expired. (request forgery check)"
 msgstr ""
 
@@ -542,7 +542,7 @@ msgstr "主题名"
 msgid "Regexp:"
 msgstr "正则表达式"
 
-#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1149
+#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1150
 msgid "Description:"
 msgstr "描述"
 
@@ -576,12 +576,12 @@ msgstr "延期"
 #: Mailman/Cgi/admindb.py:464 Mailman/Cgi/admindb.py:516
 #: Mailman/Cgi/admindb.py:760 Mailman/Gui/ContentFilter.py:37
 #: Mailman/Gui/Privacy.py:265 Mailman/Gui/Privacy.py:288
-#: Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:474
 msgid "Reject"
 msgstr "拒绝"
 
 #: Mailman/Cgi/admin.py:820 Mailman/Gui/Privacy.py:265
-#: Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:474
 msgid "Hold"
 msgstr "滞留"
 
@@ -589,12 +589,12 @@ msgstr "滞留"
 #: Mailman/Cgi/admindb.py:465 Mailman/Cgi/admindb.py:516
 #: Mailman/Cgi/admindb.py:760 Mailman/Commands/cmd_confirm.py:93
 #: Mailman/Gui/ContentFilter.py:37 Mailman/Gui/Privacy.py:265
-#: Mailman/Gui/Privacy.py:289 Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:289 Mailman/Gui/Privacy.py:474
 msgid "Discard"
 msgstr "丢弃"
 
 #: Mailman/Cgi/admin.py:821 Mailman/Cgi/admindb.py:516
-#: Mailman/Gui/Privacy.py:288 Mailman/Gui/Privacy.py:459
+#: Mailman/Gui/Privacy.py:288 Mailman/Gui/Privacy.py:474
 msgid "Accept"
 msgstr "接受"
 
@@ -701,7 +701,7 @@ msgid "nodupes"
 msgstr "无副本"
 
 #: Mailman/Cgi/admin.py:1042 Mailman/Cgi/admin.py:1108
-#: Mailman/Cgi/options.py:390
+#: Mailman/Cgi/options.py:391
 msgid "digest"
 msgstr "摘要"
 
@@ -733,7 +733,7 @@ msgstr "B"
 msgid "notmetoo"
 msgstr "除了我"
 
-#: Mailman/Cgi/admin.py:1084 Mailman/Cgi/options.py:388
+#: Mailman/Cgi/admin.py:1084 Mailman/Cgi/options.py:389
 msgid "nomail"
 msgstr "没有邮件"
 
@@ -860,9 +860,9 @@ msgstr "向新的订阅者发送欢迎信件么?"
 
 #: Mailman/Cgi/admin.py:1238 Mailman/Cgi/admin.py:1247
 #: Mailman/Cgi/admin.py:1280 Mailman/Cgi/admin.py:1288
-#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
-#: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
-#: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
+#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:371
+#: Mailman/Cgi/create.py:406 Mailman/Cgi/create.py:444
+#: Mailman/Cgi/rmlist.py:248 Mailman/Gui/Archive.py:33
 #: Mailman/Gui/Autoresponse.py:54 Mailman/Gui/Autoresponse.py:62
 #: Mailman/Gui/Autoresponse.py:71 Mailman/Gui/Bounce.py:77
 #: Mailman/Gui/Bounce.py:120 Mailman/Gui/Bounce.py:146
@@ -882,17 +882,17 @@ msgstr "向新的订阅者发送欢迎信件么?"
 #: Mailman/Gui/NonDigest.py:162 Mailman/Gui/Privacy.py:111
 #: Mailman/Gui/Privacy.py:129 Mailman/Gui/Privacy.py:162
 #: Mailman/Gui/Privacy.py:215 Mailman/Gui/Privacy.py:317
-#: Mailman/Gui/Privacy.py:334 Mailman/Gui/Privacy.py:474
-#: Mailman/Gui/Privacy.py:493 Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56
+#: Mailman/Gui/Privacy.py:334 Mailman/Gui/Privacy.py:489
+#: Mailman/Gui/Privacy.py:508 Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56
 #: Mailman/Gui/Usenet.py:93 Mailman/Gui/Usenet.py:105
 msgid "No"
 msgstr "不"
 
 #: Mailman/Cgi/admin.py:1238 Mailman/Cgi/admin.py:1247
 #: Mailman/Cgi/admin.py:1280 Mailman/Cgi/admin.py:1288
-#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:364
-#: Mailman/Cgi/create.py:399 Mailman/Cgi/create.py:437
-#: Mailman/Cgi/rmlist.py:241 Mailman/Gui/Archive.py:33
+#: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:371
+#: Mailman/Cgi/create.py:406 Mailman/Cgi/create.py:444
+#: Mailman/Cgi/rmlist.py:248 Mailman/Gui/Archive.py:33
 #: Mailman/Gui/Autoresponse.py:54 Mailman/Gui/Autoresponse.py:62
 #: Mailman/Gui/Bounce.py:77 Mailman/Gui/Bounce.py:120 Mailman/Gui/Bounce.py:146
 #: Mailman/Gui/Bounce.py:155 Mailman/Gui/Bounce.py:164
@@ -911,7 +911,7 @@ msgstr "不"
 #: Mailman/Gui/Privacy.py:111 Mailman/Gui/Privacy.py:129
 #: Mailman/Gui/Privacy.py:162 Mailman/Gui/Privacy.py:215
 #: Mailman/Gui/Privacy.py:317 Mailman/Gui/Privacy.py:334
-#: Mailman/Gui/Privacy.py:474 Mailman/Gui/Privacy.py:493
+#: Mailman/Gui/Privacy.py:489 Mailman/Gui/Privacy.py:508
 #: Mailman/Gui/Usenet.py:52 Mailman/Gui/Usenet.py:56 Mailman/Gui/Usenet.py:93
 #: Mailman/Gui/Usenet.py:105
 msgid "Yes"
@@ -1373,8 +1373,8 @@ msgstr "字节"
 msgid "Size:"
 msgstr "大小:"
 
-#: Mailman/Cgi/admindb.py:620 Mailman/Handlers/Scrubber.py:203
-#: Mailman/Handlers/Scrubber.py:301 Mailman/Handlers/Scrubber.py:303
+#: Mailman/Cgi/admindb.py:620 Mailman/Handlers/Scrubber.py:206
+#: Mailman/Handlers/Scrubber.py:304 Mailman/Handlers/Scrubber.py:306
 msgid "not available"
 msgstr "不可用"
 
@@ -1604,15 +1604,15 @@ msgstr "订阅邮件列表 %(listname)s"
 msgid "Cancel my subscription request"
 msgstr "取消我的订阅请求"
 
-#: Mailman/Cgi/confirm.py:335
+#: Mailman/Cgi/confirm.py:341
 msgid "You have canceled your subscription request."
 msgstr "您已经取消了您的订阅请求."
 
-#: Mailman/Cgi/confirm.py:373
+#: Mailman/Cgi/confirm.py:383
 msgid "Awaiting moderator approval"
 msgstr "等待列表主持者的批准"
 
-#: Mailman/Cgi/confirm.py:376
+#: Mailman/Cgi/confirm.py:386
 msgid ""
 "            You have successfully confirmed your subscription request to "
 "the\n"
@@ -1627,8 +1627,8 @@ msgstr ""
 "            但是在您能收到订阅之前,还需要列表主持者的最终批准.\n"
 "            您的请求已经发给列表主持者了, 您将收到列表主持者的决定的通知."
 
-#: Mailman/Cgi/confirm.py:383 Mailman/Cgi/confirm.py:448
-#: Mailman/Cgi/confirm.py:537 Mailman/Cgi/confirm.py:774
+#: Mailman/Cgi/confirm.py:393 Mailman/Cgi/confirm.py:459
+#: Mailman/Cgi/confirm.py:549 Mailman/Cgi/confirm.py:788
 msgid ""
 "Invalid confirmation string.  It is\n"
 "            possible that you are attempting to confirm a request for an\n"
@@ -1637,11 +1637,11 @@ msgstr ""
 "无效的验证字符串.  \n"
 "            可能你在尝试为已经取消订阅的地址确认请求."
 
-#: Mailman/Cgi/confirm.py:387
+#: Mailman/Cgi/confirm.py:397
 msgid "You are already a member of this mailing list!"
 msgstr "您已经是这个邮件列表的成员了!"
 
-#: Mailman/Cgi/confirm.py:390
+#: Mailman/Cgi/confirm.py:400
 #, fuzzy
 msgid ""
 "You are currently banned from subscribing to\n"
@@ -1651,7 +1651,7 @@ msgstr ""
 "您提供的邮件地址被此邮件列表禁止了。若您认为这是错误的，请联系列表管理员\n"
 "         %(owneraddr)s。"
 
-#: Mailman/Cgi/confirm.py:394
+#: Mailman/Cgi/confirm.py:404
 msgid ""
 "            You were not invited to this mailing list.  The invitation has\n"
 "            been discarded, and both list administrators have been\n"
@@ -1660,11 +1660,11 @@ msgstr ""
 "            这个邮件列表还没有邀请您.  \n"
 "            邀请函已经被丢弃, 而且列表管理员已经收到了警告."
 
-#: Mailman/Cgi/confirm.py:404
+#: Mailman/Cgi/confirm.py:414
 msgid "Subscription request confirmed"
 msgstr "订阅请求已经确认"
 
-#: Mailman/Cgi/confirm.py:408
+#: Mailman/Cgi/confirm.py:418
 msgid ""
 "            You have successfully confirmed your subscription request for\n"
 "            \"%(addr)s\" to the %(listname)s mailing list.  A separate\n"
@@ -1682,15 +1682,15 @@ msgstr ""
 "            <p>现在,您就可以\n"
 "            <a href=\"%(optionsurl)s\">进入您的成员登陆页面</a>."
 
-#: Mailman/Cgi/confirm.py:426
+#: Mailman/Cgi/confirm.py:436
 msgid "You have canceled your unsubscription request."
 msgstr "您已经撤消了您取消订阅的请求."
 
-#: Mailman/Cgi/confirm.py:454
+#: Mailman/Cgi/confirm.py:465
 msgid "Unsubscription request confirmed"
 msgstr "取消订阅通过了验证"
 
-#: Mailman/Cgi/confirm.py:458
+#: Mailman/Cgi/confirm.py:469
 msgid ""
 "            You have successfully unsubscribed from the %(listname)s "
 "mailing\n"
@@ -1702,15 +1702,15 @@ msgstr ""
 "           现在您就可以 <a href=\"%(listinfourl)s\">访问列表的主要信息页面</"
 "a>."
 
-#: Mailman/Cgi/confirm.py:469
+#: Mailman/Cgi/confirm.py:480
 msgid "Confirm unsubscription request"
 msgstr "确认取消订阅请求"
 
-#: Mailman/Cgi/confirm.py:484 Mailman/Cgi/confirm.py:586
+#: Mailman/Cgi/confirm.py:495 Mailman/Cgi/confirm.py:598
 msgid "<em>Not available</em>"
 msgstr "<em>不可用</em>"
 
-#: Mailman/Cgi/confirm.py:487
+#: Mailman/Cgi/confirm.py:498
 msgid ""
 "Your confirmation is required in order to complete the\n"
 "    unsubscription request from the mailing list <em>%(listname)s</em>.  "
@@ -1738,20 +1738,20 @@ msgstr ""
 "\n"
 "    <p>或者点击 <em>取消并且删除</em> 来撤销您的取消订阅请求."
 
-#: Mailman/Cgi/confirm.py:503 Mailman/Cgi/options.py:859
-#: Mailman/Cgi/options.py:1006 Mailman/Cgi/options.py:1016
+#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:860
+#: Mailman/Cgi/options.py:1007 Mailman/Cgi/options.py:1017
 msgid "Unsubscribe"
 msgstr "取消订阅"
 
-#: Mailman/Cgi/confirm.py:504 Mailman/Cgi/confirm.py:615
+#: Mailman/Cgi/confirm.py:515 Mailman/Cgi/confirm.py:627
 msgid "Cancel and discard"
 msgstr "取消并且删除"
 
-#: Mailman/Cgi/confirm.py:514
+#: Mailman/Cgi/confirm.py:525
 msgid "You have canceled your change of address request."
 msgstr "您已经取消了对地址请求的修改."
 
-#: Mailman/Cgi/confirm.py:543
+#: Mailman/Cgi/confirm.py:555
 #, fuzzy
 msgid ""
 "%(newaddr)s is banned from subscribing to the\n"
@@ -1761,7 +1761,7 @@ msgstr ""
 "您提供的邮件地址被此邮件列表禁止了。若您认为这是错误的，请联系列表管理员\n"
 "         %(owneraddr)s。"
 
-#: Mailman/Cgi/confirm.py:548
+#: Mailman/Cgi/confirm.py:560
 #, fuzzy
 msgid ""
 "%(newaddr)s is already a member of\n"
@@ -1772,11 +1772,11 @@ msgstr ""
 "无效的验证字符串.  \n"
 "            可能你在尝试为已经取消订阅的地址确认请求."
 
-#: Mailman/Cgi/confirm.py:555
+#: Mailman/Cgi/confirm.py:567
 msgid "Change of address request confirmed"
 msgstr "对地址请求的修改已经确认"
 
-#: Mailman/Cgi/confirm.py:559
+#: Mailman/Cgi/confirm.py:571
 msgid ""
 "            You have successfully changed your address on the %(listname)s\n"
 "            mailing list from <b>%(oldaddr)s</b> to <b>%(newaddr)s</b>.  "
@@ -1788,15 +1788,15 @@ msgstr ""
 "            <b>%(oldaddr)s</b> 修改为 <b>%(newaddr)s</b>.  \n"
 "            现在您可以 <a href=\"%(optionsurl)s\">进入您的成员登陆页面了</a>."
 
-#: Mailman/Cgi/confirm.py:571
+#: Mailman/Cgi/confirm.py:583
 msgid "Confirm change of address request"
 msgstr "确认修改地址的请求"
 
-#: Mailman/Cgi/confirm.py:590
+#: Mailman/Cgi/confirm.py:602
 msgid "globally"
 msgstr "全局地"
 
-#: Mailman/Cgi/confirm.py:593
+#: Mailman/Cgi/confirm.py:605
 msgid ""
 "Your confirmation is required in order to complete the\n"
 "    change of address request for the mailing list <em>%(listname)s</em>.  "
@@ -1835,25 +1835,25 @@ msgstr ""
 "\n"
 "    <p>或者点击 <em>取消并且删除</em> 来取消对地址的更改请求."
 
-#: Mailman/Cgi/confirm.py:614
+#: Mailman/Cgi/confirm.py:626
 msgid "Change address"
 msgstr "更改地址"
 
-#: Mailman/Cgi/confirm.py:623 Mailman/Cgi/confirm.py:739
+#: Mailman/Cgi/confirm.py:635 Mailman/Cgi/confirm.py:752
 msgid "Continue awaiting approval"
 msgstr "继续等待批准"
 
-#: Mailman/Cgi/confirm.py:631
+#: Mailman/Cgi/confirm.py:643
 msgid ""
 "Okay, the list moderator will still have the\n"
 "    opportunity to approve or reject this message."
 msgstr "OK, 列表主持者仍然有机会批准或者拒绝这条信息."
 
-#: Mailman/Cgi/confirm.py:659
+#: Mailman/Cgi/confirm.py:671
 msgid "Sender discarded message via web."
 msgstr "寄件人通过web删除了信件"
 
-#: Mailman/Cgi/confirm.py:661
+#: Mailman/Cgi/confirm.py:674
 msgid ""
 "The held message with the Subject:\n"
 "            header <em>%(subject)s</em> could not be found.  The most "
@@ -1868,11 +1868,11 @@ msgstr ""
 "            列表主持者已经批准或者拒绝了这条信件.\n"
 "            你不能及时地取消这条信件."
 
-#: Mailman/Cgi/confirm.py:669
+#: Mailman/Cgi/confirm.py:682
 msgid "Posted message canceled"
 msgstr "发送的信件已经取消"
 
-#: Mailman/Cgi/confirm.py:672
+#: Mailman/Cgi/confirm.py:685
 msgid ""
 "            You have successfully canceled the posting of your message with\n"
 "            the Subject: header <em>%(subject)s</em> to the mailing list\n"
@@ -1881,17 +1881,17 @@ msgstr ""
 "            您已经成功地取消了发送标题头部为 <em>%(subject)s</em> \n"
 "            的信息到 %(listname)s 这个邮件列表."
 
-#: Mailman/Cgi/confirm.py:683
+#: Mailman/Cgi/confirm.py:696
 msgid "Cancel held message posting"
 msgstr "取消对滞留信件的发送"
 
-#: Mailman/Cgi/confirm.py:708
+#: Mailman/Cgi/confirm.py:721
 msgid ""
 "The held message you were referred to has\n"
 "        already been handled by the list administrator."
 msgstr "提交给你的滞留信件已经由列表管理员处理了."
 
-#: Mailman/Cgi/confirm.py:722
+#: Mailman/Cgi/confirm.py:735
 msgid ""
 "Your confirmation is required in order to cancel the\n"
 "    posting of your message to the mailing list <em>%(listname)s</em>:\n"
@@ -1918,11 +1918,11 @@ msgstr ""
 "    <p>或者点击 <em>继续等待批准</em> 按钮,继续允许列表主持者批准或者拒绝信"
 "件."
 
-#: Mailman/Cgi/confirm.py:738
+#: Mailman/Cgi/confirm.py:751
 msgid "Cancel posting"
 msgstr "取消发送"
 
-#: Mailman/Cgi/confirm.py:750
+#: Mailman/Cgi/confirm.py:763
 msgid ""
 "You have canceled the re-enabling of your membership.  If\n"
 "    we continue to receive bounces from your address, it could be deleted "
@@ -1932,11 +1932,11 @@ msgstr ""
 "您已经取消重新设置您的成员资格有效. \n"
 "    如果我们持续从你的地址收到退信,你地址将被从列表中删除."
 
-#: Mailman/Cgi/confirm.py:780
+#: Mailman/Cgi/confirm.py:794
 msgid "Membership re-enabled."
 msgstr "成员重新有效"
 
-#: Mailman/Cgi/confirm.py:784
+#: Mailman/Cgi/confirm.py:798
 msgid ""
 "            You have successfully re-enabled your membership in the\n"
 "            %(listname)s mailing list.  You can now <a\n"
@@ -1947,11 +1947,11 @@ msgstr ""
 "           现在您可以 <a href=\"%(optionsurl)s\">访问您的成员选项页</a>.\n"
 "            "
 
-#: Mailman/Cgi/confirm.py:796
+#: Mailman/Cgi/confirm.py:810
 msgid "Re-enable mailing list membership"
 msgstr "重新设置邮件列表成员有效"
 
-#: Mailman/Cgi/confirm.py:813
+#: Mailman/Cgi/confirm.py:827
 msgid ""
 "We're sorry, but you have already been unsubscribed\n"
 "        from this mailing list.  To re-subscribe, please visit the\n"
@@ -1961,11 +1961,11 @@ msgstr ""
 "        如果您想要重新订阅，请访问\n"
 "        <a href=\"%(listinfourl)s\">列表信息页面</a>."
 
-#: Mailman/Cgi/confirm.py:828
+#: Mailman/Cgi/confirm.py:842
 msgid "<em>not available</em>"
 msgstr "<em>不可用</em>"
 
-#: Mailman/Cgi/confirm.py:832
+#: Mailman/Cgi/confirm.py:846
 msgid ""
 "Your membership in the %(realname)s mailing list is\n"
 "    currently disabled due to excessive bounces.  Your confirmation is\n"
@@ -2002,11 +2002,11 @@ msgstr ""
 "    或者点击<em>取消</em> 按钮 推迟重新设置有效您的成员资格.\n"
 "    "
 
-#: Mailman/Cgi/confirm.py:852
+#: Mailman/Cgi/confirm.py:866
 msgid "Re-enable membership"
 msgstr "重新设置成员资格为有效"
 
-#: Mailman/Cgi/confirm.py:853
+#: Mailman/Cgi/confirm.py:867
 msgid "Cancel"
 msgstr "取消"
 
@@ -2014,19 +2014,19 @@ msgstr "取消"
 msgid "Bad URL specification"
 msgstr "错误的URL细则"
 
-#: Mailman/Cgi/create.py:75 Mailman/Cgi/rmlist.py:189
+#: Mailman/Cgi/create.py:75 Mailman/Cgi/rmlist.py:196
 msgid "Return to the "
 msgstr "返回到"
 
-#: Mailman/Cgi/create.py:77 Mailman/Cgi/rmlist.py:191
+#: Mailman/Cgi/create.py:77 Mailman/Cgi/rmlist.py:198
 msgid "general list overview"
 msgstr "通用列表概览"
 
-#: Mailman/Cgi/create.py:78 Mailman/Cgi/rmlist.py:192
+#: Mailman/Cgi/create.py:78 Mailman/Cgi/rmlist.py:199
 msgid "<br>Return to the "
 msgstr "<br>返回到"
 
-#: Mailman/Cgi/create.py:80 Mailman/Cgi/rmlist.py:194
+#: Mailman/Cgi/create.py:80 Mailman/Cgi/rmlist.py:201
 msgid "administrative list overview"
 msgstr "管理列表概览"
 
@@ -2061,27 +2061,27 @@ msgstr "初始列表密码不匹配"
 msgid "The list password cannot be empty<!-- ignore -->"
 msgstr "列表密码不能为空<!-- ignore -->"
 
-#: Mailman/Cgi/create.py:167
+#: Mailman/Cgi/create.py:174
 msgid "You are not authorized to create new mailing lists"
 msgstr "您没有创建新邮件列表的权限"
 
-#: Mailman/Cgi/create.py:175
+#: Mailman/Cgi/create.py:182
 msgid "Unknown virtual host: %(safehostname)s"
 msgstr "未知的虚拟主机: %(safehostname)s "
 
-#: Mailman/Cgi/create.py:211 bin/newlist:219
+#: Mailman/Cgi/create.py:218 bin/newlist:219
 msgid "Bad owner email address: %(s)s"
 msgstr "错误的拥有者邮件地址:  %(s)s "
 
-#: Mailman/Cgi/create.py:216 bin/newlist:182 bin/newlist:223
+#: Mailman/Cgi/create.py:223 bin/newlist:182 bin/newlist:223
 msgid "List already exists: %(listname)s"
 msgstr "列表已经存在: %(listname)s"
 
-#: Mailman/Cgi/create.py:224 bin/newlist:217
+#: Mailman/Cgi/create.py:231 bin/newlist:217
 msgid "Illegal list name: %(s)s"
 msgstr "非法的列表名称: %(s)s"
 
-#: Mailman/Cgi/create.py:229
+#: Mailman/Cgi/create.py:236
 msgid ""
 "Some unknown error occurred while creating the list.\n"
 "                Please contact the site administrator for assistance."
@@ -2089,15 +2089,15 @@ msgstr ""
 "在创建列表的时候发生了未知的错误.\n"
 "                请联系站点管理员以获得帮助."
 
-#: Mailman/Cgi/create.py:266 bin/newlist:265
+#: Mailman/Cgi/create.py:273 bin/newlist:265
 msgid "Your new mailing list: %(listname)s"
 msgstr "您新建的邮件列表: %(listname)s"
 
-#: Mailman/Cgi/create.py:275
+#: Mailman/Cgi/create.py:282
 msgid "Mailing list creation results"
 msgstr "创建邮件列表的结果"
 
-#: Mailman/Cgi/create.py:281
+#: Mailman/Cgi/create.py:288
 msgid ""
 "You have successfully created the mailing list\n"
 "    <b>%(listname)s</b> and notification has been sent to the list owner\n"
@@ -2107,28 +2107,28 @@ msgstr ""
 "    同时,通知已经发送到给了列表拥有者 <b>%(owner)s</b>.\n"
 "    现在您可以:"
 
-#: Mailman/Cgi/create.py:285
+#: Mailman/Cgi/create.py:292
 msgid "Visit the list's info page"
 msgstr "访问列表信息页面"
 
-#: Mailman/Cgi/create.py:286
+#: Mailman/Cgi/create.py:293
 msgid "Visit the list's admin page"
 msgstr "访问列表管理页面"
 
-#: Mailman/Cgi/create.py:287
+#: Mailman/Cgi/create.py:294
 msgid "Create another list"
 msgstr "创建另一个列表"
 
-#: Mailman/Cgi/create.py:305
+#: Mailman/Cgi/create.py:312
 msgid "Create a %(hostname)s Mailing List"
 msgstr "创建一个 %(hostname)s 邮件列表"
 
-#: Mailman/Cgi/create.py:314 Mailman/Cgi/rmlist.py:212
+#: Mailman/Cgi/create.py:321 Mailman/Cgi/rmlist.py:219
 #: Mailman/Gui/Bounce.py:196 Mailman/htmlformat.py:360
 msgid "Error: "
 msgstr "错误:"
 
-#: Mailman/Cgi/create.py:316
+#: Mailman/Cgi/create.py:323
 msgid ""
 "You can create a new mailing list by entering the\n"
 "    relevant information into the form below.  The name of the mailing list\n"
@@ -2172,35 +2172,35 @@ msgstr ""
 "    同样可以作为认证信息.\n"
 "    "
 
-#: Mailman/Cgi/create.py:342
+#: Mailman/Cgi/create.py:349
 msgid "List Identity"
 msgstr "列表身份"
 
-#: Mailman/Cgi/create.py:347
+#: Mailman/Cgi/create.py:354
 msgid "Name of list:"
 msgstr "列表名称:"
 
-#: Mailman/Cgi/create.py:354
+#: Mailman/Cgi/create.py:361
 msgid "Initial list owner address:"
 msgstr "初始的列表拥有者地址:"
 
-#: Mailman/Cgi/create.py:363
+#: Mailman/Cgi/create.py:370
 msgid "Auto-generate initial list password?"
 msgstr "自动生成列表初始密码吗?"
 
-#: Mailman/Cgi/create.py:371
+#: Mailman/Cgi/create.py:378
 msgid "Initial list password:"
 msgstr "初始列表密码:"
 
-#: Mailman/Cgi/create.py:377
+#: Mailman/Cgi/create.py:384
 msgid "Confirm initial password:"
 msgstr "确认初始密码:"
 
-#: Mailman/Cgi/create.py:392
+#: Mailman/Cgi/create.py:399
 msgid "List Characteristics"
 msgstr "列表特性"
 
-#: Mailman/Cgi/create.py:396
+#: Mailman/Cgi/create.py:403
 msgid ""
 "Should new members be quarantined before they\n"
 "    are allowed to post unmoderated to this list?  Answer <em>Yes</em> to "
@@ -2211,7 +2211,7 @@ msgstr ""
 "    回答 <em>是</em> 会将\n"
 "    新成员发送的信息滞留起来,等待主持者的批准(默认)."
 
-#: Mailman/Cgi/create.py:425
+#: Mailman/Cgi/create.py:432
 msgid ""
 "Initial list of supported languages.  <p>Note that if you do not\n"
 "        select at least one initial language, the list will use the server\n"
@@ -2221,19 +2221,19 @@ msgstr ""
 "        没有选择初始语言, 邮件列表将采用服务器\n"
 "        默认的语言 %(deflang)s"
 
-#: Mailman/Cgi/create.py:436
+#: Mailman/Cgi/create.py:443
 msgid "Send \"list created\" email to list owner?"
 msgstr "向列表拥有者发送\"列表已创建\"的信件吗?"
 
-#: Mailman/Cgi/create.py:445
+#: Mailman/Cgi/create.py:452
 msgid "List creator's (authentication) password:"
 msgstr "列出创建者的(认证)密码:"
 
-#: Mailman/Cgi/create.py:450
+#: Mailman/Cgi/create.py:457
 msgid "Create List"
 msgstr "创建列表"
 
-#: Mailman/Cgi/create.py:451
+#: Mailman/Cgi/create.py:458
 msgid "Clear Form"
 msgstr "清除表格"
 
@@ -2436,16 +2436,22 @@ msgstr ""
 " 以找到您的列表管理接口.\n"
 "         <p>如果您在使用列表时碰到的麻烦,请与我们联系 "
 
-#: Mailman/Cgi/listinfo.py:235
+#: Mailman/Cgi/listinfo.py:223
+msgid ""
+"Please answer the following question to prove that\n"
+"                    you are not a bot:"
+msgstr ""
+
+#: Mailman/Cgi/listinfo.py:253
 msgid "Edit Options"
 msgstr "编辑选项"
 
-#: Mailman/Cgi/listinfo.py:242 Mailman/Cgi/options.py:971
+#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:972
 #: Mailman/Cgi/roster.py:137
 msgid "View this page in"
 msgstr "选择本页所用的语言："
 
-#: Mailman/Cgi/listinfo.py:248
+#: Mailman/Cgi/listinfo.py:266
 msgid "This form requires JavaScript."
 msgstr ""
 
@@ -2462,79 +2468,79 @@ msgstr ""
 msgid "No address given"
 msgstr "没有给出地址"
 
-#: Mailman/Cgi/options.py:175
+#: Mailman/Cgi/options.py:176
 msgid "Illegal Email Address: %(safeuser)s"
 msgstr "非法的邮件地址: %(safeuser)s"
 
-#: Mailman/Cgi/options.py:182 Mailman/Cgi/options.py:236
-#: Mailman/Cgi/options.py:260 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
+#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
 msgid "No such member: %(safeuser)s."
 msgstr "不存在 %(safeuser)s 这个成员."
 
-#: Mailman/Cgi/options.py:207
+#: Mailman/Cgi/options.py:208
 #, fuzzy
 msgid "If you are a list member, a confirmation email has been sent."
 msgstr "确认邮件已经发送"
 
-#: Mailman/Cgi/options.py:208
+#: Mailman/Cgi/options.py:209
 #, fuzzy
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
 "             forwarded to the list administrator for approval."
 msgstr "您的取消订阅的请求已经转发给列表管理员,等待批准."
 
-#: Mailman/Cgi/options.py:250
+#: Mailman/Cgi/options.py:251
 #, fuzzy
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
 msgstr "您的密码提示已经发送到您的电子信箱了"
 
-#: Mailman/Cgi/options.py:293
+#: Mailman/Cgi/options.py:294
 msgid "Authentication failed."
 msgstr "认证失败"
 
-#: Mailman/Cgi/options.py:361
+#: Mailman/Cgi/options.py:362
 msgid "A reminder of your password has been emailed to you."
 msgstr "您的密码提示已经发送到您的电子信箱了"
 
-#: Mailman/Cgi/options.py:368
+#: Mailman/Cgi/options.py:369
 msgid ""
 "The list administrator may not view the other\n"
 "            subscriptions for this user."
 msgstr ""
 
-#: Mailman/Cgi/options.py:369 Mailman/Cgi/options.py:418
-#: Mailman/Cgi/options.py:546 Mailman/Cgi/options.py:771
+#: Mailman/Cgi/options.py:370 Mailman/Cgi/options.py:419
+#: Mailman/Cgi/options.py:547 Mailman/Cgi/options.py:772
 msgid "Note: "
 msgstr ""
 
-#: Mailman/Cgi/options.py:374
+#: Mailman/Cgi/options.py:375
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
 msgstr "为 %(safeuser)s 列出在 %(hostname)s 上的订阅"
 
-#: Mailman/Cgi/options.py:377
+#: Mailman/Cgi/options.py:378
 msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
 msgstr "点击连接以访问您请求的邮件列表的选项页面"
 
-#: Mailman/Cgi/options.py:415
+#: Mailman/Cgi/options.py:416
 msgid ""
 "The list administrator may not change the names\n"
 "            or addresses for this user's other subscriptions.  However, the\n"
 "            subscription for this mailing list has been changed."
 msgstr ""
 
-#: Mailman/Cgi/options.py:438
+#: Mailman/Cgi/options.py:439
 msgid "Addresses did not match!"
 msgstr "地址不匹配!"
 
-#: Mailman/Cgi/options.py:443
+#: Mailman/Cgi/options.py:444
 msgid "You are already using that email address"
 msgstr "您已经使用了那个邮件地址"
 
-#: Mailman/Cgi/options.py:455
+#: Mailman/Cgi/options.py:456
 msgid ""
 "The new address you requested %(newaddr)s is already a member of the\n"
 "%(listname)s mailing list, however you have also requested a global change "
@@ -2546,31 +2552,31 @@ msgstr ""
 "但是您仍然请求对这个地址进行全局的修改.\n"
 "确认后, 其他包含 %(safeuser)s 这个地址的邮件列表将被修改."
 
-#: Mailman/Cgi/options.py:464
+#: Mailman/Cgi/options.py:465
 msgid "The new address is already a member: %(newaddr)s"
 msgstr "新的地址 %(newaddr)s 已经是成员了"
 
-#: Mailman/Cgi/options.py:470
+#: Mailman/Cgi/options.py:471
 msgid "Addresses may not be blank"
 msgstr "地址不能为空"
 
-#: Mailman/Cgi/options.py:484
+#: Mailman/Cgi/options.py:485
 msgid "A confirmation message has been sent to %(newaddr)s. "
 msgstr "确认信息已经发送到了 %(newaddr)s ."
 
-#: Mailman/Cgi/options.py:493
+#: Mailman/Cgi/options.py:494
 msgid "Bad email address provided"
 msgstr "提供了错误的邮件地址"
 
-#: Mailman/Cgi/options.py:495
+#: Mailman/Cgi/options.py:496
 msgid "Illegal email address provided"
 msgstr "提供了非法的邮件地址"
 
-#: Mailman/Cgi/options.py:497
+#: Mailman/Cgi/options.py:498
 msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s 已经是列表的成员."
 
-#: Mailman/Cgi/options.py:500
+#: Mailman/Cgi/options.py:501
 #, fuzzy
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
@@ -2580,11 +2586,11 @@ msgstr ""
 "您提供的邮件地址被禁止。如果您觉得这些限制是错误的，\n"
 "请联系列表管理员 %(owneraddr)s"
 
-#: Mailman/Cgi/options.py:511
+#: Mailman/Cgi/options.py:512
 msgid "Member name successfully changed. "
 msgstr "成员姓名修改成功"
 
-#: Mailman/Cgi/options.py:521
+#: Mailman/Cgi/options.py:522
 #, fuzzy
 msgid ""
 "The list administrator may not change the\n"
@@ -2593,15 +2599,15 @@ msgstr ""
 "列表管理员已经禁止了此列表的非摘要投递功能，所以您的\n"
 "            投递选项没有被设置，但是您的其他选项都已成功地设置。"
 
-#: Mailman/Cgi/options.py:530
+#: Mailman/Cgi/options.py:531
 msgid "Passwords may not be blank"
 msgstr "密码不能为空"
 
-#: Mailman/Cgi/options.py:535
+#: Mailman/Cgi/options.py:536
 msgid "Passwords did not match!"
 msgstr "密码不匹配!"
 
-#: Mailman/Cgi/options.py:543
+#: Mailman/Cgi/options.py:544
 #, fuzzy
 msgid ""
 "The list administrator may not change the\n"
@@ -2611,12 +2617,12 @@ msgstr ""
 "列表管理员已经禁止了此列表的非摘要投递功能，所以您的\n"
 "            投递选项没有被设置，但是您的其他选项都已成功地设置。"
 
-#: Mailman/Cgi/options.py:560 Mailman/Commands/cmd_password.py:83
+#: Mailman/Cgi/options.py:561 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
 msgid "Password successfully changed."
 msgstr "密码修改成功"
 
-#: Mailman/Cgi/options.py:569
+#: Mailman/Cgi/options.py:570
 msgid ""
 "You must confirm your unsubscription request by turning\n"
 "                on the checkbox below the <em>Unsubscribe</em> button.  You\n"
@@ -2625,16 +2631,16 @@ msgstr ""
 "为了确认您取消订阅的请求,您必须选中复选框中 <em>取消订阅</em> \n"
 "                这一项.  您还没有取消订阅!"
 
-#: Mailman/Cgi/options.py:590
+#: Mailman/Cgi/options.py:591
 #, fuzzy
 msgid "via the member options page"
 msgstr "%(realname)s 列表： 成员选项登录页 "
 
-#: Mailman/Cgi/options.py:610
+#: Mailman/Cgi/options.py:611
 msgid "Unsubscription results"
 msgstr "退订结果"
 
-#: Mailman/Cgi/options.py:614
+#: Mailman/Cgi/options.py:615
 msgid ""
 "Your unsubscription request has been received and\n"
 "            forwarded on to the list moderators for approval.  You will\n"
@@ -2644,7 +2650,7 @@ msgstr ""
 "您的退订请求已被收到并转发给列表管理员以待其核准。\n"
 "            管理员作出决定后您将受到一封邮件通知。"
 
-#: Mailman/Cgi/options.py:619
+#: Mailman/Cgi/options.py:620
 msgid ""
 "You have been successfully unsubscribed from the\n"
 "            mailing list %(fqdn_listname)s.  If you were receiving digest\n"
@@ -2658,7 +2664,7 @@ msgstr ""
 "的\n"
 "            问题，请联系列表管理员： %(owneraddr)s。"
 
-#: Mailman/Cgi/options.py:768
+#: Mailman/Cgi/options.py:769
 msgid ""
 "The list administrator may not change the\n"
 "                options for this user's other subscriptions.  However the\n"
@@ -2666,7 +2672,7 @@ msgid ""
 "                changed."
 msgstr ""
 
-#: Mailman/Cgi/options.py:778
+#: Mailman/Cgi/options.py:779
 msgid ""
 "The list administrator has disabled digest delivery for\n"
 "            this list, so your delivery option has not been set.  However "
@@ -2676,7 +2682,7 @@ msgstr ""
 "列表管理员已经禁止了此列表的摘要投递功能，所以您的\n"
 "            投递选项没有被设置，但是您的其他选项都已成功地设置。"
 
-#: Mailman/Cgi/options.py:782
+#: Mailman/Cgi/options.py:783
 msgid ""
 "The list administrator has disabled non-digest delivery\n"
 "            for this list, so your delivery option has not been set.  "
@@ -2686,63 +2692,63 @@ msgstr ""
 "列表管理员已经禁止了此列表的非摘要投递功能，所以您的\n"
 "            投递选项没有被设置，但是您的其他选项都已成功地设置。"
 
-#: Mailman/Cgi/options.py:786
+#: Mailman/Cgi/options.py:787
 msgid "You have successfully set your options."
 msgstr "您已经成功设置您的选项。"
 
-#: Mailman/Cgi/options.py:789
+#: Mailman/Cgi/options.py:790
 msgid "You may get one last digest."
 msgstr "您可能会收到最后一封摘要。"
 
-#: Mailman/Cgi/options.py:861
+#: Mailman/Cgi/options.py:862
 msgid "<em>Yes, I really want to unsubscribe</em>"
 msgstr "<em>是的，我确实想要退订</em>"
 
-#: Mailman/Cgi/options.py:865
+#: Mailman/Cgi/options.py:866
 msgid "Change My Password"
 msgstr "修改我的口令"
 
-#: Mailman/Cgi/options.py:868
+#: Mailman/Cgi/options.py:869
 msgid "List my other subscriptions"
 msgstr "列出我的所有订阅"
 
-#: Mailman/Cgi/options.py:875
+#: Mailman/Cgi/options.py:876
 msgid "Email My Password To Me"
 msgstr "把我的口令邮寄给我"
 
-#: Mailman/Cgi/options.py:877
+#: Mailman/Cgi/options.py:878
 msgid "password"
 msgstr "口令"
 
-#: Mailman/Cgi/options.py:879
+#: Mailman/Cgi/options.py:880
 msgid "Log out"
 msgstr "退出登录"
 
-#: Mailman/Cgi/options.py:881
+#: Mailman/Cgi/options.py:882
 msgid "Submit My Changes"
 msgstr "提交我的修改"
 
-#: Mailman/Cgi/options.py:893
+#: Mailman/Cgi/options.py:894
 msgid "days"
 msgstr "天"
 
-#: Mailman/Cgi/options.py:895
+#: Mailman/Cgi/options.py:896
 msgid "day"
 msgstr "天"
 
-#: Mailman/Cgi/options.py:896
+#: Mailman/Cgi/options.py:897
 msgid "%(days)d %(units)s"
 msgstr "%(days)d %(units)s"
 
-#: Mailman/Cgi/options.py:902
+#: Mailman/Cgi/options.py:903
 msgid "Change My Address and Name"
 msgstr "修改我的地址和姓名"
 
-#: Mailman/Cgi/options.py:928
+#: Mailman/Cgi/options.py:929
 msgid "<em>No topics defined</em>"
 msgstr "<em>没有已定义的主题</em>"
 
-#: Mailman/Cgi/options.py:936
+#: Mailman/Cgi/options.py:937
 msgid ""
 "\n"
 "You are subscribed to this list with the case-preserved address\n"
@@ -2752,19 +2758,19 @@ msgstr ""
 "您使用大小写相关的地址订阅了此列表\n"
 "<em>%(cpuser)s</em>."
 
-#: Mailman/Cgi/options.py:952
+#: Mailman/Cgi/options.py:953
 msgid "%(realname)s list: member options login page"
 msgstr "%(realname)s 列表： 成员选项登录页 "
 
-#: Mailman/Cgi/options.py:953
+#: Mailman/Cgi/options.py:954
 msgid "email address and "
 msgstr "邮件地址和"
 
-#: Mailman/Cgi/options.py:956
+#: Mailman/Cgi/options.py:957
 msgid "%(realname)s list: member options for user %(safeuser)s"
 msgstr "%(realname)s 列表： 用户 %(safeuser)s 的成员选项信息"
 
-#: Mailman/Cgi/options.py:982
+#: Mailman/Cgi/options.py:983
 msgid ""
 "In order to change your membership option, you must\n"
 "    first log in by giving your %(extra)smembership password in the section\n"
@@ -2792,19 +2798,19 @@ msgstr ""
 "    否则您做的所有修改都将不起作用。\n"
 "    "
 
-#: Mailman/Cgi/options.py:996
+#: Mailman/Cgi/options.py:997
 msgid "Email address:"
 msgstr "邮件地址："
 
-#: Mailman/Cgi/options.py:1000
+#: Mailman/Cgi/options.py:1001
 msgid "Password:"
 msgstr "口令："
 
-#: Mailman/Cgi/options.py:1002
+#: Mailman/Cgi/options.py:1003
 msgid "Log in"
 msgstr "登录"
 
-#: Mailman/Cgi/options.py:1010
+#: Mailman/Cgi/options.py:1011
 msgid ""
 "By clicking on the <em>Unsubscribe</em> button, a\n"
 "    confirmation message will be emailed to you.  This message will have a\n"
@@ -2816,37 +2822,37 @@ msgstr ""
 "    您需要点击确认函中的一个链接来完成整个退订过程(您也可以通过邮件来确认，\n"
 "    请参考确认函中的具体信息)。"
 
-#: Mailman/Cgi/options.py:1018
+#: Mailman/Cgi/options.py:1019
 msgid "Password reminder"
 msgstr "口令提示函"
 
-#: Mailman/Cgi/options.py:1022
+#: Mailman/Cgi/options.py:1023
 msgid ""
 "By clicking on the <em>Remind</em> button, your\n"
 "    password will be emailed to you."
 msgstr "通过点击<em>提示</em>按钮，您的口令将被邮寄给您。"
 
-#: Mailman/Cgi/options.py:1025
+#: Mailman/Cgi/options.py:1026
 msgid "Remind"
 msgstr "提示"
 
-#: Mailman/Cgi/options.py:1125 Mailman/ListAdmin.py:227
+#: Mailman/Cgi/options.py:1126 Mailman/ListAdmin.py:227
 msgid "<missing>"
 msgstr "<丢失>"
 
-#: Mailman/Cgi/options.py:1136
+#: Mailman/Cgi/options.py:1137
 msgid "Requested topic is not valid: %(topicname)s"
 msgstr "请求的主题不存在: %(topicname)s"
 
-#: Mailman/Cgi/options.py:1141
+#: Mailman/Cgi/options.py:1142
 msgid "Topic filter details"
 msgstr "主题过滤器详情"
 
-#: Mailman/Cgi/options.py:1144
+#: Mailman/Cgi/options.py:1145
 msgid "Name:"
 msgstr "名字："
 
-#: Mailman/Cgi/options.py:1146
+#: Mailman/Cgi/options.py:1147
 msgid "Pattern (as regexp):"
 msgstr "模式(正则表达式)"
 
@@ -2891,15 +2897,15 @@ msgstr "没有此列表： %(listname)s"
 msgid "You're being a sneaky list owner!"
 msgstr "您将成为一个隐蔽的列表属主！"
 
-#: Mailman/Cgi/rmlist.py:132
+#: Mailman/Cgi/rmlist.py:139
 msgid "You are not authorized to delete this mailing list"
 msgstr "您没有删除此邮件列表的授权"
 
-#: Mailman/Cgi/rmlist.py:173
+#: Mailman/Cgi/rmlist.py:180
 msgid "Mailing list deletion results"
 msgstr "邮件列表删除结果"
 
-#: Mailman/Cgi/rmlist.py:180
+#: Mailman/Cgi/rmlist.py:187
 msgid ""
 "You have successfully deleted the mailing list\n"
 "    <b>%(listname)s</b>."
@@ -2907,7 +2913,7 @@ msgstr ""
 "您成功地删除了邮件列表\n"
 "    <b>%(listname)s</b>."
 
-#: Mailman/Cgi/rmlist.py:184
+#: Mailman/Cgi/rmlist.py:191
 msgid ""
 "There were some problems deleting the mailing list\n"
 "        <b>%(listname)s</b>.  Contact your site administrator at "
@@ -2917,16 +2923,16 @@ msgstr ""
 "在删除邮件列表<b>%(listname)s</b>时出现了一些问题。\n"
 "        联系您的站点管理员 %(sitelist)s 以获取详情。"
 
-#: Mailman/Cgi/rmlist.py:201
+#: Mailman/Cgi/rmlist.py:208
 msgid "Permanently remove mailing list <em>%(realname)s</em>"
 msgstr "永久删除邮件列表<em>%(realname)s</em>"
 
-#: Mailman/Cgi/rmlist.py:202
+#: Mailman/Cgi/rmlist.py:209
 #, fuzzy
 msgid "Permanently remove mailing list %(realname)s"
 msgstr "永久删除邮件列表<em>%(realname)s</em>"
 
-#: Mailman/Cgi/rmlist.py:215
+#: Mailman/Cgi/rmlist.py:222
 msgid ""
 "This page allows you as the list owner, to permanently\n"
 "    remove this mailing list from the system.  <strong>This action is not\n"
@@ -2962,19 +2968,19 @@ msgstr ""
 "    <p>为安全起见，您将被要求再次确认列表管理口令。\n"
 "    "
 
-#: Mailman/Cgi/rmlist.py:236
+#: Mailman/Cgi/rmlist.py:243
 msgid "List password:"
 msgstr "列表管理口令："
 
-#: Mailman/Cgi/rmlist.py:240
+#: Mailman/Cgi/rmlist.py:247
 msgid "Also delete archives?"
 msgstr "同时删除邮件归档？"
 
-#: Mailman/Cgi/rmlist.py:248
+#: Mailman/Cgi/rmlist.py:255
 msgid "<b>Cancel</b> and return to list administration"
 msgstr "<b>取消</b>并返回到列表管理页"
 
-#: Mailman/Cgi/rmlist.py:251
+#: Mailman/Cgi/rmlist.py:258
 msgid "Delete this list"
 msgstr "删除此列表"
 
@@ -2998,39 +3004,43 @@ msgstr ""
 msgid "reCAPTCHA could not be validated: %(e_reason)s"
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:181
+#: Mailman/Cgi/subscribe.py:183
 msgid "The form is too old.  Please GET it again."
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:184
+#: Mailman/Cgi/subscribe.py:186
 msgid "Please take a few seconds to fill out the form before submitting it."
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:187
+#: Mailman/Cgi/subscribe.py:189
 msgid "The hidden token didn't match.  Did your IP change?"
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:190
+#: Mailman/Cgi/subscribe.py:192
 msgid "There was no hidden token in your submission or it was corrupted."
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:191
+#: Mailman/Cgi/subscribe.py:193
 msgid "You must GET the form before submitting it."
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:195
+#: Mailman/Cgi/subscribe.py:199
+msgid "This was not the right answer to the CAPTCHA question."
+msgstr ""
+
+#: Mailman/Cgi/subscribe.py:204
 msgid "You may not subscribe a list to itself!"
 msgstr "您不能让一个邮件列表订阅它自身！"
 
-#: Mailman/Cgi/subscribe.py:203
+#: Mailman/Cgi/subscribe.py:212
 msgid "If you supply a password, you must confirm it."
 msgstr "如果您提供一个口令，您必须对它进行确认。"
 
-#: Mailman/Cgi/subscribe.py:205
+#: Mailman/Cgi/subscribe.py:214
 msgid "Your passwords did not match."
 msgstr "您的口令不匹配。"
 
-#: Mailman/Cgi/subscribe.py:239
+#: Mailman/Cgi/subscribe.py:248
 msgid ""
 "Your subscription request has been received, and will soon be acted upon.\n"
 "Depending on the configuration of this mailing list, your subscription "
@@ -3043,7 +3053,7 @@ msgstr ""
 "可能需要您通过邮件进行确认，或者需要由列表管理员批准。如果需要进行确认的\n"
 "话，很快您就将收到一封确认函，确认函里将包含更进一步的指导信息。"
 
-#: Mailman/Cgi/subscribe.py:253
+#: Mailman/Cgi/subscribe.py:262
 msgid ""
 "The email address you supplied is banned from this\n"
 "        mailing list.  If you think this restriction is erroneous, please\n"
@@ -3052,19 +3062,19 @@ msgstr ""
 "您提供的邮件地址被此邮件列表禁止了。若您认为这是错误的，请联系列表管理员\n"
 "         %(listowner)s。"
 
-#: Mailman/Cgi/subscribe.py:257
+#: Mailman/Cgi/subscribe.py:266
 msgid ""
 "The email address you supplied is not valid.  (E.g. it must contain an\n"
 "`@'.)"
 msgstr "您提供的邮件地址是无效的。(例如，它必须包含一个`@'。)"
 
-#: Mailman/Cgi/subscribe.py:261
+#: Mailman/Cgi/subscribe.py:270
 msgid ""
 "Your subscription is not allowed because the email address you gave is\n"
 "insecure."
 msgstr "您的订阅请求被拒绝了，因为您提供的邮件地址是不可靠的。"
 
-#: Mailman/Cgi/subscribe.py:269
+#: Mailman/Cgi/subscribe.py:278
 msgid ""
 "Confirmation from your email address is required, to prevent anyone from\n"
 "subscribing you without permission.  Instructions are being sent to you at\n"
@@ -3075,7 +3085,7 @@ msgstr ""
 "认函。将会有一些指导信息被投递到您的信箱 %(email)s 中。请注意，除非您确认了\n"
 "您的订阅请求，否则您的订阅将不会生效。"
 
-#: Mailman/Cgi/subscribe.py:281
+#: Mailman/Cgi/subscribe.py:290
 msgid ""
 "Your subscription request was deferred because %(x)s.  Your request has "
 "been\n"
@@ -3087,15 +3097,15 @@ msgstr ""
 "理\n"
 "对您的请求作出决定后，您将会收到邮件通知。"
 
-#: Mailman/Cgi/subscribe.py:288 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "您已经订阅过了。"
 
-#: Mailman/Cgi/subscribe.py:302
+#: Mailman/Cgi/subscribe.py:311
 msgid "Mailman privacy alert"
 msgstr "Mailman内部警告"
 
-#: Mailman/Cgi/subscribe.py:303
+#: Mailman/Cgi/subscribe.py:312
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3124,15 +3134,15 @@ msgstr ""
 "私，\n"
 "请不要拘束，发送一封邮件到 %(listowner)s 告诉列表管理员。\n"
 
-#: Mailman/Cgi/subscribe.py:322
+#: Mailman/Cgi/subscribe.py:331
 msgid "This list does not support digest delivery."
 msgstr "此列表不支持定期投递摘要。"
 
-#: Mailman/Cgi/subscribe.py:324
+#: Mailman/Cgi/subscribe.py:333
 msgid "This list only supports digest delivery."
 msgstr "此列表仅支持投递定期摘要。"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:340
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "您已经成功地订阅了 %(realname)s 邮件列表。"
 
@@ -3821,166 +3831,166 @@ msgstr "没订阅摘要(普通的)的成员:"
 msgid "Digest members:"
 msgstr "订阅了摘要的成员:"
 
-#: Mailman/Defaults.py:1751
+#: Mailman/Defaults.py:1783
 msgid "Arabic"
 msgstr ""
 
-#: Mailman/Defaults.py:1752
+#: Mailman/Defaults.py:1784
 #, fuzzy
 msgid "Asturian"
 msgstr "爱沙尼亚语"
 
-#: Mailman/Defaults.py:1753
+#: Mailman/Defaults.py:1785
 msgid "Catalan"
 msgstr "(西班牙)加泰罗尼亚语"
 
-#: Mailman/Defaults.py:1754
+#: Mailman/Defaults.py:1786
 msgid "Czech"
 msgstr "捷克语"
 
-#: Mailman/Defaults.py:1755
+#: Mailman/Defaults.py:1787
 msgid "Danish"
 msgstr "丹麦语"
 
-#: Mailman/Defaults.py:1756
+#: Mailman/Defaults.py:1788
 msgid "German"
 msgstr "德语"
 
-#: Mailman/Defaults.py:1757
+#: Mailman/Defaults.py:1789
 msgid "English (USA)"
 msgstr "英语(美式)"
 
-#: Mailman/Defaults.py:1758
+#: Mailman/Defaults.py:1790
 msgid "Esperanto"
 msgstr ""
 
-#: Mailman/Defaults.py:1759
+#: Mailman/Defaults.py:1791
 msgid "Spanish (Spain)"
 msgstr "西班牙语(西班牙)"
 
-#: Mailman/Defaults.py:1760
+#: Mailman/Defaults.py:1792
 msgid "Estonian"
 msgstr "爱沙尼亚语"
 
-#: Mailman/Defaults.py:1761
+#: Mailman/Defaults.py:1793
 msgid "Euskara"
 msgstr "喀拉海语"
 
-#: Mailman/Defaults.py:1762
+#: Mailman/Defaults.py:1794
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1763
+#: Mailman/Defaults.py:1795
 msgid "Finnish"
 msgstr "芬兰语"
 
-#: Mailman/Defaults.py:1764
+#: Mailman/Defaults.py:1796
 msgid "French"
 msgstr "法语"
 
-#: Mailman/Defaults.py:1765
+#: Mailman/Defaults.py:1797
 #, fuzzy
 msgid "Galician"
 msgstr "意大利语"
 
-#: Mailman/Defaults.py:1766
+#: Mailman/Defaults.py:1798
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1767
+#: Mailman/Defaults.py:1799
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1768
+#: Mailman/Defaults.py:1800
 msgid "Croatian"
 msgstr "克罗地亚语"
 
-#: Mailman/Defaults.py:1769
+#: Mailman/Defaults.py:1801
 msgid "Hungarian"
 msgstr "匈牙利语"
 
-#: Mailman/Defaults.py:1770
+#: Mailman/Defaults.py:1802
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1771
+#: Mailman/Defaults.py:1803
 msgid "Italian"
 msgstr "意大利语"
 
-#: Mailman/Defaults.py:1772
+#: Mailman/Defaults.py:1804
 msgid "Japanese"
 msgstr "日语"
 
-#: Mailman/Defaults.py:1773
+#: Mailman/Defaults.py:1805
 msgid "Korean"
 msgstr "韩国语"
 
-#: Mailman/Defaults.py:1774
+#: Mailman/Defaults.py:1806
 msgid "Lithuanian"
 msgstr "立陶宛语"
 
-#: Mailman/Defaults.py:1775
+#: Mailman/Defaults.py:1807
 msgid "Dutch"
 msgstr "荷兰语"
 
-#: Mailman/Defaults.py:1776
+#: Mailman/Defaults.py:1808
 msgid "Norwegian"
 msgstr "挪威语"
 
-#: Mailman/Defaults.py:1777
+#: Mailman/Defaults.py:1809
 msgid "Polish"
 msgstr "波兰语"
 
-#: Mailman/Defaults.py:1778
+#: Mailman/Defaults.py:1810
 msgid "Portuguese"
 msgstr "葡萄牙语"
 
-#: Mailman/Defaults.py:1779
+#: Mailman/Defaults.py:1811
 msgid "Portuguese (Brazil)"
 msgstr "葡萄牙语(巴西)"
 
-#: Mailman/Defaults.py:1780
+#: Mailman/Defaults.py:1812
 msgid "Romanian"
 msgstr "罗马尼亚语"
 
-#: Mailman/Defaults.py:1781
+#: Mailman/Defaults.py:1813
 msgid "Russian"
 msgstr "俄语"
 
-#: Mailman/Defaults.py:1782
+#: Mailman/Defaults.py:1814
 #, fuzzy
 msgid "Slovak"
 msgstr "斯洛文尼亚语"
 
-#: Mailman/Defaults.py:1783
+#: Mailman/Defaults.py:1815
 msgid "Slovenian"
 msgstr "斯洛文尼亚语"
 
-#: Mailman/Defaults.py:1784
+#: Mailman/Defaults.py:1816
 msgid "Serbian"
 msgstr "塞尔维亚语"
 
-#: Mailman/Defaults.py:1785
+#: Mailman/Defaults.py:1817
 msgid "Swedish"
 msgstr "瑞典语"
 
-#: Mailman/Defaults.py:1786
+#: Mailman/Defaults.py:1818
 msgid "Turkish"
 msgstr "土耳其语"
 
-#: Mailman/Defaults.py:1787
+#: Mailman/Defaults.py:1819
 msgid "Ukrainian"
 msgstr "乌克兰语"
 
-#: Mailman/Defaults.py:1788
+#: Mailman/Defaults.py:1820
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1789
+#: Mailman/Defaults.py:1821
 msgid "Chinese (China)"
 msgstr "中文（中国）"
 
-#: Mailman/Defaults.py:1790
+#: Mailman/Defaults.py:1822
 msgid "Chinese (Taiwan)"
 msgstr "中文（台湾）"
 
@@ -6793,6 +6803,39 @@ msgstr ""
 "             >退信通知</a>中的文本。"
 
 #: Mailman/Gui/Privacy.py:360
+#, fuzzy
+msgid ""
+"List of addresses (or regexps) whose posts should always apply\n"
+"             <a href=\"?VARHELP=privacy/sender/dmarc_moderation_action\"\n"
+"             >dmarc_moderation_action</a> \n"
+"             regardless of any domain specific DMARC Policy."
+msgstr ""
+"应当被包含在<a href=\"?VARHELP/privacy/sender/member_moderation_action\"\n"
+"             >退信通知</a>中的文本。"
+
+#: Mailman/Gui/Privacy.py:365
+#, fuzzy
+msgid ""
+"Postings from any of these addresses will automatically\n"
+"             apply any DMARC action mitigation.  This can be utilized to\n"
+"             automatically wrap or munge postings from known addresses or\n"
+"             domains that might have policies rejecting external mail From:\n"
+"             themselves.\n"
+"\n"
+"             <p>Add member addresses one per line; start the line with a ^\n"
+"             character to designate a regular expression match."
+msgstr ""
+"这些非成员的信件将被自动丢弃。也就是说，这些信件将被直接丢\n"
+"             弃，而不会再做进一步的处理，也不会发送任何的通知。发信人将不会收"
+"到\n"
+"             邮件通知或者退信，但是列表管理员可以选择\n"
+"             <a href=\"?VARHELP=privacy/sender/forward_auto_discards\">接收一"
+"份\n"
+"             被自动丢弃信件的拷贝</a>。\n"
+"\n"
+"             <p>每行添加一个地址；行首的字符^说明后面的是正则表达式。"
+
+#: Mailman/Gui/Privacy.py:375
 msgid ""
 "If dmarc_moderation_action applies and is Wrap Message,\n"
 "             and this text is provided, the text will be placed in a\n"
@@ -6800,7 +6843,7 @@ msgid ""
 "             part in the wrapped message."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:365
+#: Mailman/Gui/Privacy.py:380
 msgid ""
 "A wrapped message will either be a multipart/mixed message\n"
 "             with up to four sub-parts; a text/plain part containing\n"
@@ -6814,14 +6857,14 @@ msgid ""
 "             none of the other parts are applicable."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:374
+#: Mailman/Gui/Privacy.py:389
 msgid ""
 "A 'two dimensional' list of email address domains which are\n"
 "               considered equivalent when checking if a post is from a list\n"
 "               member."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:378
+#: Mailman/Gui/Privacy.py:393
 msgid ""
 "If two poster addresses with the same local part but\n"
 "               different domains are to be considered equivalents for list\n"
@@ -6850,17 +6893,17 @@ msgid ""
 "               'not&nbsp;metoo' will not."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:400
+#: Mailman/Gui/Privacy.py:415
 msgid "Non-member filters"
 msgstr "非成员过滤器"
 
-#: Mailman/Gui/Privacy.py:403
+#: Mailman/Gui/Privacy.py:418
 msgid ""
 "List of non-member addresses whose postings should be\n"
 "             automatically accepted."
 msgstr "其信件应当被自动接受的非成员地址清单。"
 
-#: Mailman/Gui/Privacy.py:410
+#: Mailman/Gui/Privacy.py:425
 #, fuzzy
 msgid ""
 "Postings from any of these non-members will be automatically\n"
@@ -6874,13 +6917,13 @@ msgstr ""
 "这些非成员的信件将会被列表不经审查而自动接受。每行添加\n"
 "             一个地址；行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:419
+#: Mailman/Gui/Privacy.py:434
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             immediately held for moderation."
 msgstr "所发信件会被立即暂存以待审查的非成员地址清单"
 
-#: Mailman/Gui/Privacy.py:422
+#: Mailman/Gui/Privacy.py:437
 msgid ""
 "Postings from any of these non-members will be immediately\n"
 "             and automatically held for moderation by the list moderators.\n"
@@ -6896,13 +6939,13 @@ msgstr ""
 "址；\n"
 "             行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:430
+#: Mailman/Gui/Privacy.py:445
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically rejected."
 msgstr "所发信件会被自动拒绝的非成员地址清单。"
 
-#: Mailman/Gui/Privacy.py:433
+#: Mailman/Gui/Privacy.py:448
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             rejected.  In other words, their messages will be bounced back "
@@ -6926,13 +6969,13 @@ msgstr ""
 "\n"
 "             <p>每行添加一个地址；行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:445
+#: Mailman/Gui/Privacy.py:460
 msgid ""
 "List of non-member addresses whose postings will be\n"
 "             automatically discarded."
 msgstr "所发信件会被自动丢弃的非成员地址清单。"
 
-#: Mailman/Gui/Privacy.py:448
+#: Mailman/Gui/Privacy.py:463
 msgid ""
 "Postings from any of these non-members will be automatically\n"
 "             discarded.  That is, the message will be thrown away with no\n"
@@ -6956,13 +6999,13 @@ msgstr ""
 "\n"
 "             <p>每行添加一个地址；行首的字符^说明后面的是正则表达式。"
 
-#: Mailman/Gui/Privacy.py:460
+#: Mailman/Gui/Privacy.py:475
 msgid ""
 "Action to take for postings from non-members for which no\n"
 "             explicit action is defined."
 msgstr "当一个没有被显式指定处理方法的非成员向列表发信时应执行的动作。"
 
-#: Mailman/Gui/Privacy.py:463
+#: Mailman/Gui/Privacy.py:478
 msgid ""
 "When a post from a non-member is received, the message's\n"
 "             sender is matched against the list of explicitly\n"
@@ -6987,13 +7030,13 @@ msgstr ""
 "             <a href=\"?VARHELP=privacy/sender/discard_these_nonmembers\"\n"
 "             >丢弃</a>的地址进行比较。如果没有匹配，那么将执行此动作。"
 
-#: Mailman/Gui/Privacy.py:475
+#: Mailman/Gui/Privacy.py:490
 msgid ""
 "Should messages from non-members, which are automatically\n"
 "             discarded, be forwarded to the list moderator?"
 msgstr "被自动丢弃的非成员信件是否应该被转发给列表管理员？"
 
-#: Mailman/Gui/Privacy.py:479
+#: Mailman/Gui/Privacy.py:494
 msgid ""
 "Text to include in any rejection notice to be sent to\n"
 "             non-members who post to this list. This notice can include\n"
@@ -7004,17 +7047,17 @@ msgstr ""
 "             此通知可以包含列表属主地址 %%(listowner)s, 并且替换掉Mailman\n"
 "             内定的默认信息。"
 
-#: Mailman/Gui/Privacy.py:487
+#: Mailman/Gui/Privacy.py:502
 msgid ""
 "This section allows you to configure various filters based on\n"
 "            the recipient of the message."
 msgstr "您可以在本小节配置一些基于收信人地址的过滤器。"
 
-#: Mailman/Gui/Privacy.py:490
+#: Mailman/Gui/Privacy.py:505
 msgid "Recipient filters"
 msgstr "收信人过滤器"
 
-#: Mailman/Gui/Privacy.py:494
+#: Mailman/Gui/Privacy.py:509
 msgid ""
 "Must posts have list named in destination (to, cc) field\n"
 "             (or be among the acceptable alias names, specified below)?"
@@ -7022,7 +7065,7 @@ msgstr ""
 "信件的目的地址(to,cc)必须包含此列表的地址(或在下面指定的\n"
 "             可接受的别名)吗？"
 
-#: Mailman/Gui/Privacy.py:497
+#: Mailman/Gui/Privacy.py:512
 msgid ""
 "Many (in fact, most) spams do not explicitly name their\n"
 "             myriad destinations in the explicit destination addresses - in\n"
@@ -7058,13 +7101,13 @@ msgstr ""
 "\n"
 "             </ol>"
 
-#: Mailman/Gui/Privacy.py:515
+#: Mailman/Gui/Privacy.py:530
 msgid ""
 "Alias names (regexps) which qualify as explicit to or cc\n"
 "             destination names for this list."
 msgstr "明确指明此列表的to或者cc地址的别名(正则表达式)。"
 
-#: Mailman/Gui/Privacy.py:518
+#: Mailman/Gui/Privacy.py:533
 msgid ""
 "Alternate addresses that are acceptable when\n"
 "             `require_explicit_destination' is enabled.  This option takes "
@@ -7102,11 +7145,11 @@ msgstr ""
 "式\n"
 "             模式将总是与完整的收件地址进行匹配。"
 
-#: Mailman/Gui/Privacy.py:536
+#: Mailman/Gui/Privacy.py:551
 msgid "Ceiling on acceptable number of recipients for a posting."
 msgstr "信件收件人的最大数目。"
 
-#: Mailman/Gui/Privacy.py:538
+#: Mailman/Gui/Privacy.py:553
 msgid ""
 "If a posting has this number, or more, of recipients, it is\n"
 "             held for admin approval.  Use 0 for no ceiling."
@@ -7114,7 +7157,7 @@ msgstr ""
 "如果某封信件的收件人数目大于或等于这个数字，就将被暂存以待\n"
 "             管理员核准。0表示无上限。"
 
-#: Mailman/Gui/Privacy.py:543
+#: Mailman/Gui/Privacy.py:558
 msgid ""
 "This section allows you to configure various anti-spam\n"
 "            filters posting filters, which can help reduce the amount of "
@@ -7126,15 +7169,15 @@ msgstr ""
 "            列表成员收到的垃圾邮件数量。\n"
 "            "
 
-#: Mailman/Gui/Privacy.py:548
+#: Mailman/Gui/Privacy.py:563
 msgid "Header filters"
 msgstr "头部过滤器"
 
-#: Mailman/Gui/Privacy.py:551
+#: Mailman/Gui/Privacy.py:566
 msgid "Filter rules to match against the headers of a message."
 msgstr "匹配邮件头部的过滤器规则"
 
-#: Mailman/Gui/Privacy.py:553
+#: Mailman/Gui/Privacy.py:568
 #, fuzzy
 msgid ""
 "Each header filter rule has two parts, a list of regular\n"
@@ -7169,15 +7212,15 @@ msgstr ""
 "            正则表达式进行匹配。您可以利用此特性来按照危险文件的种类或者文\n"
 "            件扩展名来对信件进行有效的排序。"
 
-#: Mailman/Gui/Privacy.py:570
+#: Mailman/Gui/Privacy.py:585
 msgid "Legacy anti-spam filters"
 msgstr "传统的垃圾邮件过滤器"
 
-#: Mailman/Gui/Privacy.py:573
+#: Mailman/Gui/Privacy.py:588
 msgid "Hold posts with header value matching a specified regexp."
 msgstr "暂存头部匹配指定正则表达式的信件。"
 
-#: Mailman/Gui/Privacy.py:574
+#: Mailman/Gui/Privacy.py:589
 msgid ""
 "Use this option to prohibit posts according to specific\n"
 "             header values.  The target value is a regular-expression for\n"
@@ -7209,13 +7252,13 @@ msgstr ""
 "此\n"
 "             限制，例如转义或者用括号把空白括起来。"
 
-#: Mailman/Gui/Privacy.py:609
+#: Mailman/Gui/Privacy.py:624
 msgid ""
 "dmarc_moderation_action must be >= the configured\n"
 "                           default value."
 msgstr ""
 
-#: Mailman/Gui/Privacy.py:659
+#: Mailman/Gui/Privacy.py:674
 msgid ""
 "Header filter rules require a pattern.\n"
 "                Incomplete filter rules will be ignored."
@@ -7223,7 +7266,7 @@ msgstr ""
 "头部过滤器规则需要一个模式。\n"
 "                不完整的过滤器规则将被忽略。"
 
-#: Mailman/Gui/Privacy.py:678
+#: Mailman/Gui/Privacy.py:693
 msgid ""
 "The header filter rule pattern\n"
 "                '%(safepattern)s' is not a legal regular expression.  This\n"
@@ -8041,7 +8084,7 @@ msgstr "对您发送至 \"%(realname)s\" 邮件列表信件的自动答复"
 msgid "The Mailman Replybot"
 msgstr "Mailman 自动回复机器人"
 
-#: Mailman/Handlers/Scrubber.py:205
+#: Mailman/Handlers/Scrubber.py:208
 #, fuzzy
 msgid ""
 "An embedded and charset-unspecified text was scrubbed...\n"
@@ -8052,11 +8095,11 @@ msgstr ""
 "名称：%(filename)s\n"
 "Url： %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:215
+#: Mailman/Handlers/Scrubber.py:218
 msgid "HTML attachment scrubbed and removed"
 msgstr "HTML附件被移除"
 
-#: Mailman/Handlers/Scrubber.py:231 Mailman/Handlers/Scrubber.py:256
+#: Mailman/Handlers/Scrubber.py:234 Mailman/Handlers/Scrubber.py:259
 msgid ""
 "An HTML attachment was scrubbed...\n"
 "URL: %(url)s\n"
@@ -8064,19 +8107,19 @@ msgstr ""
 "一个HTML附件被移除...\n"
 "URL: %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:268
+#: Mailman/Handlers/Scrubber.py:271
 msgid "no subject"
 msgstr "没有主题"
 
-#: Mailman/Handlers/Scrubber.py:270
+#: Mailman/Handlers/Scrubber.py:273
 msgid "no date"
 msgstr "没有日期"
 
-#: Mailman/Handlers/Scrubber.py:271
+#: Mailman/Handlers/Scrubber.py:274
 msgid "unknown sender"
 msgstr "未知的发送者"
 
-#: Mailman/Handlers/Scrubber.py:273
+#: Mailman/Handlers/Scrubber.py:276
 #, fuzzy
 msgid ""
 "An embedded message was scrubbed...\n"
@@ -8093,7 +8136,7 @@ msgstr ""
 "大小: %(size)s\n"
 "Url: %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:305
+#: Mailman/Handlers/Scrubber.py:308
 #, fuzzy
 msgid ""
 "A non-text attachment was scrubbed...\n"
@@ -8110,11 +8153,11 @@ msgstr ""
 "大小: %(size)s\n"
 "Url: %(url)s\n"
 
-#: Mailman/Handlers/Scrubber.py:344
+#: Mailman/Handlers/Scrubber.py:347
 msgid "Skipped content of type %(partctype)s\n"
 msgstr "跳过的 %(partctype)s 类型的内容\n"
 
-#: Mailman/Handlers/Scrubber.py:385
+#: Mailman/Handlers/Scrubber.py:388
 msgid "-------------- next part --------------\n"
 msgstr "-------------- 下一部分 --------------\n"
 
@@ -8122,7 +8165,7 @@ msgstr "-------------- 下一部分 --------------\n"
 msgid "Header matched regexp: %(pattern)s"
 msgstr ""
 
-#: Mailman/Handlers/SpamDetect.py:126
+#: Mailman/Handlers/SpamDetect.py:127
 #, fuzzy
 msgid ""
 "You are not allowed to post to this mailing list From: a domain which\n"
@@ -8134,7 +8177,7 @@ msgstr ""
 "您没有发送信件至该邮件列表的权限，您的信息被自动拒绝。\n"
 "如果您认为你的信件被错误拒绝，请联系 %(listowner)s 中的邮件列表的所有者 "
 
-#: Mailman/Handlers/SpamDetect.py:196
+#: Mailman/Handlers/SpamDetect.py:197
 msgid "Message rejected by filter rule match"
 msgstr "由于匹配过滤规则而被拒绝的信件"
 
@@ -8281,16 +8324,16 @@ msgstr ""
 msgid "Mailing list removal request for list %(listname)s"
 msgstr "对邮件列表 %(listname)s 的删除请求"
 
-#: Mailman/MTA/Postfix.py:420
+#: Mailman/MTA/Postfix.py:442
 msgid "checking permissions on %(file)s"
 msgstr "查看 %(file)s 的权限"
 
-#: Mailman/MTA/Postfix.py:430
+#: Mailman/MTA/Postfix.py:452
 msgid "%(file)s permissions must be 0664 (got %(octmode)s)"
 msgstr "%(file)s 的权限必须是 0664 （获得 %(octmode)s）"
 
-#: Mailman/MTA/Postfix.py:432 Mailman/MTA/Postfix.py:460
-#: Mailman/MTA/Postfix.py:471 bin/check_perms:125 bin/check_perms:153
+#: Mailman/MTA/Postfix.py:454 Mailman/MTA/Postfix.py:482
+#: Mailman/MTA/Postfix.py:493 bin/check_perms:125 bin/check_perms:153
 #: bin/check_perms:163 bin/check_perms:174 bin/check_perms:199
 #: bin/check_perms:216 bin/check_perms:242 bin/check_perms:265
 #: bin/check_perms:284 bin/check_perms:298 bin/check_perms:318
@@ -8298,15 +8341,15 @@ msgstr "%(file)s 的权限必须是 0664 （获得 %(octmode)s）"
 msgid "(fixing)"
 msgstr "(固定)"
 
-#: Mailman/MTA/Postfix.py:448
+#: Mailman/MTA/Postfix.py:470
 msgid "checking ownership of %(dbfile)s"
 msgstr "查看 %(dbfile)s 的所有者"
 
-#: Mailman/MTA/Postfix.py:456
+#: Mailman/MTA/Postfix.py:478
 msgid "%(dbfile)s owned by %(owner)s (must be owned by %(user)s"
 msgstr "%(dbfile)s 为 %(owner)s 所有(必须为 %(user)s 所有"
 
-#: Mailman/MTA/Postfix.py:469
+#: Mailman/MTA/Postfix.py:491
 msgid "%(dbfile)s permissions must be 0664 (got %(octmode)s)"
 msgstr "%(dbfile)s 的权限必须是 0664 （获得 %(octmode)s）"
 
@@ -8318,56 +8361,56 @@ msgstr "您需要对加入 %(listname)s 邮件列表进行确认"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "您需要对退出 %(listname)s 邮件列表进行确认"
 
-#: Mailman/MailList.py:973 Mailman/MailList.py:1464
+#: Mailman/MailList.py:974 Mailman/MailList.py:1465
 msgid " from %(remote)s"
 msgstr "来自 %(remote)s"
 
-#: Mailman/MailList.py:1017
+#: Mailman/MailList.py:1018
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "对 %(realname)s 的订阅请求需要列表主持者批准"
 
-#: Mailman/MailList.py:1099 bin/add_members:299
+#: Mailman/MailList.py:1100 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s 订阅通知"
 
-#: Mailman/MailList.py:1119
+#: Mailman/MailList.py:1120
 msgid "unsubscriptions require moderator approval"
 msgstr "退订需要列表主持人批准"
 
-#: Mailman/MailList.py:1140
+#: Mailman/MailList.py:1141
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s 退订通知"
 
-#: Mailman/MailList.py:1302
+#: Mailman/MailList.py:1303
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s 退订通知"
 
-#: Mailman/MailList.py:1336
+#: Mailman/MailList.py:1337
 #, fuzzy
 msgid "via email confirmation"
 msgstr "错误的验证字符串"
 
-#: Mailman/MailList.py:1345
+#: Mailman/MailList.py:1346
 #, fuzzy
 msgid "via web confirmation"
 msgstr "错误的验证字符串"
 
-#: Mailman/MailList.py:1370
+#: Mailman/MailList.py:1371
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "%(name)s 的订阅需要管理员批准"
 
-#: Mailman/MailList.py:1380
+#: Mailman/MailList.py:1381
 #, fuzzy
 msgid "email confirmation"
 msgstr "错误的验证字符串"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1383
 #, fuzzy
 msgid "web confirmation"
 msgstr "输入验证cookie"
 
-#: Mailman/MailList.py:1638
+#: Mailman/MailList.py:1639
 msgid "Last autoresponse notification for today"
 msgstr "本日最后一条自动回复通知"
 
@@ -10983,15 +11026,15 @@ msgstr ""
 "除非使用-l 或 -h，都要有管理器，并且它必须是使用 -l 后显示的名字的中的一"
 "个。\n"
 
-#: bin/qrunner:178
+#: bin/qrunner:179
 msgid "%(name)s runs the %(runnername)s qrunner"
 msgstr "%(name)s 运行 %(runnername)s qrunner"
 
-#: bin/qrunner:179
+#: bin/qrunner:180
 msgid "All runs all the above qrunners"
 msgstr "All 运行上面的所有qrunners"
 
-#: bin/qrunner:215
+#: bin/qrunner:216
 msgid "No runner name given."
 msgstr "没提供管理器的名字。"
 
