@@ -20,7 +20,7 @@
 
 # [訳註] このファイルは、Mailman 2.1.29 配布物に含まれる
 #   Mailman/Defaults.py.in (launchpad.net でのファイルの Bazaar
-#  リビジョンは 1812) のコメント部分を日本語 (共通語) に翻訳したものです。
+#  リビジョンは 1815) のコメント部分を日本語 (共通語) に翻訳したものです。
 #   配布等の条件は原文と同様、GNU 一般公衆利用許諾契約書 (GNU
 #   General Public License) に従います (上記も参照ください)。内容の
 #   正確な理解のためには、配布物に含まれる原文を参照されることを
@@ -78,7 +78,7 @@ MAILMAN_URL = 'http://www.gnu.org/software/mailman/index.html'
 
 # Mailman に (少なくとも) 二つの完全修飾ドメイン名(FQDN)を設定する
 # 必要があります。1) あなたのURL に使うホスト名、 2) あなたのドメインの
-# 電子メールアドレスに使うホスト名です。たとえば、Mailman システムに 
+# 電子メールアドレスに使うホスト名です。たとえば、Mailman システムに
 # "http://www.example.org/mailman" でアクセスさせるのであれば、
 # あなたの URL に使う FQDN は "www.exapmle.org" になります。 また、あなたの
 # システムにメールを送るのに "yourlist@example.org" 宛にするのであれば、
@@ -139,16 +139,16 @@ FORM_LIFETIME = hours(1)
 
 # 次の値を空でない文字列に設定すると、その文字列と時刻、リストの名前、
 # リクエストを送信してきたIPアドレスの組みを用いて隠しハッシュ値を生成して
-# メーリングリスト案内(listinfo)のページの購読のためのフォームの一部として
+# メーリングリスト案内(listinfo)のページの入会のためのフォームの一部として
 # 用います。このハッシュ値はフォームが送られて来た時にに検査され、一致
-# しなければ 購読の申込みは失敗します。つまり、最初に listinfo CGI から
+# しなければ 入会の申込みは失敗します。つまり、最初に listinfo CGI から
 # フォームを取得したのと同じIPアドレスからそのフォーム内容を送信しないと
 # いけません。フォームを取得してからの時間が上の FORM_LIFETIME よりも経過
-# していたり、下の SUBSCRIBE_FORM_MIN_TIME 未満であった場合にも購読は
+# していたり、下の SUBSCRIBE_FORM_MIN_TIME 未満であった場合にも入会は
 # 失敗します。
-# 重要: サイト上に静的な購読申込みのフォームがある場合、このオプションを
+# 重要: サイト上に静的な入会申込みのフォームがある場合、このオプションを
 # 設定するとそれらを壊すことになります。このオプションを設定した場合、
-# 購読用フォームは隠しデータを内包させて動的に生性されなければなりません。
+# 入会用フォームは隠しデータを内包させて動的に生性されなければなりません。
 # 隠しデータの詳細については Mailman/Cgi/listinfo.py の
 # "if mm_cfg.SUBSCRIBE_FORM_SECRET:" から始まるコードブロックを参照して
 # ください。
@@ -159,7 +159,28 @@ SUBSCRIBE_FORM_SECRET = None
 # 最小値になります。0 を設定するとこのテストは行いません。
 SUBSCRIBE_FORM_MIN_TIME = seconds(5)
 
-# 購読用フォームをスパムボットから守るために Google reCAPTCHA を使用します。
+# 入会に対する spam 行為に対抗するため、カスタムメイドの問答型 CAPTCHA を
+# 使用します。
+# SUBSCRIBE_FORM_SECRETを設定しないと有効になりません。
+# CAPTCHAS には言語をキーとして、問と答の対(2タプル)を要素とするリストを
+# 返すような辞書を設定します。例:
+# CAPTCHAS = {
+#   'en': [
+#     ('What is two times six?', '(12|twelve)'),
+#     ('What is this mailing list software called?', '[Mm]ailman'),
+#   ],
+#   'de': [
+#     ('Was ist 3 mal 6?', '(18|achtzehn)'),
+#   ],
+# }
+# 正規表現は文字列全体にマッチするものでなければなりません。つまり、
+# 暗黙のうちに正規表現の先頭に "^" が、末尾に "$" があるものとして
+# 扱われます。
+# 設定されている言語に対応する問と答が存在しない場合のフォールバックとして
+# 使用するため 'en' のキーは必須です。
+CAPTCHAS = None
+
+# 入会用フォームをスパムボットから守るために Google reCAPTCHA を使用します。
 # 以下には https://www.google.com/recaptcha/admin で発行される reCAPTHA
 # サービス用の鍵ペアを設定する必要があります。
 RECAPTCHA_SITE_KEY = None
@@ -232,10 +253,10 @@ DISABLE_COMMAND_LOCALE_CSET = No
 # 用途はWeb画面を使用したリストの作成で使用することなので、この設定の
 # 影響範囲は今のところ限られています。 新たにマッピングを追加するには
 # add_virtualhost() 呼出しを使用してください。マッピングのキーは
-# Utils.get_domain() で返って来る文字列、マッピングされる値は 
+# Utils.get_domain() で返って来る文字列、マッピングされる値は
 # DEFAULT_HOSTNAME として使用する適切な値です。
 # (訳註: 2.1.21 時点で Utils.get_domain() はウェブサーバの環境変数
-# SERVER_PORT, HTTP_HOST, SERVER_NAME をこの順に見てホスト名を取得 
+# SERVER_PORT, HTTP_HOST, SERVER_NAME をこの順に見てホスト名を取得
 # しようとします)
 VIRTUAL_HOSTS = {}
 
@@ -381,7 +402,7 @@ BROKEN_BROWSER_REPLACEMENTS = {'\x8b': '&#8249;',  # single left angle quote
 # STIME -> グループ化を行わず、時刻で並べ替えを行うのを既定とします。
 DISPLAY_HELD_SUMMARY_SORT_BUTTONS = No
 #
-# admin の「まとめて入会登録」の機能を「購読」の処理ではなく「招待」と
+# admin の「まとめて入会登録」の機能を「入会」の処理ではなく「招待」と
 # しますか? mm_cfg.py でこれを「Yes」にすると、「招待」を既定の処理とします。
 DEFAULT_SUBSCRIBE_OR_INVITE = No
 
@@ -414,7 +435,7 @@ DEFAULT_ARCHIVE_PRIVATE = 0
 # 1 - Mailman 組込みの html アーカイブを利用しない。mbox 形式での保存のみ
 # 2 - mbox 系式と Mailman 組込みの html アーカイブの両方で保存する。
 #     Mailman 組込みのアーカイブ機能を外部プログラムのアーカイバで
-#     置き換えるのに使える PUBLIC_EXTERNAL_ARCHIVER と 
+#     置き換えるのに使える PUBLIC_EXTERNAL_ARCHIVER と
 #     PRIVATE_EXTERNAL_ARCHIVER についての下の設定を御覧ください。
 #     フラットな mbox 形式のファイルは検索に利用しやすいですし、
 #     外部アーカイバプログラムとのインターフェースとしての
@@ -599,7 +620,7 @@ MTA = 'Manual'
 # 場合にはこの変数には空のリストを設定します。Postfix スタイルの仮想ドメイン、
 # つまり aliases が仮想ドメイン中でしか見えないような仮想ドメインを
 # 使用している場合には、仮想のエントリをわけるべき host_name のリストを
-# セットします。つまり、real.example.com と virtual1.example.com と 
+# セットします。つまり、real.example.com と virtual1.example.com と
 # virtual2.example.com を使用していて virtual1.example.com と
 # virtual2.example.com だけが仮想ドメインである場合にはこの変数には
 # [ 'virtual1.example.com', 'virtual2.example.com' ] をセットします。
@@ -619,7 +640,7 @@ POSTFIX_STYLE_VIRTUAL_DOMAINS = []
 # listaddress@virtual2.example.com      listaddress@localhost
 # あるいは
 # listaddress@virtual2.example.com      listaddress@other.local.domain.example
-# 
+#
 # のように指定したドメインを付けるには、mm_cfg.py の中でつけたい
 # ローカルドメイン名を
 #
@@ -654,7 +675,7 @@ SMTP_MAX_SESSIONS_PER_CONNECTION = 0
 
 # SMTP 配送に用いるサブスレッドの最大同時使用数。受信者アドレスのリストが
 # SMTP_MAX_RCPTSによるまとまりに分割されたあと、そうした別々のスレッドが
-# smtpd にそれぞれのまとまりを渡します。もしPythonインタープリタが 
+# smtpd にそれぞれのまとまりを渡します。もしPythonインタープリタが
 # スレッドを使用するようになっていなければ、この機能は無効化されます。
 # どんな場合でも MAX_DELIVERY_THREADS を 0 にセットすることでこの機能を
 # 明示的に無効にできます。この機能は SMTPDirect DELIVERY_MODULE でのみ
@@ -689,11 +710,11 @@ SMTP_USER = ''
 SMTP_PASSWD = ''
 
 # SASL 認証を利用する場合(SMTP_AUTH = Yes)、以下を Yes に設定することで
-# TLS も使用します。この設定は SMTP_AUTH = No の時には何の影響もありません。 
+# TLS も使用します。この設定は SMTP_AUTH = No の時には何の影響もありません。
 SMTP_USE_TLS = No
 
 # TLS を使用する場合、以下で SMTP サーバが Mailman を識別するために
-# 用いるホスト名を設定すべきです。既定ではこれには DEFAULT_URL_HOST を 
+# 用いるホスト名を設定すべきです。既定ではこれには DEFAULT_URL_HOST を
 # 用います。通常、これは変更すべきではありません。
 SMTP_HELO_HOST = DEFAULT_URL_HOST
 
@@ -740,9 +761,9 @@ NNTP_REWRITE_DUPLICATE_HEADERS = [
 # されることになるとしても、価値があるものだと受け止められています。
 # しかし、これらのヘッダを取り除きたいというサイトもあるでしょう。
 # この変数に設定できる値とその意味は:
-# No, 0, False -> ヘッダを取り除きません 
+# No, 0, False -> ヘッダを取り除きません
 # Yes, 1, True -> from_is_list あるいは dmarc_moderation_action の設定により
-#                 from ヘッダの書き換えを行う場合のみヘッダを取り除きます。 
+#                 from ヘッダの書き換えを行う場合のみヘッダを取り除きます。
 # 2 -> 常にヘッダを取り除きます。
 # 3 -> 常にヘッダを取り除きますが、元の DKIM 関連のヘッダはヘッダ名を変えて
 #      保存します。
@@ -832,7 +853,7 @@ OWNER_PIPELINE = [
 # 出力するファイル名、第二要素は Python の %-書式に従った書式文字列です。
 # ファイルの名前は任意で、qfiles/<名前> が存在しないときにはそれを
 # 自動的作ります。
-# 
+#
 # 配送されるメッセージ毎に出力するログメッセージの書式。ログメッセージは
 # 配送が成功したか失敗したかに寄らず出力されます。これを None に設定すると
 # このメッセージの出力を出力しません。
@@ -890,12 +911,12 @@ SMTP_LOG_EACH_FAILURE = (
 #
 # 以下の例を下の初期設定に使用してみます。
 #
-# リストの FQDN でのアドレスが: mylist@example.org 
+# リストの FQDN でのアドレスが: mylist@example.org
 # 受信者のアドレスが          : aperson@another.exapmle.com
 #
 # であるとき、エンベロープ送信者のアドレスは
 # mylist-bounce+aperson=another.example.com@example.org になります。
-# 
+#
 # MTA が こうしたアドレス向けのメールを mylist-bounce メールボックスに配送
 # するように構成されるように***なっていなければならない***ことに注意すること!
 VERP_FORMAT = '%(bounces)s+%(mailbox)s=%(host)s'
@@ -908,7 +929,7 @@ VERP_FORMAT = '%(bounces)s+%(mailbox)s=%(host)s'
 # 大文字小文字を区別せずにコンパイルされます。
 VERP_REGEXP = r'^(?P<bounces>[^+]+?)\+(?P<mailbox>[^=]+)=(?P<host>[^@]+)@.*$'
 
-# メッセージの検査のための VERP の書式と正規表現 
+# メッセージの検査のための VERP の書式と正規表現
 VERP_PROBE_FORMAT = '%(bounces)s+%(token)s'
 VERP_PROBE_REGEXP = r'^(?P<bounces>[^+]+?)\+(?P<token>[^@]+)@.*$'
 # これを「Yes」に設定するとバウンスによる配送停止のための VERP 検査が
@@ -920,7 +941,7 @@ VERP_PROBES = No
 # リマインダで VERP を有効にします。
 VERP_PASSWORD_REMINDERS = No
 
-# 普通配送が個人別配送であるならば、それもまた VERP 配送検査のよい機会です。 
+# 普通配送が個人別配送であるならば、それもまた VERP 配送検査のよい機会です。
 # ここでも書きますが、個別の受信者に対して別々に送るのはパフォーマンスに
 # 問題が出ます。これを「Yes」に設定するとすべての個人別普通配送で
 # VERP を有効にします(個人別まとめ読みはまだサポートしていません)
@@ -932,7 +953,7 @@ VERP_PERSONALIZED_DELIVERIES = No
 # 間隔を指定します。この変数一つで普通配送とまとめ読み配送の両方を
 # コントロールします。これを 0 に設定すると臨時の VERP を無効にします。
 # 1 に設定すると全ての配送で VERP を有効にします。 1 よりも大きい数を
-# 設定するとその数のメッセージ毎に1回 VERP を有効にします。 
+# 設定するとその数のメッセージ毎に1回 VERP を有効にします。
 VERP_DELIVERY_INTERVAL = 0
 
 # 承認メールを良くするため、返信用アドレスにVERP-like な承認クッキーを
@@ -996,7 +1017,7 @@ DISCARD_MESSAGE_WITH_NO_COMMAND = Yes
 # 初期設定は 2 としています。
 RESPONSE_INCLUDE_LEVEL = 2
 
-# 新しいリストを作成したときの respond_to_post_requests の初期値を設定します。 
+# 新しいリストを作成したときの respond_to_post_requests の初期値を設定します。
 # 後方互換性のために 2 を初期設定値としていますが、「No」に設定することを
 # 真剣に検討することをお勧めします。
 DEFAULT_RESPOND_TO_POST_REQUESTS = Yes
@@ -1083,7 +1104,7 @@ BAD_SHUNT_ARCHIVE_DIRECTORY = None
 # config.pck ファイルにも両方に作用することに注意してください。
 SYNC_AFTER_WRITE = No
 
-# mailmanctl が使用するマスターロックファイルの名前。共有された 'locks' 
+# mailmanctl が使用するマスターロックファイルの名前。共有された 'locks'
 # ディレクトリを使用するクラスタ化された負荷共有環境では各ホストの
 # mailmanctl 毎に別々のロックを使用するのが望ましい。これはそれを可能にする
 # ためのものです。
@@ -1116,7 +1137,7 @@ DEFAULT_SERVER_LANGUAGE = 'en'
 # ただし、偽装されたメッセージには通ってしまうものがあることは
 # 理解してください。
 # (訳註: 上記2パラグラフは原文訳ですが、原文が誤っています。以下の説明は
-# mailman-users の2009年のメール  
+# mailman-users の2009年のメール
 #   https://mail.python.org/pipermail/mailman-users/2009-February/065014.html
 # および実際のコードをもとにしています)
 # メーリングリストへの投稿を会員からのみ許可する場合、どのようにメッセージの
@@ -1215,7 +1236,7 @@ ADMIN_PASSWORD_LENGTH = 10
 #
 # さらに、Return-Receipt-To:, Disposition-Notification-To:,
 # X-Confirm-Reading-To:, X-Pmrqc: ヘッダは送信者の情報を明らかにする
-# だけではなく、リストの購読者の情報を収集するのに使われる恐れがあるため、
+# だけではなく、リストの入会者の情報を収集するのに使われる恐れがあるため、
 # すべてのリストへの投稿で削除します。
 #
 # 上述のヘッダ削除に加え、匿名リストでは以下の正規表現群にマッチした
@@ -1331,14 +1352,14 @@ DEFAULT_DMARC_NONE_MODERATION_ACTION = No
 DEFAULT_DMARC_WRAPPED_MESSAGE_TEXT = ''
 
 # DMARC による DNS 参照のパラメタ。エラーログに「DNSException:
-# Unable to query DMARC policy ...」というエントリが出るのであれば 
+# Unable to query DMARC policy ...」というエントリが出るのであれば
 # これらを調整する必要があるかもしれません。
-# ネームサーバからの応答をタイムアウトにするまでに待つ時間。 
+# ネームサーバからの応答をタイムアウトにするまでに待つ時間。
 DMARC_RESOLVER_TIMEOUT = seconds(3)
 # 問い合わせから答を得るまでに費す全体での時間。
 DMARC_RESOLVER_LIFETIME = seconds(5)
 
-# DMARC ポリシーを参照するために Organizational Domain 
+# DMARC ポリシーを参照するために Organizational Domain
 # (訳註: RFC 7489参照; レジストラが登録する個別のドメイン) を求める
 # アルゴリズムのためのデータを取って来る URL。ここに設定できるのは
 # Python の urllib2.urlopen 関数で扱えるものです。これについては
@@ -1358,7 +1379,7 @@ DMARC_ORGANIZATIONAL_DOMAIN_DATA_URL = \
 #                                      (機能を無効にするには0をセットします)
 DEFAULT_MEMBER_VERBOSITY_INTERVAL = 300
 DEFAULT_MEMBER_VERBOSITY_THRESHOLD = 0
- 
+
 # 会員の投稿頻度に関する機能を実現するために使用している辞書(ルックアップ
 # テーブルから古い投稿時刻のエントリをどれくらいの頻度で掃除するかを
 # コントロールします。これはエントリを掃除するのに使用するリソースと
@@ -1372,7 +1393,7 @@ VERBOSE_CLEAN_LIMIT = 1000
 # 確認するの時に同一のドメインと看做したいドメイン群。
 # リストの会員であるかのテストの際に、同じローカルパートであるが異なる
 # ドメインである二つの投稿者のアドレスを同一と看做したい場合には、
-# それらのドメインをリストの equivalent_domains に入れます。 
+# それらのドメインをリストの equivalent_domains に入れます。
 # これは新しいリストに設定する初期値です。
 # 設定には一つ以上の同一と看做したいドメインのグループを書きます。
 # グループ内ではドメインはカンマ「,」で区切り、グループはセミコロン「;」で
@@ -1488,7 +1509,7 @@ DEFAULT_SUBSCRIBE_AUTO_APPROVAL = []
 # 1 - 退会には承認が必要
 DEFAULT_UNSUBSCRIBE_POLICY = 0
 
-# 会員名簿を非公開にする(Private_roster) == 
+# 会員名簿を非公開にする(Private_roster) ==
 # 0: 誰でも閲覧可能 1: 会員のみ可能 2: 管理者のみ可能
 DEFAULT_PRIVATE_ROSTER = 1
 
@@ -1518,11 +1539,11 @@ ALLOW_RFC2369_OVERRIDES = Yes
 ALLOW_SENDER_OVERRIDES = Yes
 
 # メーリングリストのコンテンツフィルタの既定値。DEFAULT_FILTER_CONTENT を
-# true に設定するとコンテンツフィルタが有効になります。 
+# true に設定するとコンテンツフィルタが有効になります。
 DEFAULT_FILTER_CONTENT = No
 
 # DEFAULT_FILTER_MIME_TYPES は取り除く MIME タイプのリストです。リストの
-# 要素は "maintype/subtype" という形式か単純に "maintype" という形式の 
+# 要素は "maintype/subtype" という形式か単純に "maintype" という形式の
 # 文字列です。例えば "text/html" はすべての html 形式の添付ファイルを
 # 取り除き、"image" は subtype が(jpeg、 gif、など)何であれ画像の
 # 添付ファイルを取り除きます。
@@ -1544,7 +1565,7 @@ DEFAULT_FILTER_FILENAME_EXTENSIONS = [
     'exe', 'bat', 'cmd', 'com', 'pif', 'scr', 'vbs', 'cpl'
     ]
 
-# DEFAULT_PASS_FILENAME_EXTENSIONS はそのまま通すファイル名の拡張子の 
+# DEFAULT_PASS_FILENAME_EXTENSIONS はそのまま通すファイル名の拡張子の
 # リストです。書式は DEFAULT_FILTER_FILENAME_EXTENSIONS と同様です。
 DEFAULT_PASS_FILENAME_EXTENSIONS = []
 
@@ -1604,7 +1625,7 @@ MIME_DIGEST_KEEP_HEADERS = [
 
 # このリストで RFC 1153 ダイジェストヘッダの順序を制御します。
 # また、このリスト中のヘッダは MIME ダイジェストにおいて、上の
-# MIME_DIGEST_KEEP_HEADERS にないヘッダであっても保存します。 
+# MIME_DIGEST_KEEP_HEADERS にないヘッダであっても保存します。
 # 最後に、両方のリストに現れるヘッダは、それぞれ大文字小文字が
 # 一致していなければならず、一致していない場合にはダイジェストの中で
 # そのヘッダが複数回出力されることがあります。
