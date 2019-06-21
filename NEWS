@@ -30,6 +30,10 @@ Here is a history of user visible changes to Mailman.
       feature can be used in combination with or instead of the Google
       reCAPTCHA feature added in 2.1.26.
 
+  i18n
+
+    - The Japanese translation has been updated by Yasuhito FUTATSUKI.
+
   Bug Fixes and other patches
 
     - Fixed the confirm CGI to catch a rare TypeError on simultaneous
