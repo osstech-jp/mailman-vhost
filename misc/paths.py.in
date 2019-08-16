@@ -67,6 +67,16 @@ distdir = os.path.join(sys.prefix, 'lib', 'python'+sys.version[:3],
                        'dist-packages')
 sys.path.append(distdir)
 
+# Some distros may have the python library in a directory other than lib/
+# such as Lib/ or lib64/.  Hopefully they will have hacked
+# site.getsitepackages() to return the right thing.
+try:
+    import site
+    sys.path.extend(site.getsitepackages())
+    del site
+except (ImportError, AttributeError):
+    pass
+
 
 # In a normal interactive Python environment, the japanese.pth and korean.pth
 # files would be imported automatically.  But because we inhibit the importing
