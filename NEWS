@@ -63,6 +63,9 @@ Here is a history of user visible changes to Mailman.
       -bounces and -request addresses in each virtual domain are now added
       to data/virtual-mailman (-owner was done in 2.1.24).  (LP: #1831777)
 
+    - The paths.py module now extends sys.path with the result of
+      site.getsitepackages() if available.  (LP: #1838866)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
