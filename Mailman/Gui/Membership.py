@@ -31,5 +31,6 @@ class Membership:
                     ('add',    _('Mass&nbsp;Subscription')),
                     ('remove', _('Mass&nbsp;Removal')),
                     ('change', _('Address&nbsp;Change')),
+                    ('sync',   _('Sync&nbsp;Membership&nbsp;List')),
                     ]
         return None
