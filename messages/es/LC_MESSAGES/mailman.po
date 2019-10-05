@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman\n"
-"POT-Creation-Date: Tue Sep 17 14:12:32 2019\n"
+"POT-Creation-Date: Sat Oct  5 14:26:33 2019\n"
 "PO-Revision-Date: 2006-02-15 12:02+0100\n"
 "Last-Translator: David Martínez Moreno <ender@rediris.es>\n"
 "Language-Team: Español <es@li.org>\n"
@@ -300,7 +300,7 @@ msgstr ""
 "               su lista de distribución no podrá usarse."
 
 #: Mailman/Cgi/admin.py:231 Mailman/Cgi/admin.py:239 Mailman/Cgi/admin.py:246
-#: Mailman/Cgi/admin.py:1764 Mailman/Gui/GUIBase.py:209
+#: Mailman/Cgi/admin.py:1774 Mailman/Gui/GUIBase.py:209
 msgid "Warning: "
 msgstr "Advertencia: "
 
@@ -1118,21 +1118,21 @@ msgstr ""
 msgid "Already a member"
 msgstr "Ya está suscrito"
 
-#: Mailman/Cgi/admin.py:1519 Mailman/Cgi/admin.py:1683
+#: Mailman/Cgi/admin.py:1519 Mailman/Cgi/admin.py:1693
 msgid "&lt;blank line&gt;"
 msgstr "&lt;línea en blanco&gt;"
 
 #: Mailman/Cgi/admin.py:1520 Mailman/Cgi/admin.py:1523
-#: Mailman/Cgi/admin.py:1684 Mailman/Cgi/admin.py:1687
+#: Mailman/Cgi/admin.py:1694 Mailman/Cgi/admin.py:1697
 #: Mailman/Cgi/admindb.py:977
 msgid "Bad/Invalid email address"
 msgstr "Dirección de correo electrónico incorrecta/inválida"
 
-#: Mailman/Cgi/admin.py:1526 Mailman/Cgi/admin.py:1690
+#: Mailman/Cgi/admin.py:1526 Mailman/Cgi/admin.py:1700
 msgid "Hostile address (illegal characters)"
 msgstr "Dirección hostil (caracteres no válidos)"
 
-#: Mailman/Cgi/admin.py:1529 Mailman/Cgi/admin.py:1693 bin/add_members:175
+#: Mailman/Cgi/admin.py:1529 Mailman/Cgi/admin.py:1703 bin/add_members:175
 #: bin/clone_member:136 bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr "Dirección vetada (coincidencia %(pattern)s)"
@@ -1141,7 +1141,7 @@ msgstr "Dirección vetada (coincidencia %(pattern)s)"
 msgid "Successfully invited:"
 msgstr "Invitados satisfactoriamente:"
 
-#: Mailman/Cgi/admin.py:1537 Mailman/Cgi/admin.py:1718
+#: Mailman/Cgi/admin.py:1537 Mailman/Cgi/admin.py:1728
 msgid "Successfully subscribed:"
 msgstr "Subscritos satisfactoriamente:"
 
@@ -1149,7 +1149,7 @@ msgstr "Subscritos satisfactoriamente:"
 msgid "Error inviting:"
 msgstr "Error invitando a suscribirse:"
 
-#: Mailman/Cgi/admin.py:1544 Mailman/Cgi/admin.py:1722
+#: Mailman/Cgi/admin.py:1544 Mailman/Cgi/admin.py:1732
 msgid "Error subscribing:"
 msgstr "Error dando de alta la suscripción:"
 
@@ -1157,7 +1157,7 @@ msgstr "Error dando de alta la suscripción:"
 msgid "admin mass unsub"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1578
+#: Mailman/Cgi/admin.py:1578 Mailman/Cgi/admin.py:1737
 msgid "Successfully Unsubscribed:"
 msgstr "Ha anulado su suscripción satisfactoriamente:"
 
@@ -1224,32 +1224,27 @@ msgstr "Notificaciones"
 msgid "Notification sent to %(schange_to)s."
 msgstr "Notificaciones"
 
-#: Mailman/Cgi/admin.py:1727
-#, fuzzy
-msgid "Successfully unsubscribed:"
-msgstr "Ha anulado su suscripción satisfactoriamente:"
-
-#: Mailman/Cgi/admin.py:1735
+#: Mailman/Cgi/admin.py:1745
 msgid "Bad moderation flag value"
 msgstr "Valor incorrecto del flag de moderación"
 
-#: Mailman/Cgi/admin.py:1755
+#: Mailman/Cgi/admin.py:1765
 msgid "member mgt page"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1760
+#: Mailman/Cgi/admin.py:1770
 msgid "Not subscribed"
 msgstr "No está suscrito"
 
-#: Mailman/Cgi/admin.py:1763
+#: Mailman/Cgi/admin.py:1773
 msgid "Ignoring changes to deleted member: %(user)s"
 msgstr "Ignorando los cambios del usuario borrado: %(user)s"
 
-#: Mailman/Cgi/admin.py:1803
+#: Mailman/Cgi/admin.py:1813
 msgid "Successfully Removed:"
 msgstr "Ha sido borrado satisfactoriamente"
 
-#: Mailman/Cgi/admin.py:1807
+#: Mailman/Cgi/admin.py:1817
 msgid "Error Unsubscribing:"
 msgstr "Error dando de baja la suscripción:"
 
@@ -13866,6 +13861,10 @@ msgstr ""
 "Se aplica a las listas nombradas en la línea de órdenes. Si no se "
 "proporciona \n"
 "el nombre de ninguna lista, se aplica a todas.\n"
+
+#, fuzzy
+#~ msgid "Successfully unsubscribed:"
+#~ msgstr "Ha anulado su suscripción satisfactoriamente:"
 
 #~ msgid "The message headers matched a filter rule"
 #~ msgstr "Las cabeceras del mensaje activó una regla de filtrado"
