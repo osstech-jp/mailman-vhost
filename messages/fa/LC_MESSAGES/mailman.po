@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.14\n"
-"POT-Creation-Date: Thu Jun 20 15:03:40 2019\n"
+"POT-Creation-Date: Tue Sep 17 14:12:32 2019\n"
 "PO-Revision-Date: 2013-07-20 13:40+0330\n"
 "Last-Translator: \n"
 "Language-Team: fa <translate@ifsug.org>\n"
@@ -311,7 +311,7 @@ msgstr ""
 "               اساسا غیر قابل استفاده خواهد بود."
 
 #: Mailman/Cgi/admin.py:231 Mailman/Cgi/admin.py:239 Mailman/Cgi/admin.py:246
-#: Mailman/Cgi/admin.py:1667 Mailman/Gui/GUIBase.py:209
+#: Mailman/Cgi/admin.py:1764 Mailman/Gui/GUIBase.py:209
 msgid "Warning: "
 msgstr "هشدار: "
 
@@ -663,110 +663,115 @@ msgid "Address Change"
 msgstr "نشانی/نام"
 
 #: Mailman/Cgi/admin.py:914
+#, fuzzy
+msgid "Sync Membership List"
+msgstr "فهرست عضویت"
+
+#: Mailman/Cgi/admin.py:921
 msgid "Membership List"
 msgstr "فهرست عضویت"
 
-#: Mailman/Cgi/admin.py:922
+#: Mailman/Cgi/admin.py:929
 msgid "(help)"
 msgstr "(راهنما)"
 
-#: Mailman/Cgi/admin.py:923
+#: Mailman/Cgi/admin.py:930
 msgid "Find member %(link)s:"
 msgstr "یافتن عضو %(link)s:"
 
-#: Mailman/Cgi/admin.py:926
+#: Mailman/Cgi/admin.py:933
 msgid "Search..."
 msgstr "جستجو..."
 
-#: Mailman/Cgi/admin.py:952
+#: Mailman/Cgi/admin.py:959
 msgid "Bad regular expression: "
 msgstr "عبارت باقاعده‌ی نادرست:"
 
-#: Mailman/Cgi/admin.py:1006
+#: Mailman/Cgi/admin.py:1013
 msgid "%(allcnt)s members total, %(membercnt)s shown"
 msgstr "در مجموع %(allcnt)s عضو که %(membercnt)s نفرشان نشان داده می‌شود"
 
-#: Mailman/Cgi/admin.py:1009
+#: Mailman/Cgi/admin.py:1016
 msgid "%(allcnt)s members total"
 msgstr "در مجموع %(allcnt)s عضو"
 
-#: Mailman/Cgi/admin.py:1036 Mailman/Cgi/admin.py:1068
+#: Mailman/Cgi/admin.py:1043 Mailman/Cgi/admin.py:1075
 msgid "unsub"
 msgstr "لغو اشتراک"
 
-#: Mailman/Cgi/admin.py:1037
+#: Mailman/Cgi/admin.py:1044
 msgid "member address<br>member name"
 msgstr "نشانی عضو<br>نام عضو"
 
-#: Mailman/Cgi/admin.py:1038 Mailman/Cgi/admin.py:1082
+#: Mailman/Cgi/admin.py:1045 Mailman/Cgi/admin.py:1089
 msgid "mod"
 msgstr "میان‌داری"
 
-#: Mailman/Cgi/admin.py:1038 Mailman/Cgi/admin.py:1084
+#: Mailman/Cgi/admin.py:1045 Mailman/Cgi/admin.py:1091
 msgid "hide"
 msgstr "پنهان کردن"
 
-#: Mailman/Cgi/admin.py:1039
+#: Mailman/Cgi/admin.py:1046
 msgid "nomail<br>[reason]"
 msgstr "بدون رایانامه<br>[دلیل]"
 
-#: Mailman/Cgi/admin.py:1040
+#: Mailman/Cgi/admin.py:1047
 msgid "not metoo"
 msgstr "خودم نه"
 
-#: Mailman/Cgi/admin.py:1040 Mailman/Cgi/admin.py:1084
+#: Mailman/Cgi/admin.py:1047 Mailman/Cgi/admin.py:1091
 msgid "ack"
 msgstr "تاییدیه"
 
-#: Mailman/Cgi/admin.py:1041 Mailman/Cgi/admin.py:1084
+#: Mailman/Cgi/admin.py:1048 Mailman/Cgi/admin.py:1091
 msgid "nodupes"
 msgstr "غیر تکراری"
 
-#: Mailman/Cgi/admin.py:1042 Mailman/Cgi/admin.py:1108
+#: Mailman/Cgi/admin.py:1049 Mailman/Cgi/admin.py:1115
 #: Mailman/Cgi/options.py:391
 msgid "digest"
 msgstr "یک‌جا"
 
-#: Mailman/Cgi/admin.py:1042 Mailman/Cgi/admin.py:1123
+#: Mailman/Cgi/admin.py:1049 Mailman/Cgi/admin.py:1130
 msgid "plain"
 msgstr "ساده"
 
-#: Mailman/Cgi/admin.py:1043
+#: Mailman/Cgi/admin.py:1050
 msgid "language"
 msgstr "زبان"
 
-#: Mailman/Cgi/admin.py:1054
+#: Mailman/Cgi/admin.py:1061
 msgid "?"
 msgstr "؟"
 
 # user
-#: Mailman/Cgi/admin.py:1055
+#: Mailman/Cgi/admin.py:1062
 msgid "U"
 msgstr "ع"
 
 # administrator
-#: Mailman/Cgi/admin.py:1056
+#: Mailman/Cgi/admin.py:1063
 msgid "A"
 msgstr "س"
 
 # bounce
-#: Mailman/Cgi/admin.py:1057
+#: Mailman/Cgi/admin.py:1064
 msgid "B"
 msgstr "و"
 
-#: Mailman/Cgi/admin.py:1084
+#: Mailman/Cgi/admin.py:1091
 msgid "notmetoo"
 msgstr "خودم نه"
 
-#: Mailman/Cgi/admin.py:1084 Mailman/Cgi/options.py:389
+#: Mailman/Cgi/admin.py:1091 Mailman/Cgi/options.py:389
 msgid "nomail"
 msgstr "ﺏﺩﻮﻧ ﺭﺍیﺎﻧﺎﻤﻫ"
 
-#: Mailman/Cgi/admin.py:1138
+#: Mailman/Cgi/admin.py:1145
 msgid "<b>unsub</b> -- Click on this to unsubscribe the member."
 msgstr "<b>لغو اشتراک</b> -- بر روی این کلیک کنید تا اشتراک عضو لغو شود"
 
-#: Mailman/Cgi/admin.py:1140
+#: Mailman/Cgi/admin.py:1147
 msgid ""
 "<b>mod</b> -- The user's personal moderation flag.  If this is\n"
 "        set, postings from them will be moderated, otherwise they will be\n"
@@ -777,13 +782,13 @@ msgstr ""
 "داشت.\n"
 "        در غیر این‌صورت خودکار تایید خواهند شد."
 
-#: Mailman/Cgi/admin.py:1144
+#: Mailman/Cgi/admin.py:1151
 msgid ""
 "<b>hide</b> -- Is the member's address concealed on\n"
 "        the list of subscribers?"
 msgstr "<b>پنهان کردن</b> -- آیا نشانی این عضو در فهرست مشترک‌ها پنهان باشد؟"
 
-#: Mailman/Cgi/admin.py:1146
+#: Mailman/Cgi/admin.py:1153
 msgid ""
 "<b>nomail</b> -- Is delivery to the member disabled?  If so, an\n"
 "        abbreviation will be given describing the reason for the disabled\n"
@@ -817,7 +822,7 @@ msgstr ""
 "                    قدیمی‌تر میل‌من غیرفعال بوده‌اند.\n"
 "            </ul>"
 
-#: Mailman/Cgi/admin.py:1161
+#: Mailman/Cgi/admin.py:1168
 msgid ""
 "<b>ack</b> -- Does the member get acknowledgements of their\n"
 "        posts?"
@@ -825,14 +830,14 @@ msgstr ""
 "<b>تاییدیه</b> -- آیا این عضو برای فرستاده‌هایش \n"
 "        تاییدیه می‌گیرد؟"
 
-#: Mailman/Cgi/admin.py:1164
+#: Mailman/Cgi/admin.py:1171
 msgid ""
 "<b>not metoo</b> -- Does the member want to avoid copies of their\n"
 "        own postings?"
 msgstr ""
 "<b>خودم نه</b> -- آیا عضو می‌خواهد که رونوشت نامه‌هایش برای خودش فرستاده نشود؟"
 
-#: Mailman/Cgi/admin.py:1167
+#: Mailman/Cgi/admin.py:1174
 msgid ""
 "<b>nodupes</b> -- Does the member want to avoid duplicates of the\n"
 "        same message?"
@@ -840,7 +845,7 @@ msgstr ""
 "<b>غیر تکراری</b> -- آیا عضو می‌خواهد که رونوشت‌های تکراری یک پیام برایش\n"
 "فرستاده نشود؟"
 
-#: Mailman/Cgi/admin.py:1170
+#: Mailman/Cgi/admin.py:1177
 msgid ""
 "<b>digest</b> -- Does the member get messages in digests?\n"
 "        (otherwise, individual messages)"
@@ -848,7 +853,7 @@ msgstr ""
 "<b>خلاصه</b> --  آیا عضو پیام‌ها را یک‌جا دریافت می‌کند؟\n"
 "        (در غیر این‌صورت، پیام‌های تکی)"
 
-#: Mailman/Cgi/admin.py:1173
+#: Mailman/Cgi/admin.py:1180
 msgid ""
 "<b>plain</b> -- If getting digests, does the member get plain\n"
 "        text digests?  (otherwise, MIME)"
@@ -857,19 +862,19 @@ msgstr ""
 "صورت \n"
 "        متن ساده دریافت می‌کند؟  (در غیراین‌صورت, MIME)"
 
-#: Mailman/Cgi/admin.py:1175
+#: Mailman/Cgi/admin.py:1182
 msgid "<b>language</b> -- Language preferred by the user"
 msgstr "<b>زبان</b> -- زبان ترجیح داده شده‌ی عضو"
 
-#: Mailman/Cgi/admin.py:1189
+#: Mailman/Cgi/admin.py:1196
 msgid "Click here to hide the legend for this table."
 msgstr "برای پنهان کردن راهنمای این جدول این‌جا را کلیک کنید."
 
-#: Mailman/Cgi/admin.py:1193
+#: Mailman/Cgi/admin.py:1200
 msgid "Click here to include the legend for this table."
 msgstr "برای افزودن راهنمای این جدول این‌جا را کلیک کنید."
 
-#: Mailman/Cgi/admin.py:1200
+#: Mailman/Cgi/admin.py:1207
 msgid ""
 "<p><em>To view more members, click on the appropriate\n"
 "        range listed below:</em>"
@@ -877,28 +882,28 @@ msgstr ""
 "<p><em>برای دیدن اعضای بیشتر، بر روی یک برد مناسب \n"
 "        از بردهای فهرست شده‌ی پایین کلیک کنید:</em>"
 
-#: Mailman/Cgi/admin.py:1214
+#: Mailman/Cgi/admin.py:1221
 msgid "from %(start)s to %(end)s"
 msgstr "از %(start)s تا %(end)s"
 
-#: Mailman/Cgi/admin.py:1227
+#: Mailman/Cgi/admin.py:1234
 msgid "Subscribe these users now or invite them?"
 msgstr "این اعضا را اکنون مشترک کنم یا دعوت‌شان کنم؟"
 
-#: Mailman/Cgi/admin.py:1229
+#: Mailman/Cgi/admin.py:1236
 msgid "Invite"
 msgstr "دعوت"
 
-#: Mailman/Cgi/admin.py:1229 Mailman/Cgi/listinfo.py:199
+#: Mailman/Cgi/admin.py:1236 Mailman/Cgi/listinfo.py:199
 msgid "Subscribe"
 msgstr "اشتراک"
 
-#: Mailman/Cgi/admin.py:1236
+#: Mailman/Cgi/admin.py:1243
 msgid "Send welcome messages to new subscribers?"
 msgstr "پیام خوش‌آمد‌گویی به مشترک‌های جدید بفرستم؟"
 
-#: Mailman/Cgi/admin.py:1238 Mailman/Cgi/admin.py:1247
-#: Mailman/Cgi/admin.py:1280 Mailman/Cgi/admin.py:1288
+#: Mailman/Cgi/admin.py:1245 Mailman/Cgi/admin.py:1254
+#: Mailman/Cgi/admin.py:1287 Mailman/Cgi/admin.py:1295
 #: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:371
 #: Mailman/Cgi/create.py:406 Mailman/Cgi/create.py:444
 #: Mailman/Cgi/rmlist.py:248 Mailman/Gui/Archive.py:33
@@ -927,8 +932,8 @@ msgstr "پیام خوش‌آمد‌گویی به مشترک‌های جدید ب
 msgid "No"
 msgstr "خیر"
 
-#: Mailman/Cgi/admin.py:1238 Mailman/Cgi/admin.py:1247
-#: Mailman/Cgi/admin.py:1280 Mailman/Cgi/admin.py:1288
+#: Mailman/Cgi/admin.py:1245 Mailman/Cgi/admin.py:1254
+#: Mailman/Cgi/admin.py:1287 Mailman/Cgi/admin.py:1295
 #: Mailman/Cgi/confirm.py:304 Mailman/Cgi/create.py:371
 #: Mailman/Cgi/create.py:406 Mailman/Cgi/create.py:444
 #: Mailman/Cgi/rmlist.py:248 Mailman/Gui/Archive.py:33
@@ -956,19 +961,21 @@ msgstr "خیر"
 msgid "Yes"
 msgstr "بله"
 
-#: Mailman/Cgi/admin.py:1245
+#: Mailman/Cgi/admin.py:1252
 msgid "Send notifications of new subscriptions to the list owner?"
 msgstr "پیام آگاه‌سازی از اشتراک‌های جدید را به مالک فهرست بفرستم؟"
 
-#: Mailman/Cgi/admin.py:1253 Mailman/Cgi/admin.py:1294
+#: Mailman/Cgi/admin.py:1260 Mailman/Cgi/admin.py:1301
+#: Mailman/Cgi/admin.py:1347
 msgid "Enter one address per line below..."
 msgstr "در زیر، در هر خط یک نشانی وارد کنید..."
 
-#: Mailman/Cgi/admin.py:1258 Mailman/Cgi/admin.py:1299
+#: Mailman/Cgi/admin.py:1265 Mailman/Cgi/admin.py:1306
+#: Mailman/Cgi/admin.py:1352
 msgid "...or specify a file to upload:"
 msgstr "...یا یک پرونده برای بارگذاری مشخص کنید:"
 
-#: Mailman/Cgi/admin.py:1263
+#: Mailman/Cgi/admin.py:1270
 msgid ""
 "Below, enter additional text to be added to the\n"
 "    top of your invitation or the subscription notification.  Include at "
@@ -979,39 +986,39 @@ msgstr ""
 "    یا پیام آگاه‌سازی از اشتراک بیافزایید. در انتها دست‌کم یک خط خالی \n"
 "قرار دهید..."
 
-#: Mailman/Cgi/admin.py:1278
+#: Mailman/Cgi/admin.py:1285
 msgid "Send unsubscription acknowledgement to the user?"
 msgstr "تاییدیه‌ی لغو اشتراک به کاربر فرستاده شود؟"
 
-#: Mailman/Cgi/admin.py:1286
+#: Mailman/Cgi/admin.py:1293
 msgid "Send notifications to the list owner?"
 msgstr "پیام آگاه‌سازی به مالک فهرست بفرستم؟"
 
-#: Mailman/Cgi/admin.py:1309
+#: Mailman/Cgi/admin.py:1316
 msgid ""
 "To change a list member's address, enter the\n"
 "    member's current and new addresses below. Use the check boxes to send\n"
 "    notice of the change to the old and/or new address(es)."
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1314
+#: Mailman/Cgi/admin.py:1321
 #, fuzzy
 msgid "Member's current address"
 msgstr "بایگانی جاری"
 
-#: Mailman/Cgi/admin.py:1318 Mailman/Cgi/admin.py:1328
+#: Mailman/Cgi/admin.py:1325 Mailman/Cgi/admin.py:1335
 msgid "Send notice"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1324
+#: Mailman/Cgi/admin.py:1331
 msgid "Address to change to"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1340
+#: Mailman/Cgi/admin.py:1361
 msgid "Change list ownership passwords"
 msgstr "تغییر گذرواژه‌ها‌ی مالکیت فهرست"
 
-#: Mailman/Cgi/admin.py:1343
+#: Mailman/Cgi/admin.py:1364
 msgid ""
 "The <em>list administrators</em> are the people who have ultimate control "
 "over\n"
@@ -1046,23 +1053,23 @@ msgstr ""
 "و همچنین نشانی رایانامه‌ی میان‌دارهای فهرست را نیز در اینجا وارد کنید:\n"
 " <a href=\"%(adminurl)s/general\">بخش تنظیمات عمومی</a>."
 
-#: Mailman/Cgi/admin.py:1362
+#: Mailman/Cgi/admin.py:1383
 msgid "Enter new administrator password:"
 msgstr "گذرواژه‌ی جدیدی برای سرپست وارد کنید:"
 
-#: Mailman/Cgi/admin.py:1364
+#: Mailman/Cgi/admin.py:1385
 msgid "Confirm administrator password:"
 msgstr "گذرواژه‌ی سرپرست را تایید کنید:"
 
-#: Mailman/Cgi/admin.py:1369
+#: Mailman/Cgi/admin.py:1390
 msgid "Enter new moderator password:"
 msgstr "گذرواژه‌ی جدیدی برای میان‌دار وارد کنید:"
 
-#: Mailman/Cgi/admin.py:1371
+#: Mailman/Cgi/admin.py:1392
 msgid "Confirm moderator password:"
 msgstr "گذرواژه‌ی میان‌دار را تایید کنید:"
 
-#: Mailman/Cgi/admin.py:1375
+#: Mailman/Cgi/admin.py:1396
 msgid ""
 "In addition to the above passwords you may specify a password for\n"
 "pre-approving posts to the list. Either of the above two passwords can\n"
@@ -1080,162 +1087,168 @@ msgstr ""
 "اگر گذرواژه‌ی زیر تعیین شود، تنها به همین مقصود قابل استفاده خواهد بود و "
 "کاربرد دیگری ندارد."
 
-#: Mailman/Cgi/admin.py:1386
+#: Mailman/Cgi/admin.py:1407
 msgid "Enter new poster password:"
 msgstr "گذرواژه‌ی جدید برای فرستنده را وارد کنید:"
 
-#: Mailman/Cgi/admin.py:1388
+#: Mailman/Cgi/admin.py:1409
 msgid "Confirm poster password:"
 msgstr "گذرواژه‌ی فرستنده را تایید کنید:"
 
-#: Mailman/Cgi/admin.py:1397
+#: Mailman/Cgi/admin.py:1418
 msgid "Submit Your Changes"
 msgstr "فرستادن تغییرات"
 
-#: Mailman/Cgi/admin.py:1421
+#: Mailman/Cgi/admin.py:1442
 msgid "Moderator passwords did not match"
 msgstr "گذرواژه‌های میان‌دار هم‌لنگه نبودند"
 
-#: Mailman/Cgi/admin.py:1432
+#: Mailman/Cgi/admin.py:1453
 msgid "Poster passwords did not match"
 msgstr "گذرواژه‌های فرستنده هم‌لنگه نبودند."
 
-#: Mailman/Cgi/admin.py:1442
+#: Mailman/Cgi/admin.py:1463
 msgid "Administrator passwords did not match"
 msgstr "گذرواژه‌های سرپرست هم‌لنگه نبودند"
 
-#: Mailman/Cgi/admin.py:1489
+#: Mailman/Cgi/admin.py:1510
 msgid "admin mass sub"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1495
+#: Mailman/Cgi/admin.py:1516
 msgid "Already a member"
 msgstr "پیشاپیش مشترک شده"
 
-#: Mailman/Cgi/admin.py:1498
+#: Mailman/Cgi/admin.py:1519 Mailman/Cgi/admin.py:1683
 msgid "&lt;blank line&gt;"
 msgstr "&lt;خط خالی&gt;"
 
-#: Mailman/Cgi/admin.py:1499 Mailman/Cgi/admin.py:1502
+#: Mailman/Cgi/admin.py:1520 Mailman/Cgi/admin.py:1523
+#: Mailman/Cgi/admin.py:1684 Mailman/Cgi/admin.py:1687
 #: Mailman/Cgi/admindb.py:977
 msgid "Bad/Invalid email address"
 msgstr "نشانی رایانامه‌ی نادرست یا نا معتبر"
 
-#: Mailman/Cgi/admin.py:1505
+#: Mailman/Cgi/admin.py:1526 Mailman/Cgi/admin.py:1690
 msgid "Hostile address (illegal characters)"
 msgstr "نشانی خصومت‌آمیز (نویسه‌های غیرمجاز)"
 
-#: Mailman/Cgi/admin.py:1508 bin/add_members:175 bin/clone_member:136
-#: bin/sync_members:268
+#: Mailman/Cgi/admin.py:1529 Mailman/Cgi/admin.py:1693 bin/add_members:175
+#: bin/clone_member:136 bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr "نشانی تحریم‌شده (با %(pattern)s جور در آمد)"
 
-#: Mailman/Cgi/admin.py:1514
+#: Mailman/Cgi/admin.py:1535
 msgid "Successfully invited:"
 msgstr "با موفقیت دعوت شد"
 
-#: Mailman/Cgi/admin.py:1516
+#: Mailman/Cgi/admin.py:1537 Mailman/Cgi/admin.py:1718
 msgid "Successfully subscribed:"
 msgstr "اشتراک با موفقیت انجام شد:"
 
-#: Mailman/Cgi/admin.py:1521
+#: Mailman/Cgi/admin.py:1542
 msgid "Error inviting:"
 msgstr "خطا در دعوت:"
 
-#: Mailman/Cgi/admin.py:1523
+#: Mailman/Cgi/admin.py:1544 Mailman/Cgi/admin.py:1722
 msgid "Error subscribing:"
 msgstr "خطا در مشترک کردن:"
 
-#: Mailman/Cgi/admin.py:1547
+#: Mailman/Cgi/admin.py:1568
 msgid "admin mass unsub"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1557
+#: Mailman/Cgi/admin.py:1578
 msgid "Successfully Unsubscribed:"
 msgstr "با موفقیت لغو اشتراک شد:"
 
-#: Mailman/Cgi/admin.py:1562
+#: Mailman/Cgi/admin.py:1583
 msgid "Cannot unsubscribe non-members:"
 msgstr "نمی‌توان غیر-اعضا را لغو اشتراک کرد:"
 
-#: Mailman/Cgi/admin.py:1575
+#: Mailman/Cgi/admin.py:1596
 msgid "You must provide both current and new addresses."
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1577
+#: Mailman/Cgi/admin.py:1598
 msgid "Current and new addresses must be different."
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1581
+#: Mailman/Cgi/admin.py:1602
 #, fuzzy
 msgid "%(schange_to)s is already a list member."
 msgstr "پیشاپیش عضو است"
 
-#: Mailman/Cgi/admin.py:1586
+#: Mailman/Cgi/admin.py:1607
 #, fuzzy
 msgid "%(schange_to)s is not a valid email address."
 msgstr "باید یک نشانی رایا‌نامه معتبر وارد کنید."
 
-#: Mailman/Cgi/admin.py:1594
+#: Mailman/Cgi/admin.py:1615
 msgid "%(schange_from)s is not a member"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1596
+#: Mailman/Cgi/admin.py:1617
 #, fuzzy
 msgid "%(schange_to)s is already a member"
 msgstr "پیشاپیش عضو است"
 
-#: Mailman/Cgi/admin.py:1599
+#: Mailman/Cgi/admin.py:1620
 #, fuzzy
 msgid "%(schange_to)s matches banned pattern %(spat)s"
 msgstr "%(addr)s تحریم است (جور در آمد با: %(patt)s)"
 
-#: Mailman/Cgi/admin.py:1601
+#: Mailman/Cgi/admin.py:1622
 msgid "Address %(schange_from)s changed to %(schange_to)s"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1608
+#: Mailman/Cgi/admin.py:1629
 msgid ""
 "The member address %(change_from)s on the\n"
 "%(list_name)s list has been changed to %(change_to)s.\n"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1611
+#: Mailman/Cgi/admin.py:1632
 #, fuzzy
 msgid "%(list_name)s address change notice."
 msgstr "آگاه‌سازی از اشتراک%(realname)s "
 
-#: Mailman/Cgi/admin.py:1622
+#: Mailman/Cgi/admin.py:1643
 #, fuzzy
 msgid "Notification sent to %(schange_from)s."
 msgstr "آگاه‌سازی‌ها"
 
-#: Mailman/Cgi/admin.py:1632
+#: Mailman/Cgi/admin.py:1653
 #, fuzzy
 msgid "Notification sent to %(schange_to)s."
 msgstr "آگاه‌سازی‌ها"
 
-#: Mailman/Cgi/admin.py:1638
+#: Mailman/Cgi/admin.py:1727
+#, fuzzy
+msgid "Successfully unsubscribed:"
+msgstr "با موفقیت لغو اشتراک شد:"
+
+#: Mailman/Cgi/admin.py:1735
 msgid "Bad moderation flag value"
 msgstr "مقدار پرچم میان‌داری نادرست است"
 
-#: Mailman/Cgi/admin.py:1658
+#: Mailman/Cgi/admin.py:1755
 msgid "member mgt page"
 msgstr ""
 
-#: Mailman/Cgi/admin.py:1663
+#: Mailman/Cgi/admin.py:1760
 msgid "Not subscribed"
 msgstr "مشترک نشده"
 
-#: Mailman/Cgi/admin.py:1666
+#: Mailman/Cgi/admin.py:1763
 msgid "Ignoring changes to deleted member: %(user)s"
 msgstr "چشم‌پوشی از تغییرات بر عضو حذف شده: %(user)s"
 
-#: Mailman/Cgi/admin.py:1706
+#: Mailman/Cgi/admin.py:1803
 msgid "Successfully Removed:"
 msgstr "با موفقیت حذف شد"
 
-#: Mailman/Cgi/admin.py:1710
+#: Mailman/Cgi/admin.py:1807
 msgid "Error Unsubscribing:"
 msgstr "خطای در لغو اشتراک"
 
@@ -5417,6 +5430,11 @@ msgstr ""
 #, fuzzy
 msgid "Address&nbsp;Change"
 msgstr "نشانی/نام"
+
+#: Mailman/Gui/Membership.py:34
+#, fuzzy
+msgid "Sync&nbsp;Membership&nbsp;List"
+msgstr "فهرست عضویت"
 
 #: Mailman/Gui/NonDigest.py:35
 msgid "Non-digest&nbsp;options"
