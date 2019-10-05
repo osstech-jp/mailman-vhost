@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.28\n"
-"POT-Creation-Date: Tue Sep 17 14:12:32 2019\n"
+"POT-Creation-Date: Sat Oct  5 14:26:33 2019\n"
 "PO-Revision-Date: 2019-06-21 17:24+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
@@ -299,7 +299,7 @@ msgstr ""
 "メーリングリストは機能しません。"
 
 #: Mailman/Cgi/admin.py:231 Mailman/Cgi/admin.py:239 Mailman/Cgi/admin.py:246
-#: Mailman/Cgi/admin.py:1764 Mailman/Gui/GUIBase.py:209
+#: Mailman/Cgi/admin.py:1774 Mailman/Gui/GUIBase.py:209
 msgid "Warning: "
 msgstr "警告: "
 
@@ -1087,21 +1087,21 @@ msgstr "管理者による一括入会"
 msgid "Already a member"
 msgstr "既に会員です"
 
-#: Mailman/Cgi/admin.py:1519 Mailman/Cgi/admin.py:1683
+#: Mailman/Cgi/admin.py:1519 Mailman/Cgi/admin.py:1693
 msgid "&lt;blank line&gt;"
 msgstr "&lt;空白行&gt;"
 
 #: Mailman/Cgi/admin.py:1520 Mailman/Cgi/admin.py:1523
-#: Mailman/Cgi/admin.py:1684 Mailman/Cgi/admin.py:1687
+#: Mailman/Cgi/admin.py:1694 Mailman/Cgi/admin.py:1697
 #: Mailman/Cgi/admindb.py:977
 msgid "Bad/Invalid email address"
 msgstr "誤りまたは無効なメールアドレス"
 
-#: Mailman/Cgi/admin.py:1526 Mailman/Cgi/admin.py:1690
+#: Mailman/Cgi/admin.py:1526 Mailman/Cgi/admin.py:1700
 msgid "Hostile address (illegal characters)"
 msgstr "危険なアドレス (規則外の文字)"
 
-#: Mailman/Cgi/admin.py:1529 Mailman/Cgi/admin.py:1693 bin/add_members:175
+#: Mailman/Cgi/admin.py:1529 Mailman/Cgi/admin.py:1703 bin/add_members:175
 #: bin/clone_member:136 bin/sync_members:268
 msgid "Banned address (matched %(pattern)s)"
 msgstr "入会禁止アドレス (%(pattern)s に一致)"
@@ -1110,7 +1110,7 @@ msgstr "入会禁止アドレス (%(pattern)s に一致)"
 msgid "Successfully invited:"
 msgstr "招待手続き完了:"
 
-#: Mailman/Cgi/admin.py:1537 Mailman/Cgi/admin.py:1718
+#: Mailman/Cgi/admin.py:1537 Mailman/Cgi/admin.py:1728
 msgid "Successfully subscribed:"
 msgstr "入会手続き完了"
 
@@ -1118,7 +1118,7 @@ msgstr "入会手続き完了"
 msgid "Error inviting:"
 msgstr "招待手続きのエラー:"
 
-#: Mailman/Cgi/admin.py:1544 Mailman/Cgi/admin.py:1722
+#: Mailman/Cgi/admin.py:1544 Mailman/Cgi/admin.py:1732
 msgid "Error subscribing:"
 msgstr "入会手続きのエラー:"
 
@@ -1126,7 +1126,7 @@ msgstr "入会手続きのエラー:"
 msgid "admin mass unsub"
 msgstr "管理者による一括退会"
 
-#: Mailman/Cgi/admin.py:1578
+#: Mailman/Cgi/admin.py:1578 Mailman/Cgi/admin.py:1737
 msgid "Successfully Unsubscribed:"
 msgstr "退会手続き完了"
 
@@ -1186,32 +1186,27 @@ msgstr "通知を %(schange_from)s へ送りました。"
 msgid "Notification sent to %(schange_to)s."
 msgstr "通知を %(schange_to)s. へ送りました。"
 
-#: Mailman/Cgi/admin.py:1727
-#, fuzzy
-msgid "Successfully unsubscribed:"
-msgstr "退会手続き完了"
-
-#: Mailman/Cgi/admin.py:1735
+#: Mailman/Cgi/admin.py:1745
 msgid "Bad moderation flag value"
 msgstr "制限フラグの値が間違っています"
 
-#: Mailman/Cgi/admin.py:1755
+#: Mailman/Cgi/admin.py:1765
 msgid "member mgt page"
 msgstr "会員管理のページより"
 
-#: Mailman/Cgi/admin.py:1760
+#: Mailman/Cgi/admin.py:1770
 msgid "Not subscribed"
 msgstr "入会していません"
 
-#: Mailman/Cgi/admin.py:1763
+#: Mailman/Cgi/admin.py:1773
 msgid "Ignoring changes to deleted member: %(user)s"
 msgstr "削除された会員の変更を無視: %(user)s"
 
-#: Mailman/Cgi/admin.py:1803
+#: Mailman/Cgi/admin.py:1813
 msgid "Successfully Removed:"
 msgstr "退会手続き完了:"
 
-#: Mailman/Cgi/admin.py:1807
+#: Mailman/Cgi/admin.py:1817
 msgid "Error Unsubscribing:"
 msgstr "退会手続きのエラー:"
 
@@ -12995,6 +12990,10 @@ msgstr ""
 "        リスト名で指定したリストについては、まとめ読みを送信しない。\n"
 "        複数のリストをまとめ読み送信の対象から外すために繰り返し\n"
 "        指定することができる。\n"
+
+#, fuzzy
+#~ msgid "Successfully unsubscribed:"
+#~ msgstr "退会手続き完了"
 
 #~ msgid "The message headers matched a filter rule"
 #~ msgstr "メールへッダがフィルタ規則に合致しました"
