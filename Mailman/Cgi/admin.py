@@ -1735,7 +1735,7 @@ def change_options(mlist, category, subcat, cgidata, doc):
             doc.AddItem(UnorderedList(*items))
             doc.AddItem('<p>')
         if unsubscribe_success:
-            doc.AddItem(Header(5, _('Successfully unsubscribed:')))
+            doc.AddItem(Header(5, _('Successfully Unsubscribed:')))
             doc.AddItem(UnorderedList(*unsubscribe_success))
             doc.AddItem('<p>')
 
