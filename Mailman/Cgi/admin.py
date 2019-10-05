@@ -457,7 +457,7 @@ def show_results(mlist, doc, category, subcat, cgidata):
         form = Form('%s/%s/%s' % (adminurl, category, subcat),
                     encoding=encoding, mlist=mlist, contexts=AUTH_CONTEXTS)
     else:
-        form = Form('%s/%s' % (adminurl, category), 
+        form = Form('%s/%s' % (adminurl, category),
                     encoding=encoding, mlist=mlist, contexts=AUTH_CONTEXTS)
     # This holds the two columns of links
     linktable = Table(valign='top', width='100%')
@@ -549,7 +549,7 @@ def show_results(mlist, doc, category, subcat, cgidata):
     if category == 'members':
         # Figure out which subcategory we should display
         subcat = Utils.GetPathPieces()[-1]
-        if subcat not in ('list', 'add', 'remove', 'change'):
+        if subcat not in ('list', 'add', 'remove', 'change', 'sync'):
             subcat = 'list'
         # Add member category specific tables
         form.AddItem(membership_options(mlist, subcat, cgidata, doc, form))
@@ -909,6 +909,13 @@ def membership_options(mlist, subcat, cgidata, doc, form):
                            bgcolor=mm_cfg.WEB_HEADER_COLOR)
         container.AddItem(header)
         address_change(mlist, container)
+        return container
+    if subcat == 'sync':
+        header.AddRow([Center(Header(2, _('Sync Membership List')))])
+        header.AddCellInfo(header.GetCurrentRowIndex(), 0, colspan=2,
+                           bgcolor=mm_cfg.WEB_HEADER_COLOR)
+        container.AddItem(header)
+        mass_sync(mlist, container)
         return container
     # Otherwise...
     header.AddRow([Center(Header(2, _('Membership List')))])
@@ -1334,6 +1341,20 @@ def address_change(mlist, container):
 
 
 
+def mass_sync(mlist, container):
+    # MASS SYNC
+    table = Table(width='90%')
+    table.AddRow([Italic(_('Enter one address per line below...'))])
+    table.AddCellInfo(table.GetCurrentRowIndex(), 0, colspan=2)
+    table.AddRow([Center(TextArea(name='memberlist',
+                                  rows=10, cols='70%', wrap=None))])
+    table.AddCellInfo(table.GetCurrentRowIndex(), 0, colspan=2)
+    table.AddRow([Italic(Label(_('...or specify a file to upload:'))),
+                  FileUpload('memberlist_upload', cols='50')])
+    container.AddItem(Center(table))
+
+
+
 def password_inputs(mlist):
     adminurl = mlist.GetScriptURL('admin', absolute=1)
     table = Table(cellspacing=3, cellpadding=4)
@@ -1631,6 +1652,92 @@ def change_options(mlist, category, subcat, cgidata, doc):
             msg.send(mlist)
             doc.AddItem(Header(3, _('Notification sent to %(schange_to)s.')))
         doc.AddItem('<p>')
+
+    # sync operation
+    memberlist = ''
+    memberlist += cgidata.getvalue('memberlist', '')
+    memberlist += cgidata.getvalue('memberlist_upload', '')
+    if memberlist:
+        # Browsers will convert special characters in the text box to HTML
+        # entities. We need to fix those.
+        def i_to_c(mo):
+            # Convert a matched string of digits to the corresponding unicode.
+            return unichr(int(mo.group(1)))
+        def clean_input(x):
+            # Strip leading/trailing whitespace and convert numeric HTML
+            # entities.
+            return re.sub(r'&#(\d+);', i_to_c, x.strip())
+        entries = filter(None,
+                         [clean_input(n) for n in memberlist.splitlines()])
+        lc_addresses = [parseaddr(x)[1].lower() for x in entries
+                        if parseaddr(x)[1]]
+        subscribe_errors = []
+        subscribe_success = []
+        # First we add all the addresses that should be added to the list.
+        for entry in entries:
+            safeentry = Utils.websafe(entry)
+            fullname, address = parseaddr(entry)
+            if mlist.isMember(address):
+                continue
+            # Canonicalize the full name.
+            fullname = Utils.canonstr(fullname, mlist.preferred_language)
+            userdesc = UserDesc(address, fullname,
+                                Utils.MakeRandomPassword(),
+                                0, mlist.preferred_language)
+            try:
+                # Add a member if not yet member.
+                    mlist.ApprovedAddMember(userdesc, 0, 0, 0,
+                                            whence='admin sync members')
+            except Errors.MMBadEmailError:
+                if userdesc.address == '':
+                    subscribe_errors.append((_('&lt;blank line&gt;'),
+                                             _('Bad/Invalid email address')))
+                else:
+                    subscribe_errors.append((safeentry,
+                                             _('Bad/Invalid email address')))
+            except Errors.MMHostileAddress:
+                subscribe_errors.append(
+                    (safeentry, _('Hostile address (illegal characters)')))
+            except Errors.MembershipIsBanned, pattern:
+                subscribe_errors.append(
+                    (safeentry, _('Banned address (matched %(pattern)s)')))
+            else:
+                member = Utils.uncanonstr(formataddr((fullname, address)))
+                subscribe_success.append(Utils.websafe(member))
+
+        # Then we remove the addresses not in our list.
+        unsubscribe_errors = []
+        unsubscribe_success = []
+
+        for entry in mlist.getMembers():
+            # If an entry is not found in the uploaded "entries" list, then
+            # remove the member.
+            if not(entry in lc_addresses):
+                try:
+                    mlist.ApprovedDeleteMember(entry, 0, 0)
+                except Errors.NotAMemberError:
+                    # This can happen if the address is illegal (i.e. can't be
+                    # parsed by email.Utils.parseaddr()) but for legacy
+                    # reasons is in the database.  Use a lower level remove to
+                    # get rid of this member's entry
+                    mlist.removeMember(entry)
+                else:
+                    unsubscribe_success.append(Utils.websafe(entry))
+
+        if subscribe_success:
+            doc.AddItem(Header(5, _('Successfully subscribed:')))
+            doc.AddItem(UnorderedList(*subscribe_success))
+            doc.AddItem('<p>')
+        if subscribe_errors:
+            doc.AddItem(Header(5, _('Error subscribing:')))
+            items = ['%s -- %s' % (x0, x1) for x0, x1 in subscribe_errors]
+            doc.AddItem(UnorderedList(*items))
+            doc.AddItem('<p>')
+        if unsubscribe_success:
+            doc.AddItem(Header(5, _('Successfully unsubscribed:')))
+            doc.AddItem(UnorderedList(*unsubscribe_success))
+            doc.AddItem('<p>')
+
     # See if this was a moderation bit operation
     if cgidata.has_key('allmodbit_btn'):
         val = safeint('allmodbit_val')

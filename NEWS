@@ -30,6 +30,14 @@ Here is a history of user visible changes to Mailman.
       feature can be used in combination with or instead of the Google
       reCAPTCHA feature added in 2.1.26.
 
+    - Thanks to Ralf Hildebrandt the web admin Membership Management section
+      now has a feature to sync the list's membership with a list of email
+      addresses as with the bin/sync_members command.
+
+  i18n
+
+    - The Japanese translation has been updated by Yasuhito FUTATSUKI.
+
   Bug Fixes and other patches
 
     - Fixed the confirm CGI to catch a rare TypeError on simultaneous
@@ -58,6 +66,9 @@ Here is a history of user visible changes to Mailman.
     - With the Postfix MTA and virtual domains, mappings for the site list
       -bounces and -request addresses in each virtual domain are now added
       to data/virtual-mailman (-owner was done in 2.1.24).  (LP: #1831777)
+
+    - The paths.py module now extends sys.path with the result of
+      site.getsitepackages() if available.  (LP: #1838866)
 
 2.1.29 (24-Jul-2018)
 
