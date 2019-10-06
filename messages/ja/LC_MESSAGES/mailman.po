@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.28\n"
 "POT-Creation-Date: Sat Oct  5 14:26:33 2019\n"
-"PO-Revision-Date: 2019-06-21 17:24+09:00\n"
+"PO-Revision-Date: 2019-10-06 08:07+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -648,9 +648,8 @@ msgid "Address Change"
 msgstr "アドレス変更"
 
 #: Mailman/Cgi/admin.py:914
-#, fuzzy
 msgid "Sync Membership List"
-msgstr "会員リスト"
+msgstr "会員リストの同期"
 
 #: Mailman/Cgi/admin.py:921
 msgid "Membership List"
@@ -6117,9 +6116,8 @@ msgid "Address&nbsp;Change"
 msgstr "アドレス変更"
 
 #: Mailman/Gui/Membership.py:34
-#, fuzzy
 msgid "Sync&nbsp;Membership&nbsp;List"
-msgstr "会員リスト"
+msgstr "会員リストの同期"
 
 #: Mailman/Gui/NonDigest.py:35
 msgid "Non-digest&nbsp;options"
