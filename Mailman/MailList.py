@@ -969,8 +969,9 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             cookie = self.pend_new(Pending.SUBSCRIPTION, userdesc)
             # Send the user the confirmation mailback
             if remote is None:
-                by = remote = ''
+                oremote = by = remote = ''
             else:
+                oremote = remote
                 by = ' ' + remote
                 remote = _(' from %(remote)s')
 
@@ -997,7 +998,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             msg['Reply-To'] = self.GetRequestEmail(cookie)
             # Is this confirmation a reply to an email subscribe from this
             # address?
-            if remote.lower().endswith(email.lower()):
+            if oremote.lower().endswith(email.lower()):
                 autosub = 'auto-replied'
             else:
                 autosub = 'auto-generated'
