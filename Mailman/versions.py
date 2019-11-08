@@ -508,6 +508,7 @@ def NewVars(l):
                        mm_cfg.DEFAULT_EQUIVALENT_DOMAINS)
     add_only_if_missing('new_member_options',
                         mm_cfg.DEFAULT_NEW_MEMBER_OPTIONS)
+    add_only_if_missing('drop_cc', mm_cfg.DEFAULT_DROP_CC)
     # Emergency moderation flag
     add_only_if_missing('emergency', 0)
     add_only_if_missing('hold_and_cmd_autoresponses', {})

@@ -1443,6 +1443,13 @@ OWNERS_CAN_PRESERVE_FILTERED_MESSAGES = Yes
 # Check for administrivia in messages sent to the main list?
 DEFAULT_ADMINISTRIVIA = Yes
 
+# The process which avoids sending a list copy of a message to a member who
+# is also directly addressed in To: or Cc: can drop the address from Cc: to
+# avoid growing a long Cc: list in long threads.  This can be undesirable as
+# it can break DKIM signatures and possibly cause confusion.  To avoid changes
+# to Cc: headers, set the list's drop_cc to No.
+DEFAULT_DROP_CC = Yes
+
 
 
 #####
