@@ -34,6 +34,10 @@ Here is a history of user visible changes to Mailman.
       now has a feature to sync the list's membership with a list of email
       addresses as with the bin/sync_members command.
 
+    - There is a new drop_cc list attribute set from DEFAULT_DROP_CC.  This
+      controls the dropping of addresses from the Cc: header in delivered
+      messages by the duplicate avoidance process.  (LP: #1845751)
+
   i18n
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
@@ -69,6 +73,9 @@ Here is a history of user visible changes to Mailman.
 
     - The paths.py module now extends sys.path with the result of
       site.getsitepackages() if available.  (LP: #1838866)
+
+    - A bug causing a UnicodeDecodeError in preparing to send the confirmation
+      request message to a new subscriber has been fixed.  (LP: #1851442)
 
 2.1.29 (24-Jul-2018)
 

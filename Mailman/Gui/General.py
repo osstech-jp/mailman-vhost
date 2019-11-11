@@ -505,6 +505,19 @@ class General(GUIBase):
                  here."""))
                 )
 
+        # Do we munge Cc: in AvoidDuplicates.py
+        rtn.append(
+            ('drop_cc', mm_cfg.Radio,
+             (_('No'), _('Yes')), 0,
+             _('Should duplicate avoidance drop addresses from Cc: headers'),
+             _("""The process which avoids sending a list copy of a message to
+               a member who is also directly addressed in To: or Cc: can drop
+               the address from Cc: to avoid growing a long Cc: list in long
+               threads.  This can be undesirable as it can break DKIM
+               signatures and possibly cause confusion.  To avoid changes to
+               Cc: headers, set this to No."""))
+             )
+
         # Discard held messages after this number of days
         rtn.append(
             ('max_days_to_hold', mm_cfg.Number, 7, 0,

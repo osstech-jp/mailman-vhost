@@ -386,6 +386,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         self.obscure_addresses = mm_cfg.DEFAULT_OBSCURE_ADDRESSES
         self.admin_member_chunksize = mm_cfg.DEFAULT_ADMIN_MEMBER_CHUNKSIZE
         self.administrivia = mm_cfg.DEFAULT_ADMINISTRIVIA
+        self.drop_cc = mm_cfg.DEFAULT_DROP_CC
         self.preferred_language = mm_cfg.DEFAULT_SERVER_LANGUAGE
         self.available_languages = []
         self.include_rfc2369_headers = 1
@@ -968,8 +969,9 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             cookie = self.pend_new(Pending.SUBSCRIPTION, userdesc)
             # Send the user the confirmation mailback
             if remote is None:
-                by = remote = ''
+                oremote = by = remote = ''
             else:
+                oremote = remote
                 by = ' ' + remote
                 remote = _(' from %(remote)s')
 
@@ -996,7 +998,7 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             msg['Reply-To'] = self.GetRequestEmail(cookie)
             # Is this confirmation a reply to an email subscribe from this
             # address?
-            if remote.lower().endswith(email.lower()):
+            if oremote.lower().endswith(email.lower()):
                 autosub = 'auto-replied'
             else:
                 autosub = 'auto-generated'

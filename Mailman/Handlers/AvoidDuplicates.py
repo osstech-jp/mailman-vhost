@@ -53,6 +53,7 @@ def process(mlist, msg, msgdata):
         explicit_recips[addr.lower()] = True
     # Figure out the set of explicit recipients
     ccaddrs = {}
+    munge_cc = False
     for header in ('to', 'cc', 'resent-to', 'resent-cc'):
         addrs = getaddresses(msg.get_all(header, []))
         if header == 'cc':
@@ -88,6 +89,7 @@ def process(mlist, msg, msgdata):
                 newrecips.append(r)
             elif ccaddrs.has_key(r.lower()):
                 del ccaddrs[r.lower()]
+                munge_cc = True
         else:
             # Otherwise, this is the first time they've been in the recips
             # list.  Add them to the newrecips list and flag them as having
@@ -96,10 +98,13 @@ def process(mlist, msg, msgdata):
     # Set the new list of recipients
     msgdata['recips'] = newrecips
     # RFC 2822 specifies zero or one CC header
-    if ccaddrs:
+    if ccaddrs and mlist.drop_cc and munge_cc:
+        # There are remaining Ccs and we've dropped one or more and the list
+        # allows changing.
         change_header('Cc',
         COMMASPACE.join([formataddr(i) for i in ccaddrs.values()]),
         mlist, msg, msgdata)
-    else:
+    elif not ccaddrs and mlist.drop_cc:
+        # The list allows changing and there are no remaining Ccs
         del msg['cc']
 
