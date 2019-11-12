@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.28\n"
 "POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
-"PO-Revision-Date: 2019-10-06 08:07+09:00\n"
+"PO-Revision-Date: 2019-11-11 21:49+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -5923,7 +5923,7 @@ msgstr ""
 
 #: Mailman/Gui/General.py:512
 msgid "Should duplicate avoidance drop addresses from Cc: headers"
-msgstr ""
+msgstr "配送の重複を避ける際にCc:ヘッダからアドレスを削りますか"
 
 #: Mailman/Gui/General.py:513
 msgid ""
@@ -5937,6 +5937,13 @@ msgid ""
 "to\n"
 "               Cc: headers, set this to No."
 msgstr ""
+"直接To:あるいはCc:に向けられている会員のアドレスにリスト宛の\n"
+"               メールのコピーを送るのを避ける過程で、長いスレッドで Cc: の\n"
+"               列挙が長く伸びるのを避けるために Cc: からアドレスを削る\n"
+"               ことがあります。このことによって DKIM署名が壊れたり、\n"
+"               誤解を招いたりすることがあるため、これは望ましいことでは\n"
+"               ないかもしれません。 Cc: ヘッダに手を加えるのを避けるには\n"
+"               これを「いいえ」にセットします。"
 
 #: Mailman/Gui/General.py:524
 msgid ""
