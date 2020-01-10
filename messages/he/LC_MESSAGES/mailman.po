@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2007-04-05 21:33+0300\n"
 "Last-Translator: Dov Zamir <linux@zamirfamily.com>\n"
 "Language-Team: Hebrew\n"
@@ -3167,15 +3167,20 @@ msgstr ""
 "אל מפקח הרשימה. תקבל דוא\"ל המודיע לך בדבר החלטתו\n"
 "כאשר הוא יתפנה לטפל בבקשתך."
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "הודעת מנוי של %(realname)s"
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "הנך מנוי כבר."
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "אזעקת פרטיות של דוור"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3204,15 +3209,15 @@ msgstr ""
 "אם לדעתך נעשה ניסיון לגלות באם אתה מנוי לרשימה זו, ומוטרד מפגיעות\n"
 "הפרטיות שלך, אתה מוזמן לשלוח מסר לבעלי הרשימה ב-%(listowner)s.\n"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "רשימה זו לא תומכת בתקצירים."
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "רשימה זו תומכת בתקצירים בלבד."
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "נרשמת בהצלחה לרשימת הדיוור %(realname)s"
 
@@ -3793,15 +3798,15 @@ msgstr "המנוי שלך נאסר בגלל כתובת דוא\"ל לא מאוב�
 msgid "You are already subscribed!"
 msgstr "הנך רשום כבר!"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr "אף אחד לא יכול להרשם לתקצירים של רשימה זו!"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "רשימה זו תומכת במנויי תקצירים בלבד!"
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -3809,7 +3814,7 @@ msgstr ""
 "בקשת המנוי שלך הועברה אל מנהל הרשימה\n"
 " ב-%(listowner)s לעיון."
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "בקשת המנוי הצליחה."
 
@@ -4138,11 +4143,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr "הודעת גישוש של רשימת הדיוור %(listname)s"
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "מסיבה לא ידועה"
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "הודעתך נדחתה"
 
@@ -8624,56 +8629,56 @@ msgstr "דרוש אישורך כדי להצטרף לרשימת דיוור %(list
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "אישורך דרוש כדי לעזוב את רשימת דיוור %(listname)s"
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr "מ- %(remote)s"
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "מנויים ל-%(realname)s מחייבים אישור מפקח"
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "הודעת מנוי של %(realname)s"
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "ביטולי מנויים מחייבים אישור מפקח"
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr "הודעת עזיבה של %(realname)s"
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "הודעת עזיבה של %(realname)s"
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "מחרוזת אישור שגויה"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "מחרוזת אישור שגויה"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "מנויים ל-%(name)s מחייבים אישור מנהל"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "מחרוזת אישור שגויה"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "הקלד עוגיית אישור"
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "מענה-אוטומטי אחרון להיום"
 

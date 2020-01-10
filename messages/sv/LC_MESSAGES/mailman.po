@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1b1\n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2002-12-24 14:35+0100\n"
 "Last-Translator: Eva Österlind <eva.osterlind@arvika.se>\n"
 "Language-Team: Swedish <information@arvika.se>\n"
@@ -4372,21 +4372,28 @@ msgstr ""
 "Du kommer att få ett e-postbrev med moderatorns beslut så snart han/hon är "
 "klar."
 
+# Mailman/MailList.py:861 bin/add_members:277
+# Mailman/MailList.py:909 bin/add_members:281
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "Meddelande om anmälan till e-postlistan %(realname)s"
+
 # Mailman/Cgi/subscribe.py:216 Mailman/Commands/cmd_confirm.py:60
 # Mailman/Cgi/subscribe.py:216 Mailman/Commands/cmd_confirm.py:59
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Du är redan medlem av listan."
 
 # Mailman/Cgi/subscribe.py:230
 # Mailman/Cgi/subscribe.py:230
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "Säkerhetsmeddelande från Mailman"
 
 # Mailman/Cgi/subscribe.py:231
 # Mailman/Cgi/subscribe.py:231
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -4428,19 +4435,19 @@ msgstr ""
 
 # Mailman/Cgi/subscribe.py:250
 # Mailman/Cgi/subscribe.py:250
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "Denna lista stöder inte sammandragsversioner."
 
 # Mailman/Cgi/subscribe.py:252
 # Mailman/Cgi/subscribe.py:252
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "Denna lista stöder bara sammandragsversioner."
 
 # Mailman/Cgi/subscribe.py:259
 # Mailman/Cgi/subscribe.py:259
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "Du är nu anmäld till e-postlistan %(realname)s."
 
@@ -5221,20 +5228,20 @@ msgstr "Du är redan medlem av listan!"
 
 # Mailman/Commands/cmd_subscribe.py:112
 # Mailman/Commands/cmd_subscribe.py:122
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr ""
 "Det är inte möjligt att få en sammandragsversion som medlem på denna lista!"
 
 # Mailman/Commands/cmd_subscribe.py:115
 # Mailman/Commands/cmd_subscribe.py:125
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "Denna lista stöder bara sammandragsversioner!"
 
 # Mailman/Commands/cmd_subscribe.py:120
 # Mailman/Commands/cmd_subscribe.py:130
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -5245,7 +5252,7 @@ msgstr ""
 
 # Mailman/Commands/cmd_subscribe.py:125
 # Mailman/Commands/cmd_subscribe.py:135
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "Ansökan om medlemskap har tagits emot"
 
@@ -5668,13 +5675,13 @@ msgstr "Påminnelse från e-postlistan %(listname)s"
 
 # Mailman/Errors.py:115
 # Mailman/Errors.py:116
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "Av okänd anledning"
 
 # Mailman/Errors.py:121 Mailman/Errors.py:144
 # Mailman/Errors.py:122 Mailman/Errors.py:145
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "Din anmälan blev inte godkänd "
 
@@ -11098,75 +11105,75 @@ msgstr "Du är inte medlem av e-postlistan %(listname)s"
 
 # Mailman/MailList.py:766 Mailman/MailList.py:1120
 # Mailman/MailList.py:813 Mailman/MailList.py:1174
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr " från %(remote)s"
 
 # Mailman/MailList.py:803
 # Mailman/MailList.py:850
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "anmälan till %(realname)s kräver godkännande av moderator"
 
 # Mailman/MailList.py:861 bin/add_members:277
 # Mailman/MailList.py:909 bin/add_members:281
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "Meddelande om anmälan till e-postlistan %(realname)s"
 
 # Mailman/MailList.py:879
 # Mailman/MailList.py:924
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "avanmälan kräver godkännande av moderator"
 
 # Mailman/MailList.py:900
 # Mailman/MailList.py:945
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr "Meddelande om avanmälan från e-postlistan %(realname)s"
 
 # Mailman/MailList.py:900
 # Mailman/MailList.py:945
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "Meddelande om avanmälan från e-postlistan %(realname)s"
 
 # Mailman/Cgi/confirm.py:160
 # Mailman/Cgi/confirm.py:160
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Ogiltig identifikation för bekräftelse"
 
 # Mailman/Cgi/confirm.py:160
 # Mailman/Cgi/confirm.py:160
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Ogiltig identifikation för bekräftelse"
 
 # Mailman/MailList.py:1040
 # Mailman/MailList.py:1089
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "Anmälan till %(name)s kräver godkännande av administratör"
 
 # Mailman/Cgi/confirm.py:160
 # Mailman/Cgi/confirm.py:160
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "Ogiltig identifikation för bekräftelse"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "efter din önskan"
 
 # Mailman/MailList.py:1343
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "Dagens sista automatiska svarsmeddelande"
 

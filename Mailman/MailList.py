@@ -861,6 +861,25 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
     #
     # Membership management front-ends and assertion checks
     #
+    def CheckPending(self, email):
+        """Check if there is already an unexpired pending subscription for
+        this email.
+        """
+        if not mm_cfg.REFUSE_SECOND_PENDING:
+            return False
+        pends = self._Pending__load()
+        # Save and reload the db to evict expired pendings.
+        self._Pending__save(pends)
+        pends = self._Pending__load()
+        for k, v in pends.items():
+            if k in ('evictions', 'version'):
+                continue
+            op, data = v
+            if (op == Pending.SUBSCRIPTION and
+                    data.address.lower() == email.lower()):
+                return True
+        return False
+
     def InviteNewMember(self, userdesc, text=''):
         """Invite a new member to the list.
 
@@ -947,6 +966,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         Utils.ValidateEmail(email)
         if self.isMember(email):
             raise Errors.MMAlreadyAMember, email
+        if self.CheckPending(email):
+            raise Errors.MMAlreadyPending, email
         if email.lower() == self.GetListEmail().lower():
             # Trying to subscribe the list to itself!
             raise Errors.MMBadEmailError

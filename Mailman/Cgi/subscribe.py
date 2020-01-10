@@ -291,6 +291,9 @@ your subscription.""")
 Your subscription request was deferred because %(x)s.  Your request has been
 forwarded to the list moderator.  You will receive email informing you of the
 moderator's decision when they get to your request.""")
+    except Errors.MMAlreadyPending:
+        # User already has a subscription pending
+        results = _('You already have a subscription pending confirmation')
     except Errors.MMAlreadyAMember:
         # Results string depends on whether we have private rosters or not
         if not privacy_results:
