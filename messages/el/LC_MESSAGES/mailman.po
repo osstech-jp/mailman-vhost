@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxpaint-2.1pre\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2011-09-15 11:53+0800\n"
 "Last-Translator: Limperis Antonis <limperis@cti.gr>\n"
 "Language-Team: Greek <listmaster@sch.gr>\n"
@@ -3360,15 +3360,20 @@ msgstr ""
 "πληροφορεί\n"
 "για την απόφαση του διαχειριστή όταν λάβει το αίτημά σας."
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "ειδοποίηση εγγραφής στην %(realname)s"
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Είστε ήδη εγγεγραμμένος."
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "Ιδιωτική προειδοποίηση του Mailman"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3406,15 +3411,15 @@ msgstr ""
 "διαχειριστή\n"
 "της λίστας στο %(listowner)s.\n"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "Αυτή η λίστα δεν υποστηρίζει συγκεντρωτική παράδοση μηνυμάτων."
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "Αυτή η λίστα υποστηρίζει μόνο συγκεντρωτική παράδοση μηνυμάτων."
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr ""
 "Έχετε εγγραφεί με επιτυχία στη λίστα ηλεκτρονικού ταχυδρομείου %(realname)s."
@@ -4062,16 +4067,16 @@ msgstr ""
 msgid "You are already subscribed!"
 msgstr "Είστε ήδη εγγεγραμμένος!"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr ""
 "Κανένας δε μπορεί να εγγραφεί για να λαμβάνει digests αυτής της λίστας!"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "Αυτή η λίστα υποστηρίζει εγγραφές μόνο για τη λήψη digests!"
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -4079,7 +4084,7 @@ msgstr ""
 "Το αίτημά σας για εγγραφή έχει προωθηθεί στο διαχειριστή της λίστας\n"
 "στο %(listowner)s για εξέταση."
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "Το αίτημα εγγραφής ολοκληρώθηκε με επιτυχία."
 
@@ -4429,11 +4434,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr "μήνυμα ελέγχου λίστας αλληλογραφίας %(listname)s"
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "Για κάποιο άγνωστο λόγο"
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "Το μήνυμά σας απορρίφθηκε"
 
@@ -9564,56 +9569,56 @@ msgstr "Έχετε προσκληθεί να συνδεθείτε στην λίστα %(listname)s"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "Δεν είστε μέλος της %(listname)s λίστας"
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr " από την ip %(remote)s"
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "η εγγραφή στην %(realname)s απαιτεί την έγκριση του μεσολαβητή"
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "ειδοποίηση εγγραφής στην %(realname)s"
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "η διαγραφή απαιτεί την έγκριση του μεσολαβητή"
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr "ειδοποίηση διαγραφής από την %(realname)s"
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "ειδοποίηση διαγραφής από την %(realname)s"
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Μη έγκυρη ακουλουθία επιβεβαίωσης"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Μη έγκυρη ακουλουθία επιβεβαίωσης"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "η εγγραφή στην  %(name)s απαιτεί την έγκριση του διαχειριστή"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "Μη έγκυρη ακουλουθία επιβεβαίωσης"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "Εισάγετε το cookie επιβεβαίωσης"
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "Τελευταία ειδοποίηση αυτόματης απάντησης για σήμερα"
 

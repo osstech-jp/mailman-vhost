@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2005-05-12 07:35+0300\n"
 "Last-Translator: Stefaniu Criste <gupi@hangar.ro>\n"
 "Language-Team: Romanian <en@li.org>\n"
@@ -3270,15 +3270,20 @@ msgstr ""
 "informativ privind decizia moderatorului, de îndată ce acesta vă va prelua "
 "cererea."
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "notificare de abonare la %(realname)s"
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Sunteţi deja abonat."
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "Alertă Mailman"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3300,15 +3305,15 @@ msgstr ""
 "%(listaddr)s.  Această adresă este deja abonată la această listă.\n"
 "\n"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "Această listă nu suportă livrarea rezumatelor zilnice."
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "Această listă suportă numai livrarea de rezumate zilnice."
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "Aţi fost abonat cu succes la lista de discuţii %(realname)s."
 
@@ -3880,15 +3885,15 @@ msgstr ""
 msgid "You are already subscribed!"
 msgstr "Sunteţi deja abonat!"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr "Nimeni nu se poate abona la rezumatele zilnice ale acestei liste!"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "Această listă suportă doar abonamente la rezumatele zilnice!"
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -3896,7 +3901,7 @@ msgstr ""
 "Cererea dumneavoastră de abonare a fost înaintată administratorului listei\n"
 "la %(listowner)s pentru revizuire."
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "Cererea de abonare a fost trimisă."
 
@@ -4232,11 +4237,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr "Mesaj de reamintire pentru lista de discuţii %(listname)s"
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "Din motive necunoscute"
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "Mesajul dumneavoastră a fost respins"
 
@@ -8640,56 +8645,56 @@ msgstr ""
 "Este necesară confirmarea dumneavoastră pentru părăsirea listei de discuţii "
 "%(listname)s"
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr " de %(remote)s"
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "abonamentele la %(realname)s necesită aprobarea moderatorului"
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "notificare de abonare la %(realname)s"
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "părăsirea listei necesită aprobarea moderatorului"
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr "notificare de părăsire a listei %(realname)s"
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "notificare de părăsire a listei %(realname)s"
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Cod de confirmare eronat"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Cod de confirmare eronat"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "abonarea la %(name)s necesită aprobarea administratorului"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "Cod de confirmare eronat"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "Introduceţi codul de confirmare"
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "Ultima notificare de răspuns automat de azi"
 

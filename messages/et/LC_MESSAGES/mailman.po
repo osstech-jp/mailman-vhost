@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2005-04-14 10:45+0300\n"
 "Last-Translator: Anti Veeranna <duke@linux.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -3147,15 +3147,20 @@ msgstr ""
 "Liitumissoovi töötlemine on peatatud. Põhjus: %(x)s. Soov edastati\n"
 "listi toimetajale läbivaatuseks, tema otsusest saad teada meili teel."
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "%(realname)s tellimuse teavitus"
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Sa oled selle listi juba tellinud."
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "Mailman privaatsushäire"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3186,15 +3191,15 @@ msgstr ""
 "liige või mitte, siis võid ühendust võtta listi omanikuga aadressil\n"
 "%(listowner)s.\n"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "See list ei toeta kokkuvõtete saatmist."
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "See list toetab ainult kokkuvõtete saatmist."
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "Sa oled nüüd listi %(realname)s liige."
 
@@ -3805,15 +3810,15 @@ msgstr ""
 msgid "You are already subscribed!"
 msgstr "Teil on see list juba tellitud!"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr "Selle listi kokkuvõtteid ei saa tellida!"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "See list toetab ainult kokkuvõtete tellimist!"
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -3821,7 +3826,7 @@ msgstr ""
 "Teie soov listi tellida edastati läbivaatuseks listi omanikule\n"
 "aadressil %(listowner)s. "
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "Tellimissoov aktsepteeriti."
 
@@ -4157,11 +4162,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr "%(listname)s listi testkiri"
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "Tundmatu põhjus"
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "Sinu kirja ei lubatud listi"
 
@@ -8485,56 +8490,56 @@ msgstr "%(listname)s listi tellimiseks on tarvis sinu kinnitust"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr " %(listname)s listist lahkumiseks on tarvis sinu kinnitust"
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr " from %(remote)s"
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "Listi %(realname)s tellimiseks on vaja toimetaja nõusolekut."
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s tellimuse teavitus"
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "tellimuse lõpetamiseks on vaja omaniku nõusolekut."
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s tellimuse lõpetamise teavitus"
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s tellimuse lõpetamise teavitus"
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Vigane kinnituskood"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Vigane kinnituskood"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "Listi %(name)s tellimiseks on vaja listi omaniku nõusolekut."
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "Vigane kinnituskood"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "Sisesta kinnituskood"
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "Viimane automaatvastus tänaseks"
 

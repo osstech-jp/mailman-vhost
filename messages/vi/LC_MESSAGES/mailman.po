@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman-2.1.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2008-01-03 22:05+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -3217,15 +3217,20 @@ msgstr ""
 "Yêu cầu của bạn đã được chuyển tiếp tới điều tiết hộp thư.\n"
 "Bạn sẽ nhận lá thư cho bạn biết điều tiết viên đã đi tới quyết định nào."
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "thông báo đăng ký với hộp thư chung %(realname)s"
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Bạn đã đăng ký trước."
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "Cảnh giác riêng tư Mailman"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3257,15 +3262,15 @@ msgstr ""
 "và bạn đang lo lăng về sự riêng tư mình,\n"
 "vui lòng gởi thư cho quản trị hộp thư tại %(listowner)s.\n"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "Hộp thư chung này không hỗ trợ khả năng phát bó thư."
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "Hộp thư chung này hỗ trợ chỉ khả năng phát bó thư thôi."
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "Bạn đã được đăng ký với hộp thư chung %(realname)s."
 
@@ -3876,19 +3881,19 @@ msgstr ""
 msgid "You are already subscribed!"
 msgstr "• Bạn đã đăng ký trước. •"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr ""
 "• Không cho phép ai đăng ký với khả năng\n"
 "bó thư của hộp thư chung này. •"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr ""
 "• Hộp thư chung này hỗ trợ chỉ việc đăng ký\n"
 "với khả năng bó thư thôi. •"
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -3896,7 +3901,7 @@ msgstr ""
 "Yêu cầu đăng ký của bạn đã được chuyển tiếp tới quản trị hộp thư\n"
 "tại %(listowner)s để xem lại."
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "Mới đăng ký."
 
@@ -4243,11 +4248,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr "thư dò của hộp thư chung %(listname)s"
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "Không biết sao."
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "Thư của bạn đã bị từ chối"
 
@@ -8839,60 +8844,60 @@ msgstr "Cần thiết bạn xác nhận để tham gia hộp thư chung %(listna
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "Cần thiết bạn xác nhận để rời đi ra hộp thư chung %(listname)s"
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr " từ %(remote)s"
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr ""
 "các việc đăng ký với hộp thư chung %(realname)s cần thiết điều tiết viên tán "
 "thành"
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "thông báo đăng ký với hộp thư chung %(realname)s"
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "các việc bỏ đăng ký cần thiết điều tiết viên tán thành"
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr "thông báo bỏ đăng ký với hộp thư chung %(realname)s"
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "thông báo bỏ đăng ký với hộp thư chung %(realname)s"
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Chuỗi xác nhận sai"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Chuỗi xác nhận sai"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr ""
 "các việc đăng ký với hộp thư chung %(name)s cần thiết điều tiết viên tán "
 "thành"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "Chuỗi xác nhận sai"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "Nhập cookie xác nhận"
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "Thông báo đáp ứng tự động cuối cùng của hôm nay"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1\n"
 "Report-Msgid-Bugs-To: https://github.com/aviarypl/mailman-l10n-pl/issues\n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2016-02-15 17:11+0100\n"
 "Last-Translator: Stefan Plewako <splewako@aviary.pl>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -3197,15 +3197,20 @@ msgstr ""
 "pro¶ba zosta³a skierowana do moderatora listy. Otrzymasz maila\n"
 "z decyzj± moderatora."
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "Powiadomienie o prenumeracie %(realname)s"
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "Jeste¶ ju¿ zapisany."
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "Uwaga dotycz±ca prywatno¶ci"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3238,15 +3243,15 @@ msgstr ""
 "mo¿esz skontaktowaæ siê z administratorem:\n"
 "%(listowner)s.\n"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "Ta lista nie udostêpnia trybu paczek."
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "Ta lista udostêpnia tylko tryb paczek."
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "Zosta³e¶ zapisany na listê %(realname)s."
 
@@ -3848,15 +3853,15 @@ msgstr ""
 msgid "You are already subscribed!"
 msgstr "Jeste¶ ju¿ zapisany!"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr "Nie mo¿esz zapisaæ siê na tê listê w trybie paczek!"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "Ta lista umo¿liwia zapisywanie siê tylko w trybie paczek!"
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -3864,7 +3869,7 @@ msgstr ""
 "Twoja pro¶ba o zapisanie siê zosta³a przekazana opiekunowi listy \n"
 " %(listowner)s i czeka na jego zgodê."
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "Pro¶ba o prenumeratê potwierdzona."
 
@@ -4201,11 +4206,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr "Test listy %(listname)s"
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "Z nieznanego powodu"
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "Twój list zosta³ odrzucony"
 
@@ -8628,55 +8633,55 @@ msgstr "Prosimy o potwierdzenie prenumeraty listy %(listname)s"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "Prosimy o potwierdzenie wypisania siê z listy %(listname)s"
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr " z adresu %(remote)s"
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "prenumerata listy %(realname)s wymaga zgody administratora"
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "Powiadomienie o prenumeracie %(realname)s"
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "wypisanie siê wymaga zgody administratora"
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr "Powiadomienie o wypisaniu siê %(realname)s"
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s - powiadomienie o zmianie adresu"
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Nieprawid³owy kod potwierdzaj±cy"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Nieprawid³owy kod potwierdzaj±cy"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "%(name)s prosi o zatwierdzenie jego subskrypcji"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "Nieprawid³owy kod potwierdzaj±cy"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "Wprowad¼ kod potwierdzaj±cy"
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "Dzisiaj nie otrzymasz ju¿ kolejnych automatycznych wiadomo¶ci"
 
