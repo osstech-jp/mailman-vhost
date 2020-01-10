@@ -38,6 +38,12 @@ Here is a history of user visible changes to Mailman.
       controls the dropping of addresses from the Cc: header in delivered
       messages by the duplicate avoidance process.  (LP: #1845751)
 
+    - There is a new REFUSE_SECOND_PENDING mm_cfg.py setting that will cause
+      a second request to subscribe to a list when there is already a pending
+      confirmation for that user.  This can be set to Yes to prevent
+      mailbombing of a third party by repeatedly posting the subscribe form.
+      (LP: #1859104)
+
   i18n
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.

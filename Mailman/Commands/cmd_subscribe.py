@@ -128,6 +128,10 @@ the email address you gave is insecure."""))
     except Errors.MMAlreadyAMember:
         res.results.append(_('You are already subscribed!'))
         return STOP
+    except Errors.MMAlreadyPending:
+        res.results.append(
+            _('You already have a subscription pending confirmation'))
+        return STOP
     except Errors.MMCantDigestError:
         res.results.append(
             _('No one can subscribe to the digest of this list!'))

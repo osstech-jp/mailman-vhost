@@ -1122,6 +1122,14 @@ ANONYMOUS_LIST_KEEP_HEADERS = ['^(?!x-)', '^x-mailman-',
                                '^x-ack:', '^x-beenthere:',
                                '^x-list-administrivia:', '^x-spam-',
                               ]
+#
+# It is possible to mailbomb a third party by repeatrdly posting the subscribe
+# form.  You can prevent this by setting the following to Yes which will refuse
+# pending a subscription confirmation when one is already pending.  The down
+# side to this is if a subscriber loses or doesn't receive the confirmation
+# request email, she has to wait PENDING_REQUEST_LIFE (default 3 days) before
+# she can request another.
+REFUSE_SECOND_PENDING = No
 
 
 
