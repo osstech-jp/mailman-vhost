@@ -69,7 +69,7 @@ do the following (as root, from the Mailman install directory):
 
 <p>
 <div class="verbatim"><pre>
-    % cp scripts/mailman /etc/init.d/mailman
+    % cp misc/mailman /etc/init.d/mailman
     % chkconfig --add mailman
 </pre></div>
 
@@ -81,7 +81,7 @@ On Gentoo Linux, you can do the following:
 
 <p>
 <div class="verbatim"><pre>
-    % cp scripts/mailman /etc/init.d/mailman
+    % cp misc/mailman /etc/init.d/mailman
     % rc-update add mailman default
 </pre></div>
 
@@ -99,8 +99,7 @@ following set of commands:
 
 <p>
 <div class="verbatim"><pre>
-    % cp scripts/mailman /etc/init.d/mailman
-    % cp misc/mailman /etc/init.d
+    % cp misc/mailman /etc/init.d/mailman
     % cd /etc/rc.d/rc0.d
     % ln -s ../init.d/mailman K12mailman
     % cd ../rc1.d
@@ -151,7 +150,7 @@ following set of commands:
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on June 2, 2017.</span>
+<span class="release-info">Release 2.1, documentation updated on January 11, 2020.</span>
 </div>
 <!--End of Navigation Panel-->
 
