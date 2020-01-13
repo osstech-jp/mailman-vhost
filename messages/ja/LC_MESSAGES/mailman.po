@@ -1,14 +1,14 @@
 # Mailman Japanese Translation
-# Copyright (C) 2002-2018
+# Copyright (C) 2002-2020
 # SATOH Fumiyasu <fumiyas@osstech.co.jp>, 2013
 # Tokio Kikuchi <tokio.kikuchi@gmail.com>, 2002-2011
 # Yukihiro Yasuda <yukihiro@poem.co.jp>, 2004
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mailman 2.1.28\n"
+"Project-Id-Version: Mailman 2.1.30rc1\n"
 "POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
-"PO-Revision-Date: 2019-11-11 21:49+09:00\n"
+"PO-Revision-Date: 2020-01-13 09:16+09:00\n"
 "Last-Translator: Yasuhito FUTATSUKI at POEM <futatuki@poem.co.jp>\n"
 "Language-Team: Japanese <mailman-users-jp@googlegroups.com>\n"
 "Language: ja\n"
@@ -3118,9 +3118,8 @@ msgstr ""
 "申請に関する決定をメールで通知します。"
 
 #: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
-#, fuzzy
 msgid "You already have a subscription pending confirmation"
-msgstr "%(realname)s 入会通知"
+msgstr "あなたには入会確認メールを送付済みで入会の確認待ち状態です"
 
 #: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
