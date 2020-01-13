@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman-2.0\n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: Tue Jan 16 10:00:00 2001\n"
 "Last-Translator: Yuan-Chen Cheng <ycheng@slat.org>\n"
 "Language-Team: Chinese (traditional) <zh-L10n@linux.org.tw>\n"
@@ -3050,15 +3050,20 @@ msgstr ""
 "您的申請件已經轉送給論壇主持人，\n"
 "稍後您會收到論壇主持人的通知 email。"
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "%(realname)s 訂閱通知"
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "您已經訂閱了！"
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "Mailman 隱私權警告"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3085,15 +3090,15 @@ msgstr ""
 "如果您懷疑有人暗地裡想知道您是否此論壇的訂戶，\n"
 "而且您擔心隱私，請儘管寄信給論壇管理人 %(listowner)s。\n"
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "本論壇不提供文摘訂閱方式。"
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "本論壇僅提供文摘訂閱方式。"
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "您已經成功訂閱了 %(realname)s 論壇。"
 
@@ -3613,21 +3618,21 @@ msgstr "您的訂閱申請不通過，因為您給的 email 地址不安全。"
 msgid "You are already subscribed!"
 msgstr "您已經訂閱！"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr "不能用文摘模式訂閱此論壇！"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "本論壇僅提供訂閱文摘！"
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
 msgstr "您的訂閱申請已轉送 %(listowner)s 論壇主持人審核。"
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "訂閱申請成功。"
 
@@ -3953,11 +3958,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr "%(listname)s 通信論壇的探視訊息"
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "為了某個不明原因"
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "您的投書已遭退回"
 
@@ -7837,61 +7842,61 @@ msgstr "請確認退出 %(listname)s 論壇"
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "請確認加入 %(listname)s 論壇"
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr " 寄自 %(remote)s"
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 #, fuzzy
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "%(realname)s 的訂閱需要壇主核准"
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 #, fuzzy
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s 訂閱通知"
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 #, fuzzy
 msgid "unsubscriptions require moderator approval"
 msgstr "%s 的訂閱需要壇主核准"
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 #, fuzzy
 msgid "%(realname)s unsubscribe notification"
 msgstr "%s 退訂通知"
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "%s 退訂通知"
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "壞的確認字串"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "壞的確認字串"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 #, fuzzy
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "%s 的訂閱需要壇主核准"
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "壞的確認字串"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "填入確認用的 cookie "
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr ""
 

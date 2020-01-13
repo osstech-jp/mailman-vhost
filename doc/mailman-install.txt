@@ -11,7 +11,7 @@ GNU Mailman - Installation Manual
    barry (at) list dot org
 
    Release 2.1
-   June 2, 2017
+   January 11, 2020
 
                                   Front Matter
 
@@ -1241,14 +1241,14 @@ fi
    supports the chkconfig command (e.g. RedHat and Mandrake Linuxes) you
    can do the following (as root, from the Mailman install directory):
 
-    % cp scripts/mailman /etc/init.d/mailman
+    % cp misc/mailman /etc/init.d/mailman
     % chkconfig --add mailman
 
    Note that /etc/init.d may be /etc/rc.d/init.d on some systems.
 
    On Gentoo Linux, you can do the following:
 
-    % cp scripts/mailman /etc/init.d/mailman
+    % cp misc/mailman /etc/init.d/mailman
     % rc-update add mailman default
 
    On Debian, you probably want to use:
@@ -1258,8 +1258,7 @@ fi
    For Unixes that don't support chkconfig, you might try the following
    set of commands:
 
-    % cp scripts/mailman /etc/init.d/mailman
-    % cp misc/mailman /etc/init.d
+    % cp misc/mailman /etc/init.d/mailman
     % cd /etc/rc.d/rc0.d
     % ln -s ../init.d/mailman K12mailman
     % cd ../rc1.d
@@ -1596,7 +1595,7 @@ tar xvf MailmanStartup.tar
 
                             About this document ...
 
-   GNU Mailman - Installation Manual, June 2, 2017, Release 2.1
+   GNU Mailman - Installation Manual, January 11, 2020, Release 2.1
 
    This document was generated using the LaTeX2HTML translator.
 
@@ -1650,4 +1649,4 @@ tar xvf MailmanStartup.tar
    Previous Page Up one Level Next Page GNU Mailman - Installation Manual
      __________________________________________________________________
 
-   Release 2.1, documentation updated on June 2, 2017.
+   Release 2.1, documentation updated on January 11, 2020.

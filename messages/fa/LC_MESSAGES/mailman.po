@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.14\n"
-"POT-Creation-Date: Fri Nov  8 13:34:03 2019\n"
+"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
 "PO-Revision-Date: 2013-07-20 13:40+0330\n"
 "Last-Translator: \n"
 "Language-Team: fa <translate@ifsug.org>\n"
@@ -3091,15 +3091,20 @@ msgid ""
 "moderator's decision when they get to your request."
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:297 Mailman/Commands/cmd_confirm.py:61
+#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "آگاه‌سازی از اشتراک%(realname)s "
+
+#: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
 msgstr "شما پیشاپیش، مشترک شده‌اید."
 
-#: Mailman/Cgi/subscribe.py:311
+#: Mailman/Cgi/subscribe.py:314
 msgid "Mailman privacy alert"
 msgstr "هشدار حریم خصوصی میلمن"
 
-#: Mailman/Cgi/subscribe.py:312
+#: Mailman/Cgi/subscribe.py:315
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3118,15 +3123,15 @@ msgid ""
 "to the list administrator at %(listowner)s.\n"
 msgstr ""
 
-#: Mailman/Cgi/subscribe.py:331
+#: Mailman/Cgi/subscribe.py:334
 msgid "This list does not support digest delivery."
 msgstr "این فهرست، حالت رساندن یک‌جا را پشتیبانی نمی‌کند."
 
-#: Mailman/Cgi/subscribe.py:333
+#: Mailman/Cgi/subscribe.py:336
 msgid "This list only supports digest delivery."
 msgstr "این فهرست، فقط حالت رساندن یک‌جا را پشتیبانی می‌کند."
 
-#: Mailman/Cgi/subscribe.py:340
+#: Mailman/Cgi/subscribe.py:343
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "شما با موفقیت در فهرست پستی the %(realname)s مشترک شدید."
 
@@ -3607,15 +3612,15 @@ msgstr ""
 msgid "You are already subscribed!"
 msgstr "شما پیشاپیش مشترک شده‌اید!"
 
-#: Mailman/Commands/cmd_subscribe.py:133
+#: Mailman/Commands/cmd_subscribe.py:137
 msgid "No one can subscribe to the digest of this list!"
 msgstr "هیچ‌کس در این فهرست نمی‌تواند مشترک حالت یک‌جا شود!"
 
-#: Mailman/Commands/cmd_subscribe.py:136
+#: Mailman/Commands/cmd_subscribe.py:140
 msgid "This list only supports digest subscriptions!"
 msgstr "این فهرست صرفاً اشتراک در حالت یک‌جا را پشتیبانی می‌کند."
 
-#: Mailman/Commands/cmd_subscribe.py:142
+#: Mailman/Commands/cmd_subscribe.py:146
 msgid ""
 "Your subscription request has been forwarded to the list administrator\n"
 "at %(listowner)s for review."
@@ -3623,7 +3628,7 @@ msgstr ""
 "درخواست اشتراک شما برای بررسی ،به سرپرست فهرست به نشانی زیر، پیش پیش‌سو شد:\n"
 "at %(listowner)s "
 
-#: Mailman/Commands/cmd_subscribe.py:147
+#: Mailman/Commands/cmd_subscribe.py:151
 msgid "Subscription request succeeded."
 msgstr "درخواست اشتراک، موفقیت‌آمیز بود"
 
@@ -3929,11 +3934,11 @@ msgstr ""
 msgid "%(listname)s mailing list probe message"
 msgstr ""
 
-#: Mailman/Errors.py:122
+#: Mailman/Errors.py:123
 msgid "For some unknown reason"
 msgstr "به دلیلی ناشناخته"
 
-#: Mailman/Errors.py:128 Mailman/Errors.py:151
+#: Mailman/Errors.py:129 Mailman/Errors.py:152
 msgid "Your message was rejected"
 msgstr "پیام شما پس‌زده‌شد"
 
@@ -7419,56 +7424,56 @@ msgstr "برای پیوستن به فهرست پستی  %(listname)s نیاز ب
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "برای ترک فهرست پستی %(listname)s نیاز به تایید شما وجود دارد."
 
-#: Mailman/MailList.py:975 Mailman/MailList.py:1466
+#: Mailman/MailList.py:997 Mailman/MailList.py:1488
 msgid " from %(remote)s"
 msgstr ""
 
-#: Mailman/MailList.py:1019
+#: Mailman/MailList.py:1041
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "برای اشتراک در %(realname)s نیاز به تایید میان‌دار است"
 
-#: Mailman/MailList.py:1101 bin/add_members:299
+#: Mailman/MailList.py:1123 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "آگاه‌سازی از اشتراک%(realname)s "
 
-#: Mailman/MailList.py:1121
+#: Mailman/MailList.py:1143
 msgid "unsubscriptions require moderator approval"
 msgstr "برای لغو اشتراک، تایید میان‌دار لازم است."
 
-#: Mailman/MailList.py:1142
+#: Mailman/MailList.py:1164
 msgid "%(realname)s unsubscribe notification"
 msgstr ""
 
-#: Mailman/MailList.py:1304
+#: Mailman/MailList.py:1326
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "آگاه‌سازی از اشتراک%(realname)s "
 
-#: Mailman/MailList.py:1338
+#: Mailman/MailList.py:1360
 #, fuzzy
 msgid "via email confirmation"
 msgstr "کد تاییدیه نادرست"
 
-#: Mailman/MailList.py:1347
+#: Mailman/MailList.py:1369
 #, fuzzy
 msgid "via web confirmation"
 msgstr "کد تاییدیه نادرست"
 
-#: Mailman/MailList.py:1372
+#: Mailman/MailList.py:1394
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "برای اشتراک در %(name)s نیاز به تایید سرپرست است."
 
-#: Mailman/MailList.py:1382
+#: Mailman/MailList.py:1404
 #, fuzzy
 msgid "email confirmation"
 msgstr "کد تاییدیه نادرست"
 
-#: Mailman/MailList.py:1384
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "web confirmation"
 msgstr "کلوچک تاییدیه را وارد کنید"
 
-#: Mailman/MailList.py:1640
+#: Mailman/MailList.py:1662
 msgid "Last autoresponse notification for today"
 msgstr "آخرین آگاه‌سازی پاسخ‌گویی خودکار امروز"
 

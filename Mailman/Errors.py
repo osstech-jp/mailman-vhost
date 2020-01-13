@@ -31,6 +31,7 @@ class BadListNameError(MMListError): pass
 class MMMemberError(Exception): pass
 class MMBadUserError(MMMemberError): pass
 class MMAlreadyAMember(MMMemberError): pass
+class MMAlreadyPending(MMMemberError): pass
 
 # "New" style membership exceptions (new w/ MM2.1)
 class MemberError(Exception): pass
