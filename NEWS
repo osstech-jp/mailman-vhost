@@ -83,6 +83,9 @@ Here is a history of user visible changes to Mailman.
     - A bug causing a UnicodeDecodeError in preparing to send the confirmation
       request message to a new subscriber has been fixed.  (LP: #1851442)
 
+    - The SimpleMatch heuristic bounce recognizer has been improved to not
+      return most invalid email addresses.  (LP: #1859011)
+
 2.1.29 (24-Jul-2018)
 
   Bug Fixes
