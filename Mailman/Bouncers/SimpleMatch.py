@@ -26,7 +26,7 @@ def _c(pattern):
     return re.compile(pattern, re.IGNORECASE)
 
 # Pattern to match any valid email address and not much more.
-VALID = _c(r'[\x21-\x3d\x3f\x41-\x7e]+@[a-z0-9._]+')
+VALID = _c(r'^[\x21-\x3d\x3f\x41-\x7e]+@[a-z0-9._]+$')
 
 # This is a list of tuples of the form
 #
