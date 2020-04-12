@@ -50,6 +50,8 @@ Here is a history of user visible changes to Mailman.
 
     - The German translation has been updated by Ludwig Reiter.
 
+    - The Spanish translation has been updated by Omar Walid Llorente.
+
   Bug Fixes and other patches
 
     - Fixed the confirm CGI to catch a rare TypeError on simultaneous
