@@ -5,7 +5,7 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.30 (xx-xxx.xxxx)
+2.1.30 (13-Apr-2020)
 
   New Features
 
@@ -49,6 +49,10 @@ Here is a history of user visible changes to Mailman.
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
     - The German translation has been updated by Ludwig Reiter.
+
+    - The Spanish translation has been updated by Omar Walid Llorente.
+
+    - The Brazilian Portugese translation has been updated by Emerson de Mello.
 
   Bug Fixes and other patches
 
