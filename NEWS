@@ -5,6 +5,19 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.30-1 (xx-xxx-xxxx)
+
+  i18n
+
+    - The Spanish translation has been updated by Omar Walid Llorente.
+
+  Bug Fixes and other patches
+
+    - Bounce recognition for a non-compliant Yahoo format is added.
+
+    - Archiving workaround for non-ascii in string.lowercase in some Python
+      packages is added.
+
 2.1.30 (13-Apr-2020)
 
   New Features

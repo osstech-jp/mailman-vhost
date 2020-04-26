@@ -12,6 +12,10 @@ import cPickle as pickle
 from cStringIO import StringIO
 from string import lowercase
 
+# Work around for some misguided Python packages that add iso-8859-1
+# accented characters to string.lowercase.
+lowercase = lowercase[:26]
+
 __version__ = '0.09 (Mailman edition)'
 VERSION = __version__
 CACHESIZE = 100    # Number of slots in the cache
