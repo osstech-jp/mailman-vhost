@@ -11,6 +11,10 @@ Here is a history of user visible changes to Mailman.
 
     - The Spanish translation has been updated by Omar Walid Llorente.
 
+  Bug Fixes and other patches
+
+    - Bounce recognition for a non-compliant Yahoo format is added.
+
 2.1.30 (13-Apr-2020)
 
   New Features

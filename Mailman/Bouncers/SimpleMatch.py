@@ -195,6 +195,10 @@ PATTERNS = [
     (_c('Message could not be delivered to some recipients.'),
      _c('Message headers follow'),
      _c('Recipient: \[SMTP:(?P<addr>[^\s@]+@[^\s@]+)\]')),
+    # This one is from Yahoo but dosen't fit the yahoo recognizer format
+    (_c(r'wasn\'t able to deliver the following message'),
+     _c(r'---Below this line is a copy of the message.'),
+     _c(r'To: (?P<addr>[^\s@]+@[^\s@]+)')),
     # Next one goes here...
     ]
 
