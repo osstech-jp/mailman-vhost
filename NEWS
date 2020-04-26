@@ -15,6 +15,9 @@ Here is a history of user visible changes to Mailman.
 
     - Bounce recognition for a non-compliant Yahoo format is added.
 
+    - Archiving workaround for non-ascii in string.lowercase in some Python
+      packages is added.
+
 2.1.30 (13-Apr-2020)
 
   New Features
