@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman\n"
-"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
+"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
 "PO-Revision-Date: 2020-04-12 00:00+0000\n"
 "Last-Translator: Omar Walid Llorente <omar.wllorente@upm.es>\n"
 "Language-Team: Español <es@li.org>\n"
@@ -22,8 +22,8 @@ msgstr "tamaño no disponible"
 msgid " %(size)i bytes "
 msgstr " %(size)i bytes "
 
-#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:181
-#: Mailman/Archiver/pipermail.py:182
+#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:185
+#: Mailman/Archiver/pipermail.py:186
 msgid "No subject"
 msgstr "Sin asunto"
 
@@ -166,27 +166,27 @@ msgstr "Actualizando el código HTML del artículo %(seq)s"
 msgid "article file %(filename)s is missing!"
 msgstr "no se encuentra el fichero %(filename)s asociado al artículo!"
 
-#: Mailman/Archiver/pipermail.py:298
+#: Mailman/Archiver/pipermail.py:302
 msgid "Creating archive directory "
 msgstr "Creando directorio de almacenaje "
 
-#: Mailman/Archiver/pipermail.py:310
+#: Mailman/Archiver/pipermail.py:314
 msgid "Reloading pickled archive state"
 msgstr "Recargando el estado de los ficheros almacenados"
 
-#: Mailman/Archiver/pipermail.py:337
+#: Mailman/Archiver/pipermail.py:341
 msgid "Pickling archive state into "
 msgstr "Preparando el estado del archivo a "
 
-#: Mailman/Archiver/pipermail.py:449
+#: Mailman/Archiver/pipermail.py:453
 msgid "Updating index files for archive [%(archive)s]"
 msgstr "Actualizando el índice de los ficheros de [%(archive)s]"
 
-#: Mailman/Archiver/pipermail.py:482
+#: Mailman/Archiver/pipermail.py:486
 msgid "  Thread"
 msgstr "  Hilo"
 
-#: Mailman/Archiver/pipermail.py:593
+#: Mailman/Archiver/pipermail.py:597
 msgid "#%(counter)05d %(msgid)s"
 msgstr "#%(counter)05d %(msgid)s"
 
@@ -309,7 +309,8 @@ msgid ""
 msgstr ""
 "Tiene suscriptores con el modo agrupado activado, pero en\n"
 "               esta lista el modo agrupado está desactivado.\n"
-"               Esos suscriptores no recibirán correo. Suscriptor(es) afectado(s) %(dm)r"
+"               Esos suscriptores no recibirán correo. Suscriptor(es) "
+"afectado(s) %(dm)r"
 
 #: Mailman/Cgi/admin.py:243
 msgid ""
@@ -321,7 +322,8 @@ msgstr ""
 "Tiene suscriptores que quieren recibir el correo a medida que \n"
 "                llega, pero esta modalidad está desactivada. Ellos\n"
 "                recibirán \n"
-" correo sin agrupar hasta que corrija este problema. Suscriptor(es) afectado(s) %(rm)r"
+" correo sin agrupar hasta que corrija este problema. Suscriptor(es) "
+"afectado(s) %(rm)r"
 
 #: Mailman/Cgi/admin.py:268
 msgid "%(hostname)s mailing lists - Admin Links"
@@ -1078,10 +1080,14 @@ msgid ""
 "no other."
 msgstr ""
 "Además de las claves anteriores Ud. puede especificar una clave para\n"
-"pre-admitir envíos a la lista. Cualquiera de las dos claves anteriores puede\n"
-"ser usada en un encabezado Approved: o en el pseudo-encabezado de la primera línea del mensaje\n"
-"para pre-admitir un envío que de otra forma sería retenido para ser moderado.\n"
-"La clave de debajo, si se establece, puede ser usada para ese propósitose de\n"
+"pre-admitir envíos a la lista. Cualquiera de las dos claves anteriores "
+"puede\n"
+"ser usada en un encabezado Approved: o en el pseudo-encabezado de la primera "
+"línea del mensaje\n"
+"para pre-admitir un envío que de otra forma sería retenido para ser "
+"moderado.\n"
+"La clave de debajo, si se establece, puede ser usada para ese propósitose "
+"de\n"
 "forma exclusiva."
 
 #: Mailman/Cgi/admin.py:1407
@@ -1161,8 +1167,7 @@ msgstr "Ha anulado su suscripción satisfactoriamente:"
 
 #: Mailman/Cgi/admin.py:1583
 msgid "Cannot unsubscribe non-members:"
-msgstr ""
-"No puedo anular la suscripción de usuarios que no estén registrados:"
+msgstr "No puedo anular la suscripción de usuarios que no estén registrados:"
 
 #: Mailman/Cgi/admin.py:1596
 msgid "You must provide both current and new addresses."
@@ -2599,8 +2604,8 @@ msgid "No address given"
 msgstr "No se ha indicado una dirección"
 
 #: Mailman/Cgi/options.py:176
-msgid "Illegal Email Address: %(safeuser)s"
-msgstr "Dirección de correo electrónico incorrecta: %(safeuser)s"
+msgid "Illegal Email Address"
+msgstr "Dirección de correo electrónico incorrecta"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
 #: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
@@ -3938,8 +3943,8 @@ msgstr ""
 "imprescindible para\n"
 "        darse de baja o cambiar sus opciones, pero, si omite la clave, el "
 "sistema\n"
-"        le generará una automáticamente.  Es posible que reciba periódicamente un "
-"recordatorio de\n"
+"        le generará una automáticamente.  Es posible que reciba "
+"periódicamente un recordatorio de\n"
 "       su clave, que podrá desactivar si lo desea.\n"
 "\n"
 "        El siguiente argumento puede ser «nodigest» or «digest» (¡sin "
@@ -4122,163 +4127,163 @@ msgstr "suscriptores que reciben correo a medida que llega:"
 msgid "Digest members:"
 msgstr "suscriptores con el correo diferido (modo digest):"
 
-#: Mailman/Defaults.py:1790
+#: Mailman/Defaults.py:1798
 msgid "Arabic"
 msgstr "Árabe"
 
-#: Mailman/Defaults.py:1791
+#: Mailman/Defaults.py:1799
 msgid "Asturian"
 msgstr "Asturiano"
 
-#: Mailman/Defaults.py:1792
+#: Mailman/Defaults.py:1800
 msgid "Catalan"
 msgstr "Catalán"
 
-#: Mailman/Defaults.py:1793
+#: Mailman/Defaults.py:1801
 msgid "Czech"
 msgstr "Checoeslovaco"
 
-#: Mailman/Defaults.py:1794
+#: Mailman/Defaults.py:1802
 msgid "Danish"
 msgstr "Danés"
 
-#: Mailman/Defaults.py:1795
+#: Mailman/Defaults.py:1803
 msgid "German"
 msgstr "Alemán"
 
-#: Mailman/Defaults.py:1796
+#: Mailman/Defaults.py:1804
 msgid "English (USA)"
 msgstr "Inglés (EEUU)"
 
-#: Mailman/Defaults.py:1797
+#: Mailman/Defaults.py:1805
 msgid "Esperanto"
 msgstr "Esperanto"
 
-#: Mailman/Defaults.py:1798
+#: Mailman/Defaults.py:1806
 msgid "Spanish (Spain)"
 msgstr "Español (España)"
 
-#: Mailman/Defaults.py:1799
+#: Mailman/Defaults.py:1807
 msgid "Estonian"
 msgstr "Estonio"
 
-#: Mailman/Defaults.py:1800
+#: Mailman/Defaults.py:1808
 msgid "Euskara"
 msgstr "Euskera"
 
-#: Mailman/Defaults.py:1801
+#: Mailman/Defaults.py:1809
 msgid "Persian"
 msgstr "Persa/Iraní"
 
-#: Mailman/Defaults.py:1802
+#: Mailman/Defaults.py:1810
 msgid "Finnish"
 msgstr "Finés"
 
-#: Mailman/Defaults.py:1803
+#: Mailman/Defaults.py:1811
 msgid "French"
 msgstr "Francés"
 
-#: Mailman/Defaults.py:1804
+#: Mailman/Defaults.py:1812
 msgid "Galician"
 msgstr "Gallego"
 
-#: Mailman/Defaults.py:1805
+#: Mailman/Defaults.py:1813
 msgid "Greek"
 msgstr "Griego"
 
-#: Mailman/Defaults.py:1806
+#: Mailman/Defaults.py:1814
 msgid "Hebrew"
 msgstr "Hebreo"
 
-#: Mailman/Defaults.py:1807
+#: Mailman/Defaults.py:1815
 msgid "Croatian"
 msgstr "Croata"
 
-#: Mailman/Defaults.py:1808
+#: Mailman/Defaults.py:1816
 msgid "Hungarian"
 msgstr "Húngaro"
 
-#: Mailman/Defaults.py:1809
+#: Mailman/Defaults.py:1817
 msgid "Interlingua"
 msgstr "Interlingua"
 
-#: Mailman/Defaults.py:1810
+#: Mailman/Defaults.py:1818
 msgid "Italian"
 msgstr "Italiano"
 
-#: Mailman/Defaults.py:1811
+#: Mailman/Defaults.py:1819
 msgid "Japanese"
 msgstr "Japonés"
 
-#: Mailman/Defaults.py:1812
+#: Mailman/Defaults.py:1820
 msgid "Korean"
 msgstr "Koreano"
 
-#: Mailman/Defaults.py:1813
+#: Mailman/Defaults.py:1821
 msgid "Lithuanian"
 msgstr "Lituano"
 
-#: Mailman/Defaults.py:1814
+#: Mailman/Defaults.py:1822
 msgid "Dutch"
 msgstr "Danés"
 
-#: Mailman/Defaults.py:1815
+#: Mailman/Defaults.py:1823
 msgid "Norwegian"
 msgstr "Noruego"
 
-#: Mailman/Defaults.py:1816
+#: Mailman/Defaults.py:1824
 msgid "Polish"
 msgstr "Polaco"
 
-#: Mailman/Defaults.py:1817
+#: Mailman/Defaults.py:1825
 msgid "Portuguese"
 msgstr "Portugués"
 
-#: Mailman/Defaults.py:1818
+#: Mailman/Defaults.py:1826
 msgid "Portuguese (Brazil)"
 msgstr "Portugués (Brasil)"
 
-#: Mailman/Defaults.py:1819
+#: Mailman/Defaults.py:1827
 msgid "Romanian"
 msgstr "Rumano"
 
-#: Mailman/Defaults.py:1820
+#: Mailman/Defaults.py:1828
 msgid "Russian"
 msgstr "Ruso"
 
-#: Mailman/Defaults.py:1821
+#: Mailman/Defaults.py:1829
 msgid "Slovak"
 msgstr "Eslovaco"
 
-#: Mailman/Defaults.py:1822
+#: Mailman/Defaults.py:1830
 msgid "Slovenian"
 msgstr "Esloveno"
 
-#: Mailman/Defaults.py:1823
+#: Mailman/Defaults.py:1831
 msgid "Serbian"
 msgstr "Serbio"
 
-#: Mailman/Defaults.py:1824
+#: Mailman/Defaults.py:1832
 msgid "Swedish"
 msgstr "Sueco"
 
-#: Mailman/Defaults.py:1825
+#: Mailman/Defaults.py:1833
 msgid "Turkish"
 msgstr "Turco"
 
-#: Mailman/Defaults.py:1826
+#: Mailman/Defaults.py:1834
 msgid "Ukrainian"
 msgstr "Ucraniano"
 
-#: Mailman/Defaults.py:1827
+#: Mailman/Defaults.py:1835
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: Mailman/Defaults.py:1828
+#: Mailman/Defaults.py:1836
 msgid "Chinese (China)"
 msgstr "Chino (China)"
 
-#: Mailman/Defaults.py:1829
+#: Mailman/Defaults.py:1837
 msgid "Chinese (Taiwan)"
 msgstr "Chino (Taiwan)"
 
@@ -4829,7 +4834,8 @@ msgid ""
 "Should Mailman notify you, the list owner, when bounces\n"
 "             cause a member's bounce score to be incremented?"
 msgstr ""
-"&iquest;Si Mailman le notifica a usted, el propietario de la lista, cuando rebota\n"
+"&iquest;Si Mailman le notifica a usted, el propietario de la lista, cuando "
+"rebota\n"
 "             se incrementa el puntaje de rebote de un miembro?"
 
 #: Mailman/Gui/Bounce.py:149
@@ -5223,8 +5229,8 @@ msgid ""
 "How big in Kb should a digest be before it gets sent out?  0 implies no "
 "maximum size."
 msgstr ""
-"¿Que tamaño en Kb debería alcanzar un digest antes de que se llegue a mandar?"
-" 0 implica no talla máxima."
+"¿Que tamaño en Kb debería alcanzar un digest antes de que se llegue a "
+"mandar? 0 implica no talla máxima."
 
 #: Mailman/Gui/Digest.py:63
 msgid ""
@@ -5628,7 +5634,8 @@ msgid ""
 "             domain's DMARC or similar policies."
 msgstr ""
 "Reemplazar la dirección del campo From: de la cabecera\n"
-"             con la dirección de la lista para minimizar problemas derivados\n"
+"             con la dirección de la lista para minimizar problemas "
+"derivados\n"
 "             de la política DMARC del dominio original u otras similares."
 
 #: Mailman/Gui/General.py:162
@@ -5710,23 +5717,27 @@ msgid ""
 "             action other than Accept, that action rather than this is\n"
 "             applied"
 msgstr ""
-"Varios protocolos que se usan mucho actualmente intentan asegurarse de que el uso\n"
-"             del dominio de la dirección del autor (p.ej., en el encabezado From:) \n"
-"             está autorizado por ese dominio.  Estos protocolos podrían ser \n"
-"             incompatibles con características comunes como los pies de correo (footers), "
-"haciendo\n"
-"             que los servidores de correo participantes reboten o descarten (bounce) el "
-"tráfico de la lista\n"
+"Varios protocolos que se usan mucho actualmente intentan asegurarse de que "
+"el uso\n"
+"             del dominio de la dirección del autor (p.ej., en el encabezado "
+"From:) \n"
+"             está autorizado por ese dominio.  Estos protocolos podrían "
+"ser \n"
+"             incompatibles con características comunes como los pies de "
+"correo (footers), haciendo\n"
+"             que los servidores de correo participantes reboten o descarten "
+"(bounce) el tráfico de la lista\n"
 "             solo por la dirección del campo From:.  <b>Esto ha dado como "
 "resultado\n"
-"             que usuarios han sido desuscritos a pesar de ser perfectamente capaces de \n"
+"             que usuarios han sido desuscritos a pesar de ser perfectamente "
+"capaces de \n"
 "             recibir correo.</b>\n"
 "             <p>\n"
-"             Las siguientes acciones son aplicadas a todos los mensajes de la lista cuando\n"
-"             se seleccionan aquí. Para aplicar estas acciones solo a los mensajes donde "
-"el\n"
-"             dominio del encabezado From: utiliza ese tipo de protocolo,"
-"\n"
+"             Las siguientes acciones son aplicadas a todos los mensajes de "
+"la lista cuando\n"
+"             se seleccionan aquí. Para aplicar estas acciones solo a los "
+"mensajes donde el\n"
+"             dominio del encabezado From: utiliza ese tipo de protocolo,\n"
 "             ver la configuración <a\n"
 "             href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
 "             dmarc_moderation_action</a> bajo las Opciones de privacidad...\n"
@@ -5734,59 +5745,67 @@ msgstr ""
 "             <p>Configuraciones:<p>\n"
 "             <dl>\n"
 "             <dt>No</dt>\n"
-"             <dd>No hacer nada especial.  Apropiado para listas "
-"anónimas.\n"
+"             <dd>No hacer nada especial.  Apropiado para listas anónimas.\n"
 "             Es apropiado para listas dedicadas a anuncios, a no ser que\n"
-"             la dirección del campo From: de remitentes autorizados pudiera ser de un dominio "
-"con una\n"
+"             la dirección del campo From: de remitentes autorizados pudiera "
+"ser de un dominio con una\n"
 "             política tipo DMARC o similar. Es también apropiado si se elije "
 "usar\n"
-"             algo diferente a Aceptar en dmarc_moderation_action para esta lista.</"
-"dd>\n"
+"             algo diferente a Aceptar en dmarc_moderation_action para esta "
+"lista.</dd>\n"
 "             <dt>Cambiar el encabezado From</dt>\n"
-"             <dd>Esta acción reemplaza la dirección del remitente en el encabezado "
-"From:\n"
-"             con la dirección de envío de la lista y añade la dirección del remitente "
-"a\n"
+"             <dd>Esta acción reemplaza la dirección del remitente en el "
+"encabezado From:\n"
+"             con la dirección de envío de la lista y añade la dirección del "
+"remitente a\n"
 "             las direcciones en el encabezado Reply-To: original.</dd>\n"
 "             <dt>Envolver el mensaje</dt>\n"
-"             <dd>Envolver el mensaje en otro exterior con un encabezado From:\n"
-"             que contenga la dirección de envío de la lista y con la dirección del encabezado "
+"             <dd>Envolver el mensaje en otro exterior con un encabezado "
 "From:\n"
-"             original añadido a las direcciones en el encabezado Reply-To: original\n"
-"             y con Content-Type: message/rfc822.  Esto es "
-"exactamente\n"
+"             que contenga la dirección de envío de la lista y con la "
+"dirección del encabezado From:\n"
+"             original añadido a las direcciones en el encabezado Reply-To: "
+"original\n"
+"             y con Content-Type: message/rfc822.  Esto es exactamente\n"
 "             un mensaje MIME tipo agrupado (o resumen).</dd>\n"
 "             </dl>\n"
 "             <p>Las transformaciones para anonymous_list se aplican antes\n"
-"             que ninguna de estas acciones. No es útil aplicar acciones distintas\n"
+"             que ninguna de estas acciones. No es útil aplicar acciones "
+"distintas\n"
 "             a No para una lista anónima, y si lo hace, el resultado puede\n"
 "             ser sorprendente.\n"
 "             <p>Las acciones encaminadas a cambiar el encabezado Reply-To: "
 "interactúan con estas\n"
 "             acciones tal y como sigue:\n"
 "             <p> first_strip_reply_to = Sí eliminará todos los encabezados\n"
-"             Reply-To: originales pero añadirá la dirección del encabezado Reply-To:\n"
-"             del remitente para las tres configuraciones de reply_goes_to_list lo que\n"
-"             respectivamente resultará en que solo la dirección del remitente\n"
-"             y la dirección de envío de la lista o la dirección del remitente\n"
-"             y la dirección explícita de reply_to_address estarán en el encabezado\n"
-"             Reply-To: saliente. Si first_strip_reply_to = No la dirección del remitente\n"
-"             en el encabezado From: original, si no ha sido incluída "
-"en\n"
-"             el Reply-To:, se añadirá a la(s) dirección(es) Reply-To: existente(s)\n"
+"             Reply-To: originales pero añadirá la dirección del encabezado "
+"Reply-To:\n"
+"             del remitente para las tres configuraciones de "
+"reply_goes_to_list lo que\n"
+"             respectivamente resultará en que solo la dirección del "
+"remitente\n"
+"             y la dirección de envío de la lista o la dirección del "
+"remitente\n"
+"             y la dirección explícita de reply_to_address estarán en el "
+"encabezado\n"
+"             Reply-To: saliente. Si first_strip_reply_to = No la dirección "
+"del remitente\n"
+"             en el encabezado From: original, si no ha sido incluída en\n"
+"             el Reply-To:, se añadirá a la(s) dirección(es) Reply-To: "
+"existente(s)\n"
 "             en el encabezado.\n"
 "             <p>Estas acciones, tanto seleccionadas aquí como vía <a\n"
 "             href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
 "             dmarc_moderation_action</a>, no se aplican a los mensajes en "
 "resumen (o agrupados)\n"
-"             o a los archivos o a los enviados a usenet vía puertas de enlace "
-"Mail&lt;-&gt;News.\n"
+"             o a los archivos o a los enviados a usenet vía puertas de "
+"enlace Mail&lt;-&gt;News.\n"
 "             <p>Si <a\n"
 "             href=\"?VARHELP=privacy/sender/dmarc_moderation_action\">\n"
-"             dmarc_moderation_action</a> es aplicable a este mensaje con una\n"
-"             acción diferente a Aceptar, se aplicará aquella acción en vez de ésta.\n"
-""
+"             dmarc_moderation_action</a> es aplicable a este mensaje con "
+"una\n"
+"             acción diferente a Aceptar, se aplicará aquella acción en vez "
+"de ésta.\n"
 
 #: Mailman/Gui/General.py:224
 msgid ""
@@ -6448,27 +6467,31 @@ msgid ""
 "                 here."
 msgstr ""
 "<a href=\"http://www.faqs.org/rfcs/rfc2822.html\">RFC\n"
-"                 2822</a> define el encabezado del <tt>Remitente</tt> y lo define\n"
-"                 como \"la dirección de correo-e del agente responsable de la transmisión\n"
-"                 real del mensaje.\"  Mailman reemplaza este "
-"encabezado\n"
+"                 2822</a> define el encabezado del <tt>Remitente</tt> y lo "
+"define\n"
+"                 como \"la dirección de correo-e del agente responsable de "
+"la transmisión\n"
+"                 real del mensaje.\"  Mailman reemplaza este encabezado\n"
 "                 por defecto con la dirección de rebotes de la lista.\n"
 "                 \n"
 "                 <p>Aunque es debatible si Mailman es ese tipo de agente, "
 "configurar\n"
-"                 este encabezado ayuda a redirigir los rebotes que llegan de algunos MTAs "
-"problemáticos al\n"
-"                 destino correcto. Por otra parte, algunos lectores de correo\n"
-"                 tienen un comportamiento inesperado si se utiliza este encabezado "
-"(como\n"
+"                 este encabezado ayuda a redirigir los rebotes que llegan de "
+"algunos MTAs problemáticos al\n"
+"                 destino correcto. Por otra parte, algunos lectores de "
+"correo\n"
+"                 tienen un comportamiento inesperado si se utiliza este "
+"encabezado (como\n"
 "                 perder direcciones en correos reenviados y copias enviadas "
 "a la\n"
-"                 dirección de rebote cuando se usa "responder a todos"), así que puede ser \n"
+"                 dirección de rebote cuando se usa \"responder a todos\"), "
+"así que puede ser \n"
 "                 deshabilitada aquí."
 
 #: Mailman/Gui/General.py:512
 msgid "Should duplicate avoidance drop addresses from Cc: headers"
-msgstr "&iquest;La política de gestión de duplicados debería eliminar las "
+msgstr ""
+"&iquest;La política de gestión de duplicados debería eliminar las "
 "direcciones de la cabecera Cc:?"
 
 #: Mailman/Gui/General.py:513
@@ -6488,9 +6511,10 @@ msgstr ""
 "quitar\n"
 "               la dirección del Cc: para evitar crear un Cc: muy largo en "
 "hilos\n"
-"               de muchos mensajes. Esto puede ser un problema ya que puede romper\n"
-"               las firmas DKIM y probablemente causar confusión. Para evitar cambios "
-"en los\n"
+"               de muchos mensajes. Esto puede ser un problema ya que puede "
+"romper\n"
+"               las firmas DKIM y probablemente causar confusión. Para evitar "
+"cambios en los\n"
 "               encabezados Cc:, configure esto a No."
 
 #: Mailman/Gui/General.py:524
@@ -6524,11 +6548,11 @@ msgid ""
 "                        "
 msgstr ""
 "El atributo <b>info</b> que ha guardado\n"
-"contiene HTML sospechoso de potencialmente exponer a sus usuarios a ataques cross-"
-"site-\n"
-"scripting. Por lo tanto, este cambio ha sido rechazado. Si aún así "
-"quiere\n"
-"realizar estos cambios, debe tener acceso a la consola de su servidor Mailman.\n"
+"contiene HTML sospechoso de potencialmente exponer a sus usuarios a ataques "
+"cross-site-\n"
+"scripting. Por lo tanto, este cambio ha sido rechazado. Si aún así quiere\n"
+"realizar estos cambios, debe tener acceso a la consola de su servidor "
+"Mailman.\n"
 "Este cambio ha de ser realizado mediante bin/withlist o con bin/config_list "
 "configurando el\n"
 "mlist.info.\n"
@@ -6539,7 +6563,8 @@ msgid ""
 "<b>admin_member_chunksize</b> attribute not\n"
 "            changed!  It must be an integer > 0."
 msgstr ""
-"¡El atributo <b>admin_member_chunksize</b> no se ha cambiado! Tiene que ser \n"
+"¡El atributo <b>admin_member_chunksize</b> no se ha cambiado! Tiene que "
+"ser \n"
 "un entero > 0."
 
 #: Mailman/Gui/General.py:579
@@ -9178,7 +9203,8 @@ msgid ""
 "error, contact the mailing list owner at %(listowner)s."
 msgstr ""
 "No está autorizado a enviar mensajes a esta lista de correo\n"
-"desde un dominio que publica su política DMARC de rechazo o de cuarentena de mensajes,\n"
+"desde un dominio que publica su política DMARC de rechazo o de cuarentena de "
+"mensajes,\n"
 "y su mensaje ha sido rechazado automáticamente,\n"
 "Si piensa que sus mensajes están siendo rechazados por error,\n"
 " contacte con el propietaro de la lista en %(listowner)s."
@@ -10001,8 +10027,8 @@ msgstr ""
 "parte,\n"
 "no se podían recuperar y actualizar.\n"
 "\n"
-"Así pues, este script genera la clave de una lista y opcionalmente la manda a "
-"todos los\n"
+"Así pues, este script genera la clave de una lista y opcionalmente la manda "
+"a todos los\n"
 "propietarios de la lista.\n"
 "\n"
 "Sintaxis: change_pw [OPCIONES]\n"
@@ -10901,7 +10927,8 @@ msgid ""
 "output.  Use -P to get a list of supported schemes, which are\n"
 "case-insensitive."
 msgstr ""
-"Especificar el esquema de hash de la RFC 2307 style hashing para claves incluídas en la\n"
+"Especificar el esquema de hash de la RFC 2307 style hashing para claves "
+"incluídas en la\n"
 "salida.  Use -P para obtener la lista de esquemas soportados, que\n"
 "no son sensibles a mayúsculas o minúsculas."
 
@@ -10911,8 +10938,8 @@ msgid ""
 "are\n"
 "case-insensitive."
 msgstr ""
-"Listar los esquemas soportados de hash de claves y salir. Las etiquetas "
-"de los\n"
+"Listar los esquemas soportados de hash de claves y salir. Las etiquetas de "
+"los\n"
 "esquemas no son sensibles a mayúsculas o minúsculas."
 
 #: bin/export.py:339
@@ -10921,8 +10948,8 @@ msgid ""
 "are\n"
 "included in the XML output.  Multiple -l flags may be given."
 msgstr ""
-"La lista a incluir en la salida. Si no se da, entonces todas las listas de"
-"correo\n"
+"La lista a incluir en la salida. Si no se da, entonces todas las listas "
+"decorreo\n"
 "serán incluídas en la salida XML. Se puede usar -l más de una vez."
 
 #: bin/export.py:345
@@ -11599,7 +11626,8 @@ msgid ""
 msgstr ""
 "Script básico de arranque y parada del demonio de Mailman qrunner.\n"
 "\n"
-"Este script arranca, para y rearranca el demonio encargado de procesar la cola,\n"
+"Este script arranca, para y rearranca el demonio encargado de procesar la "
+"cola,\n"
 "asegurandose de que distintos procesos de larga duración sigan vivitos\n"
 "y coleando.\n"
 "Esto se hace mediante un fork y ejecutando el subproceso qrunner y "
@@ -11739,7 +11767,8 @@ msgid ""
 "a stale master qrunner lock.  Try re-running mailmanctl with the -s flag.\n"
 msgstr ""
 "No se pudo conseguir el bloqueo del qrunner maestro, porque parece como si\n"
-"ya hubiera otro qrunner maestro ejecutándose o un fichero de lock antiguo. Intente\n"
+"ya hubiera otro qrunner maestro ejecutándose o un fichero de lock antiguo. "
+"Intente\n"
 "re-ejecutar mailmanctl con la opción -s.\n"
 
 #: bin/mailmanctl:233
@@ -12165,8 +12194,8 @@ msgid ""
 " - owner addresses need to be fully-qualified names like \"owner@example.com"
 "\", not just \"owner\"."
 msgstr ""
-" - las direcciones del propietario deben ser completas, como \"propietario@example.com"
-"\", no solo \"propietario\"."
+" - las direcciones del propietario deben ser completas, como "
+"\"propietario@example.com\", no solo \"propietario\"."
 
 #: bin/newlist:244
 msgid "Hit enter to notify %(listname)s owner..."
@@ -13271,7 +13300,8 @@ msgstr ""
 "\n"
 "Tienes que poner a Mailman en un estado inactivo y borrar todos los "
 "bloqueos\n"
-"(ficheros de lock) inválidos, entonces volver a ejecutar manualmente \"make update\".\n"
+"(ficheros de lock) inválidos, entonces volver a ejecutar manualmente \"make "
+"update\".\n"
 " Vea los ficheros INSTALL y UPGRADE para más detalles.\n"
 
 #: bin/version:19
@@ -13401,7 +13431,8 @@ msgstr ""
 "Marco general para interactuar con un objecto que representa a una lista de\n"
 "distribución.\n"
 "\n"
-"Hay dos maneras para usar este script: interactivamente o desde un programa.\n"
+"Hay dos maneras para usar este script: interactivamente o desde un "
+"programa.\n"
 "El uso interactivo le permite jugar, examinar y modificar un objeto "
 "MailList\n"
 "desde el intérprete interactivo de Python. Cuando se ejecute "
@@ -13463,8 +13494,8 @@ msgstr ""
 "    --all / -a\n"
 "        Esta opción solo funciona con la opción -r. Utilicela si quiere "
 "ejecutar\n"
-"        el script en todas las listas de distribución. Cuando use esta opción "
-"no\n"
+"        el script en todas las listas de distribución. Cuando use esta "
+"opción no\n"
 "        debería incluir en la línea de ordenes un nombre de lista como "
 "argumento.\n"
 "        La variable 'r' será una lista de todos los resultados.\n"
@@ -13974,8 +14005,8 @@ msgid ""
 "        Don't send the digest for the given list.  May be repeated to skip\n"
 "        multiple lists.\n"
 msgstr ""
-"Manda los recopilatorios de las listas con mensajes pendientes y con la opción activa "
-"digest_send_periodic.\n"
+"Manda los recopilatorios de las listas con mensajes pendientes y con la "
+"opción activa digest_send_periodic.\n"
 "\n"
 "Sintaxis: %(PROGRAM)s [opciones]\n"
 "\n"
