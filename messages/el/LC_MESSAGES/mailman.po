@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxpaint-2.1pre\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
+"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
 "PO-Revision-Date: 2011-09-15 11:53+0800\n"
 "Last-Translator: Limperis Antonis <limperis@cti.gr>\n"
 "Language-Team: Greek <listmaster@sch.gr>\n"
@@ -26,8 +26,8 @@ msgstr "το μέγεθος δεν είναι διαθέσιμο"
 msgid " %(size)i bytes "
 msgstr " %(size)i bytes "
 
-#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:181
-#: Mailman/Archiver/pipermail.py:182
+#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:185
+#: Mailman/Archiver/pipermail.py:186
 msgid "No subject"
 msgstr "Δεν υπάρχει θέμα"
 
@@ -172,27 +172,27 @@ msgstr "Ανανέωση της HTML για το άρθρο %(seq)s"
 msgid "article file %(filename)s is missing!"
 msgstr "το %(filename)s αρχείο του άρθρου λείπει!"
 
-#: Mailman/Archiver/pipermail.py:298
+#: Mailman/Archiver/pipermail.py:302
 msgid "Creating archive directory "
 msgstr "Δημιουργία καταλόγου για το ιστορικό αρχείο"
 
-#: Mailman/Archiver/pipermail.py:310
+#: Mailman/Archiver/pipermail.py:314
 msgid "Reloading pickled archive state"
 msgstr "Επαναφόρτωση της κατάστασης του παλαιού ιστορικού αρχείου"
 
-#: Mailman/Archiver/pipermail.py:337
+#: Mailman/Archiver/pipermail.py:341
 msgid "Pickling archive state into "
 msgstr "Pickling archive state into "
 
-#: Mailman/Archiver/pipermail.py:449
+#: Mailman/Archiver/pipermail.py:453
 msgid "Updating index files for archive [%(archive)s]"
 msgstr "Ανανέωση των αρχείων καταλόγου για το ιστορικό αρχείο [%(archive)s]"
 
-#: Mailman/Archiver/pipermail.py:482
+#: Mailman/Archiver/pipermail.py:486
 msgid "  Thread"
 msgstr "  Ακολουθία μηνύματος"
 
-#: Mailman/Archiver/pipermail.py:593
+#: Mailman/Archiver/pipermail.py:597
 msgid "#%(counter)05d %(msgid)s"
 msgstr "#%(counter)05d %(msgid)s"
 
@@ -2666,8 +2666,8 @@ msgid "No address given"
 msgstr "Δε δίνεται διεύθυνση"
 
 #: Mailman/Cgi/options.py:176
-msgid "Illegal Email Address: %(safeuser)s"
-msgstr "Μη έγκυρη Email Διεύθυνση: %(safeuser)s"
+msgid "Illegal Email Address"
+msgstr "Μη έγκυρη Email Διεύθυνση"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
 #: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
@@ -4209,163 +4209,163 @@ msgstr "Κανονικά (non-digest) μέλη:"
 msgid "Digest members:"
 msgstr "Μέλη τα οποία λαμβάνουν τα μηνύματα της λίστας συγκεντρωτικά:"
 
-#: Mailman/Defaults.py:1790
+#: Mailman/Defaults.py:1798
 msgid "Arabic"
 msgstr "Αραβικά"
 
-#: Mailman/Defaults.py:1791
+#: Mailman/Defaults.py:1799
 msgid "Asturian"
 msgstr "Εσθονικά"
 
-#: Mailman/Defaults.py:1792
+#: Mailman/Defaults.py:1800
 msgid "Catalan"
 msgstr "Καταλανικά"
 
-#: Mailman/Defaults.py:1793
+#: Mailman/Defaults.py:1801
 msgid "Czech"
 msgstr "Τσέχικα"
 
-#: Mailman/Defaults.py:1794
+#: Mailman/Defaults.py:1802
 msgid "Danish"
 msgstr "Δανέζικα"
 
-#: Mailman/Defaults.py:1795
+#: Mailman/Defaults.py:1803
 msgid "German"
 msgstr "Γερμανικά"
 
-#: Mailman/Defaults.py:1796
+#: Mailman/Defaults.py:1804
 msgid "English (USA)"
 msgstr "Αγγλικά (ΗΠΑ)"
 
-#: Mailman/Defaults.py:1797
+#: Mailman/Defaults.py:1805
 msgid "Esperanto"
 msgstr ""
 
-#: Mailman/Defaults.py:1798
+#: Mailman/Defaults.py:1806
 msgid "Spanish (Spain)"
 msgstr "Ισπανικά (Ισπανία)"
 
-#: Mailman/Defaults.py:1799
+#: Mailman/Defaults.py:1807
 msgid "Estonian"
 msgstr "Εσθονικά"
 
-#: Mailman/Defaults.py:1800
+#: Mailman/Defaults.py:1808
 msgid "Euskara"
 msgstr "Βάσκικα"
 
-#: Mailman/Defaults.py:1801
+#: Mailman/Defaults.py:1809
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1802
+#: Mailman/Defaults.py:1810
 msgid "Finnish"
 msgstr "Φιλανδικά"
 
-#: Mailman/Defaults.py:1803
+#: Mailman/Defaults.py:1811
 msgid "French"
 msgstr "Γαλλικά"
 
-#: Mailman/Defaults.py:1804
+#: Mailman/Defaults.py:1812
 msgid "Galician"
 msgstr "Γαλικίας"
 
-#: Mailman/Defaults.py:1805
+#: Mailman/Defaults.py:1813
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1806
+#: Mailman/Defaults.py:1814
 msgid "Hebrew"
 msgstr "Εβραϊκά"
 
-#: Mailman/Defaults.py:1807
+#: Mailman/Defaults.py:1815
 msgid "Croatian"
 msgstr "Κροατικά"
 
-#: Mailman/Defaults.py:1808
+#: Mailman/Defaults.py:1816
 msgid "Hungarian"
 msgstr "Ουγγαρικά"
 
-#: Mailman/Defaults.py:1809
+#: Mailman/Defaults.py:1817
 msgid "Interlingua"
 msgstr "Διαγλωσσικά"
 
-#: Mailman/Defaults.py:1810
+#: Mailman/Defaults.py:1818
 msgid "Italian"
 msgstr "Ιταλικά"
 
-#: Mailman/Defaults.py:1811
+#: Mailman/Defaults.py:1819
 msgid "Japanese"
 msgstr "Ιαπωνικά"
 
-#: Mailman/Defaults.py:1812
+#: Mailman/Defaults.py:1820
 msgid "Korean"
 msgstr "Κορεάτικα"
 
-#: Mailman/Defaults.py:1813
+#: Mailman/Defaults.py:1821
 msgid "Lithuanian"
 msgstr "Λιθουανικά"
 
-#: Mailman/Defaults.py:1814
+#: Mailman/Defaults.py:1822
 msgid "Dutch"
 msgstr "Ολλανδικά"
 
-#: Mailman/Defaults.py:1815
+#: Mailman/Defaults.py:1823
 msgid "Norwegian"
 msgstr "Νορβηγικά"
 
-#: Mailman/Defaults.py:1816
+#: Mailman/Defaults.py:1824
 msgid "Polish"
 msgstr "Πολωνικά"
 
-#: Mailman/Defaults.py:1817
+#: Mailman/Defaults.py:1825
 msgid "Portuguese"
 msgstr "Πορτογαλικά"
 
-#: Mailman/Defaults.py:1818
+#: Mailman/Defaults.py:1826
 msgid "Portuguese (Brazil)"
 msgstr "Πορτογαλικά (Βραζιλία)"
 
-#: Mailman/Defaults.py:1819
+#: Mailman/Defaults.py:1827
 msgid "Romanian"
 msgstr "Ρουμάνικα"
 
-#: Mailman/Defaults.py:1820
+#: Mailman/Defaults.py:1828
 msgid "Russian"
 msgstr "Ρώσικα"
 
-#: Mailman/Defaults.py:1821
+#: Mailman/Defaults.py:1829
 msgid "Slovak"
 msgstr "Σλοβακικά"
 
-#: Mailman/Defaults.py:1822
+#: Mailman/Defaults.py:1830
 msgid "Slovenian"
 msgstr "Σλοβένικα"
 
-#: Mailman/Defaults.py:1823
+#: Mailman/Defaults.py:1831
 msgid "Serbian"
 msgstr "Σέρβικα"
 
-#: Mailman/Defaults.py:1824
+#: Mailman/Defaults.py:1832
 msgid "Swedish"
 msgstr "Σουηδικά"
 
-#: Mailman/Defaults.py:1825
+#: Mailman/Defaults.py:1833
 msgid "Turkish"
 msgstr "Τουρκικά"
 
-#: Mailman/Defaults.py:1826
+#: Mailman/Defaults.py:1834
 msgid "Ukrainian"
 msgstr "Ουκρανικά"
 
-#: Mailman/Defaults.py:1827
+#: Mailman/Defaults.py:1835
 msgid "Vietnamese"
 msgstr "Βιετναμέζικα"
 
-#: Mailman/Defaults.py:1828
+#: Mailman/Defaults.py:1836
 msgid "Chinese (China)"
 msgstr "Κινέζικα (Κίνα)"
 
-#: Mailman/Defaults.py:1829
+#: Mailman/Defaults.py:1837
 msgid "Chinese (Taiwan)"
 msgstr "Κινέζικα (Ταϊβάν)"
 

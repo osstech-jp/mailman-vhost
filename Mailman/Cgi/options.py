@@ -173,7 +173,7 @@ def main():
     try:
         Utils.ValidateEmail(user)
     except Errors.EmailAddressError:
-        doc.addError(_('Illegal Email Address: %(safeuser)s'))
+        doc.addError(_('Illegal Email Address'))
         loginpage(mlist, doc, None, language)
         print doc.Format()
         return

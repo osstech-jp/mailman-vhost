@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1.5\n"
-"POT-Creation-Date: Thu Jan  9 17:03:36 2020\n"
+"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
 "PO-Revision-Date: 2005-02-24 17:37+0200\n"
 "Last-Translator: Maxim Dzumanenko <mvd@mylinux.com.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -23,8 +23,8 @@ msgstr "розмір відсутній"
 msgid " %(size)i bytes "
 msgstr " %(size)i байт(ів)"
 
-#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:181
-#: Mailman/Archiver/pipermail.py:182
+#: Mailman/Archiver/HyperArch.py:276 Mailman/Archiver/pipermail.py:185
+#: Mailman/Archiver/pipermail.py:186
 msgid "No subject"
 msgstr "Тема відсутня"
 
@@ -169,27 +169,27 @@ msgstr "Оновлюється HTML-відображення статті %(seq)
 msgid "article file %(filename)s is missing!"
 msgstr "відсутній файл статті %(filename)s!"
 
-#: Mailman/Archiver/pipermail.py:298
+#: Mailman/Archiver/pipermail.py:302
 msgid "Creating archive directory "
 msgstr "Створюється каталог архіву "
 
-#: Mailman/Archiver/pipermail.py:310
+#: Mailman/Archiver/pipermail.py:314
 msgid "Reloading pickled archive state"
 msgstr "Завантажується стан архіву"
 
-#: Mailman/Archiver/pipermail.py:337
+#: Mailman/Archiver/pipermail.py:341
 msgid "Pickling archive state into "
 msgstr "Стан архіву записується у "
 
-#: Mailman/Archiver/pipermail.py:449
+#: Mailman/Archiver/pipermail.py:453
 msgid "Updating index files for archive [%(archive)s]"
 msgstr "Відбувається оновлення файлів індексів архіву [%(archive)s]"
 
-#: Mailman/Archiver/pipermail.py:482
+#: Mailman/Archiver/pipermail.py:486
 msgid "  Thread"
 msgstr "  Теми дискусій"
 
-#: Mailman/Archiver/pipermail.py:593
+#: Mailman/Archiver/pipermail.py:597
 msgid "#%(counter)05d %(msgid)s"
 msgstr "#%(counter)05d %(msgid)s"
 
@@ -2552,8 +2552,8 @@ msgid "No address given"
 msgstr "Відсутня адреса"
 
 #: Mailman/Cgi/options.py:176
-msgid "Illegal Email Address: %(safeuser)s"
-msgstr "Неправильна адреса: %(safeuser)s"
+msgid "Illegal Email Address"
+msgstr "Неправильна адреса"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
 #: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
@@ -3987,166 +3987,166 @@ msgstr "Отримувачі звичайних повідомлень:"
 msgid "Digest members:"
 msgstr "Отримувачі збірок:"
 
-#: Mailman/Defaults.py:1790
+#: Mailman/Defaults.py:1798
 msgid "Arabic"
 msgstr ""
 
-#: Mailman/Defaults.py:1791
+#: Mailman/Defaults.py:1799
 #, fuzzy
 msgid "Asturian"
 msgstr "Естонська"
 
-#: Mailman/Defaults.py:1792
+#: Mailman/Defaults.py:1800
 msgid "Catalan"
 msgstr "Каталонська"
 
-#: Mailman/Defaults.py:1793
+#: Mailman/Defaults.py:1801
 msgid "Czech"
 msgstr "Чеська"
 
-#: Mailman/Defaults.py:1794
+#: Mailman/Defaults.py:1802
 msgid "Danish"
 msgstr "Датська"
 
-#: Mailman/Defaults.py:1795
+#: Mailman/Defaults.py:1803
 msgid "German"
 msgstr "Німецька"
 
-#: Mailman/Defaults.py:1796
+#: Mailman/Defaults.py:1804
 msgid "English (USA)"
 msgstr "Англійська (США)"
 
-#: Mailman/Defaults.py:1797
+#: Mailman/Defaults.py:1805
 msgid "Esperanto"
 msgstr ""
 
-#: Mailman/Defaults.py:1798
+#: Mailman/Defaults.py:1806
 msgid "Spanish (Spain)"
 msgstr "Іспанська (Іспанія)"
 
-#: Mailman/Defaults.py:1799
+#: Mailman/Defaults.py:1807
 msgid "Estonian"
 msgstr "Естонська"
 
-#: Mailman/Defaults.py:1800
+#: Mailman/Defaults.py:1808
 msgid "Euskara"
 msgstr "Баскська"
 
-#: Mailman/Defaults.py:1801
+#: Mailman/Defaults.py:1809
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1802
+#: Mailman/Defaults.py:1810
 msgid "Finnish"
 msgstr "Фінська"
 
-#: Mailman/Defaults.py:1803
+#: Mailman/Defaults.py:1811
 msgid "French"
 msgstr "Французька"
 
-#: Mailman/Defaults.py:1804
+#: Mailman/Defaults.py:1812
 #, fuzzy
 msgid "Galician"
 msgstr "Італійська"
 
-#: Mailman/Defaults.py:1805
+#: Mailman/Defaults.py:1813
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1806
+#: Mailman/Defaults.py:1814
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1807
+#: Mailman/Defaults.py:1815
 msgid "Croatian"
 msgstr "Хорватська"
 
-#: Mailman/Defaults.py:1808
+#: Mailman/Defaults.py:1816
 msgid "Hungarian"
 msgstr "Угорська"
 
-#: Mailman/Defaults.py:1809
+#: Mailman/Defaults.py:1817
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1810
+#: Mailman/Defaults.py:1818
 msgid "Italian"
 msgstr "Італійська"
 
-#: Mailman/Defaults.py:1811
+#: Mailman/Defaults.py:1819
 msgid "Japanese"
 msgstr "Японська"
 
-#: Mailman/Defaults.py:1812
+#: Mailman/Defaults.py:1820
 msgid "Korean"
 msgstr "Корейська"
 
-#: Mailman/Defaults.py:1813
+#: Mailman/Defaults.py:1821
 msgid "Lithuanian"
 msgstr "Литовська"
 
-#: Mailman/Defaults.py:1814
+#: Mailman/Defaults.py:1822
 msgid "Dutch"
 msgstr "Голландська"
 
-#: Mailman/Defaults.py:1815
+#: Mailman/Defaults.py:1823
 msgid "Norwegian"
 msgstr "Норвезька"
 
-#: Mailman/Defaults.py:1816
+#: Mailman/Defaults.py:1824
 msgid "Polish"
 msgstr "Польська"
 
-#: Mailman/Defaults.py:1817
+#: Mailman/Defaults.py:1825
 msgid "Portuguese"
 msgstr "Португальська"
 
-#: Mailman/Defaults.py:1818
+#: Mailman/Defaults.py:1826
 msgid "Portuguese (Brazil)"
 msgstr "Португальська (Бразилія)"
 
-#: Mailman/Defaults.py:1819
+#: Mailman/Defaults.py:1827
 msgid "Romanian"
 msgstr "Румунська"
 
-#: Mailman/Defaults.py:1820
+#: Mailman/Defaults.py:1828
 msgid "Russian"
 msgstr "Російська"
 
-#: Mailman/Defaults.py:1821
+#: Mailman/Defaults.py:1829
 #, fuzzy
 msgid "Slovak"
 msgstr "Словенська"
 
-#: Mailman/Defaults.py:1822
+#: Mailman/Defaults.py:1830
 msgid "Slovenian"
 msgstr "Словенська"
 
-#: Mailman/Defaults.py:1823
+#: Mailman/Defaults.py:1831
 msgid "Serbian"
 msgstr "Сербська"
 
-#: Mailman/Defaults.py:1824
+#: Mailman/Defaults.py:1832
 msgid "Swedish"
 msgstr "Шведська"
 
-#: Mailman/Defaults.py:1825
+#: Mailman/Defaults.py:1833
 msgid "Turkish"
 msgstr "Турецька"
 
-#: Mailman/Defaults.py:1826
+#: Mailman/Defaults.py:1834
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: Mailman/Defaults.py:1827
+#: Mailman/Defaults.py:1835
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1828
+#: Mailman/Defaults.py:1836
 msgid "Chinese (China)"
 msgstr "Китайська (Китай)"
 
-#: Mailman/Defaults.py:1829
+#: Mailman/Defaults.py:1837
 msgid "Chinese (Taiwan)"
 msgstr "Китайська (Тайвань)"
 
