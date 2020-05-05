@@ -5,7 +5,12 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.30-1 (xx-xxx-xxxx)
+2.1.31 (05-May-2020)
+
+  Security
+
+    - A content injection vulnerability via the options login page has been
+      discovered and reported by Vishal Singh. This is fixed.  (LP: #1873722)
 
   i18n
 
