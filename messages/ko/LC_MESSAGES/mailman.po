@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2002-03-28 19:21+09:00\n"
 "Last-Translator: Hyejin Soang, Wongyo Jung<redcloak@igrus.inha.ac.kr, "
 "andsoon@igrus.inha.ac.kr>\n"
@@ -2514,7 +2514,7 @@ msgid "Illegal Email Address"
 msgstr "이상한 형식의 E메일 주소를 주셨습니다."
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "%(safeuser)s 라는 사용자가 없습니다."
 
@@ -2935,7 +2935,7 @@ msgstr "당신의 패스워드를 포함한 메일을 당신에게 전달되었습니다"
 msgid "Please enter your email address"
 msgstr "당신의 E메일 주소:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "비공개 저장소 파일을 찾을 수 없습니다."
 

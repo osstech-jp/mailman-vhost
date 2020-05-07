@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2007-11-26 12:21+0100\n"
 "Last-Translator: Martin Matuška <martin@matuska.org>\n"
 "Language-Team: Slovak\n"
@@ -2548,7 +2548,7 @@ msgid "Illegal Email Address"
 msgstr "Neplatná e-mailová adresa"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Neznámy účastník: %(safeuser)s."
 
@@ -2984,7 +2984,7 @@ msgstr "Správa s vašim heslom vám bola zaslaná."
 msgid "Please enter your email address"
 msgstr "Vaša e-mailová adresa:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Súbor súkromného archivu nebol nájdený."
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: a\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2007-03-23 11:26+0100\n"
 "Last-Translator: Dan Ohnesorg <dan@ohnesorg.cz>\n"
 "Language-Team:  <cs@li.org>\n"
@@ -2545,7 +2545,7 @@ msgid "Illegal Email Address"
 msgstr "Neplatná emailová adresa"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Nenalezl jsem úèastníka: %(safeuser)s."
 
@@ -2981,7 +2981,7 @@ msgstr "Bylo Vám zasláno pøipomenutí Va¹eho hesla."
 msgid "Please enter your email address"
 msgstr "Va¹e e-mailová adresa: "
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Nebyl nalezen soubor privátního archivu."
 

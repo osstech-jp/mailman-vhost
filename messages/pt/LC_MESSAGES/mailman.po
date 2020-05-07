@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2003-02-19 10:14GMT\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -2571,7 +2571,7 @@ msgid "Illegal Email Address"
 msgstr "Endereço de email incorrecto/inválido"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Membro inexistente: %(safeuser)s"
 
@@ -3011,7 +3011,7 @@ msgstr "Foi-lhe enviada uma nota com a sua password"
 msgid "Please enter your email address"
 msgstr "O seu endereço de email:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Arquivo privado não encontrado"
 

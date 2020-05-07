@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.1.27\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2018-06-02 08:56\n"
 "Last-Translator: Rubén Fernández Asensio <rubeno@esperanto.cat>\n"
 "Language-Team: Esperanto <listestro@esperanto.cat>\n"
@@ -2403,7 +2403,7 @@ msgid "Illegal Email Address"
 msgstr "Retpoŝtadreso nevalida"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Membro neekzistanta: %(safeuser)s."
 
@@ -2835,7 +2835,7 @@ msgstr ""
 msgid "Please enter your email address"
 msgstr "Enskribu vian retpoŝtadreson"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Dosiero de la privata arĥivo ne trovita"
 

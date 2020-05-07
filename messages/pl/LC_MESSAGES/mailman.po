@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1\n"
 "Report-Msgid-Bugs-To: https://github.com/aviarypl/mailman-l10n-pl/issues\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2016-02-15 17:11+0100\n"
 "Last-Translator: Stefan Plewako <splewako@aviary.pl>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -2548,7 +2548,7 @@ msgid "Illegal Email Address"
 msgstr "Nieprawid³owy adres"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Nie znaleziono prenumeratora: %(safeuser)s."
 
@@ -2978,7 +2978,7 @@ msgstr "E-mail z przypomnieniem has³a zosta³ wys³any."
 msgid "Please enter your email address"
 msgstr "Wprowad¼ adres e-mail"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Plik archiwum nie znaleziony"
 

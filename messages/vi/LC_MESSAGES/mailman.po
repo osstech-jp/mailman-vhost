@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman-2.1.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2008-01-03 22:05+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -2556,7 +2556,7 @@ msgid "Illegal Email Address"
 msgstr "Không cho phép địa chỉ"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Không có thành viên như vậy: %(safeuser)s."
 
@@ -2991,7 +2991,7 @@ msgstr "Lời nhắc nhở mật khẩu đã được gởi cho bạn trong thư
 msgid "Please enter your email address"
 msgstr "Địa chỉ thư của bạn:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Không tìm thấy tập tin kho riêng."
 

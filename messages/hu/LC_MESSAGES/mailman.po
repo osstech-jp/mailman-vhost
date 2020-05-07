@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2004-03-23 14:55--100\n"
 "Last-Translator: Szilárd Vizi <vizisz@freemail.hu>\n"
 "Language-Team: Hungarian <LL@li.org>\n"
@@ -2546,7 +2546,7 @@ msgid "Illegal Email Address"
 msgstr "Érvénytelen e-mail cím"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Nem található %(safeuser)s címmel tag."
 
@@ -2977,7 +2977,7 @@ msgstr "Az emlékeztetõ a jelszavadról e-mailben el lett küldve."
 msgid "Please enter your email address"
 msgstr "E-mail címed:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Nem található a privát archívum állománya"
 

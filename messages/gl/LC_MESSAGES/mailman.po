@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman_src\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2007-10-19 14:01+0200\n"
 "Last-Translator: Frco. Javier Rial Rodríguez <fjrial@cesga.es>\n"
 "Language-Team: Galician <mancomun@mancomun.org>\n"
@@ -2576,7 +2576,7 @@ msgid "Illegal Email Address"
 msgstr "O enderezo de correo electrónico é incorrecto"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Non existe ese subscritor: %(safeuser)s."
 
@@ -3011,7 +3011,7 @@ msgstr "Envióuselle un lembranza do seu contrasinal por correo electrónico.<p>
 msgid "Please enter your email address"
 msgstr "O seu enderezo de correo electrónico:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Non se achou o ficheiro do arquivo privado"
 
