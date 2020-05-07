@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1b1\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2002-12-24 14:35+0100\n"
 "Last-Translator: Eva Österlind <eva.osterlind@arvika.se>\n"
 "Language-Team: Swedish <information@arvika.se>\n"
@@ -3517,7 +3517,7 @@ msgstr "Fel/Ogiltig e-postadress"
 # Mailman/Cgi/options.py:107 Mailman/Cgi/options.py:154
 # Mailman/Cgi/options.py:176
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Medlemmen finns inte: %(safeuser)s."
 
@@ -4093,7 +4093,7 @@ msgstr "Din e-postadress:"
 
 # Mailman/Cgi/private.py:154
 # Mailman/Cgi/private.py:154
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Hittar inte arkivfilen"
 

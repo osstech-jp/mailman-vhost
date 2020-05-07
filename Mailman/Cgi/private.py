@@ -165,13 +165,9 @@ def main():
             if mlist.isMember(username):
                 mlist.MailUserPassword(username)
             elif username:
-                # Not a member
-                if mlist.private_roster == 0:
-                    # Public rosters
-                    safeuser = Utils.websafe(username)
-                    message = Bold(FontSize('+1',
-                                  _('No such member: %(safeuser)s.'))).Format()
-                else:
+                # Not a member. Don't report address in any case. It leads to
+                # Content injection. Just log if roster is not public.
+                if mlist.private_roster != 0:
                     syslog('mischief',
                        'Reminder attempt of non-member w/ private rosters: %s',
                        username)

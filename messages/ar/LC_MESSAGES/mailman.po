@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman_ar\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2006-03-19 17:06+0300\n"
 "Last-Translator: Munzir Taha <munzirtaha@newhorizons.com.sa>\n"
 "Language-Team: Arabic\n"
@@ -2460,7 +2460,7 @@ msgid "Illegal Email Address"
 msgstr "عنوان بريد إلكتروني غير نظامي"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "لا يوجد مثل هذ العضو: %(safeuser)s"
 
@@ -2870,7 +2870,7 @@ msgstr "رسالة تذكيرية لكلمة سرك قد أرسلت إليك."
 msgid "Please enter your email address"
 msgstr "عنوانك الإلكتروني:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "ملف الأرشيف الخاص غير موجود"
 

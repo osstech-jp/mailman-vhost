@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2007-04-05 21:33+0300\n"
 "Last-Translator: Dov Zamir <linux@zamirfamily.com>\n"
 "Language-Team: Hebrew\n"
@@ -2518,7 +2518,7 @@ msgid "Illegal Email Address"
 msgstr "כתובת דוא\"ל לא חוקית"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "אין כזה מנוי: %(safeuser)s."
 
@@ -2948,7 +2948,7 @@ msgstr "תזכורת עם סיסמתך נשלחה אליך."
 msgid "Please enter your email address"
 msgstr "כתובת דוא\"ל שלך:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "קובץ ארכיון פרטי לא נמצא"
 

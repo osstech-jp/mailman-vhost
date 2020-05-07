@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2003-07-02 14:50+0100\n"
 "Last-Translator: Bojan Suzic <bojans@teol.net>\n"
 "Language-Team: Trust-b [Serbian] <kontakt@trust-b.com>\n"
@@ -2381,7 +2381,7 @@ msgid "Illegal Email Address"
 msgstr "Лоша е-адреса"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Нема корисника %(safeuser)s."
 
@@ -2751,7 +2751,7 @@ msgstr "Порука са вашом лозинком вам је послана
 msgid "Please enter your email address"
 msgstr "Ваша е-адреса:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Фајл приватне архиве није пронађен"
 

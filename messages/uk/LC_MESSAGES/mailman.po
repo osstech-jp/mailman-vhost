@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1.5\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2005-02-24 17:37+0200\n"
 "Last-Translator: Maxim Dzumanenko <mvd@mylinux.com.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -2556,7 +2556,7 @@ msgid "Illegal Email Address"
 msgstr "Неправильна адреса"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Такий користувач відсутній: %(safeuser)s."
 
@@ -2985,7 +2985,7 @@ msgstr "Лист з нагадуванням паролю успішно вам 
 msgid "Please enter your email address"
 msgstr "Ваша поштова адреса:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Файл приватного архіву не існує"
 

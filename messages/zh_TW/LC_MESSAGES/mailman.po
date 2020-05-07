@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman-2.0\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: Tue Jan 16 10:00:00 2001\n"
 "Last-Translator: Yuan-Chen Cheng <ycheng@slat.org>\n"
 "Language-Team: Chinese (traditional) <zh-L10n@linux.org.tw>\n"
@@ -2431,7 +2431,7 @@ msgid "Illegal Email Address"
 msgstr "非法的 email 地址"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "沒有此訂戶：%(safeuser)s。"
 
@@ -2841,7 +2841,7 @@ msgstr "您的密碼提醒信件已經寄給您"
 msgid "Please enter your email address"
 msgstr "您的 email 地址："
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "找不到祕密歸檔"
 

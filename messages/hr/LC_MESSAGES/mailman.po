@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.2\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2004-06-15 12:00+1\n"
 "Last-Translator: Nino Katic <nkatic@jagor.srce.hr>\n"
 "Language-Team: Croatian <nkatic@jagor.srce.hr>\n"
@@ -2594,7 +2594,7 @@ msgid "Illegal Email Address"
 msgstr "Pogre¹na Email Adresa"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Nema takvog èlana: %(safeuser)s."
 
@@ -3028,7 +3028,7 @@ msgstr "Podsjetnik va¹e lozinke poslan vam je mailom."
 msgid "Please enter your email address"
 msgstr "Va¹a e-mail adresa:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Datoteka sa privatnom arhivom nije pronaðena"
 

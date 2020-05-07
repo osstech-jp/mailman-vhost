@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2016-10-10 16:24+0200\n"
 "Last-Translator: Gari Araolaza <garaolaza@codesyntax.com>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -2569,7 +2569,7 @@ msgid "Illegal Email Address"
 msgstr "ePosta helbide okerra"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Harpidedun ezezaguna: %(safeuser)s."
 
@@ -3009,7 +3009,7 @@ msgstr ""
 msgid "Please enter your email address"
 msgstr "Zure ePosta helbidea:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Artxibo Pribatua ez da aurkitu"
 

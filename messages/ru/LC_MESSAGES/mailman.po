@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2018-03-18 13:49+0200\n"
 "Last-Translator: Danil Smirnov <danil@smirnov.la>\n"
 "Language-Team: Russian <danil@smirnov.la>\n"
@@ -2595,7 +2595,7 @@ msgstr "Неверный адрес"
 
 # MSS: было "Подписчик отсутствует: %(safeuser)s."... надо думать.. слушать...
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Такого пользователя не существует: %(safeuser)s."
 
@@ -3033,7 +3033,7 @@ msgstr ""
 msgid "Please enter your email address"
 msgstr "Введите Ваш почтовый адрес"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Файл закрытого архива не найден"
 

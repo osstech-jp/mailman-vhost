@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2005-05-12 07:35+0300\n"
 "Last-Translator: Stefaniu Criste <gupi@hangar.ro>\n"
 "Language-Team: Romanian <en@li.org>\n"
@@ -2603,7 +2603,7 @@ msgid "Illegal Email Address"
 msgstr "Adresă de email ilegală"
 
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr "Nu există un astfel de membru: %(safeuser)s."
 
@@ -3038,7 +3038,7 @@ msgstr ""
 msgid "Please enter your email address"
 msgstr "Vă rugăm, introducei adresa de email:"
 
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Fişierul de arhivă privată nu a fost găsit"
 

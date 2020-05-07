@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman\n"
-"POT-Creation-Date: Tue May  5 11:55:48 2020\n"
+"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
 "PO-Revision-Date: 2020-02-19 11:57+0100\n"
 "Last-Translator: Mirian Margiani <mirian@margiani.ch>\n"
 "Language-Team: German <mailman-i18n@python.org>\n"
@@ -2915,7 +2915,7 @@ msgstr "Ungültige E-Mail-Adresse"
 
 # Mailman/Cgi/options.py:93
 #: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261 Mailman/Cgi/private.py:170
+#: Mailman/Cgi/options.py:261
 msgid "No such member: %(safeuser)s."
 msgstr " %(safeuser)s ist nicht Abonnent."
 
@@ -3421,7 +3421,7 @@ msgid "Please enter your email address"
 msgstr "Bitte Ihre E-Mail-Adresse eingeben"
 
 # Mailman/Cgi/private.py:155
-#: Mailman/Cgi/private.py:222
+#: Mailman/Cgi/private.py:218
 msgid "Private archive file not found"
 msgstr "Archivdatei nicht gefunden"
 
