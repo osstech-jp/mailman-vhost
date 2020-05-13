@@ -1,4 +1,4 @@
-# Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -874,9 +874,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         for k, v in pends.items():
             if k in ('evictions', 'version'):
                 continue
-            op, data = v
-            if (op == Pending.SUBSCRIPTION and
-                    data.address.lower() == email.lower()):
+            if (v[0] == Pending.SUBSCRIPTION and
+                    v[1].address.lower() == email.lower()):
                 return True
         return False
 
