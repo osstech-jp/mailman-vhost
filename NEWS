@@ -10,7 +10,8 @@ Here is a history of user visible changes to Mailman.
   Bug Fixes and other patches
 
     - The fix for LP: #1859104 can result in ValueError being thrown on
-      attempts to subscribe to a list. This is fixed.  (LP: #1878458)
+      attempts to subscribe to a list. This is fixed and extended to apply
+      REFUSE_SECOND_PENDING to unsubscription as well.  (LP: #1878458)
 
 2.1.33 (07-May-2020)
 

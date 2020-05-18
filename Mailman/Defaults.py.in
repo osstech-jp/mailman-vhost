@@ -1128,7 +1128,7 @@ ANONYMOUS_LIST_KEEP_HEADERS = ['^(?!x-)', '^x-mailman-',
 # pending a subscription confirmation when one is already pending.  The down
 # side to this is if a subscriber loses or doesn't receive the confirmation
 # request email, she has to wait PENDING_REQUEST_LIFE (default 3 days) before
-# she can request another.
+# she can request another.  This setting also applies to repeated unsubscribes.
 REFUSE_SECOND_PENDING = No
 
 
