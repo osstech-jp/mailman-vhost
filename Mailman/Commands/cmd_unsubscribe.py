@@ -73,9 +73,14 @@ approval."""))
         # No password was given, so we need to do a mailback confirmation
         # instead of unsubscribing them here.
         cpaddr = mlist.getMemberCPAddress(address)
-        mlist.ConfirmUnsubscription(cpaddr)
-        # We don't also need to send a confirmation to this command
-        res.respond = 0
+        try:
+            mlist.ConfirmUnsubscription(cpaddr)
+        except Errors.MMAlreadyPending:
+            res.results.append(
+                _('You already have a subscription pending confirmation'))
+        else:
+            # We don't also need to send a confirmation to this command
+            res.respond = 0
     else:
         # No admin approval is necessary, so we can just delete them if the
         # passwords match.

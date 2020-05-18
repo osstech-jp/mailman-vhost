@@ -833,8 +833,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
     #
     # Membership management front-ends and assertion checks
     #
-    def CheckPending(self, email):
-        """Check if there is already an unexpired pending subscription for
+    def CheckPending(self, email, unsub=False):
+        """Check if there is already an unexpired pending (un)subscription for
         this email.
         """
         if not mm_cfg.REFUSE_SECOND_PENDING:
@@ -846,8 +846,11 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
         for k, v in pends.items():
             if k in ('evictions', 'version'):
                 continue
-            if (v[0] == Pending.SUBSCRIPTION and
-                    v[1].address.lower() == email.lower()):
+            op, data = v[:2]
+            if (op == Pending.SUBSCRIPTION and not unsub and
+                    data.address.lower() == email.lower() or
+                    op == Pending.UNSUBSCRIPTION and unsub and
+                    data.lower() == email.lower()):
                 return True
         return False
 
@@ -1476,6 +1479,8 @@ class MailList(HTMLFormatter, Deliverer, ListAdmin,
             assert 0, 'Bad op: %s' % op
 
     def ConfirmUnsubscription(self, addr, lang=None, remote=None):
+        if self.CheckPending(addr, unsub=True):
+            raise Errors.MMAlreadyPending, email
         if lang is None:
             lang = self.getMemberLanguage(addr)
         cookie = self.pend_new(Pending.UNSUBSCRIPTION, addr)

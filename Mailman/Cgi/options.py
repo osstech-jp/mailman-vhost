@@ -206,6 +206,7 @@ def main():
 
     # Are we processing an unsubscription request from the login screen?
     msgc = _('If you are a list member, a confirmation email has been sent.')
+    msgb = _('You already have a subscription pending confirmation')
     msga = _("""If you are a list member, your unsubscription request has been
              forwarded to the list administrator for approval.""")
     if cgidata.has_key('login-unsub'):
@@ -228,6 +229,8 @@ def main():
                     mlist.ConfirmUnsubscription(user, userlang, remote=ip)
                     doc.addError(msgc, tag='')
                 mlist.Save()
+            except Errors.MMAlreadyPending:
+                doc.addError(msgb)
             finally:
                 mlist.Unlock()
         else:
