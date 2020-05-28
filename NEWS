@@ -13,6 +13,9 @@ Here is a history of user visible changes to Mailman.
       attempts to subscribe to a list. This is fixed and extended to apply
       REFUSE_SECOND_PENDING to unsubscription as well.  (LP: #1878458)
 
+    - DMARC mitigation no longer misses if the domain name returned by DNS
+      contains upper case.  (LP: #1881035)
+
 2.1.33 (07-May-2020)
 
   Security
