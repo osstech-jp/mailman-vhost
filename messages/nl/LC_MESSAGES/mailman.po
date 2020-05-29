@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman 2.1.14\n"
-"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
+"POT-Creation-Date: Thu May 28 18:46:38 2020\n"
 "PO-Revision-Date: 2010-07-07 14:17+0100\n"
 "Last-Translator: Jan Veuger <info@janveuger.com>\n"
 "Language-Team: Dutch <info@janveuger.com>\n"
@@ -284,7 +284,7 @@ msgid "Authorization failed."
 msgstr "Autorisatie mislukt."
 
 #: Mailman/Cgi/admin.py:221 Mailman/Cgi/admindb.py:243
-#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:331
+#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:334
 msgid "The form lifetime has expired. (request forgery check)"
 msgstr ""
 
@@ -556,7 +556,7 @@ msgstr "Naam onderwerp:"
 msgid "Regexp:"
 msgstr "Uitdrukking:"
 
-#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1150
+#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1153
 msgid "Description:"
 msgstr "Omschrijving:"
 
@@ -721,7 +721,7 @@ msgid "nodupes"
 msgstr "geen<br>dubbele"
 
 #: Mailman/Cgi/admin.py:1049 Mailman/Cgi/admin.py:1115
-#: Mailman/Cgi/options.py:391
+#: Mailman/Cgi/options.py:394
 msgid "digest"
 msgstr "verzamel<br>mail"
 
@@ -753,7 +753,7 @@ msgstr "S"
 msgid "notmetoo"
 msgstr "geen<br>eigen"
 
-#: Mailman/Cgi/admin.py:1091 Mailman/Cgi/options.py:389
+#: Mailman/Cgi/admin.py:1091 Mailman/Cgi/options.py:392
 msgid "nomail"
 msgstr ""
 
@@ -1806,8 +1806,8 @@ msgstr ""
 "    <p>Of klik op <em>Annuleer en negeer</em> om uw afmeldingsverzoek in\n"
 "    te trekken."
 
-#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:860
-#: Mailman/Cgi/options.py:1007 Mailman/Cgi/options.py:1017
+#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:863
+#: Mailman/Cgi/options.py:1010 Mailman/Cgi/options.py:1020
 msgid "Unsubscribe"
 msgstr "Afmelden"
 
@@ -2554,7 +2554,7 @@ msgstr ""
 msgid "Edit Options"
 msgstr "Wijzig opties"
 
-#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:972
+#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:975
 #: Mailman/Cgi/roster.py:137
 msgid "View this page in"
 msgstr "Bekijk deze pagina in"
@@ -2580,8 +2580,8 @@ msgstr "Er is geen adres opgegeven"
 msgid "Illegal Email Address"
 msgstr "Ongeldig e-mailadres"
 
-#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261
+#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:240
+#: Mailman/Cgi/options.py:264
 msgid "No such member: %(safeuser)s."
 msgstr "Niet bestaand lid: %(safeuser)s."
 
@@ -2590,7 +2590,13 @@ msgstr "Niet bestaand lid: %(safeuser)s."
 msgid "If you are a list member, a confirmation email has been sent."
 msgstr "Het bevestigingsbericht is verzonden."
 
-#: Mailman/Cgi/options.py:209
+#: Mailman/Cgi/options.py:209 Mailman/Cgi/subscribe.py:296
+#: Mailman/Commands/cmd_subscribe.py:133 Mailman/Commands/cmd_unsubscribe.py:80
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "%(realname)s aanmeldingsbericht"
+
+#: Mailman/Cgi/options.py:210
 #, fuzzy
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
@@ -2599,7 +2605,7 @@ msgstr ""
 "Uw afmeldingsverzoek is doorgestuurd\n"
 "                    naar de lijstmoderator ter goedkeuring."
 
-#: Mailman/Cgi/options.py:251
+#: Mailman/Cgi/options.py:254
 #, fuzzy
 msgid ""
 "If you are a list member,\n"
@@ -2608,15 +2614,15 @@ msgstr ""
 "Indien u lid bent van de lijst, is er nu een herinneringsbericht met uw "
 "wachtwoord naar u verzonden."
 
-#: Mailman/Cgi/options.py:294
+#: Mailman/Cgi/options.py:297
 msgid "Authentication failed."
 msgstr "Authentificatie is mislukt."
 
-#: Mailman/Cgi/options.py:362
+#: Mailman/Cgi/options.py:365
 msgid "A reminder of your password has been emailed to you."
 msgstr "Een herinneringsbericht met uw wachtwoord is naar u verzonden."
 
-#: Mailman/Cgi/options.py:369
+#: Mailman/Cgi/options.py:372
 msgid ""
 "The list administrator may not view the other\n"
 "            subscriptions for this user."
@@ -2624,16 +2630,16 @@ msgstr ""
 "The lijstbeheerder mag de andere abonnementen\n"
 "            van deze gebruiker niet inzien."
 
-#: Mailman/Cgi/options.py:370 Mailman/Cgi/options.py:419
-#: Mailman/Cgi/options.py:547 Mailman/Cgi/options.py:772
+#: Mailman/Cgi/options.py:373 Mailman/Cgi/options.py:422
+#: Mailman/Cgi/options.py:550 Mailman/Cgi/options.py:775
 msgid "Note: "
 msgstr "Opmerking:"
 
-#: Mailman/Cgi/options.py:375
+#: Mailman/Cgi/options.py:378
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
 msgstr "Aanmeldingen voor %(safeuser)s op %(hostname)s"
 
-#: Mailman/Cgi/options.py:378
+#: Mailman/Cgi/options.py:381
 msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
@@ -2641,7 +2647,7 @@ msgstr ""
 "Klik op een link om uw instellingenpagina voor de\n"
 "        betreffende maillijst te bezoeken."
 
-#: Mailman/Cgi/options.py:416
+#: Mailman/Cgi/options.py:419
 msgid ""
 "The list administrator may not change the names\n"
 "            or addresses for this user's other subscriptions.  However, the\n"
@@ -2651,15 +2657,15 @@ msgstr ""
 "            andere abonnementen van deze gebruiker niet wijzigen.  Het\n"
 "            abonnement op deze maillijst is echter gewijzigd."
 
-#: Mailman/Cgi/options.py:439
+#: Mailman/Cgi/options.py:442
 msgid "Addresses did not match!"
 msgstr "Adressen komen niet overeen!"
 
-#: Mailman/Cgi/options.py:444
+#: Mailman/Cgi/options.py:447
 msgid "You are already using that email address"
 msgstr "U gebruikt reeds dat e-mailadres"
 
-#: Mailman/Cgi/options.py:456
+#: Mailman/Cgi/options.py:459
 msgid ""
 "The new address you requested %(newaddr)s is already a member of the\n"
 "%(listname)s mailing list, however you have also requested a global change "
@@ -2673,31 +2679,31 @@ msgstr ""
 "voor alle maillijsten waarvan u lid bent.  Na bevestiging zal het adres\n"
 "%(safeuser)s in alle maillijsten worden gewijzigd. "
 
-#: Mailman/Cgi/options.py:465
+#: Mailman/Cgi/options.py:468
 msgid "The new address is already a member: %(newaddr)s"
 msgstr "Het nieuwe adres %(newaddr)s is reeds lid."
 
-#: Mailman/Cgi/options.py:471
+#: Mailman/Cgi/options.py:474
 msgid "Addresses may not be blank"
 msgstr "E-mailadressen dienen ingevuld te worden"
 
-#: Mailman/Cgi/options.py:485
+#: Mailman/Cgi/options.py:488
 msgid "A confirmation message has been sent to %(newaddr)s. "
 msgstr "Een bevestigingsbericht is verzonden naar %(newaddr)s."
 
-#: Mailman/Cgi/options.py:494
+#: Mailman/Cgi/options.py:497
 msgid "Bad email address provided"
 msgstr "Foutief e-mailadres opgegeven"
 
-#: Mailman/Cgi/options.py:496
+#: Mailman/Cgi/options.py:499
 msgid "Illegal email address provided"
 msgstr "Ongeldig e-mailadres opgegeven"
 
-#: Mailman/Cgi/options.py:498
+#: Mailman/Cgi/options.py:501
 msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s is al lid van de lijst."
 
-#: Mailman/Cgi/options.py:501
+#: Mailman/Cgi/options.py:504
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
 "                      think this restriction is erroneous, please contact\n"
@@ -2708,11 +2714,11 @@ msgstr ""
 "        kunt u contact opnemen met de lijsteigenaren:\n"
 "        %(owneraddr)s."
 
-#: Mailman/Cgi/options.py:512
+#: Mailman/Cgi/options.py:515
 msgid "Member name successfully changed. "
 msgstr "Gebruikersnaam is met succes veranderd. "
 
-#: Mailman/Cgi/options.py:522
+#: Mailman/Cgi/options.py:525
 msgid ""
 "The list administrator may not change the\n"
 "                    password for a user."
@@ -2720,15 +2726,15 @@ msgstr ""
 "De lijstbeheerder kan het wachtwoord\n"
 "            van een gebruiker niet wijzigen."
 
-#: Mailman/Cgi/options.py:531
+#: Mailman/Cgi/options.py:534
 msgid "Passwords may not be blank"
 msgstr "Wachtwoorden dienen ingevuld te worden"
 
-#: Mailman/Cgi/options.py:536
+#: Mailman/Cgi/options.py:539
 msgid "Passwords did not match!"
 msgstr "Wachtwoorden kwamen niet overeen!"
 
-#: Mailman/Cgi/options.py:544
+#: Mailman/Cgi/options.py:547
 msgid ""
 "The list administrator may not change the\n"
 "            password for this user's other subscriptions.  However, the\n"
@@ -2738,12 +2744,12 @@ msgstr ""
 "            andere abonnementen van deze gebruiker niet wijzigen.  Het\n"
 "            wachtwoord voor deze maillijst is echter gewijzigd."
 
-#: Mailman/Cgi/options.py:561 Mailman/Commands/cmd_password.py:83
+#: Mailman/Cgi/options.py:564 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
 msgid "Password successfully changed."
 msgstr "Wachtwoord is met succes veranderd."
 
-#: Mailman/Cgi/options.py:570
+#: Mailman/Cgi/options.py:573
 msgid ""
 "You must confirm your unsubscription request by turning\n"
 "                on the checkbox below the <em>Unsubscribe</em> button.  You\n"
@@ -2753,16 +2759,16 @@ msgstr ""
 "                onder de button <em>Afmelden</em> aan te vinken.  U\n"
 "                bent niet afgemeld!"
 
-#: Mailman/Cgi/options.py:591
+#: Mailman/Cgi/options.py:594
 #, fuzzy
 msgid "via the member options page"
 msgstr "%(realname)s lijst: inlogpagina voor lidmaatschapsinstellingen"
 
-#: Mailman/Cgi/options.py:611
+#: Mailman/Cgi/options.py:614
 msgid "Unsubscription results"
 msgstr "Afmeldingsresultaat"
 
-#: Mailman/Cgi/options.py:615
+#: Mailman/Cgi/options.py:618
 msgid ""
 "Your unsubscription request has been received and\n"
 "            forwarded on to the list moderators for approval.  You will\n"
@@ -2774,7 +2780,7 @@ msgstr ""
 "            ontvangen zodra de lijstmoderators een beslissing hebben\n"
 "            genomen."
 
-#: Mailman/Cgi/options.py:620
+#: Mailman/Cgi/options.py:623
 msgid ""
 "You have been successfully unsubscribed from the\n"
 "            mailing list %(fqdn_listname)s.  If you were receiving digest\n"
@@ -2790,7 +2796,7 @@ msgstr ""
 "            contact op met de lijsteigenaren op het volgende e-mailadres:\n"
 "            %(owneraddr)s."
 
-#: Mailman/Cgi/options.py:769
+#: Mailman/Cgi/options.py:772
 msgid ""
 "The list administrator may not change the\n"
 "                options for this user's other subscriptions.  However the\n"
@@ -2801,7 +2807,7 @@ msgstr ""
 "            andere abonnementen van deze gebruiker niet wijzigen.  De\n"
 "            abonnementsopties van deze maillijst zijn echter gewijzigd."
 
-#: Mailman/Cgi/options.py:779
+#: Mailman/Cgi/options.py:782
 msgid ""
 "The list administrator has disabled digest delivery for\n"
 "            this list, so your delivery option has not been set.  However "
@@ -2813,7 +2819,7 @@ msgstr ""
 "            optie niet worden aangezet. Alle andere wijzigingen van uw\n"
 "            instellingen zijn wel met succes doorgevoerd."
 
-#: Mailman/Cgi/options.py:783
+#: Mailman/Cgi/options.py:786
 msgid ""
 "The list administrator has disabled non-digest delivery\n"
 "            for this list, so your delivery option has not been set.  "
@@ -2825,63 +2831,63 @@ msgstr ""
 "            worden aangezet. Alle andere wijzigingen van uw instellingen\n"
 "            zijn wel met succes doorgevoerd."
 
-#: Mailman/Cgi/options.py:787
+#: Mailman/Cgi/options.py:790
 msgid "You have successfully set your options."
 msgstr "De wijzigingen van uw instellingen zijn met succes doorgevoerd."
 
-#: Mailman/Cgi/options.py:790
+#: Mailman/Cgi/options.py:793
 msgid "You may get one last digest."
 msgstr "U krijgt wellicht nog ��n laatste verzamelmail toegestuurd."
 
-#: Mailman/Cgi/options.py:862
+#: Mailman/Cgi/options.py:865
 msgid "<em>Yes, I really want to unsubscribe</em>"
 msgstr "<em>Ja, ik wil mezelf echt afmelden</em>"
 
-#: Mailman/Cgi/options.py:866
+#: Mailman/Cgi/options.py:869
 msgid "Change My Password"
 msgstr "Wijzig mijn wachtwoord"
 
-#: Mailman/Cgi/options.py:869
+#: Mailman/Cgi/options.py:872
 msgid "List my other subscriptions"
 msgstr "Laat mijn andere aanmeldingen zien"
 
-#: Mailman/Cgi/options.py:876
+#: Mailman/Cgi/options.py:879
 msgid "Email My Password To Me"
 msgstr "Stuur mijn wachtwoord per e-mail toe"
 
-#: Mailman/Cgi/options.py:878
+#: Mailman/Cgi/options.py:881
 msgid "password"
 msgstr "wachtwoord"
 
-#: Mailman/Cgi/options.py:880
+#: Mailman/Cgi/options.py:883
 msgid "Log out"
 msgstr "Uitloggen"
 
-#: Mailman/Cgi/options.py:882
+#: Mailman/Cgi/options.py:885
 msgid "Submit My Changes"
 msgstr "Verstuur de wijzigingen"
 
-#: Mailman/Cgi/options.py:894
+#: Mailman/Cgi/options.py:897
 msgid "days"
 msgstr "dagen"
 
-#: Mailman/Cgi/options.py:896
+#: Mailman/Cgi/options.py:899
 msgid "day"
 msgstr "dag"
 
-#: Mailman/Cgi/options.py:897
+#: Mailman/Cgi/options.py:900
 msgid "%(days)d %(units)s"
 msgstr "%(days)d %(units)s"
 
-#: Mailman/Cgi/options.py:903
+#: Mailman/Cgi/options.py:906
 msgid "Change My Address and Name"
 msgstr "Verander mijn e-mailadres en naam"
 
-#: Mailman/Cgi/options.py:929
+#: Mailman/Cgi/options.py:932
 msgid "<em>No topics defined</em>"
 msgstr "<em>Geen onderwerpen gedefinieerd</em>"
 
-#: Mailman/Cgi/options.py:937
+#: Mailman/Cgi/options.py:940
 msgid ""
 "\n"
 "You are subscribed to this list with the case-preserved address\n"
@@ -2891,20 +2897,20 @@ msgstr ""
 "U bent op deze lijst aangemeld met het adres\n"
 "<em>%(cpuser)s</em>."
 
-#: Mailman/Cgi/options.py:953
+#: Mailman/Cgi/options.py:956
 msgid "%(realname)s list: member options login page"
 msgstr "%(realname)s lijst: inlogpagina voor lidmaatschapsinstellingen"
 
-#: Mailman/Cgi/options.py:954
+#: Mailman/Cgi/options.py:957
 msgid "email address and "
 msgstr "e-mailadres en "
 
-#: Mailman/Cgi/options.py:957
+#: Mailman/Cgi/options.py:960
 msgid "%(realname)s list: member options for user %(safeuser)s"
 msgstr ""
 "%(realname)s lijst: lidmaatschapsinstellingen voor gebruiker %(safeuser)s"
 
-#: Mailman/Cgi/options.py:983
+#: Mailman/Cgi/options.py:986
 msgid ""
 "In order to change your membership option, you must\n"
 "    first log in by giving your %(extra)smembership password in the section\n"
@@ -2932,19 +2938,19 @@ msgstr ""
 "    niet ge�ffectueerd worden.\n"
 "    "
 
-#: Mailman/Cgi/options.py:997
+#: Mailman/Cgi/options.py:1000
 msgid "Email address:"
 msgstr "E-mailadres:"
 
-#: Mailman/Cgi/options.py:1001
+#: Mailman/Cgi/options.py:1004
 msgid "Password:"
 msgstr "Wachtwoord"
 
-#: Mailman/Cgi/options.py:1003
+#: Mailman/Cgi/options.py:1006
 msgid "Log in"
 msgstr "Inloggen"
 
-#: Mailman/Cgi/options.py:1011
+#: Mailman/Cgi/options.py:1014
 msgid ""
 "By clicking on the <em>Unsubscribe</em> button, a\n"
 "    confirmation message will be emailed to you.  This message will have a\n"
@@ -2958,11 +2964,11 @@ msgstr ""
 "    dit desgewenst ook per e-mail doen; het bevestigingsbericht bevat\n"
 "    instructies daartoe)."
 
-#: Mailman/Cgi/options.py:1019
+#: Mailman/Cgi/options.py:1022
 msgid "Password reminder"
 msgstr "Wachtwoordherinnering"
 
-#: Mailman/Cgi/options.py:1023
+#: Mailman/Cgi/options.py:1026
 msgid ""
 "By clicking on the <em>Remind</em> button, your\n"
 "    password will be emailed to you."
@@ -2970,27 +2976,27 @@ msgstr ""
 "Door op de button <em>Herinnering</em> te klikken, krijgt u uw wachtwoord\n"
 "    per e-mail toegestuurd."
 
-#: Mailman/Cgi/options.py:1026
+#: Mailman/Cgi/options.py:1029
 msgid "Remind"
 msgstr "Herinnering"
 
-#: Mailman/Cgi/options.py:1126 Mailman/ListAdmin.py:227
+#: Mailman/Cgi/options.py:1129 Mailman/ListAdmin.py:227
 msgid "<missing>"
 msgstr "<onvolledig>"
 
-#: Mailman/Cgi/options.py:1137
+#: Mailman/Cgi/options.py:1140
 msgid "Requested topic is not valid: %(topicname)s"
 msgstr "Vermelde onderwerp is niet geldig: %(topicname)s"
 
-#: Mailman/Cgi/options.py:1142
+#: Mailman/Cgi/options.py:1145
 msgid "Topic filter details"
 msgstr "Details onderwerpfilter"
 
-#: Mailman/Cgi/options.py:1145
+#: Mailman/Cgi/options.py:1148
 msgid "Name:"
 msgstr "Naam:"
 
-#: Mailman/Cgi/options.py:1147
+#: Mailman/Cgi/options.py:1150
 msgid "Pattern (as regexp):"
 msgstr "Patroon (als uitdrukking):"
 
@@ -3251,11 +3257,6 @@ msgstr ""
 "Uw lidmaatschapssverzoek is aangehouden omdat %(x)s. Uw verzoek is\n"
 "doorgestuurd naar de lijstmoderator.  U zult bericht ontvangen over de\n"
 "beslissing van de moderator zodra deze het verzoek heeft verwerkt."
-
-#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
-#, fuzzy
-msgid "You already have a subscription pending confirmation"
-msgstr "%(realname)s aanmeldingsbericht"
 
 #: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
@@ -3982,11 +3983,11 @@ msgstr ""
 "Uw afmeldingsverzoek is doorgestuurd naar de lijstbeheerder ter\n"
 "goedkeuring."
 
-#: Mailman/Commands/cmd_unsubscribe.py:84
+#: Mailman/Commands/cmd_unsubscribe.py:89
 msgid "You gave the wrong password"
 msgstr "U heeft het verkeerde wachtwoord opgegeven"
 
-#: Mailman/Commands/cmd_unsubscribe.py:87
+#: Mailman/Commands/cmd_unsubscribe.py:92
 msgid "Unsubscription request succeeded."
 msgstr "Afmeldingsverzoek met succes verwerkt."
 
@@ -9132,56 +9133,56 @@ msgstr ""
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "Uw bevestiging is vereist voor afmelding van de %(listname)s maillijst"
 
-#: Mailman/MailList.py:997 Mailman/MailList.py:1488
+#: Mailman/MailList.py:999 Mailman/MailList.py:1492
 msgid " from %(remote)s"
 msgstr " van %(remote)s"
 
-#: Mailman/MailList.py:1041
+#: Mailman/MailList.py:1043
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "aanmeldingen bij %(realname)s vereisen goedkeuring door moderator"
 
-#: Mailman/MailList.py:1123 bin/add_members:299
+#: Mailman/MailList.py:1125 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s aanmeldingsbericht"
 
-#: Mailman/MailList.py:1143
+#: Mailman/MailList.py:1145
 msgid "unsubscriptions require moderator approval"
 msgstr "afmeldingen vereisen goedkeuring door moderator"
 
-#: Mailman/MailList.py:1164
+#: Mailman/MailList.py:1166
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s afmeldingsbericht"
 
-#: Mailman/MailList.py:1326
+#: Mailman/MailList.py:1328
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s afmeldingsbericht"
 
-#: Mailman/MailList.py:1360
+#: Mailman/MailList.py:1362
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Verkeerde bevestigingscode"
 
-#: Mailman/MailList.py:1369
+#: Mailman/MailList.py:1371
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Verkeerde bevestigingscode"
 
-#: Mailman/MailList.py:1394
+#: Mailman/MailList.py:1396
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "aanmeldingen bij %(name)s vereisen goedkeuring door beheerder"
 
-#: Mailman/MailList.py:1404
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "email confirmation"
 msgstr "Verkeerde bevestigingscode"
 
-#: Mailman/MailList.py:1406
+#: Mailman/MailList.py:1408
 #, fuzzy
 msgid "web confirmation"
 msgstr "Voer de bevestigingscode in"
 
-#: Mailman/MailList.py:1662
+#: Mailman/MailList.py:1666
 msgid "Last autoresponse notification for today"
 msgstr "Laatste automatisch bericht voor vandaag"
 

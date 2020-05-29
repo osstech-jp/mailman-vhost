@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mailman v2.1.5\n"
-"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
+"POT-Creation-Date: Thu May 28 18:46:38 2020\n"
 "PO-Revision-Date: 2005-02-24 17:37+0200\n"
 "Last-Translator: Maxim Dzumanenko <mvd@mylinux.com.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -283,7 +283,7 @@ msgid "Authorization failed."
 msgstr "Помилка доступу."
 
 #: Mailman/Cgi/admin.py:221 Mailman/Cgi/admindb.py:243
-#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:331
+#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:334
 msgid "The form lifetime has expired. (request forgery check)"
 msgstr ""
 
@@ -552,7 +552,7 @@ msgstr "Назва теми:"
 msgid "Regexp:"
 msgstr "Регулярний вираз:"
 
-#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1150
+#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1153
 msgid "Description:"
 msgstr "Опис:"
 
@@ -717,7 +717,7 @@ msgid "nodupes"
 msgstr "без копій"
 
 #: Mailman/Cgi/admin.py:1049 Mailman/Cgi/admin.py:1115
-#: Mailman/Cgi/options.py:391
+#: Mailman/Cgi/options.py:394
 msgid "digest"
 msgstr "збірки"
 
@@ -749,7 +749,7 @@ msgstr "П"
 msgid "notmetoo"
 msgstr "без власних"
 
-#: Mailman/Cgi/admin.py:1091 Mailman/Cgi/options.py:389
+#: Mailman/Cgi/admin.py:1091 Mailman/Cgi/options.py:392
 msgid "nomail"
 msgstr "блоковано"
 
@@ -1795,8 +1795,8 @@ msgstr ""
 "    <p>Або натисніть <em>Скасувати та видалити запит</em>, щоб відмовитись\n"
 "    від припинення підписки."
 
-#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:860
-#: Mailman/Cgi/options.py:1007 Mailman/Cgi/options.py:1017
+#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:863
+#: Mailman/Cgi/options.py:1010 Mailman/Cgi/options.py:1020
 msgid "Unsubscribe"
 msgstr "Припинити підписку"
 
@@ -2529,7 +2529,7 @@ msgstr ""
 msgid "Edit Options"
 msgstr "Редагувати параметри"
 
-#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:972
+#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:975
 #: Mailman/Cgi/roster.py:137
 msgid "View this page in"
 msgstr "Мова перегляду (view this page in):"
@@ -2555,8 +2555,8 @@ msgstr "Відсутня адреса"
 msgid "Illegal Email Address"
 msgstr "Неправильна адреса"
 
-#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261
+#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:240
+#: Mailman/Cgi/options.py:264
 msgid "No such member: %(safeuser)s."
 msgstr "Такий користувач відсутній: %(safeuser)s."
 
@@ -2565,7 +2565,13 @@ msgstr "Такий користувач відсутній: %(safeuser)s."
 msgid "If you are a list member, a confirmation email has been sent."
 msgstr "Лист підтвердження відіслано."
 
-#: Mailman/Cgi/options.py:209
+#: Mailman/Cgi/options.py:209 Mailman/Cgi/subscribe.py:296
+#: Mailman/Commands/cmd_subscribe.py:133 Mailman/Commands/cmd_unsubscribe.py:80
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "%(realname)s сповіщення про підписку"
+
+#: Mailman/Cgi/options.py:210
 #, fuzzy
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
@@ -2574,37 +2580,37 @@ msgstr ""
 "Ваш запит на припинення підписки\n"
 "                    пересланий керівнику списку для обробки."
 
-#: Mailman/Cgi/options.py:251
+#: Mailman/Cgi/options.py:254
 #, fuzzy
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
 msgstr "Лист з нагадуванням паролю успішно вам відіслано."
 
-#: Mailman/Cgi/options.py:294
+#: Mailman/Cgi/options.py:297
 msgid "Authentication failed."
 msgstr "Помилка аутентифікації."
 
-#: Mailman/Cgi/options.py:362
+#: Mailman/Cgi/options.py:365
 msgid "A reminder of your password has been emailed to you."
 msgstr "Лист з нагадуванням паролю успішно вам відіслано."
 
-#: Mailman/Cgi/options.py:369
+#: Mailman/Cgi/options.py:372
 msgid ""
 "The list administrator may not view the other\n"
 "            subscriptions for this user."
 msgstr ""
 
-#: Mailman/Cgi/options.py:370 Mailman/Cgi/options.py:419
-#: Mailman/Cgi/options.py:547 Mailman/Cgi/options.py:772
+#: Mailman/Cgi/options.py:373 Mailman/Cgi/options.py:422
+#: Mailman/Cgi/options.py:550 Mailman/Cgi/options.py:775
 msgid "Note: "
 msgstr ""
 
-#: Mailman/Cgi/options.py:375
+#: Mailman/Cgi/options.py:378
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
 msgstr "Перелік отримувачів %(safeuser)s на %(hostname)s"
 
-#: Mailman/Cgi/options.py:378
+#: Mailman/Cgi/options.py:381
 msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
@@ -2612,22 +2618,22 @@ msgstr ""
 "Щоб перейти до налаштовування вашої підписки на список,\n"
 "        натисніть на посиланні."
 
-#: Mailman/Cgi/options.py:416
+#: Mailman/Cgi/options.py:419
 msgid ""
 "The list administrator may not change the names\n"
 "            or addresses for this user's other subscriptions.  However, the\n"
 "            subscription for this mailing list has been changed."
 msgstr ""
 
-#: Mailman/Cgi/options.py:439
+#: Mailman/Cgi/options.py:442
 msgid "Addresses did not match!"
 msgstr "Адреси не співпадають!"
 
-#: Mailman/Cgi/options.py:444
+#: Mailman/Cgi/options.py:447
 msgid "You are already using that email address"
 msgstr "Ви вже використовуєте цю адресу"
 
-#: Mailman/Cgi/options.py:456
+#: Mailman/Cgi/options.py:459
 msgid ""
 "The new address you requested %(newaddr)s is already a member of the\n"
 "%(listname)s mailing list, however you have also requested a global change "
@@ -2640,31 +2646,31 @@ msgstr ""
 "адресу %(safeuser)s буде замінено у будь-яких інших списках розсилки,\n"
 "в яких вона зустрічається."
 
-#: Mailman/Cgi/options.py:465
+#: Mailman/Cgi/options.py:468
 msgid "The new address is already a member: %(newaddr)s"
 msgstr "Ця адреса вже використовується користувачем: %(newaddr)s"
 
-#: Mailman/Cgi/options.py:471
+#: Mailman/Cgi/options.py:474
 msgid "Addresses may not be blank"
 msgstr "Поле адреси не може бути порожнім"
 
-#: Mailman/Cgi/options.py:485
+#: Mailman/Cgi/options.py:488
 msgid "A confirmation message has been sent to %(newaddr)s. "
 msgstr "Лист підтвердження відіслано до %(newaddr)s."
 
-#: Mailman/Cgi/options.py:494
+#: Mailman/Cgi/options.py:497
 msgid "Bad email address provided"
 msgstr "Неправильна електронна адреса"
 
-#: Mailman/Cgi/options.py:496
+#: Mailman/Cgi/options.py:499
 msgid "Illegal email address provided"
 msgstr "Недопустима електронна адреса"
 
-#: Mailman/Cgi/options.py:498
+#: Mailman/Cgi/options.py:501
 msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s вже є користувачем цього списку розсилки."
 
-#: Mailman/Cgi/options.py:501
+#: Mailman/Cgi/options.py:504
 #, fuzzy
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
@@ -2675,11 +2681,11 @@ msgstr ""
 "розсилки. Якщо ви вважаєте, що це обмеження помилкове,\n"
 "зверніться до власника списку за адресою %(owneraddr)s."
 
-#: Mailman/Cgi/options.py:512
+#: Mailman/Cgi/options.py:515
 msgid "Member name successfully changed. "
 msgstr "Ім'я користувача успішно змінено."
 
-#: Mailman/Cgi/options.py:522
+#: Mailman/Cgi/options.py:525
 #, fuzzy
 msgid ""
 "The list administrator may not change the\n"
@@ -2689,15 +2695,15 @@ msgstr ""
 "          списку розсилки, і зміни у параметри доставки не внесено.\n"
 "          Усі інші зміни у параметри успішно внесено."
 
-#: Mailman/Cgi/options.py:531
+#: Mailman/Cgi/options.py:534
 msgid "Passwords may not be blank"
 msgstr "Поле паролю не може бути порожнім"
 
-#: Mailman/Cgi/options.py:536
+#: Mailman/Cgi/options.py:539
 msgid "Passwords did not match!"
 msgstr "Поля паролів не співпадають!"
 
-#: Mailman/Cgi/options.py:544
+#: Mailman/Cgi/options.py:547
 #, fuzzy
 msgid ""
 "The list administrator may not change the\n"
@@ -2708,12 +2714,12 @@ msgstr ""
 "          списку розсилки, і зміни у параметри доставки не внесено.\n"
 "          Усі інші зміни у параметри успішно внесено."
 
-#: Mailman/Cgi/options.py:561 Mailman/Commands/cmd_password.py:83
+#: Mailman/Cgi/options.py:564 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
 msgid "Password successfully changed."
 msgstr "Пароль успішно змінено."
 
-#: Mailman/Cgi/options.py:570
+#: Mailman/Cgi/options.py:573
 msgid ""
 "You must confirm your unsubscription request by turning\n"
 "                on the checkbox below the <em>Unsubscribe</em> button.  You\n"
@@ -2723,16 +2729,16 @@ msgstr ""
 "                ознаку під кнопкою <em>Припинити підписку</em>. У іншому\n"
 "                випадку її не буде припинено!"
 
-#: Mailman/Cgi/options.py:591
+#: Mailman/Cgi/options.py:594
 #, fuzzy
 msgid "via the member options page"
 msgstr "Список %(realname)s: реєстраційна сторінка параметрів учасника"
 
-#: Mailman/Cgi/options.py:611
+#: Mailman/Cgi/options.py:614
 msgid "Unsubscription results"
 msgstr "Результати припинення підписки"
 
-#: Mailman/Cgi/options.py:615
+#: Mailman/Cgi/options.py:618
 msgid ""
 "Your unsubscription request has been received and\n"
 "            forwarded on to the list moderators for approval.  You will\n"
@@ -2744,7 +2750,7 @@ msgstr ""
 "            прийняття рішення керівником списку розсилки, ви отримаєте\n"
 "            повідомлення."
 
-#: Mailman/Cgi/options.py:620
+#: Mailman/Cgi/options.py:623
 msgid ""
 "You have been successfully unsubscribed from the\n"
 "            mailing list %(fqdn_listname)s.  If you were receiving digest\n"
@@ -2759,7 +2765,7 @@ msgstr ""
 "            зверніться до власника списку розсилки\n"
 "            %(owneraddr)s."
 
-#: Mailman/Cgi/options.py:769
+#: Mailman/Cgi/options.py:772
 msgid ""
 "The list administrator may not change the\n"
 "                options for this user's other subscriptions.  However the\n"
@@ -2767,7 +2773,7 @@ msgid ""
 "                changed."
 msgstr ""
 
-#: Mailman/Cgi/options.py:779
+#: Mailman/Cgi/options.py:782
 msgid ""
 "The list administrator has disabled digest delivery for\n"
 "            this list, so your delivery option has not been set.  However "
@@ -2778,7 +2784,7 @@ msgstr ""
 "           цього списку, тому зміни у параметри доставки не внесено.\n"
 "           Усі інші зміни у параметри успішно внесено."
 
-#: Mailman/Cgi/options.py:783
+#: Mailman/Cgi/options.py:786
 msgid ""
 "The list administrator has disabled non-digest delivery\n"
 "            for this list, so your delivery option has not been set.  "
@@ -2789,63 +2795,63 @@ msgstr ""
 "          списку розсилки, і зміни у параметри доставки не внесено.\n"
 "          Усі інші зміни у параметри успішно внесено."
 
-#: Mailman/Cgi/options.py:787
+#: Mailman/Cgi/options.py:790
 msgid "You have successfully set your options."
 msgstr "Параметри успішно збережено."
 
-#: Mailman/Cgi/options.py:790
+#: Mailman/Cgi/options.py:793
 msgid "You may get one last digest."
 msgstr "Ви можете отримати ще одну, останню, збірку."
 
-#: Mailman/Cgi/options.py:862
+#: Mailman/Cgi/options.py:865
 msgid "<em>Yes, I really want to unsubscribe</em>"
 msgstr "<em>Так, я дійсно бажаю відмовитись від підписки<em>"
 
-#: Mailman/Cgi/options.py:866
+#: Mailman/Cgi/options.py:869
 msgid "Change My Password"
 msgstr "Змінити пароль"
 
-#: Mailman/Cgi/options.py:869
+#: Mailman/Cgi/options.py:872
 msgid "List my other subscriptions"
 msgstr "Перелік інших списків, на які я підписаний"
 
-#: Mailman/Cgi/options.py:876
+#: Mailman/Cgi/options.py:879
 msgid "Email My Password To Me"
 msgstr "Надіслати мені мій пароль"
 
-#: Mailman/Cgi/options.py:878
+#: Mailman/Cgi/options.py:881
 msgid "password"
 msgstr "пароль"
 
-#: Mailman/Cgi/options.py:880
+#: Mailman/Cgi/options.py:883
 msgid "Log out"
 msgstr "Завершити роботу"
 
-#: Mailman/Cgi/options.py:882
+#: Mailman/Cgi/options.py:885
 msgid "Submit My Changes"
 msgstr "Внести зміни"
 
-#: Mailman/Cgi/options.py:894
+#: Mailman/Cgi/options.py:897
 msgid "days"
 msgstr "днів"
 
-#: Mailman/Cgi/options.py:896
+#: Mailman/Cgi/options.py:899
 msgid "day"
 msgstr "день"
 
-#: Mailman/Cgi/options.py:897
+#: Mailman/Cgi/options.py:900
 msgid "%(days)d %(units)s"
 msgstr "%(days)d %(units)s"
 
-#: Mailman/Cgi/options.py:903
+#: Mailman/Cgi/options.py:906
 msgid "Change My Address and Name"
 msgstr "Змінити мою адресу та ім'я"
 
-#: Mailman/Cgi/options.py:929
+#: Mailman/Cgi/options.py:932
 msgid "<em>No topics defined</em>"
 msgstr "<em>Теми не визначені</em>"
 
-#: Mailman/Cgi/options.py:937
+#: Mailman/Cgi/options.py:940
 msgid ""
 "\n"
 "You are subscribed to this list with the case-preserved address\n"
@@ -2855,19 +2861,19 @@ msgstr ""
 "Адреса (із збереженням регістру) за якою ви підписні на цей список\n"
 "<em>%(cpuser)s</em>."
 
-#: Mailman/Cgi/options.py:953
+#: Mailman/Cgi/options.py:956
 msgid "%(realname)s list: member options login page"
 msgstr "Список %(realname)s: реєстраційна сторінка параметрів учасника"
 
-#: Mailman/Cgi/options.py:954
+#: Mailman/Cgi/options.py:957
 msgid "email address and "
 msgstr "електронну адресу та "
 
-#: Mailman/Cgi/options.py:957
+#: Mailman/Cgi/options.py:960
 msgid "%(realname)s list: member options for user %(safeuser)s"
 msgstr "Список %(realname)s: сторінка параметрів учасника %(safeuser)s"
 
-#: Mailman/Cgi/options.py:983
+#: Mailman/Cgi/options.py:986
 msgid ""
 "In order to change your membership option, you must\n"
 "    first log in by giving your %(extra)smembership password in the section\n"
@@ -2895,19 +2901,19 @@ msgstr ""
 "    дозволити cookies, у іншому випадку жодні зміни не буде внесено.\n"
 "    "
 
-#: Mailman/Cgi/options.py:997
+#: Mailman/Cgi/options.py:1000
 msgid "Email address:"
 msgstr "Електронна адреса:"
 
-#: Mailman/Cgi/options.py:1001
+#: Mailman/Cgi/options.py:1004
 msgid "Password:"
 msgstr "Пароль:"
 
-#: Mailman/Cgi/options.py:1003
+#: Mailman/Cgi/options.py:1006
 msgid "Log in"
 msgstr "Увійти"
 
-#: Mailman/Cgi/options.py:1011
+#: Mailman/Cgi/options.py:1014
 msgid ""
 "By clicking on the <em>Unsubscribe</em> button, a\n"
 "    confirmation message will be emailed to you.  This message will have a\n"
@@ -2921,11 +2927,11 @@ msgstr ""
 "    (також можливо підтвердити поштою; інструкції дивіться у повідомленні\n"
 "    з підтвердженням)."
 
-#: Mailman/Cgi/options.py:1019
+#: Mailman/Cgi/options.py:1022
 msgid "Password reminder"
 msgstr "Нагадування паролю"
 
-#: Mailman/Cgi/options.py:1023
+#: Mailman/Cgi/options.py:1026
 msgid ""
 "By clicking on the <em>Remind</em> button, your\n"
 "    password will be emailed to you."
@@ -2933,27 +2939,27 @@ msgstr ""
 "Ваш пароль буде надіслано ваш після натиснення\n"
 "    на кнопку <em>Нагадати</em>."
 
-#: Mailman/Cgi/options.py:1026
+#: Mailman/Cgi/options.py:1029
 msgid "Remind"
 msgstr "Нагадати"
 
-#: Mailman/Cgi/options.py:1126 Mailman/ListAdmin.py:227
+#: Mailman/Cgi/options.py:1129 Mailman/ListAdmin.py:227
 msgid "<missing>"
 msgstr "<відсутня>"
 
-#: Mailman/Cgi/options.py:1137
+#: Mailman/Cgi/options.py:1140
 msgid "Requested topic is not valid: %(topicname)s"
 msgstr "Запитана тема не є правильною: %(topicname)s"
 
-#: Mailman/Cgi/options.py:1142
+#: Mailman/Cgi/options.py:1145
 msgid "Topic filter details"
 msgstr "Подробиці фільтру тем"
 
-#: Mailman/Cgi/options.py:1145
+#: Mailman/Cgi/options.py:1148
 msgid "Name:"
 msgstr "Назва:"
 
-#: Mailman/Cgi/options.py:1147
+#: Mailman/Cgi/options.py:1150
 msgid "Pattern (as regexp):"
 msgstr "Шаблон (регулярний вираз):"
 
@@ -3208,11 +3214,6 @@ msgstr ""
 "Запит на підписку відкладений через %(x)s.  Ваш запит пересланий\n"
 "керівнику списку.  Коли керівник списку розгляне ваш запит, ви отримаєте\n"
 "сповіщення поштою."
-
-#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
-#, fuzzy
-msgid "You already have a subscription pending confirmation"
-msgstr "%(realname)s сповіщення про підписку"
 
 #: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
@@ -3918,11 +3919,11 @@ msgid ""
 msgstr ""
 "Ваш запит на припинення підписки пересланий керівнику списку для обробки."
 
-#: Mailman/Commands/cmd_unsubscribe.py:84
+#: Mailman/Commands/cmd_unsubscribe.py:89
 msgid "You gave the wrong password"
 msgstr "Ви вказали неправильний пароль"
 
-#: Mailman/Commands/cmd_unsubscribe.py:87
+#: Mailman/Commands/cmd_unsubscribe.py:92
 msgid "Unsubscription request succeeded."
 msgstr "Підписку видалено."
 
@@ -8793,56 +8794,56 @@ msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr ""
 "Для виключення зі списку розсилки %(listname)s потрібне ваше підтвердження"
 
-#: Mailman/MailList.py:997 Mailman/MailList.py:1488
+#: Mailman/MailList.py:999 Mailman/MailList.py:1492
 msgid " from %(remote)s"
 msgstr " з %(remote)s"
 
-#: Mailman/MailList.py:1041
+#: Mailman/MailList.py:1043
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr "підписка на %(realname)s вимагає схвалення керівником"
 
-#: Mailman/MailList.py:1123 bin/add_members:299
+#: Mailman/MailList.py:1125 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "%(realname)s сповіщення про підписку"
 
-#: Mailman/MailList.py:1143
+#: Mailman/MailList.py:1145
 msgid "unsubscriptions require moderator approval"
 msgstr "видалення підписки вимагає схвалення керівником"
 
-#: Mailman/MailList.py:1164
+#: Mailman/MailList.py:1166
 msgid "%(realname)s unsubscribe notification"
 msgstr "%(realname)s сповіщення про припинення підписки"
 
-#: Mailman/MailList.py:1326
+#: Mailman/MailList.py:1328
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "%(realname)s сповіщення про припинення підписки"
 
-#: Mailman/MailList.py:1360
+#: Mailman/MailList.py:1362
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Неправильний рядок підтвердження"
 
-#: Mailman/MailList.py:1369
+#: Mailman/MailList.py:1371
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Неправильний рядок підтвердження"
 
-#: Mailman/MailList.py:1394
+#: Mailman/MailList.py:1396
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "підписка на %(name)s вимагає схвалення керівником"
 
-#: Mailman/MailList.py:1404
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "email confirmation"
 msgstr "Неправильний рядок підтвердження"
 
-#: Mailman/MailList.py:1406
+#: Mailman/MailList.py:1408
 #, fuzzy
 msgid "web confirmation"
 msgstr "Вкажіть код підтвердження"
 
-#: Mailman/MailList.py:1662
+#: Mailman/MailList.py:1666
 msgid "Last autoresponse notification for today"
 msgstr "Автоматична відповідь сповіщення на сьогодні"
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mailman\n"
-"POT-Creation-Date: Thu May  7 06:49:22 2020\n"
+"POT-Creation-Date: Thu May 28 18:46:38 2020\n"
 "PO-Revision-Date: 2009-12-07 17:01+0100\n"
 "Last-Translator: astur <malditoastur@gmail.com>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -281,7 +281,7 @@ msgid "Authorization failed."
 msgstr "Autorización infructuosa."
 
 #: Mailman/Cgi/admin.py:221 Mailman/Cgi/admindb.py:243
-#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:331
+#: Mailman/Cgi/edithtml.py:184 Mailman/Cgi/options.py:334
 msgid "The form lifetime has expired. (request forgery check)"
 msgstr ""
 
@@ -556,7 +556,7 @@ msgstr "Nome del tema:"
 msgid "Regexp:"
 msgstr "Espresión regular:"
 
-#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1150
+#: Mailman/Cgi/admin.py:764 Mailman/Cgi/options.py:1153
 msgid "Description:"
 msgstr "Descripción"
 
@@ -721,7 +721,7 @@ msgid "nodupes"
 msgstr "ensin duplicaos"
 
 #: Mailman/Cgi/admin.py:1049 Mailman/Cgi/admin.py:1115
-#: Mailman/Cgi/options.py:391
+#: Mailman/Cgi/options.py:394
 msgid "digest"
 msgstr "agrupáu"
 
@@ -753,7 +753,7 @@ msgstr "B"
 msgid "notmetoo"
 msgstr "a mí non"
 
-#: Mailman/Cgi/admin.py:1091 Mailman/Cgi/options.py:389
+#: Mailman/Cgi/admin.py:1091 Mailman/Cgi/options.py:392
 msgid "nomail"
 msgstr "ensin corréu"
 
@@ -1820,8 +1820,8 @@ msgstr ""
 "    <p>O calca <em>Encaboxar y descartar</em> pa encaboxar esta solicitú\n"
 "    de baxa."
 
-#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:860
-#: Mailman/Cgi/options.py:1007 Mailman/Cgi/options.py:1017
+#: Mailman/Cgi/confirm.py:514 Mailman/Cgi/options.py:863
+#: Mailman/Cgi/options.py:1010 Mailman/Cgi/options.py:1020
 msgid "Unsubscribe"
 msgstr "Esborrase de la llista"
 
@@ -2575,7 +2575,7 @@ msgstr ""
 msgid "Edit Options"
 msgstr "Editar Opciones"
 
-#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:972
+#: Mailman/Cgi/listinfo.py:260 Mailman/Cgi/options.py:975
 #: Mailman/Cgi/roster.py:137
 msgid "View this page in"
 msgstr "Ver esta páxina en "
@@ -2601,8 +2601,8 @@ msgstr "Nun se dió direición"
 msgid "Illegal Email Address"
 msgstr "Direición de corréu electrónicu incorreuta"
 
-#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:237
-#: Mailman/Cgi/options.py:261
+#: Mailman/Cgi/options.py:183 Mailman/Cgi/options.py:240
+#: Mailman/Cgi/options.py:264
 msgid "No such member: %(safeuser)s."
 msgstr "Nun esiste soscritor: %(safeuser)s."
 
@@ -2611,7 +2611,13 @@ msgstr "Nun esiste soscritor: %(safeuser)s."
 msgid "If you are a list member, a confirmation email has been sent."
 msgstr "La confirmación unvióse per corréu electrónicu."
 
-#: Mailman/Cgi/options.py:209
+#: Mailman/Cgi/options.py:209 Mailman/Cgi/subscribe.py:296
+#: Mailman/Commands/cmd_subscribe.py:133 Mailman/Commands/cmd_unsubscribe.py:80
+#, fuzzy
+msgid "You already have a subscription pending confirmation"
+msgstr "Notificación de soscrición a %(realname)s"
+
+#: Mailman/Cgi/options.py:210
 #, fuzzy
 msgid ""
 "If you are a list member, your unsubscription request has been\n"
@@ -2620,22 +2626,22 @@ msgstr ""
 "La solicitú de baxa reunvióse al\n"
 "                    alministrador de la llista pa que-y de'l preste."
 
-#: Mailman/Cgi/options.py:251
+#: Mailman/Cgi/options.py:254
 #, fuzzy
 msgid ""
 "If you are a list member,\n"
 "            your password has been emailed to you."
 msgstr "Unvióse un recordatoriu de la to contraseña al to corréu-e."
 
-#: Mailman/Cgi/options.py:294
+#: Mailman/Cgi/options.py:297
 msgid "Authentication failed."
 msgstr "Falló l'autentificación."
 
-#: Mailman/Cgi/options.py:362
+#: Mailman/Cgi/options.py:365
 msgid "A reminder of your password has been emailed to you."
 msgstr "Unvióse un recordatoriu de la to contraseña al to corréu-e."
 
-#: Mailman/Cgi/options.py:369
+#: Mailman/Cgi/options.py:372
 msgid ""
 "The list administrator may not view the other\n"
 "            subscriptions for this user."
@@ -2643,16 +2649,16 @@ msgstr ""
 "L'alministrador de la llista puede nun ver les otres\n"
 "            soscriciones pa esti usuariu."
 
-#: Mailman/Cgi/options.py:370 Mailman/Cgi/options.py:419
-#: Mailman/Cgi/options.py:547 Mailman/Cgi/options.py:772
+#: Mailman/Cgi/options.py:373 Mailman/Cgi/options.py:422
+#: Mailman/Cgi/options.py:550 Mailman/Cgi/options.py:775
 msgid "Note: "
 msgstr "Nota: "
 
-#: Mailman/Cgi/options.py:375
+#: Mailman/Cgi/options.py:378
 msgid "List subscriptions for %(safeuser)s on %(hostname)s"
 msgstr "soscriciones de %(safeuser)s en %(hostname)s"
 
-#: Mailman/Cgi/options.py:378
+#: Mailman/Cgi/options.py:381
 msgid ""
 "Click on a link to visit your options page for the\n"
 "        requested mailing list."
@@ -2660,7 +2666,7 @@ msgstr ""
 "Calca nel enllaz pa visitar la páxina de les tos opciones\n"
 "        na llista de corréu solicitada."
 
-#: Mailman/Cgi/options.py:416
+#: Mailman/Cgi/options.py:419
 msgid ""
 "The list administrator may not change the names\n"
 "            or addresses for this user's other subscriptions.  However, the\n"
@@ -2671,15 +2677,15 @@ msgstr ""
 "la\n"
 "            soscrición pa la llista de corréu camudóse."
 
-#: Mailman/Cgi/options.py:439
+#: Mailman/Cgi/options.py:442
 msgid "Addresses did not match!"
 msgstr "¡Les direiciones nun concasen!"
 
-#: Mailman/Cgi/options.py:444
+#: Mailman/Cgi/options.py:447
 msgid "You are already using that email address"
 msgstr "Yá tas usando esa direición de corréu electrónicu"
 
-#: Mailman/Cgi/options.py:456
+#: Mailman/Cgi/options.py:459
 msgid ""
 "The new address you requested %(newaddr)s is already a member of the\n"
 "%(listname)s mailing list, however you have also requested a global change "
@@ -2692,31 +2698,31 @@ msgstr ""
 "global de direición. Una vegada que lo confirmes, tamién se camudará\n"
 "cualisquier otra llista de corréu que caltenga la direición %(safeuser)s."
 
-#: Mailman/Cgi/options.py:465
+#: Mailman/Cgi/options.py:468
 msgid "The new address is already a member: %(newaddr)s"
 msgstr "La direición nueva yá ta dada d'alta: %(newaddr)s"
 
-#: Mailman/Cgi/options.py:471
+#: Mailman/Cgi/options.py:474
 msgid "Addresses may not be blank"
 msgstr "Les direiciones nun pueden tar ermes"
 
-#: Mailman/Cgi/options.py:485
+#: Mailman/Cgi/options.py:488
 msgid "A confirmation message has been sent to %(newaddr)s. "
 msgstr "Unvióse un mensax de confirmación a %(newaddr)s"
 
-#: Mailman/Cgi/options.py:494
+#: Mailman/Cgi/options.py:497
 msgid "Bad email address provided"
 msgstr "Disti una direición de corréu electrónicu nun válida"
 
-#: Mailman/Cgi/options.py:496
+#: Mailman/Cgi/options.py:499
 msgid "Illegal email address provided"
 msgstr "Dióse una direición de corréu electrónicu illegal"
 
-#: Mailman/Cgi/options.py:498
+#: Mailman/Cgi/options.py:501
 msgid "%(newaddr)s is already a member of the list."
 msgstr "%(newaddr)s yá ta soscritu a la llista."
 
-#: Mailman/Cgi/options.py:501
+#: Mailman/Cgi/options.py:504
 msgid ""
 "%(newaddr)s is banned from this list.  If you\n"
 "                      think this restriction is erroneous, please contact\n"
@@ -2726,11 +2732,11 @@ msgstr ""
 "                      qu'esta restrición ta mal, por favor, contauta\n"
 "                      colos propietarios de la llista en %(owneraddr)s."
 
-#: Mailman/Cgi/options.py:512
+#: Mailman/Cgi/options.py:515
 msgid "Member name successfully changed. "
 msgstr "Nome de soscritor camudaos dafechu."
 
-#: Mailman/Cgi/options.py:522
+#: Mailman/Cgi/options.py:525
 msgid ""
 "The list administrator may not change the\n"
 "                    password for a user."
@@ -2738,15 +2744,15 @@ msgstr ""
 "L'alministrador de la llista puede non camudar\n"
 "            la contraseña pal usuariu."
 
-#: Mailman/Cgi/options.py:531
+#: Mailman/Cgi/options.py:534
 msgid "Passwords may not be blank"
 msgstr "Les contraseñes nun pueden tar ermes"
 
-#: Mailman/Cgi/options.py:536
+#: Mailman/Cgi/options.py:539
 msgid "Passwords did not match!"
 msgstr "¡Les contraseñes nun concasen!"
 
-#: Mailman/Cgi/options.py:544
+#: Mailman/Cgi/options.py:547
 msgid ""
 "The list administrator may not change the\n"
 "            password for this user's other subscriptions.  However, the\n"
@@ -2756,12 +2762,12 @@ msgstr ""
 "            contraseña pa esti usuariu n'otres soscriciones. Sicasí,\n"
 "            camudóse la contraseña nesta llista de corréu."
 
-#: Mailman/Cgi/options.py:561 Mailman/Commands/cmd_password.py:83
+#: Mailman/Cgi/options.py:564 Mailman/Commands/cmd_password.py:83
 #: Mailman/Commands/cmd_password.py:109
 msgid "Password successfully changed."
 msgstr "Camudóse la contraseña dafechu."
 
-#: Mailman/Cgi/options.py:570
+#: Mailman/Cgi/options.py:573
 msgid ""
 "You must confirm your unsubscription request by turning\n"
 "                on the checkbox below the <em>Unsubscribe</em> button.  You\n"
@@ -2771,16 +2777,16 @@ msgstr ""
 "                verificación que ta embaxu de <em>Desoscribir</em>. ¡Nun se\n"
 "                t'esborró de la soscrición!"
 
-#: Mailman/Cgi/options.py:591
+#: Mailman/Cgi/options.py:594
 #, fuzzy
 msgid "via the member options page"
 msgstr "Llista %(realname)s: páxina d'entrada d'opciones soscritor"
 
-#: Mailman/Cgi/options.py:611
+#: Mailman/Cgi/options.py:614
 msgid "Unsubscription results"
 msgstr "Resultaos de la desoscrición"
 
-#: Mailman/Cgi/options.py:615
+#: Mailman/Cgi/options.py:618
 msgid ""
 "Your unsubscription request has been received and\n"
 "            forwarded on to the list moderators for approval.  You will\n"
@@ -2791,7 +2797,7 @@ msgstr ""
 "            de llendadores pa la so aprobación. Notificarásete\n"
 "            cuando'l llendador tenga tomao la so decisión."
 
-#: Mailman/Cgi/options.py:620
+#: Mailman/Cgi/options.py:623
 msgid ""
 "You have been successfully unsubscribed from the\n"
 "            mailing list %(fqdn_listname)s.  If you were receiving digest\n"
@@ -2808,7 +2814,7 @@ msgstr ""
 "        baxa, por favor contauta colos propietarios de la llista en\n"
 "        %(owneraddr)s."
 
-#: Mailman/Cgi/options.py:769
+#: Mailman/Cgi/options.py:772
 msgid ""
 "The list administrator may not change the\n"
 "                options for this user's other subscriptions.  However the\n"
@@ -2820,7 +2826,7 @@ msgstr ""
 "            casu, camudarónse les opciones pa la soscrición d'esta\n"
 "            llista."
 
-#: Mailman/Cgi/options.py:779
+#: Mailman/Cgi/options.py:782
 msgid ""
 "The list administrator has disabled digest delivery for\n"
 "            this list, so your delivery option has not been set.  However "
@@ -2832,7 +2838,7 @@ msgstr ""
 "En tou\n"
 "            casu, les otres tos opciones afitáronse dafechu."
 
-#: Mailman/Cgi/options.py:783
+#: Mailman/Cgi/options.py:786
 msgid ""
 "The list administrator has disabled non-digest delivery\n"
 "            for this list, so your delivery option has not been set.  "
@@ -2844,63 +2850,63 @@ msgstr ""
 "En tou\n"
 "            casu, les tos otres opciones afitáronse dafechu."
 
-#: Mailman/Cgi/options.py:787
+#: Mailman/Cgi/options.py:790
 msgid "You have successfully set your options."
 msgstr "Afitasti les tos opciones con ésitu."
 
-#: Mailman/Cgi/options.py:790
+#: Mailman/Cgi/options.py:793
 msgid "You may get one last digest."
 msgstr "Puede que tengas un caberu corréu agrupáu."
 
-#: Mailman/Cgi/options.py:862
+#: Mailman/Cgi/options.py:865
 msgid "<em>Yes, I really want to unsubscribe</em>"
 msgstr "<em>Sí, daveres quiero dame de baxa</em>"
 
-#: Mailman/Cgi/options.py:866
+#: Mailman/Cgi/options.py:869
 msgid "Change My Password"
 msgstr "Camudar la mio contraseña"
 
-#: Mailman/Cgi/options.py:869
+#: Mailman/Cgi/options.py:872
 msgid "List my other subscriptions"
 msgstr "Llistar les mios otres soscriciones"
 
-#: Mailman/Cgi/options.py:876
+#: Mailman/Cgi/options.py:879
 msgid "Email My Password To Me"
 msgstr "Unviame la mio contraseña per corréu-e"
 
-#: Mailman/Cgi/options.py:878
+#: Mailman/Cgi/options.py:881
 msgid "password"
 msgstr "contraseña"
 
-#: Mailman/Cgi/options.py:880
+#: Mailman/Cgi/options.py:883
 msgid "Log out"
 msgstr "Colar"
 
-#: Mailman/Cgi/options.py:882
+#: Mailman/Cgi/options.py:885
 msgid "Submit My Changes"
 msgstr "Confirmar los mios cambeos"
 
-#: Mailman/Cgi/options.py:894
+#: Mailman/Cgi/options.py:897
 msgid "days"
 msgstr "díes"
 
-#: Mailman/Cgi/options.py:896
+#: Mailman/Cgi/options.py:899
 msgid "day"
 msgstr "día"
 
-#: Mailman/Cgi/options.py:897
+#: Mailman/Cgi/options.py:900
 msgid "%(days)d %(units)s"
 msgstr "%(days)d %(units)s"
 
-#: Mailman/Cgi/options.py:903
+#: Mailman/Cgi/options.py:906
 msgid "Change My Address and Name"
 msgstr "Camudar la mio Direición y Nome"
 
-#: Mailman/Cgi/options.py:929
+#: Mailman/Cgi/options.py:932
 msgid "<em>No topics defined</em>"
 msgstr "<em>Temes non definíos</em>"
 
-#: Mailman/Cgi/options.py:937
+#: Mailman/Cgi/options.py:940
 msgid ""
 "\n"
 "You are subscribed to this list with the case-preserved address\n"
@@ -2910,19 +2916,19 @@ msgstr ""
 "Tas soscritu a la llista cola direición respetando mayúscules y minúscules\n"
 "<em>%(cpuser)s</em>."
 
-#: Mailman/Cgi/options.py:953
+#: Mailman/Cgi/options.py:956
 msgid "%(realname)s list: member options login page"
 msgstr "Llista %(realname)s: páxina d'entrada d'opciones soscritor"
 
-#: Mailman/Cgi/options.py:954
+#: Mailman/Cgi/options.py:957
 msgid "email address and "
 msgstr "direición de corréu electrónicu y "
 
-#: Mailman/Cgi/options.py:957
+#: Mailman/Cgi/options.py:960
 msgid "%(realname)s list: member options for user %(safeuser)s"
 msgstr "Llista %(realname)s: opciones de soscrición de %(safeuser)s"
 
-#: Mailman/Cgi/options.py:983
+#: Mailman/Cgi/options.py:986
 msgid ""
 "In order to change your membership option, you must\n"
 "    first log in by giving your %(extra)smembership password in the section\n"
@@ -2957,19 +2963,19 @@ msgstr ""
 "    "
 
 # In this entry insert a space at the end of string, it will be stripped.
-#: Mailman/Cgi/options.py:997
+#: Mailman/Cgi/options.py:1000
 msgid "Email address:"
 msgstr "Corréu electrónicu: "
 
-#: Mailman/Cgi/options.py:1001
+#: Mailman/Cgi/options.py:1004
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: Mailman/Cgi/options.py:1003
+#: Mailman/Cgi/options.py:1006
 msgid "Log in"
 msgstr "Entrar"
 
-#: Mailman/Cgi/options.py:1011
+#: Mailman/Cgi/options.py:1014
 msgid ""
 "By clicking on the <em>Unsubscribe</em> button, a\n"
 "    confirmation message will be emailed to you.  This message will have a\n"
@@ -2983,11 +2989,11 @@ msgstr ""
 "    tamién confirmar per corréu electrónicu; mira les intrucciones nel\n"
 "    mensax de confirmación)."
 
-#: Mailman/Cgi/options.py:1019
+#: Mailman/Cgi/options.py:1022
 msgid "Password reminder"
 msgstr "Remembrar contraseña"
 
-#: Mailman/Cgi/options.py:1023
+#: Mailman/Cgi/options.py:1026
 msgid ""
 "By clicking on the <em>Remind</em> button, your\n"
 "    password will be emailed to you."
@@ -2995,27 +3001,27 @@ msgstr ""
 "Al calcar en <em>Remembrar</em>, la to\n"
 "    contraseña unviarásete per email al to corréu."
 
-#: Mailman/Cgi/options.py:1026
+#: Mailman/Cgi/options.py:1029
 msgid "Remind"
 msgstr "Remembrar"
 
-#: Mailman/Cgi/options.py:1126 Mailman/ListAdmin.py:227
+#: Mailman/Cgi/options.py:1129 Mailman/ListAdmin.py:227
 msgid "<missing>"
 msgstr "<perdíu>"
 
-#: Mailman/Cgi/options.py:1137
+#: Mailman/Cgi/options.py:1140
 msgid "Requested topic is not valid: %(topicname)s"
 msgstr "El tema solicitáu nun ye válidu: %(topicname)s"
 
-#: Mailman/Cgi/options.py:1142
+#: Mailman/Cgi/options.py:1145
 msgid "Topic filter details"
 msgstr "Detalles de la peñera de temes"
 
-#: Mailman/Cgi/options.py:1145
+#: Mailman/Cgi/options.py:1148
 msgid "Name:"
 msgstr "Nome:"
 
-#: Mailman/Cgi/options.py:1147
+#: Mailman/Cgi/options.py:1150
 msgid "Pattern (as regexp):"
 msgstr "Patrón (como una espresión regular):"
 
@@ -3274,11 +3280,6 @@ msgstr ""
 "reunvióse al alministrador de la llista. Recibirás un corréu electrónicu "
 "informándote de\n"
 "la decisión del llendador cuando trate la to petición."
-
-#: Mailman/Cgi/subscribe.py:296 Mailman/Commands/cmd_subscribe.py:133
-#, fuzzy
-msgid "You already have a subscription pending confirmation"
-msgstr "Notificación de soscrición a %(realname)s"
 
 #: Mailman/Cgi/subscribe.py:300 Mailman/Commands/cmd_confirm.py:61
 msgid "You are already subscribed."
@@ -4015,11 +4016,11 @@ msgid ""
 msgstr ""
 "La solicitú de baxa reunvióse al alministrador de la llista pal so preste."
 
-#: Mailman/Commands/cmd_unsubscribe.py:84
+#: Mailman/Commands/cmd_unsubscribe.py:89
 msgid "You gave the wrong password"
 msgstr "Disti una contraseña incorreuta"
 
-#: Mailman/Commands/cmd_unsubscribe.py:87
+#: Mailman/Commands/cmd_unsubscribe.py:92
 msgid "Unsubscription request succeeded."
 msgstr "Aceutóse la solicitú de desoscripción"
 
@@ -9220,57 +9221,57 @@ msgstr ""
 msgid "Your confirmation is required to leave the %(listname)s mailing list"
 msgstr "Fai falta que confirmes p'abandonar la llista de corréu %(listname)s"
 
-#: Mailman/MailList.py:997 Mailman/MailList.py:1488
+#: Mailman/MailList.py:999 Mailman/MailList.py:1492
 msgid " from %(remote)s"
 msgstr " de %(remote)s"
 
-#: Mailman/MailList.py:1041
+#: Mailman/MailList.py:1043
 msgid "subscriptions to %(realname)s require moderator approval"
 msgstr ""
 "les soscriciones a %(realname)s necesiten l'aprobación del alministrador"
 
-#: Mailman/MailList.py:1123 bin/add_members:299
+#: Mailman/MailList.py:1125 bin/add_members:299
 msgid "%(realname)s subscription notification"
 msgstr "Notificación de soscrición a %(realname)s"
 
-#: Mailman/MailList.py:1143
+#: Mailman/MailList.py:1145
 msgid "unsubscriptions require moderator approval"
 msgstr "les baxes de %(realname)s necesiten l'aprobación del llendador"
 
-#: Mailman/MailList.py:1164
+#: Mailman/MailList.py:1166
 msgid "%(realname)s unsubscribe notification"
 msgstr "Notificación de desoscrición a %(realname)s"
 
-#: Mailman/MailList.py:1326
+#: Mailman/MailList.py:1328
 #, fuzzy
 msgid "%(realname)s address change notification"
 msgstr "Notificación de desoscrición a %(realname)s"
 
-#: Mailman/MailList.py:1360
+#: Mailman/MailList.py:1362
 #, fuzzy
 msgid "via email confirmation"
 msgstr "Cadena de confirmación incorreuta"
 
-#: Mailman/MailList.py:1369
+#: Mailman/MailList.py:1371
 #, fuzzy
 msgid "via web confirmation"
 msgstr "Cadena de confirmación incorreuta"
 
-#: Mailman/MailList.py:1394
+#: Mailman/MailList.py:1396
 msgid "subscriptions to %(name)s require administrator approval"
 msgstr "La soscrición a %(name)s requier aprobación del alministrador"
 
-#: Mailman/MailList.py:1404
+#: Mailman/MailList.py:1406
 #, fuzzy
 msgid "email confirmation"
 msgstr "Cadena de confirmación incorreuta"
 
-#: Mailman/MailList.py:1406
+#: Mailman/MailList.py:1408
 #, fuzzy
 msgid "web confirmation"
 msgstr "Introduz cadena de confirmación"
 
-#: Mailman/MailList.py:1662
+#: Mailman/MailList.py:1666
 msgid "Last autoresponse notification for today"
 msgstr "Cabera notificación d'autorempuesta pa güei"
 
