@@ -1,11 +1,58 @@
 -*- coding: iso-8859-1 -*-
 Mailman - The GNU Mailing List Management System
-Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 
 Here is a history of user visible changes to Mailman.
 
-2.1.30 (xx-xxx.xxxx)
+2.1.34 (xx-xxx-xxxx)
+
+  i18n
+
+    - The Spanish translation has been updated by Omar Walid Llorente.
+
+  Bug Fixes and other patches
+
+    - The fix for LP: #1859104 can result in ValueError being thrown on
+      attempts to subscribe to a list. This is fixed and extended to apply
+      REFUSE_SECOND_PENDING to unsubscription as well.  (LP: #1878458)
+
+    - DMARC mitigation no longer misses if the domain name returned by DNS
+      contains upper case.  (LP: #1881035)
+
+2.1.33 (07-May-2020)
+
+  Security
+
+    - A content injection vulnerability via the private login page has been
+      fixed.  (LP: #1877379)
+
+2.1.32 (05-May-2020)
+
+  i18n
+
+    Fixed a typo in the Spanish translation and uptated mailman.pot and
+    the message catalog for 2.1.31 security fix.
+
+2.1.31 (05-May-2020)
+
+  Security
+
+    - A content injection vulnerability via the options login page has been
+      discovered and reported by Vishal Singh. This is fixed.  (LP: #1873722)
+
+  i18n
+
+    - The Spanish translation has been updated by Omar Walid Llorente.
+
+  Bug Fixes and other patches
+
+    - Bounce recognition for a non-compliant Yahoo format is added.
+
+    - Archiving workaround for non-ascii in string.lowercase in some Python
+      packages is added.
+
+2.1.30 (13-Apr-2020)
 
   New Features
 
@@ -48,6 +95,12 @@ Here is a history of user visible changes to Mailman.
 
     - The Japanese translation has been updated by Yasuhito FUTATSUKI.
 
+    - The German translation has been updated by Ludwig Reiter.
+
+    - The Spanish translation has been updated by Omar Walid Llorente.
+
+    - The Brazilian Portugese translation has been updated by Emerson de Mello.
+
   Bug Fixes and other patches
 
     - Fixed the confirm CGI to catch a rare TypeError on simultaneous
@@ -82,6 +135,9 @@ Here is a history of user visible changes to Mailman.
 
     - A bug causing a UnicodeDecodeError in preparing to send the confirmation
       request message to a new subscriber has been fixed.  (LP: #1851442)
+
+    - The SimpleMatch heuristic bounce recognizer has been improved to not
+      return most invalid email addresses.  (LP: #1859011)
 
 2.1.29 (24-Jul-2018)
 

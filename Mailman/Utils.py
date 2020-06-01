@@ -1343,12 +1343,14 @@ def _DMARCProhibited(mlist, email, dmarc_domain, org=False):
         cnames = {}
         want_names = set([dmarc_domain + '.'])
         for txt_rec in txt_recs.response.answer:
+            # Don't be fooled by an answer with uppercase in the name.
+            name = txt_rec.name.to_text().lower()
             if txt_rec.rdtype == dns.rdatatype.CNAME:
-                cnames[txt_rec.name.to_text()] = (
+                cnames[name] = (
                     txt_rec.items[0].target.to_text())
             if txt_rec.rdtype != dns.rdatatype.TXT:
                 continue
-            results_by_name.setdefault(txt_rec.name.to_text(), []).append(
+            results_by_name.setdefault(name, []).append(
                 "".join(txt_rec.items[0].strings))
         expands = list(want_names)
         seen = set(expands)

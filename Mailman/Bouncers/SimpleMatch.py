@@ -25,6 +25,9 @@ import email.Iterators
 def _c(pattern):
     return re.compile(pattern, re.IGNORECASE)
 
+# Pattern to match any valid email address and not much more.
+VALID = _c(r'^[\x21-\x3d\x3f\x41-\x7e]+@[a-z0-9._]+$')
+
 # This is a list of tuples of the form
 #
 #     (start cre, end cre, address cre)
@@ -192,6 +195,10 @@ PATTERNS = [
     (_c('Message could not be delivered to some recipients.'),
      _c('Message headers follow'),
      _c('Recipient: \[SMTP:(?P<addr>[^\s@]+@[^\s@]+)\]')),
+    # This one is from Yahoo but dosen't fit the yahoo recognizer format
+    (_c(r'wasn\'t able to deliver the following message'),
+     _c(r'---Below this line is a copy of the message.'),
+     _c(r'To: (?P<addr>[^\s@]+@[^\s@]+)')),
     # Next one goes here...
     ]
 
@@ -227,4 +234,4 @@ def process(msg, patterns=None):
                     break
         if addrs:
             break
-    return addrs.keys()
+    return [x for x in addrs.keys() if VALID.match(x)]

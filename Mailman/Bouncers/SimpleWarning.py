@@ -17,9 +17,10 @@
 
 """Recognizes simple heuristically delimited warnings."""
 
+import email
+
 from Mailman.Bouncers.BouncerAPI import Stop
 from Mailman.Bouncers.SimpleMatch import _c
-from Mailman.Bouncers.SimpleMatch import process as _process
 
 
 
@@ -67,8 +68,25 @@ patterns = [
 
 
 def process(msg):
-    if _process(msg, patterns):
-        # It's a recognized warning so stop now
-        return Stop
-    else:
-        return []
+    # We used to just import process from SimpleMatch, but with the change in
+    # SimpleMatch to return only vaild addresses, that doesn't work any more.
+    # So, we copy most of the process from SimpleMatch here.
+    addrs = {}
+    for scre, ecre, acre in patterns:
+        state = 0
+        for line in email.Iterators.body_line_iterator(msg, decode=True):
+            if state == 0:
+                if scre.search(line):
+                    state = 1
+            if state == 1:
+                mo = acre.search(line)
+                if mo:
+                    addr = mo.group('addr')
+                    if addr:
+                        addrs[addr.strip('<>')] = 1
+                elif ecre.search(line):
+                    break
+        if addrs:
+            # It's a recognized warning so stop now
+            return Stop
+    return []
