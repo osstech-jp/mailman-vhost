@@ -20,6 +20,10 @@ Here is a history of user visible changes to Mailman.
     - DMARC mitigation no longer misses if the domain name returned by DNS
       contains upper case.  (LP: #1881035)
 
+    - A new WARN_MEMBER_OF_SUBSCRIBE setting can be set to No to prevent
+      mailbombing of a member of a list with private rosters by repeated
+      subscribe attempts.  (LP: #1883017)
+
 2.1.33 (07-May-2020)
 
   Security

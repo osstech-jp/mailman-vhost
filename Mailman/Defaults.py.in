@@ -1130,6 +1130,10 @@ ANONYMOUS_LIST_KEEP_HEADERS = ['^(?!x-)', '^x-mailman-',
 # request email, she has to wait PENDING_REQUEST_LIFE (default 3 days) before
 # she can request another.  This setting also applies to repeated unsubscribes.
 REFUSE_SECOND_PENDING = No
+# Mailbombing of a list member of a list with private rosters can occur with
+# repeated subscribe attempts resulting in repeated user warnings.  Set the
+# following to No to supress the user warnings.
+WARN_MEMBER_OF_SUBSCRIBE = Yes
 
 
 
