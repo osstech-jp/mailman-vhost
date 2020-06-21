@@ -24,6 +24,9 @@ Here is a history of user visible changes to Mailman.
       mailbombing of a member of a list with private rosters by repeated
       subscribe attempts.  (LP: #1883017)
 
+    - Very long filenames for scrubbed attachments are now truncated.
+      (LP: #1884456)
+
 2.1.33 (07-May-2020)
 
   Security
