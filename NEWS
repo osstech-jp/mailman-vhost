@@ -32,13 +32,13 @@ Here is a history of user visible changes to Mailman.
   Security
 
     - A content injection vulnerability via the private login page has been
-      fixed.  (LP: #1877379)
+      fixed.  CVE-2020-15011  (LP: #1877379)
 
 2.1.32 (05-May-2020)
 
   i18n
 
-    Fixed a typo in the Spanish translation and uptated mailman.pot and
+    Fixed a typo in the Spanish translation and updated mailman.pot and
     the message catalog for 2.1.31 security fix.
 
 2.1.31 (05-May-2020)
@@ -46,7 +46,8 @@ Here is a history of user visible changes to Mailman.
   Security
 
     - A content injection vulnerability via the options login page has been
-      discovered and reported by Vishal Singh. This is fixed.  (LP: #1873722)
+      discovered and reported by Vishal Singh. This is fixed.  CVE-2020-12108
+      (LP: #1873722)
 
   i18n
 
