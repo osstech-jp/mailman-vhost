@@ -5,7 +5,7 @@ Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.34 (xx-xxx-xxxx)
+2.1.34 (26-Jun-2020)
 
   i18n
 
@@ -20,18 +20,25 @@ Here is a history of user visible changes to Mailman.
     - DMARC mitigation no longer misses if the domain name returned by DNS
       contains upper case.  (LP: #1881035)
 
+    - A new WARN_MEMBER_OF_SUBSCRIBE setting can be set to No to prevent
+      mailbombing of a member of a list with private rosters by repeated
+      subscribe attempts.  (LP: #1883017)
+
+    - Very long filenames for scrubbed attachments are now truncated.
+      (LP: #1884456)
+
 2.1.33 (07-May-2020)
 
   Security
 
     - A content injection vulnerability via the private login page has been
-      fixed.  (LP: #1877379)
+      fixed.  CVE-2020-15011  (LP: #1877379)
 
 2.1.32 (05-May-2020)
 
   i18n
 
-    Fixed a typo in the Spanish translation and uptated mailman.pot and
+    Fixed a typo in the Spanish translation and updated mailman.pot and
     the message catalog for 2.1.31 security fix.
 
 2.1.31 (05-May-2020)
@@ -39,7 +46,8 @@ Here is a history of user visible changes to Mailman.
   Security
 
     - A content injection vulnerability via the options login page has been
-      discovered and reported by Vishal Singh. This is fixed.  (LP: #1873722)
+      discovered and reported by Vishal Singh. This is fixed.  CVE-2020-12108
+      (LP: #1873722)
 
   i18n
 

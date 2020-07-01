@@ -300,6 +300,7 @@ moderator's decision when they get to your request.""")
             results = _('You are already subscribed.')
         else:
             results = privacy_results
+        if privacy_results and mm_cfg.WARN_MEMBER_OF_SUBSCRIBE:
             # This could be a membership probe.  For safety, let the user know
             # a probe occurred.  BAW: should we inform the list moderator?
             listaddr = mlist.GetListEmail()

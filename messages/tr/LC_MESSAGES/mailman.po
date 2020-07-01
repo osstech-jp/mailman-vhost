@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: Thu May 28 18:46:38 2020\n"
+"POT-Creation-Date: Fri Jun 26 17:05:40 2020\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kerem Erkan <kerem.erkan@hacettepe.edu.tr>\n"
 "Language-Team: Turkish <LL@li.org>\n"
@@ -3270,11 +3270,11 @@ msgstr ""
 msgid "You are already subscribed."
 msgstr "Þu anda zaten üyesiniz."
 
-#: Mailman/Cgi/subscribe.py:314
+#: Mailman/Cgi/subscribe.py:315
 msgid "Mailman privacy alert"
 msgstr "Mailman gizlilik uyarýsý"
 
-#: Mailman/Cgi/subscribe.py:315
+#: Mailman/Cgi/subscribe.py:316
 msgid ""
 "An attempt was made to subscribe your address to the mailing list\n"
 "%(listaddr)s.  You are already subscribed to this mailing list.\n"
@@ -3310,15 +3310,15 @@ msgstr ""
 "endiþe\n"
 "duyuyorsanýz liste yöneticisine %(listowner)s adresinden ulaþabilirsiniz.\n"
 
-#: Mailman/Cgi/subscribe.py:334
+#: Mailman/Cgi/subscribe.py:335
 msgid "This list does not support digest delivery."
 msgstr "Bu liste toplu gönderimi desteklemiyor."
 
-#: Mailman/Cgi/subscribe.py:336
+#: Mailman/Cgi/subscribe.py:337
 msgid "This list only supports digest delivery."
 msgstr "Bu liste sadece toplu gönderimi destekliyor."
 
-#: Mailman/Cgi/subscribe.py:343
+#: Mailman/Cgi/subscribe.py:344
 msgid "You have been successfully subscribed to the %(realname)s mailing list."
 msgstr "%(realname)s mesaj listesine baþarýyla üye oldunuz."
 
@@ -4076,166 +4076,166 @@ msgstr "Toplu mesaj almayan üyeler:"
 msgid "Digest members:"
 msgstr "Toplu mesaj alan üyeler:"
 
-#: Mailman/Defaults.py:1798
+#: Mailman/Defaults.py:1802
 msgid "Arabic"
 msgstr ""
 
-#: Mailman/Defaults.py:1799
+#: Mailman/Defaults.py:1803
 #, fuzzy
 msgid "Asturian"
 msgstr "Estonyaca"
 
-#: Mailman/Defaults.py:1800
+#: Mailman/Defaults.py:1804
 msgid "Catalan"
 msgstr "Katalonca"
 
-#: Mailman/Defaults.py:1801
+#: Mailman/Defaults.py:1805
 msgid "Czech"
 msgstr "Çekçe"
 
-#: Mailman/Defaults.py:1802
+#: Mailman/Defaults.py:1806
 msgid "Danish"
 msgstr "Danca"
 
-#: Mailman/Defaults.py:1803
+#: Mailman/Defaults.py:1807
 msgid "German"
 msgstr "Almanca"
 
-#: Mailman/Defaults.py:1804
+#: Mailman/Defaults.py:1808
 msgid "English (USA)"
 msgstr "Ýngilizce (ABD)"
 
-#: Mailman/Defaults.py:1805
+#: Mailman/Defaults.py:1809
 msgid "Esperanto"
 msgstr ""
 
-#: Mailman/Defaults.py:1806
+#: Mailman/Defaults.py:1810
 msgid "Spanish (Spain)"
 msgstr "Ýspanyolca (Ýspanya)"
 
-#: Mailman/Defaults.py:1807
+#: Mailman/Defaults.py:1811
 msgid "Estonian"
 msgstr "Estonyaca"
 
-#: Mailman/Defaults.py:1808
+#: Mailman/Defaults.py:1812
 msgid "Euskara"
 msgstr "Euskara"
 
-#: Mailman/Defaults.py:1809
+#: Mailman/Defaults.py:1813
 msgid "Persian"
 msgstr ""
 
-#: Mailman/Defaults.py:1810
+#: Mailman/Defaults.py:1814
 msgid "Finnish"
 msgstr "Fince"
 
-#: Mailman/Defaults.py:1811
+#: Mailman/Defaults.py:1815
 msgid "French"
 msgstr "Fransýzca"
 
-#: Mailman/Defaults.py:1812
+#: Mailman/Defaults.py:1816
 #, fuzzy
 msgid "Galician"
 msgstr "Ýtalyanca"
 
-#: Mailman/Defaults.py:1813
+#: Mailman/Defaults.py:1817
 msgid "Greek"
 msgstr ""
 
-#: Mailman/Defaults.py:1814
+#: Mailman/Defaults.py:1818
 msgid "Hebrew"
 msgstr ""
 
-#: Mailman/Defaults.py:1815
+#: Mailman/Defaults.py:1819
 msgid "Croatian"
 msgstr "Hýrvatça"
 
-#: Mailman/Defaults.py:1816
+#: Mailman/Defaults.py:1820
 msgid "Hungarian"
 msgstr "Macarca"
 
-#: Mailman/Defaults.py:1817
+#: Mailman/Defaults.py:1821
 msgid "Interlingua"
 msgstr ""
 
-#: Mailman/Defaults.py:1818
+#: Mailman/Defaults.py:1822
 msgid "Italian"
 msgstr "Ýtalyanca"
 
-#: Mailman/Defaults.py:1819
+#: Mailman/Defaults.py:1823
 msgid "Japanese"
 msgstr "Japonca"
 
-#: Mailman/Defaults.py:1820
+#: Mailman/Defaults.py:1824
 msgid "Korean"
 msgstr "Korece"
 
-#: Mailman/Defaults.py:1821
+#: Mailman/Defaults.py:1825
 msgid "Lithuanian"
 msgstr "Litvanyaca"
 
-#: Mailman/Defaults.py:1822
+#: Mailman/Defaults.py:1826
 msgid "Dutch"
 msgstr "Flemenkçe"
 
-#: Mailman/Defaults.py:1823
+#: Mailman/Defaults.py:1827
 msgid "Norwegian"
 msgstr "Norveççe"
 
-#: Mailman/Defaults.py:1824
+#: Mailman/Defaults.py:1828
 msgid "Polish"
 msgstr "Polonyaca"
 
-#: Mailman/Defaults.py:1825
+#: Mailman/Defaults.py:1829
 msgid "Portuguese"
 msgstr "Portekizce"
 
-#: Mailman/Defaults.py:1826
+#: Mailman/Defaults.py:1830
 msgid "Portuguese (Brazil)"
 msgstr "Portekizce (Brezilya)"
 
-#: Mailman/Defaults.py:1827
+#: Mailman/Defaults.py:1831
 msgid "Romanian"
 msgstr "Romanyaca"
 
-#: Mailman/Defaults.py:1828
+#: Mailman/Defaults.py:1832
 msgid "Russian"
 msgstr "Rusça"
 
-#: Mailman/Defaults.py:1829
+#: Mailman/Defaults.py:1833
 #, fuzzy
 msgid "Slovak"
 msgstr "Slovence"
 
-#: Mailman/Defaults.py:1830
+#: Mailman/Defaults.py:1834
 msgid "Slovenian"
 msgstr "Slovence"
 
-#: Mailman/Defaults.py:1831
+#: Mailman/Defaults.py:1835
 msgid "Serbian"
 msgstr "Sýrpça"
 
-#: Mailman/Defaults.py:1832
+#: Mailman/Defaults.py:1836
 msgid "Swedish"
 msgstr "Ýsveççe"
 
-#: Mailman/Defaults.py:1833
+#: Mailman/Defaults.py:1837
 msgid "Turkish"
 msgstr "Türkçe"
 
-#: Mailman/Defaults.py:1834
+#: Mailman/Defaults.py:1838
 msgid "Ukrainian"
 msgstr "Ukraynaca"
 
-#: Mailman/Defaults.py:1835
+#: Mailman/Defaults.py:1839
 msgid "Vietnamese"
 msgstr ""
 
-#: Mailman/Defaults.py:1836
+#: Mailman/Defaults.py:1840
 msgid "Chinese (China)"
 msgstr "Çince (Çin)"
 
-#: Mailman/Defaults.py:1837
+#: Mailman/Defaults.py:1841
 msgid "Chinese (Taiwan)"
 msgstr "Çince (Tayvan)"
 

@@ -471,7 +471,8 @@ def save_attachment(mlist, msg, dir, filter_html=True):
             # guessed so attachments can't lie about their type.  Also, if the
             # filename /has/ no extension, then tack on the one we guessed.
             # The extension was removed from the name above.
-            filebase = filename
+            # Allow for extra and ext and keep it under 255 bytes.
+            filebase = filename[:240]
         # Now we're looking for a unique name for this file on the file
         # system.  If msgdir/filebase.ext isn't unique, we'll add a counter
         # after filebase, e.g. msgdir/filebase-cnt.ext
