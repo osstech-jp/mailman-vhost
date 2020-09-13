@@ -107,10 +107,11 @@ if test "$havednspython" = "no"
 then
     AC_MSG_ERROR([
  
-***** dnspython not found. It is required for the new
-***** dmarc_moderation_action featurer. Get it from
+***** dnspython <2.0 not found. It is required for the new
+***** dmarc_moderation_action feature. Get it from
 ***** <http://www.dnspython.org/> or
-***** <https://pypi.python.org/pypi/dnspython/>])
+***** <https://pypi.python.org/pypi/dnspython/>
+***** You must get a version < 2.0])
 fi
 AC_MSG_RESULT($havednspython)
  
