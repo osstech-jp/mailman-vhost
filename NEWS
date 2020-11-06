@@ -115,7 +115,7 @@ Here is a history of user visible changes to Mailman.
       confirmations of the same token.  (LP: #1785854)
 
     - Scrubbed application/octet-stream MIME parts will now be given a
-      .bin extension instead of .obj.
+      .bin extension instead of .obj.  CVE-2020-12137  (LP: #1886117)
 
     - Added bounce recognition for a non-compliant opensmtpd DSN with
       Action: error.  (LP: #1805137)

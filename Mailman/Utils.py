@@ -1096,6 +1096,7 @@ _badwords = [
     r'\bonfilterchange\b',
     r'\bonfinish\b',
     r'\bonfocus(?:in|out)?\b',
+    r'\bonhashchange\b',
     r'\bonhelp\b',
     r'\boninput\b',
     r'\bonkey(?:up|down|press)\b',
