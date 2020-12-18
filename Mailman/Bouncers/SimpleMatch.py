@@ -199,6 +199,10 @@ PATTERNS = [
     (_c(r'wasn\'t able to deliver the following message'),
      _c(r'---Below this line is a copy of the message.'),
      _c(r'To: (?P<addr>[^\s@]+@[^\s@]+)')),
+    # From some unknown MTA
+    (_c(r'This is a delivery failure notification message'),
+     _c(r'The problem appears to be'),
+     _c(r'-- (?P<addr>[^\s@]+@[^\s@]+)')),
     # Next one goes here...
     ]
 

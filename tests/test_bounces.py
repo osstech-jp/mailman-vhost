@@ -82,6 +82,7 @@ class BounceTest(unittest.TestCase):
         ('SimpleMatch', 'simple_38.txt', ['userx@example.com']),
         ('SimpleMatch', 'simple_39.txt', ['userx@example.ru']),
         ('SimpleMatch', 'simple_41.txt', ['userx@example.com']),
+        ('SimpleMatch', 'simple_44.txt', ['user@example.com']),
         ('SimpleMatch', 'bounce_02.txt', ['userx@example.com']),
         ('SimpleMatch', 'bounce_03.txt', ['userx@example.uk']),
         ('SimpleMatch', 'yahoo_12.txt', ['user@yahoo.com']),
