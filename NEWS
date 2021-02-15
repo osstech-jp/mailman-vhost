@@ -5,6 +5,13 @@ Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.35 (xx-xxx-xxxx)
+
+  Bug Fixes and other patches
+
+    - Fixed an issue where sometimes the wrapper message for DMARC mitigation
+      Wrap Message has no Subject:.  (LP: #1915655)
+
 2.1.34 (26-Jun-2020)
 
   i18n
