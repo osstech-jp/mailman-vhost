@@ -90,6 +90,9 @@ def guess_extension(ctype, ext):
     if ctype.lower == 'application/octet-stream':
         # For this type, all[0] is '.obj'. '.bin' is better.
         return '.bin'
+    if ctype.lower == 'text/plain':
+        # For this type, all[0] is '.ksh'. '.txt' is better.
+        return '.txt'
     return all and all[0]
 
 
@@ -196,7 +199,10 @@ def process(mlist, msg, msgdata=None):
                 format = part.get_param('format')
                 delsp = part.get_param('delsp')
             # TK: if part is attached then check charset and scrub if none
-            if part.get('content-disposition') and \
+            # MAS: Content-Disposition is not a good test for 'attached'.
+            # RFC 2183 sec. 2.10 allows Content-Disposition on the main body.
+            # Make it specifically 'attachment'.
+            if part.get('content-disposition').lower() == 'attachment' and \
                not part.get_content_charset():
                 omask = os.umask(002)
                 try:
