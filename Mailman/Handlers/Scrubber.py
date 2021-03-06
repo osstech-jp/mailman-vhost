@@ -202,8 +202,8 @@ def process(mlist, msg, msgdata=None):
             # MAS: Content-Disposition is not a good test for 'attached'.
             # RFC 2183 sec. 2.10 allows Content-Disposition on the main body.
             # Make it specifically 'attachment'.
-            if part.get('content-disposition').lower() == 'attachment' and \
-               not part.get_content_charset():
+            if (part.get('content-disposition', '').lower() == 'attachment'
+                    and not part.get_content_charset()):
                 omask = os.umask(002)
                 try:
                     url = save_attachment(mlist, part, dir)
