@@ -101,8 +101,10 @@ class Results:
             return
         body = part.get_payload(decode=True)
         if (part.get_content_charset(None)):
-            body = unicode(body, part.get_content_charset()).encode(
-                           Utils.GetCharSet(self.msgdata['lang']))
+            body = unicode(body, part.get_content_charset(),
+                           errors='replace').encode(
+                           Utils.GetCharSet(self.msgdata['lang']),
+                           errors='replace')
         # text/plain parts better have string payloads
         assert isinstance(body, StringType) or isinstance(body, UnicodeType)
         lines = body.splitlines()
