@@ -226,12 +226,14 @@ class Bouncer:
         if self.bounce_notify_owner_on_disable:
             self.__sendAdminBounceNotice(member, msg)
 
-    def __sendAdminBounceNotice(self, member, msg, did=_('disabled')):
+    def __sendAdminBounceNotice(self, member, msg, did=None):
         # BAW: This is a bit kludgey, but we're not providing as much
         # information in the new admin bounce notices as we used to (some of
         # it was of dubious value).  However, we'll provide empty, strange, or
         # meaningless strings for the unused %()s fields so that the language
         # translators don't have to provide new templates.
+        if did is None:
+            did = _('disabled')
         siteowner = Utils.get_site_email(self.host_name)
         text = Utils.maketext(
             'bounce.txt',

@@ -19,6 +19,9 @@ Here is a history of user visible changes to Mailman.
       or list's language to avoid a possible UnicodeError when including the
       message body in the reply.  (LP: #1921682)
 
+    - Delivery disabled by bounce notices to admins now have 'disabled'
+      properly translated.  (LP: #1922843)
+
 2.1.34 (26-Jun-2020)
 
   i18n
