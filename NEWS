@@ -22,6 +22,9 @@ Here is a history of user visible changes to Mailman.
     - Delivery disabled by bounce notices to admins now have 'disabled'
       properly translated.  (LP: #1922843)
 
+    - DMARC policy discovery ignores domains with multiple DMARC records per
+      RFC 7849,  (LP: 1931029)
+
 2.1.34 (26-Jun-2020)
 
   i18n

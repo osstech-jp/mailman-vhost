@@ -1380,8 +1380,9 @@ def _DMARCProhibited(mlist, email, dmarc_domain, org=False):
             if len(dmarcs) > 1:
                 syslog('error',
                        """RRset of TXT records for %s has %d v=DMARC1 entries;
-                       testing them all""",
+                       ignoring them per RFC 7849""",
                         dmarc_domain, len(dmarcs))
+                return False
             for entry in dmarcs:
                 mo = re.search(r'\bsp=(\w*)\b', entry, re.IGNORECASE)
                 if org and mo:
