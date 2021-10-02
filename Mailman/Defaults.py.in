@@ -841,7 +841,10 @@ VERP_PROBES = No
 
 # A perfect opportunity for doing VERP is the password reminders, which are
 # already addressed individually to each recipient.  Set this to Yes to enable
-# VERPs on all password reminders.
+# VERPs on all password reminders.  However, because password reminders are
+# sent from the site list and site list bounces aren't processed but are just
+# forwarded to the site list admins, this isn't too useful.  See comments at
+# lines 70-84 of Mailman/Queue/BounceRunner.py for why we don't process them.
 VERP_PASSWORD_REMINDERS = No
 
 # Another good opportunity is when regular delivery is personalized.  Here
