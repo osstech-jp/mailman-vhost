@@ -63,13 +63,19 @@ def process(mlist, msg, msgdata):
     # make a copy of the msg, then delete almost everything and set/copy
     # what we want.
     omsg = copy.deepcopy(msg)
+    # If CookHeaders didn't change the Subject: we need to keep it too.
+    # Get a fresh list.
+    keepers = list(KEEPERS)
+    if 'subject' not in [key.lower() for key in
+                         msgdata.get('add_header', {}).keys()]:
+        keepers.append('subject')
     for key in msg.keys():
-        if key.lower() not in KEEPERS:
+        if key.lower() not in keepers:
             del msg[key]
     msg['MIME-Version'] = '1.0'
     msg['Message-ID'] = Utils.unique_message_id(mlist)
     # Add the headers from CookHeaders.
-    for k, v in msgdata['add_header'].items():
+    for k, v in msgdata.get('add_header', {}).items():
         msg[k] = v
     # Are we including dmarc_wrapped_message_text?  I.e., do we have text and
     # are we wrapping because of dmarc_moderation_action?
