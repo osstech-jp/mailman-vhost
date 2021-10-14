@@ -222,13 +222,7 @@ Copyright (C) 1998-2018 by the Free Software Foundation, Inc.
 
 (その他の英語の情報については英語版のREADMEを見てください)
 
-    日本語で Mailman についての情報をやりとりするための場所としては
-    Google Groups に以下のフォーラムが開設されています。
-
-        https://groups.google.com/forum/#!forum/mailman-users-jp
-
-    なお、この日本語訳の内容については元訳者が故人であり、
-    補訳者である二木が上記フォーラムには参加できていないため、
+    この日本語訳の内容については元訳者が故人であるため、
     launchpad.net の bug または merge proposal あるいは
     https://launchpad.net/~futatuki を通じて直接二木までお知らせ
     頂ければ幸いです。
