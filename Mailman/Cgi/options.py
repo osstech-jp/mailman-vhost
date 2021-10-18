@@ -54,9 +54,6 @@ except NameError:
     True = 1
     False = 0
 
-AUTH_CONTEXTS = (mm_cfg.AuthListAdmin, mm_cfg.AuthSiteAdmin,
-                 mm_cfg.AuthListModerator, mm_cfg.AuthUser)
-
 
 def main():
     global _
@@ -124,15 +121,6 @@ def main():
         print doc.Format()
         return
 
-    if set(params) - set(safe_params):
-        csrf_checked = csrf_check(mlist, cgidata.getfirst('csrf_token'))
-    else:
-        csrf_checked = True
-    # if password is present, void cookie to force password authentication.
-    if cgidata.getfirst('password'):
-        os.environ['HTTP_COOKIE'] = ''
-        csrf_checked = True
-
     # Set the language for the page.  If we're coming from the listinfo cgi,
     # we might have a 'language' key in the cgi data.  That was an explicit
     # preference to view the page in, so we should honor that here.  If that's
@@ -169,6 +157,16 @@ def main():
             user = user[-1].strip()
 
     # Avoid cross-site scripting attacks
+    if set(params) - set(safe_params):
+        csrf_checked = csrf_check(mlist, cgidata.getfirst('csrf_token'),
+                                  Utils.UnobscureEmail(urllib.unquote(user)))
+    else:
+        csrf_checked = True
+    # if password is present, void cookie to force password authentication.
+    if cgidata.getfirst('password'):
+        os.environ['HTTP_COOKIE'] = ''
+        csrf_checked = True
+
     safeuser = Utils.websafe(user)
     try:
         Utils.ValidateEmail(user)
@@ -871,8 +869,9 @@ def options_page(mlist, doc, user, cpuser, userlang, message=''):
         mlist.FormatButton('othersubs',
                            _('List my other subscriptions')))
     replacements['<mm-form-start>'] = (
+        # Always make the CSRF token for the user. CVE-2021-42096
         mlist.FormatFormStart('options', user, mlist=mlist, 
-            contexts=AUTH_CONTEXTS, user=user))
+            contexts=[mm_cfg.AuthUser], user=user))
     replacements['<mm-user>'] = user
     replacements['<mm-presentable-user>'] = presentable_user
     replacements['<mm-email-my-pw>'] = mlist.FormatButton(

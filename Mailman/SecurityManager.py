@@ -104,6 +104,7 @@ class SecurityManager:
             if user is None:
                 # A bad system error
                 raise TypeError, 'No user supplied for AuthUser context'
+            user = Utils.UnobscureEmail(urllib.unquote(user))
             secret = self.getMemberPassword(user)
             userdata = urllib.quote(Utils.ObscureEmail(user), safe='')
             key += 'user+%s' % userdata

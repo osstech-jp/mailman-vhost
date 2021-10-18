@@ -18,11 +18,13 @@
 """ Cross-Site Request Forgery checker """
 
 import time
+import urllib
 import marshal
 import binascii
 
 from Mailman import mm_cfg
-from Mailman.Utils import sha_new
+from Mailman.Logging.Syslog import syslog
+from Mailman.Utils import UnobscureEmail, sha_new
 
 keydict = {
     'user':      mm_cfg.AuthUser,
@@ -37,6 +39,10 @@ keydict = {
 def csrf_token(mlist, contexts, user=None):
     """ create token by mailman cookie generation algorithm """
 
+    if user:
+        # Unmunge a munged email address.
+        user = UnobscureEmail(urllib.unquote(user))
+        
     for context in contexts:
         key, secret = mlist.AuthContextInfo(context, user)
         if key:
@@ -49,9 +55,8 @@ def csrf_token(mlist, contexts, user=None):
     token = binascii.hexlify(marshal.dumps((issued, keymac)))
     return token
 
-def csrf_check(mlist, token):
+def csrf_check(mlist, token, options_user=None):
     """ check token by mailman cookie validation algorithm """
-
     try:
         issued, keymac = marshal.loads(binascii.unhexlify(token))
         key, received_mac = keymac.split(':', 1)
@@ -62,6 +67,17 @@ def csrf_check(mlist, token):
             key, user = key.split('+', 1)
         else:
             user = None
+        if user:
+            # This is for CVE-2021-42097.  The token is a user token because
+            # of the fix for CVE-2021-42096 but it must match the user for
+            # whom the options page is requested.
+            raw_user = UnobscureEmail(urllib.unquote(user))
+            if options_user and options_user != raw_user:
+                syslog('mischief',
+                       'Form for user %s submitted with CSRF token '
+                       'issued for %s.',
+                       options_user, raw_user)
+                return False
         context = keydict.get(key)
         key, secret = mlist.AuthContextInfo(context, user)
         assert key
