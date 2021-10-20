@@ -5,7 +5,17 @@ Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
-2.1.35 (xx-xxx-xxxx)
+2.1.35 (19-Oct-2021)
+
+  Security
+
+    - A potential for for a list member to carry out an off-line brute force
+      attack to obtain the list admin password has been reported by Andre
+      Protas, Richard Cloke and Andy Nuttall of Apple.  This is fixed.
+      CVE-2021-42096  (LP:#1947639)
+
+    - A CSRF attack via the user options page could allow takeover of a users
+      account.  This is fixed.  CVE-2021-42097  (LP:#1947640)
 
   Bug Fixes and other patches
 
