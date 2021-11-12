@@ -45,7 +45,7 @@ def csrf_token(mlist, contexts, user=None):
         
     for context in contexts:
         key, secret = mlist.AuthContextInfo(context, user)
-        if key:
+        if key and secret:
             break
     else:
         return None     # not authenticated

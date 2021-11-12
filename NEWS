@@ -5,6 +5,12 @@ Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.37 (12-Nov-2021)
+
+  Bug Fixes and other patches
+
+    - A bug in the fix for CVE-2021-43332 has neen fixed.  (LP: #1950833)
+
 2.1.36 (12-Nov-2021)
 
   Security
