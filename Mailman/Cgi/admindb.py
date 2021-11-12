@@ -59,8 +59,7 @@ if mm_cfg.DISPLAY_HELD_SUMMARY_SORT_BUTTONS in (SSENDERTIME, STIME):
 else:
     ssort = SSENDER
 
-AUTH_CONTEXTS = (mm_cfg.AuthListAdmin, mm_cfg.AuthSiteAdmin,
-                 mm_cfg.AuthListModerator)
+AUTH_CONTEXTS = ((mm_cfg.AuthListModerator,))
 
 
 

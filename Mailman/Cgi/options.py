@@ -346,6 +346,8 @@ def main():
             varhelp = qs[0]
     if varhelp:
         # Sanitize the topic name.
+        while '%' in varhelp:
+            varhelp = urllib.unquote_plus(varhelp)
         varhelp = re.sub('<.*', '', varhelp)
         topic_details(mlist, doc, user, cpuser, userlang, varhelp)
         return
