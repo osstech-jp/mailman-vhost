@@ -156,17 +156,6 @@ def main():
         else:
             user = user[-1].strip()
 
-    # Avoid cross-site scripting attacks
-    if set(params) - set(safe_params):
-        csrf_checked = csrf_check(mlist, cgidata.getfirst('csrf_token'),
-                                  Utils.UnobscureEmail(urllib.unquote(user)))
-    else:
-        csrf_checked = True
-    # if password is present, void cookie to force password authentication.
-    if cgidata.getfirst('password'):
-        os.environ['HTTP_COOKIE'] = ''
-        csrf_checked = True
-
     safeuser = Utils.websafe(user)
     try:
         Utils.ValidateEmail(user)
@@ -182,6 +171,17 @@ def main():
         loginpage(mlist, doc, None, language)
         print doc.Format()
         return
+
+    # Avoid cross-site scripting attacks
+    if set(params) - set(safe_params):
+        csrf_checked = csrf_check(mlist, cgidata.getfirst('csrf_token'),
+                                  Utils.UnobscureEmail(urllib.unquote(user)))
+    else:
+        csrf_checked = True
+    # if password is present, void cookie to force password authentication.
+    if cgidata.getfirst('password'):
+        os.environ['HTTP_COOKIE'] = ''
+        csrf_checked = True
 
     # Find the case preserved email address (the one the user subscribed with)
     lcuser = user.lower()
