@@ -5,6 +5,13 @@ Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.38 (xx-xxx-xxxx)
+
+  Bug Fixes and other patches
+
+    - NotAMemberError exception from the user options page when the user has
+      been asynchronously unsubscribed is fixed.  (LP: #1951769)
+
 2.1.37 (12-Nov-2021)
 
   Bug Fixes and other patches
