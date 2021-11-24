@@ -166,10 +166,11 @@ def main():
         return
     # Sanity check the user, but only give the "no such member" error when
     # using public rosters, otherwise, we'll leak membership information.
-    if not mlist.isMember(user) and mlist.private_roster == 0:
-        doc.addError(_('No such member: %(safeuser)s.'))
-        loginpage(mlist, doc, None, language)
-        print doc.Format()
+    if not mlist.isMember(user):
+        if mlist.private_roster == 0:
+            doc.addError(_('No such member: %(safeuser)s.'))
+            loginpage(mlist, doc, None, language)
+            print doc.Format()
         return
 
     # Avoid cross-site scripting attacks
