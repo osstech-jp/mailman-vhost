@@ -144,7 +144,8 @@ def main():
     safe_params = ['adminpw', 'admlogin', 'msgid', 'sender', 'details']
     params = cgidata.keys()
     if set(params) - set(safe_params):
-        csrf_checked = csrf_check(mlist, cgidata.getfirst('csrf_token'))
+        csrf_checked = csrf_check(mlist, cgidata.getfirst('csrf_token'),
+                                  'admindb')
     else:
         csrf_checked = True
     # if password is present, void cookie to force password authentication.

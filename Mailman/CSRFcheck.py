@@ -55,7 +55,7 @@ def csrf_token(mlist, contexts, user=None):
     token = binascii.hexlify(marshal.dumps((issued, keymac)))
     return token
 
-def csrf_check(mlist, token, options_user=None):
+def csrf_check(mlist, token, cgi_user=None):
     """ check token by mailman cookie validation algorithm """
     try:
         issued, keymac = marshal.loads(binascii.unhexlify(token))
@@ -67,12 +67,25 @@ def csrf_check(mlist, token, options_user=None):
             key, user = key.split('+', 1)
         else:
             user = None
+        # Don't allow unprivileged tokens for admin or admindb.
+        if cgi_user == 'admin':
+            if key not in ('admin', 'site'):
+                syslog('mischief',
+                       'admin form submitted with CSRF token issued for %s.',
+                       key + '+' + user if user else key)
+                return False
+        elif cgi_user == 'admindb':
+            if key not in ('moderator', 'admin', 'site'):
+                syslog('mischief',
+                       'admindb form submitted with CSRF token issued for %s.',
+                       key + '+' + user if user else key)
+                return False
         if user:
             # This is for CVE-2021-42097.  The token is a user token because
             # of the fix for CVE-2021-42096 but it must match the user for
             # whom the options page is requested.
             raw_user = UnobscureEmail(urllib.unquote(user))
-            if options_user and options_user != raw_user:
+            if cgi_user and cgi_user != raw_user:
                 syslog('mischief',
                        'Form for user %s submitted with CSRF token '
                        'issued for %s.',
