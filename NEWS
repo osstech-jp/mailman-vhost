@@ -5,6 +5,13 @@ Copyright (C) 1998-2020 by the Free Software Foundation, Inc.
 
 Here is a history of user visible changes to Mailman.
 
+2.1.39 (13-Dec-2021)
+
+  Bug Fixes and other patches
+
+    - User matching for CSRF tokens is no longer case sensitive., and a
+      potential NamerError in logging is fixed.  (LP: #1954694)
+
 2.1.38 (30-Nov-2021)
 
   Security
