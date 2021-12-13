@@ -85,11 +85,11 @@ def csrf_check(mlist, token, cgi_user=None):
             # of the fix for CVE-2021-42096 but it must match the user for
             # whom the options page is requested.
             raw_user = UnobscureEmail(urllib.unquote(user))
-            if cgi_user and cgi_user != raw_user:
+            if cgi_user and cgi_user.lower() != raw_user.lower():
                 syslog('mischief',
                        'Form for user %s submitted with CSRF token '
                        'issued for %s.',
-                       options_user, raw_user)
+                       cgi_user, raw_user)
                 return False
         context = keydict.get(key)
         key, secret = mlist.AuthContextInfo(context, user)
