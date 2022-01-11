@@ -60,7 +60,7 @@ cre = re.compile(mailbox.UnixMailbox._fromlinepattern)
 # From RFC 2822, a header field name must contain only characters from 33-126
 # inclusive, excluding colon.  I.e. from oct 41 to oct 176 less oct 072.  Must
 # use re.match() so that it's anchored at the beginning of the line.
-fre = re.compile(r'[\041-\071\073-\176]+')
+fre = re.compile(r'[\041-\071\073-\176]+:')
 
 
 
