@@ -11,6 +11,9 @@ Here is a history of user visible changes to Mailman.
 
     - Test for a valid header following a Unix From_ line in bin/cleanarch
       has been improved.  (LP: #1957025)
+    - A 500 Internal Server Error when requesting the options page for a
+      non-member address on a list with private rosters is avoided.
+      (LP: #1961762)
 
 2.1.39 (13-Dec-2021)
 

@@ -169,8 +169,8 @@ def main():
     if not mlist.isMember(user):
         if mlist.private_roster == 0:
             doc.addError(_('No such member: %(safeuser)s.'))
-            loginpage(mlist, doc, None, language)
-            print doc.Format()
+        loginpage(mlist, doc, None, language)
+        print doc.Format()
         return
 
     # Avoid cross-site scripting attacks
