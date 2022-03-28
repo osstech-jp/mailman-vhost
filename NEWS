@@ -14,6 +14,7 @@ Here is a history of user visible changes to Mailman.
     - A 500 Internal Server Error when requesting the options page for a
       non-member address on a list with private rosters is avoided.
       (LP: #1961762)
+    - The German translation of Esperanto is fixed.  (LP: #1966685)
 
 2.1.39 (13-Dec-2021)
 

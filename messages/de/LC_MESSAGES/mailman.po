@@ -4577,7 +4577,7 @@ msgstr "Englisch (USA)"
 
 #: Mailman/Defaults.py:1809
 msgid "Esperanto"
-msgstr "Deutsch"
+msgstr "Esperanto"
 
 # Mailman/Defaults.py:773
 #: Mailman/Defaults.py:1810
