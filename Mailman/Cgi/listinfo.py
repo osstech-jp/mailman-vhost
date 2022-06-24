@@ -113,7 +113,7 @@ def listinfo_overview(msg=''):
                 continue
             else:
                 advertised.append((mlist.GetScriptURL('listinfo'),
-                                   mlist.real_name,
+                                   mlist.internal_name(),
                                    Utils.websafe(mlist.GetDescription())))
     if msg:
         greeting = FontAttr(msg, color="ff5060", size="+1")

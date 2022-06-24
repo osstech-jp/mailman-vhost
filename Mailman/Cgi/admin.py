@@ -296,7 +296,7 @@ def admin_overview(msg=''):
                 continue
             else:
                 advertised.append((mlist.GetScriptURL('admin'),
-                                   mlist.real_name,
+                                   mlist.internal_name(),
                                    Utils.websafe(mlist.GetDescription())))
     # Greeting depends on whether there was an error or not
     if msg:
@@ -393,7 +393,7 @@ def option_help(mlist, varhelp):
     varname, kind, params, dependancies, description, elaboration = \
              get_item_characteristics(item)
     # Set up the document
-    realname = mlist.real_name
+    realname = mlist.internal_name()
     legend = _("""%(realname)s Mailing list Configuration Help
     <br><em>%(varname)s</em> Option""")
 
@@ -444,7 +444,7 @@ def show_results(mlist, doc, category, subcat, cgidata):
     label = _(categories[category][0])
 
     # Set up the document's headers
-    realname = mlist.real_name
+    realname = mlist.internal_name()
     doc.SetTitle(_('%(realname)s Administration (%(label)s)'))
     doc.AddItem(Center(Header(2, _(
         '%(realname)s mailing list administration<br>%(label)s Section'))))

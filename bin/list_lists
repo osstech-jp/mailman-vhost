@@ -28,11 +28,11 @@ Where:
     -p / --public-archive
         List only those lists with public archives.
 
-    --virtual-host-overview=domain
-    -V domain
-        List only those mailing lists that are homed to the given virtual
-        domain.  This only works if the VIRTUAL_HOST_OVERVIEW variable is
-        set.
+    --urlhost=urlhost
+        List only mailing lists that are hosted at the given Web hostname.
+
+    --emailhost=emailhost
+        List only mailing lists that are hosted at the given email hostname.
 
     -b / --bare
         Displays only the list name, with no description.
@@ -71,13 +71,16 @@ def main():
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'apbV:h',
                                    ['advertised', 'public-archive', 'bare',
+                                    'urlhost=',
                                     'virtual-host-overview=',
+                                    'emailhost=',
                                     'help'])
     except getopt.error, msg:
         usage(1, msg)
 
     advertised = 0
     public = 0
+    emailhost = None
     vhost = None
     bare = 0
     for opt, arg in opts:
@@ -87,8 +90,10 @@ def main():
             advertised = 1
         elif opt in ('-p', '--public-archive'):
             public = 1
-        elif opt in ('-V', '--virtual-host-overview'):
+        elif opt in ('--urlhost', '-V', '--virtual-host-overview'):
             vhost = arg
+        elif opt in ('--emailhost'):
+            emailhost = arg.lower()
         elif opt in ('-b', '--bare'):
             bare = 1
 
@@ -107,13 +112,14 @@ def main():
             continue
         if public and mlist.archive_private:
             continue
-        if (vhost and mm_cfg.VIRTUAL_HOST_OVERVIEW and
+        if emailhost and mlist.host_name.lower() != emailhost:
+            continue
+        if (vhost and
                not re.search('://%s/' % re.escape(vhost),
                    mlist.web_page_url,
                    re.IGNORECASE)):
             continue
         mlists.append(mlist)
-        longest = max(len(mlist.real_name), longest)
 
     if not mlists and not bare:
         print C_('No matching mailing lists found')
@@ -122,16 +128,15 @@ def main():
     if not bare:
         print len(mlists), C_('matching mailing lists found:')
 
-    format = '%%%ds%%s - %%.%ds' % (longest, 77 - longest)
     for mlist in mlists:
         if bare:
             print mlist.internal_name()
         else:
             description = mlist.description or C_('[no description available]')
             if '@' in mlist.internal_name():
-                print '   ', format % (mlist.real_name, '@', description)
+                print mlist.internal_name(), '-', description
             else:
-                print '   ', format % (mlist.real_name, ' ', description)
+                print mlist.real_name, '-', description
 
 
 

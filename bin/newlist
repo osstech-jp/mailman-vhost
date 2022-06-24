@@ -171,15 +171,21 @@ def main():
     if '@' in listname:
         # note that --urlhost and --emailhost have precedence
         firstname, domain = listname.split('@', 1)
-        urlhost = urlhost or ('lists.%s' % domain) # TODO: Not configurable yet
         if not emailhost:
             emailhost = domain
         elif emailhost != domain:
             usage(1, _('You cannot use an email host different from the domain part of the list name.'))
-        if mm_cfg.VIRTUAL_HOST_OVERVIEW and not mm_cfg.VIRTUAL_HOSTS.has_key(urlhost):
-            _urlhost = repr(urlhost)
-            _emailhost = repr(emailhost)
-            usage(1, _('The Mailman config file lacks a line mapping urlhost to emailhost:\n  add_virtualhost(%(_urlhost)s,\n                  %(_emailhost)s)'))
+        if mm_cfg.VIRTUAL_HOST_OVERVIEW:
+            if not urlhost:
+                urlhost = domain # TODO: Not configurable yet
+                for vurlhost, vemailhost in mm_cfg.VIRTUAL_HOSTS.items():
+                    if vemailhost == emailhost:
+                        urlhost = vurlhost
+                        break
+            if not mm_cfg.VIRTUAL_HOSTS.has_key(urlhost):
+                _urlhost = repr(urlhost)
+                _emailhost = repr(emailhost)
+                usage(1, _('The Mailman config file lacks a line mapping urlhost to emailhost:\n  add_virtualhost(%(_urlhost)s,\n                  %(_emailhost)s)'))
     else:
         # Handle site wide lists (non-vhost lists, i.e. without '@' in their name)
         # in the traditional manner.
