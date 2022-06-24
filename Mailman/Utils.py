@@ -1656,3 +1656,7 @@ def captcha_verify(idx, given_answer, captchas):
     # We append a `$` to emulate `re.fullmatch`.
     correct_answer_pattern = captchas[idx][1] + "$"
     return re.match(correct_answer_pattern, given_answer)
+
+
+def addr_in_list_p(addr, addrs):
+    return addr.lower() in [x.lower() for x in addrs]

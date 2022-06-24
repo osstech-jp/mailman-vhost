@@ -31,6 +31,10 @@ from Mailman import mm_cfg
 from Mailman import Utils
 from Mailman import Errors
 from Mailman import MemberAdaptor
+from Mailman import i18n
+from Mailman.LDAP import ldap_auth_only_p, ldap_auth_member
+
+_ = i18n._
 
 ISREGULAR = 1
 ISDIGEST = 2
@@ -101,13 +105,17 @@ class OldStyleMemberships(MemberAdaptor.MemberAdaptor):
         secret = self.__mlist.passwords.get(member.lower())
         if secret is None:
             raise Errors.NotAMemberError, member
+        if ldap_auth_only_p():
+            return _("(Use %(email)s's password in LDAP server)") % {'email': member}
         return secret
 
     def authenticateMember(self, member, response):
         secret = self.getMemberPassword(member)
+        if ldap_auth_only_p():
+            return 0
         if secret == response:
             return secret
-        return 0
+        return ldap_auth_member(self.__mlist, member, response)
 
     def __assertIsMember(self, member):
         if not self.isMember(member):

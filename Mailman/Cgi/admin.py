@@ -117,9 +117,12 @@ def main():
         os.environ['HTTP_COOKIE'] = ''
         csrf_checked = True
 
+    username = cgidata.getfirst('adminid')
+
     if not mlist.WebAuthenticate((mm_cfg.AuthListAdmin,
                                   mm_cfg.AuthSiteAdmin),
-                                 cgidata.getfirst('adminpw', '')):
+                                 cgidata.getfirst('adminpw', ''),
+                                 username):
         if cgidata.has_key('adminpw'):
             # This is a re-authorization attempt
             msg = Bold(FontSize('+1', _('Authorization failed.'))).Format()
@@ -128,11 +131,11 @@ def main():
                      os.environ.get('REMOTE_ADDR',
                                     'unidentified origin')))
             syslog('security',
-                   'Authorization failed (admin): list=%s: remote=%s',
-                   listname, remote)
+                   'Authorization failed (admin): user=%s: list=%s: remote=%s',
+                   username, listname, remote)
         else:
             msg = ''
-        Auth.loginpage(mlist, 'admin', msg=msg)
+        Auth.loginpage(mlist, 'admin', msg=msg, username=username)
         return
 
     # Which subcategory was requested?  Default is `general'

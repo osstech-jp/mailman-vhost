@@ -67,6 +67,7 @@ from Mailman import Utils
 from Mailman import Errors
 from Mailman.Logging.Syslog import syslog
 from Mailman.Utils import md5_new, sha_new
+from Mailman.LDAP import ldap_auth_context
 
 try:
     True, False
@@ -82,10 +83,11 @@ class SecurityManager:
         # but that's been removed when we generalized the mixin architecture.
         # self.password is really a SecurityManager attribute, but it's set in
         # MailList.InitVars().
-        self.mod_password = None
-        self.post_password = None
+        self.mod_password = Utils.MakeRandomPassword(32)
+        self.post_password = Utils.MakeRandomPassword(32)
         # Non configurable
         self.passwords = {}
+        self.ldap_username = None
 
     def _cookie_key(self):
         return self.internal_name().replace('@','%40')
@@ -149,6 +151,15 @@ class SecurityManager:
         if not response:
             # Don't authenticate null passwords
             return mm_cfg.UnAuthorized
+
+        ac, self.ldap_username = ldap_auth_context(authcontexts,
+            self.internal_name(), self.host_name,
+            user, response,
+            mlist=self)
+        if ac is not None:
+            ## LDAP auth only
+            return ac
+
         for ac in authcontexts:
             if ac == mm_cfg.AuthCreator:
                 ok = Utils.check_global_password(response, siteadmin=0)
@@ -242,6 +253,8 @@ class SecurityManager:
         # Check passwords
         ac = self.Authenticate(authcontexts, response, user)
         if ac:
+            if ac == mm_cfg.AuthUser and self.ldap_username:
+                user = self.ldap_username
             print self.MakeCookie(ac, user)
             return True
         return False

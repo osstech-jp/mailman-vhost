@@ -31,6 +31,7 @@ from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
 from Mailman.Utils import sha_new
+from Mailman.LDAP import ldap_auth_context, ldap_auth_enabled_p, ldap_auth_only_p
 
 # Set up i18n
 _ = i18n._
@@ -101,6 +102,7 @@ def process_request(doc, cgidata):
     except ValueError:
         moderate = mm_cfg.DEFAULT_DEFAULT_MEMBER_MODERATION
 
+    username = cgidata.getfirst('adminid')
     password = cgidata.getfirst('password', '').strip()
     confirm  = cgidata.getfirst('confirm', '').strip()
     auth     = cgidata.getfirst('auth', '').strip()
@@ -150,25 +152,6 @@ def process_request(doc, cgidata):
                 # must be different entries in the message catalog.
                 _('The list password cannot be empty<!-- ignore -->'))
             return
-    # The authorization password must be non-empty, and it must match either
-    # the list creation password or the site admin password
-    ok = 0
-    if auth:
-        ok = Utils.check_global_password(auth, 0)
-        if not ok:
-            ok = Utils.check_global_password(auth)
-    if not ok:
-        remote = os.environ.get('HTTP_FORWARDED_FOR',
-                 os.environ.get('HTTP_X_FORWARDED_FOR',
-                 os.environ.get('REMOTE_ADDR',
-                                'unidentified origin')))
-        syslog('security',
-               'Authorization failed (create): list=%s: remote=%s',
-               listname, remote)
-        request_creation(
-            doc, cgidata,
-            _('You are not authorized to create new mailing lists'))
-        return
     # Make sure the web hostname matches one of our virtual domains
     hostname = Utils.get_domain()
     if mm_cfg.VIRTUAL_HOST_OVERVIEW and \
@@ -186,6 +169,33 @@ def process_request(doc, cgidata):
     else:
         if hostname <> mm_cfg.DEFAULT_URL_HOST:
             listname = '%s@%s' % (listname, emailhost)
+    # The authorization password must be non-empty, and it must match either
+    # the list creation password or the site admin password
+    ok = 0
+    if auth:
+        ac, ldap_username = ldap_auth_context(
+            (mm_cfg.AuthSiteAdmin, mm_cfg.AuthCreator),
+            listname, emailhost,
+            username, auth)
+        if ac is not None:
+            ## LDAP auth only
+            ok = ac
+        else:
+            ok = Utils.check_global_password(auth, 0)
+            if not ok:
+                ok = Utils.check_global_password(auth)
+    if not ok:
+        remote = os.environ.get('HTTP_FORWARDED_FOR',
+                 os.environ.get('HTTP_X_FORWARDED_FOR',
+                 os.environ.get('REMOTE_ADDR',
+                                'unidentified origin')))
+        syslog('security',
+               'Authorization failed (create): user=%s: list=%s: remote=%s',
+               username, listname, remote)
+        request_creation(
+            doc, cgidata,
+            _('You are not authorized to create new mailing lists'))
+        return
     # We've got all the data we need, so go ahead and try to create the list
     # See admin.py for why we need to set up the signal handler.
     mlist = MailList.MailList()
@@ -263,6 +273,8 @@ def process_request(doc, cgidata):
     # And send the notice to the list owner.
     if notify:
         siteowner = Utils.get_site_email(mlist.host_name, 'owner')
+        if ldap_auth_only_p():
+            password = _("(Use %(email)s's password in LDAP server)") % {'email': owner}
         text = Utils.maketext(
             'newlist.txt',
             {'listname'    : listname,
@@ -367,28 +379,35 @@ def request_creation(doc, cgidata=dummy, errmsg=None):
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
-    try:
-        autogen = int(cgidata.getfirst('autogen', '0'))
-    except ValueError:
-        autogen = 0
-    ftable.AddRow([Label(_('Auto-generate initial list password?')),
-                   RadioButtonArray('autogen', (_('No'), _('Yes')),
-                                    checked=autogen,
-                                    values=(0, 1))])
-    ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
-    ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
+    if ldap_auth_only_p():
+        form.AddItem(Hidden('autogen', 1))
+        ftable.AddRow([Label(_('Auto-generate initial list password?')),
+            _('No') + ' ' + _('(LDAP authentication)')])
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
+    else:
+        try:
+            autogen = int(cgidata.getfirst('autogen', '0'))
+        except ValueError:
+            autogen = 0
+        ftable.AddRow([Label(_('Auto-generate initial list password?')),
+                    RadioButtonArray('autogen', (_('No'), _('Yes')),
+                                        checked=autogen,
+                                        values=(0, 1))])
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
-    safepasswd = Utils.websafe(cgidata.getfirst('password', ''))
-    ftable.AddRow([Label(_('Initial list password:')),
-                   PasswordBox('password', safepasswd)])
-    ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
-    ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
+        safepasswd = Utils.websafe(cgidata.getfirst('password', ''))
+        ftable.AddRow([Label(_('Initial list password:')),
+                    PasswordBox('password', safepasswd)])
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
-    safeconfirm = Utils.websafe(cgidata.getfirst('confirm', ''))
-    ftable.AddRow([Label(_('Confirm initial password:')),
-                   PasswordBox('confirm', safeconfirm)])
-    ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
-    ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
+        safeconfirm = Utils.websafe(cgidata.getfirst('confirm', ''))
+        ftable.AddRow([Label(_('Confirm initial password:')),
+                    PasswordBox('confirm', safeconfirm)])
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 
     try:
         notify = int(cgidata.getfirst('notify', '1'))
@@ -453,8 +472,17 @@ def request_creation(doc, cgidata=dummy, errmsg=None):
 
     ftable.AddRow(['<hr>'])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, colspan=2)
-    ftable.AddRow([Label(_("List creator's (authentication) password:")),
-                   PasswordBox('auth')])
+    if ldap_auth_enabled_p():
+        username = cgidata.getfirst('adminid', '')
+        ftable.AddRow([Label(_("List creator's email address:")),
+                    TextBox('adminid', username)])
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
+        ftable.AddRow([Label(_("Password:")),
+                    PasswordBox('auth')])
+    else:
+        ftable.AddRow([Label(_("List creator's (authentication) password:")),
+                    PasswordBox('auth')])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 

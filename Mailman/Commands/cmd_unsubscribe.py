@@ -84,8 +84,7 @@ approval."""))
     else:
         # No admin approval is necessary, so we can just delete them if the
         # passwords match.
-        oldpw = mlist.getMemberPassword(address)
-        if oldpw <> password:
+        if not mlist.Authenticate((mm_cfg.AuthUser), password, address):
             res.results.append(_('You gave the wrong password'))
             return STOP
         mlist.ApprovedDeleteMember(address, 'mailcmd')

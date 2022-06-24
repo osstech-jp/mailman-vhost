@@ -13025,3 +13025,15 @@ msgstr ""
 
 #~ msgid "The message headers matched a filter rule"
 #~ msgstr "メールへッダがフィルタ規則に合致しました"
+
+msgid "List creator's email address:"
+msgstr "リスト作成者メールアドレス:"
+
+msgid "(LDAP authentication)"
+msgstr "(LDAP 認証)"
+
+msgid "(Use %(email)s's password in LDAP server)"
+msgstr "(LDAP サーバーの %(email)s のパスワードを使用してください)"
+
+msgid "This feature has been disabled."
+msgstr "この機能は無効化されています。"

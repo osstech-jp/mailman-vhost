@@ -34,7 +34,7 @@ class NotLoggedInError(Exception):
 
 
 
-def loginpage(mlist, scriptname, msg='', frontpage=None):
+def loginpage(mlist, scriptname, msg='', frontpage=None, username=None):
     url = mlist.GetScriptURL(scriptname)
     if frontpage:
         actionurl = url
@@ -57,5 +57,6 @@ def loginpage(mlist, scriptname, msg='', frontpage=None):
          'path'    : actionurl,
          'message' : msg,
          'who'     : who,
+         'username': username if username is not None else '',
          }, mlist=mlist)
     print mlist.GetMailmanFooter()

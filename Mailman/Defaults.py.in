@@ -1844,3 +1844,14 @@ add_language('zh_CN', _('Chinese (China)'),     'utf-8',       'ltr')
 add_language('zh_TW', _('Chinese (Taiwan)'),    'utf-8',       'ltr')
 
 del _
+
+## Administrators and members authentication
+LDAP_AUTH = {}
+LDAP_AUTH_TRACE_LEVEL = 0
+LDAP_AUTH_SITE_ADMINS = []
+LDAP_AUTH_SITE_MODERATORS = []
+LDAP_AUTH_LIST_CREATORS = []
+LDAP_AUTH_ONLY = False
+
+## Members authentication (obsolete implementation)
+MEMBER_LDAP_AUTH = {}

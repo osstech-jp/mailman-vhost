@@ -120,10 +120,13 @@ def main():
         os.environ['HTTP_COOKIE'] = ''
         csrf_checked = True
 
+    username = cgidata.getfirst('adminid')
+
     # Editing the html for a list is limited to the list admin and site admin.
     if not mlist.WebAuthenticate((mm_cfg.AuthListAdmin,
                                   mm_cfg.AuthSiteAdmin),
-                                 cgidata.getfirst('adminpw', '')):
+                                 cgidata.getfirst('adminpw', ''),
+                                 username):
         if cgidata.has_key('admlogin'):
             # This is a re-authorization attempt
             msg = Bold(FontSize('+1', _('Authorization failed.'))).Format()
@@ -132,11 +135,11 @@ def main():
                      os.environ.get('REMOTE_ADDR',
                                     'unidentified origin')))
             syslog('security',
-                   'Authorization failed (edithtml): list=%s: remote=%s',
-                   listname, remote)
+                   'Authorization failed (edithtml): user=%s: list=%s: remote=%s',
+                   username, listname, remote)
         else:
             msg = ''
-        Auth.loginpage(mlist, 'admin', msg=msg)
+        Auth.loginpage(mlist, 'admin', msg=msg, username=username)
         return
 
     # See if the user want to see this page in other language

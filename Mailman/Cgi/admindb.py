@@ -153,10 +153,13 @@ def main():
         os.environ['HTTP_COOKIE'] = ''
         csrf_checked = True
 
+    username = cgidata.getfirst('adminid')
+
     if not mlist.WebAuthenticate((mm_cfg.AuthListAdmin,
                                   mm_cfg.AuthListModerator,
                                   mm_cfg.AuthSiteAdmin),
-                                 cgidata.getfirst('adminpw', '')):
+                                 cgidata.getfirst('adminpw', ''),
+                                 username):
         if cgidata.has_key('adminpw'):
             # This is a re-authorization attempt
             msg = Bold(FontSize('+1', _('Authorization failed.'))).Format()
@@ -165,11 +168,11 @@ def main():
                      os.environ.get('REMOTE_ADDR',
                                     'unidentified origin')))
             syslog('security',
-                   'Authorization failed (admindb): list=%s: remote=%s',
-                   listname, remote)
+                   'Authorization failed (admindb): user=%s: list=%s: remote=%s',
+                   username, listname, remote)
         else:
             msg = ''
-        Auth.loginpage(mlist, 'admindb', msg=msg)
+        Auth.loginpage(mlist, 'admindb', msg=msg, username=username)
         return
 
     # Add logout function. Note that admindb may be accessed with

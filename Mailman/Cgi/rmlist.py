@@ -29,6 +29,7 @@ from Mailman import Errors
 from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
+from Mailman.LDAP import ldap_auth_enabled_p
 
 # Set up i18n
 _ = i18n._
@@ -119,6 +120,8 @@ def process_request(doc, cgidata, mlist):
     except ValueError:
         delarchives = 0
 
+    username = cgidata.getfirst('adminid')
+
     # Removing a list is limited to the list-creator (a.k.a. list-destroyer),
     # the list-admin, or the site-admin.  Don't use WebAuthenticate here
     # because we want to be sure the actual typed password is valid, not some
@@ -126,14 +129,15 @@ def process_request(doc, cgidata, mlist):
     if mlist.Authenticate((mm_cfg.AuthCreator,
                            mm_cfg.AuthListAdmin,
                            mm_cfg.AuthSiteAdmin),
-                          password) == mm_cfg.UnAuthorized:
+                          password,
+                          user=username) == mm_cfg.UnAuthorized:
         remote = os.environ.get('HTTP_FORWARDED_FOR',
                  os.environ.get('HTTP_X_FORWARDED_FOR',
                  os.environ.get('REMOTE_ADDR',
                                 'unidentified origin')))
         syslog('security',
-               'Authorization failed (rmlist): list=%s: remote=%s',
-               mlist.internal_name(), remote)
+               'Authorization failed (rmlist): user=%s: list=%s: remote=%s',
+               username, mlist.internal_name(), remote)
         request_deletion(
             doc, mlist,
             _('You are not authorized to delete this mailing list'))
@@ -241,7 +245,14 @@ def request_deletion(doc, mlist, errmsg=None):
     ftable = Table(border=0, cols='2', width='100%',
                    cellspacing=3, cellpadding=4)
     
-    ftable.AddRow([Label(_('List password:')), PasswordBox('password')])
+    if ldap_auth_enabled_p():
+        ftable.AddRow([Label(_("Admin address:")),
+                    TextBox('adminid')])
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
+        ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
+        ftable.AddRow([Label(_('Password:')), PasswordBox('password')])
+    else:
+        ftable.AddRow([Label(_('List password:')), PasswordBox('password')])
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 0, bgcolor=GREY)
     ftable.AddCellInfo(ftable.GetCurrentRowIndex(), 1, bgcolor=GREY)
 

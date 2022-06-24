@@ -34,6 +34,7 @@ from Mailman import i18n
 from Mailman.htmlformat import *
 from Mailman.Logging.Syslog import syslog
 from Mailman.CSRFcheck import csrf_check
+from Mailman.LDAP import ldap_auth_only_p
 
 OR = '|'
 SLASH = '/'
@@ -849,10 +850,13 @@ def options_page(mlist, doc, user, cpuser, userlang, message=''):
         mm_cfg.DontReceiveOwnPosts, 0, user)
     replacements['<mm-dont-receive-own-mail-button>'] = (
         mlist.FormatOptionButton(mm_cfg.DontReceiveOwnPosts, 1, user))
-    replacements['<mm-dont-get-password-reminder-button>'] = (
-        mlist.FormatOptionButton(mm_cfg.SuppressPasswordReminder, 1, user))
-    replacements['<mm-get-password-reminder-button>'] = (
-        mlist.FormatOptionButton(mm_cfg.SuppressPasswordReminder, 0, user))
+    if ldap_auth_only_p():
+        replacements['<mm-dont-get-password-reminder-button>'] = _('This feature has been disabled.') + '<br><!--'
+    else:
+        replacements['<mm-dont-get-password-reminder-button>'] = (
+            mlist.FormatOptionButton(mm_cfg.SuppressPasswordReminder, 1, user))
+        replacements['<mm-get-password-reminder-button>'] = (
+            mlist.FormatOptionButton(mm_cfg.SuppressPasswordReminder, 0, user))
     replacements['<mm-public-subscription-button>'] = (
         mlist.FormatOptionButton(mm_cfg.ConcealSubscription, 0, user))
     replacements['<mm-hide-subscription-button>'] = mlist.FormatOptionButton(
@@ -865,10 +869,15 @@ def options_page(mlist, doc, user, cpuser, userlang, message=''):
         mlist.FormatButton('unsub', _('Unsubscribe')) + '<br>' +
         CheckBox('unsubconfirm', 1, checked=0).Format() +
         _('<em>Yes, I really want to unsubscribe</em>'))
-    replacements['<mm-new-pass-box>'] = mlist.FormatSecureBox('newpw')
-    replacements['<mm-confirm-pass-box>'] = mlist.FormatSecureBox('confpw')
-    replacements['<mm-change-pass-button>'] = (
-        mlist.FormatButton('changepw', _("Change My Password")))
+    if ldap_auth_only_p():
+        replacements['<mm-new-pass-box>'] =  '-'
+        replacements['<mm-confirm-pass-box>'] = '-'
+        replacements['<mm-change-pass-button>'] = _('This feature has been disabled.')
+    else:
+        replacements['<mm-new-pass-box>'] = mlist.FormatSecureBox('newpw')
+        replacements['<mm-confirm-pass-box>'] = mlist.FormatSecureBox('confpw')
+        replacements['<mm-change-pass-button>'] = (
+            mlist.FormatButton('changepw', _("Change My Password")))
     replacements['<mm-other-subscriptions-submit>'] = (
         mlist.FormatButton('othersubs',
                            _('List my other subscriptions')))
@@ -878,20 +887,29 @@ def options_page(mlist, doc, user, cpuser, userlang, message=''):
             contexts=[mm_cfg.AuthUser], user=user))
     replacements['<mm-user>'] = user
     replacements['<mm-presentable-user>'] = presentable_user
-    replacements['<mm-email-my-pw>'] = mlist.FormatButton(
-        'emailpw', (_('Email My Password To Me')))
-    replacements['<mm-umbrella-notice>'] = (
-        mlist.FormatUmbrellaNotice(user, _("password")))
+    if ldap_auth_only_p():
+        replacements['<mm-email-my-pw>'] = _('This feature has been disabled.')
+    else:
+        replacements['<mm-email-my-pw>'] = mlist.FormatButton(
+            'emailpw', (_('Email My Password To Me')))
+        replacements['<mm-umbrella-notice>'] = (
+            mlist.FormatUmbrellaNotice(user, _("password")))
     replacements['<mm-logout-button>'] = (
         mlist.FormatButton('logout', _('Log out')))
     replacements['<mm-options-submit-button>'] = mlist.FormatButton(
         'options-submit', _('Submit My Changes'))
-    replacements['<mm-global-pw-changes-button>'] = (
-        CheckBox('pw-globally', 1, checked=0).Format())
+    if ldap_auth_only_p():
+        pass
+    else:
+        replacements['<mm-global-pw-changes-button>'] = (
+            CheckBox('pw-globally', 1, checked=0).Format())
     replacements['<mm-global-deliver-button>'] = (
         CheckBox('deliver-globally', 1, checked=0).Format())
-    replacements['<mm-global-remind-button>'] = (
-        CheckBox('remind-globally', 1, checked=0).Format())
+    if ldap_auth_only_p():
+        replacements['<mm-global-remind-button>'] = '-->'
+    else:
+        replacements['<mm-global-remind-button>'] = (
+            CheckBox('remind-globally', 1, checked=0).Format())
     replacements['<mm-global-nodupes-button>'] = (
         CheckBox('nodupes-globally', 1, checked=0).Format())
 
@@ -1021,15 +1039,16 @@ def loginpage(mlist, doc, user, lang):
     message).""")])
 
     table.AddRow([Center(SubmitButton('login-unsub', _('Unsubscribe')))])
-    # Password reminder section
-    table.AddRow([Center(Header(2, _('Password reminder')))])
-    table.AddCellInfo(table.GetCurrentRowIndex(), 0,
-                      bgcolor=mm_cfg.WEB_HEADER_COLOR)
+    if not ldap_auth_only_p():
+        # Password reminder section
+        table.AddRow([Center(Header(2, _('Password reminder')))])
+        table.AddCellInfo(table.GetCurrentRowIndex(), 0,
+                        bgcolor=mm_cfg.WEB_HEADER_COLOR)
 
-    table.AddRow([_("""By clicking on the <em>Remind</em> button, your
-    password will be emailed to you.""")])
+        table.AddRow([_("""By clicking on the <em>Remind</em> button, your
+        password will be emailed to you.""")])
 
-    table.AddRow([Center(SubmitButton('login-remind', _('Remind')))])
+        table.AddRow([Center(SubmitButton('login-remind', _('Remind')))])
     # Finish up glomming together the login page
     form.AddItem(table)
     doc.AddItem(form)
