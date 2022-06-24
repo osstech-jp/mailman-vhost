@@ -171,7 +171,7 @@ def main():
     if '@' in listname:
         # note that --urlhost and --emailhost have precedence
         firstname, domain = listname.split('@', 1)
-        urlhost = urlhost or ('lists.%s' % domain) # TODO: Not configurable yet
+        urlhost = urlhost or domain # TODO: Not configurable yet
         if not emailhost:
             emailhost = domain
         elif emailhost != domain:
